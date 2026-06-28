@@ -1,0 +1,86 @@
+{
+  "entries": {
+    "Hero/Banner": {
+      "figmaComponentKey": "hero-banner-key",
+      "figmaComponentName": "Hero / Banner"
+    },
+    "Button/Primary": {
+      "figmaComponentKey": "button-primary-key",
+      "figmaComponentName": "Button / Primary"
+    }
+  },
+  "variables": {
+    "color.surface.cream": {
+      "id": "var-color-surface-cream",
+      "name": "color/surface/cream",
+      "resolvedType": "COLOR",
+      "value": "#F7F3EC"
+    },
+    "color.text.ink": {
+      "id": "var-color-text-ink",
+      "name": "color/text/ink",
+      "resolvedType": "COLOR",
+      "value": "#1F1F1F"
+    },
+    "color.brand.forest": {
+      "id": "var-color-brand-forest",
+      "name": "color/brand/forest",
+      "resolvedType": "COLOR",
+      "value": "#0B6E4F"
+    },
+    "space.xs": {
+      "id": "var-space-xs",
+      "name": "space/xs",
+      "resolvedType": "FLOAT",
+      "value": 12
+    },
+    "space.sm": {
+      "id": "var-space-sm",
+      "name": "space/sm",
+      "resolvedType": "FLOAT",
+      "value": 16
+    },
+    "space.md": {
+      "id": "var-space-md",
+      "name": "space/md",
+      "resolvedType": "FLOAT",
+      "value": 24
+    },
+    "space.lg": {
+      "id": "var-space-lg",
+      "name": "space/lg",
+      "resolvedType": "FLOAT",
+      "value": 32
+    },
+    "space.xl": {
+      "id": "var-space-xl",
+      "name": "space/xl",
+      "resolvedType": "FLOAT",
+      "value": 40
+    },
+    "radius.pill": {
+      "id": "var-radius-pill",
+      "name": "radius/pill",
+      "resolvedType": "FLOAT",
+      "value": 999
+    },
+    "radius.lg": {
+      "id": "var-radius-lg",
+      "name": "radius/lg",
+      "resolvedType": "FLOAT",
+      "value": 24
+    }
+  },
+  "codeConnect": {
+    "Hero/Banner": {
+      "componentName": "Hero/Banner",
+      "codeSymbol": "src/components/HeroBanner.tsx#default",
+      "source": "code-connect"
+    },
+    "Button/Primary": {
+      "componentName": "Button/Primary",
+      "codeSymbol": "src/components/ButtonPrimary.tsx#default",
+      "source": "code-connect"
+    }
+  }
+}

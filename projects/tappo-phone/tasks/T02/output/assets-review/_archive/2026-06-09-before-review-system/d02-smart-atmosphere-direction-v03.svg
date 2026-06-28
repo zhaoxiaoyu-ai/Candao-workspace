@@ -1,0 +1,45 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="canvas" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(162 92) rotate(118) scale(220 190)">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="0.56" stop-color="#F6FBFF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </radialGradient>
+    <radialGradient id="warmA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(154 142) rotate(75) scale(112 88)">
+      <stop stop-color="#FFF6D8" stop-opacity="0.96"/>
+      <stop offset="0.38" stop-color="#FFC183" stop-opacity="0.62"/>
+      <stop offset="0.76" stop-color="#FF8A3D" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#FF8A3D" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warmB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(184 164) rotate(98) scale(124 82)">
+      <stop stop-color="#FFEBD6" stop-opacity="0.78"/>
+      <stop offset="0.58" stop-color="#FFB06F" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#FFB06F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coolA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(207 130) rotate(102) scale(104 76)">
+      <stop stop-color="#D9FAFF" stop-opacity="0.48"/>
+      <stop offset="0.74" stop-color="#7BE7E4" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#7BE7E4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurLarge" x="42" y="52" width="256" height="230" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="blurSmall" x="76" y="84" width="178" height="160" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <rect width="320" height="320" rx="64" fill="url(#canvas)"/>
+  <g filter="url(#blurLarge)">
+    <path d="M112 104c36-31 105-17 128 33 19 41-22 83-74 87-52 4-89-25-87-67 1-22 12-41 33-53Z" fill="url(#warmA)"/>
+    <path d="M181 91c43 9 72 42 58 76-13 33-67 40-104 21-33-16-34-54-10-79 15-16 36-23 56-18Z" fill="url(#coolA)"/>
+    <path d="M101 161c40-21 109-18 147 8-25 30-94 46-143 13-8-5-9-13-4-21Z" fill="url(#warmB)"/>
+  </g>
+  <g filter="url(#blurSmall)">
+    <ellipse cx="160" cy="150" rx="54" ry="34" fill="#FFF7DF" fill-opacity="0.62"/>
+    <ellipse cx="178" cy="157" rx="58" ry="39" fill="#FFB06F" fill-opacity="0.18"/>
+  </g>
+  <path d="M104 151c28-35 88-49 135-21" stroke="#FFFFFF" stroke-opacity="0.64" stroke-width="9" stroke-linecap="round"/>
+  <path d="M108 181c40 20 101 18 137-10" stroke="#7BE7E4" stroke-opacity="0.24" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="226" cy="116" r="6" fill="#9EF2E9" fill-opacity="0.42"/>
+  <circle cx="107" cy="190" r="5" fill="#FFB06F" fill-opacity="0.38"/>
+</svg>

@@ -1,0 +1,9 @@
+.playwright-cli/
+
+# Backup of former nested repositories after monorepo migration.
+projects/*/source/.git.backup-*/
+
+# Keep local Python environments and runtime outputs out of the workspace repo.
+.venv/
+__pycache__/
+*.pyc

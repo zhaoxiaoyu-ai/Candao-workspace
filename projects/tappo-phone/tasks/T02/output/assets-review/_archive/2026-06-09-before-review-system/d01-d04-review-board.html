@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tappo App D01-D04 方向评审板</title>
+  <style>
+    :root {
+      --brand-orange: #ff8a3d;
+      --brand-orange-strong: #f97316;
+      --ink: rgba(9, 5, 2, 0.94);
+      --muted: rgba(9, 5, 2, 0.58);
+      --line: rgba(9, 5, 2, 0.08);
+      --canvas: #f7f8fb;
+      --card: #ffffff;
+      --ice: #eef7ff;
+      --peach: #fff7f1;
+      font-family: "OPPO Sans 4.0", "OPPO Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "PingFang TC", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 76% 0%, rgba(255, 176, 111, 0.28), transparent 34%),
+        linear-gradient(180deg, #fff8f2 0%, var(--canvas) 40%, #ffffff 100%);
+      min-height: 100vh;
+    }
+
+    main {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      padding: 40px 24px 56px;
+    }
+
+    header {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      color: var(--brand-orange-strong);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .chip {
+      border: 1px solid rgba(255, 138, 61, 0.16);
+      background: rgba(255, 255, 255, 0.72);
+      color: rgba(9, 5, 2, 0.7);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 16px;
+      min-height: 250px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07), 0 4px 10px rgba(255, 138, 61, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    .preview {
+      display: grid;
+      place-items: center;
+      min-height: 214px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--peach), var(--ice));
+      overflow: hidden;
+    }
+
+    .preview img {
+      width: 100%;
+      max-width: 170px;
+      height: auto;
+      display: block;
+    }
+
+    .wide img {
+      max-width: 100%;
+    }
+
+    .content {
+      display: grid;
+      align-content: start;
+      gap: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .purpose {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .criteria {
+      display: grid;
+      gap: 8px;
+      margin: 2px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .criteria li {
+      position: relative;
+      padding-left: 15px;
+      color: rgba(9, 5, 2, 0.72);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .criteria li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--brand-orange);
+    }
+
+    .asset-path {
+      margin-top: 6px;
+      color: rgba(9, 5, 2, 0.48);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      line-height: 1.5;
+      word-break: break-all;
+    }
+
+    .review {
+      margin-top: 16px;
+      padding: 18px;
+      border: 1px solid rgba(255, 138, 61, 0.16);
+      border-radius: 16px;
+      background: rgba(255, 251, 246, 0.82);
+    }
+
+    .review h2 {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .review-item {
+      padding: 12px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: rgba(9, 5, 2, 0.72);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .review-item strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .board {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      main {
+        padding: 28px 16px 40px;
+      }
+
+      .card {
+        grid-template-columns: 1fr;
+      }
+
+      .preview img {
+        max-width: 220px;
+      }
+
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Tappo App 首批资产方向评审</div>
+      <h1>D01-D04 方向样张</h1>
+      <p class="intro">本评审板用于判断首批资产调性是否成立。当前不是最终生产图库，重点看小T助手、橙色系统中枢、模块图标 tile、业务微插画四类视觉能否形成统一的清透软渐变智能运营风格。</p>
+      <div class="meta">
+        <span class="chip">评审宽度：390px</span>
+        <span class="chip">圆角体系：16px</span>
+        <span class="chip">字体：OPPO Sans 4.0</span>
+        <span class="chip">不嵌入资产文字</span>
+      </div>
+    </header>
+
+    <section class="board" aria-label="D01-D04 direction review">
+      <article class="card">
+        <div class="preview">
+          <img src="./d01-assistant-direction.svg" alt="D01 小T助手方向样张">
+        </div>
+        <div class="content">
+          <h2>D01 小T / 助手方向</h2>
+          <p class="purpose">用于封面、角色选择、首页提示和空状态。目标是友好、专业、轻量，不固定成强吉祥物。</p>
+          <ul class="criteria">
+            <li>通过：有亲和力但不幼稚，不像通用机器人头像。</li>
+            <li>通过：橙色品牌关系明确，蓝青只做反光辅助。</li>
+            <li>不通过：像儿童玩具、AI SaaS 头像或替代 Tappo logo。</li>
+          </ul>
+          <div class="asset-path">assets-review/d01-assistant-direction.svg</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="preview">
+          <img src="./d02-smart-orb-direction.svg" alt="D02 橙色智能光球方向样张">
+        </div>
+        <div class="content">
+          <h2>D02 橙色智能光球 / 系统中枢</h2>
+          <p class="purpose">用于数据分析、设置、系统健康和 AI 洞察。目标是可信赖的系统智能感，不是科幻装饰。</p>
+          <ul class="criteria">
+            <li>通过：橙色是核心，形态克制、清晰、可信赖。</li>
+            <li>通过：适合放在设置和数据页面，不抢主数据。</li>
+            <li>不通过：像赛博能量球、蓝紫 AI 光效或泛玻璃球。</li>
+          </ul>
+          <div class="asset-path">assets-review/d02-smart-orb-direction.svg</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="preview wide">
+          <img src="./d03-module-icon-tiles-direction.svg" alt="D03 模块图标 tile 方向样张">
+        </div>
+        <div class="content">
+          <h2>D03 模块图标 tile 样张</h2>
+          <p class="purpose">用于应用中心、设置入口和数据模块。底色可按模块语义变化，但材质、光源和饱和度必须统一。</p>
+          <ul class="criteria">
+            <li>通过：四枚图标色系不同但仍像同一系统。</li>
+            <li>通过：图形居中，低细节，小尺寸可读。</li>
+            <li>不通过：像随机渐变方块、素材站拼贴或不同图标库。</li>
+          </ul>
+          <div class="asset-path">assets-review/d03-module-icon-tiles-direction.svg</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="preview wide">
+          <img src="./d04-micro-illustration-direction.svg" alt="D04 业务微插画方向样张">
+        </div>
+        <div class="content">
+          <h2>D04 业务微插画样张</h2>
+          <p class="purpose">用于设备、支付、预约、应用开通等业务提示。目标是业务对象清楚，轻量，不做营销 banner。</p>
+          <ul class="criteria">
+            <li>通过：设备/设置隐喻清晰，可放入 390px 页面。</li>
+            <li>通过：风格与 D01-D03 保持同一材质和光源。</li>
+            <li>不通过：像真实硬件渲染、旧收银机或复杂促销海报。</li>
+          </ul>
+          <div class="asset-path">assets-review/d04-micro-illustration-direction.svg</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="review" aria-label="review checklist">
+      <h2>人工评审结论填写建议</h2>
+      <div class="review-grid">
+        <div class="review-item"><strong>评审入口</strong>本 HTML 与 4 个 SVG 样张。</div>
+        <div class="review-item"><strong>评审对象</strong>只评审风格方向，不评审最终资产数量。</div>
+        <div class="review-item"><strong>通过标准</strong>橙色主导、清透柔和、统一光源、业务对象可读。</div>
+        <div class="review-item"><strong>下一步</strong>通过后生成 I01-I12 与 M01-M03；不通过则记录要调整的风格参数。</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

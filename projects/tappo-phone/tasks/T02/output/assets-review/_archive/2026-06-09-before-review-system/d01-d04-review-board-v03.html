@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tappo App D01-D04 方向样张评审 v03</title>
+  <style>
+    :root {
+      --bg: #fff8f2;
+      --card: rgba(255, 255, 255, 0.86);
+      --ink: #18130f;
+      --muted: rgba(24, 19, 15, 0.62);
+      --line: rgba(245, 166, 111, 0.28);
+      --orange: #ff8a3d;
+      --ice: #eef8ff;
+      --peach: #fff0e5;
+      --shadow: 0 16px 38px rgba(48, 68, 92, 0.08), 0 4px 12px rgba(255, 138, 61, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "OPPO Sans 4.0", "OPPO Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "PingFang TC", sans-serif;
+      letter-spacing: 0;
+      background:
+        radial-gradient(circle at 22% 0%, rgba(255, 178, 111, 0.24), transparent 34%),
+        linear-gradient(180deg, #fff7ee 0%, #ffffff 100%);
+    }
+
+    main {
+      width: min(1080px, calc(100vw - 48px));
+      margin: 0 auto;
+      padding: 46px 0 64px;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 14px 0 12px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .intro {
+      max-width: 880px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .meta,
+    .feedback {
+      display: grid;
+      gap: 10px;
+    }
+
+    .meta {
+      grid-template-columns: repeat(4, max-content);
+      margin-top: 18px;
+    }
+
+    .chip,
+    .feedback-item,
+    .review-item {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .chip {
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: rgba(24, 19, 15, 0.66);
+      font-size: 12px;
+    }
+
+    .feedback {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin: 24px 0 16px;
+    }
+
+    .feedback-item {
+      padding: 12px;
+      border-radius: 16px;
+      color: rgba(24, 19, 15, 0.68);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .feedback-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 16px;
+      min-height: 250px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .card-wide {
+      grid-template-columns: 260px 1fr;
+    }
+
+    .preview {
+      display: grid;
+      place-items: center;
+      min-height: 214px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--peach), var(--ice));
+      overflow: hidden;
+    }
+
+    .preview img {
+      width: 100%;
+      max-width: 170px;
+      height: auto;
+      display: block;
+    }
+
+    .card-wide .preview img {
+      max-width: 260px;
+    }
+
+    .content {
+      display: grid;
+      align-content: start;
+      gap: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .purpose,
+    .criteria,
+    .asset-path {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.72;
+    }
+
+    .criteria {
+      display: grid;
+      gap: 6px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .criteria li {
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .criteria li::before {
+      position: absolute;
+      left: 0;
+      top: 0.74em;
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--orange);
+      content: "";
+    }
+
+    .asset-path {
+      margin-top: 2px;
+      color: rgba(24, 19, 15, 0.46);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      word-break: break-all;
+    }
+
+    .review {
+      margin-top: 16px;
+      padding: 18px;
+      border: 1px solid rgba(255, 138, 61, 0.24);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 249, 242, 0.72));
+    }
+
+    .review h2 {
+      margin-bottom: 12px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .review-item {
+      padding: 14px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .review-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        width: min(390px, calc(100vw - 32px));
+        padding-top: 28px;
+      }
+
+      .meta,
+      .feedback,
+      .board,
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card,
+      .card-wide {
+        grid-template-columns: 1fr;
+      }
+
+      .preview img,
+      .card-wide .preview img {
+        max-width: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="eyebrow">Tappo App 首批资产方向评审 v03</div>
+      <h1>D01-D04 方向样张二次修正版</h1>
+      <p class="intro">本版根据 v02 人工反馈调整：D01 补足轻量实体样式，D02 提亮弥散氛围并减少黑感，D03 校准图标视觉中心，D04 保持当前方向。当前仍只评审方向，不进入完整图库生产。</p>
+      <div class="meta">
+        <span class="chip">评审宽度：390px</span>
+        <span class="chip">圆角体系：16px</span>
+        <span class="chip">字体：OPPO Sans 4.0</span>
+        <span class="chip">v02 保留对照</span>
+      </div>
+    </section>
+
+    <section class="feedback" aria-label="v03 feedback summary">
+      <div class="feedback-item"><strong>D01 修正</strong>增加头部、身体、底座和轻量阴影，让小T有实体感但不复杂。</div>
+      <div class="feedback-item"><strong>D02 修正</strong>去掉偏黑暗部，改成更亮的暖橙、蜜桃和少量青色弥散光。</div>
+      <div class="feedback-item"><strong>D03 修正</strong>重排 glyph 中心线，减少装饰点带来的视觉下坠和偏移。</div>
+      <div class="feedback-item"><strong>D04 状态</strong>当前效果可继续保留，本版只同步为 v03 文件以便同版评审。</div>
+    </section>
+
+    <section class="board" aria-label="D01-D04 direction review v03">
+      <article class="card">
+        <div class="preview">
+          <img src="./d01-assistant-direction-v03.svg" alt="D01 v03 小T实体助手方向样张">
+        </div>
+        <div class="content">
+          <h2>D01 v03 小T / 实体助手方向</h2>
+          <p class="purpose">用于封面、角色选择、首页提示和空状态。本版补足实体头身结构、柔和底座和体积阴影，避免 v02 过于头像化。</p>
+          <ul class="criteria">
+            <li>重点看：是否有实体感但不回到复杂凌乱。</li>
+            <li>通过：像轻量产品助手，可亲近、干净、有体积。</li>
+            <li>不通过：仍像平面头像，或过度玩具化、吉祥物化。</li>
+          </ul>
+          <div class="asset-path">assets-review/d01-assistant-direction-v03.svg</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="preview">
+          <img src="./d02-smart-atmosphere-direction-v03.svg" alt="D02 v03 提亮弥散智能氛围方向样张">
+        </div>
+        <div class="content">
+          <h2>D02 v03 弥散智能氛围</h2>
+          <p class="purpose">用于数据分析、设置、系统健康和 AI 洞察。本版降低暗部，保留轻柔氛围，不做硬实体球。</p>
+          <ul class="criteria">
+            <li>重点看：是否更明亮、舒适，没有黑灰脏感。</li>
+            <li>通过：橙色主导、轻盈、可放在页面背景或卡片局部。</li>
+            <li>不通过：仍偏黑、像烟雾、像能量球或模板 AI 光效。</li>
+          </ul>
+          <div class="asset-path">assets-review/d02-smart-atmosphere-direction-v03.svg</div>
+        </div>
+      </article>
+
+      <article class="card card-wide">
+        <div class="preview">
+          <img src="./d03-module-icon-tiles-direction-v03.svg" alt="D03 v03 模块图标 tile 方向样张">
+        </div>
+        <div class="content">
+          <h2>D03 v03 模块图标 tile 样张</h2>
+          <p class="purpose">用于应用中心、设置入口和数据模块。本版校准四枚图标的中心、图形高度和装饰点位置。</p>
+          <ul class="criteria">
+            <li>重点看：每个 glyph 是否在 tile 内视觉居中。</li>
+            <li>通过：支付、订单、添加、数据四类图标中心稳定。</li>
+            <li>不通过：仍有明显偏下、偏右、线条粗糙或拼贴感。</li>
+          </ul>
+          <div class="asset-path">assets-review/d03-module-icon-tiles-direction-v03.svg</div>
+        </div>
+      </article>
+
+      <article class="card card-wide">
+        <div class="preview">
+          <img src="./d04-micro-illustration-direction-v03.svg" alt="D04 v03 支付收款微插画方向样张">
+        </div>
+        <div class="content">
+          <h2>D04 v03 支付 / 收款微插画</h2>
+          <p class="purpose">用于支付设置、充值、收款说明等页面。本版沿用 v02 方向，仅同步版本，后续可进入微插画扩展。</p>
+          <ul class="criteria">
+            <li>重点看：是否继续保持业务含义清楚。</li>
+            <li>通过：支付/收款语义明确，形态干净。</li>
+            <li>不通过：出现未知图标、含义不明或旧硬件渲染感。</li>
+          </ul>
+          <div class="asset-path">assets-review/d04-micro-illustration-direction-v03.svg</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="review">
+      <h2>人工评审结论填写建议</h2>
+      <div class="review-grid">
+        <div class="review-item"><strong>评审入口</strong>本 HTML、v03 PNG 与 4 个 v03 SVG。</div>
+        <div class="review-item"><strong>评审对象</strong>只评审 v03 是否修正了 v02 的问题。</div>
+        <div class="review-item"><strong>通过标准</strong>D01 有实体感，D02 不偏黑，D03 居中，D04 可保留。</div>
+        <div class="review-item"><strong>下一步</strong>通过后进入 I01-I12 与 M01-M03；不通过则继续只修失败项。</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

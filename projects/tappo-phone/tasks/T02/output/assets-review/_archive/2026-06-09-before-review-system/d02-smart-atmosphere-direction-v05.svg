@@ -1,0 +1,81 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="36" y1="12" x2="284" y2="306" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF9"/>
+      <stop offset="0.54" stop-color="#FCFEFF"/>
+      <stop offset="1" stop-color="#FFF8F1"/>
+    </linearGradient>
+
+    <radialGradient id="airBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36 154) rotate(20) scale(238 252)">
+      <stop stop-color="#78DDF4" stop-opacity="0.58"/>
+      <stop offset="0.36" stop-color="#8FC3FF" stop-opacity="0.38"/>
+      <stop offset="0.66" stop-color="#C5C3FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="airAqua" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(72 72) rotate(31) scale(172 150)">
+      <stop stop-color="#9EF1E8" stop-opacity="0.46"/>
+      <stop offset="0.58" stop-color="#CFF9F2" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="airPink" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(128 206) rotate(18) scale(178 142)">
+      <stop stop-color="#F8A4D6" stop-opacity="0.34"/>
+      <stop offset="0.42" stop-color="#C9B7FF" stop-opacity="0.29"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="warmPeach" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(236 234) rotate(18) scale(134 110)">
+      <stop stop-color="#FF9A55" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#FFD8B9" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="crescentSkin" x1="174" y1="8" x2="330" y2="296" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF7FF" stop-opacity="0.16"/>
+      <stop offset="0.24" stop-color="#B5E8FF" stop-opacity="0.46"/>
+      <stop offset="0.48" stop-color="#C4B8FF" stop-opacity="0.40"/>
+      <stop offset="0.66" stop-color="#F29EE4" stop-opacity="0.34"/>
+      <stop offset="0.82" stop-color="#739BFF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#E6F9FF" stop-opacity="0.16"/>
+    </linearGradient>
+
+    <radialGradient id="crescentLight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(244 122) rotate(42) scale(112 170)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.52"/>
+      <stop offset="0.56" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blurHuge" x="-132" y="-120" width="550" height="548" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+
+    <filter id="blurSoft" x="52" y="-84" width="346" height="454" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+
+    <filter id="blurFine" x="36" y="28" width="282" height="276" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <rect width="320" height="320" rx="64" fill="url(#bg)"/>
+
+  <g filter="url(#blurHuge)">
+    <ellipse cx="24" cy="156" rx="184" ry="214" fill="url(#airBlue)"/>
+    <ellipse cx="76" cy="74" rx="128" ry="112" fill="url(#airAqua)"/>
+    <ellipse cx="124" cy="204" rx="136" ry="108" fill="url(#airPink)"/>
+    <ellipse cx="236" cy="234" rx="100" ry="82" fill="url(#warmPeach)"/>
+  </g>
+
+  <g filter="url(#blurSoft)" opacity="0.98">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M336 -44C247 -31 184 34 168 119C151 210 205 288 302 318C230 292 189 222 199 125C208 43 264 -8 336 -44Z" fill="url(#crescentSkin)"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M314 -11C256 6 223 51 216 116C208 188 239 240 298 274C245 249 221 200 229 123C236 59 268 21 314 -11Z" fill="url(#crescentLight)"/>
+  </g>
+
+  <g filter="url(#blurFine)">
+    <ellipse cx="116" cy="166" rx="102" ry="74" fill="#FFFFFF" fill-opacity="0.22"/>
+    <ellipse cx="178" cy="210" rx="84" ry="58" fill="#FFB98A" fill-opacity="0.08"/>
+    <ellipse cx="236" cy="112" rx="74" ry="96" fill="#BCEBFF" fill-opacity="0.12"/>
+  </g>
+</svg>

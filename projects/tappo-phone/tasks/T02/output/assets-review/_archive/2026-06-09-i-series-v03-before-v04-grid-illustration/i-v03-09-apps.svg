@@ -1,0 +1,5 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="bg" x1="13" y1="12" x2="84" y2="84" gradientUnits="userSpaceOnUse"><stop stop-color="#F3F0FF"/><stop offset=".55" stop-color="#D3C0FF"/><stop offset="1" stop-color="#FFE1C6"/></linearGradient><filter id="sh" x="7" y="8" width="82" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#29466F" flood-opacity=".10"/><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#8A6EF6" flood-opacity=".05"/></filter></defs>
+  <rect x="8" y="8" width="80" height="80" rx="24" fill="url(#bg)"/>
+  <g filter="url(#sh)"><rect x="22" y="24" width="52" height="48" rx="17" fill="#FFFFFF" fill-opacity=".84"/><rect x="31" y="33" width="14" height="14" rx="5" fill="#284B70"/><rect x="51" y="33" width="14" height="14" rx="5" fill="#D9CCFF"/><rect x="31" y="53" width="14" height="14" rx="5" fill="#D9CCFF"/><rect x="51" y="53" width="14" height="14" rx="5" fill="#284B70"/><circle cx="62" cy="36" r="6" fill="#FF8A3D"/></g>
+</svg>

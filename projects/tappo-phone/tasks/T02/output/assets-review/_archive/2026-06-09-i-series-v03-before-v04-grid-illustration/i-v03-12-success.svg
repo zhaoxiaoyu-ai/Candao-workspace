@@ -1,0 +1,5 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="bg" x1="13" y1="12" x2="84" y2="84" gradientUnits="userSpaceOnUse"><stop stop-color="#EFFFF6"/><stop offset=".55" stop-color="#A8F0D1"/><stop offset="1" stop-color="#DFFBEF"/></linearGradient><filter id="sh" x="7" y="8" width="82" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#29466F" flood-opacity=".10"/><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0E9F6E" flood-opacity=".07"/></filter></defs>
+  <rect x="8" y="8" width="80" height="80" rx="24" fill="url(#bg)"/>
+  <g filter="url(#sh)"><rect x="22" y="24" width="52" height="48" rx="17" fill="#FFFFFF" fill-opacity=".84"/><circle cx="48" cy="48" r="22" fill="#0E9F6E" fill-opacity=".18"/><path fill-rule="evenodd" clip-rule="evenodd" d="M64.4 37.4C65.9 38.8 65.9 41.2 64.5 42.6L46 61.6C44.6 63.1 42.2 63.1 40.8 61.6L31.6 52.4C30.1 51 30.1 48.6 31.6 47.1C33.1 45.7 35.4 45.7 36.9 47.1L43.3 53.5L59.2 37.5C60.6 36 63 36 64.4 37.4Z" fill="#0E9F6E"/></g>
+</svg>

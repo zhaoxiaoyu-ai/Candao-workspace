@@ -1,0 +1,18 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <defs>
+    <linearGradient id="tile" gradientUnits="userSpaceOnUse" x1="16" y1="15" x2="80" y2="82"><stop stop-color="#FFFBE8"/><stop offset=".58" stop-color="#EAF8FF"/><stop offset="1" stop-color="#FFF0E9"/></linearGradient>
+    <linearGradient id="glyph" gradientUnits="userSpaceOnUse" x1="28" y1="27" x2="68" y2="70"><stop stop-color="#F6B84F"/><stop offset="1" stop-color="#FF7B3A"/></linearGradient>
+    <linearGradient id="deep" gradientUnits="userSpaceOnUse" x1="40" y1="36" x2="56" y2="64"><stop stop-color="#234D73"/><stop offset="1" stop-color="#132C46"/></linearGradient>
+    <filter id="soft" x="8" y="8" width="80" height="84" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#6A7B90" flood-opacity=".18" result="shadow"/><feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="96" height="96" rx="26" fill="#fff"/>
+  <g>
+    <rect x="16" y="16" width="64" height="64" rx="18" fill="url(#tile)"/>
+    <path fill="url(#glyph)" fill-rule="evenodd" d="M42 30c2.7-4.7 9.3-4.7 12 0l20 34.5c2.7 4.7-.6 10.5-6 10.5H28c-5.4 0-8.7-5.8-6-10.5L42 30Zm3 14a3 3 0 0 1 6 0v14a3 3 0 1 1-6 0V44Zm3 26a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
+    <path fill="url(#deep)" opacity=".92" d="M45 44a3 3 0 0 1 6 0v14a3 3 0 1 1-6 0V44Zm3 26a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
+    <ellipse cx="48" cy="38" rx="12" ry="5" fill="#fff" opacity=".26"/>
+  </g>
+</svg>
+
+
+

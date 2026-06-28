@@ -1,0 +1,38 @@
+<svg width="390" height="260" viewBox="0 0 390 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="32" y1="24" x2="362" y2="234" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8F2"/>
+      <stop offset="0.56" stop-color="#F5FBFF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="base" x1="94" y1="87" x2="255" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF7FF"/>
+      <stop offset="0.5" stop-color="#B9DCFF"/>
+      <stop offset="1" stop-color="#FFE1C6"/>
+    </linearGradient>
+    <linearGradient id="card" x1="190" y1="78" x2="311" y2="174" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF2E8"/>
+      <stop offset="0.48" stop-color="#FFB06F"/>
+      <stop offset="1" stop-color="#8DEFE9"/>
+    </linearGradient>
+    <filter id="shadow" x="64" y="46" width="258" height="196" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#2F5F8A" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#FF8A3D" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="390" height="260" rx="40" fill="url(#bg)"/>
+  <circle cx="304" cy="76" r="16" fill="#FFB06F" fill-opacity="0.20"/>
+  <circle cx="87" cy="184" r="14" fill="#7BE7E4" fill-opacity="0.20"/>
+  <g filter="url(#shadow)">
+    <rect x="99" y="92" width="140" height="122" rx="30" fill="url(#base)"/>
+    <rect x="124" y="116" width="92" height="54" rx="18" fill="#FFFFFF" fill-opacity="0.80"/>
+    <rect x="140" y="134" width="50" height="8" rx="4" fill="#5B9DFF" fill-opacity="0.34"/>
+    <rect x="140" y="153" width="38" height="8" rx="4" fill="#1F5DAE" fill-opacity="0.20"/>
+    <rect x="194" y="84" width="104" height="72" rx="20" fill="url(#card)"/>
+    <rect x="214" y="106" width="39" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.66"/>
+    <rect x="214" y="127" width="56" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.46"/>
+    <circle cx="278" cy="127" r="18" fill="#FF8A3D"/>
+    <circle cx="278" cy="127" r="7" fill="#FFFFFF" fill-opacity="0.74"/>
+    <rect x="138" y="188" width="74" height="11" rx="5.5" fill="#FFFFFF" fill-opacity="0.74"/>
+  </g>
+</svg>

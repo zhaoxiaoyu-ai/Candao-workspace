@@ -1,0 +1,42 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(178 98) rotate(118) scale(214 188)">
+      <stop stop-color="#FFF3E8"/>
+      <stop offset="0.46" stop-color="#F3FAFF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </radialGradient>
+    <linearGradient id="shell" x1="92" y1="86" x2="237" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8F7FF"/>
+      <stop offset="0.48" stop-color="#BFDFFF"/>
+      <stop offset="1" stop-color="#FFB06F"/>
+    </linearGradient>
+    <linearGradient id="face" x1="99" y1="124" x2="222" y2="205" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#143A82"/>
+      <stop offset="1" stop-color="#071B4D"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="82" y1="74" x2="243" y2="239" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9EDCFF"/>
+      <stop offset="0.58" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FF8A3D"/>
+    </linearGradient>
+    <filter id="softShadow" x="40" y="44" width="242" height="246" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#FF8A3D" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="320" height="320" rx="64" fill="url(#bg)"/>
+  <g filter="url(#softShadow)">
+    <path d="M160 68c51 0 93 39 93 88 0 29-15 55-38 71-12 9-28 15-47 16-15 1-29-1-42-6l-22 16c-8 6-19-2-15-12l8-21c-19-16-30-39-30-64 0-49 42-88 93-88Z" fill="url(#shell)"/>
+    <path d="M160 83c43 0 78 32 78 73 0 24-12 45-31 58-12 8-28 13-47 13-43 0-78-32-78-71 0-41 35-73 78-73Z" fill="url(#rim)" fill-opacity="0.76"/>
+    <path d="M161 107c38 0 68 23 68 52 0 30-30 53-68 53-37 0-68-23-68-53 0-29 31-52 68-52Z" fill="url(#face)"/>
+    <path d="M106 146c10-18 31-30 55-30 25 0 46 12 56 30-13-11-33-18-56-18-22 0-42 7-55 18Z" fill="#FFFFFF" fill-opacity="0.12"/>
+    <ellipse cx="132" cy="163" rx="9" ry="15" fill="#F8FBFF"/>
+    <ellipse cx="190" cy="163" rx="9" ry="15" fill="#F8FBFF"/>
+    <path d="M158 157l-11 11 11 9" stroke="#F8FBFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M174 178c-7 7-19 7-27 0" stroke="#AEEBFF" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="222" cy="105" r="18" fill="#7BE7E4" fill-opacity="0.46"/>
+    <circle cx="92" cy="111" r="10" fill="#FFB06F" fill-opacity="0.78"/>
+    <path d="M222 76c17 13 28 32 30 53" stroke="#7BD7FF" stroke-width="12" stroke-linecap="round"/>
+    <path d="M80 177c3 16 12 31 25 41" stroke="#FF8A3D" stroke-width="14" stroke-linecap="round"/>
+  </g>
+</svg>

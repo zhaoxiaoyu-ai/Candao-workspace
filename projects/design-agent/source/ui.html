@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #fff;
+      color: #17233d;
+      font-family: Inter, sans-serif;
+      padding: 16px;
+    }
+    h2 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .section {
+      border: 1px solid #eef1f6;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      padding: 12px;
+    }
+    .section-title {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .toolbar {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+    }
+    select,
+    input[type="file"],
+    textarea {
+      border: 1px solid #d9d9d9;
+      border-radius: 8px;
+      width: 100%;
+    }
+    select,
+    input[type="file"] {
+      color: #17233d;
+      font-size: 12px;
+      padding: 10px 12px;
+    }
+    textarea {
+      font-family: Consolas, monospace;
+      font-size: 12px;
+      height: 320px;
+      padding: 12px;
+      resize: vertical;
+    }
+    button {
+      background: #528dff;
+      border: 0;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 12px;
+      padding: 10px 12px;
+      width: 100%;
+    }
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+    }
+    button.secondary {
+      background: #f5f7fa;
+      color: #17233d;
+    }
+    .actions {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 12px;
+    }
+    .hint {
+      color: rgba(22, 35, 61, 0.65);
+      font-size: 11px;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+    .status {
+      color: rgba(22, 35, 61, 0.65);
+      font-size: 11px;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    .error {
+      color: #ff4040;
+      display: none;
+      font-size: 12px;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h2>Design Agent</h2>
+
+  <div class="section">
+    <div class="section-title">Reference Image Bootstrap</div>
+    <div class="toolbar">
+      <input id="image-file" type="file" accept="image/*" />
+      <select id="page-type">
+        <option value="auto">Auto Detect</option>
+        <option value="form">Form Page</option>
+        <option value="list">List Page</option>
+        <option value="modal">Modal Page</option>
+      </select>
+    </div>
+    <div id="paste-status" class="status">Paste image with Ctrl+V, or choose a file.</div>
+    <button id="bootstrap" class="secondary">Bootstrap From Image</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Business Schema</div>
+    <div class="toolbar">
+      <select id="example">
+        <option value="form">Form Page Example</option>
+        <option value="list">List Page Example</option>
+        <option value="modal">Modal Page Example</option>
+      </select>
+      <button id="load" class="secondary">Load Example</button>
+    </div>
+  </div>
+
+  <textarea id="json" spellcheck="false"></textarea>
+  <div id="error" class="error"></div>
+  <div class="actions">
+    <button id="validate" class="secondary">Validate</button>
+    <button id="generate">Generate</button>
+  </div>
+  <div class="hint">
+    Supports strict Schema rendering plus image-assisted bootstrap.
+    Upload a reference image to generate a starter page skeleton and editable Schema.
+  </div>
+
+  <script>
+    const examples = {
+      form: {
+        type: "FormPage",
+        name: "Layout / Page / FormPage",
+        width: 1664,
+        children: [
+          {
+            type: "FormContainer",
+            children: [
+              {
+                type: "FormSection",
+                title: "Basic Info",
+                children: [
+                  {
+                    type: "Row",
+                    gap: 24,
+                    children: [
+                      { type: "Form/Input", label: "Campaign Name", required: true, placeholder: "Enter campaign name", width: 296 },
+                      { type: "Form/Select", label: "Campaign Type", placeholder: "Select campaign type", width: 296 },
+                      { type: "Form/Picker", label: "Effective Date", pickerType: "date", range: "single", placeholder: "Select date", width: 192 }
+                    ]
+                  }
+                ]
+              },
+              {
+                type: "FormActionBar",
+                actions: [
+                  { type: "Button", label: "Submit", variant: "primary" },
+                  { type: "Button", label: "Cancel", variant: "default" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      list: {
+        type: "ListPage",
+        name: "Layout / Page / ListPage",
+        width: 1664,
+        children: [
+          {
+            type: "ListContainer",
+            children: [
+              {
+                type: "FilterBar",
+                title: "Filters",
+                children: [
+                  {
+                    type: "Row",
+                    gap: 24,
+                    children: [
+                      { type: "Form/Input", label: "Keyword", placeholder: "Enter keyword", width: 296 },
+                      { type: "Form/Select", label: "Status", placeholder: "Select status", width: 296 },
+                      { type: "Form/Picker", label: "Created Time", pickerType: "date", range: "range", placeholder: "Select date range", width: 296 },
+                      { type: "Button", label: "Search", variant: "primary" },
+                      { type: "Button", label: "Reset", variant: "default" }
+                    ]
+                  }
+                ]
+              },
+              {
+                type: "TableSection",
+                title: "Data Table",
+                children: [
+                  {
+                    type: "Row",
+                    gap: 16,
+                    children: [
+                      { type: "Button", label: "Create", variant: "primary" },
+                      { type: "Button", label: "Export", variant: "default" }
+                    ]
+                  },
+                  {
+                    type: "Form/EditableTable",
+                    label: "Table Data",
+                    width: 1568
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      modal: {
+        type: "ModalPage",
+        name: "Layout / Modal / Confirm",
+        width: 720,
+        title: "Create Campaign",
+        children: [
+          {
+            type: "FormSection",
+            title: "Basic Info",
+            children: [
+              {
+                type: "Row",
+                gap: 24,
+                children: [
+                  { type: "Form/Input", label: "Campaign Name", required: true, placeholder: "Enter campaign name", width: 296 },
+                  { type: "Form/Select", label: "Category", placeholder: "Select category", width: 296 }
+                ]
+              }
+            ]
+          },
+          {
+            type: "FormActionBar",
+            actions: [
+              { type: "Button", label: "Confirm", variant: "primary" },
+              { type: "Button", label: "Cancel", variant: "default" }
+            ]
+          }
+        ]
+      }
+    };
+
+    function setError(message) {
+      const errorEl = document.getElementById("error");
+      errorEl.style.display = message ? "block" : "none";
+      errorEl.textContent = message || "";
+    }
+
+    function setSchema(schema) {
+      document.getElementById("json").value = JSON.stringify(schema, null, 2);
+    }
+
+    function setPasteStatus(message) {
+      document.getElementById("paste-status").textContent = message;
+    }
+
+    let isBusy = false;
+
+    function setBusy(busy, label) {
+      isBusy = busy;
+      const buttons = [
+        document.getElementById("bootstrap"),
+        document.getElementById("load"),
+        document.getElementById("validate"),
+        document.getElementById("generate")
+      ];
+      for (const button of buttons) {
+        button.disabled = busy;
+      }
+      document.getElementById("image-file").disabled = busy;
+      document.getElementById("page-type").disabled = busy;
+      document.getElementById("example").disabled = busy;
+      document.getElementById("json").disabled = busy;
+
+      document.getElementById("bootstrap").textContent = busy && label === "bootstrap" ? "Bootstrapping..." : "Bootstrap From Image";
+      document.getElementById("load").textContent = busy && label === "load" ? "Loading..." : "Load Example";
+      document.getElementById("validate").textContent = busy && label === "validate" ? "Validating..." : "Validate";
+      document.getElementById("generate").textContent = busy && label === "generate" ? "Generating..." : "Generate";
+    }
+
+    function parseSchema() {
+      try {
+        const raw = document.getElementById("json").value.trim();
+        if (!raw) throw new Error("JSON content is empty");
+        const schema = JSON.parse(raw);
+        if (!schema || typeof schema !== "object" || Array.isArray(schema)) {
+          throw new Error("Schema must be a JSON object");
+        }
+        return schema;
+      } catch (error) {
+        setError(error instanceof Error ? error.message : String(error));
+        return null;
+      }
+    }
+
+    async function readImageFile(file) {
+      const buffer = await file.arrayBuffer();
+      const bytes = new Uint8Array(buffer);
+      return readImageBytes(bytes, file.name);
+    }
+
+    async function readImageBytes(bytes, fileName) {
+      const blob = new Blob([bytes]);
+      const url = URL.createObjectURL(blob);
+      try {
+        const dims = await new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve({ width: img.naturalWidth || img.width, height: img.naturalHeight || img.height });
+          img.onerror = reject;
+          img.src = url;
+        });
+        return { bytes, width: dims.width, height: dims.height, fileName };
+      } finally {
+        URL.revokeObjectURL(url);
+      }
+    }
+
+    async function analyzeImageStructure(image) {
+      const blob = new Blob([image.bytes]);
+      const url = URL.createObjectURL(blob);
+      try {
+        const img = await new Promise((resolve, reject) => {
+          const imageEl = new Image();
+          imageEl.onload = () => resolve(imageEl);
+          imageEl.onerror = reject;
+          imageEl.src = url;
+        });
+
+        const maxWidth = 240;
+        const scale = Math.min(1, maxWidth / Math.max(img.naturalWidth || img.width, 1));
+        const width = Math.max(32, Math.round((img.naturalWidth || img.width) * scale));
+        const height = Math.max(32, Math.round((img.naturalHeight || img.height) * scale));
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext("2d", { willReadFrequently: true });
+        ctx.drawImage(img, 0, 0, width, height);
+        const { data } = ctx.getImageData(0, 0, width, height);
+
+        const rowDensity = new Array(height).fill(0);
+        const colDensity = new Array(width).fill(0);
+        let minX = width;
+        let minY = height;
+        let maxX = 0;
+        let maxY = 0;
+        let nonWhitePixels = 0;
+
+        for (let y = 0; y < height; y += 1) {
+          for (let x = 0; x < width; x += 1) {
+            const idx = (y * width + x) * 4;
+            const r = data[idx];
+            const g = data[idx + 1];
+            const b = data[idx + 2];
+            const a = data[idx + 3];
+            const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
+            const isInk = a > 8 && luminance < 245;
+            if (!isInk) continue;
+            nonWhitePixels += 1;
+            rowDensity[y] += 1;
+            colDensity[x] += 1;
+            if (x < minX) minX = x;
+            if (y < minY) minY = y;
+            if (x > maxX) maxX = x;
+            if (y > maxY) maxY = y;
+          }
+        }
+
+        const normalizedRowDensity = rowDensity.map((value) => value / width);
+        const normalizedColDensity = colDensity.map((value) => value / height);
+        const contentWidthRatio = nonWhitePixels === 0 ? 1 : (maxX - minX + 1) / width;
+        const contentHeightRatio = nonWhitePixels === 0 ? 1 : (maxY - minY + 1) / height;
+        const isCentered = nonWhitePixels > 0
+          && Math.abs(((minX + maxX) / 2) / width - 0.5) < 0.12
+          && Math.abs(((minY + maxY) / 2) / height - 0.5) < 0.12;
+
+        const countBands = (from, to, threshold) => {
+          let bands = 0;
+          let inBand = false;
+          for (let i = from; i < to; i += 1) {
+            if (normalizedRowDensity[i] >= threshold) {
+              if (!inBand) {
+                bands += 1;
+                inBand = true;
+              }
+            } else {
+              inBand = false;
+            }
+          }
+          return bands;
+        };
+
+        const upperBands = countBands(Math.floor(height * 0.05), Math.floor(height * 0.35), 0.08);
+        const lowerBands = countBands(Math.floor(height * 0.45), Math.floor(height * 0.95), 0.08);
+
+        const midFrom = Math.floor(height * 0.18);
+        const midTo = Math.floor(height * 0.55);
+        const midColDensity = new Array(width).fill(0);
+        for (let x = 0; x < width; x += 1) {
+          let sum = 0;
+          for (let y = midFrom; y < midTo; y += 1) {
+            sum += normalizedRowDensity[y] > 0.03 ? ((data[(y * width + x) * 4 + 3] > 8) ? 1 : 0) : 0;
+          }
+          midColDensity[x] = sum / Math.max(midTo - midFrom, 1);
+        }
+
+        let columns = 0;
+        let inColumn = false;
+        for (let x = 0; x < width; x += 1) {
+          if (midColDensity[x] > 0.06) {
+            if (!inColumn) {
+              columns += 1;
+              inColumn = true;
+            }
+          } else {
+            inColumn = false;
+          }
+        }
+        columns = Math.max(1, Math.min(3, columns || 1));
+
+        let pageType = "form";
+        if (contentWidthRatio < 0.82 && contentHeightRatio < 0.82 && isCentered) {
+          pageType = "modal";
+        } else if (lowerBands >= 6 || (upperBands >= 1 && lowerBands >= 3)) {
+          pageType = "list";
+        }
+
+        return {
+          pageType,
+          columns,
+          sectionCount: Math.max(1, Math.min(3, upperBands || 1)),
+          hasTable: lowerBands >= 4,
+          hasFilterBar: upperBands >= 1,
+          hasActionBar: normalizedRowDensity.slice(Math.floor(height * 0.88)).some((value) => value > 0.08),
+          contentWidthRatio,
+          contentHeightRatio
+        };
+      } finally {
+        URL.revokeObjectURL(url);
+      }
+    }
+
+    let pastedImage = null;
+
+    document.getElementById("load").addEventListener("click", () => {
+      if (isBusy) return;
+      const exampleKey = document.getElementById("example").value;
+      setSchema(examples[exampleKey]);
+      setError("");
+    });
+
+    document.getElementById("validate").addEventListener("click", () => {
+      if (isBusy) return;
+      setError("");
+      const schema = parseSchema();
+      if (!schema) return;
+      setBusy(true, "validate");
+      parent.postMessage({ pluginMessage: { type: "validate", schema } }, "*");
+    });
+
+    document.getElementById("generate").addEventListener("click", () => {
+      if (isBusy) return;
+      setError("");
+      const schema = parseSchema();
+      if (!schema) return;
+      setBusy(true, "generate");
+      parent.postMessage({ pluginMessage: { type: "generate", schema } }, "*");
+    });
+
+    document.getElementById("bootstrap").addEventListener("click", async () => {
+      if (isBusy) return;
+      setError("");
+      try {
+        let image = pastedImage;
+        if (!image) {
+          const fileInput = document.getElementById("image-file");
+          const file = fileInput.files && fileInput.files[0];
+          if (!file) {
+            setError("Paste an image or choose an image file first");
+            return;
+          }
+          image = await readImageFile(file);
+        }
+        const analysis = await analyzeImageStructure(image);
+        setBusy(true, "bootstrap");
+        parent.postMessage({
+          pluginMessage: {
+            type: "bootstrap-from-image",
+            imageBytes: image.bytes,
+            fileName: image.fileName,
+            width: image.width,
+            height: image.height,
+            pageType: document.getElementById("page-type").value,
+            analysis
+          }
+        }, "*");
+      } catch (error) {
+        setBusy(false);
+        setError(error instanceof Error ? error.message : String(error));
+      }
+    });
+
+    document.addEventListener("paste", async (event) => {
+      const items = event.clipboardData && event.clipboardData.items;
+      if (!items || items.length === 0) return;
+
+      const imageItem = Array.from(items).find((item) => item.type && item.type.startsWith("image/"));
+      if (!imageItem) return;
+
+      event.preventDefault();
+      const file = imageItem.getAsFile();
+      if (!file) {
+        setError("Failed to read pasted image");
+        return;
+      }
+
+      try {
+        pastedImage = await readImageFile(file);
+        setError("");
+        setPasteStatus(`Pasted image ready: ${pastedImage.fileName} (${pastedImage.width}×${pastedImage.height})`);
+      } catch (error) {
+        pastedImage = null;
+        setError(error instanceof Error ? error.message : String(error));
+      }
+    });
+
+    document.getElementById("image-file").addEventListener("change", () => {
+      pastedImage = null;
+      setPasteStatus("File selected. Click Bootstrap From Image to continue, or paste a new image.");
+    });
+
+    window.onmessage = (event) => {
+      const message = event.data.pluginMessage;
+      if (!message) return;
+      setBusy(false);
+      if (message.type === "validation-result") {
+        setError(message.valid ? "" : (message.error || "Schema validation failed"));
+        if (message.valid && message.normalizedSchema) {
+          setSchema(message.normalizedSchema);
+        }
+      }
+      if (message.type === "generation-result") {
+        setError(message.valid ? "" : (message.error || "Generation failed"));
+      }
+      if (message.type === "bootstrap-result") {
+        setError("");
+        if (message.normalizedSchema) {
+          setSchema(message.normalizedSchema);
+        }
+        if (message.inferredType) {
+          setPasteStatus(`Image analyzed as ${message.inferredType} page and converted to starter schema.`);
+        }
+      }
+    };
+
+    setSchema(examples.form);
+    setPasteStatus("Paste image with Ctrl+V, or choose a file.");
+  </script>
+</body>
+</html>

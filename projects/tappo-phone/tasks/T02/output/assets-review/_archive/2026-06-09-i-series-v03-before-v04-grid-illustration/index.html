@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tappo App I 系列图标评审 v03</title>
+  <style>
+    :root {
+      --ink: #16130f;
+      --muted: rgba(22, 19, 15, 0.62);
+      --line: rgba(255, 138, 61, 0.22);
+      --card: rgba(255, 255, 255, 0.86);
+      --orange: #ff7f32;
+      --peach: #fff2e8;
+      --ice: #eef9ff;
+      --sky: #eaf4ff;
+      --shadow: 0 18px 42px rgba(38, 59, 84, 0.09), 0 6px 16px rgba(255, 127, 50, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "OPPO Sans 4.0", "OPPO Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(116, 224, 236, 0.28), transparent 31%),
+        radial-gradient(circle at 88% 7%, rgba(255, 151, 84, 0.20), transparent 27%),
+        radial-gradient(circle at 56% 20%, rgba(178, 166, 255, 0.16), transparent 26%),
+        linear-gradient(180deg, #fff9f2 0%, #f9fdff 48%, #ffffff 100%);
+    }
+
+    main {
+      width: min(1120px, calc(100vw - 48px));
+      margin: 0 auto;
+      padding: 46px 0 64px;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 14px 0 12px;
+      font-size: 32px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .intro {
+      max-width: 940px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .meta,
+    .gate,
+    .icon-grid,
+    .review-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta {
+      grid-template-columns: repeat(4, max-content);
+      margin-top: 18px;
+    }
+
+    .chip,
+    .gate-item,
+    .asset-card,
+    .review-item {
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .chip {
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: rgba(22, 19, 15, 0.66);
+      font-size: 12px;
+      backdrop-filter: blur(12px);
+    }
+
+    .gate {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin: 24px 0 18px;
+    }
+
+    .gate-item {
+      padding: 13px;
+      border-radius: 16px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.58;
+      backdrop-filter: blur(12px);
+    }
+
+    .gate-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      max-width: 710px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .icon-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .asset-card {
+      display: grid;
+      gap: 12px;
+      min-height: 226px;
+      padding: 16px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .preview {
+      display: grid;
+      place-items: center;
+      min-height: 128px;
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.95), transparent 25%),
+        linear-gradient(135deg, var(--peach), var(--ice) 58%, var(--sky));
+      overflow: hidden;
+    }
+
+    .preview img {
+      width: 96px;
+      height: 96px;
+      display: block;
+    }
+
+    .asset-copy {
+      display: grid;
+      gap: 7px;
+    }
+
+    .purpose,
+    .asset-path {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .asset-path {
+      color: rgba(22, 19, 15, 0.44);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      word-break: break-all;
+    }
+
+    .review {
+      margin-top: 20px;
+      padding: 18px;
+      border: 1px solid rgba(255, 138, 61, 0.22);
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 78% 0%, rgba(105, 218, 234, 0.18), transparent 34%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 249, 242, 0.74));
+    }
+
+    .review h2 {
+      margin-bottom: 12px;
+    }
+
+    .review-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .review-item {
+      padding: 14px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .review-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        width: min(390px, calc(100vw - 32px));
+        padding-top: 28px;
+      }
+
+      .meta,
+      .gate,
+      .icon-grid,
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="eyebrow">Tappo App I 系列图标评审 v03</div>
+      <h1>参考 Remixicon / Magnific 后重绘的 22 个精细图标</h1>
+      <p class="intro">本版只参考两个优秀图标站点的规范能力，不复制具体图形：吸收 Remixicon 的网格纪律、清晰隐喻和稳定图形重心，也吸收 Magnific 的柔和高光、圆角材质和轻体积层次。所有图标仍围绕 Tappo 橙色品牌关系，保持清透、简约、可读、可落地。</p>
+      <div class="meta">
+        <span class="chip">评审宽度：390px</span>
+        <span class="chip">图标：96px tile</span>
+        <span class="chip">样式：精细面性 / 双色</span>
+        <span class="chip">版本：I v03</span>
+      </div>
+    </section>
+
+    <section class="gate" aria-label="review gates">
+      <div class="gate-item"><strong>修正原因</strong>上一版仍显粗略，缺少高质量图标应有的几何秩序、重心控制和细节层级。</div>
+      <div class="gate-item"><strong>绘制原则</strong>保持闭合形体、布尔镂空、稳定留白；禁止靠随意线条、文字或装饰符号解释含义。</div>
+      <div class="gate-item"><strong>风格边界</strong>橙色为品牌支撑，蓝青/薄荷/淡紫/浅粉只做清透氛围；不转向蓝紫 AI 模板感。</div>
+      <div class="gate-item"><strong>评审动作</strong>请按 ID 标注问题：语义、细节、组内一致、是否需要进入生产资产。</div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>消息</h2><p>消息入口必须明确是会话/消息，而不是普通通知点。</p></div>
+      <div class="icon-grid">
+        <article class="asset-card"><div class="preview"><img src="./i-v03-01-message.svg" alt="I01 消息"></div><div class="asset-copy"><h3>I01 消息</h3><p class="purpose">会话气泡、消息条、未读角标，强调沟通入口。</p><p class="asset-path">i-v03-01-message.svg</p></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>履约方式</h2><p>堂食、自取、外送必须严格区分：餐具 / 自提袋 / 配送车。</p></div>
+      <div class="icon-grid">
+        <article class="asset-card"><div class="preview"><img src="./i-v03-02-dine-in.svg" alt="I02 堂食"></div><div class="asset-copy"><h3>I02 堂食</h3><p class="purpose">餐盘、叉和刀，表达店内用餐。</p><p class="asset-path">i-v03-02-dine-in.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-03-pickup.svg" alt="I03 自取"></div><div class="asset-copy"><h3>I03 自取</h3><p class="purpose">手提袋和取餐标签，表达到店自提。</p><p class="asset-path">i-v03-03-pickup.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-04-delivery.svg" alt="I04 外送"></div><div class="asset-copy"><h3>I04 外送</h3><p class="purpose">配送车、货箱和双轮，表达外送履约。</p><p class="asset-path">i-v03-04-delivery.svg</p></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>点餐与订座</h2><p>点餐方式是选择/切换入口，今日订座是当日预约日历与时间状态。</p></div>
+      <div class="icon-grid">
+        <article class="asset-card"><div class="preview"><img src="./i-v03-05-order-method.svg" alt="I05 点餐方式"></div><div class="asset-copy"><h3>I05 点餐方式</h3><p class="purpose">菜单卡、分支节点和选择关系。</p><p class="asset-path">i-v03-05-order-method.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-06-today-booking.svg" alt="I06 今日订座"></div><div class="asset-copy"><h3>I06 今日订座</h3><p class="purpose">日历、当日标识和时钟状态。</p><p class="asset-path">i-v03-06-today-booking.svg</p></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>底部导航</h2><p>主页、数据、应用、设置作为导航图标，结构要简洁、中心稳定、识别快。</p></div>
+      <div class="icon-grid">
+        <article class="asset-card"><div class="preview"><img src="./i-v03-07-home.svg" alt="I07 主页"></div><div class="asset-copy"><h3>I07 主页</h3><p class="purpose">房屋轮廓、门洞和主入口。</p><p class="asset-path">i-v03-07-home.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-08-data.svg" alt="I08 数据"></div><div class="asset-copy"><h3>I08 数据</h3><p class="purpose">柱状图、洞察点和趋势高光。</p><p class="asset-path">i-v03-08-data.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-09-apps.svg" alt="I09 应用"></div><div class="asset-copy"><h3>I09 应用</h3><p class="purpose">四宫格模块和开通状态点。</p><p class="asset-path">i-v03-09-apps.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-10-settings.svg" alt="I10 设置"></div><div class="asset-copy"><h3>I10 设置</h3><p class="purpose">齿轮、中心孔和控制高光。</p><p class="asset-path">i-v03-10-settings.svg</p></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>状态反馈</h2><p>提示、成功、失败需要语义强、颜色克制，并适合用于 toast、空状态和表单反馈。</p></div>
+      <div class="icon-grid">
+        <article class="asset-card"><div class="preview"><img src="./i-v03-11-notice.svg" alt="I11 提示"></div><div class="asset-copy"><h3>I11 提示</h3><p class="purpose">警示三角和感叹号，表达注意。</p><p class="asset-path">i-v03-11-notice.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-12-success.svg" alt="I12 成功"></div><div class="asset-copy"><h3>I12 成功</h3><p class="purpose">圆形状态、勾形和轻绿色确认。</p><p class="asset-path">i-v03-12-success.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-13-failure.svg" alt="I13 失败"></div><div class="asset-copy"><h3>I13 失败</h3><p class="purpose">圆形状态、叉形和轻红色失败。</p><p class="asset-path">i-v03-13-failure.svg</p></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>账号设置</h2><p>用户名、邮箱、修改密码、语言、消息通知按设置项语义绘制，避免互相混淆。</p></div>
+      <div class="icon-grid">
+        <article class="asset-card"><div class="preview"><img src="./i-v03-14-username.svg" alt="I14 用户名"></div><div class="asset-copy"><h3>I14 用户名</h3><p class="purpose">用户头像、身份底牌和状态点。</p><p class="asset-path">i-v03-14-username.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-15-email.svg" alt="I15 邮箱"></div><div class="asset-copy"><h3>I15 邮箱</h3><p class="purpose">信封、折线和收件状态。</p><p class="asset-path">i-v03-15-email.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-16-change-password.svg" alt="I16 修改密码"></div><div class="asset-copy"><h3>I16 修改密码</h3><p class="purpose">锁体、密码点和编辑笔。</p><p class="asset-path">i-v03-16-change-password.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-17-language.svg" alt="I17 语言"></div><div class="asset-copy"><h3>I17 语言</h3><p class="purpose">地球、经纬线和语言切换关系。</p><p class="asset-path">i-v03-17-language.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-18-message-notification.svg" alt="I18 消息通知"></div><div class="asset-copy"><h3>I18 消息通知</h3><p class="purpose">消息气泡、提醒点和通知状态。</p><p class="asset-path">i-v03-18-message-notification.svg</p></div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>协议与反馈</h2><p>服务协议、隐私政策、建议反馈、版本号偏设置页功能项，保持低调、可信赖。</p></div>
+      <div class="icon-grid">
+        <article class="asset-card"><div class="preview"><img src="./i-v03-19-service-agreement.svg" alt="I19 服务协议"></div><div class="asset-copy"><h3>I19 服务协议</h3><p class="purpose">协议文档、勾选条目和折角。</p><p class="asset-path">i-v03-19-service-agreement.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-20-privacy-policy.svg" alt="I20 隐私政策"></div><div class="asset-copy"><h3>I20 隐私政策</h3><p class="purpose">盾牌、锁孔和隐私保护状态。</p><p class="asset-path">i-v03-20-privacy-policy.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-21-feedback.svg" alt="I21 建议反馈"></div><div class="asset-copy"><h3>I21 建议反馈</h3><p class="purpose">反馈气泡、编辑笔和输入条。</p><p class="asset-path">i-v03-21-feedback.svg</p></div></article>
+        <article class="asset-card"><div class="preview"><img src="./i-v03-22-version.svg" alt="I22 版本号"></div><div class="asset-copy"><h3>I22 版本号</h3><p class="purpose">信息圆点、版本卡和状态条。</p><p class="asset-path">i-v03-22-version.svg</p></div></article>
+      </div>
+    </section>
+
+    <section class="review">
+      <h2>人工评审结论填写建议</h2>
+      <div class="review-grid">
+        <div class="review-item"><strong>评审入口</strong>本 HTML、对应 PNG 和 22 个独立 SVG；不要只看单个图标。</div>
+        <div class="review-item"><strong>评审重点</strong>语义是否一眼可读、比 v02 是否更精致、组内材质和重心是否一致。</div>
+        <div class="review-item"><strong>通过标准</strong>无外部复制、无 stroke 线框、无文字水印、居中稳定、适配 390px 页面。</div>
+        <div class="review-item"><strong>下一步</strong>通过后再迁移生产目录；不通过按 ID 单项修正并保留 v03 对照。</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

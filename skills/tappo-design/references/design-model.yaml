@@ -1,0 +1,120 @@
+name: tappo-design
+version: 1.0.0
+brand_type: ui-rich
+platform:
+  primary: mobile_webview
+  framework: vue_3_typescript_vite
+  primary_viewport:
+    width: 402
+    height: 874
+  max_phone_width: 440
+source_of_truth:
+  business_content: prototype
+  visual_reference:
+    - figma: "nHamLH3qlZYFXVC0OVxNqc / 17:38"
+    - figma: "anMsqgZYi8ZqmJXZah78KI / 287:32144"
+  implementation_tokens: "source/src/styles/base.css"
+philosophy:
+  attitude: "warm operational software"
+  tension: "friendly tactile depth with dense restaurant data"
+  rule: "content first, polish second, decoration last"
+fonts:
+  display: "OPPO Sans"
+  body: "OPPO Sans"
+  mono: "Montserrat"
+  mono_for_code: false
+  mono_for_metrics: true
+colors:
+  light:
+    background: "#fffbf6"
+    surface1: "#ffffff"
+    surface2: "#fff9f1"
+    surface3: "#f8f8f8"
+    border: "#f5f5f4"
+    border_visible: "rgba(9, 5, 2, 0.08)"
+    text1: "rgba(9, 5, 2, 0.95)"
+    text2: "rgba(9, 5, 2, 0.65)"
+    text3: "rgba(9, 5, 2, 0.45)"
+    text4: "rgba(9, 5, 2, 0.30)"
+    accent: "#ff8a3d"
+    accent_hover: "#ffa764"
+    accent_active: "#db6a2e"
+    accent_subtle: "#fff9f1"
+    accent_border: "#ffedd8"
+    success: "#32b963"
+    success_bg: "#f0fdf4"
+    warning: "#fc8e17"
+    warning_bg: "#fff7e8"
+    error: "#ff4040"
+    error_bg: "#fff1f1"
+    info: "#3b82f6"
+    info_bg: "#eef6ff"
+  dark:
+    background: "#17120f"
+    surface1: "#211916"
+    surface2: "#2b211d"
+    surface3: "#342822"
+    border: "rgba(255, 250, 244, 0.08)"
+    border_visible: "rgba(255, 250, 244, 0.16)"
+    text1: "rgba(255, 250, 244, 0.96)"
+    text2: "rgba(255, 250, 244, 0.68)"
+    text3: "rgba(255, 250, 244, 0.46)"
+    text4: "rgba(255, 250, 244, 0.30)"
+    accent: "#ffa764"
+    accent_subtle: "rgba(255, 138, 61, 0.14)"
+    success: "#55c77f"
+    success_bg: "rgba(85, 199, 127, 0.14)"
+    warning: "#ffb45c"
+    warning_bg: "rgba(255, 180, 92, 0.14)"
+    error: "#ff6b66"
+    error_bg: "rgba(255, 107, 102, 0.14)"
+type_scale:
+  display: { size: 30, line_height: 38, weight: 800, usage: "screen hero, primary balance" }
+  h1: { size: 25, line_height: 32, weight: 750, usage: "page title" }
+  h2: { size: 18, line_height: 26, weight: 750, usage: "section title" }
+  h3: { size: 16, line_height: 22, weight: 750, usage: "card/list title" }
+  body: { size: 15, line_height: 22, weight: 400, usage: "standard UI body" }
+  body_sm: { size: 14, line_height: 21, weight: 400, usage: "secondary text" }
+  caption: { size: 13, line_height: 19, weight: 400, usage: "metadata, captions" }
+  label: { size: 12, line_height: 16, weight: 700, usage: "badges, nav labels only" }
+spacing:
+  base: 8
+  scale: { "2xs": 2, xs: 4, sm: 8, md: 16, lg: 24, xl: 32, "2xl": 48, "3xl": 64, "4xl": 96 }
+radii:
+  icon_frame: 16
+  compact_card: 16
+  tile: 20
+  card: 24
+  hero: 28
+  pill: 999
+elevation:
+  low: "0 2px 8px rgba(9, 5, 2, 0.08)"
+  card: "0 4px 20px rgba(229, 215, 204, 0.40)"
+  modal: "0 4px 24px rgba(0, 0, 0, 0.16)"
+motion:
+  personality: smooth
+  fast: { duration: "180ms", easing: "ease" }
+  standard: { duration: "220ms", easing: "ease-in-out" }
+icons:
+  observed_style: "soft semi-dimensional product icons, centered inside tinted rounded-square frames"
+  fallback_kit: "project generated PNG assets or deterministic code-native SVG"
+  rule: "one centered asset per icon; never sprite crop for production"
+assets:
+  generated_path: "source/src/assets/generated/"
+  constraints:
+    - "no text"
+    - "no watermark"
+    - "no checkerboard"
+    - "no fake logo"
+    - "store project-bound final assets in source"
+validation:
+  commands:
+    - "npm run typecheck"
+    - "npm run build"
+  screenshots:
+    primary: "402x874"
+    required_checks:
+      - "no horizontal overflow"
+      - "text fits"
+      - "icons centered"
+      - "prototype content preserved"

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tappo App 当前 PNG 预览</title>
+  <style>
+    body {
+      margin: 0;
+      color: #18130f;
+      font-family: "OPPO Sans 4.0", "OPPO Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #fffaf4;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255, 138, 61, 0.20);
+      background: rgba(255, 250, 244, 0.88);
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: #ff7a2f;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    main {
+      width: min(1440px, 100%);
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid rgba(255, 138, 61, 0.18);
+      border-radius: 16px;
+      box-shadow: 0 18px 42px rgba(38, 59, 84, 0.09);
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tappo App 当前 PNG 预览</h1>
+    <nav>
+      <a href="./index.html">评审页</a>
+      <a href="../current-review.html">稳定入口</a>
+      <a href="./preview.png">原始 PNG</a>
+    </nav>
+  </header>
+  <main>
+    <img src="./preview.png" alt="Tappo App 当前评审 PNG 预览">
+  </main>
+</body>
+</html>

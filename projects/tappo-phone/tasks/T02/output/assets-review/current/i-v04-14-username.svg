@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <defs>
+    <linearGradient id="tile" gradientUnits="userSpaceOnUse" x1="16" y1="15" x2="80" y2="82"><stop stop-color="#EAF8FF"/><stop offset=".6" stop-color="#F4F0FF"/><stop offset="1" stop-color="#FFF3E8"/></linearGradient>
+    <linearGradient id="glyph" gradientUnits="userSpaceOnUse" x1="30" y1="27" x2="68" y2="70"><stop stop-color="#285B82"/><stop offset="1" stop-color="#142C46"/></linearGradient>
+    <linearGradient id="accent" gradientUnits="userSpaceOnUse" x1="57" y1="54" x2="73" y2="70"><stop stop-color="#FFB95F"/><stop offset="1" stop-color="#FF7338"/></linearGradient>
+    <filter id="soft" x="8" y="8" width="80" height="84" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#6A7B90" flood-opacity=".18" result="shadow"/><feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="96" height="96" rx="26" fill="#fff"/>
+  <g>
+    <rect x="16" y="16" width="64" height="64" rx="18" fill="url(#tile)"/>
+    <circle cx="48" cy="39" r="13" fill="url(#glyph)"/>
+    <path fill="url(#glyph)" d="M30 68c1.8-10.2 9-17 18-17s16.2 6.8 18 17a5 5 0 0 1-5 6H35a5 5 0 0 1-5-6Z"/>
+    <circle cx="65" cy="60" r="8" fill="url(#accent)"/>
+    <circle cx="62.5" cy="57.5" r="2.2" fill="#fff" opacity=".86"/>
+    <ellipse cx="44" cy="30" rx="10" ry="4" fill="#fff" opacity=".25"/>
+  </g>
+</svg>
+
+
+

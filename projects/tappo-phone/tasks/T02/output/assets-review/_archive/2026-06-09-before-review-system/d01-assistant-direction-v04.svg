@@ -1,0 +1,45 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="canvas" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(158 88) rotate(116) scale(218 190)">
+      <stop stop-color="#FFF6EA"/>
+      <stop offset="0.55" stop-color="#F4FAFF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </radialGradient>
+    <linearGradient id="shell" x1="96" y1="72" x2="226" y2="245" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.42" stop-color="#CDEBFF"/>
+      <stop offset="1" stop-color="#FFD8B5"/>
+    </linearGradient>
+    <linearGradient id="face" x1="112" y1="104" x2="208" y2="164" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17499A"/>
+      <stop offset="1" stop-color="#071A49"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="118" y1="174" x2="202" y2="224" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EAF7FF"/>
+    </linearGradient>
+    <filter id="shadow" x="62" y="54" width="198" height="226" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#2F5F8A" flood-opacity="0.10"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#FF8A3D" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="320" height="320" rx="64" fill="url(#canvas)"/>
+  <circle cx="226" cy="102" r="14" fill="#7BE7E4" fill-opacity="0.16"/>
+  <circle cx="96" cy="213" r="13" fill="#FFB06F" fill-opacity="0.16"/>
+  <g filter="url(#shadow)">
+    <ellipse cx="160" cy="239" rx="58" ry="15" fill="#FFB06F" fill-opacity="0.15"/>
+    <rect x="96" y="74" width="128" height="166" rx="64" fill="url(#shell)"/>
+    <rect x="100" y="78" width="120" height="158" rx="60" stroke="#FFFFFF" stroke-opacity="0.56" stroke-width="8"/>
+    <rect x="112" y="106" width="96" height="64" rx="32" fill="url(#face)"/>
+    <ellipse cx="136" cy="137" rx="7" ry="12" fill="#F8FBFF"/>
+    <ellipse cx="184" cy="137" rx="7" ry="12" fill="#F8FBFF"/>
+    <path d="M160 132l-8 8 8 7" stroke="#F8FBFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M150 158c8 6 22 6 30 0" stroke="#AEEBFF" stroke-width="4" stroke-linecap="round"/>
+    <rect x="120" y="184" width="80" height="34" rx="17" fill="url(#belly)" fill-opacity="0.82"/>
+    <rect x="134" y="197" width="52" height="8" rx="4" fill="#B9DCFF" fill-opacity="0.62"/>
+    <rect x="122" y="224" width="34" height="14" rx="7" fill="#FFFFFF" fill-opacity="0.76"/>
+    <rect x="164" y="224" width="34" height="14" rx="7" fill="#FFFFFF" fill-opacity="0.64"/>
+    <circle cx="104" cy="132" r="6" fill="#FFB06F" fill-opacity="0.72"/>
+    <circle cx="216" cy="132" r="6" fill="#7BE7E4" fill-opacity="0.70"/>
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+<svg width="640" height="320" viewBox="0 0 640 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8F2"/>
+      <stop offset="0.55" stop-color="#F4FAFF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="tile1" x1="92" y1="84" x2="197" y2="201" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0E4"/>
+      <stop offset="0.48" stop-color="#FFB06F"/>
+      <stop offset="1" stop-color="#CFFBFA"/>
+    </linearGradient>
+    <linearGradient id="tile2" x1="225" y1="88" x2="335" y2="201" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF7FF"/>
+      <stop offset="0.5" stop-color="#B9DCFF"/>
+      <stop offset="1" stop-color="#FFE1BD"/>
+    </linearGradient>
+    <linearGradient id="tile3" x1="358" y1="85" x2="466" y2="205" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4FFF1"/>
+      <stop offset="0.48" stop-color="#A8F3CF"/>
+      <stop offset="1" stop-color="#FFE5C8"/>
+    </linearGradient>
+    <linearGradient id="tile4" x1="492" y1="85" x2="600" y2="205" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4C8"/>
+      <stop offset="0.48" stop-color="#FFB06F"/>
+      <stop offset="1" stop-color="#FFD1E6"/>
+    </linearGradient>
+    <filter id="tileShadow" x="54" y="54" width="548" height="198" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="15" flood-color="#0F172A" flood-opacity="0.11"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#FF8A3D" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="640" height="320" rx="64" fill="url(#bg)"/>
+  <g filter="url(#tileShadow)">
+    <rect x="72" y="78" width="112" height="112" rx="28" fill="url(#tile1)"/>
+    <rect x="205" y="78" width="112" height="112" rx="28" fill="url(#tile2)"/>
+    <rect x="338" y="78" width="112" height="112" rx="28" fill="url(#tile3)"/>
+    <rect x="471" y="78" width="112" height="112" rx="28" fill="url(#tile4)"/>
+    <path d="M105 135h46c11 0 19 8 19 19v1c0 10-8 18-19 18h-46c-10 0-18-8-18-18v-1c0-11 8-19 18-19Z" fill="#FFFFFF" fill-opacity="0.76"/>
+    <path d="M103 124h44c10 0 18 8 18 18v14h-80v-14c0-10 8-18 18-18Z" fill="#1F5DAE" fill-opacity="0.52"/>
+    <circle cx="151" cy="149" r="10" fill="#FF8A3D"/>
+    <path d="M244 113h40c10 0 18 8 18 18v37c0 10-8 18-18 18h-40c-10 0-18-8-18-18v-37c0-10 8-18 18-18Z" fill="#FFFFFF" fill-opacity="0.76"/>
+    <path d="M243 134h42M243 151h32M243 168h24" stroke="#1F5DAE" stroke-opacity="0.48" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="289" cy="122" r="9" fill="#FF8A3D" fill-opacity="0.88"/>
+    <path d="M371 136c0-14 11-25 25-25h31c5 0 9 4 9 9v39c0 14-11 25-25 25h-31c-5 0-9-4-9-9v-39Z" fill="#FFFFFF" fill-opacity="0.76"/>
+    <path d="M391 152h26M404 139v26" stroke="#0E9F6E" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="425" cy="121" r="8" fill="#5B9DFF" fill-opacity="0.72"/>
+    <path d="M519 113h28c18 0 32 14 32 32v12c0 15-12 27-27 27h-38c-15 0-27-12-27-27v-12c0-18 14-32 32-32Z" fill="#FFFFFF" fill-opacity="0.76"/>
+    <path d="M511 153h42" stroke="#E95F1E" stroke-opacity="0.62" stroke-width="8" stroke-linecap="round"/>
+    <path d="M533 131l8 13 15 2-11 11 3 15-15-7-14 7 3-15-11-11 15-2 7-13Z" fill="#FF8A3D" fill-opacity="0.76"/>
+  </g>
+  <path d="M111 230h420" stroke="#B9DCFF" stroke-opacity="0.34" stroke-width="8" stroke-linecap="round"/>
+  <path d="M111 230h210" stroke="#FFB06F" stroke-opacity="0.48" stroke-width="8" stroke-linecap="round"/>
+</svg>

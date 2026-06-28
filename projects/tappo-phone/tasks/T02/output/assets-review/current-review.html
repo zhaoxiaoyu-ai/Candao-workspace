@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tappo App 当前评审入口</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      color: #18130f;
+      font-family: "OPPO Sans 4.0", "OPPO Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(116, 224, 236, 0.20), transparent 32%),
+        radial-gradient(circle at 90% 8%, rgba(255, 138, 61, 0.20), transparent 30%),
+        linear-gradient(180deg, #fffaf4 0%, #ffffff 100%);
+    }
+
+    main {
+      width: min(520px, calc(100vw - 32px));
+      padding: 24px;
+      border: 1px solid rgba(255, 138, 61, 0.22);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 16px 38px rgba(48, 68, 92, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0;
+      color: rgba(24, 19, 15, 0.62);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    a {
+      display: block;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 138, 61, 0.22);
+      border-radius: 16px;
+      color: #18130f;
+      background: linear-gradient(135deg, #ffffff, #fff4eb);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+
+    a span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(24, 19, 15, 0.56);
+      font-size: 12px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tappo App 当前评审入口</h1>
+    <p>当前版本：I01-I22 v04。这里是稳定入口，后续新版本也会继续沿用这个文件。</p>
+    <div class="actions">
+      <a href="./current/index.html">打开当前评审页<span>HTML 评审板，包含分组、说明和全部图标。</span></a>
+      <a href="./current/preview.html">打开图片预览页<span>HTML 包装的 PNG 预览，比直接点击图片文件更稳定。</span></a>
+      <a href="./current/preview.png">打开原始 PNG<span>如果客户端支持图片文件直链，可以用这个入口。</span></a>
+    </div>
+  </main>
+</body>
+</html>

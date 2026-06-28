@@ -1,0 +1,18 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <defs>
+    <linearGradient id="tile" gradientUnits="userSpaceOnUse" x1="16" y1="15" x2="80" y2="82"><stop stop-color="#F0FFF7"/><stop offset=".6" stop-color="#EAF8FF"/><stop offset="1" stop-color="#FFF3EA"/></linearGradient>
+    <linearGradient id="glyph" gradientUnits="userSpaceOnUse" x1="28" y1="27" x2="68" y2="70"><stop stop-color="#66E2A4"/><stop offset="1" stop-color="#2DBA7C"/></linearGradient>
+    <linearGradient id="deep" gradientUnits="userSpaceOnUse" x1="38" y1="40" x2="58" y2="62"><stop stop-color="#1D6D5B"/><stop offset="1" stop-color="#143D48"/></linearGradient>
+    <filter id="soft" x="8" y="8" width="80" height="84" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#6A7B90" flood-opacity=".18" result="shadow"/><feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="96" height="96" rx="26" fill="#fff"/>
+  <g>
+    <rect x="16" y="16" width="64" height="64" rx="18" fill="url(#tile)"/>
+    <circle cx="48" cy="48" r="24" fill="url(#glyph)"/>
+    <path fill="url(#deep)" d="M38 48.5a4 4 0 0 1 5.7 0l3.2 3.3 8.9-10.1a4 4 0 1 1 6 5.3L50 60.5a4 4 0 0 1-5.9.2l-6.1-6.4a4 4 0 0 1 0-5.8Z"/>
+    <ellipse cx="43" cy="34" rx="13" ry="6" fill="#fff" opacity=".34"/>
+  </g>
+</svg>
+
+
+

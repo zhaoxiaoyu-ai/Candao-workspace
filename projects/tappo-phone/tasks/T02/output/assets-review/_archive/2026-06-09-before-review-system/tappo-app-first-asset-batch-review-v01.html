@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tappo App 首批图标与微插画评审 v01</title>
+  <style>
+    :root {
+      --ink: #18130f;
+      --muted: rgba(24, 19, 15, 0.62);
+      --line: rgba(245, 166, 111, 0.24);
+      --card: rgba(255, 255, 255, 0.88);
+      --orange: #ff8a3d;
+      --ice: #eef8ff;
+      --peach: #fff1e7;
+      --shadow: 0 16px 38px rgba(48, 68, 92, 0.08), 0 4px 12px rgba(255, 138, 61, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "OPPO Sans 4.0", "OPPO Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(127, 221, 244, 0.22), transparent 34%),
+        radial-gradient(circle at 88% 6%, rgba(255, 154, 85, 0.18), transparent 28%),
+        linear-gradient(180deg, #fffaf4 0%, #ffffff 100%);
+    }
+
+    main {
+      width: min(1120px, calc(100vw - 48px));
+      margin: 0 auto;
+      padding: 46px 0 64px;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 14px 0 12px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .intro {
+      max-width: 920px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .meta,
+    .gate,
+    .icon-grid,
+    .micro-grid,
+    .review-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta {
+      grid-template-columns: repeat(4, max-content);
+      margin-top: 18px;
+    }
+
+    .chip,
+    .gate-item,
+    .asset-card,
+    .review-item {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .chip {
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: rgba(24, 19, 15, 0.66);
+      font-size: 12px;
+    }
+
+    .gate {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin: 24px 0 18px;
+    }
+
+    .gate-item {
+      padding: 13px;
+      border-radius: 16px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.58;
+    }
+
+    .gate-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .icon-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .micro-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .asset-card {
+      display: grid;
+      gap: 12px;
+      min-height: 226px;
+      padding: 16px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .asset-card.micro {
+      min-height: 342px;
+    }
+
+    .preview {
+      display: grid;
+      place-items: center;
+      min-height: 128px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--peach), var(--ice));
+      overflow: hidden;
+    }
+
+    .preview.icon img {
+      width: 96px;
+      height: 96px;
+      display: block;
+    }
+
+    .preview.micro {
+      min-height: 194px;
+    }
+
+    .preview.micro img {
+      width: min(100%, 300px);
+      height: auto;
+      display: block;
+    }
+
+    .asset-copy {
+      display: grid;
+      gap: 7px;
+    }
+
+    .purpose,
+    .asset-path {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .asset-path {
+      color: rgba(24, 19, 15, 0.44);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      word-break: break-all;
+    }
+
+    .review {
+      margin-top: 20px;
+      padding: 18px;
+      border: 1px solid rgba(255, 138, 61, 0.22);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 249, 242, 0.72));
+    }
+
+    .review h2 {
+      margin-bottom: 12px;
+    }
+
+    .review-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .review-item {
+      padding: 14px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .review-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        width: min(390px, calc(100vw - 32px));
+        padding-top: 28px;
+      }
+
+      .meta,
+      .gate,
+      .icon-grid,
+      .micro-grid,
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="eyebrow">Tappo App 首批资产评审 v01</div>
+      <h1>I01-I12 模块图标 tile 与 M01-M03 微插画</h1>
+      <p class="intro">本轮在 `D01 v05 + D02 v05 + D03-D04 v04` 方向基础上继续执行，先产出可人工评审的独立 SVG 样张。它们仍属于方向评审资产，不直接接入生产代码。</p>
+      <div class="meta">
+        <span class="chip">评审宽度：390px</span>
+        <span class="chip">圆角体系：16px</span>
+        <span class="chip">字体：OPPO Sans 4.0</span>
+        <span class="chip">资产不含文字</span>
+      </div>
+    </section>
+
+    <section class="gate" aria-label="review gates">
+      <div class="gate-item"><strong>评审对象</strong>12 个模块入口 tile 与 3 个业务微插画的风格、语义、居中和同屏一致性。</div>
+      <div class="gate-item"><strong>用色原则</strong>底色可变化，但同屏保持低饱和、清透、统一光源，并保留橙色品牌支撑。</div>
+      <div class="gate-item"><strong>不通过风险</strong>像随机素材拼贴、老旧企业图标、蓝色品牌化、含义不清、线条错位或过度装饰。</div>
+      <div class="gate-item"><strong>下一步</strong>通过后再迁移到 `source/src/assets/generated/app-style-kit/`，不通过则按 ID 单项修正。</div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>模块图标 tile</h2>
+        <p>每个 icon 是独立 SVG。生产阶段仍需逐项导出，不使用 sprite sheet 或 CSS 裁切。</p>
+      </div>
+      <div class="icon-grid">
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i01-payment-tile-v01.svg" alt="I01 收款支付图标 tile"></div>
+          <div class="asset-copy"><h3>I01 收款 / 支付</h3><p class="purpose">钱包、卡片、支付状态点；用于支付设置、收款入口。</p><p class="asset-path">i01-payment-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i02-revenue-tile-v01.svg" alt="I02 营收余额图标 tile"></div>
+          <div class="asset-copy"><h3>I02 营收 / 余额</h3><p class="purpose">金额卡与上升曲线；用于老板首页、数据卡。</p><p class="asset-path">i02-revenue-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i03-order-tile-v01.svg" alt="I03 订单图标 tile"></div>
+          <div class="asset-copy"><h3>I03 订单</h3><p class="purpose">票据、订单条、状态点；用于订单列表、经营概览。</p><p class="asset-path">i03-order-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i04-booking-tile-v01.svg" alt="I04 预约图标 tile"></div>
+          <div class="asset-copy"><h3>I04 预约</h3><p class="purpose">日历与时钟；用于预约管理和时间入口。</p><p class="asset-path">i04-booking-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i05-table-order-tile-v01.svg" alt="I05 桌台点餐图标 tile"></div>
+          <div class="asset-copy"><h3>I05 桌台 / 点餐</h3><p class="purpose">桌台、菜单卡、状态点；用于 POS、桌台入口。</p><p class="asset-path">i05-table-order-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i06-staff-tile-v01.svg" alt="I06 员工权限图标 tile"></div>
+          <div class="asset-copy"><h3>I06 员工 / 权限</h3><p class="purpose">人员徽章与权限钥匙；用于员工工作台。</p><p class="asset-path">i06-staff-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i07-device-tile-v01.svg" alt="I07 设备连接图标 tile"></div>
+          <div class="asset-copy"><h3>I07 设备 / 连接</h3><p class="purpose">终端与连接状态；用于设备绑定、系统健康。</p><p class="asset-path">i07-device-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i08-settings-tile-v01.svg" alt="I08 设置图标 tile"></div>
+          <div class="asset-copy"><h3>I08 设置</h3><p class="purpose">控制面板与调节点；用于设置页入口。</p><p class="asset-path">i08-settings-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i09-analytics-tile-v01.svg" alt="I09 数据分析图标 tile"></div>
+          <div class="asset-copy"><h3>I09 数据分析</h3><p class="purpose">图表与洞察点；用于报表、AI 摘要。</p><p class="asset-path">i09-analytics-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i10-app-activation-tile-v01.svg" alt="I10 应用开通图标 tile"></div>
+          <div class="asset-copy"><h3>I10 应用开通</h3><p class="purpose">模块块、开关状态；用于应用管理。</p><p class="asset-path">i10-app-activation-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i11-points-tile-v01.svg" alt="I11 会员点数图标 tile"></div>
+          <div class="asset-copy"><h3>I11 会员 / 点数</h3><p class="purpose">星标与点数币；用于点数、会员权益。</p><p class="asset-path">i11-points-tile-v01.svg</p></div>
+        </article>
+        <article class="asset-card">
+          <div class="preview icon"><img src="./i12-inventory-tile-v01.svg" alt="I12 库存商品图标 tile"></div>
+          <div class="asset-copy"><h3>I12 库存 / 商品</h3><p class="purpose">盒子、清单关系；用于商品、库存、菜单。</p><p class="asset-path">i12-inventory-tile-v01.svg</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>业务微插画</h2>
+        <p>微插画用于设置总览、支付说明、预约或应用开通等卡片，不做营销 banner，不承载文字。</p>
+      </div>
+      <div class="micro-grid">
+        <article class="asset-card micro">
+          <div class="preview micro"><img src="./m01-device-settings-v01.svg" alt="M01 设备设置微插画"></div>
+          <div class="asset-copy"><h3>M01 设备 / 设置</h3><p class="purpose">设备健康、连接可信赖；用于设置总览、设备绑定。</p><p class="asset-path">m01-device-settings-v01.svg</p></div>
+        </article>
+        <article class="asset-card micro">
+          <div class="preview micro"><img src="./m02-payment-receive-v01.svg" alt="M02 支付收款微插画"></div>
+          <div class="asset-copy"><h3>M02 支付 / 收款</h3><p class="purpose">安全、到账、状态清楚；用于支付设置、充值、收款说明。</p><p class="asset-path">m02-payment-receive-v01.svg</p></div>
+        </article>
+        <article class="asset-card micro">
+          <div class="preview micro"><img src="./m03-booking-activation-v01.svg" alt="M03 预约应用开通微插画"></div>
+          <div class="asset-copy"><h3>M03 预约 / 应用开通</h3><p class="purpose">轻量引导、开通完成感；用于预约、应用管理。</p><p class="asset-path">m03-booking-activation-v01.svg</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="review">
+      <h2>人工评审结论填写建议</h2>
+      <div class="review-grid">
+        <div class="review-item"><strong>评审入口</strong>本 HTML 与对应 PNG，外加 15 个独立 SVG 样张。</div>
+        <div class="review-item"><strong>评审重点</strong>语义是否一眼可读、同屏色彩是否统一、图标是否居中、微插画是否克制。</div>
+        <div class="review-item"><strong>通过标准</strong>适合放入 390px 页面、16px 圆角卡片和 8-12px 图文间距环境。</div>
+        <div class="review-item"><strong>下一步</strong>通过后迁移生产目录；不通过则按 ID 单项修正，不回退全套方向。</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

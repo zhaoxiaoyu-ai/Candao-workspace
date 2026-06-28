@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "name": "Candao Workspace",
+      "path": "."
+    },
+    {
+      "name": "COMS Design System",
+      "path": "projects/coms/source"
+    },
+    {
+      "name": "Design Agent",
+      "path": "projects/design-agent/source"
+    },
+    {
+      "name": "XD to Figma Converter",
+      "path": "projects/xd-to-figma-converter/source"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/dist": false
+    }
+  }
+}

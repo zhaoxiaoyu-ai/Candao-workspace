@@ -1,0 +1,76 @@
+{
+  "document": {
+    "id": "root",
+    "name": "Marketing Landing",
+    "type": "ARTBOARD",
+    "layout": {
+      "layoutMode": "VERTICAL",
+      "sizingMode": "HUG",
+      "itemSpacing": 24,
+      "paddingTop": 40,
+      "paddingRight": 40,
+      "paddingBottom": 40,
+      "paddingLeft": 40,
+      "width": 1440
+    },
+    "children": [
+      {
+        "id": "hero",
+        "name": "Hero",
+        "type": "FRAME",
+        "componentName": "Hero/Banner",
+        "layout": {
+          "layoutMode": "HORIZONTAL",
+          "sizingMode": "FILL",
+          "itemSpacing": 32,
+          "paddingTop": 32,
+          "paddingRight": 32,
+          "paddingBottom": 32,
+          "paddingLeft": 32
+        },
+        "styles": {
+          "fill": "#F7F3EC",
+          "cornerRadius": 24
+        },
+        "children": [
+          {
+            "id": "hero-title",
+            "name": "Hero Title",
+            "type": "TEXT",
+            "styles": {
+              "textColor": "#1F1F1F",
+              "fontFamily": "Source Han Sans",
+              "fontWeight": "Bold",
+              "fontSize": 48,
+              "lineHeight": 60
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "name": "Primary CTA",
+        "type": "FRAME",
+        "componentName": "Button/Primary",
+        "layout": {
+          "layoutMode": "HORIZONTAL",
+          "sizingMode": "HUG",
+          "itemSpacing": 12,
+          "paddingTop": 16,
+          "paddingRight": 24,
+          "paddingBottom": 16,
+          "paddingLeft": 24
+        },
+        "styles": {
+          "fill": "#0B6E4F",
+          "cornerRadius": 999,
+          "effects": [
+            "shadow/soft"
+          ]
+        },
+        "children": []
+      }
+    ]
+  }
+}

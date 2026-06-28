@@ -1,0 +1,158 @@
+:root {
+  --tp-primary: #ff8a3d;
+  --tp-primary-hover: #ffa764;
+  --tp-primary-active: #db6a2e;
+  --tp-primary-light: #fff9f1;
+  --tp-primary-border: #ffedd8;
+  --tp-bg: #fffbf6;
+  --tp-surface: #ffffff;
+  --tp-subtle: #f8f8f8;
+  --tp-border: #f5f5f4;
+  --tp-text: rgba(9, 5, 2, 0.95);
+  --tp-text-secondary: rgba(9, 5, 2, 0.65);
+  --tp-text-tertiary: rgba(9, 5, 2, 0.45);
+  --tp-text-disabled: rgba(9, 5, 2, 0.3);
+  --tp-hairline: rgba(9, 5, 2, 0.08);
+  --tp-success: #32b963;
+  --tp-error: #ff4040;
+  --tp-urgent: #f83b00;
+  --tp-warning: #fc8e17;
+  --tp-info: #3b82f6;
+  --tp-shadow-low: 0 2px 8px rgba(9, 5, 2, 0.08);
+  --tp-shadow-card: 0 4px 20px rgba(229, 215, 204, 0.4);
+  --tp-shadow-modal: 0 4px 24px rgba(0, 0, 0, 0.16);
+  --tp-shadow-bottom: 0 -2px 12px rgba(51, 51, 51, 0.08);
+  --tp-font: "OPPO Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "PingFang TC", sans-serif;
+  --tp-number-font: "Montserrat", "OPPO Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  color: var(--tp-text);
+  background: var(--tp-bg);
+  font-family: var(--tp-font);
+  font-size: 15px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100dvh;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.tp-page {
+  min-height: 100dvh;
+  background:
+    linear-gradient(180deg, rgba(255, 138, 61, 0.08) 0%, rgba(255, 251, 246, 0) 220px),
+    var(--tp-bg);
+  padding: max(12px, env(safe-area-inset-top)) 16px calc(104px + env(safe-area-inset-bottom));
+}
+
+.tp-page--dense {
+  padding-inline: 12px;
+}
+
+.tp-shell {
+  width: 100%;
+  max-width: 440px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tp-pad-shell {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.tp-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tp-eyebrow {
+  color: var(--tp-text-tertiary);
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.tp-title {
+  color: var(--tp-text);
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.tp-subtitle {
+  color: var(--tp-text-secondary);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.tp-number {
+  font-family: var(--tp-number-font);
+  letter-spacing: 0;
+}
+
+.tp-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .tp-page {
+    padding-inline: 24px;
+  }
+
+  .tp-shell {
+    max-width: 1180px;
+  }
+}

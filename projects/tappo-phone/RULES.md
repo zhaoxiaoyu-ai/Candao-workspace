@@ -1,0 +1,35 @@
+# Rules
+
+- Follow `E:\Projects\Candao-workspace\AGENTS.md`.
+- Treat `E:\Projects\Candao-workspace\projects\tappo-phone\source` as the source root.
+- Default all Tappo Phone project outputs to Simplified Chinese. Use English only when required for code, file paths, URLs, Figma nodes, tokens, CSS variables, commands, APIs, library/plugin/skill names, or source-preserved product copy.
+- 产出审核与可视化交付是长期硬性要求。所有 Tappo Phone 产出必须清晰可见、可直接打开、可顺利人工评审；不能只留下不可见的内部说明、零散提示词、裸路径或无入口文件。
+- 每次产出必须明确写出：评审入口、评审对象、变更范围、通过标准、下一步动作。文档类产出必须有清晰标题、范围、决策、检查表和关联文件路径。
+- 视觉、UI、Figma、图标、插画、资产类产出必须提供可直接打开的可视化载体，例如截图、评审图、Figma 节点、本地预览 URL、`assets-review/` 索引、HTML 样张页面或图片预览页。
+- 视觉资产评审目录必须使用“当前内容”和“历史归档”分离机制：`assets-review/current-review.html` 是唯一稳定入口，`assets-review/current/` 只放当前可评审内容，旧版本和被替代版本必须移入 `assets-review/_archive/<date>-<reason>/`，不能长期平铺在顶层目录。
+- `assets-review/current/` 的标准可视化结构为：`index.html` 作为当前评审页，`preview.html` 作为图片预览包装页，`preview.png` 作为原始静态图备份；如果产出包含独立 SVG/PNG/WebP 等资产，也必须放在 `current/` 内并被 `index.html` 或 `preview.html` 引用。
+- 每轮视觉资产产出结束前必须更新 `assets-review/README.md`，明确当前评审对象、稳定入口、HTML 评审页、图片预览页、原始图备份、通过标准、下一步动作和旧版归档位置；人工评审时不应需要从多个版本文件中猜测最新版。
+- 每次在对话中交付视觉、UI、图标、插画或资产评审结果时，最终回复必须提供可点击的 Markdown 文件链接，优先指向 `assets-review/current-review.html`、`assets-review/current/index.html` 和 `assets-review/current/preview.html`；如需提供 PNG，必须同时提供 `preview.html` 作为可点击包装页，不能只给图片直链；同时提供可复制的相对路径代码块。
+- 如果产出暂时无法形成可视化评审物，必须在 `tasks/<task-id>/output/` 写明原因、当前可评审内容、缺失项和下一步补齐方式。
+- Build the Web layer as Vue 3 + TypeScript + Vite for Flutter WebView embedding.
+- Keep Tappo Phone independent from older H5/PWA code unless the user explicitly asks for migration.
+- Use mock services until backend API contracts are provided, and mark mock-only behavior clearly.
+- Preserve the design direction from Tappo mobile Figma and blue-lake ordering references, but keep App, Pad, and Web endpoint rules separate.
+- Keep Tappo orange as the App's primary brand/action color. Light-blue reference images may guide UI tone, airiness, card softness, and intelligent visual cues, but must not turn Tappo Phone into a blue-first product.
+- Do not continue Tappo Phone visual work as page-by-page patching by default. For App-side visual refinement, first build and approve a project-level App Style Kit, then use it to shape pages.
+- App Style Kit order: style anchors -> color/type/spacing/elevation tokens -> icon and illustration rules -> reusable UI element specimens -> page application.
+- Apply intelligent visual intensity by page type: cover, role selection, owner/staff home, data analysis, app management, and settings may show stronger intelligent tone; POS ordering, checkout, payment, transaction/detail, and form-heavy operation pages must stay restrained and task-first.
+- Use a hybrid intelligent visual anchor. 小T is a flexible assistant expression, not a fixed mascot that must appear everywhere. Use 小T or assistant cues for cover/onboarding/home/help moments, and use an orange smart orb/system-core treatment for data, settings, system health, and AI insight surfaces.
+- Asset style should follow a 2025-2026 clear soft-gradient direction: translucent, lightweight, comfortable, rounded, softly dimensional, and orange-led. Avoid traditional old UI, gray enterprise density, heavy skeuomorphism, dark cyber AI, generic clipart, and low-contrast full-page neumorphism.
+- Icon tile backgrounds are not limited to a fixed color list. Colors may vary by module meaning as long as they preserve the same clear, soft-gradient, low-saturation, orange-led App tone, consistent light source, and unified material feeling.
+- App UI font is `OPPO Sans 4.0` by default. Fall back to `OPPO Sans` and system Chinese/HK-safe sans only when 4.0 is unavailable.
+- App-side layout is currently designed and reviewed at `390px` width. Ignore `402px` as a design acceptance width for this Style Kit phase.
+- App-side spacing tokens: module cards use `16px` radius; main visual aligns to `16px`; section gap is `16px`; card padding is `16-24px`; dense row padding is `12-16px`; icon/text gap is `8-12px`.
+- Use `tasks/T02/output/tappo-app-style-kit-v0.1-2026-06-08.md` as the current App Style Kit source before page redesign or asset generation. Do not generate the full icon/illustration library until the Style Kit is reviewed; first asset batch should be limited to assistant direction, orange smart orb/system core, 8-12 module icon tiles, and 3 micro illustrations.
+- Treat visual polish as a release requirement, not a nice-to-have. Screens must look like shippable mobile UI, with refined spacing, hierarchy, card depth, imagery, and icon treatment.
+- Use the latest Tappo App Figma nodes `nHamLH3qlZYFXVC0OVxNqc / 138:281` and `nHamLH3qlZYFXVC0OVxNqc / 538:3555` as page-specific App-side visual references unless the user provides newer approved nodes. Treat nodes `17:38` and `1:568` as approved App style anchors for the new style-system-first phase, not as product-content replacement sources. Treat Pad/settings node `anMsqgZYi8ZqmJXZah78KI / 287:32144` as endpoint-specific Pad/POS reference, not an App default.
+- Current App style keywords from user: light, clean, intelligent, operational, trustworthy. Translate these into tokens, assets, and components before applying them to pages.
+- Use generated raster assets from the built-in image generation path for brand illustrations and unified product-specific icon/graphic sets when generic icon libraries make the UI feel unfinished. Store project-bound generated assets inside `source/src/assets/` or `source/public/`; do not leave referenced assets only in tool output locations.
+- Preserve all content supplied by the prototype and user-provided documents. Content may be reorganized, carded, visualized as charts, or made interactive, but must not be deleted or materially weakened without explicit user confirmation.
+- If a prototype item appears redundant, wrong, or visually harmful, keep it visible by default and document the concern. Ask before removing or hiding it.
+- Typography must be revalidated on modern iPhone-sized viewports. Body and primary UI copy should generally be at least 14px; 12px is reserved for secondary metadata/tags, and 11px or below requires a deliberate exception.

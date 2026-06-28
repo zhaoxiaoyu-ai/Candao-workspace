@@ -1,0 +1,5 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="bg" x1="13" y1="12" x2="84" y2="84" gradientUnits="userSpaceOnUse"><stop stop-color="#EFFFF6"/><stop offset=".55" stop-color="#A8F0D1"/><stop offset="1" stop-color="#B9DCFF"/></linearGradient><filter id="sh" x="7" y="8" width="82" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#29466F" flood-opacity=".10"/><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0E9F6E" flood-opacity=".05"/></filter></defs>
+  <rect x="8" y="8" width="80" height="80" rx="24" fill="url(#bg)"/>
+  <g filter="url(#sh)"><rect x="22" y="24" width="52" height="48" rx="17" fill="#FFFFFF" fill-opacity=".84"/><path fill-rule="evenodd" clip-rule="evenodd" d="M48 26L68 34V46C68 59 59.5 68.5 48 72C36.5 68.5 28 59 28 46V34L48 26ZM48 39C43.582 39 40 42.582 40 47C40 49.961 41.609 52.548 44 53.929V62H52V53.929C54.391 52.548 56 49.961 56 47C56 42.582 52.418 39 48 39Z" fill="#284B70"/><circle cx="48" cy="47" r="3" fill="#0E9F6E"/></g>
+</svg>
