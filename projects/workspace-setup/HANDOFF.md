@@ -23,5 +23,6 @@ Read these files first:
 
 - The monorepo conversion task is complete.
 - For source work, switch to the specific project folder under `projects/`, but use the workspace root Git repository for workspace-wide commits.
+- Root Git status starts from commit `bc7417d` on branch `main`. No root remote is configured yet.
 - Former nested repository metadata backups live beside each source tree as `.git.backup-20260629` and are ignored by the root repo.
 - Do not rely on `ai-workspace` for Candao project state.
