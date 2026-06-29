@@ -9,7 +9,8 @@ Monorepo initialized
 - `E:\Projects\Candao-workspace` has been created as an independent workspace.
 - `E:\Projects\Candao-workspace` is now the standalone top-level Git repository for the Candao workspace.
 - The workspace root Git repository was initialized on branch `main`, and the first monorepo commit is `bc7417d` (`Initialize Candao workspace monorepo`).
-- Managed projects are registered under the workspace, including `coms`, `design-agent`, `xd-to-figma-converter`, `tappo-phone`, and `lanhu-image-downloader`.
+- Managed projects are registered under the workspace, including `coms`, `design-agent`, `xd-to-figma-converter`, and `tappo-phone`.
+- The temporary `lanhu-image-downloader` project was removed from the workspace on 2026-06-29 at the user's request.
 - Original source repositories were moved into their project `source/` folders under `E:\Projects\Candao-workspace`.
 - The former nested Git repositories for `coms`, `design-agent`, and `xd-to-figma-converter` were deactivated by moving each `source/.git` directory to a local backup folder named `.git.backup-20260629`.
 - `E:\Projects` no longer has top-level `COMS`, `Design Agent`, or `xd-to-figma-converter` directories.
@@ -17,7 +18,7 @@ Monorepo initialized
 
 ## Active Task
 
-- ID: `T03`
+- ID: `T04`
 - Status: `done`
 
 ## Decisions
@@ -27,6 +28,7 @@ Monorepo initialized
 - Keep Candao task state separate from `ai-workspace`.
 - Use a single root Git repository at `E:\Projects\Candao-workspace` for workspace-level submission and tracking.
 - Keep former nested repository metadata only as ignored local backups, not as active repositories.
+- Remove temporary projects from the workspace entirely when the user decides they are no longer needed.
 
 ## Blockers
 

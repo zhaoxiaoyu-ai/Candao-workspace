@@ -1,4 +1,0 @@
-# One Lanhu project URL per line.
-# Example:
-# https://lanhuapp.com/web/#/item/project/stage?tid=TEAM_ID&pid=PROJECT_ID
-# https://lanhuapp.com/dashboard/#/item?tid=TEAM_ID

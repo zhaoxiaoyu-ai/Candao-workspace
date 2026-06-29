@@ -32,7 +32,6 @@ When finished, update:
 | --- | --- | --- |
 | COMS Design System | `projects/coms/` | `projects/coms/source/` |
 | Design Agent | `projects/design-agent/` | `projects/design-agent/source/` |
-| Lanhu Image Downloader | `projects/lanhu-image-downloader/` | `projects/lanhu-image-downloader/source/` |
 | Tappo Phone | `projects/tappo-phone/` | `projects/tappo-phone/source/` |
 | XD to Figma Converter | `projects/xd-to-figma-converter/` | `projects/xd-to-figma-converter/source/` |
 

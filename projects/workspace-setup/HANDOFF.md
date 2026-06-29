@@ -12,16 +12,17 @@ Read these files first:
 2. `RULES.md`
 3. `STATE.md`
 4. `TASKS.md`
-5. `tasks/T03/task.md`
+5. `tasks/T04/task.md`
 
 ## Current Task
 
-- ID: `T03`
-- Path: `tasks/T03/task.md`
+- ID: `T04`
+- Path: `tasks/T04/task.md`
 
 ## Notes For Next AI
 
 - The monorepo conversion task is complete.
+- The temporary `lanhu-image-downloader` project has been removed from the workspace and from the managed-project registry.
 - For source work, switch to the specific project folder under `projects/`, but use the workspace root Git repository for workspace-wide commits.
 - Root Git status starts from commit `bc7417d` on branch `main`. No root remote is configured yet.
 - Former nested repository metadata backups live beside each source tree as `.git.backup-20260629` and are ignored by the root repo.

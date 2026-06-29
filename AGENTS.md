@@ -33,7 +33,6 @@ The source code remains in its original repositories under `E:\Projects` unless 
 | --- | --- |
 | `projects/coms/` | `E:\Projects\Candao-workspace\projects\coms\source` |
 | `projects/design-agent/` | `E:\Projects\Candao-workspace\projects\design-agent\source` |
-| `projects/lanhu-image-downloader/` | `E:\Projects\Candao-workspace\projects\lanhu-image-downloader\source` |
 | `projects/tappo-phone/` | `E:\Projects\Candao-workspace\projects\tappo-phone\source` |
 | `projects/xd-to-figma-converter/` | `E:\Projects\Candao-workspace\projects\xd-to-figma-converter\source` |
 
