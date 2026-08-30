@@ -2,7 +2,7 @@
 
 ## Phase
 
-T10 已完成。已在旧电脑上生成 Codex 本地对话与配置的离线冷备份包，用于旧电脑之后不再开机、新电脑不连接旧电脑的迁移场景。
+T11 已完成。已整理新电脑迁移后的全流程文件操作说明，覆盖迁移包放置、校验、解压、餐道 workspace 恢复、Codex 本地对话恢复、依赖重装和清理检查。
 
 ## Current Truth
 
@@ -23,10 +23,11 @@ T10 已完成。已在旧电脑上生成 Codex 本地对话与配置的离线冷
 - 2026-08-28: 根据用户反馈“如何运行不够清楚”，T08 追加一键入口 `projects/workspace-setup/tasks/T08/output/remotion-open.sh` 和可双击的 macOS 启动文件 `projects/workspace-setup/tasks/T08/output/remotion-open.command`。脚本可自动配置 Codex bundled Node.js / pnpm PATH、按需创建空白 Remotion 工程、安装依赖并启动 Remotion Studio。
 - 2026-08-30: T09 已完成。已补齐根目录 `.gitignore`，忽略 `node_modules/`、`.next/`、`dist/`、`build/`、`.cache/`、`.DS_Store`、日志和 Python 缓存；已输出迁移方案、迁移盘点、恢复检查清单和 `migration-export.sh`。本机已生成 portable snapshot：`/Users/victorwong/Documents/Codex/Candao-migration/Candao-workspace-portable-20260830-190811`，并生成压缩包：`/Users/victorwong/Documents/Codex/Candao-migration/Candao-workspace-portable-20260830-190811.tar.gz`。最终快照约 434M，压缩包约 416M；已确认不含 `.git`、依赖目录、构建缓存、`.DS_Store`、`._*`，且包含 `.stitch` 与关键任务 output。
 - 2026-08-30: T10 已完成。基于官方 OpenAI 文档确认：Remote/Handoff 需要旧电脑作为已连接 host 在线，因此不适用于“旧电脑以后不会再打开、新电脑不会连接旧电脑”的场景；本机已生成 Codex 本地冷备份目录 `/Users/victorwong/Documents/Codex/Codex-app-migration/Codex-local-cold-backup-20260830-230425`，压缩包 `/Users/victorwong/Documents/Codex/Codex-app-migration/Codex-local-cold-backup-20260830-230425.tar.gz`，SHA256 为 `c86b44f4d2e609d4e51ec6cd31ca1e2e994acd0409cb8d00588f5b669cfa0e11`。备份包含 50 个 session jsonl 文件，目录约 1.0G，压缩包约 609M；已验证不含 `auth.json`、`browser/`、OAuth 锁、插件缓存、临时缓存、运行锁和旧设备身份文件。
+- 2026-08-30: T11 已完成。已输出 `projects/workspace-setup/tasks/T11/output/new-computer-file-operations-guide-2026-08-30.md`，明确新电脑需要同时恢复餐道 workspace 项目文件包与 Codex 本地冷备份包。恢复策略：先从 GitHub clone `https://github.com/zhaoxiaoyu-ai/Candao-workspace.git`，再用 `Candao-workspace-portable-*.tar.gz` 解压内容覆盖补齐本地文件；Codex 冷备份通过 `rsync` 合并到新电脑 `~/.codex/`，保留新电脑自己的 `auth.json`。
 
 ## Active Task
 
-- ID: `T10`
+- ID: `T11`
 - Status: `done`
 
 ## Decisions
@@ -43,6 +44,7 @@ T10 已完成。已在旧电脑上生成 Codex 本地对话与配置的离线冷
 - Treat Remotion video work as an Agent Skills + local CLI workflow. Remotion MCP is deprecated per official docs and should not be the long-term default path.
 - For cross-computer migration, use GitHub for tracked/versionable assets and `projects/workspace-setup/tasks/T09/output/migration-export.sh` for non-regenerable local artifacts. Do not migrate dependency/build cache directories; reinstall from lockfiles on the new machine.
 - For offline Codex chat migration when the old computer will not remain online, use `projects/workspace-setup/tasks/T10/output/codex-local-cold-backup.sh` to create a private cold backup from `~/.codex`; keep the backup out of GitHub and restore it only after signing in on the new computer.
+- On the new computer, follow `projects/workspace-setup/tasks/T11/output/new-computer-file-operations-guide-2026-08-30.md` for exact file placement, checksum, extraction, workspace restore, Codex restore, dependency reinstall, and cleanup operations.
 
 ## Blockers
 
