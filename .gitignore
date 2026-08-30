@@ -1,4 +1,12 @@
 .playwright-cli/
+.DS_Store
+
+# Dependency directories should be restored from lockfiles on each machine.
+node_modules/
+**/node_modules/
+.pnpm-store/
+.npm/
+.yarn/
 
 # Backup of former nested repositories after monorepo migration.
 projects/*/source/.git.backup-*/
@@ -7,3 +15,19 @@ projects/*/source/.git.backup-*/
 .venv/
 __pycache__/
 *.pyc
+
+# Local build and framework caches.
+.next/
+**/.next/
+dist/
+**/dist/
+build/
+**/build/
+.cache/
+**/.cache/
+.turbo/
+coverage/
+.vite/
+
+# Local logs.
+*.log
