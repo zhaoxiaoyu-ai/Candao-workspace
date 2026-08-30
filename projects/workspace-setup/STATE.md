@@ -2,7 +2,7 @@
 
 ## Phase
 
-T09 已完成。已整理 Candao workspace 跨电脑迁移方案，补齐依赖/缓存忽略规则，生成迁移清单、恢复检查清单和 portable snapshot 导出脚本，并在本机生成一份已验证迁移包。
+T10 已完成。已在旧电脑上生成 Codex 本地对话与配置的离线冷备份包，用于旧电脑之后不再开机、新电脑不连接旧电脑的迁移场景。
 
 ## Current Truth
 
@@ -22,10 +22,11 @@ T09 已完成。已整理 Candao workspace 跨电脑迁移方案，补齐依赖/
 - 2026-08-15: T08 已完成。已安装 Remotion Codex 插件 `remotion@openai-curated-remote`，确认插件版本 `1.0.7` 和 Remotion Agent Skills 可用；通过 Codex bundled Node.js `v24.19.0`、pnpm `11.19.0` 验证 Remotion `4.0.512` 新项目脚手架、CLI 版本检查、lint、composition 发现和 still 渲染链路。输出：`projects/workspace-setup/tasks/T08/output/remotion-capability-guide.md` 和 `projects/workspace-setup/tasks/T08/output/remotion-env.example.sh`。
 - 2026-08-28: 根据用户反馈“如何运行不够清楚”，T08 追加一键入口 `projects/workspace-setup/tasks/T08/output/remotion-open.sh` 和可双击的 macOS 启动文件 `projects/workspace-setup/tasks/T08/output/remotion-open.command`。脚本可自动配置 Codex bundled Node.js / pnpm PATH、按需创建空白 Remotion 工程、安装依赖并启动 Remotion Studio。
 - 2026-08-30: T09 已完成。已补齐根目录 `.gitignore`，忽略 `node_modules/`、`.next/`、`dist/`、`build/`、`.cache/`、`.DS_Store`、日志和 Python 缓存；已输出迁移方案、迁移盘点、恢复检查清单和 `migration-export.sh`。本机已生成 portable snapshot：`/Users/victorwong/Documents/Codex/Candao-migration/Candao-workspace-portable-20260830-190811`，并生成压缩包：`/Users/victorwong/Documents/Codex/Candao-migration/Candao-workspace-portable-20260830-190811.tar.gz`。最终快照约 434M，压缩包约 416M；已确认不含 `.git`、依赖目录、构建缓存、`.DS_Store`、`._*`，且包含 `.stitch` 与关键任务 output。
+- 2026-08-30: T10 已完成。基于官方 OpenAI 文档确认：Remote/Handoff 需要旧电脑作为已连接 host 在线，因此不适用于“旧电脑以后不会再打开、新电脑不会连接旧电脑”的场景；本机已生成 Codex 本地冷备份目录 `/Users/victorwong/Documents/Codex/Codex-app-migration/Codex-local-cold-backup-20260830-230425`，压缩包 `/Users/victorwong/Documents/Codex/Codex-app-migration/Codex-local-cold-backup-20260830-230425.tar.gz`，SHA256 为 `c86b44f4d2e609d4e51ec6cd31ca1e2e994acd0409cb8d00588f5b669cfa0e11`。备份包含 50 个 session jsonl 文件，目录约 1.0G，压缩包约 609M；已验证不含 `auth.json`、`browser/`、OAuth 锁、插件缓存、临时缓存、运行锁和旧设备身份文件。
 
 ## Active Task
 
-- ID: `T09`
+- ID: `T10`
 - Status: `done`
 
 ## Decisions
@@ -41,6 +42,7 @@ T09 已完成。已整理 Candao workspace 跨电脑迁移方案，补齐依赖/
 - Treat the Chinese default output rule as a workspace-level hard rule, not a per-task preference.
 - Treat Remotion video work as an Agent Skills + local CLI workflow. Remotion MCP is deprecated per official docs and should not be the long-term default path.
 - For cross-computer migration, use GitHub for tracked/versionable assets and `projects/workspace-setup/tasks/T09/output/migration-export.sh` for non-regenerable local artifacts. Do not migrate dependency/build cache directories; reinstall from lockfiles on the new machine.
+- For offline Codex chat migration when the old computer will not remain online, use `projects/workspace-setup/tasks/T10/output/codex-local-cold-backup.sh` to create a private cold backup from `~/.codex`; keep the backup out of GitHub and restore it only after signing in on the new computer.
 
 ## Blockers
 

@@ -11,6 +11,7 @@
 | T07 | done | 将中文默认输出要求提升为根目录全局硬规则 | `tasks/T07/task.md` | 2026-07-31 |
 | T08 | done | 配齐 Remotion 能力并沉淀使用说明 | `tasks/T08/task.md` | 2026-08-15 |
 | T09 | done | 整理 Candao workspace 跨电脑迁移方案并生成 portable snapshot | `tasks/T09/task.md` | 2026-08-30 |
+| T10 | done | 备份 Codex 本地对话与配置用于离线迁移 | `tasks/T10/task.md` | 2026-08-30 |
 
 ## Rules
 
