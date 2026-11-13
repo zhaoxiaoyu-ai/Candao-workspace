@@ -2,7 +2,7 @@
 
 ## 2026-11-13 · T15 GitHub同步
 
-已核本机餐道工作区对应独立public仓库`zhaoxiaoyu-ai/Candao-workspace`，本地／远端基线708d7fc无分叉。T15正在同步源码、项目记录和当前资源，历史过程媒体按清单筛选；凭据扫描未发现实际凭据。当前状态及核验以`tasks/T15/output/同步结果.md`为准。下方迁移与Remotion条目保留为历史。
+T15已完成：本机餐道工作区已同步至独立public仓库`zhaoxiaoyu-ai/Candao-workspace`，主提交`d37f8d9`经远端main核验一致。保留原有修改、源码、当前资源及现有跟踪资产，凭据扫描未发现实际凭据，未改变业务／设计审批状态。正式回执和资源清单见`tasks/T15/output/`；下方迁移与Remotion记录保留历史。
 
 ## Phase
 
@@ -35,7 +35,7 @@ T14 已完成。Remotion Studio `localhost:3000` 拒绝连接问题已修复，�
 ## Active Task
 
 - ID: `T15`
-- Status: `in_progress`
+- Status: `done`
 
 ## Decisions
 
@@ -62,4 +62,4 @@ T14 已完成。Remotion Studio `localhost:3000` 拒绝连接问题已修复，�
 
 ## Last Updated
 
-2026-09-01
+2026-11-13

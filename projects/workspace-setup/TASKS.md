@@ -17,7 +17,7 @@
 | T13 | done | 修复新电脑 Codex 旧路径索引并保护 ai-workspace | `tasks/T13/task.md` | 2026-08-31 |
 | T14 | done | 修复 Remotion Studio localhost 拒绝连接并创建默认 demo | `tasks/T14/task.md` | 2026-09-01 |
 
-| T15 | in_progress | 更新餐道工作区到对应GitHub仓库，保留源码与当前资源 | `tasks/T15/task.md` | 2026-11-13 |
+| T15 | done | 更新餐道工作区到对应GitHub仓库，保留源码与当前资源 | `tasks/T15/task.md` | 2026-11-13 |
 
 ## Rules
 
