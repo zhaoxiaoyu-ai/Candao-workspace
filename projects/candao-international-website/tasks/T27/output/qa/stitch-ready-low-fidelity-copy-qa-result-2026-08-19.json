@@ -1,0 +1,72 @@
+{
+  "suite": "stitch-ready-low-fidelity-external-2026-08-19",
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "stitch-ready-index",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-ready-home",
+      "component_type": "page_title_description_cta",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-ready-solutions",
+      "component_type": "product_page_module",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-ready-platform",
+      "component_type": "product_page_module",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-ready-integrations",
+      "component_type": "product_page_module",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-ready-customers",
+      "component_type": "metric_card",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-ready-resources",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-ready-about",
+      "component_type": "product_page_module",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-ready-demo",
+      "component_type": "form",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

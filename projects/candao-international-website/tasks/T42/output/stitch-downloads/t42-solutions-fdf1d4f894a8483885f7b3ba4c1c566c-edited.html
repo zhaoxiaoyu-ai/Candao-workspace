@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>餐道 | 解決方案</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&amp;family=Noto+Serif:wght@600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "status-error": "#E11D48",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#d9e2ff",
+                      "error-container": "#ffdad6",
+                      "tertiary-container": "#9f6900",
+                      "on-secondary-container": "#007057",
+                      "outline-variant": "#c2c6d6",
+                      "tertiary": "#7f5300",
+                      "surface-dim": "#dadadc",
+                      "ink-text": "#1A1C1E",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#fffbff",
+                      "inverse-surface": "#2f3133",
+                      "inverse-primary": "#afc6ff",
+                      "secondary-fixed-dim": "#59dcb5",
+                      "primary-container": "#2e70e0",
+                      "surface-container": "#eeeef0",
+                      "border-subtle": "#E2E8F0",
+                      "surface-tint": "#0059c7",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#f9f9fc",
+                      "primary": "#0057c2",
+                      "on-primary-container": "#fefcff",
+                      "inverse-on-surface": "#f0f0f3",
+                      "on-surface": "#1a1c1e",
+                      "cloud-surface": "#F8FAFC",
+                      "on-secondary-fixed": "#002117",
+                      "on-secondary-fixed-variant": "#00513e",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed": "#001944",
+                      "on-primary-fixed-variant": "#004299",
+                      "tertiary-fixed": "#ffddb3",
+                      "surface-variant": "#e2e2e5",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-highest": "#e2e2e5",
+                      "status-success": "#00A884",
+                      "primary-fixed-dim": "#afc6ff",
+                      "on-tertiary-fixed-variant": "#624000",
+                      "status-warning": "#FFAB00",
+                      "on-surface-variant": "#424753",
+                      "tertiary-fixed-dim": "#ffb950",
+                      "surface-container-high": "#e8e8ea",
+                      "surface-container-low": "#f3f3f6",
+                      "surface": "#f9f9fc",
+                      "operational-blue": "#528DFF",
+                      "secondary-container": "#76f6cd",
+                      "secondary-fixed": "#79f9d0",
+                      "secondary": "#006b53",
+                      "background": "#f9f9fc",
+                      "outline": "#727785",
+                      "on-background": "#1a1c1e",
+                      "on-tertiary-fixed": "#291800"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "bento-gap": "16px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "unit": "8px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Noto Serif"
+                      ],
+                      "display-lg": [
+                              "Noto Serif"
+                      ],
+                      "headline-lg-mobile": [
+                              "Noto Serif"
+                      ],
+                      "body-lg": [
+                              "Work Sans"
+                      ],
+                      "title-md": [
+                              "Work Sans"
+                      ],
+                      "label-sm": [
+                              "IBM Plex Sans"
+                      ],
+                      "body-md": [
+                              "Work Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .connection-line {
+            position: absolute;
+            background-color: theme('colors.operational-blue');
+            opacity: 0.3;
+            transition: all 0.5s ease-in-out;
+        }
+        .connection-line-anim {
+            animation: pulse-line 2s infinite;
+        }
+        @keyframes pulse-line {
+            0% { opacity: 0.1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.1; }
+        }
+        .bento-card {
+            background-color: theme('colors.surface-container-lowest');
+            border: 1px solid theme('colors.border-subtle');
+            border-radius: theme('borderRadius.xl');
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
+        }
+        
+        /* Interactive Nav Rails */
+        .scenario-tab {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-left: 2px solid transparent;
+        }
+        .scenario-tab.active {
+            border-left-color: theme('colors.primary');
+            background-color: theme('colors.primary/5');
+        }
+        .scenario-tab.active .tab-title {
+            color: theme('colors.primary');
+            font-weight: 600;
+        }
+        
+        .scenario-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .scenario-content.active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-border-subtle shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto">
+<!-- Brand -->
+<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary dark:text-primary-fixed" href="#">
+                餐道
+            </a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">首頁</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">解決方案</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">平台</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">整合能力</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">客戶案例</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">關於餐道</a>
+</div>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:bg-primary/5 rounded-lg px-3 py-2">
+                    繁中 / EN
+                </button>
+<button class="bg-operational-blue text-white px-6 py-2.5 rounded-lg font-title-md text-title-md hover:bg-primary transition-colors">
+                    預約產品演示
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- 1. Hero Section -->
+<section class="relative pt-24 pb-20 md:pt-32 md:pb-32 px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Text Content -->
+<div class="lg:col-span-5 flex flex-col gap-6 z-10">
+<h1 class="font-display-lg text-display-lg text-ink-text leading-tight">
+                        按餐飲 O2O 營運問題，<br/>找到可落地的解決方案
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        當外賣平台、自有點餐、門店接單、配送和對賬分散在多個後台，品牌需要先判斷哪一段流程造成漏單、重複維護或異常追蹤壓力。餐道按常見營運場景整理方案，協助你對照現有問題與下一步演示重點。
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-operational-blue text-white px-8 py-3.5 rounded-lg font-title-md text-title-md hover:bg-primary transition-colors text-center shadow-sm">
+                            預約相似場景演示
+                        </button>
+<button class="bg-white text-primary border border-border-subtle px-8 py-3.5 rounded-lg font-title-md text-title-md hover:bg-surface-container-low transition-colors text-center shadow-sm">
+                            查看平台能力
+                        </button>
+</div>
+</div>
+<!-- Visual Content: Abstract Dashboard representation -->
+<div class="lg:col-span-7 relative h-[400px] md:h-[500px] w-full mt-12 lg:mt-0">
+<!-- Placeholder for Hero Visual -->
+<div class="absolute inset-0 bento-card overflow-hidden flex items-center justify-center bg-cloud-surface">
+<div class="bg-cover bg-center w-full h-full opacity-80 mix-blend-multiply" data-alt="A sophisticated, minimalist 3D rendering of a 'product cockpit' or system map in a light-mode corporate SaaS style. It visualizes data flow from order channels, store operations, and delivery logistics feeding into a central illuminated nexus. Clean lines, subtle blue glowing data nodes, stark white bento boxes floating in a sterile grey environment. High contrast, sharp focus, professional enterprise dashboard aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1lsMFZ0m1iLmp_0tH5rhajwfcO8EPPVFGffyEqqaGueLQ9wRGu88g77L1xOEgRQvfTXq4R3rN9QHjhFgUwjMTB7cRT0ohCtEzPAXVz0YTJujMO5o0DWDAhJXqcbucVcpW1v8tCidk9gqYfJ6w2PxsSfq1zHqkDIgUrYZnI8114iT-tcTEz06H3VyYYcQCPpWH2VMl8ynhJvMuikz20DvWmaKi4DEmJFxyLVh_AJTtnxPasjMhksqzrw0fUqzC0e_PRf4p2c9LBJhd')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Scenario Explorer -->
+<section class="py-20 md:py-24 bg-surface-bright px-margin-mobile md:px-margin-desktop">
+<div class="max-w-[1280px] mx-auto">
+<div class="mb-12">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-ink-text mb-4">場景導向解析</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">針對日常營運痛點，定位系統根源並提供針對性模組。</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Rail: Tabs -->
+<div class="lg:col-span-4 flex flex-col gap-2">
+<div class="scenario-tab active bento-card p-4 flex items-center gap-4" data-target="scenario-1">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+<div>
+<h3 class="tab-title font-title-md text-title-md text-on-surface">多平台訂單</h3>
+</div>
+</div>
+<div class="scenario-tab bento-card p-4 flex items-center gap-4" data-target="scenario-2">
+<span class="material-symbols-outlined text-on-surface-variant">storefront</span>
+<div>
+<h3 class="tab-title font-title-md text-title-md text-on-surface-variant">門店與餐單</h3>
+</div>
+</div>
+<div class="scenario-tab bento-card p-4 flex items-center gap-4" data-target="scenario-3">
+<span class="material-symbols-outlined text-on-surface-variant">local_shipping</span>
+<div>
+<h3 class="tab-title font-title-md text-title-md text-on-surface-variant">配送履約</h3>
+</div>
+</div>
+<div class="scenario-tab bento-card p-4 flex items-center gap-4" data-target="scenario-4">
+<span class="material-symbols-outlined text-on-surface-variant">account_balance_wallet</span>
+<div>
+<h3 class="tab-title font-title-md text-title-md text-on-surface-variant">財務對賬</h3>
+</div>
+</div>
+<div class="scenario-tab bento-card p-4 flex items-center gap-4" data-target="scenario-5">
+<span class="material-symbols-outlined text-on-surface-variant">group</span>
+<div>
+<h3 class="tab-title font-title-md text-title-md text-on-surface-variant">會員與數據</h3>
+</div>
+</div>
+<div class="scenario-tab bento-card p-4 flex items-center gap-4" data-target="scenario-6">
+<span class="material-symbols-outlined text-on-surface-variant">hub</span>
+<div>
+<h3 class="tab-title font-title-md text-title-md text-on-surface-variant">系統接入</h3>
+</div>
+</div>
+</div>
+<!-- Right Panel: Details -->
+<div class="lg:col-span-8 bento-card p-6 md:p-10 relative overflow-hidden bg-white min-h-[400px]">
+<!-- Scenario 1 -->
+<div class="scenario-content active" id="scenario-1">
+<div class="inline-flex items-center gap-2 mb-6 border-b border-border-subtle pb-4 w-full">
+<span class="material-symbols-outlined text-status-warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">營運痛點</span>
+</div>
+<h3 class="font-title-md text-title-md text-ink-text mb-2">訂單漏單與重複錄入</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">門店需同時操作多部外賣平台平板，並手動將資料輸入內部 POS，高峰期極易產生遺漏或錯誤。</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-bento-gap mb-8">
+<div class="bg-cloud-surface p-4 rounded-lg">
+<div class="font-label-sm text-label-sm text-outline mb-2">涉及節點</div>
+<div class="font-body-md text-body-md text-on-surface">外賣平台、自有 H5/Web</div>
+</div>
+<div class="bg-primary/5 border border-primary/20 p-4 rounded-lg">
+<div class="font-label-sm text-label-sm text-primary mb-2">對應模組</div>
+<div class="font-body-md text-body-md text-primary font-bold">OMS / COMS / SOMS</div>
+</div>
+</div>
+<div class="flex justify-end pt-4">
+<button class="text-primary font-title-md text-title-md hover:underline flex items-center gap-2">
+                                    預約流程演示 <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Scenario 2 (Hidden by default) -->
+<div class="scenario-content" id="scenario-2">
+<div class="inline-flex items-center gap-2 mb-6 border-b border-border-subtle pb-4 w-full">
+<span class="material-symbols-outlined text-status-warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">營運痛點</span>
+</div>
+<h3 class="font-title-md text-title-md text-ink-text mb-2">門店資訊不同步</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">各渠道菜單、價格、庫存與營業時間需分別登入不同後台維護，導致顧客端資訊混亂與客訴。</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-bento-gap mb-8">
+<div class="bg-cloud-surface p-4 rounded-lg">
+<div class="font-label-sm text-label-sm text-outline mb-2">涉及節點</div>
+<div class="font-body-md text-body-md text-on-surface">菜單、庫存、營業時間</div>
+</div>
+<div class="bg-primary/5 border border-primary/20 p-4 rounded-lg">
+<div class="font-label-sm text-label-sm text-primary mb-2">對應模組</div>
+<div class="font-body-md text-body-md text-primary font-bold">Menu Center</div>
+</div>
+</div>
+<div class="flex justify-end pt-4">
+<button class="text-primary font-title-md text-title-md hover:underline flex items-center gap-2">
+                                    查看同步邏輯 <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-white dark:bg-surface-container-lowest border-t border-border-subtle w-full py-20 mt-20">
+<div class="max-w-[1280px] mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-bento-gap">
+<div class="flex flex-col gap-4">
+<a class="font-headline-lg text-headline-lg font-bold text-primary" href="#">
+                    餐道
+                </a>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 餐道 Candao. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="text-on-surface-variant hover:text-primary hover:underline transition-opacity duration-200 font-body-md text-body-md" href="#">首頁</a>
+<a class="text-primary hover:underline transition-opacity duration-200 font-body-md text-body-md" href="#">解決方案</a>
+<a class="text-on-surface-variant hover:text-primary hover:underline transition-opacity duration-200 font-body-md text-body-md" href="#">平台</a>
+<a class="text-on-surface-variant hover:text-primary hover:underline transition-opacity duration-200 font-body-md text-body-md" href="#">整合能力</a>
+<a class="text-on-surface-variant hover:text-primary hover:underline transition-opacity duration-200 font-body-md text-body-md" href="#">客戶案例</a>
+<a class="text-on-surface-variant hover:text-primary hover:underline transition-opacity duration-200 font-body-md text-body-md" href="#">資源</a>
+<a class="text-on-surface-variant hover:text-primary hover:underline transition-opacity duration-200 font-body-md text-body-md" href="#">關於餐道</a>
+</div>
+</div>
+</footer>
+<!-- Simple Script for Tabs -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.scenario-tab');
+            const contents = document.querySelectorAll('.scenario-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active from all
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.querySelector('.material-symbols-outlined').classList.replace('text-primary', 'text-on-surface-variant');
+                        t.querySelector('.tab-title').classList.replace('text-on-surface', 'text-on-surface-variant');
+                    });
+                    contents.forEach(c => c.classList.remove('active'));
+
+                    // Add active to clicked
+                    tab.classList.add('active');
+                    tab.querySelector('.material-symbols-outlined').classList.replace('text-on-surface-variant', 'text-primary');
+                    tab.querySelector('.tab-title').classList.replace('text-on-surface-variant', 'text-on-surface');
+                    
+                    const targetId = tab.getAttribute('data-target');
+                    const targetContent = document.getElementById(targetId);
+                    if(targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body></html>

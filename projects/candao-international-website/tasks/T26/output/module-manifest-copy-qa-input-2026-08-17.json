@@ -1,0 +1,381 @@
+{
+  "suite": "t26-module-manifest-copy-2026-08-17",
+  "items": [
+    {
+      "id": "H01",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "首屏定位与转化",
+      "text": "把餐飲與零售 O2O 的訂單、門店、配送與數據接成一條營運鏈路。 显示主标题、说明、主 CTA、次 CTA、餐道 Logo 和主截图位。 CTA 边框、按钮背景和截图外框增强；文案不变。 主 CTA 进入 Demo；次 CTA 进入 Platform；点击 Logo 带不新增虚构客户页。 标题、CTA、截图和 Logo 带分层进入，截图轻微浮动。 建立品牌可信和产品真实感，不让首页停留在抽象价值表达。",
+      "must_include": []
+    },
+    {
+      "id": "H02",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "连接中枢解释",
+      "text": "一個營運中樞，連接訂單渠道、門店執行系統、配送資源、支付與企業系統。 中心餐道节点和六类外围对象低亮显示。 Hover 某节点时点亮对应数据线和一句业务对象说明，移开后回到默认。 Click 锁定节点；右侧说明、数据方向、下一步 CTA 切换并保留锁定态。 节点按订单、门店、配送、数据、支付、企业系统顺序点亮。 解释系统连接关系和数据方向。",
+      "must_include": []
+    },
+    {
+      "id": "H03",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "能力探索器",
+      "text": "渠道聚合、營運承接、配送履約、數據對賬、生態接入。 默认显示渠道聚合。 Hover 临时预览能力标题和图标；移开后回到当前锁定项。 Click 锁定能力；标题、说明、截图位、三条要点和 CTA 同步变化。 滚动推进能力项，右侧截图舞台保持 sticky；不自动轮播抢操作。 用少量状态切换替代连续产品卡片，避免首页过偏产品说明书。",
+      "must_include": []
+    },
+    {
+      "id": "H04",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "规模证明",
+      "text": "5000+ 品牌、500M+ 每日處理訂單、400+ 城市、200K+ 門店、4.5B+ 每月配送訂單 GMV、30% up 客戶效率提升。 直接显示完整数值和指标名称。 Hover 只增强当前指标的颜色和分隔线，不展开新事实。 Click 指向 Customers 的规模证明区。 进入视口时轻量数字出现，不隐藏核心值。 建立可信，不制造未授权新指标。",
+      "must_include": []
+    },
+    {
+      "id": "H05",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "重点客户案例入口",
+      "text": "從实名客户案例看訂單整合、配送履約、會員營運、數據分析與對賬改善。 默认显示 Pizza-Box 或已确认主案例。 Hover 下一案例预览时只显示客户名、业态和涉及产品。 Click 切换主案例；Logo、场景、产品、两项指标和 CTA 同步变化。 进入视口时主案例从右侧滑入，指标轻量出现。 把案例证明集中到 Customers，减少全站重复讲结果。",
+      "must_include": []
+    },
+    {
+      "id": "H06",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "最终转化",
+      "text": "帶著你的營運場景，看餐道如何接入。 显示预约演示为主 CTA，查看平台能力为次 CTA。 Hover 主按钮增强蓝色填充；次按钮增强描边。 主 CTA 进入 Demo；次 CTA 进入 Platform。 CTA band 与背景光带轻量进入，不使用粒子装饰。 完成首页导流，不重复讲产品细节。",
+      "must_include": []
+    },
+    {
+      "id": "S01",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "页面定位",
+      "text": "從多平台訂單、門店、配送到對賬，梳理餐飲 O2O 營運場景。 显示多渠道、门店、配送、对账四类对象。 Hover 对象标签时点亮对应问题。 Click 对象后下方场景 explorer 默认切换到相关场景。 订单流从分散到汇聚。 让访客先确认场景，不在首屏铺产品。",
+      "must_include": []
+    },
+    {
+      "id": "S02",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "三类方案总入口",
+      "text": "訂單履約、對賬分析、自有點餐與會員三類入口。 默认显示订单履约。 Hover 临时预览对应场景数量和产品。 Click 锁定分类；S03 六项场景列表重新聚焦对应场景，CTA 同步变化。 进入视口时三项依次出现。 先分大类，避免六个方案平铺造成信息拥堵。",
+      "must_include": []
+    },
+    {
+      "id": "S03",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "六项场景叙事",
+      "text": "多平台外賣訂單、餐單同步、配送履約、會員自有點餐、數據分析、財務對賬六項場景。 默认显示多平台外卖订单。 Hover 场景标题时预览相关产品名。 Click 锁定场景；问题、产品能力、结果、截图位和 CTA 同步变化。 滚动推进场景；右侧舞台保持固定。 避免 Solutions 和 Platform 重复产品说明，只讲业务场景。",
+      "must_include": []
+    },
+    {
+      "id": "S04",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "问题能力结果流程",
+      "text": "問題進入產品能力，再回到可處理的訂單、門店、配送或對賬流程。 默认显示订单场景的漏单 / 多后台切换问题。 Hover 单个节点显示业务对象说明。 Click 节点可聚焦对应状态；不新增未确认指标。 链路从左到右依次点亮。 把价值表达落到业务状态变化。",
+      "must_include": []
+    },
+    {
+      "id": "S05",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "对应案例",
+      "text": "根據所選場景，查看相似業態的客户案例和前後對比。 默认显示与订单履约相关的案例。 Hover 显示产品名和一项指标。 Click 进入 Customers 对应案例锚点。 案例 rail 在场景锁定后更新。 用案例支撑场景，不在 Solutions 展开完整案例页。",
+      "must_include": []
+    },
+    {
+      "id": "S06",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "场景 CTA",
+      "text": "查看平台能力，或預約相似場景演示。 默认订单履约 CTA。 Hover 按钮增强。 Click 主 CTA 进入 Demo 并携带场景意图；次 CTA 进入 Platform 对应能力。 无复杂动画。 让 Solutions 完成导流。",
+      "must_include": []
+    },
+    {
+      "id": "P01",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "产品截图入口",
+      "text": "用真實產品能力承接訂單、餐單、配送、數據和接入。 主截图显示 OMS 占位和真实截图缺失状态。 Hover 截图外框增强，不重绘截图。 CTA 进入 Demo；截图缩略图切换主截图位。 截图层错位进入。 强调真实产品证明，避免产品说明书感。",
+      "must_include": []
+    },
+    {
+      "id": "P02",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "六项能力导航",
+      "text": "多渠道訂單、餐單與門店、會員與自有點餐、配送履約、數據與對賬、AMS / Connector。 默认多渠道订单。 Hover 临时预览标题、产品名和一条说明；移开后回到锁定项。 Click 锁定能力；P03 标题、说明、产品、截图位、CTA 和视频入口同步变化。 进入视口时第一项激活；不自动轮播。 控制 Platform 信息层级，不再全部平铺。",
+      "must_include": []
+    },
+    {
+      "id": "P03",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "真实产品截图舞台",
+      "text": "每項能力對應產品名、業務對象、狀態、下一步操作和真實截圖位。 默认多渠道订单，显示 OMS 截图位。 Hover 截图热点只显示标注预览。 Click 能力导航后截图、标注、产品名、下一步和 CTA 同步切换。 截图进入后标注依序出现。 把产品能力落到真实产品状态。",
+      "must_include": []
+    },
+    {
+      "id": "P04",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "截图矢量标注层",
+      "text": "標注層說明訂單狀態、配送狀態、異常類型、對賬差異和下一步操作。 默认显示 2-3 个热点。 Hover 热点显示完整说明。 Click 热点锁定说明；截图本体不变。 标注按业务顺序出现。 解释状态变化，同时保护真实产品 UI。",
+      "must_include": []
+    },
+    {
+      "id": "P05",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "产品视频入口",
+      "text": "OMS、Menu / Store、DMS / iDMS、CDBI / Finance 產品視頻入口。 默认 OMS 视频位，标记视频文件缺失。 Hover 显示播放按钮和产品名。 Click 打开视频 modal；视频缺失时显示内部素材待接入状态，不对访客生成假视频。 不自动播放。 补回旧官网产品视频入口，但不伪造视频。",
+      "must_include": []
+    },
+    {
+      "id": "P06",
+      "component_type": "module_manifest",
+      "role": "总部运营",
+      "page_task": "能力 CTA",
+      "text": "根據當前能力，預約產品演示、查看整合能力或查看相關案例。 默认多渠道订单 CTA。 Hover 增强当前按钮。 Click 主 CTA 进入 Demo；次 CTA 进入 Integrations 或 Customers。 无复杂动画。 把 Platform 访问转化为下一步咨询。",
+      "must_include": []
+    },
+    {
+      "id": "I01",
+      "component_type": "module_manifest",
+      "role": "IT",
+      "page_task": "Connector Hero",
+      "text": "Connector 連接外賣平台、自建入口、POS / KDS、CRM、支付、ERP、配送和 API。 默认显示外卖平台订单进入 OMS。 Hover 外围节点点亮数据方向。 Click 锁定节点并打开 I02 详情。 数据线由外围汇入中心。 让 Integrations 形成全站最具辨识度的系统网络。",
+      "must_include": []
+    },
+    {
+      "id": "I02",
+      "component_type": "module_manifest",
+      "role": "IT",
+      "page_task": "八类系统交互网络",
+      "text": "外賣平台、自建入口、POS / KDS、CRM、支付、ERP、配送、API 八類接入對象。 默认外卖平台。 Hover 临时点亮对象与数据线。 Click 锁定对象；详情字段、权限、异常、CTA 同步变化。 节点依序出现。 把接入从泛化承诺变成可评估对象。",
+      "must_include": []
+    },
+    {
+      "id": "I03",
+      "component_type": "module_manifest",
+      "role": "IT",
+      "page_task": "API Data Flow",
+      "text": "Menu、Order、User、Basic Info API 經 Connector 標準化後流向 OMS、Data Asset 和 Finance Center。 默认显示四类 API 数据对象。 Hover 某类数据包显示对象说明。 Click 数据包锁定；流向和右侧说明变化。 数据包依序流入 Connector。 解释数据方向而非堆接口术语。",
+      "must_include": []
+    },
+    {
+      "id": "I04",
+      "component_type": "module_manifest",
+      "role": "IT",
+      "page_task": "POS / Store 与 Delivery 深度场景",
+      "text": "POS / Store 與 Delivery 兩類深度場景，分別說明門店資料、訂單狀態和配送履約資料。 默认 POS / Store。 Hover 预览场景对象。 Click 切换深度场景；流程节点、截图位、异常和 CTA 变化。 切换时节点重新排列。 回应首页 Complexity Map 维度混杂问题，按系统场景拆分。",
+      "must_include": []
+    },
+    {
+      "id": "I05",
+      "component_type": "module_manifest",
+      "role": "IT",
+      "page_task": "接入评估 CTA",
+      "text": "提交接入對象、系統類型、資料方向、權限和異常處理需求。 默认外卖平台接入评估。 Hover 清单项显示需要准备的信息。 Click 清单项切换选中；提交进入 Demo 技术演示意图。 无复杂动画。 让接入页完成技术线索转化。",
+      "must_include": []
+    },
+    {
+      "id": "C01",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "规模数据",
+      "text": "5000+ 品牌、500M+ 每日處理訂單、400+ 城市、200K+ 門店、4.5B+ 每月配送訂單 GMV、30% up。 显示全部授权指标。 Hover 增强当前指标，不出现新解释。 Click 指向对应案例区。 轻量数字进入。 集中展示规模证明，避免每页重复放数据。",
+      "must_include": []
+    },
+    {
+      "id": "C02",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "授权客户 Logo",
+      "text": "授权客户 Logo 带用于证明餐道服务过的品牌和案例。 显示已有授权 Logo；缺失项保留素材缺口。 Hover 暂停 Marquee 并显示客户名。 Click Logo 切换 C03 主案例。 Logo 带缓慢横向移动；可关闭动画。 建立实名可信，但不生成假 Logo。",
+      "must_include": []
+    },
+    {
+      "id": "C03",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "实名主案例 Carousel",
+      "text": "Pizza-Box、JIA Group、Jardine Group 等实名主案例。 默认 Pizza-Box。 Hover 下一案例显示场景和涉及产品。 Click 切换主案例；标题、产品、指标、图片和 CTA 同步变化。 案例进入视口时图片和指标分层出现。 用案例叙事替代泛化价值。",
+      "must_include": []
+    },
+    {
+      "id": "C04",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "行业案例 Tabs",
+      "text": "甜品、火鍋、中餐、咖啡、鮮食零售等業態案例。 默认甜品案例。 Hover 预览行业问题。 Click 锁定行业；指标、问题、产品、CTA 同步变化。 Tabs 进入后不自动轮播。 用真实指标说明业态差异。",
+      "must_include": []
+    },
+    {
+      "id": "C05",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "案例价值链",
+      "text": "業態、問題、能力、過程、結果和 Demo CTA 形成案例價值鏈。 默认显示当前主案例的价值链。 Hover 节点显示业务对象。 Click 节点聚焦说明；不新增未确认数据。 节点从问题到结果依序出现。 让客户案例有业务深度，不只展示 Logo。",
+      "must_include": []
+    },
+    {
+      "id": "C06",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "相似场景 Demo CTA",
+      "text": "預約相似場景演示，讓餐道按你的業態、門店規模和系統現況準備 Demo。 默认甜品或 Pizza-Box 相似场景。 Hover 主按钮增强。 Click 进入 Demo 并携带行业或案例意图。 无复杂动画。 完成案例页转化。",
+      "must_include": []
+    },
+    {
+      "id": "R01",
+      "component_type": "module_manifest",
+      "role": "支持",
+      "page_task": "资源入口",
+      "text": "支援中心、FAQ、接入指南、案例資源和查詢入口。 默认评估中。 Hover 类别显示对应问题类型。 Click 类别切换 R03 内容区域。 无装饰动画。 降低疑问，不制造假内容库。",
+      "must_include": []
+    },
+    {
+      "id": "R02",
+      "component_type": "module_manifest",
+      "role": "支持",
+      "page_task": "支持阶段选择器",
+      "text": "評估中、導入中、日常營運、技術查詢四個支持階段。 默认评估中。 Hover 显示阶段问题。 Click 锁定阶段；推荐 FAQ、指南、查询入口同步变化。 阶段选择器进入视口时依次出现。 把资源页从静态目录变成支持路径。",
+      "must_include": []
+    },
+    {
+      "id": "R03",
+      "component_type": "module_manifest",
+      "role": "支持",
+      "page_task": "资源分类 Tabs",
+      "text": "接入指南、媒體、案例資源按類別切換；沒有真實內容時顯示明確空狀態。 默认接入指南。 Hover 卡片显示适用角色。 Click Tab 切换；没有内容时显示不生成假文章的空状态。 无复杂动画。 明确内容缺口而不虚构新闻或日期。",
+      "must_include": []
+    },
+    {
+      "id": "R04",
+      "component_type": "module_manifest",
+      "role": "支持",
+      "page_task": "FAQ Accordion",
+      "text": "FAQ 按問題展開，回答中保留業務對象、條件和下一步。 默认全部收起，首项可建议展开。 Hover 问题行显示蓝色细线。 Click 展开答案；再次点击收起；可跳转 Platform / Integrations / Demo。 无装饰动画。 降低疑问，不用泛化客服话术。",
+      "must_include": []
+    },
+    {
+      "id": "R05",
+      "component_type": "module_manifest",
+      "role": "支持",
+      "page_task": "查询入口",
+      "text": "提交支援或查詢，說明問題類型、系統、門店和下一步需求。 默认问题类型未选。 Hover 字段显示帮助文本。 Click 选择问题类型后动态显示系统、门店、订单或接口字段。 提交后显示成功状态。 把资源页查询与 Demo 销售线区分。",
+      "must_include": []
+    },
+    {
+      "id": "A01",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "公司 Hero",
+      "text": "專注餐飲與零售 O2O 營運系統的產品與服務團隊。 显示公司定位、简介和 CTA。 Hover CTA 增强。 Click CTA 进入 Demo 或联系方式。 文案和图片缓慢进入。 用公司事实建立可信，不使用“长出来”等口语化表达。",
+      "must_include": []
+    },
+    {
+      "id": "A02",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "公司时间线",
+      "text": "以時間線呈現餐道餐飲系統研發、外送經驗和產品演進。 默认显示公司起点。 Hover 年份预览摘要。 Click 年份锁定；说明、图片和里程碑同步变化。 滚动推进年份。 建立长期行业经验。",
+      "must_include": []
+    },
+    {
+      "id": "A03",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "产品演进",
+      "text": "OMS、CDBI、DMS、AMS / Connector 等能力逐步構成餐道營運平台。 默认 OMS。 Hover 阶段显示产品名。 Click 阶段切换说明和对应能力。 滚动时旧能力折叠，新能力展开。 说明产品体系如何支撑业务，而不是只列服务。",
+      "must_include": []
+    },
+    {
+      "id": "A04",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "服务交付体系",
+      "text": "SaaS、Data、Delivery 與 Quality Assurance 支撐產品平台、數據分析、配送履約和品質保障。 默认 SaaS。 Hover 显示一句边界说明。 Click 展开支柱；展示对应对象、服务团队和下一步。 支柱按产品、数据、配送、质量顺序出现。 回应服务体系来源疑问，明确其来自 PPT 和公司资料。",
+      "must_include": []
+    },
+    {
+      "id": "A05",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "安全与认证",
+      "text": "ISO 27001、ISO 20000、DMS 500 Order/second、99.95% over 等授权资料。 显示认证和性能指标。 Hover 显示来源说明给内部设计，不在访客层显示 PPT 编号。 Click 可进入资料或联系确认；不新增 SLA 承诺。 轻量出现，无夸张动画。 用授权资料表达可信，避免未确认服务承诺。",
+      "must_include": []
+    },
+    {
+      "id": "A06",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "办公地点和联系方式",
+      "text": "廣州、香港、北京、上海、成都辦公與聯絡入口。 默认广州或总部。 Hover 城市 marker 显示城市名。 Click 城市后地址、联系方式和联系人入口切换。 地图 marker 依次出现。 建立企业实体可信。",
+      "must_include": []
+    },
+    {
+      "id": "A07",
+      "component_type": "module_manifest",
+      "role": "决策者",
+      "page_task": "最终 CTA",
+      "text": "聯絡餐道，或預約產品演示。 显示联系餐道为主。 Hover 按钮增强。 Click 联系进入联系方式，预约进入 Demo。 简短光带进入。 完成 About 页转化。",
+      "must_include": []
+    },
+    {
+      "id": "D01",
+      "component_type": "module_manifest",
+      "role": "采购方",
+      "page_task": "Demo Hero",
+      "text": "預約餐道產品演示前，先告訴我們你的營運場景。 显示开始表单 CTA 和摘要占位。 Hover CTA 增强。 Click 开始后滚动到 D02 / D03。 Hero 轻量进入。 让 Demo 页像任务页而不是营销页。",
+      "must_include": []
+    },
+    {
+      "id": "D02",
+      "component_type": "module_manifest",
+      "role": "采购方",
+      "page_task": "联系意图选择",
+      "text": "產品演示、銷售諮詢、合作洽談、既有客戶支援四類意圖。 默认产品演示。 Hover 意图显示适用对象。 Click 锁定意图；D03 字段、D04 摘要、D05 支持说明同步变化。 意图卡依次出现。 先分流，避免普通联系表单。",
+      "must_include": []
+    },
+    {
+      "id": "D03",
+      "component_type": "module_manifest",
+      "role": "采购方",
+      "page_task": "多步骤场景与系统表单",
+      "text": "請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。 第一步选择营运场景。 Hover 字段显示帮助文本。 Click 下一步校验必填字段；错误提示说明对象和下一步。 步骤切换，不使用复杂动画。 字段服务演示分流。",
+      "must_include": []
+    },
+    {
+      "id": "D04",
+      "component_type": "module_manifest",
+      "role": "采购方",
+      "page_task": "实时需求摘要",
+      "text": "根據你的場景，推薦 OMS、DMS、iDMS、CDBI 或接入演示。 默认显示未选择状态和推荐项为空。 Hover 推荐模块显示对应能力。 用户选择字段后摘要实时更新；点击模块可跳到 Platform 对应能力。 桌面摘要保持 sticky；移动端不 sticky。 让用户知道表单为何要问这些字段。",
+      "must_include": []
+    },
+    {
+      "id": "D05",
+      "component_type": "module_manifest",
+      "role": "采购方",
+      "page_task": "支持分流与隐私",
+      "text": "既有客戶支援可轉到 Resources；提交前需確認資料用途。 默认隐私未勾选。 Hover 支持入口显示去向。 Click 支持入口进入 Resources；未勾选隐私时提交显示错误。 无复杂动画。 避免把支持需求混入销售 Demo。",
+      "must_include": []
+    },
+    {
+      "id": "D06",
+      "component_type": "module_manifest",
+      "role": "采购方",
+      "page_task": "提交成功状态",
+      "text": "提交後顯示需求摘要、下一步安排和返回入口。 提交前不可见。 无 Hover 重点。 成功提交后显示；返回可修改需求或回到 Home。 轻量成功图形，不使用庆祝粒子。 让表单形成完整任务闭环。",
+      "must_include": []
+    }
+  ]
+}

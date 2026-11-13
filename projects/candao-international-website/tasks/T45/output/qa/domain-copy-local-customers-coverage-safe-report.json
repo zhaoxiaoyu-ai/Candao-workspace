@@ -1,0 +1,38 @@
+{
+  "suite": "T45 customers sequential Stitch visible copy QA",
+  "total": 1,
+  "passed": 0,
+  "failed": 1,
+  "status": "fail",
+  "results": [
+    {
+      "id": "t45-customers-local-customers-coverage-safe",
+      "component_type": "stitch_high_fidelity_candidate_visible_copy",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：015000+"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：03500M+"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：0530% up"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：100%"
+        }
+      ],
+      "warnings": [
+        {
+          "code": "unknown_role",
+          "message": "角色未在业务上下文中显式定义：品牌决策者 / 总部运营 / IT / 销售"
+        }
+      ]
+    }
+  ]
+}

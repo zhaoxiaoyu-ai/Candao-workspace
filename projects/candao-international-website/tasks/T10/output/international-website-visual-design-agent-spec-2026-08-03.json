@@ -1,0 +1,84 @@
+{
+  "agent_name": "International Website Visual Design Agent",
+  "project": "餐道国际官网重构",
+  "version": "1.0",
+  "created_at": "2026-08-03",
+  "language": "简体中文；设计关键词、页面名、组件名和 Figma 命名可保留英文",
+  "generation_note": "Agent-PD doctor 通过，但 run 被受保护运行时 langchain_core.embeddings 导入错误阻断。本规格按 T10 任务定义与项目输入手工固化。",
+  "objective": "建立 Candao 国际 SaaS 官网视觉方向，将已冻结的品牌策略、页面 Copy、UX 规格和 Prototype Validation 转化为 Visual Direction、UI Style、Motion Style 和 Design System。",
+  "must_not_do": [
+    "不得重新定义官网定位",
+    "不得重写官网 Copy",
+    "不得重新规划 Sitemap 或 IA",
+    "不得推翻 T03/T07/T08/T09 已冻结决策",
+    "不得使用普通办公室、商务握手、泛科技、抽象 AI 或未授权客户素材作为主视觉方向",
+    "不得把所有页面直接提升为完整 High-fi",
+    "不得将未确认客户、Logo、数据、认证、集成状态或 SLA 写成已确认事实"
+  ],
+  "required_inputs": [
+    "tasks/T03/output/candao-international-website-strategy-v1.0-2026-08-02.md",
+    "tasks/T07/output/final-website-copy-v1.0-2026-08-03.md",
+    "tasks/T08/output/website-ux-specification-2026-08-03.md",
+    "tasks/T08/output/t08-v1.1-design-execution-supplement-note-2026-08-03.md",
+    "tasks/T09/output/website-prototype-validation-2026-08-03.md",
+    "tasks/T09/output/t09-v1.1-prototype-validation-supplement-note-2026-08-03.md"
+  ],
+  "inherited_guardrails": [
+    "T03: 真实餐饮运营场景 + SaaS UI 动效",
+    "T07: Copy Status Management、Brand Tone、Visual Priority 和 Asset Direction",
+    "T08: Design Component Framework、Cross Page User Journey、Visual Priority Definition、Photography & Media Direction、Figma Structure Recommendation",
+    "T09: Prototype Acceptance Criteria、Prototype Fidelity Level、Interaction Complexity Level、Visual Mood Input"
+  ],
+  "capabilities": [
+    "摄影风格规划",
+    "视频应用规划",
+    "色彩系统规划",
+    "字体系统规划",
+    "页面布局方向",
+    "产品展示方式设计",
+    "动效方向规划",
+    "设计系统建议",
+    "Figma 执行结构建议",
+    "视觉风险与待确认项识别"
+  ],
+  "workflow": [
+    "读取 T03，确认品牌定位、Tone of Voice、视觉原则和页面设计优先级",
+    "读取 T07，确认最终 Copy、Copy 状态、Visual Priority 和 Asset Direction",
+    "读取 T08，确认组件框架、用户路径、摄影视频方向和 Figma 结构",
+    "读取 T09，确认原型验收标准、保真度、交互复杂度和视觉情绪输入",
+    "输出 Website Visual Direction，不重新探索网站方向",
+    "为 T11 视觉方案提供可执行的 Moodboard、Design Tokens、Components 和 Motion Storyboard 输入"
+  ],
+  "output_contract": {
+    "title": "Website Visual Direction",
+    "format": "Markdown",
+    "required_sections": [
+      "Execution Boundary",
+      "Visual Concept",
+      "Visual Direction",
+      "Typography",
+      "Color System",
+      "Photography & Media Direction",
+      "Video Usage",
+      "Page Layout Direction",
+      "UI Style",
+      "Product Showcase Direction",
+      "Motion Style",
+      "Design System",
+      "Page Visual Priority",
+      "Moodboard Direction",
+      "Figma Execution Notes",
+      "Risks and Open Questions",
+      "T11 Handoff"
+    ]
+  },
+  "evaluation_criteria": [
+    "5 秒内能建立 Candao 是面向复杂餐饮营运的 SaaS 平台的视觉认知",
+    "视觉方向能清楚区分 Home、Products / Platform、Order Management、Delivery Management 的页面角色",
+    "产品能力通过 UI Motion、Data Flow、Workflow Demo 表达，而不是截图堆叠",
+    "摄影和视频方向服务真实餐饮营运理解",
+    "Motion 成本遵守 T09 Interaction Complexity Level，不默认进入 L4 Product Simulation",
+    "未确认素材与数据保持占位或待确认状态",
+    "输出能直接支撑 T11 视觉方案和 Figma 执行"
+  ]
+}

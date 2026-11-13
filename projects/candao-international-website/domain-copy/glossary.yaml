@@ -1,0 +1,248 @@
+{
+  "version": "1.1",
+  "updated": "2026-08-25",
+  "locale_policy": {
+    "prototype_default": "zh-Hant",
+    "internal_docs": "zh-Hans",
+    "do_not_mix_locales": true
+  },
+  "brand_display_policy": {
+    "default_zh_display": "餐道",
+    "english_display": "Candao",
+    "rule": "中文、繁體中文、项目叙述和官网默认显示品牌名统一使用「餐道」。Candao 仅在英文 Locale、英文法定名、文件名、URL、代码、路径或精确引用来源时保留。",
+    "allowed_candao_contexts": [
+      "Candao Information Technology Co., Ltd.",
+      "Candao Business Intelligent",
+      "Candao Introduction",
+      "Candao International Website",
+      "Candao-workspace",
+      "candao-international-website",
+      "can-dao.com.hk"
+    ]
+  },
+  "localized_display_terms": [
+    {
+      "source_term": "Finance Center",
+      "zh_hans": "财务对账",
+      "zh_hant": "財務對賬",
+      "english": "financial reconciliation",
+      "rule": "PPT 原文可保留 Finance Center 作为证据名称；中文 / 繁體中文官网可见文案、Figma、Stitch、React 和截图式界面默认使用中文表达，不直接展示 Finance Center。",
+      "allowed_contexts": ["英文 Locale", "英文法定或产品资料原文", "精确来源引用", "文件名", "URL", "代码标识"]
+    }
+  ],
+  "protected_terms": [
+    "餐道",
+    "Candao",
+    "餐飲與零售 O2O",
+    "OMS",
+    "COMS",
+    "SOMS",
+    "CDBI",
+    "DMS",
+    "iDMS",
+    "AMS / Connector",
+    "Menu Center",
+    "Order Processing Center",
+    "Operation Management Center",
+    "Store Abnormity Management",
+    "財務對賬",
+    "Data Asset",
+    "Merchant Service",
+    "Foodpanda",
+    "Deliveroo",
+    "Keeta",
+    "Pizza-Box",
+    "JIA Group",
+    "Jardine Group",
+    "KFC",
+    "Pizza Hut",
+    "PHD",
+    "McDonald's",
+    "Yoshinoya",
+    "ISO 27001",
+    "ISO 20000"
+  ],
+  "case_sensitive_terms": [
+    {
+      "term": "iDMS",
+      "definition": "餐道聚合配送管理相关产品名，首字母 i 必须小写，DMS 必须大写。",
+      "forbidden_forms": ["IDMS", "Idms", "idms", "iDms", "IdMS"],
+      "rule": "不得被文案、翻译、原型样式、CSS text-transform、Figma 字体样式或自动格式化统一改成全大写、全小写或首字母大写。"
+    },
+    {
+      "term": "SaaS",
+      "definition": "软件即服务写法，两个 a 必须小写，S 保持大写。",
+      "forbidden_forms": ["SAAS", "Saas", "saas"],
+      "rule": "不得被统一改成全大写、全小写或普通首字母大写。"
+    }
+  ],
+  "standard_terms": [
+    {
+      "term": "餐道",
+      "definition": "中文、繁體中文、项目叙述和官网默认显示的品牌名。",
+      "use_for_roles": ["决策者", "总部运营", "IT", "销售", "采购方"],
+      "scenarios": ["Home", "Customers", "About", "Demo", "中文和繁體中文官网内容"],
+      "synonyms_allowed": ["Candao"],
+      "forbidden_replacements": ["candao", "Can Dao"]
+    },
+    {
+      "term": "餐飲與零售 O2O",
+      "definition": "餐道官网对目标行业和业务链路的标准总称，覆盖餐饮、零售鲜食、外卖、自有点餐、门店和配送。",
+      "use_for_roles": ["决策者", "总部运营", "IT"],
+      "scenarios": ["Home", "Solutions", "Platform", "Integrations"],
+      "synonyms_allowed": ["F&B and Retail O2O"],
+      "forbidden_replacements": ["全行业", "所有行业", "泛零售", "通用 SaaS"]
+    },
+    {
+      "term": "營運中樞",
+      "definition": "面向品牌总部和门店的业务链路中心，不等同于泛化中台。",
+      "use_for_roles": ["决策者", "总部运营"],
+      "scenarios": ["Home", "Platform"],
+      "synonyms_allowed": ["營運平台"],
+      "forbidden_replacements": ["中台", "智能中台", "业务平台"]
+    },
+    {
+      "term": "OMS",
+      "definition": "Order Management System，承接多渠道订单、门店接单、订单处理、异常提醒和数据回流。",
+      "use_for_roles": ["总部运营", "门店经理", "IT"],
+      "scenarios": ["Platform", "订单列表", "后台页面"],
+      "synonyms_allowed": ["Order Management System"],
+      "forbidden_replacements": ["订单系统", "接单工具"]
+    },
+    {
+      "term": "Menu Center",
+      "definition": "餐单、库存、售罄、区域菜单和模板的统一维护能力。",
+      "use_for_roles": ["总部运营", "门店经理"],
+      "scenarios": ["Platform", "餐单同步", "空状态"],
+      "synonyms_allowed": ["餐單中心"],
+      "forbidden_replacements": ["菜单管理工具", "商品中心"]
+    },
+    {
+      "term": "DMS",
+      "definition": "自有骑手配送管理系统，支持派单、骑手 APP、监控、报表、SMS 和第三方溢出。",
+      "use_for_roles": ["配送主管", "门店经理"],
+      "scenarios": ["Platform", "Delivery", "异常提醒"],
+      "synonyms_allowed": ["Rider Management System"],
+      "forbidden_replacements": ["配送工具", "物流系统"]
+    },
+    {
+      "term": "iDMS",
+      "definition": "Integrated delivery management system，用于聚合配送与第三方配送资源管理。",
+      "use_for_roles": ["配送主管", "IT"],
+      "scenarios": ["Platform", "Integrations", "Delivery"],
+      "synonyms_allowed": ["Integrated Delivery Management System"],
+      "forbidden_replacements": ["IDMS", "Idms", "idms", "iDms", "IdMS", "聚合物流工具", "第三方配送插件"]
+    },
+    {
+      "term": "CDBI",
+      "definition": "Candao Business Intelligent，用于多维报表、数据看板和经营分析。",
+      "use_for_roles": ["管理层", "财务", "总部运营"],
+      "scenarios": ["Platform", "数据大屏", "经营概览"],
+      "synonyms_allowed": ["Candao Business Intelligent"],
+      "forbidden_replacements": ["BI 工具", "数据平台"]
+    },
+    {
+      "term": "財務對賬",
+      "definition": "用于比对平台订单与餐道 OMS 订单，识别金额、状态、漏单等对账异常；PPT 原文中的 Finance Center 是来源名称，中文 / 繁體中文生产稿默认不直接展示。",
+      "use_for_roles": ["财务", "总部运营"],
+      "scenarios": ["财务对账", "数据大屏", "后台页面"],
+      "synonyms_allowed": ["财务对账", "財務中心", "Finance Center"],
+      "forbidden_replacements": ["财务工具", "账务平台"]
+    }
+  ],
+  "discouraged_words": [
+    {"word": "赋能", "replacement": "连接订单、门店、配送和数据链路"},
+    {"word": "赋能商家", "replacement": "协助品牌处理多平台订单和门店营运"},
+    {"word": "一站式解决方案", "replacement": "统一管理订单、餐单、配送、会员和数据"},
+    {"word": "无缝集成", "replacement": "按系统类型、接口对象和数据流接入"},
+    {"word": "智能化升级", "replacement": "减少重复维护、漏单和异常处理成本"},
+    {"word": "提升效率", "replacement": "减少多后台切换、重复维护和异常追踪时间"},
+    {"word": "降本增效", "replacement": "减少重复操作、漏单风险和人工对账压力"},
+    {"word": "全渠道运营", "replacement": "多平台外卖、自有点餐、门店、配送和会员营运"},
+    {"word": "领先", "replacement": "使用 PPT 或旧官网已确认事实说明可信度"}
+  ],
+  "generic_phrases": [
+    "帮助企业数字化转型",
+    "打造智慧生态",
+    "提升用户体验",
+    "全方位赋能",
+    "一站式赋能",
+    "极致体验",
+    "高效协同",
+    "数据驱动增长",
+    "业务闭环升级",
+    "行业领先解决方案"
+  ],
+  "confirmed_content_placement": [
+    {"item": "Home Logo Band", "rule": "Home Hero 下方可使用用户提供 SVG Logo 配合 Hero 风格展示品牌可信证明。", "asset": "assets/logo/candao-blue-logo.svg"},
+    {"item": "Customers Performance", "rule": "Customers 页面可使用 PPT Slide 11 的 Performance 数据。"},
+    {"item": "Named Customer Cases", "rule": "客户案例使用实名客户案例，叙事深度参考 PPT，并突出前后对比数据。"},
+    {"item": "Product Status Flow", "rule": "订单、门店、配送、财务状态真实存在，应在产品截图或截图式界面中表现多状态流转，不为每个状态单独设计模块。"}
+  ],
+  "allowed_metrics": [
+    {"label": "品牌数量", "values": ["5000+"], "source": "PPT Slide 11"},
+    {"label": "每日处理订单", "values": ["500M+"], "source": "PPT Slide 11"},
+    {"label": "覆盖城市", "values": ["400+"], "source": "PPT Slide 11"},
+    {"label": "门店数量", "values": ["200K+"], "source": "PPT Slide 11"},
+    {"label": "每月配送订单 GMV", "values": ["4.5B+"], "source": "PPT Slide 11"},
+    {"label": "客户效率提升", "values": ["30% up", "30%"], "source": "PPT Slide 11"},
+    {"label": "Jardine DMS 覆盖", "values": ["200+"], "source": "PPT Slide 41"},
+    {"label": "DMS 并发吞吐量", "values": ["500 Order/second"], "source": "PPT Slide 131"},
+    {"label": "DMS 平台可用性", "values": ["99.95%"], "source": "PPT Slide 131"},
+    {"label": "甜品连锁订单量", "values": ["100K", "190K", "1.01M"], "source": "PPT Slide 38"},
+    {"label": "甜品连锁销售额", "values": ["6.6M", "7.74M", "54.42M"], "source": "PPT Slide 38"},
+    {"label": "甜品连锁复购率", "values": ["19.88%", "19.95%", "25.83%"], "source": "PPT Slide 38"},
+    {"label": "火锅案例指标", "values": ["12.66%", "15.65%", "19.98%", "147%", "156%", "1,578", "1,578 萬", "1,578 萬元"], "source": "PPT Slide 42"},
+    {"label": "中餐案例指标", "values": ["185%", "665%", "116%"], "source": "PPT Slide 43"},
+    {"label": "咖啡案例指标", "values": ["55%", "74%", "1420", "2472"], "source": "PPT Slide 44"},
+    {"label": "鲜食零售指标", "values": ["30%", "80%", "26.7%"], "source": "PPT Slide 45"}
+  ],
+  "confirmed_statuses": [
+    "待接单",
+    "已接单",
+    "制作中",
+    "配送中",
+    "已完成",
+    "已取消",
+    "退款中",
+    "异常",
+    "营业中",
+    "暂停接单",
+    "门店关闭",
+    "待派单",
+    "已派单",
+    "骑手已接单",
+    "到店",
+    "取餐",
+    "已送达",
+    "转第三方",
+    "配送异常",
+    "超时"
+  ],
+  "confirmed_exceptions": [
+    "漏单",
+    "重复订单",
+    "接单超时",
+    "配送超时",
+    "退款未处理",
+    "取消未同步",
+    "金额不一致",
+    "状态不一致",
+    "缺少配送坐标",
+    "门店状态异常",
+    "库存售罄未同步",
+    "餐单更新失败",
+    "对账差异"
+  ],
+  "forbidden_unconfirmed_claims": [
+    "24/7 SLA",
+    "零延迟",
+    "实时无误",
+    "所有 POS 均可接入",
+    "所有配送商均可接入",
+    "100% 可用",
+    "永久免费",
+    "当天上线",
+    "无需人工介入"
+  ]
+}

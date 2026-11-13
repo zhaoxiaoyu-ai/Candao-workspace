@@ -1,0 +1,1040 @@
+{
+  "date": "2026-11-13",
+  "repository": "https://github.com/zhaoxiaoyu-ai/Candao-workspace",
+  "visibility": "public",
+  "scope": "源码及现有跟踪资产保持；新增媒体仅纳入当前评审、当前页面参考、设计源与代码依赖，不提升业务审批状态。",
+  "assets": [
+    {
+      "path": ".stitch/designs/cv2-cleanup/00-candao-cv2-cleanup-index-fixed.png",
+      "bytes": 387839,
+      "sha256": "cd1ab7ed051192fa99c6d2ab8449b133ba9f408f5bbb42016b0c29dfe5951e13",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv2-cleanup/00-candao-cv2-cleanup-index.png",
+      "bytes": 397577,
+      "sha256": "13c072706b9469b3dd27874bf3abd4c22c649ae9d5fe68633a152c23d07bfc9c",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv2-first-level/about-desktop-tc.png",
+      "bytes": 2114187,
+      "sha256": "4de959a6f9191952096acc7ed413330d713f75081036fc21eacb4ade5a071528",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv2-first-level/contact-demo-desktop-tc.png",
+      "bytes": 1601535,
+      "sha256": "2f4e6b0cec3b33d53fa78a53ebf95959a5a0814f71f4e17313366a6dec1d3760",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv2-first-level/customers-desktop-tc.png",
+      "bytes": 2563625,
+      "sha256": "78044b620b790be9517a6b1fe3726677cf38753918240a2167a719d4a5860599",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv2-first-level/home-desktop-tc.png",
+      "bytes": 3028978,
+      "sha256": "13719e2c663f12dedc05d7551b0648df84c2140206abbbb05fae491f2d71be80",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv2-first-level/integrations-desktop-tc.png",
+      "bytes": 552057,
+      "sha256": "879984c2f7c18c58e0002ade870ab837790276d0ed6030ab7220b103a0e2d963",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv2-first-level/platform-desktop-tc.png",
+      "bytes": 1987709,
+      "sha256": "5428ed152181b1b90856f0262b139c19cf5fb955d98950d43a0ef111a34c7e65",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv2-first-level/solutions-desktop-tc.png",
+      "bytes": 1357413,
+      "sha256": "369930c98ddc57423e55e9782b9cb668ba4c5513aa366faf7849e768527d4f2c",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/00-candao-cv3-index.png",
+      "bytes": 81906,
+      "sha256": "e8f8499b92a27f8dfb21a21cfa99038269bfa13fad78bb563821288d8770a92b",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/00-start-here-cv3-review.png",
+      "bytes": 61250,
+      "sha256": "3a912a8d17cfa215a0509b76edbe42b7c6c5299e8738ffff2b897103e32cc041",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/about-cv3-desktop-tc-modular-complete.png",
+      "bytes": 28154,
+      "sha256": "2e9336083c51f8b2359ce4333a59f1d274f9a102f51f2a328eb69dd87061c37e",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/about-cv3-desktop-tc-modular-qa.png",
+      "bytes": 28239,
+      "sha256": "a36688f3aa2382eceb11c8f60b77902eb1269b58a8099dea7ad9066f2cfc8225",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/about-cv3-desktop-tc-modular.png",
+      "bytes": 89517,
+      "sha256": "b948823b9de138b654f5a9a951ddc503760314235ecd6a8e6369b573e9d7356a",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/platform-cv3-desktop-tc-fixed-qa.png",
+      "bytes": 41182,
+      "sha256": "7e316254105c57515ec35669f8b84a638fb513c1befd19381ea3c7b20aaa5838",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/platform-cv3-desktop-tc-fixed.png",
+      "bytes": 41212,
+      "sha256": "a8aba8fbde8b9ba0505c4fa53a34f864b1a7bd94aee87efc9c81ef1f5b9f56cc",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/platform-cv3-desktop-tc.png",
+      "bytes": 41824,
+      "sha256": "627bbcc883e22a1cf9ff74b91251157a4dece6e541470b27ff1ee0f189057694",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/resources-cv3-desktop-tc-fixed.png",
+      "bytes": 32312,
+      "sha256": "365d57e4ce301d9c1c7dfe5841aa4016f7dc892d7fb912ce85f6ebc679931797",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/resources-cv3-desktop-tc-modular.png",
+      "bytes": 33672,
+      "sha256": "03b8c0dc52aed7000f12295ded6fe1d46c93d4eda70fef7863a40c033596e625",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/resources-cv3-desktop-tc.png",
+      "bytes": 32257,
+      "sha256": "830138203a47b993286169e1435c1eecf7e04863b05fc3be34331e449393e676",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv3-first-level/solutions-cv3-desktop-tc.png",
+      "bytes": 50321,
+      "sha256": "9fe1bee5a5c48e922c907ffeb7528672234c1fd77ec1a7372140bb1d49267ba2",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv4-home/home-complete-long-desktop-tc.png",
+      "bytes": 56222,
+      "sha256": "754a692799cd419dc900f574945f1b5cd2edf63f265e28ec5bd3bafafbb51e13",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv4-home/home-operations-hub-complete-qa.png",
+      "bytes": 35467,
+      "sha256": "16d128e21a4f2057d6cfcd40ebc9734772b131ea4544ef2221fd31e80bd05149",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/cv4-home/home-operations-hub-desktop-tc.png",
+      "bytes": 92311,
+      "sha256": "affece750a5a81a9cd3ba5e0e28cd026b860f16a46157d35b509e6c1f059c75c",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/delivery-management-desktop-tc.png",
+      "bytes": 113684,
+      "sha256": "35621114e56c47bf4f96a2e19d51a2b7e60d072549017694ca006307198f6c9b",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/delivery-v2-desktop-tc.png",
+      "bytes": 49814,
+      "sha256": "0191324f42c066491df8085e1124e42f45c2de9b8abeaf8bb1c7368a664f7a7f",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/home-desktop-tc.png",
+      "bytes": 46036,
+      "sha256": "54d328aa7497c00cf40ac50c431e744f751c1e8a2210a3c14305bc1120d9f060",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/order-management-desktop-tc.png",
+      "bytes": 41199,
+      "sha256": "ab6945519642aae934882b02bfd6fe8477fbfb3ec8eb75a61ae2e355773e2e3c",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/platform-desktop-tc.png",
+      "bytes": 69297,
+      "sha256": "c979d94ccb0aace08cf8c3e17cafdca802a4ab6efcf1dcf09194f6b284a6583e",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": ".stitch/designs/platform-v2-desktop-tc.png",
+      "bytes": 32837,
+      "sha256": "07197bb7ed157bb282d1c720b615849339297ba0062d987395ccdb111b8298f9",
+      "reason": "根Stitch设计源资源；不改变采用状态"
+    },
+    {
+      "path": "projects/candao-international-website/source/react-next-capability-prototype/public/images/candao/about-contact-service-ops-2026-08-08.png",
+      "bytes": 1684647,
+      "sha256": "2483694ca954d6169decdab79b390dd5387228535648441f174933a785e77b53",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/react-next-capability-prototype/public/images/candao/customers-hero-case-ops-2026-08-08.png",
+      "bytes": 1897164,
+      "sha256": "0fdc278d5b4fe0b9657c0881c0646101aa8ae3bc698069741a6af3bb8458f5fd",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/react-next-capability-prototype/public/images/candao/home-hero-restaurant-ops-2026-08-08.png",
+      "bytes": 2319084,
+      "sha256": "932863f9440f1d51097002590e356184f53929091ade59a38c8668b7b709e46a",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/react-next-capability-prototype/public/images/candao/integrations-ecosystem-ui-2026-08-08.png",
+      "bytes": 1525425,
+      "sha256": "0e141c1c5565be1d150d389851ac38a3278db0c4fcfed33222c15e5014b7299f",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/react-next-capability-prototype/public/images/candao/platform-capability-ui-2026-08-08.png",
+      "bytes": 1372428,
+      "sha256": "3f05ab5bacf6115a153e3871afb7a6934e54401ebefaefafa6decccc31650ed3",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/react-next-capability-prototype/public/images/candao/solutions-hero-multistore-ops-2026-08-08.png",
+      "bytes": 2014709,
+      "sha256": "f35aaed98f0b50c1c888e2511baddde174fb8762d588bd7ad3ce7c016579a2d9",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v2/assets/about-contact-service-ops-2026-08-08.png",
+      "bytes": 1684647,
+      "sha256": "2483694ca954d6169decdab79b390dd5387228535648441f174933a785e77b53",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v2/assets/customers-hero-case-ops-2026-08-08.png",
+      "bytes": 1897164,
+      "sha256": "0fdc278d5b4fe0b9657c0881c0646101aa8ae3bc698069741a6af3bb8458f5fd",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v2/assets/home-hero-restaurant-ops-2026-08-08.png",
+      "bytes": 2319084,
+      "sha256": "932863f9440f1d51097002590e356184f53929091ade59a38c8668b7b709e46a",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v2/assets/integrations-ecosystem-ui-2026-08-08.png",
+      "bytes": 1525425,
+      "sha256": "0e141c1c5565be1d150d389851ac38a3278db0c4fcfed33222c15e5014b7299f",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v2/assets/platform-capability-ui-2026-08-08.png",
+      "bytes": 1372428,
+      "sha256": "3f05ab5bacf6115a153e3871afb7a6934e54401ebefaefafa6decccc31650ed3",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v2/assets/solutions-hero-multistore-ops-2026-08-08.png",
+      "bytes": 2014709,
+      "sha256": "f35aaed98f0b50c1c888e2511baddde174fb8762d588bd7ad3ce7c016579a2d9",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v3/assets/about-contact-service-ops-2026-08-08.png",
+      "bytes": 1684647,
+      "sha256": "2483694ca954d6169decdab79b390dd5387228535648441f174933a785e77b53",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v3/assets/customers-hero-case-ops-2026-08-08.png",
+      "bytes": 1897164,
+      "sha256": "0fdc278d5b4fe0b9657c0881c0646101aa8ae3bc698069741a6af3bb8458f5fd",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v3/assets/home-hero-restaurant-ops-2026-08-08.png",
+      "bytes": 2319084,
+      "sha256": "932863f9440f1d51097002590e356184f53929091ade59a38c8668b7b709e46a",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v3/assets/integrations-ecosystem-ui-2026-08-08.png",
+      "bytes": 1525425,
+      "sha256": "0e141c1c5565be1d150d389851ac38a3278db0c4fcfed33222c15e5014b7299f",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v3/assets/platform-capability-ui-2026-08-08.png",
+      "bytes": 1372428,
+      "sha256": "3f05ab5bacf6115a153e3871afb7a6934e54401ebefaefafa6decccc31650ed3",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-first-level-v3/assets/solutions-hero-multistore-ops-2026-08-08.png",
+      "bytes": 2014709,
+      "sha256": "f35aaed98f0b50c1c888e2511baddde174fb8762d588bd7ad3ce7c016579a2d9",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-interactive-prototype/screenshots/01-home-desktop-tc-full.png",
+      "bytes": 690996,
+      "sha256": "7efe05ae33d51924017db13e7019b92523af78b39212f3c6d947123c90b562f3",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-interactive-prototype/screenshots/02-platform-v2-desktop-tc-full.png",
+      "bytes": 568701,
+      "sha256": "eaef100eb9f3605e4d24bc3d1ce4e6a0e0ffe099f9c846190b6d624534938572",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-interactive-prototype/screenshots/03-order-management-desktop-tc-full.png",
+      "bytes": 998654,
+      "sha256": "1216451d87ae4ee87520ef5e45bebe90742878bf2cb6b80671ec83aac0683b9d",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/source/stitch-interactive-prototype/screenshots/04-delivery-v2-desktop-tc-full.png",
+      "bytes": 738095,
+      "sha256": "b94390582dfee8f87131c6486af59124f159e65ff72549a53f7c007c6d9d22b0",
+      "reason": "源码中保留的实际资源／输入"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T52/output/prototype/customers-hero-case-ops-2026-08-08.png",
+      "bytes": 1897164,
+      "sha256": "0fdc278d5b4fe0b9657c0881c0646101aa8ae3bc698069741a6af3bb8458f5fd",
+      "reason": "当前T52可运行原型依赖"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T52/output/prototype/delivery-dispatch-map-ui-2026-08-05.png",
+      "bytes": 1396344,
+      "sha256": "6aeea88e2ba5ea9ea92505ba7a7fd12ac43dfca389124ccceb2241e139abc91d",
+      "reason": "当前T52可运行原型依赖"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T52/output/prototype/home-hero-restaurant-ops-2026-08-08.png",
+      "bytes": 2319084,
+      "sha256": "932863f9440f1d51097002590e356184f53929091ade59a38c8668b7b709e46a",
+      "reason": "当前T52可运行原型依赖"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T52/output/prototype/home-product-showcase-operations-ui-2026-08-05.png",
+      "bytes": 1714360,
+      "sha256": "5f398711a6c542f07c24cadc61033bae581a2f98185242898891eb58b3a79cda",
+      "reason": "当前T52可运行原型依赖"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T52/output/prototype/integrations-ecosystem-ui-2026-08-08.png",
+      "bytes": 1525425,
+      "sha256": "0e141c1c5565be1d150d389851ac38a3278db0c4fcfed33222c15e5014b7299f",
+      "reason": "当前T52可运行原型依赖"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T52/output/prototype/platform-dashboard-ui-rich-2026-08-05.png",
+      "bytes": 1496290,
+      "sha256": "eaa1843012a5e3194cc389b73eeb511c0f2b1d782347f9a42cbfe320b028b3b4",
+      "reason": "当前T52可运行原型依赖"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T52/output/screenshots/t52-visual-polish-1440-full.png",
+      "bytes": 2750073,
+      "sha256": "1ad26ce0b5e0fa4d366b61dd0fe0b42bdd7899ed11f98a1e3083d2d421a9bb12",
+      "reason": "当前页面或基准最新回读资源；不代表人工最终验收"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T56/output/screenshots/t56-figma-original-path-links-restored.png",
+      "bytes": 1452960,
+      "sha256": "21fcac31f08ac2d87c6fb66eca18435ad8fc491ceab268827b299314461fd306",
+      "reason": "当前页面或基准最新回读资源；不代表人工最终验收"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T57/output/screenshots/t57-home-desktop-en-figma-1440-full.png",
+      "bytes": 4249835,
+      "sha256": "232779a4a6b66d36139aee7e2c6749a6d7d03adfc2a3bccaa5c1c9324b1936c9",
+      "reason": "当前页面或基准最新回读资源；不代表人工最终验收"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T59/output/screenshots/t59-solutions-en-revision2-figma-842-2.png",
+      "bytes": 2325408,
+      "sha256": "a80ae410571aecd4f729a888b8ace93b9f25a3d1df02ea0890ba5738f1de5c8f",
+      "reason": "当前页面或基准最新回读资源；不代表人工最终验收"
+    },
+    {
+      "path": "projects/candao-international-website/tasks/T61/output/screenshots/t61-platform-aceternity-mapping-figma-925-2.png",
+      "bytes": 1800926,
+      "sha256": "14b2e25f0282ceebb0f9da659b74c083a5e9e38eed08cc880a1afc611abb79cb",
+      "reason": "当前页面或基准最新回读资源；不代表人工最终验收"
+    },
+    {
+      "path": "projects/coms/source/src/assets/hero.png",
+      "bytes": 44919,
+      "sha256": "72a860570eddf1dd9988f26c7106c67be286bc9f2fd3303c465ce87edb1ae6cd",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T03/output/booking-provider-modal-final.png",
+      "bytes": 216309,
+      "sha256": "66f4f4280c8011bf7cc032c23a9e883f58dfe6b429463828b34078aaafd52c9b",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T03/output/booking-provider-modal.png",
+      "bytes": 216967,
+      "sha256": "a5ff143f922c5ce072df54c88a7af46b9c6b989f2ab41299f48d1fd472e01aea",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T03/output/booking-segment-modal.png",
+      "bytes": 204704,
+      "sha256": "2e8f0a9bdf764ad643f908030d00b3af405846d2d7afd1276c185293de9909d3",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T03/output/booking-tappo.png",
+      "bytes": 200773,
+      "sha256": "9f181994526fc72969208806d1aa62f3e99e53eeb34691691282451d99b9b92c",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T03/output/pilot-default-typography.png",
+      "bytes": 235784,
+      "sha256": "5509953e436f32980001f819f8bb61bbe0df9e66ed15ae5ada32ae4657983339",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T03/output/pilot-default.png",
+      "bytes": 234153,
+      "sha256": "7575e2a1e18e93d6c3a3a1bd0433d071182e5677f5603230306505f5369b1175",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T04/output/booking-tappo-t04-fixed.png",
+      "bytes": 298584,
+      "sha256": "8c2d5bdf6078ec0887f852a8daa858b218dbc5dff22602d032fb932e21802d6a",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T04/output/booking-tappo-t04.png",
+      "bytes": 298547,
+      "sha256": "27ea4984a98c7404e53c90e5e240015857a98d1dd31baa7492c3bc1a9eb9806d",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T04/output/mw-default-t04-fixed.png",
+      "bytes": 333529,
+      "sha256": "28aeb168a0a0876837b60b8e62bf88b07347322e5f401c80c309ad73a70c782c",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T04/output/mw-default-t04.png",
+      "bytes": 333313,
+      "sha256": "3371da13716076013eb126a28c5bb9f3f5e9295b6242c3b9941dc82e9e618bc2",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T05/output/screenshots/booking_modal_people_1866-27180_prefix_issue.png",
+      "bytes": 325447,
+      "sha256": "e8d49c91f46e4d172cf9bee518ba4e5864f86e00d97de900e88663709c2eb025",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T05/output/screenshots/booking_tappo_1866-25708.png",
+      "bytes": 320910,
+      "sha256": "14ffef222da03ba9ad572071467de4ab9fe3ac462cc6dacf402427fd3f04a683",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T05/output/screenshots/booking_tappo_1866-25708_postfix.png",
+      "bytes": 256676,
+      "sha256": "b9021183dd5d0c3908c82356ad49e404f80ae4acafbc9252a3fac531f6bb2749",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T05/output/screenshots/micro_default_1866-19820.png",
+      "bytes": 353492,
+      "sha256": "4d27ac8f6c8c7f54efb4355ccd86c68e1bb00b2c23011c30a834eee9b0e2b6d7",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/booking_tappo_t06_autolayout.png",
+      "bytes": 257259,
+      "sha256": "0a5bfba164134260d86c9ec0c22a76e9ce532f42626a5d216844515b8b77982e",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/booking_tappo_t06_final.png",
+      "bytes": 242490,
+      "sha256": "5875c4eb2e27875d0a1c527fb07b9210a071e90460e4f1edac724979b76b7ae0",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/google_step4_t06_fix.png",
+      "bytes": 35851,
+      "sha256": "fe251c8b4ab8fed224ce382bd7e5610945c9cc30e1e85d41af03b933d0ed4dff",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/google_step6_t06_fix.png",
+      "bytes": 36059,
+      "sha256": "8bd7131d773effeaccbd69812a35789e0475b01f63916b165dbd9651851e8648",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/google_yes_step1_t06_fix.png",
+      "bytes": 36443,
+      "sha256": "460208599450d142463f328e71e909da86cc23d2d999f234420a33f61855eef8",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/google_yes_step4_t06_fix.png",
+      "bytes": 35330,
+      "sha256": "e97fbf23e14f111be1c1dea986969b1baaa257db7bedf646516dc6358815d5fc",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/micro_default_t06_autolayout.png",
+      "bytes": 278199,
+      "sha256": "7ef65dc4c4ed5deee667a031c530b7a69e7a0d374a5466c0bc12b4ce962ac581",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/micro_default_t06_final.png",
+      "bytes": 262156,
+      "sha256": "97741b45c9609a5cf6c641859a4cd88595ccc756cc90f707b8f8f078dab5bccc",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/micro_default_t06_google_fix.png",
+      "bytes": 325597,
+      "sha256": "f5c32c983230e8a29ba14b1c8e328e55b68202183b0f672178ea524c80f0760e",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T06/output/screenshots/micro_default_t06_google_fix_compact.png",
+      "bytes": 326172,
+      "sha256": "8cdb4ebb37482e7fab81ce4dcfa4afef631f8c2e01a11bcf0d2201d37decdd1a",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T09/output/booking-form-single-column.png",
+      "bytes": 132788,
+      "sha256": "ddad9f513bb472a533f941f6a1c18f8f8d7866f4c693e8ca3e8609940fb44081",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T09/output/booking-single-column-all.png",
+      "bytes": 226195,
+      "sha256": "7f35566b94cdd5b7e350e0e474c34855ba42c356214a750cc017f9e290514162",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T10/output/mos-v2-google-yes-step1-after.png",
+      "bytes": 366831,
+      "sha256": "e0ed2c1bba371cb70e36585934b38894da557aaaa70f930f49c8ee6bbcea2cbf",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T10/output/mos-v2-google-yes-step4-after.png",
+      "bytes": 365489,
+      "sha256": "3e41b21c50029fdf08788fa30241dc0b26551823010849f698c0be54d912eebd",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/design-agent/tasks/T44/output/t44-home.png",
+      "bytes": 1230541,
+      "sha256": "02a2e2938ed091dd175dbb03a40f6ff667eeeebc50cc76256a05c1219f870ef4",
+      "reason": "Design Agent当前T44原型回读"
+    },
+    {
+      "path": "projects/design-agent/tasks/T44/output/t44-products.png",
+      "bytes": 321599,
+      "sha256": "9bf2a2d91a6ac422931ec04b5280e1c9d67cf24f09e660a1b831c53aa7053d78",
+      "reason": "Design Agent当前T44原型回读"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-asset.png",
+      "bytes": 107322,
+      "sha256": "53a894ae50774b4ed01a0b0cfa291d0983fca789ff08dae6cc142e16cac726fc",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-booking.png",
+      "bytes": 123276,
+      "sha256": "d84a1540bc524aaeb14b1a7ae7cbe5ce80541198f37000e3b1c850d05fefeac4",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-customer.png",
+      "bytes": 133814,
+      "sha256": "8fd5e635849e64b19b127cb858b262b953a13c5073613eca215dde616c86c05e",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-home.png",
+      "bytes": 101136,
+      "sha256": "5569bebac3b3ac9c3498570db7c7e4ebfd98fbbfdb9c7518c72ced070eb5dbcb",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-inventory.png",
+      "bytes": 104860,
+      "sha256": "f8f2711c11b94287796b71246fca6adb44b0dd345a091f91b36cc4f8431b948a",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-menu.png",
+      "bytes": 146920,
+      "sha256": "092119d37bebec50a54c89535470220d0ccb8060cfd6d37c100dd901cc7cbcbe",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-payment.png",
+      "bytes": 107041,
+      "sha256": "858852e022a549204103c796887a2c318e2cc6a2b765dca0884fb62e691c8c9f",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-pos.png",
+      "bytes": 114497,
+      "sha256": "2ae6e1182b21594c6dc7b4caf3b4de822a484dd18136db107f2b02494a376df2",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-receipt.png",
+      "bytes": 110580,
+      "sha256": "110231dc334c3928998f201a6d0c34882bd603ac10310e087436be6dced6b308",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-report.png",
+      "bytes": 113228,
+      "sha256": "bd291a7f9708a1e6eef90166cb0748fbd85a3dc2c46bf6b1e2a9b2dd2a2db23d",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-schedule.png",
+      "bytes": 100835,
+      "sha256": "0439f315565f5d0541bf3edc07e75878f83fc9d177b3d82d26edc91b82aca87f",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/icons/tappo-icon-settings.png",
+      "bytes": 203289,
+      "sha256": "32b00275641074ff90338fc359544677a7c1a73e3f32f051baf53a22f214cd6b",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/tappo-ai-assistant-hero.jpg",
+      "bytes": 98867,
+      "sha256": "f0cb45931d36eb3c2430ce720dbbdcc62ad4ba30c4b78b32290435a4da70cd46",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/tappo-ai-assistant-hero.png",
+      "bytes": 1559864,
+      "sha256": "65673fb45428e2743f9533bdff34056e21d7b4b219d919f69b8eaa0faa0c09f2",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/tappo-settings-hero.png",
+      "bytes": 1343565,
+      "sha256": "437ffcfe02c5eca28e89c1da39df77817ace634e40a25f9800f4e8454261387c",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/generated/tappo-ui-icon-sheet.png",
+      "bytes": 1351114,
+      "sha256": "d85f664106e39b8e1eb6a7f9fbe8aef1f42ca3c9630498e9b7eecdfeb3af28f6",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/source/src/assets/hero.png",
+      "bytes": 13057,
+      "sha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T01/output/ordering-flow-402.png",
+      "bytes": 87617,
+      "sha256": "2a175feb498f2e677ebc1c327a1b7ec29be99b572a44e7ee2f84003fe2178a9f",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T01/output/owner-dashboard-402.png",
+      "bytes": 247062,
+      "sha256": "cf012d7731ff5dfab3851b49c73245266645c24b54bd1368b8d246922e82cfa9",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/_archive/2026-06-09-before-review-system/d01-d04-review-board-v02.png",
+      "bytes": 537363,
+      "sha256": "b0fc2cdd1a677aaf283e485452d9a74410d3bf7ad7b39ccdf48f8522d90a5bdd",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/_archive/2026-06-09-before-review-system/d01-d04-review-board-v03.png",
+      "bytes": 545005,
+      "sha256": "dddf1cef9db2eea56b68ed11f000d718cabec9ed17ac44c091f278efafc1b2b9",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/_archive/2026-06-09-before-review-system/d01-d04-review-board-v04.png",
+      "bytes": 533192,
+      "sha256": "544ae692c43b9e438dab0b37a61fbefdacaf197be82375e70fccd0ed781179a0",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/_archive/2026-06-09-before-review-system/d01-d04-review-board-v05.png",
+      "bytes": 547389,
+      "sha256": "dfd7b4edcd9a8f0ef7ce6fb2ea4ba5eeaba6cbb9d5f35919aae18b6bbb39e0e9",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/_archive/2026-06-09-before-review-system/d01-d04-review-board-v06.png",
+      "bytes": 658358,
+      "sha256": "52f053e223b4070825679a8ceb3b4c1e23c25df14a3a19ace6cc141427eff945",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/_archive/2026-06-09-before-review-system/d01-d04-review-board.png",
+      "bytes": 450575,
+      "sha256": "559e10a72cccb0db77b9e761e8a902bc2aa3c5bca30e29311508bce127fcee2b",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/_archive/2026-06-09-before-review-system/tappo-app-first-asset-batch-review-v01.png",
+      "bytes": 845041,
+      "sha256": "face60f95bd9b61f02027f616eefdd3a32d0bcc9b00e3403e06af2fdfe4e34bf",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/_archive/2026-06-09-before-review-system/tappo-app-i-series-icon-review-v02.png",
+      "bytes": 1108772,
+      "sha256": "b560a725fbcd5b3dc3134f506dc37d6ef1cb18fe2910463d59e1a6f0aee97f7d",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/_archive/2026-06-09-i-series-v03-before-v04-grid-illustration/preview.png",
+      "bytes": 1465394,
+      "sha256": "4785510257e51f214a18465e44f2e4ae7b04cb8695183533254a12eb5981b95c",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/assets-review/current/preview.png",
+      "bytes": 1463940,
+      "sha256": "14f3f83b74809a49e3894f211ccce92679a36987b96394489b5c84dc056c89b8",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/boss-dashboard-chart-content-402-mobile.png",
+      "bytes": 459719,
+      "sha256": "51d5c58f9ba7aca1a13bf335de350dc7bc788556eebf2fd06add915979a6feeb",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/boss-dashboard-chart-content-402-viewport.png",
+      "bytes": 228253,
+      "sha256": "4701bfe7292ae0d016bf418ab4fee2623436946e62d013abfdbc0980f885664d",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/boss-dashboard-chart-content-402.png",
+      "bytes": 598837,
+      "sha256": "e5d3294284e115c84f094733077118c561837d61cd5741d04294919833beb693",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/boss-dashboard-soft-icon-chart-402-full.png",
+      "bytes": 1342736,
+      "sha256": "e66ba17fd9d01e23a42738df4206ff3f011294ccbeb5badd55d395504fa4bbc3",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/boss-dashboard-soft-icon-chart-402-mobile.png",
+      "bytes": 489956,
+      "sha256": "e0d497fea70a21120e41d752413a0c895ddfacbb0299634b33c3f77385e319ed",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/content-realigned-payment-success-402.png",
+      "bytes": 516009,
+      "sha256": "1be7b5e66eec7ac189a17c53b340e3deb349feb13e7a59082ab34f66a7968585",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/design-spec-polish-402.png",
+      "bytes": 849546,
+      "sha256": "df74227e0c86a574ddc4becf220e917e3686464a54ab2dcecf4c1690c3e84377",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/figma-app-home-390-cdp.png",
+      "bytes": 81658,
+      "sha256": "e2ec1b53fc46989861c000f1ae77853757e605ff2ec086d06d86155ef4ccc102",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/figma-app-home-390.png",
+      "bytes": 74310,
+      "sha256": "cc0b1e014ebb567a0a4197a8f95eb779c163ba472d6c4e8a627bdc51b6a7f738",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/figma-app-transactions-390-cdp.png",
+      "bytes": 64566,
+      "sha256": "e00a7a76eb86f88e979ccc5d8062ae7cb7993636f577f6640bf912af23f438a5",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/figma-app-transactions-390.png",
+      "bytes": 59344,
+      "sha256": "a8f5db81db1f5dd93cc59bef19372121fe332fa2e1259e47d45ebb02bb67a83b",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/mos-payment-logo-assets-2026-07-17/figma-main-table-centered-no-shadow-final-2026-07-17.png",
+      "bytes": 172074,
+      "sha256": "369652a47b43f3d98959f4762f117ed6b4532404facce890ac9aac461d130c50",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/mos-payment-logo-assets-2026-07-17/figma-main-table-left-align-row-center-final-2026-07-17.png",
+      "bytes": 172156,
+      "sha256": "49ba2b2a2a8b435a108ff51bf5c20be79d86e6117e72f4e251cbceaab5168c82",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/mos-payment-logo-assets-2026-07-17/figma-modal-table-centered-no-shadow-final-2026-07-17.png",
+      "bytes": 179565,
+      "sha256": "df05d8697335fa788f3da2e7ad7e6da572e786434ee9c020ed1827295847367f",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/mos-payment-logo-assets-2026-07-17/figma-modal-table-left-align-row-center-final-2026-07-17.png",
+      "bytes": 178686,
+      "sha256": "3497a907c3f8fbcc636d972e04647c19a398e64eee999e5903058610fc486f6e",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/mos-payment-logo-assets-2026-07-17/source/Octopus logo (Horizontal)/Octopus_Master Signature_horizontal_cmyk.ai",
+      "bytes": 1075772,
+      "sha256": "f32ff6e5565d50e8648e1aabb11421f539c5064cbc9b11ee07704bd01553d786",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/mos-payment-logo-assets-2026-07-17/source/Octopus logo (Horizontal)/Octopus_Master Signature_horizontal_cmyk.jpg",
+      "bytes": 1620728,
+      "sha256": "2c1a5e14316fa1cfb60c1e2aa762cde86bcae54ed8db1df4b5cc1f977696c3f6",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/mos-payment-logo-assets-2026-07-17/source/octopus-logo.zip",
+      "bytes": 1647380,
+      "sha256": "f0eec89f05493cd2549b4f6b700e69a9f3267350b7b78131cbf3c90a647d267c",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/mos-payment-logo-assets-2026-07-17/source/payme-official-header.png",
+      "bytes": 9232,
+      "sha256": "f6bd340a89aeac0bf7dc5f855ddd5c4dffb699f43afb21192d6c49406b9ace0f",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/ordering-flow-polish-402.png",
+      "bytes": 224166,
+      "sha256": "c9aacb1cfff228f6d99ec0cef60b580e1b7b5de4bb738921ecbdac80ac7884a9",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/owner-dashboard-before-tappo-design-402.png",
+      "bytes": 96537,
+      "sha256": "68ff06edc5f3571214e4995b92b4b4234542eb853637bafa04c07b48df11c160",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/owner-dashboard-polish-402.png",
+      "bytes": 623700,
+      "sha256": "f6f0e3c426cc37e55d9cf528a83062c520b6952575b9db2e968e8653ab7f067c",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/owner-dashboard-tappo-design-402-mobile.png",
+      "bytes": 129219,
+      "sha256": "468c583dd67a0619d0e20f83dcb2c2983c71ef47e26dc8d5975bfbe535940e89",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/owner-dashboard-tappo-design-402-tall.png",
+      "bytes": 263239,
+      "sha256": "b3c64f24850a684079e43467cd4d204746cec6a01e7048342b368acffa5b0ece",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/settings-figma-inspired-402-mobile.png",
+      "bytes": 159860,
+      "sha256": "cc81883a389d9f83b9efef14093bc3943f23530556f6c7bfb7b9bf7911ad0c02",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/staff-app-center-polish-402.png",
+      "bytes": 588435,
+      "sha256": "104f9ca25711db580482dd44e9faec60aa3aa0c5a7e4cf9fd0d80fa408a3ba5d",
+      "reason": "原仓库已有跟踪资产；本次不删除"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-pulse-google-feature-final-2026-07-02.png",
+      "bytes": 791660,
+      "sha256": "2471cb6d0a18a81eee298fef74c4b0c9d7df98e26388958123911ff098070df2",
+      "reason": "项目状态指定的现行应用市场资源"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-pulse-google-play-en-01-final-2026-07-02.png",
+      "bytes": 1235002,
+      "sha256": "d8542c16356d133f640cf91342b711332f13c7c017c27732bdee16fed183d744",
+      "reason": "项目状态指定的现行应用市场资源"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-pulse-google-play-en-02-final-2026-07-02.png",
+      "bytes": 1043781,
+      "sha256": "4e23efac32e54d380937f9163aed158ca33a2f5195e824f6a610ee9ebce59cb8",
+      "reason": "项目状态指定的现行应用市场资源"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-pulse-google-play-zh-01-2026-07-02.png",
+      "bytes": 1239498,
+      "sha256": "fe95ae846186397e2d25453bf293fc4261ba5eb4dd3764b9d455c392376eb8e6",
+      "reason": "项目状态指定的现行应用市场资源"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-pulse-google-play-zh-02-2026-07-02.png",
+      "bytes": 1038739,
+      "sha256": "6c88bae8f904da00f36ea27cabc065a7ad5a7edc850c0c6c9da9c473e2ccd799",
+      "reason": "项目状态指定的现行应用市场资源"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-pulse-icon-2026-07-02.png",
+      "bytes": 110875,
+      "sha256": "dfe81a2e22f24fae3afc91bac8031d307f69f09829f457a7ff21fb327057a8ad",
+      "reason": "项目状态指定的现行应用市场资源"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-pulse-ios-en-01-1242x2688-2026-07-30.png",
+      "bytes": 3117051,
+      "sha256": "f1a05990d1b436ed35cc1ab24a53ddebaaf836422eb3b84d409a97c3d61ae022",
+      "reason": "项目状态指定的现行应用市场资源"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-pulse-ios-zh-01-1242x2688-2026-07-30.png",
+      "bytes": 3098611,
+      "sha256": "954ba7ad38abf4dbeaa7a780e3d9912e845cf957fc1a69533d4f1cd0e8dac893",
+      "reason": "项目状态指定的现行应用市场资源"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-complete-icon-main-2026-07-17.png",
+      "bytes": 300899,
+      "sha256": "53f5b911da6f30effa0808163cf0631efc8733f590b0248ebabe8c05c32d92fd",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-complete-icon-main-crop-payment-list-2026-07-17.png",
+      "bytes": 71070,
+      "sha256": "9d614b805839c4ea24a96c110e026f04575719317143455183e4420fab49cb4c",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-complete-icon-prompt-2026-07-17.png",
+      "bytes": 267760,
+      "sha256": "70a3b9204e9b20389a6f01aa97a14818a7ff5434503375ddf4a3dcddbd36587c",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-final-0.5x.png",
+      "bytes": 145309,
+      "sha256": "acc9579ca254a5aeebbb4aeaf0367bca959daf79e428c741cab8c7ff06f05bba",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-final-svg-0.5x.png",
+      "bytes": 146821,
+      "sha256": "f0ea983577e87580b560702d2f5601022531706d4aa60845bdd5891694e95ac1",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-icon-only-final-main-2026-07-17.png",
+      "bytes": 299797,
+      "sha256": "71663eb14eb6626f98ed2999d4496c5a27f7d604f3987a3ec8dd4a29b1dbfcdc",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-icon-only-final-prompt-2026-07-17.png",
+      "bytes": 267401,
+      "sha256": "3a4532b024a7a3f497470243db6c9de19a545a85470ff16b74998ee59e9d319c",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-icon-only-final-v2-main-2026-07-17.png",
+      "bytes": 299559,
+      "sha256": "6cd6a10ebe18615d39c9b5940c4f4b72044f04de8f80427caf68a8c737cd5d8e",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-icon-only-final-v2-prompt-2026-07-17.png",
+      "bytes": 267142,
+      "sha256": "74119eeaff03727d1087a612ceb55017e3a41e70ff510b283c468d61b22bd793",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-icon-only-final-v3-main-2026-07-17.png",
+      "bytes": 299855,
+      "sha256": "ef977f7ac1b63861b5661ed8666b3cc7bf19b5bbfc34e3e9fafe1bbfea121484",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-icon-only-final-v3-prompt-2026-07-17.png",
+      "bytes": 267400,
+      "sha256": "fd13340fcb4a9f6b6653465921ac9ebd2fd8afb848732f1b347bb1a4685a4a66",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-icon-only-final-v4-main-2026-07-17.png",
+      "bytes": 299316,
+      "sha256": "f20cb9bebcf3163eb85df8c4dd1f54ea80f0b448b4e3bf82cf331d5123a5e2b6",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-after-icon-only-final-v4-prompt-2026-07-17.png",
+      "bytes": 266885,
+      "sha256": "056451ef77d9a72d08b344b3085be61c87310407c08db12e9a5f5c2569a71922",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-before-0.5x.png",
+      "bytes": 137268,
+      "sha256": "e23df1f53d26ae9e7854d2666770153ca344aaf3d33f291096dd92e6fa1a3a45",
+      "reason": "当前评审或原型页面实际引用的依赖资源"
+    },
+    {
+      "path": "projects/tappo-phone/tasks/T02/output/tappo-station-pos-payment-method-recall-2026-07-17/station-payment-prompt-after-final-svg-0.5x.png",
+      "bytes": 133672,
+      "sha256": "4ea66b2582a6fdfc3e0d694363438b1441a2d96e117adaaf8c81f0184302d3bb",
+      "reason": "当前MOS／Station支付资源及必要商标源文件"
+    }
+  ]
+}

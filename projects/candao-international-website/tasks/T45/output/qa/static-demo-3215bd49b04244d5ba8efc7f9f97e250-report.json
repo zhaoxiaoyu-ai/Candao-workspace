@@ -1,0 +1,43 @@
+{
+  "suite": "T45 sequential Stitch static QA",
+  "page": "demo",
+  "target": "projects/candao-international-website/tasks/T45/output/stitch-output/demo-3215bd49b04244d5ba8efc7f9f97e250.html",
+  "status": "fail",
+  "checks": [
+    {
+      "name": "header_or_page_nav_complete",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "footer_nav_present_when_footer_exists",
+      "status": "fail",
+      "detail": "首頁, 解決方案, 平台, 整合能力, 客戶案例, 資源"
+    },
+    {
+      "name": "visible_risk_terms_absent",
+      "status": "fail",
+      "detail": "Candao, arrow_forward"
+    },
+    {
+      "name": "raw_disallowed_tokens_absent",
+      "status": "fail",
+      "detail": "arrow_forward, placeholder"
+    },
+    {
+      "name": "case_sensitive_terms_preserved",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "brand_zh_visible",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "language_switch_visible",
+      "status": "pass",
+      "detail": ""
+    }
+  ]
+}

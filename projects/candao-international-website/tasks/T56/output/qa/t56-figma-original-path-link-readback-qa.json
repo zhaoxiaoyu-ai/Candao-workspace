@@ -1,0 +1,166 @@
+{
+  "task": "T56",
+  "date": "2026-09-01",
+  "figma_file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+  "page": {
+    "id": "3:5",
+    "name": "03 Desktop Pages / Bilingual Validation"
+  },
+  "result": "pass",
+  "summary": {
+    "text_nodes_checked": 12,
+    "text_original_match_count": 12,
+    "url_hyperlink_match_count": 12,
+    "screenshot_nodes_checked": 12,
+    "visible_screenshot_count": 12,
+    "t54_panel_623_2_exists": false,
+    "t54_archived_prefix_count": 0,
+    "http_200_url_count": 12
+  },
+  "checks": [
+    {
+      "id": "93:4676",
+      "expected_text": "https://ui.aceternity.com/blocks/logo-clouds/Logo Cloud Marquee",
+      "actual_text": "https://ui.aceternity.com/blocks/logo-clouds/Logo Cloud Marquee",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/logo-clouds/logo-cloud-marquee",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "93:4681",
+      "expected_text": "Blocks\n/Hero Sections\n/Hero Section With Images Grid and Navbar",
+      "actual_text": "Blocks\n/Hero Sections\n/Hero Section With Images Grid and Navbar",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/hero-sections/hero-section-with-images-grid-and-navbar",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "93:4683",
+      "expected_text": "Blocks\n/Bento Grids\n/Three Columns With Images",
+      "actual_text": "Blocks\n/Bento Grids\n/Three Columns With Images",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/bento-grids/three-column-with-images",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "94:4687",
+      "expected_text": "Blocks\n/Bento Grids\n/Symmetric Bento Grid",
+      "actual_text": "Blocks\n/Bento Grids\n/Symmetric Bento Grid",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/bento-grids/symmetric-bento-grid",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "94:4691",
+      "expected_text": "Blocks\n/CTA Sections\n/CTA With Masonry Images",
+      "actual_text": "Blocks\n/CTA Sections\n/CTA With Masonry Images",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/cta-sections/cta-with-masonry-images",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "94:4695",
+      "expected_text": "Blocks\n/Empty States\n/Empty State Vertical Grid",
+      "actual_text": "Blocks\n/Empty States\n/Empty State Vertical Grid",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/empty-states/empty-state-vertical-grid",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "95:4699",
+      "expected_text": "Blocks\n/Feature Sections\n/Features Bento Grid With Skeletons",
+      "actual_text": "Blocks\n/Feature Sections\n/Features Bento Grid With Skeletons",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/feature-sections/bento-grid",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "95:4703",
+      "expected_text": "Blocks\n/Footers\n/Simple Footer With Four Grids",
+      "actual_text": "Blocks\n/Footers\n/Simple Footer With Four Grids",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/footers/simple-footer-with-four-grids",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "95:4707",
+      "expected_text": "Blocks\n/Contact Sections\n/Contact Form Grid With Details",
+      "actual_text": "Blocks\n/Contact Sections\n/Contact Form Grid With Details",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/contact-sections/contact-form-grid-with-details",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "95:4714",
+      "expected_text": "Blocks\n/Blog Sections\n/Blog With Search",
+      "actual_text": "Blocks\n/Blog Sections\n/Blog With Search",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/blog-sections/blog-with-search",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "95:4718",
+      "expected_text": "Blocks\n/Frequently asked questions\n/FAQs With Grid",
+      "actual_text": "Blocks\n/Frequently asked questions\n/FAQs With Grid",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/faqs/faqs-with-grid",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    },
+    {
+      "id": "95:4722",
+      "expected_text": "Blocks\n/Stats Sections\n/Stats With Gradient\n",
+      "actual_text": "Blocks\n/Stats Sections\n/Stats With Gradient\n",
+      "text_matches_original": true,
+      "hyperlink": "https://ui.aceternity.com/blocks/stats-sections/stats-with-gradient",
+      "hyperlink_type": "URL",
+      "hyperlink_matches": true,
+      "http_status": 200
+    }
+  ],
+  "visible_screenshot_nodes": [
+    "93:4674",
+    "93:4679",
+    "93:4685",
+    "94:4689",
+    "94:4693",
+    "95:4697",
+    "95:4701",
+    "95:4705",
+    "95:4709",
+    "95:4712",
+    "95:4716",
+    "95:4720"
+  ],
+  "screenshot_artifact": {
+    "path": "tasks/T56/output/screenshots/t56-figma-original-path-links-restored.png",
+    "pixel_width": 4096,
+    "pixel_height": 1969
+  },
+  "notes": [
+    "T56 corrects T55: visible text is restored to the original Aceternity component source labels, not sitemap labels.",
+    "T54's replacement panel remains absent; original top screenshots remain visible.",
+    "The English component source labels are retained because they are reference/source annotations, not production website copy."
+  ]
+}

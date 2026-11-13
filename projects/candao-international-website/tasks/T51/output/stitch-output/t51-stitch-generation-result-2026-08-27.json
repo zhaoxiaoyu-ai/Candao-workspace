@@ -1,0 +1,36 @@
+{
+  "task": "T51",
+  "date": "2026-08-27",
+  "action": "stitch_generate_screen_from_text",
+  "project_id": "10888304674441209287",
+  "project_title": "Candao International Website T11.5-C",
+  "design_system": "assets/a99f770bf474445d98b287cf983bc147",
+  "device": "DESKTOP",
+  "model": "GEMINI_3_PRO",
+  "session_id": "2660745771933635315",
+  "screen": {
+    "id": "5a392fddd4c04634bc21c9e1926fffe8",
+    "name": "projects/10888304674441209287/screens/5a392fddd4c04634bc21c9e1926fffe8",
+    "title": "接入評估中心 - 餐道 / Desktop TC",
+    "width": 2560,
+    "height": 4262,
+    "html_download_url": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2VlOTAzOTFlMTRiZDRhMDZhMjNhZTkxMGJjNjQzNDQwEgsSBxD0lM_B9g8YAZIBJAoKcHJvamVjdF9pZBIWQhQxMDg4ODMwNDY3NDQ0MTIwOTI4Nw&filename=&opi=96797242",
+    "screenshot_download_url": "https://lh3.googleusercontent.com/aida/AEtjO1Vy7DjDKaN5AbsoDW-loB6rz7MJt2V22hKrXZ_s4XEGest2yMbm4YT6UyXInq34nnkj-wjPZ_PF84eal6qZ7pCZ7tJYDjhzBxtd3gQMtjPI8q7clnMQnhFxeIUCbwq8SM58gmwPo85wivLZabN5wwaEnb7yc_9JQPcm5cLg5ISY9inzhQkMLu6hiijY97EsbHLosNmUb2_NaAeiAejH-F_6tt8-UyBV-CkhJWv6T7k2TC0cRjQlhoNxo_ma"
+  },
+  "local_files": {
+    "html": "tasks/T51/output/stitch-output/t51-stitch-screen-5a392fddd4c04634bc21c9e1926fffe8.html",
+    "preview_png": "tasks/T51/output/screenshots/t51-stitch-screen-5a392fddd4c04634bc21c9e1926fffe8-preview.png",
+    "prompt": "tasks/T51/output/stitch-input/t51-enhanced-prompt-2026-08-27.md"
+  },
+  "stitch_output_summary": [
+    "Successfully created desktop design for the '接入評估中心' page.",
+    "The generated page includes hero, evaluation workspace, cases/resources/support/demo router, scale band, demo CTA and footer.",
+    "The generated screen requires local QA before it can be accepted as a formal high-fidelity candidate."
+  ],
+  "stitch_suggestions": [
+    "可擴展「對賬差異」的資料表欄位。",
+    "可增加行動版適配。",
+    "可增加成功案例詳情頁入口。"
+  ],
+  "acceptance_status": "pending_qa"
+}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tappo Station 支付方式回显评审</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #171923;
+      --muted: #667085;
+      --border: #e4e7ec;
+      --brand: #ff8a3d;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans SC", "Noto Sans HK", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 18px;
+    }
+    p {
+      margin: 0 0 12px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    a {
+      color: var(--brand);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .warning {
+      margin: 16px 0 20px;
+      padding: 14px 16px;
+      border: 1px solid #f3b27e;
+      border-radius: 8px;
+      background: #fff4ec;
+      color: #8a3a0f;
+      font-weight: 700;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    figure {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    figcaption {
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    code {
+      background: #fff4ed;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #b54708;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tappo Station 支付方式回显评审</h1>
+    <div class="warning">此评审已撤回：该内容误放到旧文件。正确评审请查看 ../tappo-station-pos-payment-method-recall-2026-07-17/review.html。</div>
+    <p>本轮已在 Figma 的 <code>確認訂單頁_支付方式</code> 节点上补充其他支付方式分组，并保留原有支付方式内容。</p>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Figma 评审入口</h2>
+        <p><a href="https://www.figma.com/design/nHamLH3qlZYFXVC0OVxNqc?node-id=522-2427" target="_blank" rel="noreferrer">打开目标节点 522:2427</a></p>
+        <p>文件：<code>Tappo Station / nHamLH3qlZYFXVC0OVxNqc / 产品界面</code></p>
+      </div>
+      <div class="card">
+        <h2>变更范围</h2>
+        <ul>
+          <li>新增 <code>其他支付方式</code> 分组与说明文案。</li>
+          <li>新增微信支付、支付寶、八達通、PayMe 回显行。</li>
+          <li>新增与原有支付方式之间的灰色间隔。</li>
+          <li>保留原有 KPay 与现金支付内容。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>通过标准</h2>
+        <ul>
+          <li>新增方式清晰可见，未遮挡确认按钮。</li>
+          <li>新增节点使用本地 POS Design Tokens。</li>
+          <li>品牌 logo 复用既有节点，不重新手绘。</li>
+          <li>字体限制已记录，新增文字保持可编辑。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <figure>
+        <img src="prototype-pad-before-pay-2026-07-17.png" alt="Tappo Station Pad 订单原型">
+        <figcaption>原型订单页截图</figcaption>
+      </figure>
+      <figure>
+        <img src="prototype-pad-payment-modal-2026-07-17.png" alt="Tappo Station Pad 支付弹窗原型">
+        <figcaption>原型支付弹窗截图</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>

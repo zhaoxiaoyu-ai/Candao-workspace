@@ -1,0 +1,45 @@
+{
+  "task": "T57",
+  "status": "pass",
+  "file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+  "source": {
+    "id": "336:7645",
+    "name": "首頁",
+    "x": 2525,
+    "y": 7521,
+    "width": 1440,
+    "height": 5731,
+    "source_sample": [
+      "讓餐飲營運，從多平台混亂",
+      "走向一個清晰系統",
+      "餐道連接訂單、菜單、門店、配送與數據，協助餐飲品牌在多市場、\n多門店中穩定營運與持續成長。",
+      "預約產品演示",
+      "探索平台能力"
+    ]
+  },
+  "clone": {
+    "id": "656:2",
+    "name": "Home / Desktop 1440 / EN",
+    "x": 14685,
+    "y": 7521,
+    "width": 1440,
+    "height": 5731
+  },
+  "checks": {
+    "editable_text_nodes": 190,
+    "cjk_residual_excluding_language_switcher": 0,
+    "forbidden_finance_terms": 0,
+    "bad_case_sensitive_terms": 0,
+    "forbidden_impact_metrics": 0,
+    "helvetica_residual": 0,
+    "missing_required_texts": []
+  },
+  "residual_samples": {
+    "cjk": [],
+    "forbidden_finance": [],
+    "bad_case_sensitive_terms": [],
+    "forbidden_impact_metrics": [],
+    "helvetica": []
+  },
+  "note": "本 QA 覆盖可编辑 Figma 文本节点。源 Figma 中作为图片、矢量或品牌 Logo 的内嵌文字未在本轮重绘。"
+}

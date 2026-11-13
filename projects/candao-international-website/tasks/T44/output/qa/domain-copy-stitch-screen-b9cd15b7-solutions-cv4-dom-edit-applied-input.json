@@ -1,0 +1,22 @@
+{
+  "suite": "T44 Solutions home-style 100 coverage visible copy QA",
+  "items": [
+    {
+      "id": "t44-solutions-home-style-100",
+      "locale": "zh-Hant",
+      "role": "总部运营",
+      "page_task": "按业务问题确认解決方案场景并导向平台能力、客户案例或演示",
+      "component_type": "high_fidelity_candidate_visible_copy",
+      "text": "餐道 | 解決方案\n餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中\n/\nEN\n預約演示\n營運場景\n按餐飲 O2O 營運問題，找到可落地的解決方案\n當外賣平台、自有點餐、門店接單、配送和對賬分散在多個後台，品牌需要先判斷哪一段流程造成漏單、重複維護或異常追蹤壓力。餐道按常見營運場景整理方案，協助你對照現有問題與下一步演示重點。\n預約相似場景演示\n查看平台能力\n場景鏈路\n從問題到承接能力\n01\n多入口產生訂單\n外賣平台、自有小程序與門店渠道同時進入營運流程。\n外賣平台\n門店接單\n02\nOMS 統一處理\n把接單、門店狀態、缺貨、取消與退款放在同一工作台。\n餐道 OMS\n03\n履約與對賬回流\nDMS / iDMS、Finance Center 與 CDBI 將履約和數據回到總部判斷。\n配送履約\n對賬分析\n常見營運問題\n每一類問題都對應一條可追蹤的營運鏈路\n先讓總部營運、門店、配送和財務團隊對齊問題位置，再進入對應能力或演示場景。\n多平台訂單履約\nsync\n集中處理外賣平台與自有入口訂單，讓門店接單、打印、退款、取消和異常提醒回到 OMS 流程。\n外賣平台\n自有入口\nOMS\n門店與餐單營運\nstorefront\n總部可維護門店資料、營業時間、餐單、售罄和區域菜單，減少多平台重複更新。\n門店資料\n餐單版本\n售罄狀態\n配送營運與對賬\nlocal_shipping\nDMS / iDMS 承接自有騎手、第三方配送、派單、超時和狀態回傳，Finance Center 追蹤對賬差異。\nDMS / iDMS\n配送異常\nFinance Center\n場景導覽\n選擇最接近你現況的營運場景\n從高峰訂單、門店接單、配送履約到財務對賬，先確認最接近的營運壓力，再把演示重點帶到對應能力。\n多平台外賣訂單\n堂食掃碼與自有點餐\n配送營運與履約\n財務對賬與報表\n會員與營運數據\n門店與餐單管理\n讓多平台外賣訂單回到同一條處理鏈路\n集中查看外賣平台訂單，讓門店接單、打印、退款、取消、配送狀態和財務對賬進入統一流程。\n訂單高峰\n門店接單\n配送狀態\n對賬差異\n高峰訂單處理鏈路\n| 場景拆解 | 展示從第三方平台、自有入口到門店接單、製作、配送和客服補救的鏈路。\n問題\n漏單與重複維護\n能力\nOMS / DMS 承接\n結果\n總部追蹤狀態\n訂單高峰\n→\nOMS + DMS\n→\n數據回流\n承接能力：\nOMS、Menu Center、DMS / iDMS、Finance Center。\n下一步：\n查看平台能力或預約相似場景演示。\n預約相似場景演示\n查看客戶案例\n下一步\n把相似營運問題帶到演示流程中確認\n若你已確認問題位置，可以進一步查看平台能力，或預約相似場景演示讓團隊按現況拆解。\n預約相似場景演示\n查看平台能力\napps\n外賣平台\n多入口訂單進入\n待接單\nstorefront\n門店接單\n接單、打印、退款、取消\n製作中\ndns\n餐道 OMS\n統一處理訂單狀態和異常\n處理中\nlocal_shipping\n配送履約\nDMS / iDMS 回傳履約狀態\n配送中\naccount_balance_wallet\n對賬分析\nFinance Center 追蹤對賬差異\n回流\n餐道\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n預約演示\n© 2024 餐道. 版權所有.\n",
+      "must_include": [
+        "餐道",
+        "OMS",
+        "Menu Center",
+        "DMS / iDMS",
+        "Finance Center",
+        "SaaS",
+        "AMS / Connector"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1395 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>餐道國際官網低保真原型</title>
+  <style>
+    :root {
+      --ink: #1f2937;
+      --muted: #64748b;
+      --line: #cbd5e1;
+      --soft: #f8fafc;
+      --panel: #ffffff;
+      --blue: #528dff;
+      --blue-soft: #eaf2ff;
+      --warn: #fff7ed;
+      --warn-line: #fed7aa;
+      --shadow: 0 1px 0 rgba(15, 23, 42, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #eef2f7;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    .prototype-shell {
+      max-width: 1440px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: var(--soft);
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 180px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      height: 72px;
+      padding: 0 32px;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--blue);
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .nav button {
+      appearance: none;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      padding: 8px 12px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .nav button[aria-pressed="true"] {
+      color: #0f172a;
+      border-color: var(--line);
+      background: var(--blue-soft);
+    }
+
+    .locale {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .page {
+      display: none;
+      padding: 28px 32px 64px;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .wireframe-note {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      border: 1px dashed #94a3b8;
+      background: #ffffff;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(440px, 1.08fr);
+      gap: 20px;
+      align-items: stretch;
+      margin-bottom: 20px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .section-grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .wire-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      min-height: 180px;
+    }
+
+    .wire-block.tall {
+      min-height: 380px;
+    }
+
+    .wire-block.compact {
+      min-height: 136px;
+    }
+
+    .block-kicker {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: none;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: 42px;
+      line-height: 1.15;
+      font-weight: 750;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .lead {
+      margin-top: 16px;
+      max-width: 720px;
+      font-size: 16px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .cta {
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #0f172a;
+    }
+
+    .cta.primary {
+      border-color: var(--blue);
+      background: var(--blue-soft);
+      color: #174ea6;
+    }
+
+    .proof-strip {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 14px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+
+    .logo-proof {
+      width: 100%;
+      max-width: 152px;
+      align-self: center;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metric-card {
+      border: 1px solid #dbe3ef;
+      background: #f8fafc;
+      padding: 10px;
+      min-height: 74px;
+    }
+
+    .metric-card strong {
+      display: block;
+      color: #0f172a;
+      font-size: 20px;
+      line-height: 1.15;
+    }
+
+    .metric-card span {
+      display: block;
+      margin-top: 4px;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .source-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      padding: 2px 7px;
+      color: #475569;
+      font-size: 11px;
+    }
+
+    .warning {
+      margin-top: 14px;
+      border: 1px solid var(--warn-line);
+      background: var(--warn);
+      padding: 10px 12px;
+      color: #9a3412;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .diagram {
+      display: grid;
+      gap: 12px;
+      height: 100%;
+    }
+
+    .node-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .node {
+      min-height: 62px;
+      border: 1px solid #94a3b8;
+      background: #f8fafc;
+      padding: 10px;
+      display: grid;
+      align-content: center;
+      color: #334155;
+      font-size: 13px;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+      margin-top: 14px;
+    }
+
+    .flow-step {
+      position: relative;
+      min-height: 86px;
+      border: 1px dashed #94a3b8;
+      background: #f8fafc;
+      padding: 10px;
+      font-size: 13px;
+      line-height: 1.35;
+      color: #334155;
+    }
+
+    .flow-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -9px;
+      top: 50%;
+      width: 8px;
+      height: 1px;
+      background: #94a3b8;
+    }
+
+    .card-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .list-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      padding: 10px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .list-row strong {
+      color: #0f172a;
+    }
+
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .scenario {
+      border: 1px solid #dbe3ef;
+      background: #f8fafc;
+      padding: 14px;
+      min-height: 132px;
+    }
+
+    .scenario small {
+      display: block;
+      margin-top: 8px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    .capability-map {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .side-rail {
+      display: grid;
+      gap: 8px;
+    }
+
+    .rail-item {
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      padding: 11px 12px;
+      color: #334155;
+      font-size: 13px;
+      font-family: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .rail-item[aria-pressed="true"] {
+      border-color: var(--blue);
+      background: var(--blue-soft);
+      color: #174ea6;
+      font-weight: 650;
+    }
+
+    .ui-slab {
+      border: 1px solid #94a3b8;
+      background: #f8fafc;
+      min-height: 300px;
+      padding: 14px;
+    }
+
+    .capability-detail {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .ui-toolbar,
+    .ui-row,
+    .ui-footer {
+      border: 1px solid #dbe3ef;
+      background: #ffffff;
+      min-height: 38px;
+      margin-bottom: 10px;
+      padding: 9px 10px;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    .ui-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 10px;
+    }
+
+    .ui-cell {
+      min-height: 148px;
+      border: 1px dashed #94a3b8;
+      background: #fff;
+      padding: 10px;
+      font-size: 12px;
+      color: #475569;
+      line-height: 1.45;
+    }
+
+    .integration-table {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .integration {
+      min-height: 108px;
+      border: 1px solid #dbe3ef;
+      background: #f8fafc;
+      padding: 12px;
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    .page-map {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .map-item {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 12px;
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 960px) {
+      .topbar {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 18px;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .page {
+        padding: 20px 18px 48px;
+      }
+
+      .hero-grid,
+      .section-grid,
+      .section-grid.two,
+      .capability-map,
+      .proof-strip,
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .node-row,
+      .flow,
+      .scenario-grid,
+      .integration-table,
+      .page-map {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .list-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="prototype-shell">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">餐道</div><span>國際官網低保真</span></div>
+      <nav class="nav" aria-label="低保真頁面切換">
+        <button type="button" data-page="home" aria-pressed="true">首頁</button>
+        <button type="button" data-page="solutions" aria-pressed="false">解決方案</button>
+        <button type="button" data-page="platform" aria-pressed="false">平台</button>
+        <button type="button" data-page="integrations" aria-pressed="false">整合能力</button>
+        <button type="button" data-page="customers" aria-pressed="false">客戶案例</button>
+        <button type="button" data-page="resources" aria-pressed="false">資源</button>
+        <button type="button" data-page="about" aria-pressed="false">關於餐道</button>
+        <button type="button" data-page="demo" aria-pressed="false">預約產品演示</button>
+      </nav>
+      <div class="locale">繁中 / EN</div>
+    </header>
+
+    <section id="home" class="page active" data-title="首頁">
+      <div class="wireframe-note">
+        <span>頁面角色：建立餐道作為餐飲與零售 O2O Connector 的第一認知。</span>
+        <span>低保真，只檢查結構與內容路徑。</span>
+      </div>
+
+      <div class="page-map">
+        <div class="map-item">Home：建立認知</div>
+        <div class="map-item">Solutions：確認場景</div>
+        <div class="map-item">Platform：看實現方式</div>
+        <div class="map-item">Integrations：驗證接入</div>
+        <div class="map-item">Customers：證明落地</div>
+        <div class="map-item">Resources：降低疑問</div>
+        <div class="map-item">About：建立可信</div>
+        <div class="map-item">Demo：完成分流</div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Hero</span><span>OLD-SOLUTION-292 / PPT-OPMODEL / PPT-SaaS</span></div>
+          <h1>餐道把餐飲與零售 O2O 的渠道、門店、配送與數據接成營運中樞</h1>
+          <p class="lead">面向品牌總部和多門店營運，餐道連接外賣平台、自有點餐入口、POS / KDS、CRM / 會員、配送資源、支付、ERP 和財務數據，讓訂單、餐單、履約、對賬與分析回到同一條可追溯鏈路。</p>
+          <div class="cta-row">
+            <div class="cta primary">查看全鏈路能力</div>
+            <div class="cta">預約產品演示</div>
+            <div class="cta">查看產品視頻</div>
+          </div>
+          <div class="proof-strip" aria-label="首頁可信證明帶">
+            <img class="logo-proof" src="../../../../assets/logo/candao-blue-logo.svg" alt="餐道 Logo">
+            <div class="metric-grid">
+              <div class="metric-card"><strong>5000+</strong><span>品牌數量<br>PPT Slide 11</span></div>
+              <div class="metric-card"><strong>200K+</strong><span>門店數量<br>PPT Slide 11</span></div>
+              <div class="metric-card"><strong>400+</strong><span>覆蓋城市<br>PPT Slide 11</span></div>
+              <div class="metric-card"><strong>4.5B+</strong><span>每月配送訂單 GMV<br>PPT Slide 11</span></div>
+            </div>
+          </div>
+          <div class="warning">首頁只使用 PPT Slide 11 同一組口徑；若最終希望規模數據集中在 Customers，本區可改為 Logo + 案例入口。</div>
+        </div>
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Complexity Map</span><span>PPT-OPMODEL / PPT-OMS-PAIN</span></div>
+          <div class="diagram" aria-label="餐飲營運複雜系統節點圖">
+            <div class="node-row">
+              <div class="node">訂單渠道<br>外賣平台 / H5 / Web / APP / QR</div>
+              <div class="node">門店執行系統<br>POS / KDS / 打印 / 後廚</div>
+              <div class="node">顧客與會員<br>CRM / 會員 / 優惠券 / 營銷</div>
+              <div class="node">支付與企業系統<br>支付 / ERP / 財務</div>
+            </div>
+            <div class="node-row">
+              <div class="node">配送資源<br>平台配送 / 第三方物流 / 自有騎手</div>
+              <div class="node">營運對象<br>餐單 / 庫存 / 門店 / 區域</div>
+              <div class="node">異常狀態<br>漏單 / 超時 / 退款 / 對賬差異</div>
+              <div class="node">餐道 Connector<br>把生態節點接回營運中樞</div>
+            </div>
+            <div class="warning">本圖只展示餐飲 O2O 生態複雜度：外部系統、業務對象和異常狀態；完整產品模組放在 Platform。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wire-block">
+        <div class="block-kicker"><span>Authority Snapshot</span><span>PPT-SLIDE-11 / PPT-COMPANY</span></div>
+        <h2>先讓品牌決策者看到規模、落地和長期服務能力</h2>
+        <div class="integration-table">
+          <div class="integration"><strong>20 年經驗</strong><br>餐飲系統研發與餐飲外送業務實戰經驗。</div>
+          <div class="integration"><strong>5000+ 品牌</strong><br>採用 PPT Slide 11 授權口徑，不混用其他頁數據。</div>
+          <div class="integration"><strong>200K+ 門店</strong><br>用於首頁建立可信，完整案例詳情導向 Customers。</div>
+          <div class="integration"><strong>30% up</strong><br>客戶效率提升，後續在 Customers 展開對應案例。</div>
+        </div>
+      </div>
+
+      <div class="wire-block">
+        <div class="block-kicker"><span>Operating Loop</span><span>OLD-USERPAIN-290 / OLD-PAIN-284 / PPT-DATA</span></div>
+        <h2>從訂單進入，到餐單、配送、對賬和異常處理</h2>
+        <div class="flow">
+          <div class="flow-step">訂單進入</div>
+          <div class="flow-step">菜單與庫存同步</div>
+          <div class="flow-step">門店接單與異常提醒</div>
+          <div class="flow-step">配送履約與狀態追蹤</div>
+          <div class="flow-step">報表分析與財務對賬</div>
+          <div class="flow-step">售罄、轉派、退款或對賬跟進</div>
+        </div>
+      </div>
+
+      <div class="wire-block">
+        <div class="block-kicker"><span>Capability Overview</span><span>OLD-PRODUCT-285 / PPT-COMPANY / PPT-OMS-CORE</span></div>
+        <h2>首頁保留能力總覽，完整產品體系放入 Platform</h2>
+        <div class="card-list">
+          <div class="list-row"><strong>渠道聚合</strong><span>外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入餐道 OMS。</span></div>
+          <div class="list-row"><strong>營運承接</strong><span>門店接單、打印、餐單、庫存、售罄、門店狀態和異常提醒在同一流程處理。</span></div>
+          <div class="list-row"><strong>配送履約</strong><span>iDMS 承接聚合配送，DMS 承接自有騎手、派單、第三方溢出和狀態追蹤。</span></div>
+          <div class="list-row"><strong>數據對賬</strong><span>CDBI / 財務對賬支援報表、看板、平台訂單與 OMS 訂單對賬差異。</span></div>
+          <div class="list-row"><strong>生態接入</strong><span>AMS / Connector 按系統類型、API、字段、權限和異常條件評估接入。</span></div>
+        </div>
+        <div class="cta-row">
+          <div class="cta primary">進入 Platform 查看產品體系</div>
+          <div class="cta">看相似客戶案例</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="page" data-title="解決方案">
+      <div class="wireframe-note">
+        <span>頁面角色：從業務場景與角色壓力進入，不做產品功能手冊。</span>
+        <span>導向 Platform 能力。</span>
+      </div>
+
+      <div class="wire-block compact">
+        <div class="block-kicker"><span>Solutions Overview</span><span>OLD-USERPAIN-290</span></div>
+        <h1>從多平台訂單、門店、配送到對賬，梳理餐飲 O2O 營運場景</h1>
+        <div class="section-grid">
+          <div class="scenario"><h3>訂單與履約鏈路</h3><small>訂單、門店、菜單、配送和會員不能停留在不同後台。導向 OMS / AMS / DMS。</small></div>
+          <div class="scenario"><h3>對賬與營運分析</h3><small>多渠道資料需要整理成可分析、可對賬、可追蹤的營運資產。導向 CDBI / 財務對賬。</small></div>
+          <div class="scenario"><h3>自有點餐與會員營運</h3><small>自有點餐、會員、營銷和配送能力需要回到品牌自己的營運節奏。導向 Mobile Ordering / iDMS。</small></div>
+        </div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block">
+          <div class="block-kicker"><span>多渠道外賣營運</span><span>OLD-TAKEOUT-379 / PPT-OMS-PAIN</span></div>
+          <h2>讓多平台外賣訂單回到同一條處理鏈路</h2>
+          <p>集中查看外賣平台訂單，讓門店接單、打印、異常提醒、菜單庫存和財務對賬進入統一流程。</p>
+          <div class="source-tags"><span class="tag">OMS</span><span class="tag">COMS</span><span class="tag">SOMS</span><span class="tag">Menu Center</span></div>
+          <div class="warning">平台名稱暫作內部參考，公開展示需確認。</div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>多門店營運</span><span>PPT-OMS-MODULES / PPT-MOBILE</span></div>
+          <h2>讓總部設定、區域管理與門店執行保持同步</h2>
+          <p>總部統一維護門店資料，不同門店和區域可使用不同菜單與營業設定，門店異常與訂單超時可被監控。</p>
+          <div class="source-tags"><span class="tag">Operation Management</span><span class="tag">Store Abnormity</span><span class="tag">Reporting</span></div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>數字點餐與自助服務</span><span>OLD-ONLINE-394 / PPT-MOBILE</span></div>
+          <h2>把顧客點餐入口，接回品牌自己的營運系統</h2>
+          <p>支援外賣訂餐、堂食掃碼、預約下單和移動支付，顧客下單後回到門店接單與後台管理。</p>
+          <div class="source-tags"><span class="tag">Mobile Ordering</span><span class="tag">Membership</span><span class="tag">Marketing</span></div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>配送營運與履約</span><span>OLD-DELIVERY-388 / PPT-iDMS / PPT-DMS</span></div>
+          <h2>把配送資源、騎手狀態與履約異常放回可控範圍</h2>
+          <p>聚合配送支援呼叫與追蹤；DMS 支援自有騎手、智能派單、人工派單和第三方溢出。</p>
+          <div class="source-tags"><span class="tag">iDMS</span><span class="tag">DMS</span><span class="tag">Dispatch</span><span class="tag">Rider App</span></div>
+          <div class="warning">不公開物流合作方名稱、價格表、服務承諾和性能數字。</div>
+        </div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block">
+          <div class="block-kicker"><span>數據化營運與財務對賬</span><span>OLD-PAIN-284 / PPT-DATA</span></div>
+          <h2>讓營運數據不只被看見，也能被對賬和追蹤</h2>
+          <p>支援多維報表與實時看板，並可比對平台訂單與 OMS 訂單，找出金額、狀態、漏單等異常。</p>
+          <div class="source-tags"><span class="tag">CDBI</span><span class="tag">Reporting</span><span class="tag">財務對賬</span></div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>系統託管與多渠道代營運</span><span>OLD-PAIN-284</span></div>
+          <h2>系統託管要落到餐單、訂單和營運監督</h2>
+          <p>支援多平台餐單與門店資訊更新、訂單處理和營運監督，並基於 CDBI / 財務對賬分析安排會員營銷與自有點餐營運。</p>
+          <div class="warning">服務範圍、時段、交付方式和收費必須後續確認。</div>
+        </div>
+      </div>
+
+      <div class="wire-block compact">
+        <div class="block-kicker"><span>Solutions CTA</span><span>H2-03 / T15-SOLUTIONS</span></div>
+        <h2>從場景進入，再查看對應平台能力或案例</h2>
+        <div class="cta-row">
+          <div class="cta primary">查看 Platform 如何承接這些場景</div>
+          <div class="cta">預約相似場景演示</div>
+          <div class="cta">查看客戶案例</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform" class="page" data-title="平台">
+      <div class="wireframe-note">
+        <span>頁面角色：展示產品如何工作，重點是能力、工作流、UI 狀態和數據流。</span>
+        <span>不重複 Solutions 的業務痛點。</span>
+      </div>
+
+      <div class="wire-block">
+        <div class="block-kicker"><span>平台能力地圖</span><span>OLD-PRODUCT-285 / PPT-OMS-CORE</span></div>
+        <h1>按營運鏈路查看餐道產品如何承接狀態、資料與操作</h1>
+        <p class="lead">Platform 不重複業務痛點，而是把每一類場景拆成業務對象、狀態流、對應產品、證據來源和下一步演示。</p>
+        <div class="capability-map">
+          <div class="side-rail">
+            <button class="rail-item" type="button" data-capability="orders" aria-pressed="true">多渠道訂單</button>
+            <button class="rail-item" type="button" data-capability="menu" aria-pressed="false">餐單與門店</button>
+            <button class="rail-item" type="button" data-capability="member" aria-pressed="false">會員與自有點餐</button>
+            <button class="rail-item" type="button" data-capability="delivery" aria-pressed="false">配送履約</button>
+            <button class="rail-item" type="button" data-capability="finance" aria-pressed="false">數據與對賬</button>
+            <button class="rail-item" type="button" data-capability="connector" aria-pressed="false">AMS / Connector</button>
+          </div>
+          <div class="ui-slab" aria-live="polite">
+            <div class="ui-toolbar">Wireframe UI：Capability Map / Workflow / State Change</div>
+            <h3 id="capability-title">多渠道訂單進入 OMS 後台</h3>
+            <p id="capability-body">外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店按渠道、訂單狀態、配送狀態和異常類型處理。</p>
+            <div class="capability-detail">
+              <div class="ui-row" id="capability-object">業務對象：訂單、渠道、門店、訂單狀態、配送狀態、異常類型。</div>
+              <div class="ui-row" id="capability-state">狀態 / 操作：待接單、製作中、配送中、取消、退款、超時提醒。</div>
+              <div class="ui-row" id="capability-product">對應產品：OMS、COMS、SOMS、Order Processing Center、Store Abnormity Management。</div>
+              <div class="ui-row" id="capability-source">來源：PPT-OMS-CORE、PPT-OMS-MODULES、OLD-TAKEOUT-379。</div>
+              <div class="ui-footer" id="capability-next">下一步：查看訂單隊列、通知門店、進入配送或對賬流程。</div>
+            </div>
+          </div>
+        </div>
+        <div class="warning">左側每一項在高保真和前端中都應可切換；右側固定承載場景、對象、狀態、產品、來源和 CTA，不做單純產品卡片。</div>
+      </div>
+
+      <div class="wire-block compact">
+        <div class="block-kicker"><span>Product Video Entry</span><span>USER-2026-08-16 / NEEDS-ASSET-CONFIRMATION</span></div>
+        <h2>保留產品視頻入口，但按能力場景分發</h2>
+        <div class="integration-table">
+          <div class="integration"><strong>OMS 演示視頻</strong><br>多渠道訂單、門店接單、異常提醒和打印流程。</div>
+          <div class="integration"><strong>Menu / Store 演示視頻</strong><br>餐單、庫存、售罄、區域菜單與門店狀態同步。</div>
+          <div class="integration"><strong>DMS / iDMS 演示視頻</strong><br>配送呼叫、派單、騎手 App、第三方溢出和狀態追蹤。</div>
+          <div class="integration"><strong>CDBI / 財務對賬演示視頻</strong><br>報表、看板、平台訂單與 OMS 訂單對賬差異。</div>
+        </div>
+        <div class="warning">舊官網存在產品視頻交互線索；正式放入前仍需確認視頻素材、語言版本、封面和公開範圍。</div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block">
+          <div class="block-kicker"><span>OMS</span><span>PPT-OMS-CORE / OLD-PRODUCT-285</span></div>
+          <h2>OMS 讓多渠道訂單進入同一個營運後台</h2>
+          <div class="flow">
+            <div class="flow-step">Order Channel</div>
+            <div class="flow-step">OMS</div>
+            <div class="flow-step">Store / POS</div>
+            <div class="flow-step">Data Asset</div>
+            <div class="flow-step">Reporting</div>
+            <div class="flow-step">Action</div>
+          </div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Order Processing Center</span><span>PPT-OMS-MODULES / OLD-TAKEOUT-379</span></div>
+          <h2>一個後台查看多渠道訂單狀態</h2>
+          <div class="ui-slab">
+            <div class="ui-toolbar">渠道篩選 / 訂單狀態 / 異常提示</div>
+            <div class="ui-row">訂單列表：待接單 / 製作中 / 配送中 / 異常</div>
+            <div class="ui-row">訊息與提醒：催單 / 取消 / 退款 / 超時</div>
+            <div class="ui-footer">不公開平台名稱和訂單量數字</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="wire-block">
+          <div class="block-kicker"><span>Menu Center</span><span>OLD-TAKEOUT-379 / PPT-MOBILE</span></div>
+          <h2>菜單、庫存與售罄狀態跨渠道同步</h2>
+          <p>支援餐品新增、批量維護、差異化菜單、業態模板、庫存與售罄同步。</p>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>CDBI / 財務對賬</span><span>OLD-PRODUCT-285 / PPT-DATA</span></div>
+          <h2>CDBI 與財務對賬能力呈現報表、看板與對賬差異</h2>
+          <p>支援訂單分析、報表看板、平台訂單與 OMS 訂單對賬，標記金額差異、狀態差異和漏單。</p>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Store Abnormity</span><span>PPT-OMS-MODULES / OLD-DELIVERY-388</span></div>
+          <h2>門店與訂單異常，不再靠人工追問</h2>
+          <p>監控門店開關、接單狀態、訂單超時、配送異常與門店端提醒。</p>
+        </div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block">
+          <div class="block-kicker"><span>iDMS / 聚合配送</span><span>OLD-DELIVERY-388 / PPT-iDMS</span></div>
+          <h2>把第三方配送資源變成可呼叫、可追蹤、可對賬的履約能力</h2>
+          <div class="ui-slab">
+            <div class="ui-toolbar">配送呼叫 / 狀態追蹤 / 交易明細</div>
+            <div class="ui-grid">
+              <div class="ui-cell">APP 或客服方式呼叫配送</div>
+              <div class="ui-cell">取餐 / 配送中 / 完成 / 退款</div>
+            </div>
+          </div>
+          <div class="warning">物流合作方名稱、價格表和服務區域需確認。</div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>DMS / Dispatch / Rider App</span><span>OLD-PRODUCT-285 / PPT-DMS-DISPATCH</span></div>
+          <h2>DMS 調度要落到區域、路線和第三方溢出規則</h2>
+          <div class="flow">
+            <div class="flow-step">區域派單</div>
+            <div class="flow-step">路線派單</div>
+            <div class="flow-step">角度派單</div>
+            <div class="flow-step">同向派單</div>
+            <div class="flow-step">人工派單</div>
+            <div class="flow-step">第三方溢出</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wire-block compact">
+        <div class="block-kicker"><span>Platform CTA</span><span>H2-03 / T15-PLATFORM</span></div>
+        <h2>看完平台能力後，導向接入評估或產品演示</h2>
+        <div class="cta-row">
+          <div class="cta primary">預約產品演示</div>
+          <div class="cta">查看整合能力</div>
+          <div class="cta">查看客戶案例</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="integrations" class="page" data-title="整合能力">
+      <div class="wireframe-note">
+        <span>頁面角色：驗證接入能力。展示系統類型和數據流，不做 Logo 牆。</span>
+        <span>品牌名稱和合作方需確認後再公開。</span>
+      </div>
+
+      <div class="wire-block">
+        <div class="block-kicker"><span>整合類型總覽</span><span>OLD-BIZ-289 / PPT-SaaS</span></div>
+        <h1>連接餐飲 O2O 營運中的關鍵系統類型</h1>
+        <div class="integration-table">
+          <div class="integration"><strong>外賣平台</strong><br>接收外部訂單並回到 OMS</div>
+          <div class="integration"><strong>自建系統</strong><br>H5、Web、小程序等自有點餐入口</div>
+          <div class="integration"><strong>POS / KDS / 後廚</strong><br>承接出單、收銀和後廚流程</div>
+          <div class="integration"><strong>CRM / 會員</strong><br>連接會員資料、權益和營銷活動</div>
+          <div class="integration"><strong>配送供應商</strong><br>連接第三方物流、騎手公司和狀態回傳</div>
+          <div class="integration"><strong>線上支付</strong><br>承接支付狀態和財務資料</div>
+          <div class="integration"><strong>ERP / 財務</strong><br>支援財務、供應鏈和企業管理資料流</div>
+          <div class="integration"><strong>其他</strong><br>按實際系統和 API 條件評估接入</div>
+        </div>
+        <div class="warning">不展示未確認 Logo，不承諾未評估系統的接入結果。</div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Hong Kong Operation Eco-system</span><span>PPT-OPMODEL</span></div>
+          <h2>面向香港餐飲營運生態的連接中樞</h2>
+          <div class="diagram">
+            <div class="node-row">
+              <div class="node">Food Order Platform</div>
+              <div class="node">Online Order Web / H5</div>
+              <div class="node">POS / Payment</div>
+              <div class="node">Delivery / Rider Co.</div>
+            </div>
+            <div class="node-row">
+              <div class="node">餐道 Connector</div>
+              <div class="node">OMS</div>
+              <div class="node">DMS / iDMS</div>
+              <div class="node">數據 / 財務對賬</div>
+            </div>
+          </div>
+          <div class="warning">地區、品牌和合作方名稱要經業務確認後再公開。</div>
+        </div>
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>API and Data Flow</span><span>PPT-SaaS / OLD-PRODUCT-285</span></div>
+          <h2>訂單、菜單、用戶與基礎資料，都需要可追溯的數據流</h2>
+          <div class="flow">
+            <div class="flow-step">Menu API</div>
+            <div class="flow-step">Order API</div>
+            <div class="flow-step">User details API</div>
+            <div class="flow-step">Basic info API</div>
+            <div class="flow-step">Connector</div>
+            <div class="flow-step">OMS / Data</div>
+          </div>
+          <div class="warning">API 名稱可作內容方向，具體字段、權限和安全規格需確認。</div>
+        </div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block">
+          <div class="block-kicker"><span>POS / Store System Flow</span><span>PPT-SaaS / PPT-OMS-MODULES</span></div>
+          <h2>外部訂單進入門店後，還要接住 POS、打印與後廚流程</h2>
+          <p>訂單進入 OMS 後，可對接 POS、門店接單、打印設定、小票模板、廚房單、餐廳單和收銀單等方向。</p>
+          <div class="warning">具體 POS 廠商名稱需按公開授權處理。</div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Delivery Integration Flow</span><span>OLD-DELIVERY-388 / PPT-iDMS / PPT-DMS</span></div>
+          <h2>配送整合不只呼叫運力，也要回傳狀態與異常</h2>
+          <p>聚合配送支援外部配送資源；DMS 支援自有騎手與第三方溢出；配送狀態、騎手位置、超時和異常需回到管理後台。</p>
+          <div class="warning">不公開物流合作方名稱或費用，除非後續確認。</div>
+        </div>
+      </div>
+
+      <div class="wire-block compact">
+        <div class="block-kicker"><span>Integrations CTA</span><span>OLD-BIZ-289 / T15-INTEGRATIONS</span></div>
+        <h2>接入前先整理系統類型、接口對象和異常條件</h2>
+        <div class="cta-row">
+          <div class="cta primary">提交接入評估</div>
+          <div class="cta">查看 AMS / Connector</div>
+          <div class="cta">預約技術演示</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="customers" class="page" data-title="客戶案例">
+      <div class="wireframe-note">
+        <span>頁面角色：用 PPT 已授權案例和數據證明餐道如何在具體業態中落地。</span>
+        <span>數據與案例以 PPT Slide 11、38-45、125、131 原文為準。</span>
+      </div>
+
+      <div class="wire-block">
+        <div class="block-kicker"><span>Authorized Proof Band</span><span>PPT-SLIDE-11</span></div>
+        <h1>用可公開數據和案例，說明餐道在多類餐飲場景的落地方式</h1>
+        <p class="lead">本頁回答採購方三件事：餐道服務的營運規模、落地業態，以及在訂單、菜單、配送、會員、數據和客戶服務上的具體問題。</p>
+        <div class="integration-table">
+          <div class="integration"><strong>5000+</strong><br>品牌數量</div>
+          <div class="integration"><strong>500M+</strong><br>每日處理訂單</div>
+          <div class="integration"><strong>400+</strong><br>覆蓋城市</div>
+          <div class="integration"><strong>200K+</strong><br>門店數量</div>
+          <div class="integration"><strong>4.5B+</strong><br>每月配送訂單 GMV</div>
+          <div class="integration"><strong>30% up</strong><br>客戶效率提升</div>
+        </div>
+        <div class="warning">低保真階段先以文字數據塊表示；後續高保真可替換為授權 Logo、品牌牆和案例詳情卡。</div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Named Case Cards</span><span>PPT-SLIDE-39 / 40 / 41</span></div>
+          <h2>已授權品牌案例可直接進入主證明區</h2>
+          <div class="card-list">
+            <div class="list-row"><strong>Pizza-Box</strong><span>合作超過 9 年；使用 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、BI 分析與客戶服務。</span></div>
+            <div class="list-row"><strong>JIA Group</strong><span>提供 COMS 系統，涵蓋訂單管理、餐單管理、配送管理、會員管理和營運數據分析服務。</span></div>
+            <div class="list-row"><strong>Jardine Group</strong><span>為 KFC、Pizza Hut、PHD 提供服務；DMS 覆蓋 200+ outlets，管理 iDMS 配送服務，並用餐道 OMS 整合 Foodpanda / Deliveroo。</span></div>
+            <div class="list-row"><strong>McDonald's / Yoshinoya</strong><span>DMS Rider App 的培訓與考核功能已有定制線索，用於騎手線上學習、考核與通知。</span></div>
+          </div>
+        </div>
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Case Value Chain</span><span>PPT-SLIDE-38 / 42 / 43 / 44 / 45</span></div>
+          <h2>匿名業態案例按 PPT 指標呈現，不補未授權品牌名</h2>
+          <div class="flow">
+            <div class="flow-step">業態<br>餐飲 / 零售</div>
+            <div class="flow-step">原始問題<br>訂單 / 菜單 / 配送</div>
+            <div class="flow-step">接入能力<br>OMS / POS / DMS</div>
+            <div class="flow-step">營運過程<br>同步 / 追蹤 / 對賬</div>
+            <div class="flow-step">結果數據<br>PPT 指標</div>
+            <div class="flow-step">Demo 導流<br>相似場景</div>
+          </div>
+          <div class="warning">匿名案例仍不補品牌名；但 PPT 已列出的業態、能力和指標可直接展示。</div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="wire-block">
+          <div class="block-kicker"><span>Dessert Chain Brand</span><span>PPT-SLIDE-38</span></div>
+          <h2>甜品連鎖：POS 對接、多平台資料與自動打印</h2>
+          <p>OMS 對接 POS，整合外賣平台資料並自動打印，降低漏單；平台資訊更新與 Foodpanda / Deliveroo 同步。</p>
+          <div class="source-tags">
+            <span class="tag">訂單量：100K → 190K → 1.01M</span>
+            <span class="tag">銷售額：6.6M → 7.74M → 54.42M</span>
+            <span class="tag">復購率：19.88% → 19.95% → 25.83%</span>
+          </div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Chinese HotPot Chain</span><span>PPT-SLIDE-42</span></div>
+          <h2>火鍋連鎖：小程序訂單、門店聚合與騎手管理</h2>
+          <p>承接自取、預約、外賣訂單與騎手管理，多門店集中維護，平台訂單回到 OMS 流程。</p>
+          <div class="source-tags">
+            <span class="tag">訂單取消率：12.66% / 15.65% / 19.98%</span>
+            <span class="tag">年度銷售額：1,578 萬元</span>
+            <span class="tag">營運效率：147%</span>
+            <span class="tag">復購率提升：156%</span>
+          </div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Chinese Cuisine Chain</span><span>PPT-SLIDE-43</span></div>
+          <h2>中餐連鎖：收購後系統整合與跨系統數據管理</h2>
+          <p>Business Center 和 Data Center 支援收購後系統架構整合、平台資料歸集與營運分析。</p>
+          <div class="source-tags">
+            <span class="tag">訂單取消率改善：185%</span>
+            <span class="tag">銷售增長：665%</span>
+            <span class="tag">門店擴張率：116%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block">
+          <div class="block-kicker"><span>Western Coffee Brand</span><span>PPT-SLIDE-44</span></div>
+          <h2>咖啡品牌：外賣平台對接、菜單管理與數據資產</h2>
+          <p>透過 Foodpanda / Deliveroo 對接、Menu Center 菜單同步與 CDBI 多維分析，支援營運決策。</p>
+          <div class="source-tags">
+            <span class="tag">單店平均銷售額：+55%</span>
+            <span class="tag">單店平均訂單額增長：+74%</span>
+            <span class="tag">訂單量：1420 → 2472</span>
+          </div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Fresh Food Retail Brand</span><span>PPT-SLIDE-45</span></div>
+          <h2>鮮食零售：跨區域餐單、庫存與多平台同步</h2>
+          <p>透過 POS 對接、外賣平台資料整合和門店端管理，同步餐單與庫存數量，支援區域餐單和平台差異。</p>
+          <div class="source-tags">
+            <span class="tag">門店營運效率：30%</span>
+            <span class="tag">門店營運數字化：80%</span>
+            <span class="tag">線上訂單比例：26.7%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wire-block">
+        <div class="block-kicker"><span>Case to Demo</span><span>PPT-SLIDE-39-45 / AUDIT-2026-08-12</span></div>
+        <h2>從已落地案例導向相似場景演示</h2>
+        <p>案例頁按業態和問題導向相似演示：多平台訂單、門店聚合、外賣平台對接、DMS / iDMS 配送管理、會員與營運數據分析。</p>
+        <div class="cta-row">
+          <div class="cta primary">預約相似場景演示</div>
+          <div class="cta">查看平台能力</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="page" data-title="資源">
+      <div class="wireframe-note">
+        <span>頁面角色：降低評估與導入前疑問，提供支援、FAQ、媒體、案例資源與查詢入口。</span>
+        <span>不做泛博客，不替代 Customers 或 Demo。</span>
+      </div>
+
+      <div class="wire-block">
+        <div class="block-kicker"><span>Resources Overview</span><span>T15-RESOURCES / DIR-V0.2</span></div>
+        <h1>按你的問題，找到餐道導入、接入、案例與支援入口</h1>
+        <p class="lead">資源頁不重複產品銷售內容，負責把採購、IT、營運、門店、配送和財務問題分流到接入準備、FAQ、支援查詢、案例資源或產品演示。</p>
+        <div class="integration-table">
+          <div class="integration"><strong>支援中心</strong><br>導入、使用、營運問題與技術查詢入口。</div>
+          <div class="integration"><strong>常見問題</strong><br>多平台訂單、菜單同步、配送履約和財務對賬。</div>
+          <div class="integration"><strong>媒體與新聞</strong><br>公司資訊、媒體資料和品牌素材入口。</div>
+          <div class="integration"><strong>案例資源</strong><br>按業態、門店規模、營運問題連到 Customers。</div>
+        </div>
+        <div class="warning">若沒有真實內容庫或搜尋功能，高保真階段只做分類篩選，不承諾全文搜尋。</div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Support Center</span><span>OLD-PAIN-284 / T15-RESOURCES</span></div>
+          <h2>讓不同階段的問題進入不同支援路徑</h2>
+          <div class="card-list">
+            <div class="list-row"><strong>評估中</strong><span>需要確認 OMS、Menu Center、DMS、iDMS、CDBI 或 AMS / Connector 是否適合現有營運問題。</span></div>
+            <div class="list-row"><strong>導入中</strong><span>需要整理外賣平台、自有點餐、POS、CRM、ERP、配送和支付等接入對象。</span></div>
+            <div class="list-row"><strong>日常營運</strong><span>需要處理接單超時、餐單更新失敗、配送超時、退款未處理或對賬差異。</span></div>
+            <div class="list-row"><strong>技術查詢</strong><span>需要確認 API、字段、權限、資料流、異常狀態和系統邊界。</span></div>
+          </div>
+          <div class="warning">支援時段、響應方式和服務等級需後續確認；低保真不寫承諾。</div>
+        </div>
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>FAQ Preview</span><span>T15-RESOURCES / PPT-OMS-MODULES</span></div>
+          <h2>FAQ 必須回答具體營運問題</h2>
+          <div class="card-list">
+            <div class="list-row"><strong>接入前</strong><span>要準備哪些系統類型？外賣平台、自建入口、POS / KDS、CRM、配送、支付和 ERP 需要先梳理。</span></div>
+            <div class="list-row"><strong>訂單處理</strong><span>OMS 如何查看渠道、門店、訂單狀態、配送狀態和異常類型？</span></div>
+            <div class="list-row"><strong>菜單同步</strong><span>Menu Center 如何處理餐單、庫存、售罄、區域菜單和平台差異？</span></div>
+            <div class="list-row"><strong>財務對賬</strong><span>財務對賬如何比對平台訂單與餐道 OMS 訂單，識別金額、狀態和漏單差異？</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="wire-block">
+          <div class="block-kicker"><span>Access Guide</span><span>OLD-BIZ-289 / PPT-SaaS</span></div>
+          <h2>接入指南先整理系統類型，不預設接入結果</h2>
+          <p>Checklist 協助 IT / 營運確認外賣、自有點餐、POS / KDS、CRM、配送、支付、ERP、API、字段、權限與異常處理。</p>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Media and News</span><span>DIR-V0.2 / AUDIT-2026-08-12</span></div>
+          <h2>媒體與新聞只放已確認素材入口</h2>
+          <p>可放公司資料、品牌素材和新聞聯絡方式；沒有已確認新聞素材時，不生成假新聞日期、標題或媒體報導。</p>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Case Resources</span><span>PPT-SLIDE-38-45 / T21</span></div>
+          <h2>案例資源只做入口，詳情仍回到客戶案例</h2>
+          <p>按甜品、火鍋、中餐、咖啡、鮮食零售和實名客戶案例導向 Customers；不在資源頁重複完整案例敘事。</p>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Enquiry Form</span><span>DIR-V0.2 / AUDIT-2026-08-12</span></div>
+          <h2>查詢表單承接非銷售型問題</h2>
+          <div class="ui-slab">
+            <div class="ui-toolbar">查詢類型：支援 / 接入 / 媒體 / 案例 / 招聘 / 其他</div>
+            <div class="ui-row">公司或品牌名稱 / 地區 / 角色 / 聯絡方式</div>
+            <div class="ui-row">相關系統：OMS、DMS、iDMS、CDBI、AMS / Connector 或不確定</div>
+            <div class="ui-footer">送出後顯示建議路徑：支援中心、預約產品演示或公司聯絡入口。</div>
+          </div>
+        </div>
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Resource Routing</span><span>AUDIT-2026-08-12</span></div>
+          <h2>把不確定問題轉成下一步</h2>
+          <div class="flow">
+            <div class="flow-step">選擇問題類型</div>
+            <div class="flow-step">補充品牌與地區</div>
+            <div class="flow-step">標記系統或場景</div>
+            <div class="flow-step">推薦支援或 Demo</div>
+            <div class="flow-step">送出查詢</div>
+            <div class="flow-step">等待人工跟進</div>
+          </div>
+          <div class="cta-row">
+            <div class="cta primary">提交查詢</div>
+            <div class="cta">預約產品演示</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="page" data-title="關於餐道">
+      <div class="wireframe-note">
+        <span>頁面角色：建立公司可信、服務方式和長期產品演進，不重複產品能力頁。</span>
+        <span>公司背景、據點、認證、聯絡方式和關鍵數據按 PPT Slide 4-6、11、131、132 授權展示。</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Company Background</span><span>PPT-COMPANY</span></div>
+          <h1>專注餐飲與零售 O2O 營運系統的產品與服務團隊</h1>
+          <p class="lead">餐道成立於 2014 年，總部位於廣州，並在北京、上海、香港設有分支及成都營運中心；以 20 年餐飲系統研發與外送業務實戰經驗，支援品牌處理訂單、門店、配送、數據和持續營運。</p>
+          <div class="card-list">
+            <div class="list-row"><strong>成立</strong><span>2014 年成立，Candao Information Technology Co., Ltd.</span></div>
+            <div class="list-row"><strong>據點</strong><span>廣州總部；香港、北京、上海分支；成都營運中心。</span></div>
+            <div class="list-row"><strong>團隊</strong><span>擁有超過百人的技術產品研發團隊。</span></div>
+            <div class="list-row"><strong>經驗</strong><span>20 年餐飲系統研發與餐飲外送業務實戰經驗。</span></div>
+          </div>
+        </div>
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Operating Model</span><span>PPT-OPMODEL / OLD-PAIN-284</span></div>
+          <h2>餐道的可信不只來自軟件，也來自導入與持續營運方式</h2>
+          <div class="flow">
+            <div class="flow-step">Call Center Services<br>2000</div>
+            <div class="flow-step">Large Chain Store Cooperation<br>2003</div>
+            <div class="flow-step">First Generation SaaS 3.0<br>2008</div>
+            <div class="flow-step">SaaS Platform 5.0<br>2014</div>
+            <div class="flow-step">OMS Go-live<br>2017</div>
+            <div class="flow-step">SaaS 6.0 Retail<br>2020</div>
+          </div>
+          <div class="warning">時間線按 PPT Slide 5 顯示；高保真階段可視覺化為公司與產品演進軸。</div>
+        </div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block">
+          <div class="block-kicker"><span>Product Evolution</span><span>PPT-COMPANY / PPT-OMS-CORE</span></div>
+          <h2>產品演進圍繞訂單、數據和配送履約持續展開</h2>
+          <div class="card-list">
+            <div class="list-row"><strong>COMS / OMS</strong><span>承接多渠道訂單和門店營運。</span></div>
+            <div class="list-row"><strong>CDBI / 財務對賬</strong><span>讓報表、對賬和異常識別回到營運管理。</span></div>
+            <div class="list-row"><strong>DMS / iDMS</strong><span>支援自有配送、聚合配送、派單和狀態追蹤。</span></div>
+            <div class="list-row"><strong>Connector</strong><span>連接外部系統、API 和餐飲 O2O 生態。</span></div>
+          </div>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Service Delivery System</span><span>PPT-COMPANY / PPT-OPMODEL / OLD-PAIN-284</span></div>
+          <h2>以產品平台、數據分析、配送履約和質量保障支撐長期營運</h2>
+          <div class="integration-table">
+            <div class="integration"><strong>SaaS Platform</strong><br>承接 OMS、CDBI、DMS、iDMS、AMS / Connector 等產品能力。</div>
+            <div class="integration"><strong>Data Analysis</strong><br>支援報表、看板、平台訂單與 OMS 訂單對賬差異。</div>
+            <div class="integration"><strong>Delivery</strong><br>支援聚合配送、自有騎手、派單、第三方溢出和狀態追蹤。</div>
+            <div class="integration"><strong>Quality Assurance</strong><br>作為導入、服務管理、安全認證和持續營運的可信支撐。</div>
+          </div>
+          <div class="warning">此模組來源於 PPT 公司能力描述；不把四個英文詞作為主賣點，而是解釋它們如何支撐交付。</div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="wire-block">
+          <div class="block-kicker"><span>Security / Quality</span><span>PPT-SLIDE-6 / PPT-SLIDE-131</span></div>
+          <h2>安全、服務管理與 DMS 穩定性可以進入信任區</h2>
+          <p>PPT 提及 ISO 27001、ISO 20000；DMS 口徑：500 Order/second、99.95% over。</p>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Office & Contact</span><span>PPT-SLIDE-132</span></div>
+          <h2>辦公室與聯絡方式作為公司可信收尾</h2>
+          <p>網站：www.can-dao.com；Info@can-dao.com；400 1133 302；據點：上海、廣州、香港、北京。</p>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Final CTA</span><span>PPT-SLIDE-132 / AUDIT-2026-08-12</span></div>
+          <h2>讓客戶專注於最擅長的事，其餘交給餐道</h2>
+          <div class="cta-row">
+            <div class="cta primary">預約產品演示</div>
+            <div class="cta">聯絡餐道</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="page" data-title="預約產品演示">
+      <div class="wireframe-note">
+        <span>頁面角色：把訪客的業務問題變成銷售和方案團隊可用的需求輸入。</span>
+        <span>不做普通聯絡表單，不承諾價格、SLA、上線週期或整合範圍。</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Demo Hero</span><span>T15-DEMO / AUDIT-2026-08-12</span></div>
+          <h1>預約餐道產品演示前，先告訴我們你的營運場景</h1>
+          <p class="lead">請留下品牌、地區、門店規模、外賣平台、POS 和主要問題。</p>
+          <p>餐道按場景安排 OMS、DMS、iDMS、CDBI 或 AMS / Connector 演示。</p>
+          <div class="cta-row">
+            <div class="cta primary">開始填寫需求</div>
+            <div class="cta">查看支援入口</div>
+          </div>
+        </div>
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Intent Router</span><span>T15-DEMO</span></div>
+          <h2>先分清這次聯絡的目的</h2>
+          <div class="scenario-grid">
+            <div class="scenario"><h3>產品演示</h3><small>正在評估多平台訂單、門店、菜單、配送、會員、數據或對賬能力。</small></div>
+            <div class="scenario"><h3>聯絡銷售</h3><small>需要討論市場、門店規模、現有系統、上線計畫或採購流程。</small></div>
+            <div class="scenario"><h3>合作洽詢</h3><small>POS、支付、物流、CRM、ERP、平台或技術合作方提交合作方向。</small></div>
+            <div class="scenario"><h3>支援查詢</h3><small>既有客戶或導入中團隊提交接入、營運、技術或日常問題。</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wire-block">
+        <div class="block-kicker"><span>Scenario Step</span><span>OLD-PAIN-284 / PPT-OMS-PAIN</span></div>
+        <h2>Step 1：選擇你最需要演示的營運場景</h2>
+        <div class="integration-table">
+          <div class="integration"><strong>多平台訂單</strong><br>渠道、門店、訂單狀態、異常和打印流程。</div>
+          <div class="integration"><strong>菜單與庫存</strong><br>Menu Center、售罄、區域菜單和平台差異。</div>
+          <div class="integration"><strong>配送營運與履約</strong><br>iDMS、DMS、自有騎手、第三方溢出和配送狀態。</div>
+          <div class="integration"><strong>數字點餐</strong><br>H5 / Web / QR、自有入口、會員和門店履約。</div>
+          <div class="integration"><strong>數據與對賬</strong><br>CDBI、財務對賬、報表、漏單和金額差異。</div>
+          <div class="integration"><strong>系統整合</strong><br>AMS / Connector、API、POS、KDS、CRM、ERP 和支付。</div>
+          <div class="integration"><strong>托管 / 代營運</strong><br>多平台餐單與門店資訊更新、訂單處理和營運監督。</div>
+          <div class="integration"><strong>不確定</strong><br>先提交問題，由團隊協助分流到合適演示。</div>
+        </div>
+      </div>
+
+      <div class="section-grid two">
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>System Landscape Fields</span><span>OLD-BIZ-289 / PPT-SaaS</span></div>
+          <h2>Step 2：整理現有系統和接入對象</h2>
+          <div class="card-list">
+            <div class="list-row"><strong>品牌與市場</strong><span>公司 / 品牌名稱、所在地區、門店規模、聯絡人和角色。</span></div>
+            <div class="list-row"><strong>訂單來源</strong><span>外賣平台、自有 H5 / Web / APP / QR、Call Center 或其他入口。</span></div>
+            <div class="list-row"><strong>門店系統</strong><span>POS、KDS、打印、小票、後廚、支付、CRM、ERP 或會員系統。</span></div>
+            <div class="list-row"><strong>配送方式</strong><span>自有騎手、第三方配送、平台配送、混合履約或尚未確定。</span></div>
+          </div>
+        </div>
+        <div class="wire-block tall">
+          <div class="block-kicker"><span>Needs Checklist</span><span>PPT-DATA / PPT-iDMS / PPT-DMS</span></div>
+          <h2>Step 3：把需求轉成可安排的演示重點</h2>
+          <div class="ui-slab">
+            <div class="ui-toolbar">已選：多平台訂單 + 配送營運 + 數據對賬</div>
+            <div class="ui-row">建議演示：OMS Order Processing Center、Menu Center、iDMS、DMS、CDBI、財務對賬</div>
+            <div class="ui-row">待補充：目前渠道、門店數量、配送方式、現有 POS / CRM / ERP、主要異常類型</div>
+            <div class="ui-footer">提交後：顯示需求摘要，等待餐道團隊按場景跟進。</div>
+          </div>
+          <div class="warning">這裡是原型分流邏輯，不表示 CRM 已接入或會自動分派給特定團隊。</div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="wire-block">
+          <div class="block-kicker"><span>After Submit</span><span>AUDIT-2026-08-12</span></div>
+          <h2>提交後要讓用戶知道下一步</h2>
+          <p>提交後顯示需求摘要：品牌、地區、門店規模、目前渠道、已使用系統、關注場景和建議演示模組。若資訊不足，提示補充，而不是編造方案。</p>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Support Split</span><span>RESOURCES / DEMO BOUNDARY</span></div>
+          <h2>既有客戶支援與新客 Demo 分開</h2>
+          <p>支援查詢可導向 Resources 的支援中心；產品演示和聯絡銷售保留在 Demo 主線，避免既有客戶誤走銷售流程。</p>
+        </div>
+        <div class="wire-block">
+          <div class="block-kicker"><span>Privacy Note</span><span>NEEDS CONFIRMATION</span></div>
+          <h2>表單需要資料用途提示</h2>
+          <p>低保真先標記需補隱私和資料用途文案；正式上線前需確認隱私政策、資料保存方式和接收團隊。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const buttons = Array.from(document.querySelectorAll('[data-page]'));
+    const pages = Array.from(document.querySelectorAll('.page'));
+    const capabilityData = {
+      orders: {
+        title: '多渠道訂單進入 OMS 後台',
+        body: '外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店按渠道、訂單狀態、配送狀態和異常類型處理。',
+        object: '業務對象：訂單、渠道、門店、訂單狀態、配送狀態、異常類型。',
+        state: '狀態 / 操作：待接單、製作中、配送中、取消、退款、超時提醒。',
+        product: '對應產品：OMS、COMS、SOMS、Order Processing Center、Store Abnormity Management。',
+        source: '來源：PPT-OMS-CORE、PPT-OMS-MODULES、OLD-TAKEOUT-379。',
+        next: '下一步：查看訂單隊列、通知門店、進入配送或對賬流程。'
+      },
+      menu: {
+        title: '餐單、庫存與門店狀態跨渠道同步',
+        body: '總部和門店維護餐單、庫存、售罄、區域菜單、營業時間、配送條件和門店接單狀態，減少多平台重複更新。',
+        object: '業務對象：餐單、菜品、SKU、庫存、售罄、門店、區域。',
+        state: '狀態 / 操作：售罄同步、餐單更新失敗、門店暫停接單、營業時間待同步。',
+        product: '對應產品：Menu Center、Operation Management Center、OMS。',
+        source: '來源：PPT-OMS-MODULES、PPT-MOBILE、OLD-TAKEOUT-379。',
+        next: '下一步：同步餐單、查看更新記錄、通知門店處理異常。'
+      },
+      member: {
+        title: '自有點餐入口把會員、營銷與門店履約接回品牌',
+        body: 'H5 / Web / APP / QR 下單、會員權益、優惠券和營銷活動需要回到門店接單、配送履約和營運數據。',
+        object: '業務對象：顧客、會員、優惠券、營銷活動、自有點餐入口、門店訂單。',
+        state: '狀態 / 操作：已下單、已接單、製作中、配送中、優惠通知、服務評價。',
+        product: '對應產品：Mobile Ordering、Membership、Marketing、OMS。',
+        source: '來源：OLD-ONLINE-394、OLD-WYW-461、PPT-MOBILE。',
+        next: '下一步：查看自有點餐流程、會員活動配置或相似案例。'
+      },
+      delivery: {
+        title: '配送履約同時承接聚合配送和自有騎手',
+        body: 'iDMS 支援第三方配送呼叫與交易追蹤；DMS 支援自有騎手、智能派單、人工派單、第三方溢出、Rider App 和 Consumer SMS。',
+        object: '業務對象：配送單、騎手、派單規則、第三方物流、SMS、配送異常。',
+        state: '狀態 / 操作：待派單、已派單、到店、取餐、配送中、已送達、轉第三方、配送超時。',
+        product: '對應產品：iDMS、DMS、Dispatch、Rider App、Consumer SMS。',
+        source: '來源：OLD-DELIVERY-388、PPT-iDMS、PPT-DMS、PPT-RIDER-SMS。',
+        next: '下一步：查看 DMS / iDMS 演示視頻或預約配送場景演示。'
+      },
+      finance: {
+        title: '營運數據要能回到報表、看板和財務對賬',
+        body: 'CDBI 和財務對賬能力比對平台訂單與餐道 OMS 訂單，標記金額差異、狀態差異和漏單，支援管理層、營運和財務查看。',
+        object: '業務對象：報表、看板、平台訂單、OMS 訂單、對賬單、GMV、漏單標記。',
+        state: '狀態 / 操作：金額不一致、狀態不一致、漏單、退款未處理、重新對賬。',
+        product: '對應產品：CDBI、Data Asset、財務對賬。',
+        source: '來源：OLD-PRODUCT-285、PPT-DATA、PPT-MOBILE。',
+        next: '下一步：查看 CDBI / 財務對賬演示或提交對賬場景。'
+      },
+      connector: {
+        title: 'AMS / Connector 按系統類型、接口和資料流評估接入',
+        body: '接入不以 Logo 牆證明，而是先確認外賣平台、自建入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限和異常處理。',
+        object: '業務對象：系統類型、接口對象、API、字段、權限、資料流、異常狀態。',
+        state: '狀態 / 操作：待評估、字段確認、權限配置、資料回傳、異常處理。',
+        product: '對應產品：AMS / Connector、OMS、Data Asset。',
+        source: '來源：OLD-BIZ-289、PPT-SaaS、OLD-PRODUCT-285。',
+        next: '下一步：提交接入評估或預約技術演示。'
+      }
+    };
+    const setPage = (id) => {
+      pages.forEach((page) => page.classList.toggle('active', page.id === id));
+      buttons.forEach((button) => button.setAttribute('aria-pressed', button.dataset.page === id ? 'true' : 'false'));
+      const page = pages.find((item) => item.id === id);
+      if (page) document.title = `餐道低保真原型 - ${page.dataset.title}`;
+      if (history.replaceState) history.replaceState(null, '', `#${id}`);
+    };
+    const capabilityButtons = Array.from(document.querySelectorAll('[data-capability]'));
+    const setCapability = (id) => {
+      const item = capabilityData[id];
+      if (!item) return;
+      capabilityButtons.forEach((button) => button.setAttribute('aria-pressed', button.dataset.capability === id ? 'true' : 'false'));
+      document.getElementById('capability-title').textContent = item.title;
+      document.getElementById('capability-body').textContent = item.body;
+      document.getElementById('capability-object').textContent = item.object;
+      document.getElementById('capability-state').textContent = item.state;
+      document.getElementById('capability-product').textContent = item.product;
+      document.getElementById('capability-source').textContent = item.source;
+      document.getElementById('capability-next').textContent = item.next;
+    };
+    buttons.forEach((button) => button.addEventListener('click', () => setPage(button.dataset.page)));
+    capabilityButtons.forEach((button) => button.addEventListener('click', () => setCapability(button.dataset.capability)));
+    const initial = location.hash.replace('#', '');
+    if (initial && pages.some((page) => page.id === initial)) setPage(initial);
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+version: "2026-08-16"
+tokens:
+  primary: "#528dff"
+  text_dark: "#16233d"
+  page_max_width: "1440px"
+  content_width: "1200px"
+  radius_allowed: ["8px", "16px"]
+components:
+  header:
+    desktop: "透明或浅底导航；滚动后收紧为实体导航；当前页用 #528dff 指示。"
+    mobile: "Logo、Demo CTA、菜单按钮；展开后使用分组导航。"
+    states:
+      default: "完整高度，CTA 可见。"
+      scroll: "高度收紧，背景更实，当前页保持可识别。"
+  hero:
+    use_for: ["Home", "Platform", "Integrations", "About", "Demo"]
+    style: "大标题、清晰业务对象、双 CTA、产品截图或摄影舞台。"
+    avoid: "不要把 Hero 文案写成泛化愿景。"
+  capability_rail:
+    use_for: ["Home H03", "Platform P02", "Platform P03"]
+    style: "桌面左侧或顶部切换，右侧大面积内容舞台。"
+    interaction: "Hover 临时预览；Click 锁定当前项；移动端改 Accordion。"
+  sticky_story:
+    use_for: ["Solutions", "About 产品演进"]
+    style: "左侧固定叙事，右侧随滚动切换场景或状态。"
+    mobile: "改为 Accordion 或 Stepper，不做强制 sticky。"
+  product_screenshot_stage:
+    use_for: ["Home", "Platform"]
+    style: "真实截图外框、轻蓝边缘光、独立标注层。"
+    rule: "截图本身不得重绘；标注层与截图文件分离。"
+  integration_network:
+    use_for: ["Integrations", "Home H02"]
+    style: "中心节点、外围系统、方向性数据线。"
+    rule: "不使用合作方 Logo 证明接入。"
+  case_carousel:
+    use_for: ["Customers", "Home H05"]
+    style: "一次呈现一个主案例，Logo、场景、产品和两项指标同步切换。"
+    rule: "实名客户和指标必须来自授权资料。"
+  faq_accordion:
+    use_for: ["Resources"]
+    style: "问题列表默认收起，展开后提供业务对象、状态和下一步。"
+  demo_stepper:
+    use_for: ["Demo"]
+    style: "多步骤表单 + 右侧实时需求摘要。"
+    rule: "字段服务演示分流，不做普通联系表单。"

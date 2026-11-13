@@ -1,0 +1,43 @@
+version: "2026-08-16"
+missing:
+  - id: home_style_reference
+    type: visual_reference
+    expected_file: tasks/T17/input/references/home-style-reference.png
+    status: missing
+    impact: "无法生成 ref-00 到 ref-06 的参考图切片和 contact sheet。"
+    fallback: "记录 reference-map；历史 Stitch / Figma 截图仅列为候选参考，不自动替代。"
+  - id: real_product_screenshots
+    type: product_screenshot
+    status: missing
+    impact: "Platform、Home 产品截图舞台、截图标注层和视频封面只能保留截图位。"
+    fallback: "使用 wireframe placeholder，不重绘产品 UI。"
+  - id: product_videos
+    type: product_video
+    status: missing
+    impact: "Platform 产品视频 Carousel 暂不能播放或导出真实封面。"
+    fallback: "记录视频入口、所需产品和公开范围。"
+  - id: customer_logo_pack
+    type: customer_logo
+    status: needs-cleanup
+    impact: "Customers Logo 带需要整理授权 Logo 文件。"
+    fallback: "仅使用已确认客户名称和案例结构，不生成 Logo。"
+  - id: case_photography
+    type: case_photo
+    status: missing
+    impact: "Customers 主案例轮播缺少门店或运营现场图片。"
+    fallback: "保留案例媒体位，使用实名文字结构和授权数据。"
+  - id: company_photography
+    type: company_photo
+    status: missing
+    impact: "About Hero、办公地点和团队服务模块缺少正式图片。"
+    fallback: "保留媒体位，后续接入公司照片。"
+  - id: remotion_project
+    type: motion_project
+    status: missing
+    impact: "暂不创建完整 Remotion 视频。"
+    fallback: "本轮只输出 motion storyboard 和关键帧描述。"
+  - id: english_copy_library
+    type: locale
+    status: blocked_by_human_gate
+    impact: "English 版本在繁體内容验收后生成。"
+    fallback: "本轮设计执行版低保真使用繁體中文单一 Locale。"

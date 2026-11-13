@@ -1,0 +1,70 @@
+餐道
+首頁
+解決方案
+平台
+整合能力
+客戶案例
+資源
+關於餐道
+繁中 / EN
+預約演示
+資源｜餐道
+資源中心
+按你的問題，找到餐道導入、接入、案例與支援入口
+採購、IT、營運、門店、配送和財務團隊可以在這裡找到接入準備、常見問題、支援查詢、案例資源和產品演示入口，減少評估與導入前的不確定。
+01
+評估
+確認問題與系統需求，了解產品架構。
+02
+導入
+梳理系統對接清單，確保 AMS / Connector 順暢連通。
+03
+營運
+日常排錯指南、支援工單提交與系統狀態查詢。
+接入準備清單
+把接入前需要整理的系統對象一次看清
+渠道與入口
+check_circle
+外賣平台接入
+check_circle
+H5 / Web / APP
+check_circle
+QR Code 點餐
+門店系統
+dns
+POS / KDS 整合
+print
+打印與後廚單配置
+企業資料
+group
+CRM / 會員系統
+account_balance_wallet
+支付 / ERP 對接
+AMS / Connector
+API 規格
+code
+字段對應
+data_object
+權限設定
+lock
+異常回傳邏輯
+warning
+account_tree
+OMS 邏輯
+arrow_forward_ios
+restaurant_menu
+Menu Center
+arrow_forward_ios
+account_balance
+Finance Center
+餐道
+解決方案
+SaaS
+iDMS
+AMS / Connector
+法律與支援
+隱私政策
+服務條款
+技術支援
+© 2024 餐道 Candao. All Rights Reserved.
+餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector

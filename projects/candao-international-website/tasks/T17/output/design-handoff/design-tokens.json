@@ -1,0 +1,121 @@
+{
+  "version": "2026-08-20",
+  "source": {
+    "basis": "Figma homepage MCP extraction",
+    "file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+    "node_id": "336:7645",
+    "extracted_at": "2026-08-20",
+    "scope": "Incremental tokens for aligning later high-fidelity Stitch / Figma pages to the revised homepage style."
+  },
+  "brand": {
+    "primary": "#528dff",
+    "primaryHover": "#3b82f6",
+    "primarySoft": "#eef5ff",
+    "primaryGlowBorder": "#79b3ff",
+    "textDark": "#16233d",
+    "textDark95": "rgba(22, 35, 61, 0.95)",
+    "textDark65": "rgba(22, 35, 61, 0.65)",
+    "textDark45": "rgba(22, 35, 61, 0.45)",
+    "textMutedOnDark": "#838e9c"
+  },
+  "surfaces": {
+    "page": "#f6f8fc",
+    "pageWarm": "#f6f7f2",
+    "canvasNavy": "#0e1526",
+    "canvasNavyAlt": "#10192c",
+    "heroNavy": "#0f172a",
+    "deepNavy": "#000d2b",
+    "productPanel": "#141e30",
+    "productSidebar": "#0f1829",
+    "productSidebarActive": "#1e3a5f",
+    "footer": "#141414",
+    "surface": "#ffffff",
+    "surfaceBlue": "#eef5ff",
+    "chip": "#f1f5f9",
+    "line": "rgba(22, 35, 61, 0.12)",
+    "lineLight": "#e2e8f0",
+    "lineStrong": "rgba(82, 141, 255, 0.42)",
+    "lineOnDark": "rgba(255, 255, 255, 0.07)",
+    "footerLink": "#c7d5e6"
+  },
+  "typography": {
+    "zh": "\"Noto Sans TC\", \"PingFang TC\", \"Microsoft JhengHei\", sans-serif",
+    "latin": "Inter, Arial, sans-serif",
+    "letterSpacing": "0",
+    "caseTransform": "none",
+    "scale": {
+      "hero": {"fontSize": "64px", "lineHeight": "80px", "weight": 700, "letterSpacing": "0"},
+      "sectionTitle": {"fontSize": "36px", "lineHeight": "40px", "weight": 700, "letterSpacing": "0"},
+      "subsectionTitle": {"fontSize": "24px", "lineHeight": "33px", "weight": 700, "letterSpacing": "0"},
+      "bodyLarge": {"fontSize": "18px", "lineHeight": "28px", "weight": 400, "letterSpacing": "0"},
+      "bodyLargeTight": {"fontSize": "18px", "lineHeight": "24px", "weight": 400, "letterSpacing": "0"},
+      "bodyMedium": {"fontSize": "16px", "lineHeight": "24px", "weight": 400, "letterSpacing": "0"},
+      "bodySmall": {"fontSize": "14px", "lineHeight": "20px", "weight": 400, "letterSpacing": "0"},
+      "uiSmall": {"fontSize": "12px", "lineHeight": "16.5px", "weight": 400, "letterSpacing": "0"},
+      "statNumber": {"fontSize": "64px", "lineHeight": "80px", "weight": 500, "letterSpacing": "0"}
+    },
+    "note": "Figma homepage MCP uses optical tight tracking on some headings; project production token remains letterSpacing 0 to preserve protected terms such as iDMS and SaaS."
+  },
+  "layout": {
+    "pageMaxWidth": "1440px",
+    "contentMaxWidth": "1200px",
+    "desktopColumns": 12,
+    "mobileWidth": "390px",
+    "wideContainer": "1280px",
+    "edgePadding": "104px",
+    "heroDesktopHeight": "998px",
+    "heroTopPadding": "240px",
+    "heroBottomPadding": "160px",
+    "logoCloudGap": "64px",
+    "sectionPaddingDesktop": "96px",
+    "sectionPaddingMobile": "52px",
+    "homepageSectionLarge": "128px",
+    "homepageSectionXL": "160px"
+  },
+  "radius": {
+    "tag": "4px",
+    "logoMark": "6px",
+    "small": "8px",
+    "caseCard": "14px",
+    "large": "16px",
+    "full": "9999px",
+    "usage": "Default buttons and product containers use 8px / 16px. Homepage-derived tags may use 4px, compact logo marks may use 6px, and case/product cards may use 14px only when matching the MCP reference."
+  },
+  "elevation": {
+    "button": "0 4px 6px -1px rgba(0,0,0,0.10), 0 2px 4px -2px rgba(0,0,0,0.10)",
+    "ctaButton": "0 10px 7.5px rgba(0,0,0,0.10), 0 4px 3px rgba(0,0,0,0.10)",
+    "bluePanel": "0 0 40px rgba(59,130,246,0.08)",
+    "glassBlur": "4px",
+    "cardBlurOnDark": "10px"
+  },
+  "motion": {
+    "micro": "160ms ease-out",
+    "section": "360ms cubic-bezier(0.22, 1, 0.36, 1)",
+    "homepageRhythm": "Hero image fade, product screenshot stage overlap, dark-to-light section contrast, then stats band and CTA media mosaic.",
+    "reducedMotion": "use static poster and preserve all content"
+  },
+  "homepageMcpPatterns": {
+    "hero": "Dark cinematic restaurant / ordering scene, centered title, brand-blue second line, dual CTA, authorized logo cloud, product screenshot stage overlapping into next section.",
+    "platformOverview": "Dark gradient band, left narrative, right operational hub illustration, followed by deep product workbench or screenshot stage.",
+    "caseSection": "White editorial section with left conversion copy and right horizontal customer cards; use authorized names and real/approved visual assets only.",
+    "statsBand": "Dark photo-backed scale proof band with five authorized PPT Slide 11 metrics only.",
+    "finalCta": "White conversion section with left sales copy and right operational media mosaic."
+  },
+  "stitchRules": [
+    "Use the existing Stitch design system ID when available; do not restate colors or fonts in a generation prompt unless editing an existing screen for a hard issue.",
+    "Generate Traditional Chinese first pages and do not display bilingual body content.",
+    "每个剩余页面只允许一个目标 Stitch screen；首次只调用一次 generate_screen_from_text。",
+    "Only use edit_screens once on the same screen for hard issues: wrong page, missing core copy, internal notes, placeholder content, fake logos, unauthorized metrics, protected-term casing errors.",
+    "Do not copy unauthorized MCP details: simulated customer logo blocks, simplified Chinese labels, unverified percentages, fake platform badges, or stock-like claims.",
+    "Keep iDMS, SaaS, AMS / Connector exact casing. Do not use text-transform."
+  ],
+  "usageRules": [
+    "主色固定为 #528dff。",
+    "深色正文系统以 #16233d 的 95% / 65% / 45% 透明度表达层级。",
+    "官网首页及后续高保真页面必须保留暗色运营场景、产品工作台、客户证明、规模数据和 CTA 的节奏差异。",
+    "页面画布按 1440px 设计，实际内容宽度 1200px；首页 MCP 可使用 1280px 宽容器和 104px 边距。",
+    "默认圆角仍以 8px 和 16px 为主；仅在首页 MCP 对应标签、Logo mark、案例卡中使用 4px / 6px / 14px。",
+    "不得使用 text-transform 改写 iDMS、SaaS 或其他大小写敏感术语。",
+    "未在 PPT、旧官网、T27/T31 或用户确认中出现的指标、客户、Logo、产品截图、认证、SLA、平台接入状态不得写成正式事实。"
+  ]
+}

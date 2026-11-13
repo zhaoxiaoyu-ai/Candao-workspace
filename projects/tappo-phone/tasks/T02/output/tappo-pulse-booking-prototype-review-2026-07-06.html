@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TAPPO pulse 订座功能补充 - 原型状态评审</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f6f8;
+      --card: #ffffff;
+      --text: #191b24;
+      --muted: #667085;
+      --line: #e5e7ee;
+      --brand: #ff6b35;
+      --brand-soft: #fff0e8;
+      --shadow: 0 18px 45px rgba(25, 27, 36, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "OPPO Sans 4.0", "OPPO Sans", "PingFang SC", "PingFang TC", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main {
+      width: min(1180px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+    header {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 0;
+      max-width: 860px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .status {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      height: 28px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--brand-soft);
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      margin: 18px 0;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .notes {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+    figure {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f1f2f4;
+    }
+    figcaption {
+      padding: 12px 14px 14px;
+      border-top: 1px solid var(--line);
+    }
+    figcaption strong {
+      display: block;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    figcaption span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .blocked {
+      border-color: rgba(255, 107, 53, 0.35);
+      background: linear-gradient(180deg, #fff7f2 0%, #ffffff 100%);
+    }
+    code {
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: #f0f1f4;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>TAPPO pulse 订座功能补充 - 原型状态评审</h1>
+      <p class="subtitle">本页用于记录 2026-07-06 从 Tappo Phone 原型抽取的订座功能状态，作为补入 TAPPO pulse Figma 文件前的可视化依据。目标 Figma 文件当前连接需要重新认证，因此本轮先完成原型状态截图、交互拆解和落图规格。</p>
+      <div class="status">
+        <span class="pill">原型来源已核对</span>
+        <span class="pill">8 个关键状态截图</span>
+        <span class="pill">Figma 写入待重新认证</span>
+      </div>
+    </header>
+
+    <section class="panel blocked">
+      <h2>当前阻塞</h2>
+      <ul class="notes">
+        <li>目标文件：<code>nHamLH3qlZYFXVC0OVxNqc</code>，用户指定入口节点 <code>0:1</code>。</li>
+        <li>Figma 连接返回需要重新认证，暂时无法直接创建或更新 TAPPO pulse 画板。</li>
+        <li>恢复 Figma 授权后，应按交接说明创建一组订座页面：列表、服务暂停、新增预约、日期选择、拒绝、取消、Tappo Provider、Minitable Provider。</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>补页范围</h2>
+      <ul class="notes">
+        <li>保留原型完整内容与交互：开通入口、Provider 路由、服务开关、日期/状态/搜索筛选、列表状态、操作按钮、表单校验、日历可选状态、Toast/确认弹窗。</li>
+        <li>视觉落地时应参考用户提供的 TAPPO POS 订座确认稿：列表信息密度、弹窗结构、破坏性操作确认、日期选择日历和状态色语义。</li>
+        <li>同时遵循 TAPPO pulse / App 规范：390px 宽度、OPPO Sans 4.0、16px 圆角卡片、橙色主 CTA、轻量干净、运营可信、避免 emoji 图标。</li>
+      </ul>
+    </section>
+
+    <section class="grid">
+      <figure>
+        <img src="tappo-pulse-booking-prototype-screens/01-booking-list-default.png" alt="订座列表默认状态" />
+        <figcaption><strong>01 订座列表默认状态</strong><span>服务开关、日期/搜索、状态统计、预约卡片、待确认/已确认操作。</span></figcaption>
+      </figure>
+      <figure>
+        <img src="tappo-pulse-booking-prototype-screens/02-booking-list-service-paused.png" alt="订座服务暂停状态" />
+        <figcaption><strong>02 订座服务暂停</strong><span>关闭服务后显示暂停提示，新增和列表操作应置灰或不可操作。</span></figcaption>
+      </figure>
+      <figure>
+        <img src="tappo-pulse-booking-prototype-screens/03-reject-booking-modal.png" alt="拒绝预约弹窗" />
+        <figcaption><strong>03 拒绝预约弹窗</strong><span>原因必选：时段已满、不符合订金要求、其他；未选原因需 Toast 阻止。</span></figcaption>
+      </figure>
+      <figure>
+        <img src="tappo-pulse-booking-prototype-screens/04-cancel-booking-modal.png" alt="取消预约弹窗" />
+        <figcaption><strong>04 取消预约弹窗</strong><span>确认取消后发送取消通知邮件给顾客，属于破坏性操作。</span></figcaption>
+      </figure>
+      <figure>
+        <img src="tappo-pulse-booking-prototype-screens/05-add-booking-modal.png" alt="新增预约弹窗" />
+        <figcaption><strong>05 新增预约弹窗</strong><span>昵称、邮箱、手机、日期、时段、人数、备注；确认预约为主按钮。</span></figcaption>
+      </figure>
+      <figure>
+        <img src="tappo-pulse-booking-prototype-screens/06-booking-date-calendar.png" alt="预约日期选择日历" />
+        <figcaption><strong>06 日期选择日历</strong><span>不营业、已约满、余 5 位、可约、选中态；支持月份切换。</span></figcaption>
+      </figure>
+      <figure>
+        <img src="tappo-pulse-booking-prototype-screens/07-new-booking-page-tappo-provider.png" alt="Tappo Provider 新增预约页" />
+        <figcaption><strong>07 Tappo Provider 新增页</strong><span>Tappo Booking 原生表单分支，独立页面方式保留完整校验。</span></figcaption>
+      </figure>
+      <figure>
+        <img src="tappo-pulse-booking-prototype-screens/08-new-booking-page-minitable-provider.png" alt="Minitable Provider 新增预约页" />
+        <figcaption><strong>08 Minitable Provider 分支</strong><span>第三方新增预约入口，订单完成后回传至 Tappo 列表。</span></figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>

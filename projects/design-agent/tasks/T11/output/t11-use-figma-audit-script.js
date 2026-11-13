@@ -35,7 +35,8 @@ const EXPECTED = {
 
 function paintHex(paint) {
   if (!paint || paint.type !== "SOLID") return "";
-  return figma.util.colorToHex(paint.color).toUpperCase();
+  const toHex = value => Math.round(Math.max(0, Math.min(1, value)) * 255).toString(16).padStart(2, "0").toUpperCase();
+  return `#${toHex(paint.color.r)}${toHex(paint.color.g)}${toHex(paint.color.b)}`;
 }
 
 function hasGeometry(node) {

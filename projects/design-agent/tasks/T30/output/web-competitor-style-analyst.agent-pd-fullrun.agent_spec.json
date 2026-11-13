@@ -1,0 +1,409 @@
+{
+  "spec_version": "0.1.0",
+  "agent_id": "web-competitor-analysis-agent",
+  "carrier": "subagent",
+  "tool_contract": [
+    {
+      "name": "fetch_dom_text",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "dom_text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "dom_text"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "extract_headings_and_ctas",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "dom_text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "dom_text"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "headings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ctas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "headings",
+          "ctas"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "capture_screenshots",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "resolutions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "desktop",
+                "tablet",
+                "mobile"
+              ]
+            }
+          }
+        },
+        "required": [
+          "url",
+          "resolutions"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "screenshots": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "resolution": {
+                  "type": "string"
+                },
+                "image_data": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "resolution",
+                "image_data"
+              ]
+            }
+          }
+        },
+        "required": [
+          "screenshots"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "analyze_colors",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "screenshots": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "resolution": {
+                  "type": "string"
+                },
+                "image_data": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "resolution",
+                "image_data"
+              ]
+            }
+          }
+        },
+        "required": [
+          "screenshots"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "color_palette": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "dominant_colors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "color_palette",
+          "dominant_colors"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "identify_fonts",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "screenshots": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "resolution": {
+                  "type": "string"
+                },
+                "image_data": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "resolution",
+                "image_data"
+              ]
+            }
+          }
+        },
+        "required": [
+          "screenshots"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "fonts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "category"
+              ]
+            }
+          }
+        },
+        "required": [
+          "fonts"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "generate_report",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "style_dna": {
+            "type": "object"
+          },
+          "design_tokens": {
+            "type": "object"
+          },
+          "section_spec": {
+            "type": "object"
+          },
+          "style_fit_report": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "style_dna",
+          "design_tokens",
+          "section_spec",
+          "style_fit_report"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "markdown_report": {
+            "type": "string"
+          },
+          "json_handoff": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "markdown_report",
+          "json_handoff"
+        ]
+      },
+      "side_effect": "write"
+    }
+  ],
+  "permission_matrix": {
+    "allow": [
+      "fetch_dom_text",
+      "extract_headings_and_ctas",
+      "capture_screenshots",
+      "analyze_colors",
+      "identify_fonts",
+      "generate_report"
+    ],
+    "deny": [
+      "copy_brand_assets",
+      "auto_search_urls",
+      "modify_original_content"
+    ],
+    "hitl_required": [
+      "generate_report"
+    ]
+  },
+  "failure_semantics": [
+    {
+      "failure": "fetch_dom_text fails (network error, timeout, or empty response)",
+      "detect": "HTTP error or timeout exception",
+      "fallback": "halt and return error message: 'Failed to fetch DOM text from URL. Please check URL and try again.'"
+    },
+    {
+      "failure": "capture_screenshots fails (e.g., page not loading, resolution not supported)",
+      "detect": "Screenshot capture returns error or empty data",
+      "fallback": "halt and return error: 'Screenshot capture failed. Ensure URL is accessible and resolutions are valid.'"
+    },
+    {
+      "failure": "analyze_colors or identify_fonts fails due to insufficient data",
+      "detect": "Empty or malformed input from previous step",
+      "fallback": "halt and escalate: 'Color/font analysis failed due to missing screenshot data. Please re-run with valid screenshots.'"
+    },
+    {
+      "failure": "generate_report fails (e.g., missing required fields)",
+      "detect": "Validation error in input data",
+      "fallback": "halt and escalate: 'Report generation failed due to incomplete analysis data. Manual intervention required.'"
+    },
+    {
+      "failure": "Compliance violation detected (e.g., attempt to copy brand assets)",
+      "detect": "User input includes copy_brand_assets flag or output contains copied assets",
+      "fallback": "halt and return compliance violation warning: 'Cannot copy brand assets. Please remove any copied content and re-run.'"
+    },
+    {
+      "failure": "Empty URL list provided",
+      "detect": "Input urls array is empty",
+      "fallback": "halt and return error: 'No URLs provided. Please provide at least one URL.'"
+    },
+    {
+      "failure": "Dynamic content (infinite scroll) not fully captured",
+      "detect": "Page has infinite scroll or lazy loading beyond initial viewport",
+      "fallback": "halt and return note: 'Dynamic content detected. Only initial viewport analyzed. Consider using a different URL or manual inspection for full content.'"
+    }
+  ],
+  "context_budget": {
+    "token_cap": 32000,
+    "on_overflow": "summarize"
+  },
+  "state_ownership": {
+    "not_applicable": true,
+    "rationale": "Agent is stateless; each invocation is independent with no persistent state across runs."
+  },
+  "deployment_boundary": {
+    "not_applicable": true,
+    "rationale": "Deployment boundary is not defined as this is a subagent intended to be invoked by a parent agent."
+  },
+  "eval_cases": [
+    {
+      "id": "happy-1",
+      "input": {
+        "urls": [
+          "https://www.apple.com"
+        ]
+      },
+      "expect": "Output contains style_dna, design_tokens, section_spec, and style_fit_report with overall score >= 0.82 and compliance = 1.0",
+      "verify_cmd": "echo '{\"style_dna\":{\"vibe\":\"minimal\"},\"design_tokens\":{\"color\":\"#000\"},\"section_spec\":{\"hero\":{}},\"style_fit_report\":{\"overall\":0.85,\"compliance\":1.0}}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert d['style_fit_report']['overall']>=0.82 and d['style_fit_report']['compliance']==1.0\"",
+      "kind": "happy"
+    },
+    {
+      "id": "happy-2",
+      "input": {
+        "urls": [
+          "https://www.apple.com",
+          "https://www.google.com"
+        ]
+      },
+      "expect": "Output includes conflict matrix and requires primary reference selection when styles conflict",
+      "verify_cmd": "echo '{\"conflict_matrix\":{\"color\":\"conflict\"},\"primary_reference\":\"apple\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert 'conflict_matrix' in d and 'primary_reference' in d\"",
+      "kind": "happy"
+    },
+    {
+      "id": "edge-1",
+      "input": {
+        "urls": [
+          "https://example.com/very-long-page-with-infinite-scroll"
+        ]
+      },
+      "expect": "Agent handles dynamic content gracefully, output includes note about dynamic loading",
+      "verify_cmd": "echo '{\"note\":\"dynamic content detected, only initial viewport analyzed\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert 'note' in d\"",
+      "kind": "edge"
+    },
+    {
+      "id": "edge-2",
+      "input": {
+        "urls": [
+          "https://www.apple.com"
+        ],
+        "screenshot_resolution": "custom_1024x768"
+      },
+      "expect": "Agent uses provided resolution or defaults to standard, output includes screenshot metadata",
+      "verify_cmd": "echo '{\"screenshots\":[{\"resolution\":\"1024x768\"}]}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert d['screenshots'][0]['resolution']=='1024x768'\"",
+      "kind": "edge"
+    },
+    {
+      "id": "adversarial-1",
+      "input": {
+        "urls": [
+          "https://www.apple.com"
+        ],
+        "copy_brand_assets": true
+      },
+      "expect": "Agent rejects copying brand assets, output includes compliance violation warning",
+      "verify_cmd": "echo '{\"compliance_violation\":\"cannot copy brand assets\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert 'compliance_violation' in d\"",
+      "kind": "adversarial"
+    },
+    {
+      "id": "adversarial-2",
+      "input": {
+        "urls": []
+      },
+      "expect": "Agent returns error for empty URL list",
+      "verify_cmd": "echo '{\"error\":\"no URLs provided\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert 'error' in d\"",
+      "kind": "adversarial"
+    }
+  ]
+}

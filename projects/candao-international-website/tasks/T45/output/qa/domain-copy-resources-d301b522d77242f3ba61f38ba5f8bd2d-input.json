@@ -1,0 +1,16 @@
+{
+  "suite": "T45 resources sequential Stitch visible copy QA",
+  "items": [
+    {
+      "id": "t45-resources-resources-d301b522d77242f3ba61f38ba5f8bd2d",
+      "locale": "zh-Hant",
+      "role": "品牌决策者 / 总部运营 / IT / 销售",
+      "page_task": "降低评估、导入、营运和技术疑问",
+      "component_type": "stitch_high_fidelity_candidate_visible_copy",
+      "text": "餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中 / EN\n預約演示\n資源｜餐道\n資源中心\n按你的問題，找到餐道導入、接入、案例與支援入口\n採購、IT、營運、門店、配送和財務團隊可以在這裡找到接入準備、常見問題、支援查詢、案例資源和產品演示入口，減少評估與導入前的不確定。\n01\n評估\n確認問題與系統需求，了解產品架構。\n02\n導入\n梳理系統對接清單，確保 AMS / Connector 順暢連通。\n03\n營運\n日常排錯指南、支援工單提交與系統狀態查詢。\n接入準備清單\n把接入前需要整理的系統對象一次看清\n渠道與入口\ncheck_circle\n外賣平台接入\ncheck_circle\nH5 / Web / APP\ncheck_circle\nQR Code 點餐\n門店系統\ndns\nPOS / KDS 整合\nprint\n打印與後廚單配置\n企業資料\ngroup\nCRM / 會員系統\naccount_balance_wallet\n支付 / ERP 對接\nAMS / Connector\nAPI 規格\ncode\n字段對應\ndata_object\n權限設定\nlock\n異常回傳邏輯\nwarning\naccount_tree\nOMS 邏輯\narrow_forward_ios\nrestaurant_menu\nMenu Center\narrow_forward_ios\naccount_balance\nFinance Center\n餐道\n解決方案\nSaaS\niDMS\nAMS / Connector\n法律與支援\n隱私政策\n服務條款\n技術支援\n© 2024 餐道 Candao. All Rights Reserved.\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n",
+      "must_include": [
+        "餐道"
+      ]
+    }
+  ]
+}

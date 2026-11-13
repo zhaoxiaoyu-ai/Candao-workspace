@@ -1,0 +1,82 @@
+{
+  "suite": "T44 Solutions home-style static QA",
+  "target": "projects/candao-international-website/tasks/T44/output/stitch-output/stitch-screen-b9cd15b7-solutions-cv4.html",
+  "status": "fail",
+  "checks": [
+    {
+      "name": "visible_risk_terms_absent",
+      "status": "fail",
+      "detail": "arrow_forward"
+    },
+    {
+      "name": "raw_disallowed_tokens_absent",
+      "status": "fail",
+      "detail": "arrow_forward"
+    },
+    {
+      "name": "no_obvious_simplified_visible_text",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "primary_color_528dff",
+      "status": "fail",
+      "detail": ""
+    },
+    {
+      "name": "hero_dark_base_0f172a",
+      "status": "fail",
+      "detail": ""
+    },
+    {
+      "name": "platform_dark_base_000d2b",
+      "status": "fail",
+      "detail": ""
+    },
+    {
+      "name": "product_panel_141e30",
+      "status": "fail",
+      "detail": ""
+    },
+    {
+      "name": "button_radius_8px",
+      "status": "fail",
+      "detail": ""
+    },
+    {
+      "name": "white_problem_section",
+      "status": "fail",
+      "detail": ""
+    },
+    {
+      "name": "dark_scenario_section",
+      "status": "fail",
+      "detail": ""
+    },
+    {
+      "name": "workbench_pattern",
+      "status": "fail",
+      "detail": ""
+    },
+    {
+      "name": "footer_dark",
+      "status": "fail",
+      "detail": ""
+    },
+    {
+      "name": "header_nav_complete_before_h1",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "footer_nav_complete",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "h1_content_present",
+      "status": "pass",
+      "detail": ""
+    }
+  ]
+}

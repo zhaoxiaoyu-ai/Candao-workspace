@@ -1,0 +1,1445 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TAPPO PULSE 订座功能补充 - 视觉评审稿</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f4f6f9;
+      --ink: #171923;
+      --muted: #6b7280;
+      --subtle: #9aa3b2;
+      --line: #e7ebf2;
+      --card: #ffffff;
+      --brand: #ff6b35;
+      --brand-2: #ff8a42;
+      --brand-soft: #fff1e8;
+      --blue: #3478f6;
+      --blue-soft: #eef5ff;
+      --green: #21b26b;
+      --green-soft: #e9f8f0;
+      --red: #f04438;
+      --red-soft: #fff0ef;
+      --amber: #f59e0b;
+      --amber-soft: #fff7e6;
+      --shadow: 0 18px 44px rgba(18, 24, 38, .08);
+      --shadow-soft: 0 8px 24px rgba(18, 24, 38, .06);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 18% 0%, rgba(255, 107, 53, .12), transparent 28%),
+        radial-gradient(circle at 86% 4%, rgba(52, 120, 246, .10), transparent 28%),
+        var(--page);
+      color: var(--ink);
+      font-family: "OPPO Sans 4.0", "OPPO Sans", "PingFang SC", "PingFang TC", -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: 0;
+    }
+
+    .board {
+      width: min(1840px, calc(100vw - 48px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+    }
+
+    .board-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 10px 0 0;
+      max-width: 920px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      height: 30px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 107, 53, .22);
+      background: rgba(255, 255, 255, .72);
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 6px 16px rgba(255, 107, 53, .08);
+    }
+
+    .screens {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+      gap: 22px;
+      align-items: start;
+    }
+
+    .spec-card {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      background: rgba(255, 255, 255, .78);
+      border: 1px solid rgba(231, 235, 242, .9);
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(16px);
+    }
+
+    .spec-item {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      min-height: 74px;
+    }
+
+    .spec-item b {
+      display: block;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .spec-item span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .screen-wrap {
+      display: grid;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .screen-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 390px;
+      padding: 0 4px;
+    }
+
+    .screen-label strong {
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .screen-label span {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .phone {
+      position: relative;
+      width: 390px;
+      height: 844px;
+      overflow: hidden;
+      background: #f6f7fa;
+      border: 1px solid #dfe5ee;
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .phone::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 8px rgba(255, 255, 255, .72);
+      z-index: 80;
+    }
+
+    .status-bar {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px 0;
+      font-size: 12px;
+      font-weight: 800;
+      color: #242936;
+    }
+
+    .sys {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 99px;
+      background: #242936;
+      box-shadow: 9px 0 0 #242936, 18px 0 0 #242936;
+    }
+
+    .appbar {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      background: rgba(255, 255, 255, .88);
+      border-bottom: 1px solid rgba(231, 235, 242, .76);
+      backdrop-filter: blur(14px);
+    }
+
+    .appbar h2 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fff;
+      color: #394150;
+      box-shadow: 0 5px 12px rgba(18, 24, 38, .05);
+    }
+
+    .icon-btn.brand {
+      border-color: rgba(255, 107, 53, .18);
+      color: var(--brand);
+      background: var(--brand-soft);
+    }
+
+    .icon {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      flex: 0 0 18px;
+    }
+
+    .icon.back::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      width: 9px;
+      height: 9px;
+      border-left: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg);
+      border-radius: 1px;
+    }
+
+    .icon.plus::before,
+    .icon.plus::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      top: 8px;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+    }
+
+    .icon.plus::after {
+      transform: rotate(90deg);
+    }
+
+    .icon.close::before,
+    .icon.close::after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      right: 3px;
+      top: 8px;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      transform: rotate(45deg);
+    }
+
+    .icon.close::after { transform: rotate(-45deg); }
+
+    .icon.calendar {
+      border: 2px solid currentColor;
+      border-radius: 5px;
+    }
+
+    .icon.calendar::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      right: 2px;
+      top: 5px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+    }
+
+    .icon.clock {
+      border: 2px solid currentColor;
+      border-radius: 99px;
+    }
+
+    .icon.clock::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 4px;
+      width: 2px;
+      height: 5px;
+      background: currentColor;
+      border-radius: 2px;
+    }
+
+    .icon.clock::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      width: 5px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+    }
+
+    .icon.mail::before {
+      content: "";
+      position: absolute;
+      inset: 3px 1px;
+      border: 2px solid currentColor;
+      border-radius: 5px;
+    }
+
+    .icon.mail::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 7px;
+      width: 10px;
+      height: 7px;
+      border-left: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(-45deg);
+      border-radius: 1px;
+    }
+
+    .icon.phone::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      width: 8px;
+      height: 16px;
+      border: 2px solid currentColor;
+      border-radius: 5px;
+    }
+
+    .icon.people::before,
+    .icon.people::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border: 2px solid currentColor;
+      border-radius: 99px;
+      top: 1px;
+    }
+
+    .icon.people::before { left: 1px; }
+    .icon.people::after { right: 1px; opacity: .65; }
+
+    .icon.route::before {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      border: 2px solid currentColor;
+      border-radius: 4px;
+      transform: rotate(12deg);
+    }
+
+    .icon.route::after {
+      content: "";
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      width: 7px;
+      height: 7px;
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+    }
+
+    .content {
+      position: absolute;
+      top: 92px;
+      left: 0;
+      right: 0;
+      bottom: 72px;
+      overflow: hidden;
+      padding: 14px 16px 18px;
+    }
+
+    .content.no-nav { bottom: 0; }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px;
+      background: linear-gradient(135deg, #fff 0%, #fff8f4 100%);
+      border: 1px solid rgba(255, 107, 53, .14);
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .mini-orb {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 25%, #fff 0%, #ffd4bc 24%, #ff7a3d 68%, #e95a20 100%);
+      box-shadow: 0 9px 20px rgba(255, 107, 53, .24);
+      flex: 0 0 auto;
+    }
+
+    .label-stack b {
+      display: block;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .label-stack span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+    .switch {
+      width: 46px;
+      height: 28px;
+      padding: 3px;
+      border-radius: 999px;
+      background: var(--brand);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+    }
+
+    .switch::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 22px;
+      margin-left: 18px;
+      border-radius: 99px;
+      background: #fff;
+      box-shadow: 0 3px 8px rgba(18, 24, 38, .18);
+    }
+
+    .switch.off {
+      background: #d8dde7;
+    }
+
+    .switch.off::after {
+      margin-left: 0;
+    }
+
+    .add-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-width: 112px;
+      height: 42px;
+      padding: 0 14px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: 0 10px 20px rgba(255, 107, 53, .24);
+    }
+
+    .add-cta.disabled {
+      background: #d8dde7;
+      color: #fff;
+      box-shadow: none;
+    }
+
+    .notice {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 42px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: var(--amber-soft);
+      color: #9a5b00;
+      font-size: 13px;
+      font-weight: 800;
+      border: 1px solid rgba(245, 158, 11, .2);
+    }
+
+    .filters {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .88);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: 136px 1fr;
+      gap: 9px;
+    }
+
+    .field {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fff;
+      color: #333b49;
+      padding: 0 11px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .field.placeholder {
+      color: var(--subtle);
+      font-weight: 600;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      overflow: hidden;
+    }
+
+    .tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #f3f5f8;
+      color: #303746;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .tab.active {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 8px 16px rgba(255, 107, 53, .18);
+    }
+
+    .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .32);
+      font-size: 11px;
+    }
+
+    .tab:not(.active) .num {
+      background: #fff;
+      color: var(--muted);
+    }
+
+    .booking-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .booking-card {
+      display: grid;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(231, 235, 242, .9);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .customer b {
+      display: block;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .customer span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      height: 26px;
+      padding: 0 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .pending { color: #bc6400; background: var(--amber-soft); }
+    .confirmed { color: #1b5fd7; background: var(--blue-soft); }
+    .arrived { color: #13824f; background: var(--green-soft); }
+    .cancelled, .noshow { color: #788292; background: #f0f2f6; }
+    .danger { color: var(--red); background: var(--red-soft); }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .line {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      min-width: 0;
+      color: #424b5c;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .line strong {
+      color: #222937;
+      font-size: 13px;
+    }
+
+    .line.link {
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .note {
+      padding: 9px 10px;
+      border-radius: 12px;
+      background: #f7f8fb;
+      color: #5c6676;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 78px;
+      height: 36px;
+      padding: 0 12px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .btn.fill-green { background: var(--green); color: #fff; }
+    .btn.fill-blue { background: var(--blue); color: #fff; }
+    .btn.outline-red { border-color: rgba(240, 68, 56, .34); color: var(--red); background: #fff; }
+    .btn.ghost { background: #f4f6f9; color: #333b49; }
+    .btn.fill-brand { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; }
+    .btn.fill-red { background: var(--red); color: #fff; }
+    .btn.disabled { background: #eef1f5; color: #b0b7c3; }
+
+    .bottom-nav {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 72px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background: rgba(255, 255, 255, .92);
+      border-top: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      padding-bottom: 6px;
+      z-index: 20;
+    }
+
+    .nav-item {
+      display: grid;
+      place-items: center;
+      align-content: center;
+      gap: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .nav-symbol {
+      width: 27px;
+      height: 27px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      position: relative;
+    }
+
+    .nav-symbol::before {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border: 2px solid currentColor;
+      border-radius: 4px;
+    }
+
+    .nav-item.active {
+      color: var(--brand);
+    }
+
+    .nav-item.active .nav-symbol {
+      background: var(--brand-soft);
+      border-color: rgba(255, 107, 53, .18);
+    }
+
+    .empty-card {
+      margin-top: 28px;
+      padding: 34px 20px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      gap: 12px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .empty-visual {
+      width: 82px;
+      height: 82px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 32% 28%, rgba(255,255,255,.95), rgba(255,255,255,0) 24%),
+        linear-gradient(135deg, #fff0e8, #eaf4ff);
+      display: grid;
+      place-items: center;
+      color: var(--brand);
+      box-shadow: inset 0 0 0 1px rgba(255, 107, 53, .12), 0 14px 28px rgba(255, 107, 53, .12);
+    }
+
+    .empty-card b {
+      font-size: 18px;
+    }
+
+    .empty-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 40;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: rgba(15, 23, 42, .42);
+      backdrop-filter: blur(4px);
+    }
+
+    .modal {
+      width: 100%;
+      max-width: 342px;
+      max-height: 766px;
+      overflow: hidden;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 26px 60px rgba(15, 23, 42, .22);
+      border: 1px solid rgba(255, 255, 255, .7);
+    }
+
+    .modal.small {
+      max-width: 308px;
+    }
+
+    .modal-head {
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--line);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .modal-body {
+      padding: 16px;
+      display: grid;
+      gap: 13px;
+    }
+
+    .modal-foot {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 14px 16px 16px;
+      border-top: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 900;
+      color: #252b38;
+    }
+
+    .form-control {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fff;
+      color: var(--subtle);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .helper {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .textarea {
+      min-height: 76px;
+      align-items: flex-start;
+      padding-top: 12px;
+    }
+
+    .calendar-modal {
+      width: 342px;
+      border-radius: 24px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 26px 60px rgba(15, 23, 42, .24);
+    }
+
+    .month-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      font-size: 18px;
+      font-weight: 900;
+      margin: 2px 0 10px;
+    }
+
+    .round {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 99px;
+      background: #f4f6f9;
+      color: #333b49;
+      font-weight: 900;
+    }
+
+    .calendar-legend {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .calendar-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      background: var(--line);
+    }
+
+    .week, .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+    }
+
+    .week div {
+      text-align: center;
+      color: var(--subtle);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .day {
+      height: 45px;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      gap: 2px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #1f2532;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .day span {
+      font-size: 10px;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .day.low {
+      background: var(--amber-soft);
+      border-color: rgba(245, 158, 11, .28);
+    }
+
+    .day.low span { color: #bd6a00; }
+    .day.closed {
+      background: #eef1f5;
+      color: #a5adba;
+    }
+    .day.closed span { color: #9aa3b2; }
+    .day.full {
+      background: var(--red-soft);
+      border-color: rgba(240, 68, 56, .22);
+      color: var(--red);
+    }
+    .day.full span { color: var(--red); }
+    .day.selected {
+      border-color: var(--brand);
+      box-shadow: inset 0 0 0 1px var(--brand), 0 7px 14px rgba(255, 107, 53, .16);
+    }
+
+    .calendar-footnote {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .radio-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .radio-row {
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .radio-dot {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #d6dce6;
+      border-radius: 99px;
+      flex: 0 0 18px;
+    }
+
+    .radio-row.active {
+      border-color: rgba(255, 107, 53, .34);
+      background: var(--brand-soft);
+      color: var(--brand);
+    }
+
+    .radio-row.active .radio-dot {
+      border-color: var(--brand);
+      box-shadow: inset 0 0 0 4px #fff;
+      background: var(--brand);
+    }
+
+    .confirm-copy {
+      padding: 8px 4px 4px;
+      text-align: center;
+    }
+
+    .confirm-copy b {
+      display: block;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .confirm-copy span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .provider-card {
+      display: grid;
+      gap: 14px;
+      margin-top: 12px;
+      padding: 16px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .provider-tag {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      height: 26px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .provider-card h3 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .provider-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .page-form {
+      margin-top: 12px;
+      padding: 16px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 14px;
+    }
+
+    .footer-actions {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 12px 16px 22px;
+      background: rgba(255, 255, 255, .94);
+      border-top: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      z-index: 25;
+    }
+
+    .toast {
+      position: absolute;
+      left: 50%;
+      bottom: 90px;
+      transform: translateX(-50%);
+      min-height: 36px;
+      padding: 0 13px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: rgba(23, 25, 35, .9);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      z-index: 70;
+    }
+
+    .dimmed .booking-card,
+    .dimmed .filters,
+    .dimmed .toolbar {
+      opacity: .72;
+    }
+
+    @media (max-width: 1080px) {
+      .board-head { grid-template-columns: 1fr; }
+      .legend { justify-content: flex-start; }
+      .spec-card { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 520px) {
+      .board { width: calc(100vw - 18px); }
+      .screens { grid-template-columns: 1fr; }
+      .spec-card { grid-template-columns: 1fr; }
+      .phone, .screen-label { width: 390px; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="board">
+    <header class="board-head">
+      <div>
+        <h1>TAPPO PULSE 订座功能补充 - 视觉评审稿</h1>
+        <p class="lead">本稿按用户最新口径处理：订座交互沿用 Tappo APP 既有流程，包括订座列表；视觉层按 TAPPO PULSE 的轻量、干净、运营可信、橙色主操作规范重绘。目标 Figma 写入仍等待 connector 重新认证。</p>
+      </div>
+      <div class="legend">
+        <span class="pill">交互沿用 Tappo APP</span>
+        <span class="pill">视觉按 TAPPO PULSE</span>
+        <span class="pill">390px 手机画板</span>
+      </div>
+    </header>
+
+    <section class="screens">
+      <div class="spec-card">
+        <div class="spec-item"><b>交互基线</b><span>沿用现有订座入口、列表、状态筛选、服务开关、操作按钮、新增预约和 Provider 分支。</span></div>
+        <div class="spec-item"><b>视觉规范</b><span>白卡、浅灰画布、16px 圆角、橙色主 CTA、低阴影、线性图标，避免旧原型 emoji 风格。</span></div>
+        <div class="spec-item"><b>内容保留</b><span>客户信息、预约详情、渠道、备注、状态、通知提示、错误提示等原型内容不删减。</span></div>
+        <div class="spec-item"><b>Figma 后续</b><span>授权恢复后创建 `TAPPO pulse / Reservation / 2026-07-06` 画板组并按本稿落图。</span></div>
+      </div>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>01 订座列表 - 全部</strong><span>列表主流程</span></div>
+        <div class="phone">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>訂座</h2><span class="icon-btn brand"><span class="icon plus"></span></span></div>
+          <div class="content">
+            <div class="toolbar">
+              <div class="toolbar-left"><div class="mini-orb"></div><div class="label-stack"><b>訂座服務</b><span>Central store · Tappo Booking</span></div></div>
+              <button class="add-cta">新增預約</button>
+            </div>
+            <div class="filters">
+              <div class="input-row">
+                <div class="field"><span class="icon calendar"></span>2026/06/10</div>
+                <div class="field placeholder">搜尋暱稱/手機號/郵箱...</div>
+              </div>
+              <div class="tabs"><div class="tab active">全部 <span class="num">3</span></div><div class="tab">待確認 <span class="num">2</span></div><div class="tab">已確認 <span class="num">1</span></div><div class="tab">已到店</div></div>
+            </div>
+            <div class="booking-list">
+              <article class="booking-card">
+                <div class="card-head"><div class="customer"><b>陳大明</b><span>daimingo@email.com</span></div><span class="status-chip pending">待確認</span></div>
+                <div class="info-grid">
+                  <div class="line"><span class="icon phone"></span><span>+852 ****1234 <strong style="color:#3478f6;">[查看]</strong></span></div>
+                  <div class="line"><span class="icon calendar"></span><span>2026-06-10</span></div>
+                  <div class="line"><span class="icon clock"></span><span>晚餐 17:30-21:00</span></div>
+                  <div class="line"><span class="icon people"></span><span>3~4人 · Tappo</span></div>
+                </div>
+                <div class="note">備註：靠窗位置</div>
+                <div class="actions"><span class="btn fill-green">接受</span><span class="btn outline-red">拒絕</span><span class="btn ghost">取消預約</span></div>
+              </article>
+              <article class="booking-card">
+                <div class="card-head"><div class="customer"><b>李小華</b><span>xiaohua@email.com</span></div><span class="status-chip confirmed">已確認</span></div>
+                <div class="info-grid">
+                  <div class="line"><span class="icon phone"></span><span>+852 ****5678 <strong style="color:#3478f6;">[查看]</strong></span></div>
+                  <div class="line"><span class="icon calendar"></span><span>2026-06-10</span></div>
+                  <div class="line"><span class="icon clock"></span><span>午餐 11:00-14:00</span></div>
+                  <div class="line"><span class="icon people"></span><span>1~2人 · Minitable</span></div>
+                </div>
+                <div class="actions"><span class="btn fill-blue">標記到店</span><span class="btn outline-red">標記爽約</span><span class="btn ghost">取消預約</span></div>
+              </article>
+            </div>
+          </div>
+          <div class="bottom-nav"><div class="nav-item active"><span class="nav-symbol"></span><span>應用</span></div><div class="nav-item"><span class="nav-symbol"></span><span>設置</span></div></div>
+        </div>
+      </section>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>02 订座列表 - 服务暂停</strong><span>禁用操作</span></div>
+        <div class="phone dimmed">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>訂座</h2><span class="icon-btn"><span class="icon plus"></span></span></div>
+          <div class="content">
+            <div class="toolbar">
+              <div class="toolbar-left"><div class="mini-orb"></div><div class="label-stack"><b>訂座服務</b><span>已暫停，列表仍可查看</span></div></div>
+              <div class="switch off"></div>
+            </div>
+            <div class="notice">訂座服務已暫停，請開啟服務後再新增或處理預約。</div>
+            <div class="filters">
+              <div class="input-row"><div class="field"><span class="icon calendar"></span>2026/06/10</div><div class="field placeholder">搜尋暱稱/手機號/郵箱...</div></div>
+              <div class="tabs"><div class="tab active">全部 <span class="num">3</span></div><div class="tab">待確認 <span class="num">2</span></div><div class="tab">已確認 <span class="num">1</span></div></div>
+            </div>
+            <div class="booking-list">
+              <article class="booking-card">
+                <div class="card-head"><div class="customer"><b>陳大明</b><span>daimingo@email.com</span></div><span class="status-chip pending">待確認</span></div>
+                <div class="info-grid"><div class="line"><span class="icon phone"></span><span>+852 ****1234</span></div><div class="line"><span class="icon calendar"></span><span>2026-06-10</span></div><div class="line"><span class="icon clock"></span><span>晚餐 17:30-21:00</span></div><div class="line"><span class="icon people"></span><span>3~4人 · Tappo</span></div></div>
+                <div class="actions"><span class="btn disabled">接受</span><span class="btn disabled">拒絕</span><span class="btn disabled">取消預約</span></div>
+              </article>
+            </div>
+          </div>
+          <div class="bottom-nav"><div class="nav-item active"><span class="nav-symbol"></span><span>應用</span></div><div class="nav-item"><span class="nav-symbol"></span><span>設置</span></div></div>
+        </div>
+      </section>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>03 订座列表 - 空状态</strong><span>无预约</span></div>
+        <div class="phone">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>訂座</h2><span class="icon-btn brand"><span class="icon plus"></span></span></div>
+          <div class="content">
+            <div class="toolbar">
+              <div class="toolbar-left"><div class="mini-orb"></div><div class="label-stack"><b>訂座服務</b><span>今日尚無符合條件的預約</span></div></div>
+              <button class="add-cta">新增預約</button>
+            </div>
+            <div class="filters">
+              <div class="input-row"><div class="field"><span class="icon calendar"></span>2026/06/11</div><div class="field placeholder">搜尋暱稱/手機號/郵箱...</div></div>
+              <div class="tabs"><div class="tab active">全部 <span class="num">0</span></div><div class="tab">待確認 <span class="num">0</span></div><div class="tab">已確認 <span class="num">0</span></div></div>
+            </div>
+            <div class="empty-card">
+              <div class="empty-visual"><span class="icon calendar" style="width:34px;height:34px;"></span></div>
+              <b>暫無預約記錄</b>
+              <p>可調整日期或搜尋條件，也可以直接新增一筆 Tappo Booking 預約。</p>
+              <span class="btn fill-brand">新增預約</span>
+            </div>
+          </div>
+          <div class="bottom-nav"><div class="nav-item active"><span class="nav-symbol"></span><span>應用</span></div><div class="nav-item"><span class="nav-symbol"></span><span>設置</span></div></div>
+        </div>
+      </section>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>04 新增预约 - 弹窗</strong><span>列表内创建</span></div>
+        <div class="phone">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>訂座</h2><span class="icon-btn brand"><span class="icon plus"></span></span></div>
+          <div class="content">
+            <div class="toolbar"><div class="toolbar-left"><div class="mini-orb"></div><div class="label-stack"><b>訂座服務</b><span>Central store · Tappo Booking</span></div></div><button class="add-cta">新增預約</button></div>
+            <div class="filters"><div class="input-row"><div class="field">2026/06/10</div><div class="field placeholder">搜尋暱稱/手機號/郵箱...</div></div><div class="tabs"><div class="tab active">全部 <span class="num">3</span></div><div class="tab">待確認 <span class="num">2</span></div></div></div>
+          </div>
+          <div class="bottom-nav"><div class="nav-item active"><span class="nav-symbol"></span><span>應用</span></div><div class="nav-item"><span class="nav-symbol"></span><span>設置</span></div></div>
+          <div class="overlay">
+            <div class="modal">
+              <div class="modal-head">新增預約</div>
+              <div class="modal-body">
+                <div class="form-group"><label>暱稱 *</label><div class="form-control">請輸入顧客暱稱</div></div>
+                <div class="form-group"><label>郵箱</label><div class="form-control">example@email.com</div></div>
+                <div class="form-group"><label>手機 *</label><div class="form-control">+852 XXXX XXXX</div></div>
+                <div class="form-group"><label>預約日期 *</label><div class="form-control"><span>2026-06-10</span><span class="icon calendar"></span></div><span class="helper">日期日曆中會標示不營業、已約滿與剩餘 5 個名額的日期。</span></div>
+                <div class="form-group"><label>預約時段 *</label><div class="form-control">請選擇時段</div></div>
+                <div class="form-group"><label>人數 *</label><div class="form-control">請選擇人數</div></div>
+                <div class="form-group"><label>備註</label><div class="form-control textarea">如有特殊需求可補充（選填）</div></div>
+              </div>
+              <div class="modal-foot"><span class="btn ghost">取消</span><span class="btn fill-brand">確認預約</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>05 选择预约日期</strong><span>日历弹窗</span></div>
+        <div class="phone">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>訂座</h2><span class="icon-btn brand"><span class="icon plus"></span></span></div>
+          <div class="content"><div class="toolbar"><div class="toolbar-left"><div class="mini-orb"></div><div class="label-stack"><b>訂座服務</b><span>選擇可預約日期</span></div></div><button class="add-cta">新增預約</button></div></div>
+          <div class="bottom-nav"><div class="nav-item active"><span class="nav-symbol"></span><span>應用</span></div><div class="nav-item"><span class="nav-symbol"></span><span>設置</span></div></div>
+          <div class="overlay">
+            <div class="calendar-modal">
+              <div class="modal-head">選擇預約日期</div>
+              <div class="modal-body">
+                <div class="month-row"><span class="round">‹</span><span>2026 年 6 月</span><span class="round">›</span></div>
+                <div class="calendar-legend"><span><i class="legend-dot"></i>不營業</span><span><i class="legend-dot" style="background:#fca5a5;"></i>已約滿</span><span><i class="legend-dot" style="background:#fdba74;"></i>餘 5 位</span></div>
+                <div class="week"><div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div><div>日</div></div>
+                <div class="days">
+                  <div class="day">1<span>可約</span></div><div class="day">2<span>可約</span></div><div class="day">3<span>可約</span></div><div class="day">4<span>可約</span></div><div class="day">5<span>可約</span></div><div class="day">6<span>可約</span></div><div class="day">7<span>可約</span></div>
+                  <div class="day">8<span>可約</span></div><div class="day closed">9<span>休息</span></div><div class="day selected">10<span>可約</span></div><div class="day">11<span>可約</span></div><div class="day low">12<span>余5</span></div><div class="day">13<span>可約</span></div><div class="day full">14<span>已滿</span></div>
+                  <div class="day">15<span>可約</span></div><div class="day closed">16<span>休息</span></div><div class="day">17<span>可約</span></div><div class="day">18<span>可約</span></div><div class="day low">19<span>余5</span></div><div class="day">20<span>可約</span></div><div class="day">21<span>可約</span></div>
+                  <div class="day full">22<span>已滿</span></div><div class="day">23<span>可約</span></div><div class="day closed">24<span>休息</span></div><div class="day">25<span>可約</span></div><div class="day">26<span>可約</span></div><div class="day low">27<span>余5</span></div><div class="day">28<span>可約</span></div>
+                  <div class="day">29<span>可約</span></div><div class="day">30<span>可約</span></div>
+                </div>
+                <div class="calendar-footnote">灰色日期不可選；橙色日期代表當日訂座庫存僅剩 5 個；紅色日期代表已約滿。</div>
+              </div>
+              <div class="modal-foot"><span class="btn ghost">取消</span><span class="btn fill-brand">完成</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>06 拒绝预约</strong><span>原因必选</span></div>
+        <div class="phone">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>訂座</h2><span class="icon-btn brand"><span class="icon plus"></span></span></div>
+          <div class="content">
+            <div class="toolbar"><div class="toolbar-left"><div class="mini-orb"></div><div class="label-stack"><b>訂座服務</b><span>處理待確認預約</span></div></div><button class="add-cta">新增預約</button></div>
+            <div class="booking-list"><article class="booking-card"><div class="card-head"><div class="customer"><b>陳大明</b><span>daimingo@email.com</span></div><span class="status-chip pending">待確認</span></div><div class="actions"><span class="btn fill-green">接受</span><span class="btn outline-red">拒絕</span><span class="btn ghost">取消預約</span></div></article></div>
+          </div>
+          <div class="bottom-nav"><div class="nav-item active"><span class="nav-symbol"></span><span>應用</span></div><div class="nav-item"><span class="nav-symbol"></span><span>設置</span></div></div>
+          <div class="overlay">
+            <div class="modal small">
+              <div class="modal-head">拒絕預約</div>
+              <div class="modal-body">
+                <div class="radio-list">
+                  <div class="radio-row active"><span class="radio-dot"></span><span>時段已滿</span></div>
+                  <div class="radio-row"><span class="radio-dot"></span><span>不符合訂金要求</span></div>
+                  <div class="radio-row"><span class="radio-dot"></span><span>其他</span></div>
+                </div>
+              </div>
+              <div class="modal-foot"><span class="btn ghost">取消</span><span class="btn fill-red">確認拒絕</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>07 取消预约</strong><span>通知顾客</span></div>
+        <div class="phone">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>訂座</h2><span class="icon-btn brand"><span class="icon plus"></span></span></div>
+          <div class="content"><div class="toolbar"><div class="toolbar-left"><div class="mini-orb"></div><div class="label-stack"><b>訂座服務</b><span>取消前需二次確認</span></div></div><button class="add-cta">新增預約</button></div></div>
+          <div class="bottom-nav"><div class="nav-item active"><span class="nav-symbol"></span><span>應用</span></div><div class="nav-item"><span class="nav-symbol"></span><span>設置</span></div></div>
+          <div class="overlay">
+            <div class="modal small">
+              <div class="modal-head">取消預約</div>
+              <div class="modal-body"><div class="confirm-copy"><b>確定取消此預約？</b><span>取消後將發送取消通知郵件給顧客。</span></div></div>
+              <div class="modal-foot"><span class="btn ghost">取消</span><span class="btn fill-red">確認取消</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>08 新增预约 - Tappo Provider</strong><span>原生表单</span></div>
+        <div class="phone">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>新增預約</h2><span class="icon-btn"><span class="icon close"></span></span></div>
+          <div class="content no-nav" style="bottom:76px;">
+            <div class="provider-card"><span class="provider-tag">當前供應商</span><h3>Tappo Booking</h3><p>當前門店使用 Tappo Booking，可直接在此頁完成新增預約。</p></div>
+            <div class="page-form">
+              <div class="form-group"><label>暱稱 *</label><div class="form-control">請輸入顧客暱稱</div></div>
+              <div class="form-group"><label>郵箱</label><div class="form-control">example@email.com</div><span class="helper">郵箱 / 手機 二選一必填</span></div>
+              <div class="form-group"><label>手機</label><div class="form-control">+852 XXXX XXXX</div></div>
+              <div class="form-group"><label>預約日期 *</label><div class="form-control">2026-06-10</div></div>
+              <div class="form-group"><label>預約時段 *</label><div class="form-control">請選擇時段</div></div>
+              <div class="form-group"><label>人數 *</label><div class="form-control">請選擇人數</div></div>
+            </div>
+          </div>
+          <div class="footer-actions"><span class="btn ghost">取消</span><span class="btn fill-brand">確認預約</span></div>
+        </div>
+      </section>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>09 新增预约 - Minitable Provider</strong><span>第三方入口</span></div>
+        <div class="phone">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>新增預約</h2><span class="icon-btn"><span class="icon close"></span></span></div>
+          <div class="content no-nav">
+            <div class="provider-card"><span class="provider-tag">當前供應商</span><h3>Minitable Booking</h3><p>當前門店由 Minitable Booking 提供新增預約流程，以下原生表單將切換為跳轉提示。</p></div>
+            <div class="provider-card" style="margin-top:60px;">
+              <div style="display:flex;align-items:center;gap:12px;"><span class="icon-btn brand" style="width:44px;height:44px;"><span class="icon route"></span></span><h3 style="font-size:18px;">前往 Minitable Booking</h3></div>
+              <p>新增預約將通過跳轉 / 內嵌第三方頁面發起，訂單完成後會回傳到 Tappo 列表。</p>
+              <span class="btn fill-brand" style="width:100%;">打開 Minitable Booking</span>
+            </div>
+          </div>
+          <div class="toast">即將打開 Minitable Booking</div>
+        </div>
+      </section>
+
+      <section class="screen-wrap">
+        <div class="screen-label"><strong>10 新增预约 - 未启用 Provider</strong><span>配置提示</span></div>
+        <div class="phone">
+          <div class="status-bar"><span>9:41</span><span class="sys"><span class="dot"></span></span></div>
+          <div class="appbar"><span class="icon-btn brand"><span class="icon back"></span></span><h2>新增預約</h2><span class="icon-btn"><span class="icon close"></span></span></div>
+          <div class="content no-nav">
+            <div class="provider-card"><span class="provider-tag" style="background:var(--amber-soft);color:#a15c00;">供應商狀態</span><h3>訂座供應商尚未設置</h3><p>請先在 MOS「應用服務中心 -> 應用開通」為當前門店啟用訂座供應商。</p></div>
+            <div class="empty-card" style="margin-top:60px;">
+              <div class="empty-visual"><span class="icon route" style="width:34px;height:34px;"></span></div>
+              <b>暫不可新增預約</b>
+              <p>完成供應商配置後，Tappo APP 將自動顯示可用的新增預約流程。</p>
+              <span class="btn fill-brand">返回列表</span>
+            </div>
+          </div>
+          <div class="toast">當前門店尚未啟用訂座供應商</div>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

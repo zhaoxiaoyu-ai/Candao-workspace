@@ -1,0 +1,1423 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candao International Website - C v2 First Level Pages</title>
+    <style>
+      :root {
+        --blue: #528dff;
+        --blue-dark: #1f5ed8;
+        --ink: #101827;
+        --muted: #5a6475;
+        --line: #d9e1ee;
+        --cloud: #f6f8fb;
+        --surface: #ffffff;
+        --teal: #0f766e;
+        --amber: #f59e0b;
+        --red: #dc2626;
+        --shadow: 0 18px 60px rgba(16, 24, 39, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          "Noto Sans TC",
+          "PingFang TC",
+          "Microsoft JhengHei",
+          Arial,
+          sans-serif;
+        color: var(--ink);
+        background: var(--cloud);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 clamp(20px, 5vw, 72px);
+        border-bottom: 1px solid rgba(217, 225, 238, 0.84);
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 760;
+        color: var(--ink);
+      }
+
+      .mark {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, #184cba 0%, var(--blue) 62%, #9cc2ff 100%);
+        box-shadow: 0 10px 24px rgba(82, 141, 255, 0.28);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .nav button {
+        min-width: 76px;
+        height: 40px;
+        border: 0;
+        border-radius: 8px;
+        background: transparent;
+        color: #334155;
+        cursor: pointer;
+        transition:
+          background 180ms ease,
+          color 180ms ease;
+      }
+
+      .nav button:hover,
+      .nav button.active {
+        color: var(--blue-dark);
+        background: #edf4ff;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .lang {
+        color: var(--muted);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 18px;
+        border: 0;
+        border-radius: 8px;
+        color: white;
+        background: var(--blue);
+        cursor: pointer;
+        box-shadow: 0 12px 28px rgba(82, 141, 255, 0.28);
+      }
+
+      .ghost {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.85);
+        cursor: pointer;
+      }
+
+      main {
+        overflow: hidden;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 760px;
+        display: grid;
+        align-items: center;
+        padding: clamp(44px, 6vw, 92px) clamp(20px, 5vw, 72px);
+        background: #08111f;
+        color: white;
+      }
+
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.78;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(7, 16, 31, 0.94) 0%, rgba(7, 16, 31, 0.72) 34%, rgba(7, 16, 31, 0.18) 74%),
+          linear-gradient(180deg, rgba(7, 16, 31, 0.1), rgba(7, 16, 31, 0.36));
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        width: min(1320px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+        gap: clamp(28px, 4vw, 72px);
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 30px;
+        padding: 0 10px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.86);
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 13px;
+      }
+
+      .hero h1 {
+        max-width: 720px;
+        margin: 24px 0 18px;
+        font-size: clamp(44px, 5vw, 76px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      .hero p {
+        max-width: 640px;
+        margin: 0 0 28px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: clamp(17px, 1.45vw, 21px);
+        line-height: 1.72;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero-panel {
+        justify-self: end;
+        width: min(560px, 100%);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.86);
+        color: var(--ink);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .panel-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 56px;
+        padding: 0 18px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.78);
+      }
+
+      .status-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 99px;
+        background: var(--teal);
+      }
+
+      .mini-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 18px;
+      }
+
+      .metric {
+        min-height: 108px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: white;
+      }
+
+      .metric small {
+        color: var(--muted);
+      }
+
+      .metric strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 26px;
+      }
+
+      .metric span {
+        display: inline-flex;
+        margin-top: 12px;
+        color: var(--teal);
+        font-size: 13px;
+      }
+
+      .section {
+        padding: clamp(70px, 7vw, 112px) clamp(20px, 5vw, 72px);
+        background: var(--surface);
+      }
+
+      .section.alt {
+        background: var(--cloud);
+      }
+
+      .section-inner {
+        width: min(1320px, 100%);
+        margin: 0 auto;
+      }
+
+      .section-title {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.9fr) minmax(260px, 0.75fr);
+        gap: 36px;
+        align-items: end;
+        margin-bottom: 36px;
+      }
+
+      .section-title h2 {
+        margin: 0;
+        font-size: clamp(32px, 3.2vw, 54px);
+        line-height: 1.12;
+        letter-spacing: 0;
+      }
+
+      .section-title p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .visual-slab {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .image-frame {
+        min-height: 520px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        background: #dbe6f7;
+      }
+
+      .image-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .image-frame.contain img {
+        object-fit: contain;
+        padding: 24px;
+        background: white;
+      }
+
+      .map-panel,
+      .form-panel,
+      .case-panel {
+        min-height: 520px;
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 14px 46px rgba(16, 24, 39, 0.08);
+      }
+
+      .tab-row,
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .tab,
+      .chip {
+        min-height: 38px;
+        padding: 0 13px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: #334155;
+        background: white;
+        cursor: pointer;
+      }
+
+      .tab.active,
+      .chip.active {
+        color: var(--blue-dark);
+        border-color: rgba(82, 141, 255, 0.62);
+        background: #edf4ff;
+      }
+
+      .capability-map {
+        position: relative;
+        min-height: 420px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background:
+          radial-gradient(circle at center, rgba(82, 141, 255, 0.16), transparent 34%),
+          linear-gradient(180deg, #ffffff, #f8fbff);
+      }
+
+      .center-node {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        place-items: center;
+        width: 154px;
+        height: 154px;
+        border-radius: 8px;
+        color: white;
+        background: var(--blue);
+        box-shadow: 0 20px 60px rgba(82, 141, 255, 0.36);
+        text-align: center;
+        font-weight: 760;
+      }
+
+      .node {
+        position: absolute;
+        min-width: 138px;
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 10px 28px rgba(16, 24, 39, 0.08);
+        cursor: pointer;
+      }
+
+      .node.active {
+        color: var(--blue-dark);
+        border-color: rgba(82, 141, 255, 0.72);
+        background: #edf4ff;
+      }
+
+      .node small {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .node:nth-child(2) {
+        top: 44px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .node:nth-child(3) {
+        top: 120px;
+        right: 44px;
+      }
+
+      .node:nth-child(4) {
+        bottom: 60px;
+        right: 88px;
+      }
+
+      .node:nth-child(5) {
+        bottom: 60px;
+        left: 88px;
+      }
+
+      .node:nth-child(6) {
+        top: 120px;
+        left: 44px;
+      }
+
+      .flow-line {
+        position: absolute;
+        inset: 86px 120px;
+        border: 1px dashed rgba(82, 141, 255, 0.4);
+        border-radius: 50%;
+      }
+
+      .details {
+        margin-top: 20px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .detail-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfdff;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        min-height: 28px;
+        padding: 0 9px;
+        border-radius: 8px;
+        background: #e9fbf7;
+        color: var(--teal);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .badge.warn {
+        background: #fff7e6;
+        color: var(--amber);
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+
+      .info-card {
+        min-height: 184px;
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: white;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          border-color 180ms ease;
+      }
+
+      .info-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(82, 141, 255, 0.54);
+        box-shadow: 0 16px 38px rgba(16, 24, 39, 0.1);
+      }
+
+      .info-card h3 {
+        margin: 0 0 10px;
+        font-size: 21px;
+      }
+
+      .info-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.72;
+      }
+
+      .stepper {
+        display: grid;
+        grid-template-columns: 0.7fr 1.3fr;
+        gap: 24px;
+      }
+
+      .step-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        gap: 12px;
+        align-items: center;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: white;
+        cursor: pointer;
+      }
+
+      .step.active {
+        border-color: rgba(82, 141, 255, 0.62);
+        background: #edf4ff;
+      }
+
+      .step-num {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        color: white;
+        background: var(--blue);
+        font-weight: 760;
+      }
+
+      .demo-screen {
+        min-height: 370px;
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, #ffffff 0%, #f7fbff 100%);
+        box-shadow: var(--shadow);
+      }
+
+      .fake-chart {
+        height: 150px;
+        margin-top: 16px;
+        border-radius: 8px;
+        background:
+          linear-gradient(180deg, rgba(82, 141, 255, 0.12), rgba(82, 141, 255, 0.02)),
+          repeating-linear-gradient(90deg, transparent 0 42px, rgba(217, 225, 238, 0.7) 42px 43px),
+          linear-gradient(120deg, transparent 0 20%, rgba(82, 141, 255, 0.32) 20% 22%, transparent 22% 40%, rgba(15, 118, 110, 0.32) 40% 42%, transparent 42% 67%, rgba(245, 158, 11, 0.32) 67% 69%, transparent 69%);
+      }
+
+      .form-panel label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .field-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .field {
+        width: 100%;
+        min-height: 46px;
+        padding: 0 13px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfdff;
+      }
+
+      .footer {
+        padding: 48px clamp(20px, 5vw, 72px);
+        color: #d8e4f7;
+        background: #0b1220;
+      }
+
+      .footer-inner {
+        width: min(1320px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.1fr repeat(5, 1fr);
+        gap: 24px;
+      }
+
+      .footer h4,
+      .footer strong {
+        color: white;
+      }
+
+      .footer a,
+      .footer p {
+        display: block;
+        margin: 8px 0;
+        color: #aebed4;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 980px) {
+        .site-header {
+          height: auto;
+          min-height: 72px;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 12px;
+          padding-top: 16px;
+          padding-bottom: 16px;
+        }
+
+        .nav {
+          width: 100%;
+          overflow-x: auto;
+          padding-bottom: 2px;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        .hero-inner,
+        .section-title,
+        .visual-slab,
+        .stepper,
+        .footer-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-panel {
+          justify-self: stretch;
+        }
+
+        .grid-3,
+        .grid-4,
+        .field-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .image-frame,
+        .map-panel,
+        .form-panel,
+        .case-panel {
+          min-height: auto;
+        }
+
+        .capability-map {
+          min-height: 640px;
+        }
+
+        .node {
+          position: static;
+          transform: none !important;
+          margin: 8px;
+        }
+
+        .flow-line,
+        .center-node {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="?page=home" aria-label="Candao 首頁">
+        <span class="mark"></span>
+        <span>Candao</span>
+      </a>
+      <nav class="nav" id="nav"></nav>
+      <div class="header-actions">
+        <span class="lang">繁中 / EN</span>
+        <button class="cta" data-page="contact">預約產品演示</button>
+      </div>
+    </header>
+
+    <main id="app"></main>
+
+    <script>
+      const assets = {
+        home: "assets/home-hero-restaurant-ops-2026-08-08.png",
+        solutions: "assets/solutions-hero-multistore-ops-2026-08-08.png",
+        platform: "assets/platform-capability-ui-2026-08-08.png",
+        integrations: "assets/integrations-ecosystem-ui-2026-08-08.png",
+        customers: "assets/customers-hero-case-ops-2026-08-08.png",
+        about: "assets/about-contact-service-ops-2026-08-08.png",
+        contact: "assets/about-contact-service-ops-2026-08-08.png"
+      };
+
+      const navItems = [
+        ["home", "首頁"],
+        ["solutions", "解決方案"],
+        ["platform", "平台"],
+        ["integrations", "整合能力"],
+        ["customers", "客戶案例"],
+        ["about", "關於 Candao"]
+      ];
+
+      const capabilityCopy = {
+        訂單管理: ["新訂單進入平台", "已自動歸類", "門店工作流已更新"],
+        配送管理: ["配送訂單進行中", "異常訂單已高亮", "建議處理動作已生成"],
+        菜單與門店管理: ["菜單更新已建立", "渠道同步進行中", "門店狀態保持一致"],
+        自有點餐: ["顧客正在品牌入口下單", "會員資料已識別", "訂單回流至營運平台"],
+        數據智能: ["營運指標已更新", "異常趨勢已標記", "下一步行動已建議"]
+      };
+
+      const pages = {
+        home: {
+          active: "home",
+          eyebrow: "首頁",
+          title: "讓餐飲營運，從多平台混亂走向一個清晰系統",
+          text: "Candao 連接訂單、菜單、門店、配送與數據，協助餐飲品牌在多市場、多門店中穩定營運與持續成長。",
+          image: assets.home,
+          primary: "預約產品演示",
+          secondary: "探索平台能力",
+          sections: ["capability", "solutions", "workflow", "trust"]
+        },
+        solutions: {
+          active: "solutions",
+          eyebrow: "解決方案",
+          title: "從營運問題出發，找到適合的 Candao 解決方案",
+          text: "無論你正在管理連鎖品牌、多門店、配送流程或自有點餐渠道，Candao 都能將複雜流程轉化為可管理的營運系統。",
+          image: assets.solutions,
+          primary: "選擇你的場景",
+          secondary: "查看平台能力",
+          sections: ["scenarioDetail", "problemFlow", "related"]
+        },
+        platform: {
+          active: "platform",
+          eyebrow: "平台",
+          title: "餐飲營運的核心能力，連接在同一個平台",
+          text: "Candao 將訂單、菜單、門店、配送、自有點餐與數據智能連接，讓團隊以一致的流程管理複雜營運。",
+          image: assets.platform,
+          primary: "探索平台能力",
+          secondary: "預約產品演示",
+          sections: ["platformVisual", "capability", "workflow", "productEntries"]
+        },
+        integrations: {
+          active: "integrations",
+          eyebrow: "整合能力",
+          title: "連接餐飲營運需要的關鍵系統",
+          text: "Candao 可與外送平台、POS、支付、CRM、物流和內部系統整合，讓資料和流程不再割裂。",
+          image: assets.integrations,
+          primary: "查看整合能力",
+          secondary: "申請整合",
+          sections: ["integrationDirectory", "dataFlow", "integrationCTA"]
+        },
+        customers: {
+          active: "customers",
+          eyebrow: "客戶案例",
+          title: "看 Candao 如何支援餐飲品牌穩定成長",
+          text: "從多門店管理到配送協同，Candao 協助團隊將複雜營運變得清晰可控。",
+          image: assets.customers,
+          primary: "查看案例",
+          secondary: "預約相似場景演示",
+          sections: ["caseFilter", "caseStory", "caseMap"]
+        },
+        about: {
+          active: "about",
+          eyebrow: "關於 Candao",
+          title: "為餐飲品牌打造可持續擴展的營運平台",
+          text: "Candao 專注於餐飲營運數字化，協助品牌連接渠道、門店、配送與數據，支援跨市場成長。",
+          image: assets.about,
+          primary: "聯絡 Candao",
+          secondary: "了解服務方式",
+          sections: ["positioning", "serviceTabs", "security"]
+        },
+        contact: {
+          active: "contact",
+          eyebrow: "預約演示",
+          title: "預約 Candao 產品演示",
+          text: "告訴我們你的門店規模、渠道組合與營運挑戰，我們會安排合適的團隊與你討論。",
+          image: assets.contact,
+          primary: "提交需求",
+          secondary: "支援查詢",
+          sections: ["needRouter", "demoForm", "expect"]
+        }
+      };
+
+      const app = document.querySelector("#app");
+      const nav = document.querySelector("#nav");
+
+      function currentPage() {
+        const page = new URLSearchParams(window.location.search).get("page");
+        return pages[page] ? page : "home";
+      }
+
+      function setPage(id) {
+        history.pushState({}, "", `?page=${id}`);
+        render();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function headerPanel(page) {
+        const rows = page.active === "contact"
+          ? [["需求類型", "產品演示", "已選擇"], ["營運場景", "多門店營運", "待確認"], ["門店規模", "請選擇", "下一步"], ["聯絡方式", "待填寫", "未提交"]]
+          : [["今日訂單", "18,642", "正常"], ["門店狀態", "1,128", "可見"], ["配送進度", "6,753", "進行中"], ["異常提醒", "3", "需處理"]];
+
+        return `
+          <aside class="hero-panel">
+            <div class="panel-head">
+              <strong>${page.active === "contact" ? "演示需求" : "營運總覽"}</strong>
+              <span class="badge"><span class="status-dot"></span>${page.active === "contact" ? "步驟 1 / 3" : "即時同步"}</span>
+            </div>
+            <div class="mini-grid">
+              ${rows.map((row, index) => `
+                <div class="metric">
+                  <small>${row[0]}</small>
+                  <strong>${row[1]}</strong>
+                  <span class="${index === 3 && page.active !== "contact" ? "badge warn" : ""}">${row[2]}</span>
+                </div>
+              `).join("")}
+            </div>
+          </aside>
+        `;
+      }
+
+      function hero(page) {
+        return `
+          <section class="hero">
+            <img src="${page.image}" alt="${page.eyebrow} 主視覺" />
+            <div class="hero-inner">
+              <div>
+                <span class="eyebrow">${page.eyebrow}</span>
+                <h1>${page.title}</h1>
+                <p>${page.text}</p>
+                <div class="hero-actions">
+                  <button class="cta" data-page="contact">${page.primary}</button>
+                  <button class="ghost" data-action="secondary">${page.secondary}</button>
+                </div>
+              </div>
+              ${headerPanel(page)}
+            </div>
+          </section>
+        `;
+      }
+
+      function capabilitySection() {
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>一個平台，連接餐飲營運的關鍵流程</h2>
+                <p>點選任一能力，查看它如何讓工作流、畫面狀態與業務結果連在一起。</p>
+              </div>
+              <div class="visual-slab">
+                <div class="map-panel">
+                  <div class="capability-map" id="capabilityMap">
+                    <div class="flow-line"></div>
+                    <div class="center-node">Candao<br />營運平台</div>
+                    ${Object.keys(capabilityCopy).map((name, index) => `
+                      <button class="node ${index === 0 ? "active" : ""}" data-capability="${name}">
+                        ${name}<small>${capabilityCopy[name][2]}</small>
+                      </button>
+                    `).join("")}
+                  </div>
+                </div>
+                <div class="map-panel">
+                  <div class="panel-head">
+                    <strong id="capabilityTitle">訂單管理</strong>
+                    <span class="badge">已連接</span>
+                  </div>
+                  <div class="details" id="capabilityDetails"></div>
+                  <div class="fake-chart"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function solutionsSection() {
+        const items = [
+          ["連鎖餐飲", "總部、區域與門店需要共享同一套營運節奏。"],
+          ["多門店營運", "跨店菜單、狀態和履約流程需要被即時追蹤。"],
+          ["配送營運", "外送平台、自有渠道與物流狀態需要集中協同。"],
+          ["數字點餐", "品牌需要建立自有點餐入口和會員關係。"],
+          ["數據化營運", "營運決策需要建立在即時、可行動的數據上。"]
+        ];
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>為連鎖餐飲、多門店與配送營運而設計</h2>
+                <p>先從場景和問題進入，再連到對應的平台能力。</p>
+              </div>
+              <div class="grid-3">
+                ${items.map((item, index) => `
+                  <article class="info-card">
+                    <span class="badge ${index === 2 ? "warn" : ""}">${index === 1 ? "目前選擇" : "場景"}</span>
+                    <h3>${item[0]}</h3>
+                    <p>${item[1]}</p>
+                  </article>
+                `).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function workflowSection() {
+        const steps = ["接單", "分流", "履約", "門店協同", "數據回饋"];
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>從即時訂單，到可行動的營運決策</h2>
+                <p>每一步都對應平台畫面狀態變化，而不是停留在功能說明。</p>
+              </div>
+              <div class="stepper">
+                <div class="step-list">
+                  ${steps.map((step, index) => `
+                    <button class="step ${index === 0 ? "active" : ""}" data-step="${step}">
+                      <span class="step-num">${index + 1}</span>
+                      <strong>${step}</strong>
+                    </button>
+                  `).join("")}
+                </div>
+                <div class="demo-screen">
+                  <div class="panel-head">
+                    <strong id="stepTitle">接單</strong>
+                    <span class="badge">UI 狀態已更新</span>
+                  </div>
+                  <div class="details" id="stepDetails"></div>
+                  <div class="fake-chart"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function trustSection() {
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>支援餐飲品牌跨渠道、跨門店、跨市場營運</h2>
+                <p>未取得授權前只使用匿名案例模板，不虛構真實客戶和成果。</p>
+              </div>
+              <div class="grid-3">
+                ${["區域連鎖餐飲品牌", "多門店餐飲集團", "配送型餐飲品牌"].map((name) => `
+                  <article class="info-card">
+                    <span class="badge">匿名案例</span>
+                    <h3>${name}</h3>
+                    <p>從營運挑戰、導入方式到改善結果，展示可替換的案例敘事結構。</p>
+                  </article>
+                `).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function platformVisual() {
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>平台能力不是孤立模組，而是同一條營運鏈路</h2>
+                <p>以半真實產品介面呈現總部、門店、訂單、配送與數據的連接方式。</p>
+              </div>
+              <div class="image-frame contain">
+                <img src="${assets.platform}" alt="Candao 平台半真實 UI" />
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function scenarioDetail() {
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <div class="visual-slab">
+                <div class="image-frame">
+                  <img src="${assets.solutions}" alt="多門店餐飲營運場景" />
+                </div>
+                <div class="case-panel">
+                  <div class="tab-row">
+                    ${["多門店營運", "配送營運", "數字點餐"].map((item, index) => `<button class="tab ${index === 0 ? "active" : ""}">${item}</button>`).join("")}
+                  </div>
+                  <h2>你正在解決哪一類營運問題？</h2>
+                  <div class="details">
+                    <div class="detail-row"><strong>問題</strong><span>跨店狀態不透明</span></div>
+                    <div class="detail-row"><strong>支援</strong><span>Candao 將流程集中管理</span></div>
+                    <div class="detail-row"><strong>結果</strong><span>總部與門店共享同一節奏</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function problemFlow() {
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="grid-4">
+                ${["營運壓力", "系統化流程", "門店協同", "數據回饋"].map((item, index) => `
+                  <article class="info-card">
+                    <span class="badge">${String(index + 1).padStart(2, "0")}</span>
+                    <h3>${item}</h3>
+                    <p>${index === 0 ? "先讓問題被清楚看見。" : index === 1 ? "把分散流程整理成可管理工作流。" : index === 2 ? "讓總部和門店在同一狀態下行動。" : "把結果回到下一輪營運決策。"}</p>
+                  </article>
+                `).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function relatedSection() {
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>場景會連到能力，但不改變網站層級</h2>
+                <p>訂單管理與配送管理是平台下的二級能力頁，不進入一級導航。</p>
+              </div>
+              <div class="grid-3">
+                ${Object.keys(capabilityCopy).map((name) => `<article class="info-card"><h3>${name}</h3><p>${capabilityCopy[name][2]}</p></article>`).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function productEntries() {
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>產品能力入口</h2>
+                <p>每項能力都必須講清業務問題、畫面狀態和業務結果。</p>
+              </div>
+              <div class="grid-3">
+                ${Object.keys(capabilityCopy).map((name) => `<article class="info-card"><span class="badge">平台二級</span><h3>${name}</h3><p>${capabilityCopy[name].join("，")}。</p></article>`).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function integrationDirectory() {
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <div class="visual-slab">
+                <div class="image-frame contain">
+                  <img src="${assets.integrations}" alt="整合能力半真實 UI" />
+                </div>
+                <div class="map-panel">
+                  <label for="integrationSearch">搜尋你想連接的系統</label>
+                  <input id="integrationSearch" class="field" value="外送平台" />
+                  <div class="chip-row" style="margin-top: 18px;">
+                    ${["外送平台", "POS", "支付", "CRM 與會員", "第三方物流", "內部系統"].map((item, index) => `<button class="chip ${index === 0 ? "active" : ""}">${item}</button>`).join("")}
+                  </div>
+                  <div class="details">
+                    <div class="detail-row"><strong>訂單進入</strong><span class="badge">已連接</span></div>
+                    <div class="detail-row"><strong>菜單同步</strong><span class="badge">已連接</span></div>
+                    <div class="detail-row"><strong>狀態回傳</strong><span class="badge">已連接</span></div>
+                    <div class="detail-row"><strong>異常提醒</strong><span class="badge warn">待確認</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function dataFlow() {
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>從連接系統，到同步營運狀態</h2>
+                <p>整合能力不展示 Logo 牆，而展示資料如何進入工作流。</p>
+              </div>
+              <div class="grid-4">
+                ${["系統連接", "資料同步", "工作流更新", "總部可見"].map((item, index) => `<article class="info-card"><span class="badge">${index + 1}</span><h3>${item}</h3><p>將分散系統轉化為可追蹤的營運狀態。</p></article>`).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function integrationCTA() {
+        return ctaBand("沒有找到你需要的整合？", "告訴我們你的系統與場景，Candao 團隊將評估整合方式。", "申請整合");
+      }
+
+      function caseFilter() {
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <div class="visual-slab">
+                <div class="image-frame">
+                  <img src="${assets.customers}" alt="客戶案例餐飲營運評審場景" />
+                </div>
+                <div class="case-panel">
+                  <div class="tab-row">
+                    ${["連鎖餐飲", "多門店", "配送營運", "自有點餐", "數據化營運"].map((item, index) => `<button class="tab ${index === 1 ? "active" : ""}">${item}</button>`).join("")}
+                  </div>
+                  <h2>多門店餐飲集團</h2>
+                  <div class="details">
+                    <div class="detail-row"><strong>營運挑戰</strong><span>分散訂單與門店狀態難以追蹤</span></div>
+                    <div class="detail-row"><strong>導入方式</strong><span>先整合訂單與門店工作流</span></div>
+                    <div class="detail-row"><strong>改善結果</strong><span>示例指標，待替換真實資料</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function caseStory() {
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="grid-3">
+                ${["渠道更清晰", "門店更可見", "履約更穩定"].map((item) => `<article class="info-card"><span class="badge warn">示例指標</span><h3>${item}</h3><p>此處用於確認案例敘事方式，真實資料需客戶授權後替換。</p></article>`).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function caseMap() {
+        return relatedSection();
+      }
+
+      function positioning() {
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <div class="grid-3">
+                ${[
+                  ["餐飲營運專注", "圍繞餐飲門店、渠道、配送和資料的真實營運問題設計。"],
+                  ["跨市場支援", "支援品牌在多市場、多門店與多渠道環境中保持一致流程。"],
+                  ["系統化交付", "从导入规划、系统整合到持续运营优化，形成清晰路径。"]
+                ].map((item) => `<article class="info-card"><h3>${item[0]}</h3><p>${item[1]}</p></article>`).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function serviceTabs() {
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>穩定、安全、可持續的餐飲營運支援</h2>
+                <p>只做原则性表达，不写未经确认的认证、SLA 或合规承诺。</p>
+              </div>
+              <div class="visual-slab">
+                <div class="image-frame">
+                  <img src="${assets.about}" alt="Candao 服務與導入場景" />
+                </div>
+                <div class="map-panel">
+                  <div class="tab-row">
+                    ${["導入規劃", "系統整合", "門店培訓", "持續支援", "營運優化"].map((item, index) => `<button class="tab ${index === 0 ? "active" : ""}">${item}</button>`).join("")}
+                  </div>
+                  <div class="details">
+                    <div class="detail-row"><strong>權限管理</strong><span class="badge">企業級原則</span></div>
+                    <div class="detail-row"><strong>資料治理</strong><span class="badge">流程可追蹤</span></div>
+                    <div class="detail-row"><strong>支援流程</strong><span class="badge">分階段導入</span></div>
+                    <div class="detail-row"><strong>上線節奏</strong><span class="badge">可持續優化</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function securitySection() {
+        return ctaBand("與 Candao 討論你的營運目標", "我們會根據你的市場、門店規模與系統現況，協助你規劃合適的演示與導入路徑。", "預約產品演示");
+      }
+
+      function needRouter() {
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <div class="section-title">
+                <h2>你想先討論哪一類需求？</h2>
+                <p>根據訪問者目的分流，降低表單壓力。</p>
+              </div>
+              <div class="grid-4">
+                ${["產品演示", "聯絡銷售", "合作洽詢", "支援查詢"].map((item, index) => `<article class="info-card"><span class="badge">${index === 0 ? "目前選擇" : "入口"}</span><h3>${item}</h3><p>${index === 0 ? "適合正在評估 Candao 平台能力的團隊。" : "根據不同需求進入對應溝通路徑。"}</p></article>`).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function demoForm() {
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="visual-slab">
+                <div class="image-frame">
+                  <img src="${assets.contact}" alt="Candao 產品演示服務場景" />
+                </div>
+                <form class="form-panel">
+                  <div class="panel-head">
+                    <strong>產品演示需求</strong>
+                    <span class="badge">步驟 1 / 3</span>
+                  </div>
+                  <h2>選擇你最關心的營運場景</h2>
+                  <div class="chip-row">
+                    ${["多門店營運", "配送營運", "自有點餐", "整合能力", "數據化營運"].map((item, index) => `<button type="button" class="chip ${index === 0 ? "active" : ""}">${item}</button>`).join("")}
+                  </div>
+                  <div class="field-grid">
+                    ${["姓名", "公司", "所在市場", "門店數量", "聯絡方式", "主要需求"].map((label) => `<div><label>${label}</label><input class="field" placeholder="${label}" /></div>`).join("")}
+                  </div>
+                  <div style="margin-top: 18px;"><button type="button" class="cta">提交需求</button></div>
+                </form>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function expectSection() {
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <div class="grid-3">
+                ${["提交需求", "安排合適團隊", "進行產品演示"].map((item, index) => `<article class="info-card"><span class="badge">${index + 1}</span><h3>${item}</h3><p>我們會根據你的市場、門店規模與系統現況安排下一步。</p></article>`).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function ctaBand(title, text, button) {
+        return `
+          <section class="section alt">
+            <div class="section-inner">
+              <div class="map-panel" style="min-height: 280px; display: grid; align-content: center; gap: 18px;">
+                <h2 style="margin:0;font-size:clamp(32px,3vw,52px);">${title}</h2>
+                <p style="margin:0;max-width:720px;color:var(--muted);line-height:1.8;">${text}</p>
+                <div><button class="cta" data-page="contact">${button}</button></div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function footer() {
+        return `
+          <footer class="footer">
+            <div class="footer-inner">
+              <div>
+                <strong>Candao</strong>
+                <p>餐飲營運的核心能力，連接在同一個平台。</p>
+              </div>
+              ${[
+                ["解決方案", "連鎖餐飲", "多門店營運", "配送營運"],
+                ["平台", "訂單管理", "配送管理", "數據智能"],
+                ["整合能力", "外送平台", "POS", "CRM 與會員"],
+                ["客戶案例", "案例總覽", "匿名案例模板"],
+                ["關於", "關於 Candao", "安全與服務"]
+              ].map((group) => `
+                <div>
+                  <h4>${group[0]}</h4>
+                  ${group.slice(1).map((item) => `<a href="#">${item}</a>`).join("")}
+                </div>
+              `).join("")}
+            </div>
+          </footer>
+        `;
+      }
+
+      const sectionRenderers = {
+        capability: capabilitySection,
+        solutions: solutionsSection,
+        workflow: workflowSection,
+        trust: trustSection,
+        scenarioDetail,
+        problemFlow,
+        related: relatedSection,
+        platformVisual,
+        productEntries,
+        integrationDirectory,
+        dataFlow,
+        integrationCTA,
+        caseFilter,
+        caseStory,
+        caseMap,
+        positioning,
+        serviceTabs,
+        security: securitySection,
+        needRouter,
+        demoForm,
+        expect: expectSection
+      };
+
+      function renderNav(active) {
+        nav.innerHTML = navItems
+          .map(([id, label]) => `<button class="${id === active ? "active" : ""}" data-page="${id}">${label}</button>`)
+          .join("");
+      }
+
+      function renderCapabilityDetails(name = "訂單管理") {
+        const container = document.querySelector("#capabilityDetails");
+        const title = document.querySelector("#capabilityTitle");
+        if (!container || !title) return;
+        title.textContent = name;
+        container.innerHTML = capabilityCopy[name]
+          .map((item, index) => `<div class="detail-row"><strong>${item}</strong><span class="badge">${index === 0 ? "交互前" : "交互後"}</span></div>`)
+          .join("");
+      }
+
+      function renderStepDetails(name = "接單") {
+        const mapping = {
+          接單: ["新訂單來自多個渠道", "平台已接收並標記來源"],
+          分流: ["訂單等待分配", "已送入正確門店工作流"],
+          履約: ["配送與備餐同步進行", "異常狀態即時高亮"],
+          門店協同: ["門店狀態更新", "總部可以查看執行情況"],
+          數據回饋: ["營運資料匯總", "下一步行動建議已生成"]
+        };
+        const container = document.querySelector("#stepDetails");
+        const title = document.querySelector("#stepTitle");
+        if (!container || !title) return;
+        title.textContent = name;
+        container.innerHTML = mapping[name]
+          .map((item, index) => `<div class="detail-row"><strong>${item}</strong><span class="badge">${index === 0 ? "交互前" : "交互後"}</span></div>`)
+          .join("");
+      }
+
+      function bindInteractions() {
+        document.querySelectorAll("[data-page]").forEach((el) => {
+          el.addEventListener("click", () => setPage(el.dataset.page));
+        });
+
+        document.querySelectorAll("[data-capability]").forEach((el) => {
+          el.addEventListener("click", () => {
+            document.querySelectorAll("[data-capability]").forEach((node) => node.classList.remove("active"));
+            el.classList.add("active");
+            renderCapabilityDetails(el.dataset.capability);
+          });
+        });
+
+        document.querySelectorAll("[data-step]").forEach((el) => {
+          el.addEventListener("click", () => {
+            document.querySelectorAll("[data-step]").forEach((node) => node.classList.remove("active"));
+            el.classList.add("active");
+            renderStepDetails(el.dataset.step);
+          });
+        });
+      }
+
+      function render() {
+        const pageId = currentPage();
+        const page = pages[pageId];
+        renderNav(page.active);
+        app.innerHTML = `${hero(page)}${page.sections.map((name) => sectionRenderers[name]()).join("")}${footer()}`;
+        renderCapabilityDetails();
+        renderStepDetails();
+        bindInteractions();
+      }
+
+      window.addEventListener("popstate", render);
+      render();
+    </script>
+  </body>
+</html>

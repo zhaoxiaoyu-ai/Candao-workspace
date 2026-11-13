@@ -1,0 +1,12 @@
+{
+  "suite": "t47-static-content-qa",
+  "html": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T47/output/prototype/index.html",
+  "contract": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T47/output/contracts/t47-integrated-content-contract.json",
+  "required_total": 224,
+  "required_present": 224,
+  "missing": [],
+  "forbidden_visible": [],
+  "forbidden_raw": [],
+  "style_risks": [],
+  "status": "pass"
+}

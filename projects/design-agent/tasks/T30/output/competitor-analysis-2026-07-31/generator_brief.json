@@ -1,0 +1,144 @@
+{
+  "analysis_modes": ["visual", "interaction"],
+  "target_page_context": "餐饮科技 SaaS 官网",
+  "evidence": {
+    "reference_urls": [
+      "https://www.aigens.com/kiosk-ordering/",
+      "https://www.deliverect.com/en/integrations",
+      "https://tabsquare.ai/"
+    ],
+    "screenshots": [
+      {
+        "source": "Aigens",
+        "viewport": "desktop",
+        "path": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/design-agent/tasks/T30/output/competitor-analysis-2026-07-31/aigens-desktop-top.png",
+        "accepted": true
+      },
+      {
+        "source": "Deliverect",
+        "viewport": "mobile",
+        "path": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/design-agent/tasks/T30/output/competitor-analysis-2026-07-31/deliverect-mobile-chrome.png",
+        "accepted": true,
+        "limitation": "cookie 和地区浮层遮挡部分页面"
+      },
+      {
+        "source": "TabSquare",
+        "viewport": "desktop",
+        "path": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/design-agent/tasks/T30/output/competitor-analysis-2026-07-31/tabsquare-desktop-cdp.png",
+        "accepted": true
+      },
+      {
+        "source": "TabSquare",
+        "viewport": "mobile",
+        "path": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/design-agent/tasks/T30/output/competitor-analysis-2026-07-31/tabsquare-mobile-cdp.png",
+        "accepted": true
+      }
+    ],
+    "limitations": [
+      "Aigens 无头 Chrome 截图被 Cloudflare 拦截，移动端视觉证据缺失。",
+      "Deliverect 桌面截图自动采集时出现 429 或错误页。",
+      "本次未完整点击所有菜单、筛选、表单和滚动动效。"
+    ]
+  },
+  "commonality_core": [
+    "真实餐饮场景优先，软件能力服务于餐厅经营结果。",
+    "首屏必须有清晰定位和强 CTA。",
+    "客户、品牌、集成或经营结果要尽早出现。",
+    "页面节奏从情绪吸引进入能力证明，再进入转化。",
+    "不能复制竞品 logo、图片、视频、文案或独特品牌资产。"
+  ],
+  "visual_key_brief": {
+    "tone": "温暖、真实、可信、餐饮现场感强，同时保持 SaaS 的清晰和专业。",
+    "hero": "使用全宽餐厅真实场景图作为首屏背景，叠加深色遮罩和大标题；可加入原创产品 UI 或设备局部来强化科技属性。",
+    "palette": {
+      "background": ["#101010", "#FFFFFF", "#F6F3EE"],
+      "primary_cta": "#F97316",
+      "secondary_accent": ["#22C55E", "#2563EB"],
+      "text": ["#FFFFFF", "#111111", "#5F6368"],
+      "notes": "避免整站变成单一棕橙调；用白色内容区和冷色辅助维持 SaaS 专业感。"
+    },
+    "typography": "首屏标题大而有情绪，可使用 display serif；产品模块、表单和卡片使用清晰 sans-serif。",
+    "imagery": "优先真实餐厅、顾客、服务场景、点餐/支付瞬间；避免抽象 3D 图和泛 SaaS 渐变背景。",
+    "component_shape": "按钮为高圆角胶囊；卡片保持清晰边界和轻阴影；导航可半透明，滚动后变实底。"
+  },
+  "interaction_key_brief": {
+    "navigation": "桌面顶部导航包含产品、解决方案、集成、资源和预约演示；移动端保留 logo、Explore/菜单入口和汉堡菜单。",
+    "cta_behavior": "首屏使用主 CTA + 次 CTA，后续每 2 到 3 个区块重复一次主 CTA；主 CTA 用实色，次 CTA 用描边或半透明按钮。",
+    "scroll_rhythm": [
+      "hero",
+      "信任证明",
+      "顾客旅程叙事",
+      "平台能力",
+      "集成生态",
+      "演示表单"
+    ],
+    "feedback": "按钮 hover 使用轻微亮度和箭头移动；卡片 hover 使用轻微上浮；旅程 slider 使用清晰分页点。",
+    "integrations_preview": "如果展示生态能力，使用搜索框、分类 chip 和卡片网格，学习 Deliverect 的目录感但重做视觉语言。"
+  },
+  "page_structure": [
+    {
+      "section": "hero",
+      "purpose": "建立餐饮场景和产品定位",
+      "visual": "全屏餐厅照片 + 深色遮罩 + 大标题 + 双 CTA",
+      "interaction": "主 CTA 预约演示，次 CTA 查看方案或价格"
+    },
+    {
+      "section": "trust_proof",
+      "purpose": "快速建立可信度",
+      "visual": "客户数量、餐厅数量、集成数量或原创 logo 占位网格",
+      "interaction": "可轻微横向滚动或静态展示"
+    },
+    {
+      "section": "journey_story",
+      "purpose": "用顾客旅程讲清软件如何改善体验",
+      "visual": "图文分屏或沉浸式 slider",
+      "interaction": "分页点、左右切换、滚动触发内容"
+    },
+    {
+      "section": "platform_capabilities",
+      "purpose": "展示点餐、支付、会员、运营和集成能力",
+      "visual": "卡片网格 + 原创产品 UI 片段",
+      "interaction": "卡片 hover、分组切换"
+    },
+    {
+      "section": "integrations_preview",
+      "purpose": "展示生态连接能力",
+      "visual": "搜索框 + 分类 chip + 集成卡片",
+      "interaction": "搜索、分类筛选、查看全部集成"
+    },
+    {
+      "section": "conversion",
+      "purpose": "转化为咨询或预约演示",
+      "visual": "简洁表单或强 CTA 区",
+      "interaction": "少字段、明确错误提示、提交反馈"
+    }
+  ],
+  "component_rules": [
+    "顶部导航在首屏可透明叠图，滚动后变为实底。",
+    "主按钮使用暖橙色胶囊按钮，右侧可有箭头图标。",
+    "次按钮使用半透明描边，不抢主 CTA。",
+    "集成模块使用搜索框、分类 chip 和卡片网格。",
+    "客户证明使用原创或可授权素材，不使用竞品客户 logo。"
+  ],
+  "copy_rules": [
+    "标题围绕餐饮经营结果，而不是只写软件功能。",
+    "文案节奏短、直接，先说体验和收益，再说平台能力。",
+    "CTA 文案优先使用“预约演示”“获取方案”“查看价格”“探索解决方案”。",
+    "避免复写 Aigens、Deliverect、TabSquare 的原句。"
+  ],
+  "forbidden_copy_items": [
+    "Aigens、Deliverect、TabSquare 的 logo",
+    "竞品页面原图、视频、人物照片、产品截图",
+    "竞品客户 logo 和案例原文",
+    "竞品首屏标题、CTA、完整段落和独特品牌表达",
+    "竞品源码、CSS、动画文件或图形资产"
+  ],
+  "acceptance_scores": {
+    "overall_score": 0.82,
+    "visual": 0.8,
+    "structure": 0.8,
+    "copy": 0.78,
+    "interaction": 0.8,
+    "compliance": 1.0
+  }
+}

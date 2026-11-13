@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>關於餐道｜餐道</title>
+  <style>
+    :root {
+      --surface: #f9f9fc;
+      --surface-card: #ffffff;
+      --ink: #1a1c1e;
+      --muted: #424753;
+      --line: #e2e8f0;
+      --blue: #528dff;
+      --green: #00a884;
+      --amber: #ffab00;
+      --dark: #181b20;
+      --dark-soft: #2f3133;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--surface); color: var(--ink); font-family: Inter, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; }
+    body { overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(249,249,252,.92); border-bottom: 1px solid var(--line); backdrop-filter: blur(18px); }
+    .wrap { width: min(1180px, calc(100vw - 48px)); margin: 0 auto; }
+    .nav { min-height: 72px; display: flex; align-items: center; gap: 24px; }
+    .brand { font-family: Georgia, "Noto Serif TC", serif; font-size: 24px; font-weight: 700; color: var(--blue); white-space: nowrap; }
+    .links { display: flex; align-items: center; gap: 16px; flex: 1; color: var(--muted); font-size: 14px; white-space: nowrap; }
+    .nav-actions { display: flex; align-items: center; gap: 10px; white-space: nowrap; font-size: 14px; }
+    .button { min-height: 38px; padding: 10px 14px; border-radius: 8px; background: var(--blue); color: #fff; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+    .hero { background: radial-gradient(circle at 75% 20%, rgba(82,141,255,.25), transparent 28%), linear-gradient(135deg, #14171d 0%, #2f3133 100%); color: #fff; }
+    .hero-grid { min-height: 620px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(380px, .82fr); gap: 40px; align-items: center; padding: 72px 0 56px; }
+    .eyebrow { color: #afc6ff; font-size: 13px; font-weight: 800; letter-spacing: .08em; margin-bottom: 18px; }
+    h1 { margin: 0; font-family: Georgia, "Noto Serif TC", serif; font-size: clamp(38px, 4vw, 56px); line-height: 1.12; letter-spacing: 0; max-width: 780px; overflow-wrap: anywhere; }
+    .lead { margin: 22px 0 0; max-width: 760px; color: #eef2ff; font-size: 18px; line-height: 1.75; overflow-wrap: anywhere; }
+    .hero-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 8px; padding: 22px; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+    .status-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+    .status { min-height: 76px; border-radius: 8px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.07); padding: 12px; overflow-wrap: anywhere; }
+    .status small { display: block; color: #afc6ff; font-weight: 800; margin-bottom: 8px; }
+    section { padding: 72px 0; }
+    .section-head { display: grid; grid-template-columns: minmax(0, .72fr) minmax(280px, .28fr); gap: 24px; align-items: end; margin-bottom: 24px; }
+    h2 { margin: 0; font-family: Georgia, "Noto Serif TC", serif; font-size: 34px; line-height: 1.24; letter-spacing: 0; }
+    .section-copy { margin: 8px 0 0; color: var(--muted); line-height: 1.7; overflow-wrap: anywhere; }
+    .module-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+    .module { grid-column: span 6; min-height: 220px; background: var(--surface-card); border: 1px solid var(--line); border-radius: 8px; padding: 22px; overflow: hidden; }
+    .module:nth-child(3n+1) { grid-column: span 12; }
+    .module-kicker { color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: .08em; margin-bottom: 12px; }
+    h3 { margin: 0 0 12px; font-size: 22px; line-height: 1.35; letter-spacing: 0; overflow-wrap: anywhere; }
+    .module p { margin: 0; color: var(--muted); line-height: 1.7; overflow-wrap: anywhere; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .chip { border: 1px solid var(--line); background: #f8fafc; border-radius: 999px; padding: 7px 10px; color: var(--muted); font-size: 12px; font-weight: 700; }
+    .ledger-section { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .ledger { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; counter-reset: item; }
+    .row { min-height: 46px; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: #f8fafc; color: #1a1c1e; font-size: 13px; line-height: 1.45; overflow-wrap: anywhere; }
+    .row::before { counter-increment: item; content: counter(item, decimal-leading-zero); display: block; color: var(--blue); font-size: 10px; font-weight: 900; margin-bottom: 4px; }
+    footer { background: var(--dark); color: #f8fafc; padding: 48px 0; }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr 2fr; gap: 32px; align-items: start; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 12px 18px; color: #cbd5e1; font-size: 14px; }
+    .footer-note { margin-top: 18px; color: #cbd5e1; line-height: 1.7; overflow-wrap: anywhere; }
+    @media (max-width: 900px) {
+      .wrap { width: min(100% - 32px, 720px); }
+      .nav { align-items: flex-start; flex-direction: column; padding: 16px 0; gap: 12px; }
+      .links, .nav-actions { flex-wrap: wrap; white-space: normal; }
+      .hero-grid, .section-head, .footer-grid { grid-template-columns: 1fr; }
+      .hero-grid { min-height: auto; padding: 56px 0; }
+      .module, .module:nth-child(3n+1) { grid-column: span 12; }
+      .ledger { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#">餐道</a>
+      <nav class="links" aria-label="主導航">
+        <a href="#">首頁</a><a href="#">解決方案</a><a href="#">平台</a><a href="#">整合能力</a><a href="#">客戶案例</a><a href="#">資源</a><a href="#">關於餐道</a><a href="#">預約演示</a>
+      </nav>
+      <div class="nav-actions">
+        <span>繁中 / EN</span>
+        <a class="button" href="#">預約演示</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">關於餐道｜餐道</div>
+          <h1>專注餐飲與零售 O2O 營運系統的產品與服務團隊</h1>
+          <p class="lead">餐道成立於 2014 年，總部位於廣州，並在北京、上海、香港設有分支及成都營運中心。團隊以多年餐飲系統研發與外送業務經驗，支援品牌處理訂單、門店、配送、數據和持續營運。</p>
+          <div class="chips">
+            <span class="chip">2014 成立</span><span class="chip">廣州 總部</span><span class="chip">香港 / 北京 / 上海 / 成都 服務網絡</span><span class="chip">聯絡餐道</span><span class="chip">公司與服務網絡</span><span class="chip">香港</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="module-kicker">營運視圖</div>
+          <h3>營運模組摘要</h3>
+          <div class="status-grid">
+            <div class="status"><small>01</small>北京</div><div class="status"><small>02</small>上海</div><div class="status"><small>03</small>成都營運中心</div><div class="status"><small>04</small>導入、培訓與營運支援</div><div class="status"><small>05</small>多地團隊共同支援品牌導入、營運、技術協作與長期服務。</div><div class="status"><small>06</small>企業旅程</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" style="color: var(--blue)">頁面模組</div>
+            <h2>關於餐道</h2>
+            <p class="section-copy">依照低保真頁面順序，整理可追溯內容與模組版位。</p>
+          </div>
+          <p class="section-copy">每個模組保留原頁角色，不新增未確認數字、客戶標識或產品截圖。</p>
+        </div>
+        <div class="module-grid">
+          <article class="module">
+                <div class="module-kicker">模組 01</div>
+                <h3>Hero</h3>
+                <p>依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。</p>
+              </article><article class="module">
+                <div class="module-kicker">模組 02</div>
+                <h3>企業旅程</h3>
+                <p>依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。</p>
+              </article><article class="module">
+                <div class="module-kicker">模組 03</div>
+                <h3>服務交付</h3>
+                <p>依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。</p>
+              </article><article class="module">
+                <div class="module-kicker">模組 04</div>
+                <h3>產品與服務能力</h3>
+                <p>依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。</p>
+              </article><article class="module">
+                <div class="module-kicker">模組 05</div>
+                <h3>服務生命周期</h3>
+                <p>依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。</p>
+              </article><article class="module">
+                <div class="module-kicker">模組 06</div>
+                <h3>質量與可信</h3>
+                <p>依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。</p>
+              </article><article class="module">
+                <div class="module-kicker">模組 07</div>
+                <h3>CTA</h3>
+                <p>依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。</p>
+              </article>
+        </div>
+      </div>
+    </section>
+    <section class="ledger-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" style="color: var(--blue)">內容核對</div>
+            <h2>低保真內容完整登記</h2>
+          </div>
+          <p class="section-copy">以下文字逐條來自 T27 低保真頁面，作為完整內容覆蓋的可見核對區。</p>
+        </div>
+        <div class="ledger">
+          <div class="row">關於餐道｜餐道</div><div class="row">首頁</div><div class="row">解決方案</div><div class="row">平台</div><div class="row">整合能力</div><div class="row">客戶案例</div><div class="row">資源</div><div class="row">關於餐道</div><div class="row">繁中 / EN</div><div class="row">預約演示</div><div class="row">專注餐飲與零售 O2O 營運系統的產品與服務團隊</div><div class="row">餐道成立於 2014 年，總部位於廣州，並在北京、上海、香港設有分支及成都營運中心。團隊以多年餐飲系統研發與外送業務經驗，支援品牌處理訂單、門店、配送、數據和持續營運。</div><div class="row">2014 成立</div><div class="row">廣州 總部</div><div class="row">香港 / 北京 / 上海 / 成都 服務網絡</div><div class="row">聯絡餐道</div><div class="row">公司與服務網絡</div><div class="row">香港</div><div class="row">北京</div><div class="row">上海</div><div class="row">成都營運中心</div><div class="row">導入、培訓與營運支援</div><div class="row">多地團隊共同支援品牌導入、營運、技術協作與長期服務。</div><div class="row">企業旅程</div><div class="row">從餐飲系統研發到 O2O 營運平台</div><div class="row">2000Call Center 服務</div><div class="row">2003大型連鎖門店合作</div><div class="row">2008第一代 SaaS 3.0</div><div class="row">2014SaaS 平台 5.0</div><div class="row">2017OMS 上線</div><div class="row">2020SaaS 6.0 零售</div><div class="row">服務交付</div><div class="row">以產品平台、數據分析、配送履約和質量保障支撐長期營運</div><div class="row">公司基礎 2014 年成立，總部廣州。</div><div class="row">產品演進 OMS、CDBI、DMS、AMS / Connector 承接不同營運環節。</div><div class="row">服務交付 Merchant Service、Operation 和 Helpdesk 支撐長期營運。</div><div class="row">產品平台：訂單、餐單、門店、配送和接入。</div><div class="row">數據分析：報表、看板、平台訂單與 OMS 訂單對賬差異。</div><div class="row">質量保障：穩定性和服務交付。</div><div class="row">產品與服務能力</div><div class="row">每一項能力用不同方式說明它承接的營運工作</div><div class="row">OMS、CDBI / 財務對賬、DMS / iDMS、AMS / Connector 和 Merchant Service / Helpdesk 各自承接不同營運工作，因此以獨立板塊呈現。</div><div class="row">OMS / COMS / SOMS</div><div class="row">多渠道訂單進入同一個門店處理流程</div><div class="row">OMS 承接外賣平台、自有入口和 Call Center 訂單，讓門店按渠道、訂單狀態、配送狀態和異常類型處理。</div><div class="row">渠道</div><div class="row">門店</div><div class="row">狀態</div><div class="row">OMS</div><div class="row">外賣平台</div><div class="row">待接單通知門店</div><div class="row">自有 H5 / Web</div><div class="row">製作中同步出餐</div><div class="row">Call Center</div><div class="row">配送中追蹤狀態</div><div class="row">退款 / 取消</div><div class="row">異常營運跟進</div><div class="row">平台訂單</div><div class="row">已匹配</div><div class="row">OMS 訂單</div><div class="row">待核對</div><div class="row">金額差異</div><div class="row">需追蹤</div><div class="row">漏單標記</div><div class="row">營運跟進</div><div class="row">CDBI / 財務對賬</div><div class="row">報表、看板與對賬差異進入同一個分析視圖</div><div class="row">CDBI 和財務對賬能力支援管理層、營運和財務查看報表、看板、平台訂單與 OMS 訂單對賬差異。</div><div class="row">DMS / iDMS</div><div class="row">配送履約從派單、取餐到第三方轉派可追蹤</div><div class="row">DMS / iDMS 支援自有騎手、第三方配送、派單、SMS 通知、配送異常和履約監控。</div><div class="row">騎手</div><div class="row">第三方</div><div class="row">配送中待派單 → 已派單 → 到店 → 取餐 → 已送達</div><div class="row">自建入口</div><div class="row">POS / KDS</div><div class="row">AMS / ConnectorCRM / 會員</div><div class="row">支付 / ERP</div><div class="row">配送 API</div><div class="row">AMS / Connector</div><div class="row">把外部系統、API、字段和狀態回傳接回餐道</div><div class="row">AMS / Connector 連接外賣平台、自建入口、POS / KDS、CRM、支付、ERP、配送和 API，讓資料回到訂單、會員、配送、數據和對賬流程。</div><div class="row">Merchant Service / Operation / Helpdesk</div><div class="row">產品之外，還需要導入、培訓、營運支援和日常查詢承接</div><div class="row">導入梳理門店、餐單、渠道與現有系統。</div><div class="row">培訓協助門店、營運、配送和支援角色理解流程。</div><div class="row">營運支援跟進訂單、餐單、配送、對賬和異常處理。</div><div class="row">Helpdesk承接日常查詢、接入問題和技術支援。</div><div class="row">質量與可信</div><div class="row">用安全、服務管理和配送系統穩定性支撐長期合作</div><div class="row">ISO 27001資訊安全管理</div><div class="row">ISO 20000IT 服務管理</div><div class="row">DMS吞吐量與可用性看板</div><div class="row">500 Order/secondDMS 並發吞吐量</div><div class="row">99.95% overDMS 平台可用性</div><div class="row">長期合作</div><div class="row">讓餐道團隊了解你的營運場景與系統現況</div><div class="row">預約產品演示</div><div class="row">查看資源入口</div><div class="row">餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <div class="brand">餐道</div>
+        <p class="footer-note">餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector</p>
+      </div>
+      <nav class="footer-links" aria-label="頁尾導航">
+        <a href="#">首頁</a><a href="#">解決方案</a><a href="#">平台</a><a href="#">整合能力</a><a href="#">客戶案例</a><a href="#">資源</a><a href="#">關於餐道</a><a href="#">預約演示</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

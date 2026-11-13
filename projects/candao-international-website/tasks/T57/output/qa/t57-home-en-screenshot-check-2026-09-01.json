@@ -1,0 +1,21 @@
+{
+  "task": "T57",
+  "status": "pass",
+  "screenshot": "tasks/T57/output/screenshots/t57-home-desktop-en-figma-1440-full.png",
+  "dimensions": {
+    "width": 1444,
+    "height": 5788,
+    "mode": "RGBA"
+  },
+  "visual_check": {
+    "source": "local image inspection via Codex view_image",
+    "result": "pass",
+    "notes": [
+      "Hero 文本组已恢复到原始 752px 结构，副标题恢复 540px 宽度。",
+      "平台概览左列从自动收窄后的负向位置恢复到源稿版心内。",
+      "问题卡短标签已改为更适合窄卡片的英文表达。",
+      "顶部导航英文文本自动扩展后未见明显重叠。",
+      "源 Figma 中图片、矢量或品牌 Logo 内嵌文字未在本轮重绘。"
+    ]
+  }
+}

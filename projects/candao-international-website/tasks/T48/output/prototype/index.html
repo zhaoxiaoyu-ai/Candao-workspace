@@ -1,0 +1,1703 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>接入評估中心｜餐道</title>
+    <style>
+      :root {
+        --primary: #528dff;
+        --primary-strong: #3b82f6;
+        --primary-soft: #eef5ff;
+        --ink: #16233d;
+        --muted: rgba(22, 35, 61, 0.66);
+        --quiet: rgba(22, 35, 61, 0.46);
+        --line: rgba(22, 35, 61, 0.12);
+        --page: #f6f8fc;
+        --navy: #0f172a;
+        --navy-deep: #000d2b;
+        --panel: #141e30;
+        --panel-side: #0f1829;
+        --panel-active: #1e3a5f;
+        --dark-muted: #9aa8bd;
+        --success: #00a884;
+        --warning: #ffab00;
+        --danger: #ef4444;
+        --content: 1200px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: #eef1f6;
+        color: var(--ink);
+        font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Inter, Arial, sans-serif;
+        letter-spacing: 0;
+      }
+
+      body {
+        margin: 0;
+        background: #eef1f6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1440px, 100%);
+        margin: 0 auto;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.1);
+      }
+
+      .container {
+        width: min(var(--content), calc(100% - 56px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: absolute;
+        z-index: 40;
+        inset: 0 0 auto;
+        height: 76px;
+      }
+
+      .nav-inner {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .brand img {
+        display: block;
+        width: 116px;
+        height: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        gap: 28px;
+      }
+
+      .nav-links a,
+      .footer-links a,
+      .language {
+        white-space: nowrap;
+      }
+
+      .nav-links a[aria-current="page"] {
+        color: #fff;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 22px;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 760;
+        line-height: 1;
+        white-space: nowrap;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      }
+
+      .button.primary {
+        border-color: var(--primary);
+        background: var(--primary);
+      }
+
+      .button.light {
+        border-color: rgba(22, 35, 61, 0.12);
+        background: #fff;
+        color: var(--ink);
+      }
+
+      .button.soft {
+        border-color: rgba(82, 141, 255, 0.24);
+        background: var(--primary-soft);
+        color: var(--primary-strong);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 980px;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(6, 12, 28, 0.96), rgba(10, 20, 43, 0.84) 48%, rgba(9, 18, 36, 0.76)),
+          url("home-hero-restaurant-ops-2026-08-08.png") center / cover;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 74% 30%, rgba(82, 141, 255, 0.26), transparent 24%),
+          linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.9)),
+          repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.024) 0 1px, transparent 1px 136px);
+        pointer-events: none;
+      }
+
+      .hero-main {
+        position: relative;
+        z-index: 2;
+        padding-top: 154px;
+      }
+
+      .hero-copy {
+        max-width: 980px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 820;
+        line-height: 20px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 24px;
+        font-size: 64px;
+        line-height: 1.12;
+        font-weight: 820;
+        letter-spacing: 0;
+      }
+
+      h1 span {
+        display: block;
+        color: var(--primary);
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .hero .lead {
+        max-width: 840px;
+        margin: 0 auto;
+        color: rgba(226, 232, 240, 0.82);
+      }
+
+      .hero-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 34px;
+      }
+
+      .hero-stage {
+        position: relative;
+        z-index: 3;
+        width: min(1280px, calc(100% - 40px));
+        margin: 58px auto 0;
+        padding: 16px;
+        border: 1px solid rgba(121, 179, 255, 0.34);
+        border-radius: 16px;
+        background: rgba(20, 30, 48, 0.94);
+        box-shadow: 0 0 42px rgba(59, 130, 246, 0.18), 0 30px 80px rgba(0, 0, 0, 0.34);
+      }
+
+      .stage-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .stage-title {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .stage-title strong {
+        color: #fff;
+        font-size: 18px;
+      }
+
+      .stage-title span {
+        color: var(--dark-muted);
+        font-size: 13px;
+      }
+
+      .stage-status {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .chip {
+        display: inline-flex;
+        min-height: 28px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        border-radius: 6px;
+        border: 1px solid rgba(121, 179, 255, 0.2);
+        color: #dbeafe;
+        background: rgba(82, 141, 255, 0.12);
+        font-size: 12px;
+        font-weight: 740;
+      }
+
+      .chip.green {
+        border-color: rgba(0, 168, 132, 0.3);
+        color: #9ff4dd;
+        background: rgba(0, 168, 132, 0.14);
+      }
+
+      .chip.amber {
+        border-color: rgba(255, 171, 0, 0.34);
+        color: #ffe0a3;
+        background: rgba(255, 171, 0, 0.14);
+      }
+
+      .stage-grid {
+        display: grid;
+        grid-template-columns: 265px minmax(0, 1fr) 302px;
+        min-height: 390px;
+      }
+
+      .stage-rail {
+        display: grid;
+        align-content: start;
+        gap: 10px;
+        padding: 18px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(15, 24, 41, 0.78);
+      }
+
+      .stage-rail small,
+      .summary-card small,
+      .mini-panel small,
+      .field-row small {
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 820;
+      }
+
+      .rail-button {
+        display: flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 14px;
+        border: 1px solid rgba(121, 179, 255, 0.16);
+        border-radius: 8px;
+        color: #dbeafe;
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 14px;
+        font-weight: 740;
+      }
+
+      .rail-button.active {
+        border-color: rgba(82, 141, 255, 0.62);
+        background: var(--panel-active);
+        color: #fff;
+      }
+
+      .stage-map {
+        padding: 24px;
+      }
+
+      .question-strip {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+
+      .question-item {
+        min-height: 68px;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        color: #e5edff;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 700;
+      }
+
+      .flow-map {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 18px;
+        align-items: center;
+        min-height: 226px;
+        padding: 18px;
+        border-radius: 12px;
+        border: 1px solid rgba(121, 179, 255, 0.24);
+        background:
+          linear-gradient(135deg, rgba(82, 141, 255, 0.12), rgba(255, 255, 255, 0.02)),
+          rgba(15, 24, 41, 0.74);
+      }
+
+      .flow-group {
+        display: grid;
+        gap: 10px;
+      }
+
+      .flow-node {
+        padding: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .flow-node strong {
+        display: block;
+        margin-bottom: 6px;
+        color: #fff;
+        font-size: 15px;
+      }
+
+      .flow-node span {
+        color: rgba(226, 232, 240, 0.72);
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .connector-core {
+        min-height: 186px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(121, 179, 255, 0.5);
+        border-radius: 14px;
+        background:
+          radial-gradient(circle at center, rgba(82, 141, 255, 0.28), transparent 62%),
+          rgba(30, 58, 95, 0.72);
+        box-shadow: inset 0 0 38px rgba(82, 141, 255, 0.1), 0 0 36px rgba(82, 141, 255, 0.18);
+        text-align: center;
+      }
+
+      .connector-core strong {
+        display: block;
+        color: #fff;
+        font-size: 22px;
+      }
+
+      .connector-core span {
+        display: block;
+        margin-top: 8px;
+        color: #b9c9e3;
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .stage-summary {
+        display: grid;
+        gap: 12px;
+        align-content: start;
+        padding: 18px;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(15, 24, 41, 0.9);
+      }
+
+      .summary-card,
+      .mini-panel,
+      .field-row {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .summary-card {
+        padding: 14px;
+      }
+
+      .summary-card strong {
+        display: block;
+        margin-top: 8px;
+        color: #fff;
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      section {
+        padding: 96px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(320px, 0.28fr);
+        gap: 44px;
+        align-items: end;
+        margin-bottom: 38px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        color: var(--ink);
+        font-size: 40px;
+        line-height: 46px;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        color: var(--ink);
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 780;
+        letter-spacing: 0;
+      }
+
+      .section-copy {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        min-height: 26px;
+        align-items: center;
+        margin-bottom: 14px;
+        padding: 0 8px;
+        border-radius: 4px;
+        background: var(--primary-soft);
+        color: var(--primary-strong);
+        font-size: 12px;
+        font-weight: 820;
+      }
+
+      .section-dark {
+        color: #fff;
+        background:
+          linear-gradient(180deg, rgba(15, 23, 42, 0.97), rgba(0, 13, 43, 0.98)),
+          url("integrations-ecosystem-ui-2026-08-08.png") center / cover;
+      }
+
+      .section-dark h2,
+      .section-dark h3 {
+        color: #fff;
+      }
+
+      .section-dark .section-copy,
+      .section-dark .lead {
+        color: rgba(226, 232, 240, 0.78);
+      }
+
+      .workbench-shell {
+        overflow: hidden;
+        border: 1px solid rgba(121, 179, 255, 0.3);
+        border-radius: 16px;
+        background: var(--panel);
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.1);
+      }
+
+      .workbench-bar {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr) 260px;
+        gap: 18px;
+        align-items: center;
+        padding: 16px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .workbench-bar strong {
+        color: #fff;
+        font-size: 18px;
+      }
+
+      .searchbar {
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        color: rgba(226, 232, 240, 0.55);
+        background: rgba(15, 24, 41, 0.72);
+        font-size: 13px;
+      }
+
+      .workbench-layout {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr) 300px;
+        min-height: 560px;
+      }
+
+      .system-rail {
+        display: grid;
+        align-content: start;
+        gap: 10px;
+        padding: 18px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--panel-side);
+      }
+
+      .center-panel {
+        padding: 22px;
+      }
+
+      .field-table {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+      }
+
+      .field-row {
+        display: grid;
+        grid-template-columns: 150px 1fr 140px 150px;
+        gap: 12px;
+        align-items: center;
+        min-height: 66px;
+        padding: 12px 14px;
+        border-width: 0 0 1px;
+        border-radius: 0;
+      }
+
+      .field-row:last-child {
+        border-bottom: 0;
+      }
+
+      .field-row strong {
+        color: #fff;
+        font-size: 14px;
+      }
+
+      .field-row span {
+        color: rgba(226, 232, 240, 0.74);
+        font-size: 13px;
+        line-height: 19px;
+      }
+
+      .status {
+        display: inline-flex;
+        min-height: 26px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        padding: 0 8px;
+        font-size: 12px;
+        font-weight: 780;
+      }
+
+      .status.blue {
+        background: rgba(82, 141, 255, 0.16);
+        color: #bcd7ff;
+      }
+
+      .status.green {
+        background: rgba(0, 168, 132, 0.14);
+        color: #9ff4dd;
+      }
+
+      .status.amber {
+        background: rgba(255, 171, 0, 0.14);
+        color: #ffe0a3;
+      }
+
+      .object-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 22px;
+      }
+
+      .object-cloud span {
+        min-height: 32px;
+        padding: 7px 10px;
+        border: 1px solid rgba(121, 179, 255, 0.22);
+        border-radius: 6px;
+        color: #dbeafe;
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .side-panel {
+        display: grid;
+        align-content: start;
+        gap: 12px;
+        padding: 18px;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--panel-side);
+      }
+
+      .mini-panel {
+        padding: 14px;
+      }
+
+      .mini-panel strong {
+        display: block;
+        margin: 7px 0 6px;
+        color: #fff;
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      .mini-panel p {
+        margin: 0;
+        color: rgba(226, 232, 240, 0.72);
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .proof-section {
+        background: #fff;
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.88fr) minmax(380px, 0.54fr);
+        gap: 36px;
+        align-items: start;
+      }
+
+      .case-stack {
+        display: grid;
+        gap: 14px;
+      }
+
+      .case-card {
+        display: grid;
+        grid-template-columns: 72px 1fr 170px;
+        gap: 18px;
+        align-items: start;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .case-mark {
+        display: grid;
+        place-items: center;
+        min-height: 64px;
+        border-radius: 8px;
+        color: #fff;
+        background: linear-gradient(135deg, #17335e, #528dff);
+        font-family: Inter, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 780;
+        text-align: center;
+      }
+
+      .case-card p,
+      .industry-card p,
+      .resource-card p,
+      .matrix-card p,
+      .cta-panel p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      .case-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .case-tags span {
+        min-height: 26px;
+        padding: 5px 8px;
+        border-radius: 6px;
+        background: var(--primary-soft);
+        color: var(--primary-strong);
+        font-size: 12px;
+        font-weight: 760;
+      }
+
+      .case-next {
+        display: grid;
+        gap: 8px;
+      }
+
+      .case-next span {
+        display: block;
+        padding: 10px;
+        border-radius: 8px;
+        color: var(--ink);
+        background: #f7faff;
+        font-size: 13px;
+        font-weight: 740;
+      }
+
+      .proof-image {
+        min-height: 420px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background:
+          linear-gradient(180deg, rgba(15, 23, 42, 0.04), rgba(15, 23, 42, 0.28)),
+          url("customers-hero-case-ops-2026-08-08.png") center / cover;
+      }
+
+      .metrics-band {
+        margin-top: 38px;
+        padding: 32px;
+        border-radius: 16px;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(15, 23, 42, 0.96), rgba(0, 13, 43, 0.9)),
+          url("customers-hero-case-ops-2026-08-08.png") center / cover;
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--primary);
+        font-family: Inter, Arial, sans-serif;
+        font-size: 40px;
+        line-height: 46px;
+        font-weight: 760;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 8px;
+        color: rgba(226, 232, 240, 0.72);
+        font-size: 13px;
+        line-height: 19px;
+      }
+
+      .industry-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .industry-card,
+      .resource-card,
+      .matrix-card,
+      .cta-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .industry-card {
+        min-height: 206px;
+        padding: 18px;
+      }
+
+      .industry-card strong,
+      .resource-card strong,
+      .matrix-card strong,
+      .cta-panel strong {
+        display: block;
+        color: var(--ink);
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 780;
+      }
+
+      .metric-lines {
+        display: grid;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .metric-lines span {
+        display: block;
+        padding: 8px 10px;
+        border-radius: 6px;
+        color: var(--ink);
+        background: #f5f8fc;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 700;
+      }
+
+      .resource-section {
+        background: var(--page);
+      }
+
+      .router-shell {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr) 300px;
+        gap: 18px;
+      }
+
+      .router-rail,
+      .router-main,
+      .readiness-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .router-rail {
+        padding: 14px;
+      }
+
+      .stage-item {
+        display: flex;
+        min-height: 58px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 14px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        color: var(--ink);
+        font-weight: 760;
+      }
+
+      .stage-item.active {
+        border-color: rgba(82, 141, 255, 0.34);
+        color: var(--primary-strong);
+        background: var(--primary-soft);
+      }
+
+      .router-main {
+        padding: 22px;
+      }
+
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .resource-card {
+        min-height: 150px;
+        padding: 18px;
+      }
+
+      .readiness-panel {
+        padding: 18px;
+      }
+
+      .readiness-panel h3 {
+        margin-bottom: 16px;
+      }
+
+      .readiness-row {
+        display: grid;
+        grid-template-columns: 86px 1fr;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .readiness-row:last-child {
+        border-bottom: 0;
+      }
+
+      .readiness-row span:first-child {
+        color: var(--quiet);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .readiness-row span:last-child {
+        color: var(--ink);
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 740;
+      }
+
+      .matrix-section {
+        color: #fff;
+        background: var(--navy-deep);
+      }
+
+      .matrix-section h2,
+      .matrix-section h3 {
+        color: #fff;
+      }
+
+      .matrix-section .section-copy {
+        color: rgba(226, 232, 240, 0.72);
+      }
+
+      .matrix-grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .matrix-head,
+      .matrix-row {
+        display: grid;
+        grid-template-columns: 1.2fr 1.3fr 1fr 1.1fr;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .matrix-head div,
+      .matrix-row div {
+        padding: 16px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .matrix-head div:last-child,
+      .matrix-row div:last-child {
+        border-right: 0;
+      }
+
+      .matrix-head {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 820;
+      }
+
+      .matrix-row div {
+        color: rgba(226, 232, 240, 0.82);
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .cta-section {
+        padding: 90px 0;
+        background: #fff;
+      }
+
+      .cta-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.86fr) minmax(420px, 0.58fr);
+        gap: 34px;
+        align-items: stretch;
+      }
+
+      .cta-copy {
+        padding: 38px;
+        border-radius: 16px;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.56)),
+          url("home-product-showcase-operations-ui-2026-08-05.png") center / cover;
+      }
+
+      .cta-copy h2 {
+        color: #fff;
+      }
+
+      .cta-copy .section-copy {
+        color: rgba(226, 232, 240, 0.82);
+      }
+
+      .cta-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .cta-panel {
+        padding: 22px;
+      }
+
+      .summary-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .summary-line {
+        display: grid;
+        grid-template-columns: 104px 1fr;
+        gap: 12px;
+        align-items: center;
+        min-height: 48px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f8fbff;
+      }
+
+      .summary-line span:first-child {
+        color: var(--quiet);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .summary-line span:last-child {
+        color: var(--ink);
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 780;
+      }
+
+      .footer {
+        padding: 58px 0 36px;
+        color: #c7d5e6;
+        background: #141414;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 300px minmax(0, 1fr);
+        gap: 80px;
+        align-items: start;
+      }
+
+      .footer-brand img {
+        width: 130px;
+      }
+
+      .footer-brand p {
+        margin: 18px 0 0;
+        color: #8794a8;
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .footer-links strong {
+        display: block;
+        margin-bottom: 14px;
+        color: #eef3fb;
+        font-size: 14px;
+      }
+
+      .footer-links a {
+        display: block;
+        margin: 10px 0;
+        color: #8794a8;
+        font-size: 14px;
+      }
+
+      .copyright {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        color: #77849a;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar" data-module="Header">
+        <div class="container nav-inner">
+          <a class="brand" href="#" aria-label="餐道">
+            <img src="candao-blue-logo.svg" alt="餐道">
+          </a>
+          <nav class="nav-links" aria-label="主導航">
+            <a href="#">首頁</a>
+            <a href="#">解決方案</a>
+            <a href="#">平台</a>
+            <a href="#" aria-current="page">整合能力</a>
+            <a href="#">客戶案例</a>
+            <a href="#">資源</a>
+            <a href="#">關於餐道</a>
+          </nav>
+          <div class="nav-actions">
+            <span class="language">繁中 / EN</span>
+            <a class="button primary" href="#">預約產品演示</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero" data-module="Hero Product Stage">
+        <div class="container hero-main">
+          <div class="hero-copy">
+            <p class="eyebrow">接入評估中心｜餐道</p>
+            <h1>先判斷現有系統如何接入 <span>再用案例與資源完成採購評估</span></h1>
+            <p class="lead">把多平台訂單、餐單更新、門店接單、配送與對賬差異放進同一個評估流程：先看系統來源和資料對象，再比對相似案例，最後帶著問題進入資源或演示。</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#">提交接入評估</a>
+              <a class="button" href="#">預約相似場景演示</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stage" aria-label="接入評估工作台">
+          <div class="stage-toolbar">
+            <div class="stage-title">
+              <strong>接入評估工作台</strong>
+              <span>將現有渠道、門店系統、資料對象與推薦演示模組放在同一個判斷面</span>
+            </div>
+            <div class="stage-status">
+              <span class="chip green">來源已整理</span>
+              <span class="chip">校驗規則待確認</span>
+              <span class="chip amber">異常回傳需評估</span>
+            </div>
+          </div>
+
+          <div class="stage-grid">
+            <div class="stage-rail">
+              <small>系統來源</small>
+              <div class="rail-button active">外賣平台</div>
+              <div class="rail-button">自建點餐</div>
+              <div class="rail-button">POS / KDS</div>
+              <div class="rail-button">CRM / 會員</div>
+              <div class="rail-button">支付 / ERP</div>
+              <div class="rail-button">配送 API</div>
+            </div>
+
+            <div class="stage-map">
+              <div class="question-strip">
+                <div class="question-item">多平台訂單</div>
+                <div class="question-item">餐單更新</div>
+                <div class="question-item">門店接單</div>
+                <div class="question-item">配送與對賬差異</div>
+              </div>
+
+              <div class="flow-map">
+                <div class="flow-group">
+                  <div class="flow-node">
+                    <strong>外賣平台</strong>
+                    <span>平台訂單、支付資料、配送狀態</span>
+                  </div>
+                  <div class="flow-node">
+                    <strong>POS / KDS</strong>
+                    <span>門店接單、打印 / 後廚單</span>
+                  </div>
+                </div>
+                <div class="connector-core">
+                  <div>
+                    <strong>AMS / Connector</strong>
+                    <span>字段映射、同步監控、異常回傳</span>
+                  </div>
+                </div>
+                <div class="flow-group">
+                  <div class="flow-node">
+                    <strong>OMS · Menu Center</strong>
+                    <span>訂單、菜單、門店、庫存</span>
+                  </div>
+                  <div class="flow-node">
+                    <strong>DMS / iDMS · 財務對賬 · CDBI</strong>
+                    <span>配送、對賬、報表與營運使用</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="stage-summary">
+              <div class="summary-card">
+                <small>下一步</small>
+                <strong>提交接入評估，確認資料對象與回傳狀態</strong>
+              </div>
+              <div class="summary-card">
+                <small>推薦演示</small>
+                <strong>OMS、Menu Center、DMS / iDMS、財務對賬、CDBI</strong>
+              </div>
+              <div class="summary-card">
+                <small>相似案例</small>
+                <strong>Pizza-Box、JIA Group、Jardine Group</strong>
+              </div>
+              <div class="summary-card">
+                <small>資源下一步</small>
+                <strong>接入準備清單、營運 FAQ、支援中心</strong>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-dark" data-module="System Fit Workbench">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">接入工作台</p>
+              <h2>按系統類型了解接入範圍、資料流和回傳狀態</h2>
+              <p class="section-copy">接入不是單點開接口，而是讓資料在營運鏈路中可校驗、可追蹤。IT 與營運團隊需要同時看到來源、校驗同步、營運使用與異常回傳。</p>
+            </div>
+            <p class="section-copy">這一段承接原整合能力：外部系統如何接回 OMS、Menu Center、DMS / iDMS、財務對賬與 CDBI。</p>
+          </div>
+
+          <div class="workbench-shell">
+            <div class="workbench-bar">
+              <strong>接口與資料流評估</strong>
+              <div class="searchbar">搜尋渠道、接口对象、資料欄位或異常類型</div>
+              <div class="stage-status">
+                <span class="chip">待映射</span>
+                <span class="chip green">同步中</span>
+                <span class="chip amber">異常回傳</span>
+              </div>
+            </div>
+
+            <div class="workbench-layout">
+              <div class="system-rail">
+                <div class="rail-button active">外賣平台</div>
+                <div class="rail-button">自建點餐入口</div>
+                <div class="rail-button">POS / KDS</div>
+                <div class="rail-button">CRM / 會員</div>
+                <div class="rail-button">支付 / ERP</div>
+                <div class="rail-button">配送 API</div>
+              </div>
+
+              <div class="center-panel">
+                <h3>來源 -> 校驗同步 -> 營運使用</h3>
+                <p class="lead">平台 / POS / ERP 訂單、菜單、門店、會員與交易資料進入接口層，經 AMS / Connector 映射字段和監控同步狀態，再回到 OMS / CDBI 與財務對賬場景。</p>
+                <div class="field-table">
+                  <div class="field-row">
+                    <strong>訂單</strong>
+                    <span>渠道、門店、訂單狀態、配送狀態、異常類型</span>
+                    <span class="status green">同步中</span>
+                    <span>可用於 OMS / CDBI</span>
+                  </div>
+                  <div class="field-row">
+                    <strong>菜單</strong>
+                    <span>餐單、SKU、庫存、售罄、區域菜單和平台差異</span>
+                    <span class="status blue">待映射</span>
+                    <span>Menu Center</span>
+                  </div>
+                  <div class="field-row">
+                    <strong>配送</strong>
+                    <span>配送單、騎手、第三方轉派、配送超時和 SMS 通知</span>
+                    <span class="status amber">異常回傳</span>
+                    <span>DMS / iDMS</span>
+                  </div>
+                  <div class="field-row">
+                    <strong>對賬</strong>
+                    <span>平台訂單與 OMS 訂單金額、狀態和漏單差異</span>
+                    <span class="status blue">待映射</span>
+                    <span>財務對賬</span>
+                  </div>
+                </div>
+                <div class="object-cloud">
+                  <span>訂單</span>
+                  <span>菜單</span>
+                  <span>門店</span>
+                  <span>庫存</span>
+                  <span>會員</span>
+                  <span>支付</span>
+                  <span>配送</span>
+                  <span>對賬</span>
+                </div>
+              </div>
+
+              <aside class="side-panel">
+                <div class="mini-panel">
+                  <small>來源</small>
+                  <strong>外賣平台 / POS / ERP</strong>
+                  <p>訂單、餐單、門店、會員與交易資料進入接口層。</p>
+                </div>
+                <div class="mini-panel">
+                  <small>校驗同步</small>
+                  <strong>AMS / Connector</strong>
+                  <p>映射字段、監控同步狀態，將異常回報給對應角色。</p>
+                </div>
+                <div class="mini-panel">
+                  <small>營運使用</small>
+                  <strong>OMS / 財務對賬 / CDBI</strong>
+                  <p>支撐履約、對賬、報表與跨系統決策。</p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-section" data-module="Case Proof Board">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">案例證據</p>
+              <h2>從相似客戶案例看落地方式</h2>
+              <p class="section-copy">不只看品牌名稱，而是看導入前後，分散的訂單、門店、餐單、配送、會員和對賬資料如何回到可追蹤的營運流程。</p>
+            </div>
+            <p class="section-copy">案例證據用來回答：餐道是否處理過相似系統、相似業態和相似營運問題。</p>
+          </div>
+
+          <div class="proof-grid">
+            <div class="case-stack">
+              <article class="case-card">
+                <div class="case-mark">Pizza<br>Box</div>
+                <div>
+                  <h3>Pizza-Box｜9 年合作，OMS + 自有點餐</h3>
+                  <p>使用 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、經營分析與客戶服務。導入後變化：訂單、配送、營銷和客戶服務不再分散在多個工具中。</p>
+                  <div class="case-tags">
+                    <span>訂單整合｜OMS</span>
+                    <span>自有點餐</span>
+                    <span>預約相似場景演示</span>
+                  </div>
+                </div>
+                <div class="case-next">
+                  <span>相似問題：多平台訂單</span>
+                  <span>資源下一步：案例資源</span>
+                </div>
+              </article>
+
+              <article class="case-card">
+                <div class="case-mark">JIA<br>Group</div>
+                <div>
+                  <h3>JIA Group｜多品牌、多門店營運</h3>
+                  <p>多品牌門店需要在不同營運場景下看見訂單、會員、數據與服務回流，避免採購和營運團隊只看到孤立功能。</p>
+                  <div class="case-tags">
+                    <span>數據與服務｜CDBI</span>
+                    <span>多門店</span>
+                    <span>營運使用</span>
+                  </div>
+                </div>
+                <div class="case-next">
+                  <span>相似問題：門店營運</span>
+                  <span>資源下一步：支援中心</span>
+                </div>
+              </article>
+
+              <article class="case-card">
+                <div class="case-mark">Jardine<br>Group</div>
+                <div>
+                  <h3>Jardine Group｜DMS / iDMS 配送履約</h3>
+                  <p>配送履約需要把自有騎手、第三方配送、派單規則、SMS 通知與配送異常接回同一個管理流程。</p>
+                  <div class="case-tags">
+                    <span>配送履約｜DMS / iDMS</span>
+                    <span>異常回傳</span>
+                    <span>技術查詢</span>
+                  </div>
+                </div>
+                <div class="case-next">
+                  <span>相似問題：配送超時</span>
+                  <span>資源下一步：營運 FAQ</span>
+                </div>
+              </article>
+            </div>
+            <div class="proof-image" aria-label="品牌門店與外送高峰"></div>
+          </div>
+
+          <div class="metrics-band" data-module="Authorized Metrics Band">
+            <div class="metric-grid">
+              <div class="metric">
+                <strong>5000+</strong>
+                <span>品牌數量</span>
+              </div>
+              <div class="metric">
+                <strong>500M+</strong>
+                <span>每日處理訂單</span>
+              </div>
+              <div class="metric">
+                <strong>400+</strong>
+                <span>覆蓋城市</span>
+              </div>
+              <div class="metric">
+                <strong>200K+</strong>
+                <span>門店數量</span>
+              </div>
+              <div class="metric">
+                <strong>4.5B+</strong>
+                <span>每月配送訂單交易額</span>
+              </div>
+              <div class="metric">
+                <strong>30%</strong>
+                <span>客戶效率提升</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="industry-grid">
+            <article class="industry-card">
+              <span class="kicker">甜品連鎖</span>
+              <strong>POS 對接與自動打印</strong>
+              <p>OMS 對接 POS，整合外賣平台資料並自動打印，降低漏單風險。</p>
+              <div class="metric-lines">
+                <span>訂單量：100K -> 190K -> 1.01M</span>
+                <span>銷售額：6.6M -> 7.74M -> 54.42M</span>
+                <span>復購率：19.88% -> 25.83%</span>
+              </div>
+            </article>
+            <article class="industry-card">
+              <span class="kicker">火鍋連鎖</span>
+              <strong>小程序訂單與騎手管理</strong>
+              <p>小程序訂單、門店聚合與騎手管理回到 OMS / DMS 流程。</p>
+              <div class="metric-lines">
+                <span>訂單取消率：12.66% / 15.65% / 19.98%</span>
+                <span>年度銷售額：1,578 萬元</span>
+                <span>營運效率：147%</span>
+              </div>
+            </article>
+            <article class="industry-card">
+              <span class="kicker">中餐連鎖</span>
+              <strong>收購後系統整合</strong>
+              <p>營運管理中心和數據分析中心支援收購後的系統整合與跨系統數據管理。</p>
+              <div class="metric-lines">
+                <span>訂單取消率改善：185%</span>
+                <span>銷售增長：665%</span>
+                <span>門店擴張率：116%</span>
+              </div>
+            </article>
+            <article class="industry-card">
+              <span class="kicker">咖啡品牌</span>
+              <strong>Menu Center 與 CDBI 分析</strong>
+              <p>外賣平台對接、Menu Center 菜單同步與 CDBI 分析支援門店決策。</p>
+              <div class="metric-lines">
+                <span>單店平均銷售額：+55%</span>
+                <span>單店平均訂單額增長：+74%</span>
+                <span>訂單量：1420 -> 2472</span>
+              </div>
+            </article>
+            <article class="industry-card">
+              <span class="kicker">鮮食零售</span>
+              <strong>區域餐單與庫存同步</strong>
+              <p>跨區域餐單、庫存與多平台同步，支援區域餐單和平台差異管理。</p>
+              <div class="metric-lines">
+                <span>門店營運效率：30%</span>
+                <span>門店營運數字化：80%</span>
+                <span>線上訂單比例：26.7%</span>
+              </div>
+            </article>
+            <article class="industry-card">
+              <span class="kicker">配送密集品牌</span>
+              <strong>派單規則與配送異常</strong>
+              <p>DMS / iDMS 管理自有騎手、第三方配送、派單規則、SMS 通知與配送異常。</p>
+              <div class="metric-lines">
+                <span>Jardine Group DMS 覆蓋 200+ 間門店</span>
+                <span>DMS 平台可用性：超過 99.95%</span>
+                <span>DMS 吞吐量：每秒 500 Order/second</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="resource-section" data-module="Resource Router">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">資源路由</p>
+              <h2>資源路由：按目前階段找到下一步</h2>
+              <p class="section-copy">採購、IT、營運、門店、配送和財務團隊不需要先讀完整站；先選擇所處階段，再進入接入準備、營運 FAQ、案例資源、支援中心或產品演示分流。</p>
+            </div>
+            <p class="section-copy">這一段承接原資源頁，將「資源中心」轉為任務導向界面。</p>
+          </div>
+
+          <div class="router-shell">
+            <aside class="router-rail">
+              <div class="stage-item active">評估中 <span>01</span></div>
+              <div class="stage-item">導入中 <span>02</span></div>
+              <div class="stage-item">日常營運 <span>03</span></div>
+              <div class="stage-item">技術查詢 <span>04</span></div>
+            </aside>
+
+            <div class="router-main">
+              <span class="kicker">資源中心</span>
+              <h3>評估中先確認系統、問題和相似案例</h3>
+              <p class="section-copy">評估中了解餐道是否適合目前的訂單、門店、配送或對賬問題；導入中整理外賣平台、自有點餐、POS、CRM、ERP、配送和支付資料；日常營運提交接單超時、餐單同步、配送超時或對賬差異問題。</p>
+              <div class="resource-grid">
+                <article class="resource-card">
+                  <span class="kicker">接入準備清單</span>
+                  <strong>把接入前需要整理的系統對象一次看清</strong>
+                  <p>渠道與入口：外賣平台、H5 / Web / APP / QR；門店系統：POS / KDS；企業資料：CRM / 會員、支付 / ERP。</p>
+                </article>
+                <article class="resource-card">
+                  <span class="kicker">營運 FAQ</span>
+                  <strong>多平台訂單、餐單同步與對賬差異</strong>
+                  <p>說明多平台訂單如何在 OMS 處理，Menu Center 如何處理餐單、庫存、售罄、區域菜單和平台差異。</p>
+                </article>
+                <article class="resource-card">
+                  <span class="kicker">案例資源</span>
+                  <strong>按業態找到相似案例與可參考成果</strong>
+                  <p>Pizza / 快餐、餐飲集團、甜品連鎖、火鍋 / 中餐、咖啡品牌、鮮食零售和配送密集品牌。</p>
+                </article>
+                <article class="resource-card">
+                  <span class="kicker">支援中心</span>
+                  <strong>把既有客戶和導入中問題導向正確處理路徑</strong>
+                  <p>問題類型：接入 / 營運 / 技術；相關系統：OMS / DMS / iDMS / CDBI；可見異常：接單超時 / 配送超時 / 對賬差異。</p>
+                </article>
+                <article class="resource-card">
+                  <span class="kicker">媒體與公司資料</span>
+                  <strong>把採購、合作和媒體需要的資料集中呈現</strong>
+                  <p>公司資料、公司背景、據點、服務能力、品牌資產、品牌標識、品牌資料、聯絡入口、媒體聯絡、新聞、合作與採購查詢。</p>
+                </article>
+                <article class="resource-card">
+                  <span class="kicker">產品演示分流</span>
+                  <strong>把不確定的問題轉成可安排的演示模組</strong>
+                  <p>填寫現況、匹配模組、安排演示；推薦 OMS、DMS、iDMS、CDBI、AMS / Connector。</p>
+                </article>
+              </div>
+            </div>
+
+            <aside class="readiness-panel">
+              <h3>演示準備</h3>
+              <div class="readiness-row">
+                <span>業態</span>
+                <span>Pizza / 餐飲集團 / 甜品 / 咖啡 / 鮮食零售</span>
+              </div>
+              <div class="readiness-row">
+                <span>現有系統</span>
+                <span>外賣平台 / POS / ERP / CRM / 配送</span>
+              </div>
+              <div class="readiness-row">
+                <span>主要問題</span>
+                <span>漏單、接單超時、配送超時、對賬差異</span>
+              </div>
+              <div class="readiness-row">
+                <span>推薦模組</span>
+                <span>OMS / DMS / iDMS / CDBI / AMS / Connector</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="matrix-section" data-module="Decision Matrix">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">整合判斷矩陣</p>
+              <h2>把問題、系統、案例和資源下一步放在同一個判斷面</h2>
+              <p class="section-copy">訪客不需要先猜自己該看哪一頁，頁面直接把目前問題、接入或產品關係、相似案例與資源下一步串起來。</p>
+            </div>
+            <p class="section-copy">這是三合一頁面能成立的核心，而不是把三個頁面順序拼長。</p>
+          </div>
+
+          <div class="matrix-grid">
+            <div class="matrix-head">
+              <div>目前問題</div>
+              <div>接入或產品關係</div>
+              <div>相似案例</div>
+              <div>資源下一步</div>
+            </div>
+            <div class="matrix-row">
+              <div>多平台訂單、餐單更新、門店接單與漏單風險</div>
+              <div>外賣平台、自建入口、POS / KDS 透過 AMS / Connector 回到 OMS 與 Menu Center</div>
+              <div>Pizza-Box、甜品連鎖</div>
+              <div>接入準備清單、營運 FAQ、提交接入評估</div>
+            </div>
+            <div class="matrix-row">
+              <div>配送超時、派單規則、第三方配送狀態回傳</div>
+              <div>DMS / iDMS 承接自有騎手、第三方配送、SMS 通知與配送異常</div>
+              <div>Jardine Group、配送密集品牌</div>
+              <div>支援中心、預約相似場景演示</div>
+            </div>
+            <div class="matrix-row">
+              <div>平台訂單與 OMS 訂單金額、狀態與漏單差異</div>
+              <div>CDBI / 財務對賬支撐報表、看板、對賬與跨系統決策</div>
+              <div>JIA Group、咖啡品牌、鮮食零售</div>
+              <div>案例資源、產品演示分流</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" data-module="Demo Summary CTA">
+        <div class="container cta-layout">
+          <div class="cta-copy">
+            <span class="kicker">演示摘要</span>
+            <h2>把接入問題、相似案例和資源入口帶到產品演示</h2>
+            <p class="section-copy">留下品牌、地區、門店規模、目前使用的外賣平台與 POS 系統。我們會根據營運場景安排 OMS、DMS、iDMS、CDBI 或 AMS / Connector 演示。</p>
+            <div class="cta-buttons">
+              <a class="button primary" href="#">預約產品演示</a>
+              <a class="button light" href="#">查看資源入口</a>
+            </div>
+          </div>
+
+          <aside class="cta-panel">
+            <span class="kicker">演示需求摘要</span>
+            <h3>提交後團隊按場景安排演示</h3>
+            <p>摘要會把目前問題、現有系統、相似案例與推薦模組帶入銷售跟進。</p>
+            <div class="summary-list">
+              <div class="summary-line">
+                <span>意圖</span>
+                <span>產品演示</span>
+              </div>
+              <div class="summary-line">
+                <span>推薦模組</span>
+                <span>OMS、DMS / iDMS、CDBI、AMS / Connector</span>
+              </div>
+              <div class="summary-line">
+                <span>業態與地區</span>
+                <span>由表單填入</span>
+              </div>
+              <div class="summary-line">
+                <span>現有系統</span>
+                <span>外賣平台 / POS / ERP</span>
+              </div>
+              <div class="summary-line">
+                <span>主要問題</span>
+                <span>漏單 / 配送超時 / 對賬差異</span>
+              </div>
+              <div class="summary-line">
+                <span>下一步</span>
+                <span>安排產品演示並回覆接入評估</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <footer class="footer" data-module="Footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img src="candao-blue-logo.svg" alt="餐道">
+              <p>餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector</p>
+            </div>
+            <div class="footer-links">
+              <div>
+                <strong>解決方案</strong>
+                <a href="#">移動點餐</a>
+                <a href="#">自助點餐機訂購</a>
+                <a href="#">配送管理與騎手應用</a>
+              </div>
+              <div>
+                <strong>平台</strong>
+                <a href="#">OMS</a>
+                <a href="#">DMS / iDMS</a>
+                <a href="#">CDBI / 財務對賬</a>
+              </div>
+              <div>
+                <strong>資源</strong>
+                <a href="#">接入準備清單</a>
+                <a href="#">營運 FAQ</a>
+                <a href="#">案例資源</a>
+              </div>
+              <div>
+                <strong>關於餐道</strong>
+                <a href="#">公司資料</a>
+                <a href="#">支援中心</a>
+                <a href="#">預約產品演示</a>
+              </div>
+            </div>
+          </div>
+          <div class="copyright">© 2026 餐道國際。版權所有。</div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

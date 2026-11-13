@@ -1,0 +1,41 @@
+{
+  "suite": "t24-product-name-case-sensitive-positive-2026-08-15",
+  "items": [
+    {
+      "id": "platform-idms-standard",
+      "component_type": "product_name",
+      "role": "IT",
+      "page_task": "展示聚合配送产品能力",
+      "locale": "zh-Hant",
+      "text": "iDMS / DMS / Dispatch 管理配送呼叫、騎手、派單和監控。",
+      "rendered_text": "iDMS / DMS / Dispatch 管理配送呼叫、騎手、派單和監控。",
+      "css_text": ".block-kicker { text-transform: none; }",
+      "checks_style_case_sensitive_terms": true,
+      "must_include": ["iDMS", "DMS", "Dispatch"]
+    },
+    {
+      "id": "about-saas-standard",
+      "component_type": "service_name",
+      "role": "采购方",
+      "page_task": "展示服务体系",
+      "locale": "zh-Hant",
+      "text": "SaaS、Data、Delivery 與 Quality Assurance 服務體系。",
+      "rendered_text": "SaaS、Data、Delivery 與 Quality Assurance 服務體系。",
+      "css_text": ".block-kicker { text-transform: none; }",
+      "checks_style_case_sensitive_terms": true,
+      "must_include": ["SaaS", "Data", "Delivery", "Quality Assurance"]
+    },
+    {
+      "id": "demo-routing-standard",
+      "component_type": "form_help",
+      "role": "采购方",
+      "page_task": "分流产品演示",
+      "locale": "zh-Hant",
+      "text": "餐道按場景安排 OMS、DMS、iDMS、CDBI 或 AMS / Connector 演示。",
+      "rendered_text": "餐道按場景安排 OMS、DMS、iDMS、CDBI 或 AMS / Connector 演示。",
+      "css_text": ".page { text-transform: none; }",
+      "checks_style_case_sensitive_terms": true,
+      "must_include": ["餐道", "OMS", "DMS", "iDMS", "CDBI", "AMS / Connector"]
+    }
+  ]
+}

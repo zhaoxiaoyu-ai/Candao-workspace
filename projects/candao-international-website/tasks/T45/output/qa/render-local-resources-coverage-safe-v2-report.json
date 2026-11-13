@@ -1,0 +1,16 @@
+{
+  "page": "resources",
+  "status": "pass",
+  "screenshot": "projects/candao-international-website/tasks/T45/output/screenshots/local-resources-coverage-safe-v2-1440-full.png",
+  "metrics": {
+    "viewportWidth": 1440,
+    "viewportHeight": 1200,
+    "scrollHeight": 5368,
+    "pageWidth": 1440,
+    "textLength": 2456,
+    "overflowingCount": 0,
+    "overflowing": [],
+    "h1": "資源中心",
+    "bodyClass": ""
+  }
+}

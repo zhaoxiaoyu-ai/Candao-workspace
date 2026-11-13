@@ -1,0 +1,30 @@
+{
+  "suite": "t46-finance-center-localized-term-positive-2026-08-25",
+  "total": 3,
+  "passed": 3,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "zh-hant-reconciliation-standard",
+      "component_type": "backend_preview",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "zh-hans-reconciliation-standard",
+      "component_type": "copy_rule_example",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "english-locale-source-term-allowed",
+      "component_type": "english_content_library",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

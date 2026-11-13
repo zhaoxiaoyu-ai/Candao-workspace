@@ -1,0 +1,43 @@
+{
+  "suite": "T33 current formal high-fidelity page image export",
+  "generated_at": "2026-08-19",
+  "viewport": {
+    "width": 1440,
+    "height": 1200,
+    "fullPage": true
+  },
+  "source_scope": "tasks/T17/output/design-handoff/.stitch/designs formal HTML only",
+  "excluded": [
+    "T32 Customers failed Stitch screen"
+  ],
+  "total": 2,
+  "passed": 2,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "home",
+      "title": "餐道 | 營運中樞",
+      "source": "tasks/T17/output/design-handoff/.stitch/designs/candao-home-hifi-final-d792eb1c55b14ee284b9e111474614dd.html",
+      "output": "tasks/T33/output/images/home-hifi-1440-full.png",
+      "status": "pass",
+      "file_size_bytes": 1236269,
+      "viewportWidth": 1440,
+      "viewportHeight": 1200,
+      "documentWidth": 1440,
+      "documentHeight": 4308
+    },
+    {
+      "id": "platform",
+      "title": "平台 | 餐道",
+      "source": "tasks/T17/output/design-handoff/.stitch/designs/candao-platform-hifi-final-03fa757724764d32bc84634a727427b3.html",
+      "output": "tasks/T33/output/images/platform-hifi-1440-full.png",
+      "status": "pass",
+      "file_size_bytes": 299236,
+      "viewportWidth": 1440,
+      "viewportHeight": 1200,
+      "documentWidth": 1440,
+      "documentHeight": 2863
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "id": "t61-platform-hero-h1",
+      "role": "决策者",
+      "page_task": "展示能力",
+      "component_type": "hero_title",
+      "locale": "zh-Hant",
+      "text": "看 OMS、DMS / iDMS、CDBI\n和 AMS / Connector 如何支撐每日營運"
+    },
+    {
+      "id": "t61-platform-hero-lead",
+      "role": "总部运营",
+      "page_task": "展示能力",
+      "component_type": "hero_body",
+      "locale": "zh-Hant",
+      "text": "了解餐道產品如何工作：訂單如何進入 OMS，門店如何處理接單與售罄，配送如何派單與回傳狀態，CDBI 與財務對賬如何追蹤金額、狀態和漏單差異。"
+    },
+    {
+      "id": "t61-platform-core-matrix",
+      "role": "总部运营",
+      "page_task": "展示能力",
+      "component_type": "section_heading",
+      "locale": "zh-Hant",
+      "text": "核心產品矩陣\n以模組化架構連接訂單、門店、配送、數據與支援流程。"
+    },
+    {
+      "id": "t61-platform-oms-card",
+      "role": "门店经理",
+      "page_task": "展示能力",
+      "component_type": "product_card",
+      "locale": "zh-Hant",
+      "text": "OMS / COMS / SOMS\n訂單與渠道管理\n外送平台、自有 H5 / Web / APP / QR 與 Call Center 訂單進入 OMS，門店按渠道、訂單狀態、配送狀態和異常類型處理。"
+    },
+    {
+      "id": "t61-platform-delivery-card",
+      "role": "配送主管",
+      "page_task": "展示能力",
+      "component_type": "product_card",
+      "locale": "zh-Hant",
+      "text": "DMS / iDMS\n派單規則與第三方轉派\n配送任務、騎手或車隊資源與第三方配送協同，讓門店看到派單、取餐、配送中與異常回傳狀態。"
+    },
+    {
+      "id": "t61-platform-cdbi-card",
+      "role": "财务",
+      "page_task": "展示能力",
+      "component_type": "product_card",
+      "locale": "zh-Hant",
+      "text": "CDBI / 財務對賬\n渠道報表與對賬差異\nCDBI 匯總渠道報表；財務對賬比對平台訂單與 OMS 訂單，追蹤金額差異、狀態不一致和漏單標記。"
+    },
+    {
+      "id": "t61-platform-connector-card",
+      "role": "IT",
+      "page_task": "验证接入",
+      "component_type": "product_card",
+      "locale": "zh-Hant",
+      "text": "AMS / Connector\n整合與支援\n按 POS、ERP、外送平台、支付閘道等系統類型評估接入；Merchant Service 與 Helpdesk 承接導入、使用和營運問題。"
+    },
+    {
+      "id": "t61-platform-capability-map",
+      "role": "总部运营",
+      "page_task": "展示能力",
+      "component_type": "capability_map",
+      "locale": "zh-Hant",
+      "text": "產品能力地圖\n從業務對象、狀態和操作理解餐道平台\n多渠道訂單進入 OMS 後台\n外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店可按渠道、訂單狀態、配送狀態和異常類型處理。\n業務對象：訂單、渠道、門店、訂單狀態、配送狀態、異常類型。\n狀態 / 操作：待接單、製作中、配送中、取消、退款、超時提醒。\n對應產品：OMS、COMS、SOMS、Order Processing Center。"
+    },
+    {
+      "id": "t61-platform-operational-workflow",
+      "role": "总部运营",
+      "page_task": "展示能力",
+      "component_type": "workflow",
+      "locale": "zh-Hant",
+      "text": "每日營運工作流\n從訂單進入、餐單與門店同步，到配送協同與 CDBI / 財務對賬回饋，對應餐道平台裡的日常操作。\n訂單進入：外賣平台、自有 H5 / Web / APP / QR、Call Center 進入 OMS。\n門店處理：門店按渠道、訂單狀態、配送狀態和異常類型處理。\n餐單同步：Menu Center 更新餐單、售罄、門店資料和品牌規則。\n配送協同：DMS / iDMS 處理派單、取餐、轉第三方與配送異常。\n數據回饋：CDBI / 財務對賬追蹤金額差異、狀態差異和漏單標記。\n總部可在同一營運鏈路查看訂單、門店、配送、異常與對賬狀態，並把下一步操作回到對應產品模組。"
+    },
+    {
+      "id": "t61-platform-product-demo-entry",
+      "role": "销售",
+      "page_task": "完成转化",
+      "component_type": "demo_cards",
+      "locale": "zh-Hant",
+      "text": "產品演示入口\n按工作流查看不同模組的日常使用方式\n你可以按 OMS、Menu Center / Store、DMS / iDMS、CDBI / 財務對賬選擇演示重點，快速看到訂單、餐單、配送和對賬在餐道內如何被處理。\nOMS：訂單隊列與異常處理。訂單整合、門店處理、異常追蹤和客服協同。接單 / 退款 / 售罄。\nMenu Center / Store：餐單版本與門店狀態。餐單、價格、營業時間、門店資料和品牌規則同步。餐單版本 / 門店狀態。\nDMS / iDMS：派單、取餐與異常。配送任務、騎手或車隊資源、第三方配送協同。派單 / 取餐 / 異常。\nCDBI / 財務對賬：渠道報表與對賬差異。營運數據、渠道分析、財務對賬和營收視角。渠道報表 / 對賬。"
+    },
+    {
+      "id": "t61-platform-conversion-cta",
+      "role": "采购方",
+      "page_task": "完成转化",
+      "component_type": "cta",
+      "locale": "zh-Hant",
+      "text": "看完產品能力後，評估接入方式或預約場景演示\n把現有渠道、門店和配送場景帶進演示，按 OMS、Menu Center、DMS / iDMS、CDBI / 財務對賬拆解接入與日常操作路徑。\n預約產品演示\n查看整合能力\n查看客戶案例"
+    },
+    {
+      "id": "t61-platform-footer",
+      "role": "采购方",
+      "page_task": "建立认知",
+      "component_type": "footer",
+      "locale": "zh-Hant",
+      "text": "解決方案：移動點餐、自助點餐機訂購、配送管理與騎手應用、聚合物流管理。\n平台：配送平台、銷售點系統、客戶關係管理、第三方物流、支付網關。\n資源：支援中心、常見問題解答、新聞稿、展示案例、查看接入與演示路徑。\n關於餐道：關於我們、里程碑、職業發展。\n© 2026 餐道"
+    }
+  ]
+}

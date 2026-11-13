@@ -1,0 +1,103 @@
+{
+  "suite": "t29-inline-element-browser-check",
+  "status": "pass",
+  "results": [
+    {
+      "file": "index.html",
+      "status": "pass",
+      "sectionCount": 8,
+      "expectedCount": 8,
+      "headingVisible": true,
+      "navCount": 7,
+      "brandLogoVisible": true,
+      "forbidden": []
+    },
+    {
+      "file": "home.html",
+      "status": "pass",
+      "sectionCount": 7,
+      "expectedCount": 7,
+      "headingVisible": true,
+      "navCount": 7,
+      "brandLogoVisible": true,
+      "forbidden": []
+    },
+    {
+      "file": "solutions.html",
+      "status": "pass",
+      "sectionCount": 4,
+      "expectedCount": 4,
+      "headingVisible": true,
+      "navCount": 7,
+      "brandLogoVisible": true,
+      "forbidden": []
+    },
+    {
+      "file": "platform.html",
+      "status": "pass",
+      "sectionCount": 4,
+      "expectedCount": 4,
+      "headingVisible": true,
+      "navCount": 7,
+      "brandLogoVisible": true,
+      "forbidden": []
+    },
+    {
+      "file": "integrations.html",
+      "status": "pass",
+      "sectionCount": 3,
+      "expectedCount": 3,
+      "headingVisible": true,
+      "navCount": 7,
+      "brandLogoVisible": true,
+      "forbidden": []
+    },
+    {
+      "file": "customers.html",
+      "status": "pass",
+      "sectionCount": 4,
+      "expectedCount": 4,
+      "headingVisible": true,
+      "navCount": 7,
+      "brandLogoVisible": true,
+      "forbidden": []
+    },
+    {
+      "file": "resources.html",
+      "status": "pass",
+      "sectionCount": 8,
+      "expectedCount": 8,
+      "headingVisible": true,
+      "navCount": 7,
+      "brandLogoVisible": true,
+      "forbidden": []
+    },
+    {
+      "file": "about.html",
+      "status": "pass",
+      "sectionCount": 7,
+      "expectedCount": 7,
+      "headingVisible": true,
+      "navCount": 7,
+      "brandLogoVisible": true,
+      "forbidden": []
+    },
+    {
+      "file": "demo.html",
+      "status": "pass",
+      "sectionCount": 4,
+      "expectedCount": 4,
+      "headingVisible": true,
+      "navCount": 7,
+      "brandLogoVisible": true,
+      "forbidden": []
+    }
+  ],
+  "screenshots": [
+    "t29-index-1440-full.png",
+    "t29-home-1440-full.png",
+    "t29-platform-1440-full.png",
+    "t29-integrations-1440-full.png",
+    "t29-about-1440-full.png"
+  ]
+}

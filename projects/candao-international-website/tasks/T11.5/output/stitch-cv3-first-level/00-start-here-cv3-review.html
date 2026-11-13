@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>从这里开始看 - Candao C v3 当前评审版</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#528dff',
+                            50: '#eff4ff',
+                            100: '#dbe7ff',
+                            200: '#bfd5ff',
+                            300: '#93baff',
+                            400: '#6098ff',
+                            500: '#528dff',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        neutral: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "display": ["Public Sans", "sans-serif"],
+                        "body": ["Public Sans", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900 min-h-screen flex">
+<!-- JSON: SideNavBar (MANDATORY INJECTION) -->
+<!-- Content: Exact JSON Strings -->
+<!-- Execution: style_ classes -->
+<!-- Logic: Top level destination -> Render shell. Intent: Management screen -> map to first relevant tab if applicable, but this is a specific internal guide. Tab 2 "进度追踪" is active. -->
+<aside class="h-screen w-64 border-r border-slate-200 bg-slate-50 flex flex-col py-4 px-3 sticky top-0 hidden md:flex shrink-0">
+<!-- Header -->
+<div class="mb-8 px-2 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-600" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+</div>
+<div>
+<h2 class="text-lg font-headline font-bold text-slate-900">审核管理</h2>
+<p class="font-body text-xs text-slate-500">内部管理系统</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 space-y-1">
+<!-- Inactive -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-body text-sm text-slate-600 hover:bg-slate-100 hover:translate-x-1 duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span>待办事项</span>
+</a>
+<!-- Active (Mapped to Tracking/Review progress) -->
+<a class="flex items-center gap-3 px-3 py-2.5 bg-[#528dff]/10 text-[#528dff] font-bold rounded-lg font-body text-sm cursor-pointer" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span>进度追踪</span>
+</a>
+<!-- Inactive -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-body text-sm text-slate-600 hover:bg-slate-100 hover:translate-x-1 duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>团队协作</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-body text-sm text-slate-600 hover:bg-slate-100 hover:translate-x-1 duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span>资源中心</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-body text-sm text-slate-600 hover:bg-slate-100 hover:translate-x-1 duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">history</span>
+<span>审核历史</span>
+</a>
+</nav>
+<!-- CTA -->
+<div class="mt-auto px-2 pt-4">
+<button class="w-full bg-primary-600 hover:bg-primary-700 text-white font-body text-sm font-medium py-2.5 px-4 rounded-lg shadow-sm transition-colors cursor-pointer">
+                建立新审核
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto">
+<!-- JSON: TopNavBar (MANDATORY INJECTION - Visible on mobile only per guidelines, but prompt requested full-width or sidebar. We keep TopNav for mobile responsive integrity) -->
+<header class="bg-white border-b border-slate-200 shadow-sm flex justify-between items-center h-16 px-6 w-full md:hidden docked top-0 sticky z-40">
+<div class="flex items-center gap-2">
+<span class="text-xl font-headline font-black text-slate-900">Candao</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-body text-label-sm font-medium text-slate-500">繁中 / EN</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer active:scale-95 duration-150">notifications</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer active:scale-95 duration-150">settings</span>
+</div>
+</div>
+</header>
+<!-- Canvas Container -->
+<div class="max-w-7xl mx-auto px-6 py-12 md:py-20 lg:px-12 space-y-16">
+<!-- 1. Giant Header Section -->
+<section class="space-y-6">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-rose-50 text-rose-700 rounded-full border border-rose-200 font-medium text-sm">
+<span class="material-symbols-outlined text-rose-600" style="font-variation-settings: 'FILL' 1;">warning</span>
+                    你不需要看 Screen ID，只看下面这些页面名称。
+                </div>
+<h1 class="text-5xl md:text-7xl font-display font-black text-neutral-900 tracking-tight leading-tight">
+                    从这里开始看
+                </h1>
+<p class="text-xl md:text-2xl text-neutral-500 font-body font-medium max-w-3xl leading-relaxed">
+                    Candao C v3 当前评审版｜不要看旧探索页和素材图
+                </p>
+<div class="h-1 w-32 bg-primary-500 rounded-full"></div>
+</section>
+<!-- 2. Primary Review Cards (Bento/Glassmorphism inspired) -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Card 01 -->
+<div class="bg-white rounded-3xl p-8 border border-neutral-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-50 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="text-6xl font-black text-neutral-100 group-hover:text-primary-100 transition-colors">01</span>
+<span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-md border border-emerald-200 whitespace-nowrap">已更新</span>
+</div>
+<h3 class="text-2xl font-bold text-neutral-900 mb-4 font-headline">01 解決方案｜C v3 当前评审版</h3>
+<p class="text-neutral-500 font-body text-base flex-1 mb-8">
+                        业务场景选择、配送營運與履約、推荐平台能力
+                    </p>
+<div class="flex gap-4 border-t border-neutral-100 pt-6">
+<div class="w-10 h-10 rounded-lg bg-neutral-50 flex items-center justify-center text-primary-500">
+<span class="material-symbols-outlined">dashboard_customize</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-neutral-50 flex items-center justify-center text-primary-500">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+</div>
+</div>
+<!-- Card 02 -->
+<div class="bg-white rounded-3xl p-8 border-2 border-primary-500 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full group relative overflow-hidden transform lg:-translate-y-4">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-transparent -z-10"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="text-6xl font-black text-primary-100 group-hover:text-primary-200 transition-colors">02</span>
+<span class="px-3 py-1 bg-primary-500 text-white text-xs font-bold rounded-md shadow-sm whitespace-nowrap">已修正</span>
+</div>
+<h3 class="text-2xl font-bold text-neutral-900 mb-4 font-headline">02 平台｜C v3 Fixed QA 当前评审版</h3>
+<p class="text-neutral-600 font-body text-base flex-1 mb-8 leading-relaxed">
+                        Capability Map、配送管理 UI Demo、无英文 dashboard、无金额假数据
+                    </p>
+<div class="flex gap-4 border-t border-primary-100 pt-6">
+<div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center text-primary-600">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center text-primary-600">
+<span class="material-symbols-outlined">hub</span>
+</div>
+</div>
+</div>
+<!-- Card 03 -->
+<div class="bg-white rounded-3xl p-8 border border-neutral-200 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="text-6xl font-black text-neutral-100 group-hover:text-amber-100 transition-colors">03</span>
+<span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-bold rounded-md border border-amber-200 whitespace-nowrap">新增一级页</span>
+</div>
+<h3 class="text-2xl font-bold text-neutral-900 mb-4 font-headline">03 資源｜C v3 Fixed 当前评审版</h3>
+<p class="text-neutral-500 font-body text-base flex-1 mb-8">
+                        支援中心、常见问题、媒体资料、案例资源、查询表单
+                    </p>
+<div class="flex gap-4 border-t border-neutral-100 pt-6">
+<div class="w-10 h-10 rounded-lg bg-neutral-50 flex items-center justify-center text-amber-600">
+<span class="material-symbols-outlined">folder_special</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-neutral-50 flex items-center justify-center text-amber-600">
+<span class="material-symbols-outlined">help</span>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- 4. Next Step Notes (Left Column) -->
+<section class="lg:col-span-5 bg-white rounded-2xl p-8 border border-neutral-200 shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary-500 text-3xl">task_alt</span>
+<h3 class="text-xl font-bold text-neutral-900">如果继续优化</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-neutral-300 mt-0.5">check_circle</span>
+<span class="text-neutral-700 font-medium">先补 Home C v3</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-neutral-300 mt-0.5">check_circle</span>
+<span class="text-neutral-700 font-medium">再统一整合能力 / 客户案例 / 关于 / 联系页面</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-neutral-300 mt-0.5">check_circle</span>
+<span class="text-neutral-700 font-medium">最后进入视觉总监复审</span>
+</li>
+</ul>
+</section>
+<!-- 3. Muted Section (Right Column) -->
+<section class="lg:col-span-7 bg-neutral-100 rounded-2xl p-8 border border-neutral-200 border-dashed">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-neutral-400 text-2xl">visibility_off</span>
+<h3 class="text-lg font-bold text-neutral-500">暂时不用看</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-neutral-200 text-neutral-600 rounded-lg text-sm font-medium">旧 Home 探索</span>
+<span class="px-4 py-2 bg-neutral-200 text-neutral-600 rounded-lg text-sm font-medium">旧 Platform v1</span>
+<span class="px-4 py-2 bg-neutral-200 text-neutral-600 rounded-lg text-sm font-medium">Order / Delivery 二级能力页</span>
+<span class="px-4 py-2 bg-neutral-200 text-neutral-600 rounded-lg text-sm font-medium">图片素材 Screen</span>
+<span class="px-4 py-2 bg-neutral-200 text-neutral-600 rounded-lg text-sm font-medium">C v2 初稿</span>
+<span class="px-4 py-2 bg-neutral-200 text-neutral-600 rounded-lg text-sm font-medium">未 Fixed 版本</span>
+</div>
+</section>
+</div>
+<!-- 5. Technical Footer -->
+<footer class="pt-8 border-t border-neutral-200 flex items-center justify-between">
+<div class="flex items-center gap-2 opacity-50">
+<span class="material-symbols-outlined text-sm">terminal</span>
+<p class="text-sm font-mono text-neutral-500">技术记录由 Codex 保留</p>
+</div>
+<div class="opacity-30">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</footer>
+</div>
+</main>
+</body></html>

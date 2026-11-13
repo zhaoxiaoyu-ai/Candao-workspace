@@ -1,0 +1,185 @@
+{
+  "analysis_modes": ["visual", "interaction", "content_presentation"],
+  "target_page_context": "餐饮科技 SaaS 官网",
+  "scope_correction": {
+    "previous_gap": "上一版偏首屏风格采样，未充分覆盖关键页面族和内容呈现链路。",
+    "current_scope": [
+      "首页",
+      "产品介绍",
+      "产品特色/能力",
+      "合作商/集成",
+      "企业介绍",
+      "联系/预约演示",
+      "内容呈现链路"
+    ]
+  },
+  "reference_urls": {
+    "aigens": [
+      "https://www.aigens.com/",
+      "https://www.aigens.com/kiosk-ordering/",
+      "https://www.aigens.com/mobile-ordering/",
+      "https://www.aigens.com/middleware/",
+      "https://www.aigens.com/about-us/",
+      "https://www.aigens.com/contact-us/"
+    ],
+    "deliverect": [
+      "https://www.deliverect.com/en",
+      "https://www.deliverect.com/en/solutions",
+      "https://www.deliverect.com/en/integrations",
+      "https://www.deliverect.com/en/partnerships",
+      "https://www.deliverect.com/en/pricing",
+      "https://www.deliverect.com/en/about-us",
+      "https://www.deliverect.com/en/contact-us"
+    ],
+    "tabsquare": [
+      "https://tabsquare.ai/",
+      "https://tabsquare.ai/solutions",
+      "https://tabsquare.ai/integrations",
+      "https://tabsquare.ai/pricing",
+      "https://tabsquare.ai/about-us",
+      "https://tabsquare.ai/people",
+      "https://tabsquare.ai/resources"
+    ]
+  },
+  "required_page_families": [
+    {
+      "id": "home",
+      "purpose": "总定位、品牌气质、核心收益、信任证明和首个转化入口",
+      "content_chain": ["餐饮场景", "经营结果", "产品矩阵预览", "客户证明", "CTA"]
+    },
+    {
+      "id": "products_overview",
+      "purpose": "让用户理解产品组合如何覆盖餐厅经营链路",
+      "content_chain": ["按场景/旅程分组", "产品卡片", "每个产品的收益", "进入详情页"]
+    },
+    {
+      "id": "product_detail",
+      "purpose": "解释单个产品如何解决具体问题",
+      "content_chain": ["场景痛点", "产品定位", "关键收益", "核心功能", "集成方式", "后台/运营管理", "客户证明", "FAQ", "CTA"]
+    },
+    {
+      "id": "features_or_capabilities",
+      "purpose": "展示平台级能力，而不是只列产品名称",
+      "content_chain": ["能力分组", "业务收益", "可视化 UI/流程", "适用场景", "安全/稳定性"]
+    },
+    {
+      "id": "integrations_or_partners",
+      "purpose": "证明可以接入餐厅现有技术栈和合作生态",
+      "content_chain": ["集成总承诺", "搜索/分类", "伙伴卡片", "请求新集成", "成为合作伙伴"]
+    },
+    {
+      "id": "about_company",
+      "purpose": "建立长期合作可信度",
+      "content_chain": ["使命", "数字", "客户/区域", "团队/生态/投资人", "安全/合规", "CTA"]
+    },
+    {
+      "id": "contact_or_demo",
+      "purpose": "承接不同意图的转化",
+      "content_chain": ["预约演示", "获取报价", "客户支持", "成为伙伴", "全球办公室或本地联系"]
+    }
+  ],
+  "common_content_chain": [
+    "餐饮经营问题",
+    "业务结果承诺",
+    "产品/解决方案矩阵",
+    "具体能力和使用场景",
+    "集成和合作生态",
+    "客户/数据/案例证明",
+    "企业可信背书",
+    "联系方式和下一步转化"
+  ],
+  "competitor_content_methods": {
+    "aigens": {
+      "style": "产品细节深、企业项目感强、强调复杂集成和客户案例。",
+      "best_to_borrow": [
+        "产品详情页的场景-收益-功能-FAQ结构",
+        "Aigens Connect 式的复杂系统连接解释",
+        "客户 logo、testimonials、showcase 长尾证明"
+      ]
+    },
+    "deliverect": {
+      "style": "信息架构最系统，mega menu、解决方案、集成目录、价格、公司和联系分流完整。",
+      "best_to_borrow": [
+        "按业务线组织产品和解决方案",
+        "集成目录的搜索/分类/请求新集成",
+        "联系页按 support、guided tour、partner 分流"
+      ]
+    },
+    "tabsquare": {
+      "style": "品牌叙事最强，用餐厅体验和情绪带出增长结果，再落到生态、定价和表单。",
+      "best_to_borrow": [
+        "从顾客体验进入产品价值",
+        "按餐厅成长阶段组织 pricing",
+        "多页面嵌入同一套业务目标表单"
+      ]
+    }
+  },
+  "site_generation_requirements": {
+    "must_not_only_build_homepage": true,
+    "minimum_pages": [
+      "home",
+      "products_overview",
+      "product_detail",
+      "features_or_capabilities",
+      "integrations_or_partners",
+      "about_company",
+      "contact_or_demo"
+    ],
+    "homepage_structure": [
+      "全屏餐饮场景 hero",
+      "经营结果承诺",
+      "客户/数据证明",
+      "产品矩阵预览",
+      "集成生态预览",
+      "客户故事或行业场景",
+      "预约演示 CTA"
+    ],
+    "product_detail_structure": [
+      "场景痛点",
+      "产品定位",
+      "3 到 5 个关键收益",
+      "功能细节",
+      "后台/运营管理",
+      "集成和数据流",
+      "客户证明",
+      "FAQ",
+      "CTA"
+    ],
+    "integrations_structure": [
+      "集成总承诺",
+      "搜索框",
+      "分类 chip",
+      "伙伴卡片",
+      "请求新集成",
+      "成为合作伙伴"
+    ],
+    "contact_structure": [
+      "预约演示",
+      "获取报价",
+      "客户支持",
+      "成为合作伙伴",
+      "本地或全球联系信息"
+    ]
+  },
+  "visual_and_interaction_guidance": {
+    "visual_tone": "真实餐饮现场、温暖可信、企业级清晰、科技隐在体验背后。",
+    "interaction_pattern": "从顶部导航和首屏 CTA 进入，滚动中用证明和模块逐步降低决策风险，最后在多个页面承接表单或预约演示。",
+    "navigation": "导航必须支持页面族，不应只有锚点：首页、产品、解决方案、集成/合作商、资源/案例、价格或方案、关于、联系。",
+    "cta": "主 CTA 预约演示或获取方案；次 CTA 查看产品、集成或价格。联系页要按用户意图分流。"
+  },
+  "forbidden_copy_items": [
+    "竞品 logo",
+    "竞品客户 logo 原图",
+    "竞品页面原图、视频、人物照片、产品截图",
+    "竞品原文、标题、CTA 和案例文案",
+    "竞品源码、动画文件、CSS 或独特品牌资产"
+  ],
+  "acceptance_scores": {
+    "overall_score": 0.82,
+    "visual": 0.8,
+    "structure": 0.84,
+    "copy": 0.78,
+    "interaction": 0.8,
+    "compliance": 1.0
+  }
+}

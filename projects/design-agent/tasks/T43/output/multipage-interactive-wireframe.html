@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>餐道官网多页面低保真交互原型</title>
+    <style>
+      :root {
+        --bg: #f6f4ef;
+        --surface: #ffffff;
+        --surface-2: #ece8df;
+        --ink: #1e241f;
+        --muted: #6e766f;
+        --line: #d7d1c4;
+        --dark: #17211c;
+        --green: #2f7b57;
+        --green-soft: #dcebdd;
+        --amber: #d8a343;
+        --blue: #496f8f;
+        --radius: 8px;
+        --shadow: 0 18px 50px rgba(31, 35, 29, 0.08);
+        font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      .shell {
+        min-height: 100vh;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(30, 36, 31, 0.12);
+        background: rgba(246, 244, 239, 0.92);
+        backdrop-filter: blur(16px);
+      }
+
+      .topbar-inner {
+        width: min(1180px, calc(100vw - 40px));
+        min-height: 74px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 760;
+        letter-spacing: 0;
+      }
+
+      .brand-mark {
+        width: 32px;
+        height: 32px;
+        border-radius: 7px;
+        background:
+          linear-gradient(135deg, rgba(47, 123, 87, 0.18), rgba(216, 163, 67, 0.2)),
+          var(--surface);
+        border: 1px solid rgba(30, 36, 31, 0.18);
+        position: relative;
+      }
+
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border: 2px solid var(--green);
+        border-top-color: var(--amber);
+        border-radius: 5px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav a,
+      .nav button {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        padding: 9px 10px;
+        border-radius: 7px;
+        cursor: pointer;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .nav a.active,
+      .nav button.active {
+        color: var(--ink);
+        background: rgba(47, 123, 87, 0.1);
+      }
+
+      .nav .cta {
+        background: var(--dark);
+        color: #fff;
+      }
+
+      .mobile-menu {
+        display: none;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        border-radius: 7px;
+        padding: 9px 11px;
+      }
+
+      .mega {
+        border-top: 1px solid rgba(30, 36, 31, 0.08);
+        background: #fffaf0;
+        display: none;
+      }
+
+      .mega.open {
+        display: block;
+      }
+
+      .mega-inner {
+        width: min(1180px, calc(100vw - 40px));
+        margin: 0 auto;
+        padding: 18px 0 22px;
+        display: grid;
+        grid-template-columns: 1.1fr 1.4fr 1fr;
+        gap: 18px;
+      }
+
+      .mega-card,
+      .panel,
+      .card,
+      .metric,
+      .form-box {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+
+      .mega-card {
+        padding: 16px;
+      }
+
+      .mega-card h4,
+      .card h3,
+      .panel h3 {
+        margin: 0 0 8px;
+      }
+
+      .mega-card p,
+      .card p,
+      .panel p {
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.65;
+      }
+
+      .container {
+        width: min(1180px, calc(100vw - 40px));
+        margin: 0 auto;
+      }
+
+      .view {
+        display: none;
+      }
+
+      .view.active {
+        display: block;
+      }
+
+      .page-hero {
+        padding: 74px 0 42px;
+      }
+
+      .hero-grid,
+      .split-grid,
+      .two-col {
+        display: grid;
+        grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.94fr);
+        gap: 38px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        color: var(--green);
+        font-weight: 760;
+        font-size: 13px;
+        margin-bottom: 14px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        letter-spacing: 0;
+        color: var(--ink);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(42px, 6vw, 76px);
+        line-height: 1.02;
+        font-weight: 820;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(28px, 3.2vw, 46px);
+        line-height: 1.14;
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 1.28;
+      }
+
+      .lead {
+        margin: 22px 0 0;
+        color: #566159;
+        font-size: 20px;
+        line-height: 1.7;
+        max-width: 680px;
+      }
+
+      .actions,
+      .chips,
+      .filters,
+      .tabs,
+      .route-list,
+      .inline-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .actions {
+        margin-top: 28px;
+      }
+
+      .btn {
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        background: var(--surface);
+        min-height: 44px;
+        padding: 0 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--ink);
+      }
+
+      .btn.primary {
+        background: var(--dark);
+        color: #fff;
+        border-color: var(--dark);
+      }
+
+      .btn.green {
+        background: var(--green);
+        color: #fff;
+        border-color: var(--green);
+      }
+
+      .btn.ghost {
+        background: transparent;
+      }
+
+      .visual {
+        min-height: 430px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(245, 241, 232, 0.72)),
+          repeating-linear-gradient(135deg, rgba(30, 36, 31, 0.05) 0, rgba(30, 36, 31, 0.05) 1px, transparent 1px, transparent 16px);
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+        padding: 24px;
+      }
+
+      .visual::before {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border: 1px dashed rgba(30, 36, 31, 0.15);
+        border-radius: 7px;
+      }
+
+      .wire-toolbar,
+      .wire-sidebar,
+      .wire-main,
+      .wire-ticket,
+      .wire-node {
+        position: absolute;
+        border: 1px solid rgba(30, 36, 31, 0.18);
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 7px;
+      }
+
+      .wire-toolbar {
+        top: 44px;
+        left: 46px;
+        right: 46px;
+        height: 42px;
+      }
+
+      .wire-sidebar {
+        top: 106px;
+        left: 46px;
+        width: 112px;
+        bottom: 44px;
+      }
+
+      .wire-main {
+        top: 106px;
+        left: 178px;
+        right: 46px;
+        bottom: 44px;
+        background: rgba(248, 250, 248, 0.92);
+      }
+
+      .wire-ticket {
+        width: 34%;
+        height: 56px;
+        left: 204px;
+      }
+
+      .wire-ticket.t1 { top: 132px; }
+      .wire-ticket.t2 { top: 204px; }
+      .wire-ticket.t3 { top: 276px; }
+
+      .wire-node {
+        width: 104px;
+        height: 58px;
+        display: grid;
+        place-items: center;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .wire-node.n1 { right: 92px; top: 128px; }
+      .wire-node.n2 { right: 170px; top: 212px; }
+      .wire-node.n3 { right: 76px; top: 296px; }
+
+      section.block {
+        padding: 54px 0;
+      }
+
+      .section-head {
+        max-width: 760px;
+        margin-bottom: 26px;
+      }
+
+      .section-copy {
+        color: var(--muted);
+        line-height: 1.7;
+        margin: 12px 0 0;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        min-height: 178px;
+        padding: 18px;
+        position: relative;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      }
+
+      .card:hover,
+      .card.selected {
+        transform: translateY(-2px);
+        border-color: rgba(47, 123, 87, 0.45);
+        box-shadow: var(--shadow);
+      }
+
+      .card .meta {
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 720;
+        margin-bottom: 16px;
+      }
+
+      .card .arrow {
+        margin-top: 18px;
+        color: var(--green);
+        font-weight: 720;
+      }
+
+      .metric-row {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .metric {
+        padding: 16px;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 30px;
+      }
+
+      .metric span {
+        color: var(--muted);
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      .panel.dark {
+        background: var(--dark);
+        color: #fff;
+        border-color: var(--dark);
+      }
+
+      .panel.dark > h3,
+      .panel.dark > p,
+      .panel.dark > .eyebrow {
+        color: #fff;
+      }
+
+      .panel.dark > p {
+        opacity: 0.75;
+      }
+
+      .chip,
+      .tab,
+      .status,
+      .crumb {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 0 10px;
+        background: var(--surface);
+        color: var(--muted);
+        cursor: pointer;
+      }
+
+      .chip.active,
+      .tab.active,
+      .status.supported {
+        background: var(--green-soft);
+        color: var(--green);
+        border-color: rgba(47, 123, 87, 0.26);
+      }
+
+      .status.custom {
+        background: #fff1cc;
+        color: #8b6116;
+      }
+
+      .status.planned {
+        background: #e7eef5;
+        color: var(--blue);
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .flow .panel {
+        min-height: 132px;
+      }
+
+      .table {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: var(--surface);
+      }
+
+      .table-row {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr 0.8fr 1.1fr;
+        gap: 14px;
+        padding: 14px 16px;
+        border-top: 1px solid var(--line);
+        align-items: center;
+      }
+
+      .table-row:first-child {
+        border-top: 0;
+        background: #faf8f2;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 740;
+      }
+
+      .search-bar {
+        display: grid;
+        grid-template-columns: minmax(220px, 1fr) 180px 180px;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .field,
+      .input,
+      .select,
+      textarea {
+        border: 1px solid var(--line);
+        background: var(--surface);
+        border-radius: 7px;
+        min-height: 44px;
+        padding: 11px 12px;
+        color: var(--ink);
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 112px;
+        resize: vertical;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .form-box {
+        padding: 22px;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .footer {
+        margin-top: 70px;
+        padding: 42px 0 30px;
+        background: var(--dark);
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .footer h4 {
+        color: #fff;
+        margin: 0 0 12px;
+      }
+
+      .footer p,
+      .footer li {
+        line-height: 1.8;
+      }
+
+      .footer ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .toast {
+        position: fixed;
+        left: 50%;
+        bottom: 28px;
+        transform: translateX(-50%) translateY(18px);
+        background: var(--dark);
+        color: #fff;
+        padding: 12px 16px;
+        border-radius: 7px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.2s ease;
+        z-index: 30;
+      }
+
+      .toast.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        display: none;
+        place-items: center;
+        background: rgba(23, 33, 28, 0.42);
+        z-index: 20;
+        padding: 24px;
+      }
+
+      .modal-backdrop.open {
+        display: grid;
+      }
+
+      .modal {
+        width: min(620px, 100%);
+        background: var(--surface);
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .modal-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+
+      .modal-close {
+        width: 36px;
+        height: 36px;
+        border-radius: 7px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        cursor: pointer;
+      }
+
+      @media (max-width: 980px) {
+        .topbar-inner {
+          align-items: flex-start;
+          padding: 16px 0;
+        }
+
+        .mobile-menu {
+          display: inline-flex;
+        }
+
+        .nav {
+          display: none;
+          position: absolute;
+          left: 20px;
+          right: 20px;
+          top: 70px;
+          padding: 12px;
+          background: var(--surface);
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          box-shadow: var(--shadow);
+          justify-content: flex-start;
+        }
+
+        .nav.open {
+          display: flex;
+        }
+
+        .mega-inner,
+        .hero-grid,
+        .split-grid,
+        .two-col,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .grid-3,
+        .grid-4,
+        .metric-row,
+        .flow,
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+
+        .search-bar,
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .visual {
+          min-height: 360px;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand route-link" href="?page=home" data-page="home" aria-label="返回首页">
+            <span class="brand-mark"></span>
+            <span>餐道</span>
+          </a>
+          <button class="mobile-menu" id="menuButton" type="button">菜单</button>
+          <nav class="nav" id="mainNav" aria-label="主导航">
+            <a href="?page=home" data-page="home">首页</a>
+            <a href="?page=solutions" data-page="solutions" data-mega="solutions">解决方案</a>
+            <a href="?page=products" data-page="products" data-mega="products">产品</a>
+            <a href="?page=integrations" data-page="integrations">集成与合作伙伴</a>
+            <a href="?page=customers" data-page="customers">客户案例</a>
+            <a href="?page=resources" data-page="resources">资源</a>
+            <a href="?page=about" data-page="about">关于我们</a>
+            <a href="?page=contact" data-page="contact" class="cta">联系我们</a>
+            <button id="languageToggle" type="button">简体中文</button>
+          </nav>
+        </div>
+        <div class="mega" id="megaPanel">
+          <div class="mega-inner" id="megaContent"></div>
+        </div>
+      </header>
+
+      <main id="app"></main>
+
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <h4>餐道</h4>
+            <p>面向餐饮品牌的全渠道订单、菜单、配送与营运数据平台。当前为低保真多页面交互原型。</p>
+          </div>
+          <div><h4>解决方案</h4><ul><li>连锁餐饮</li><li>多门店营运</li><li>外卖营运</li><li>自有点餐</li></ul></div>
+          <div><h4>产品</h4><ul><li>订单管理</li><li>菜单与门店</li><li>自有点餐</li><li>配送编排</li><li>数据与对账</li></ul></div>
+          <div><h4>资源</h4><ul><li>客户案例</li><li>FAQ</li><li>支持中心</li><li>安全合规</li></ul></div>
+          <div><h4>联系</h4><ul><li>预约示范</li><li>联系销售</li><li>合作伙伴</li><li>客户支持</li></ul></div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-head">
+          <div>
+            <h3 id="modalTitle">原型交互</h3>
+            <p class="section-copy" id="modalCopy">这里用于表示正式网站中的弹层、表单或二级动作。</p>
+          </div>
+          <button class="modal-close" id="modalClose" type="button" aria-label="关闭">×</button>
+        </div>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+    <div class="toast" id="toast">已切换页面</div>
+    <script>
+      const app = document.getElementById("app");
+      const toast = document.getElementById("toast");
+      const modal = document.getElementById("modalBackdrop");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalCopy = document.getElementById("modalCopy");
+      const modalBody = document.getElementById("modalBody");
+      const nav = document.getElementById("mainNav");
+      const megaPanel = document.getElementById("megaPanel");
+      const megaContent = document.getElementById("megaContent");
+      const menuButton = document.getElementById("menuButton");
+
+      const pages = {
+        home: "首页",
+        solutions: "解决方案",
+        products: "产品",
+        "product-orders": "订单管理",
+        "product-menu": "菜单与门店管理",
+        "product-ordering": "自有点餐",
+        "product-delivery": "配送编排",
+        "product-data": "数据与对账",
+        integrations: "集成与合作伙伴",
+        customers: "客户案例",
+        resources: "资源",
+        about: "关于我们",
+        contact: "联系我们"
+      };
+
+      const solutionData = [
+        ["chains", "连锁餐饮", "统一多品牌、多门店、多渠道订单与菜单管理。", "进入连锁餐饮方案"],
+        ["multi-location", "多门店营运", "让总部、区域和门店共享同一套营运事实。", "进入多门店方案"],
+        ["delivery", "外卖营运", "聚合外卖渠道、配送规则和履约状态。", "进入外卖方案"],
+        ["owned-ordering", "自有点餐", "通过官网、H5、QR 点餐沉淀订单和会员数据。", "进入自有点餐方案"],
+        ["fulfillment", "配送管理", "连接自有骑手和第三方配送，降低异常处理成本。", "进入配送方案"]
+      ];
+
+      const productData = {
+        "product-orders": {
+          title: "订单管理",
+          tag: "全渠道订单统一处理",
+          pain: "订单来自外卖平台、自有点餐、门店和第三方渠道，格式不同、状态不同，门店需要重复确认。",
+          value: ["统一接单与分单", "订单异常可追踪", "门店状态同步", "减少人工重复操作"],
+          features: ["多平台订单聚合", "自动接单规则", "异常订单提醒", "门店履约看板", "订单状态回传"],
+          flow: ["渠道订单", "餐道聚合", "规则处理", "门店履约", "数据沉淀"],
+          integrations: ["外卖平台", "POS", "自有点餐", "配送伙伴", "数据系统"]
+        },
+        "product-menu": {
+          title: "菜单与门店管理",
+          tag: "一次维护，多渠道同步",
+          pain: "菜单、价格、门店营业时间、售罄和库存信息需要在不同平台重复维护，容易出现不一致。",
+          value: ["减少重复维护", "降低售罄和价格错误", "支持多门店规则", "提升渠道一致性"],
+          features: ["菜品资料库", "价格与库存规则", "门店营业时间", "渠道差异配置", "售罄同步"],
+          flow: ["总部维护", "规则校验", "渠道适配", "门店同步", "状态回传"],
+          integrations: ["外卖平台", "POS", "库存系统", "门店系统", "数据报表"]
+        },
+        "product-ordering": {
+          title: "自有点餐",
+          tag: "把顾客流量沉淀到品牌自有渠道",
+          pain: "品牌依赖第三方渠道，难以沉淀用户、复购和会员数据，自有点餐体验也需要和营运系统连通。",
+          value: ["建立自有订单入口", "沉淀会员与订单数据", "支持 QR 与 H5 场景", "连接门店履约"],
+          features: ["官网点餐", "H5 / QR 点餐", "会员识别", "优惠与营销", "订单同步"],
+          flow: ["顾客进入", "选择门店", "下单支付", "门店履约", "会员沉淀"],
+          integrations: ["支付", "CRM / 会员", "POS", "配送", "数据平台"]
+        },
+        "product-delivery": {
+          title: "配送编排",
+          tag: "让履约规则和运力协同起来",
+          pain: "不同地区、渠道和门店适合的配送方式不同，异常追踪和状态回传会影响顾客体验。",
+          value: ["自动匹配配送规则", "减少人工调度", "异常更快发现", "状态回传更清晰"],
+          features: ["运力规则", "第三方配送接入", "自有骑手协同", "配送状态追踪", "异常处理"],
+          flow: ["订单生成", "规则判断", "运力分配", "状态追踪", "异常反馈"],
+          integrations: ["第三方配送", "骑手 App", "POS", "门店系统", "顾客通知"]
+        },
+        "product-data": {
+          title: "数据与对账",
+          tag: "让订单、渠道、配送和财务数据可分析",
+          pain: "订单和财务数据散落在不同系统，管理层难以及时看清渠道表现、门店效率和对账差异。",
+          value: ["统一经营视图", "减少对账时间", "识别渠道趋势", "支持管理决策"],
+          features: ["订单数据汇总", "渠道表现分析", "配送成本分析", "财务对账", "经营报表"],
+          flow: ["订单归集", "渠道归因", "财务核对", "报表生成", "决策优化"],
+          integrations: ["外卖平台", "POS", "支付", "财务系统", "BI 工具"]
+        }
+      };
+
+      const integrationData = [
+        ["Foodpanda", "外卖平台", "supported", "已支持", "订单、菜单、状态回传"],
+        ["Deliveroo", "外卖平台", "supported", "已支持", "订单聚合与菜单同步"],
+        ["POS A", "POS", "custom", "可定制", "门店订单与菜单"],
+        ["POS B", "POS", "planned", "计划中", "订单与库存"],
+        ["支付网关", "支付", "supported", "已支持", "线上支付与对账"],
+        ["第三方配送", "配送", "custom", "可定制", "配送规则和状态回传"],
+        ["会员 CRM", "CRM / 会员", "custom", "可定制", "会员识别和营销标签"],
+        ["开放 API", "API", "supported", "已支持", "订单、菜单、门店接口"]
+      ];
+
+      const cases = [
+        ["连锁快餐", "2,000+ 门店", "订单管理 / 菜单 / 配送", "统一渠道订单与门店履约。", "效率提升"],
+        ["区域餐饮集团", "300+ 门店", "菜单 / 数据与对账", "减少多平台重复维护和财务核对。", "对账优化"],
+        ["自有点餐品牌", "80+ 门店", "自有点餐 / 会员", "建立品牌自有订单入口。", "增长验证"]
+      ];
+
+      const faqData = [
+        ["产品", "餐道是否只做外卖订单？", "不是。新版官网应表达餐道覆盖订单、菜单、点餐、配送、数据与集成等营运链路。"],
+        ["集成", "如果我当前使用的 POS 不在列表里怎么办？", "可以通过请求新集成提交系统名称、地区、门店规模和需求，销售与技术团队再判断接入方式。"],
+        ["实施", "多门店上线会不会很复杂？", "正式内容需要说明实施流程、试点门店、数据准备、培训和上线支持。"],
+        ["价格", "是否应该在官网直接展示价格？", "当前 PRD 将 Pricing 降为 P1，建议先通过联系销售和预约示范承接。"],
+        ["合规", "安全与隐私信息放在哪里？", "应在关于 / 信任页集中展示，并在页脚保持隐私、条款和安全入口。"]
+      ];
+
+      const contactIntents = {
+        demo: ["预约示范", ["姓名", "邮箱", "电话", "公司", "门店数", "角色", "需求", "期望时间"]],
+        sales: ["联系销售", ["公司", "地区", "产品兴趣", "当前系统", "需求说明"]],
+        partner: ["合作伙伴申请", ["伙伴类型", "系统类型", "合作需求", "联系人"]],
+        integration: ["请求新集成", ["平台名称", "当前系统", "业务规模", "需求说明"]],
+        support: ["客户支持", ["客户身份", "问题类型", "紧急程度", "联系方式"]]
+      };
+
+      function setToast(text) {
+        toast.textContent = text;
+        toast.classList.add("show");
+        window.setTimeout(() => toast.classList.remove("show"), 1600);
+      }
+
+      function routeTo(page, options = {}) {
+        const nextPage = pages[page] ? page : "home";
+        const url = `${window.location.pathname}?page=${nextPage}`;
+        if (!options.replace) window.history.pushState({ page: nextPage }, "", url);
+        renderPage(nextPage);
+        setToast(`已进入：${pages[nextPage]}`);
+        window.scrollTo({ top: 0, behavior: options.instant ? "auto" : "smooth" });
+      }
+
+      function getCurrentPage() {
+        const params = new URLSearchParams(window.location.search);
+        return pages[params.get("page")] ? params.get("page") : "home";
+      }
+
+      function link(page, label, className = "btn") {
+        return `<a class="${className} route-link" href="?page=${page}" data-page="${page}">${label}</a>`;
+      }
+
+      function card(meta, title, copy, page) {
+        return `<a class="card route-link" href="?page=${page}" data-page="${page}">
+          <div class="meta">${meta}</div>
+          <h3>${title}</h3>
+          <p>${copy}</p>
+          <div class="arrow">进入页面 →</div>
+        </a>`;
+      }
+
+      function hero(title, copy, eyebrow = "餐饮科技 SaaS", actions = "") {
+        return `<section class="page-hero">
+          <div class="container hero-grid">
+            <div>
+              <div class="eyebrow">${eyebrow}</div>
+              <h1>${title}</h1>
+              <p class="lead">${copy}</p>
+              <div class="actions">${actions || `${link("contact", "预约示范", "btn primary")} ${link("products", "查看产品", "btn")}`}</div>
+            </div>
+            <div class="visual" aria-label="低保真产品视觉">
+              <div class="wire-toolbar"></div>
+              <div class="wire-sidebar"></div>
+              <div class="wire-main"></div>
+              <div class="wire-ticket t1"></div>
+              <div class="wire-ticket t2"></div>
+              <div class="wire-ticket t3"></div>
+              <div class="wire-node n1">渠道</div>
+              <div class="wire-node n2">门店</div>
+              <div class="wire-node n3">数据</div>
+            </div>
+          </div>
+        </section>`;
+      }
+
+      function renderHome() {
+        return `${hero(
+          "连接餐饮营运的每一个关键环节",
+          "让订单、菜单、配送与数据协同运转，帮助餐饮品牌更高效、更可控、更可增长。",
+          "首页 / 总入口",
+          `${link("contact", "预约示范", "btn primary")} ${link("solutions", "选择解决方案", "btn")}`
+        )}
+        <section class="block">
+          <div class="container metric-row">
+            <div class="metric"><strong>5 类</strong><span>核心产品能力</span></div>
+            <div class="metric"><strong>6 类</strong><span>集成生态分类</span></div>
+            <div class="metric"><strong>4 种</strong><span>联系意图分流</span></div>
+            <div class="metric"><strong>1 套</strong><span>低保真多页面原型</span></div>
+          </div>
+        </section>
+        <section class="block">
+          <div class="container">
+            <div class="section-head">
+              <div class="eyebrow">首页只做分发</div>
+              <h2>不同用户从首页进入不同页面</h2>
+              <p class="section-copy">首页保留关键定位、少量证明、产品和集成预览；完整内容由二级页面承接。</p>
+            </div>
+            <div class="grid-4">
+              ${card("业务场景", "解决方案", "按连锁、多门店、外卖、自有点餐等场景进入。", "solutions")}
+              ${card("产品矩阵", "产品总览", "查看 5 个核心产品，并进入对应详情页。", "products")}
+              ${card("生态验证", "集成目录", "搜索、筛选支持的平台和系统，提交新集成。", "integrations")}
+              ${card("转化分流", "联系我们", "按预约示范、销售、伙伴、支持等意图进入表单。", "contact")}
+            </div>
+          </div>
+        </section>`;
+      }
+
+      function renderSolutions() {
+        return `${hero(
+          "按餐饮经营场景选择解决方案",
+          "让用户先找到自己的业务问题，再理解餐道如何组合订单、菜单、点餐、配送和数据能力。",
+          "解决方案总览",
+          `${link("products", "查看产品矩阵", "btn primary")} ${link("contact", "咨询方案", "btn")}`
+        )}
+        <section class="block">
+          <div class="container">
+            <div class="section-head"><h2>场景入口</h2><p class="section-copy">点击场景卡片会切换下方方案流程，正式站可进入独立解决方案详情页。</p></div>
+            <div class="grid-3" id="solutionCards">
+              ${solutionData.map((item, index) => `<button class="card solution-card ${index === 0 ? "selected" : ""}" data-index="${index}" type="button">
+                <div class="meta">场景 ${index + 1}</div><h3>${item[1]}</h3><p>${item[2]}</p><div class="arrow">${item[3]} →</div>
+              </button>`).join("")}
+            </div>
+          </div>
+        </section>
+        <section class="block">
+          <div class="container">
+            <div class="panel dark" id="solutionDetail">
+              <div class="eyebrow">当前方案</div>
+              <h3>${solutionData[0][1]}</h3>
+              <p>${solutionData[0][2]}</p>
+              <div class="flow" style="margin-top: 18px;">
+                <div class="panel"><h3>识别问题</h3><p>订单、菜单、配送或数据割裂。</p></div>
+                <div class="panel"><h3>组合产品</h3><p>选择对应产品能力。</p></div>
+                <div class="panel"><h3>连接系统</h3><p>接入渠道、POS、支付和配送。</p></div>
+                <div class="panel"><h3>门店上线</h3><p>试点、培训和规则配置。</p></div>
+                <div class="panel"><h3>持续优化</h3><p>用数据复盘运营结果。</p></div>
+              </div>
+            </div>
+          </div>
+        </section>`;
+      }
+
+      function renderProducts() {
+        return `${hero(
+          "用产品矩阵解释餐道能力边界",
+          "产品总览负责把核心能力组织清楚；每个产品详情页再承载痛点、收益、功能、工作流、集成和 FAQ。",
+          "产品总览",
+          `${link("integrations", "查看集成目录", "btn primary")} ${link("contact", "预约产品演示", "btn")}`
+        )}
+        <section class="block">
+          <div class="container">
+            <div class="section-head"><h2>核心产品</h2><p class="section-copy">这些卡片不再滚动到首页模块，而是进入独立产品详情页。</p></div>
+            <div class="grid-3">
+              ${Object.entries(productData).map(([key, item]) => card(item.tag, item.title, item.pain, key)).join("")}
+            </div>
+          </div>
+        </section>`;
+      }
+
+      function renderProductDetail(page) {
+        const item = productData[page] || productData["product-orders"];
+        return `${hero(
+          item.title,
+          item.pain,
+          `产品详情 / ${item.tag}`,
+          `${link("contact", "预约该产品演示", "btn primary")} ${link("products", "返回产品总览", "btn")}`
+        )}
+        <section class="block">
+          <div class="container grid-3">
+            ${item.value.map((value, index) => `<div class="metric"><strong>0${index + 1}</strong><span>${value}</span></div>`).join("")}
+          </div>
+        </section>
+        <section class="block">
+          <div class="container two-col">
+            <div>
+              <div class="section-head"><div class="eyebrow">核心功能</div><h2>${item.title}应承载的内容深度</h2><p class="section-copy">这里是产品详情页，而不是首页摘要，因此要把能力、流程、集成和 FAQ 展开。</p></div>
+              <div class="grid-3">${item.features.map(feature => `<div class="panel"><h3>${feature}</h3><p>低保真占位：正式稿补充业务规则、界面样例和关键状态。</p></div>`).join("")}</div>
+            </div>
+            <div class="panel">
+              <h3>工作流 / 数据流</h3>
+              <div class="flow" style="grid-template-columns: 1fr; margin-top: 14px;">${item.flow.map((step, index) => `<div class="panel"><h3>${index + 1}. ${step}</h3><p>显示该步骤的输入、处理和输出。</p></div>`).join("")}</div>
+            </div>
+          </div>
+        </section>
+        <section class="block">
+          <div class="container">
+            <div class="section-head"><div class="eyebrow">集成关系</div><h2>这个产品需要连接哪些系统</h2></div>
+            <div class="chips">${item.integrations.map(name => `<span class="chip active">${name}</span>`).join("")}</div>
+          </div>
+        </section>`;
+      }
+
+      function renderIntegrations() {
+        return `${hero(
+          "让客户快速判断能否接入现有系统",
+          "集成页需要像目录，而不是 logo 墙：可搜索、可分类、有支持状态，也能请求新集成或申请合作。",
+          "集成与合作伙伴",
+          `<button class="btn primary" data-modal="请求新集成">请求新集成</button> <button class="btn" data-modal="成为合作伙伴">成为合作伙伴</button>`
+        )}
+        <section class="block">
+          <div class="container">
+            <div class="search-bar">
+              <input class="input" id="integrationSearch" placeholder="搜索平台、POS、支付、配送或 API" />
+              <select class="select" id="integrationCategory">
+                <option value="">全部分类</option>
+                <option>外卖平台</option><option>POS</option><option>支付</option><option>配送</option><option>CRM / 会员</option><option>API</option>
+              </select>
+              <select class="select" id="integrationStatus">
+                <option value="">全部状态</option>
+                <option value="supported">已支持</option><option value="custom">可定制</option><option value="planned">计划中</option>
+              </select>
+            </div>
+            <div class="table" id="integrationTable"></div>
+          </div>
+        </section>`;
+      }
+
+      function renderCustomers() {
+        return `${hero(
+          "用客户案例证明经营结果",
+          "案例页要说明客户类型、使用产品、原始问题、解决方案和业务结果。未授权客户可先匿名处理。",
+          "客户案例",
+          `${link("contact", "提交案例沟通", "btn primary")} ${link("products", "查看相关产品", "btn")}`
+        )}
+        <section class="block">
+          <div class="container">
+            <div class="filters" id="caseFilters">
+              <button class="chip active" data-filter="全部">全部</button>
+              <button class="chip" data-filter="订单">订单</button>
+              <button class="chip" data-filter="菜单">菜单</button>
+              <button class="chip" data-filter="点餐">点餐</button>
+              <button class="chip" data-filter="数据">数据</button>
+            </div>
+            <div class="grid-3" id="caseGrid" style="margin-top: 18px;"></div>
+          </div>
+        </section>`;
+      }
+
+      function renderResources() {
+        return `${hero(
+          "把售前疑问、支持和内容运营集中起来",
+          "资源页承接 FAQ、支持、新闻、行业内容和安全合规入口，是长期内容运营的容器。",
+          "资源 / FAQ",
+          `${link("contact", "联系支持", "btn primary")} ${link("about", "查看信任信息", "btn")}`
+        )}
+        <section class="block">
+          <div class="container">
+            <div class="section-head"><h2>FAQ 交互</h2><p class="section-copy">点击问题展开答案；正式站可按产品、实施、集成、价格、支持、合规分类。</p></div>
+            <div id="faqList" class="grid-3"></div>
+          </div>
+        </section>`;
+      }
+
+      function renderAbout() {
+        return `${hero(
+          "建立企业级采购所需的长期可信",
+          "关于页不只是公司介绍，还要集中展示服务范围、客户经验、安全认证、隐私条款和合规入口。",
+          "关于 / 信任",
+          `${link("contact", "联系我们", "btn primary")} ${link("resources", "查看 FAQ", "btn")}`
+        )}
+        <section class="block">
+          <div class="container timeline">
+            <div class="panel"><div class="eyebrow">公司背景</div><h3>餐饮科技经验</h3><p>正式稿补充公司历史、服务地区和团队能力。</p></div>
+            <div class="panel"><div class="eyebrow">客户经验</div><h3>连锁与多门店</h3><p>展示已授权客户、匿名案例和行业经验。</p></div>
+            <div class="panel"><div class="eyebrow">安全合规</div><h3>数据与隐私</h3><p>集中进入隐私、条款、Cookie、安全和 DPA。</p></div>
+            <div class="panel"><div class="eyebrow">交付服务</div><h3>实施支持</h3><p>说明试点、上线、培训和售后支持。</p></div>
+          </div>
+        </section>`;
+      }
+
+      function renderContact() {
+        return `${hero(
+          "按用户意图进入不同联系路径",
+          "联系页不应只有一个表单，应分流预约示范、联系销售、合作伙伴申请、请求新集成和客户支持。",
+          "联系我们",
+          `<button class="btn primary" data-intent="demo">预约示范</button> <button class="btn" data-intent="sales">联系销售</button>`
+        )}
+        <section class="block">
+          <div class="container split-grid">
+            <div>
+              <div class="tabs" id="contactTabs">
+                ${Object.entries(contactIntents).map(([key, value], index) => `<button class="tab ${index === 0 ? "active" : ""}" data-intent="${key}" type="button">${value[0]}</button>`).join("")}
+              </div>
+              <div class="form-box" id="contactForm" style="margin-top: 18px;"></div>
+            </div>
+            <div class="panel">
+              <h3>联系页旁侧内容</h3>
+              <p>正式站可放置香港 / 国际联系信息、服务时间、支持入口、隐私说明和销售响应预期。</p>
+              <div class="chips" style="margin-top: 16px;">
+                <span class="chip active">预约示范</span>
+                <span class="chip">联系销售</span>
+                <span class="chip">合作伙伴</span>
+                <span class="chip">客户支持</span>
+              </div>
+            </div>
+          </div>
+        </section>`;
+      }
+
+      function renderPage(page) {
+        document.title = `${pages[page]} - 餐道官网低保真`;
+        const renderer = {
+          home: renderHome,
+          solutions: renderSolutions,
+          products: renderProducts,
+          integrations: renderIntegrations,
+          customers: renderCustomers,
+          resources: renderResources,
+          about: renderAbout,
+          contact: renderContact
+        }[page];
+        app.innerHTML = productData[page] ? renderProductDetail(page) : renderer();
+        document.querySelectorAll(".nav a").forEach(item => item.classList.toggle("active", item.dataset.page === page || (page.startsWith("product-") && item.dataset.page === "products")));
+        nav.classList.remove("open");
+        megaPanel.classList.remove("open");
+        bindRouteLinks();
+        bindPageInteractions(page);
+      }
+
+      function bindRouteLinks() {
+        document.querySelectorAll(".route-link").forEach(item => {
+          item.addEventListener("click", event => {
+            event.preventDefault();
+            routeTo(item.dataset.page);
+          });
+        });
+      }
+
+      function renderIntegrationTable() {
+        const query = (document.getElementById("integrationSearch")?.value || "").trim().toLowerCase();
+        const category = document.getElementById("integrationCategory")?.value || "";
+        const status = document.getElementById("integrationStatus")?.value || "";
+        const rows = integrationData.filter(item => {
+          const matchesQuery = !query || item.join(" ").toLowerCase().includes(query);
+          const matchesCategory = !category || item[1] === category;
+          const matchesStatus = !status || item[2] === status;
+          return matchesQuery && matchesCategory && matchesStatus;
+        });
+        const statusClass = item => item[2] === "supported" ? "supported" : item[2] === "custom" ? "custom" : "planned";
+        document.getElementById("integrationTable").innerHTML = `
+          <div class="table-row"><div>系统 / 平台</div><div>分类</div><div>状态</div><div>适用能力</div></div>
+          ${rows.map(item => `<div class="table-row"><div><strong>${item[0]}</strong></div><div>${item[1]}</div><div><span class="status ${statusClass(item)}">${item[3]}</span></div><div>${item[4]}</div></div>`).join("") || `<div class="table-row" style="grid-template-columns: 1fr;"><div>没有匹配项，可提交请求新集成。</div></div>`}
+        `;
+      }
+
+      function renderCases(filter = "全部") {
+        const grid = document.getElementById("caseGrid");
+        const rows = cases.filter(item => filter === "全部" || item.join(" ").includes(filter));
+        grid.innerHTML = rows.map(item => `<div class="card">
+          <div class="meta">${item[0]} / ${item[1]}</div>
+          <h3>${item[4]}</h3>
+          <p>${item[3]}</p>
+          <div class="chips" style="margin-top: 16px;">${item[2].split(" / ").map(tag => `<span class="chip active">${tag}</span>`).join("")}</div>
+          <div class="arrow">查看案例详情 →</div>
+        </div>`).join("");
+      }
+
+      function renderFaq() {
+        const list = document.getElementById("faqList");
+        list.innerHTML = faqData.map((item, index) => `<button class="card faq-item" data-index="${index}" type="button">
+          <div class="meta">${item[0]}</div>
+          <h3>${item[1]}</h3>
+          <p class="${index === 0 ? "" : "hidden"}">${item[2]}</p>
+          <div class="arrow">${index === 0 ? "收起" : "展开"} →</div>
+        </button>`).join("");
+        document.querySelectorAll(".faq-item").forEach(item => {
+          item.addEventListener("click", () => {
+            const copy = item.querySelector("p");
+            copy.classList.toggle("hidden");
+            item.querySelector(".arrow").textContent = copy.classList.contains("hidden") ? "展开 →" : "收起 →";
+          });
+        });
+      }
+
+      function renderContactForm(intent = "demo") {
+        const [title, fields] = contactIntents[intent];
+        document.querySelectorAll("#contactTabs .tab").forEach(tab => tab.classList.toggle("active", tab.dataset.intent === intent));
+        document.getElementById("contactForm").innerHTML = `
+          <div class="eyebrow">当前意图</div>
+          <h3>${title}</h3>
+          <p class="section-copy">字段根据用户意图变化，帮助后续销售、合作或支持团队更快判断线索。</p>
+          <div class="form-grid" style="margin-top: 16px;">
+            ${fields.map(name => `<input class="input" placeholder="${name}" />`).join("")}
+          </div>
+          <textarea style="margin-top: 12px;" placeholder="补充说明"></textarea>
+          <button class="btn primary" style="margin-top: 12px;" data-submit-contact type="button">提交意向</button>
+        `;
+        document.querySelector("[data-submit-contact]").addEventListener("click", () => setToast(`${title}：已记录为原型提交状态`));
+      }
+
+      function bindPageInteractions(page) {
+        document.querySelectorAll("[data-modal]").forEach(button => {
+          button.addEventListener("click", () => openModal(button.dataset.modal, "正式站这里会进入对应表单或申请流程。"));
+        });
+        if (page === "solutions") {
+          document.querySelectorAll(".solution-card").forEach(button => {
+            button.addEventListener("click", () => {
+              document.querySelectorAll(".solution-card").forEach(item => item.classList.remove("selected"));
+              button.classList.add("selected");
+              const item = solutionData[Number(button.dataset.index)];
+              const detail = document.getElementById("solutionDetail");
+              detail.querySelector("h3").textContent = item[1];
+              detail.querySelector("p").textContent = item[2];
+            });
+          });
+        }
+        if (page === "integrations") {
+          renderIntegrationTable();
+          ["integrationSearch", "integrationCategory", "integrationStatus"].forEach(id => {
+            document.getElementById(id).addEventListener("input", renderIntegrationTable);
+          });
+        }
+        if (page === "customers") {
+          renderCases();
+          document.querySelectorAll("#caseFilters .chip").forEach(button => {
+            button.addEventListener("click", () => {
+              document.querySelectorAll("#caseFilters .chip").forEach(item => item.classList.remove("active"));
+              button.classList.add("active");
+              renderCases(button.dataset.filter);
+            });
+          });
+        }
+        if (page === "resources") {
+          renderFaq();
+        }
+        if (page === "contact") {
+          renderContactForm();
+          document.querySelectorAll("#contactTabs .tab").forEach(tab => tab.addEventListener("click", () => renderContactForm(tab.dataset.intent)));
+          document.querySelectorAll("[data-intent]").forEach(button => button.addEventListener("click", () => renderContactForm(button.dataset.intent)));
+        }
+      }
+
+      function openModal(title, copy) {
+        modalTitle.textContent = title;
+        modalCopy.textContent = copy;
+        modalBody.innerHTML = `<div class="form-grid">
+          <input class="input" placeholder="姓名 / 公司" />
+          <input class="input" placeholder="邮箱 / 电话" />
+          <input class="input" placeholder="门店数量 / 当前系统" />
+          <input class="input" placeholder="希望了解的内容" />
+        </div>
+        <button class="btn primary" style="margin-top: 12px;" id="modalSubmit" type="button">提交</button>`;
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.getElementById("modalSubmit").addEventListener("click", () => {
+          closeModal();
+          setToast(`${title}：已记录为原型提交状态`);
+        });
+      }
+
+      function closeModal() {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+      }
+
+      function setMega(type) {
+        const content = {
+          solutions: [
+            ["按场景进入", "连锁餐饮、多门店营运、外卖营运、自有点餐、配送管理。"],
+            ["推荐路径", "先选择经营问题，再进入组合方案和产品能力。"],
+            ["下一步", "进入解决方案总览，后续可拆独立详情页。"]
+          ],
+          products: [
+            ["产品总览", "订单、菜单、自有点餐、配送、数据五个核心详情页。"],
+            ["详情页结构", "痛点、定位、收益、功能、流程、集成、FAQ、CTA。"],
+            ["导航规则", "产品目录进入独立产品页，不滚动到首页。"]
+          ]
+        }[type];
+        if (!content) return megaPanel.classList.remove("open");
+        megaContent.innerHTML = content.map(item => `<div class="mega-card"><h4>${item[0]}</h4><p>${item[1]}</p></div>`).join("");
+        megaPanel.classList.add("open");
+      }
+
+      document.querySelectorAll("[data-mega]").forEach(item => {
+        item.addEventListener("mouseenter", () => setMega(item.dataset.mega));
+      });
+      megaPanel.addEventListener("mouseleave", () => megaPanel.classList.remove("open"));
+      document.querySelector(".topbar").addEventListener("mouseleave", () => megaPanel.classList.remove("open"));
+      document.getElementById("modalClose").addEventListener("click", closeModal);
+      modal.addEventListener("click", event => {
+        if (event.target === modal) closeModal();
+      });
+      menuButton.addEventListener("click", () => nav.classList.toggle("open"));
+      document.getElementById("languageToggle").addEventListener("click", event => {
+        const next = event.target.textContent === "简体中文" ? "繁體中文" : "简体中文";
+        event.target.textContent = next;
+        setToast(`语言切换原型：${next}`);
+      });
+      window.addEventListener("popstate", () => renderPage(getCurrentPage()));
+      bindRouteLinks();
+      renderPage(getCurrentPage());
+      if (!window.location.search) {
+        window.history.replaceState({ page: "home" }, "", `${window.location.pathname}?page=home`);
+      }
+    </script>
+  </body>
+</html>

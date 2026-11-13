@@ -1,0 +1,59 @@
+{
+  "suite": "T48 high-fidelity-ready integrated evaluation page domain-copy QA",
+  "items": [
+    {
+      "id": "t48-hero-product-stage",
+      "locale": "zh-Hant",
+      "role": "决策者",
+      "page_task": "把三合一页面转成接入评估中心首屏",
+      "component_type": "hero",
+      "text": "接入評估中心｜餐道。先判斷現有系統如何接入，再用案例與資源完成採購評估。把多平台訂單、餐單更新、門店接單、配送與對賬差異放進同一個評估流程：先看系統來源和資料對象，再比對相似案例，最後帶著問題進入資源或演示。",
+      "must_include": ["餐道", "多平台訂單", "餐單更新", "門店接單", "配送", "對賬差異", "相似案例"]
+    },
+    {
+      "id": "t48-system-fit-workbench",
+      "locale": "zh-Hant",
+      "role": "IT",
+      "page_task": "说明系统接入对象、字段映射、同步状态和异常回传",
+      "component_type": "product_workbench",
+      "text": "接口與資料流評估。外賣平台、自建點餐、POS / KDS、CRM / 會員、支付 / ERP、配送 API 进入 AMS / Connector，再回到 OMS、Menu Center、DMS / iDMS、財務對賬與 CDBI。字段映射、同步監控、待映射、同步中、異常回傳和可用於 OMS / CDBI 作为工作台状态。",
+      "must_include": ["AMS / Connector", "OMS", "Menu Center", "DMS / iDMS", "財務對賬", "CDBI", "異常回傳"]
+    },
+    {
+      "id": "t48-case-proof-board",
+      "locale": "zh-Hant",
+      "role": "销售",
+      "page_task": "用实名客户和授权规模数据证明相似落地",
+      "component_type": "case_proof",
+      "text": "從相似客戶案例看落地方式。Pizza-Box｜9 年合作，OMS + 自有點餐；JIA Group｜多品牌、多門店營運；Jardine Group｜DMS / iDMS 配送履約。服務規模包括 5000+ 品牌數量、500M+ 每日處理訂單、400+ 覆蓋城市、200K+ 門店數量、4.5B+ 每月配送訂單交易額、30% 客戶效率提升。",
+      "must_include": ["Pizza-Box", "JIA Group", "Jardine Group", "5000+", "500M+", "400+", "200K+", "4.5B+", "30%"]
+    },
+    {
+      "id": "t48-industry-results",
+      "locale": "zh-Hant",
+      "role": "管理层",
+      "page_task": "用多业态结果支撑相似场景判断",
+      "component_type": "industry_cards",
+      "text": "甜品連鎖訂單量：100K -> 190K -> 1.01M，銷售額：6.6M -> 7.74M -> 54.42M，復購率：19.88% -> 25.83%。火鍋連鎖年度銷售額：1,578 萬元，營運效率：147%。中餐連鎖訂單取消率改善：185%，銷售增長：665%，門店擴張率：116%。咖啡品牌單店平均銷售額：+55%，單店平均訂單額增長：+74%。鮮食零售線上訂單比例：26.7%。配送密集品牌 DMS 平台可用性：超過 99.95%，DMS 吞吐量：每秒 500 Order/second。",
+      "must_include": ["甜品連鎖", "火鍋連鎖", "中餐連鎖", "咖啡品牌", "鮮食零售", "配送密集品牌"]
+    },
+    {
+      "id": "t48-resource-router",
+      "locale": "zh-Hant",
+      "role": "采购方",
+      "page_task": "把资源内容转为按阶段选择的任务路由",
+      "component_type": "resource_router",
+      "text": "資源路由：按目前階段找到下一步。評估中、導入中、日常營運、技術查詢分别进入接入準備清單、營運 FAQ、案例資源、支援中心、媒體與公司資料和產品演示分流。採購、IT、營運、門店、配送和財務團隊可以先選階段，再看对应资源。",
+      "must_include": ["評估中", "導入中", "日常營運", "技術查詢", "接入準備清單", "營運 FAQ", "案例資源", "支援中心"]
+    },
+    {
+      "id": "t48-decision-demo",
+      "locale": "zh-Hant",
+      "role": "销售",
+      "page_task": "把判断矩阵和演示摘要连接到转化",
+      "component_type": "decision_matrix_and_cta",
+      "text": "目前問題、系統、案例和資源下一步放在同一個判斷面。多平台訂單、餐單更新、門店接單與漏單風險，对应外賣平台、自建入口、POS / KDS 透過 AMS / Connector 回到 OMS 與 Menu Center。配送超時、派單規則、第三方配送狀態回傳，对应 DMS / iDMS。平台訂單與 OMS 訂單金額、狀態與漏單差異，对应 CDBI / 財務對賬。把接入問題、相似案例和資源入口帶到產品演示。",
+      "must_include": ["目前問題", "AMS / Connector", "OMS", "Menu Center", "DMS / iDMS", "CDBI", "財務對賬", "產品演示"]
+    }
+  ]
+}

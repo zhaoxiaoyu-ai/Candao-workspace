@@ -1,0 +1,106 @@
+{
+  "suite": "t40-stitch-html-static-check",
+  "date": "2026-08-20",
+  "status": "fail",
+  "scope": "Downloaded HTML for seven T40 Stitch generated candidate screens.",
+  "checks": {
+    "html_downloads": {
+      "expected": 7,
+      "actual": 7,
+      "status": "pass"
+    },
+    "stitch_preview_images": {
+      "expected": 7,
+      "actual": 7,
+      "status": "pass",
+      "note": "Stitch screenshot URLs downloaded as 512px-tall previews."
+    },
+    "local_full_page_screenshots": {
+      "expected": 7,
+      "actual": 7,
+      "status": "pass",
+      "viewport": "1440 x 900",
+      "full_page_dimensions": {
+        "about": "1440 x 4011",
+        "customers": "1440 x 1307",
+        "demo": "1440 x 2133",
+        "integrations": "1440 x 2759",
+        "platform": "1440 x 1384",
+        "resources": "1440 x 1569",
+        "solutions": "1440 x 1698"
+      }
+    },
+    "internal_stitch_placeholders": {
+      "patterns": ["{{DATA", "COMPONENTS_", "IMAGE_"],
+      "status": "pass",
+      "note": "No `{{DATA...}}`, `COMPONENTS_`, or `IMAGE_` tokens were found in downloaded HTML."
+    },
+    "material_symbol_ligatures": {
+      "status": "fail",
+      "counts": {
+        "about": 15,
+        "customers": 1,
+        "demo": 13,
+        "integrations": 2,
+        "platform": 8,
+        "resources": 9,
+        "solutions": 18
+      },
+      "examples": [
+        "solutions: arrow_forward, check_circle, receipt_long, storefront, local_shipping, account_balance_wallet",
+        "platform: receipt_long, menu_book, local_shipping, play_arrow",
+        "resources: arrow_forward, chevron_right, storefront, point_of_sale, database, api",
+        "about: arrow_forward, chevron_right, apartment, group, public, verified_user, speed, memory",
+        "demo: arrow_downward, fact_check, devices, support_agent, open_in_new, help_center, tune"
+      ]
+    },
+    "brand_display": {
+      "status": "fail",
+      "findings": [
+        {
+          "page": "resources",
+          "text": "© 2024 餐道 Candao International. All rights reserved."
+        },
+        {
+          "page": "solutions",
+          "text": "© 2024 餐道 Candao. All rights reserved. 粵ICP備12345678號"
+        }
+      ]
+    },
+    "unverified_or_forbidden_claims": {
+      "status": "fail",
+      "findings": [
+        {
+          "page": "solutions",
+          "text": "粵ICP備12345678號",
+          "reason": "Fake ICP number."
+        },
+        {
+          "page": "about",
+          "text": "全渠道中台戰略 / 營運中台",
+          "reason": "Domain-copy QA flags `中台`; current approved expression favors `營運中樞`."
+        },
+        {
+          "page": "about",
+          "text": "超過 500 名技術與營運專家",
+          "reason": "Not in approved T40 evidence set."
+        },
+        {
+          "page": "about",
+          "text": "無縫對接第三方 POS 與 ERP",
+          "reason": "Generic / discouraged integration claim."
+        },
+        {
+          "page": "about",
+          "text": "SLA 高可用性",
+          "reason": "SLA claim not authorized. Allowed value is `99.95% over` from PPT, not an SLA promise."
+        }
+      ]
+    },
+    "case_sensitive_terms": {
+      "status": "pass",
+      "note": "No `IDMS`, `idms`, `SAAS`, or `Saas` mismatches were found in downloaded HTML."
+    }
+  },
+  "conclusion": "Generated Stitch candidate screens are usable as visual exploration evidence but fail formal registration criteria."
+}

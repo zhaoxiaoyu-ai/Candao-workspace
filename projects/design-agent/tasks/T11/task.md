@@ -2,7 +2,24 @@
 
 ## Status
 
-blocked
+done
+
+## Completion
+
+2026-06-30:
+
+- Figma `whoami` gate succeeded for `Can-dao_UI / 2163548408@qq.com`.
+- Ran the read-only audit against `Tappo App` (`anMsqgZYi8ZqmJXZah78KI`) page `UI`.
+- Fixed the local audit/fix scripts to avoid unavailable `figma.util.colorToHex`.
+- Applied scoped corrections to the 8 known booking frames only.
+- Restored booking yellow and gradient tokens: `#F6D365` and `#F6D365 -> #FDCB85`.
+- Rebound text, border, surface, and danger colors to existing Tappo/POS tokens where available.
+- Corrected booking status labels to Radio rows with `全部 (6)` style labels and kept Tabs at `0`.
+- Preserved sidebar/topbar instances, hid non-booking POS shell text, and added token-bound booking shell text overlays because the instances expose no text component properties.
+- Final audit confirmed `#9A6A00 = 0`, `Tabs = 0`, `Radio = 36`, and no `今日訂座總覽` panel.
+- Visual QA screenshots for list and form frames showed no obvious overlap.
+
+Execution details: `output/figma-execution-2026-06-30.md`.
 
 ## Request
 
@@ -20,6 +37,41 @@ Correct the existing Tappo App booking module in Figma after design feedback:
 - Known booking review frame from T09: `3318:68380`
 
 ## Figma Access Check
+
+2026-06-30 current Codex session:
+
+- Tool discovery exposed Figma tools under `mcp__codex_apps__figma`.
+- Called `mcp__codex_apps__figma._whoami`.
+- First call returned `Authentication for Figma was requested and accepted. Retry this tool call now.`
+- Retried once and succeeded:
+
+```text
+handle: Can-dao_UI
+email: 2163548408@qq.com
+plans:
+- Aiello's team, Full, team::1303717087847373113
+- Can-dao_UI, View, team::1582296935234272183
+- figma示例, Full, team::1597058052141150518
+```
+
+- Figma authentication/tool-loading was no longer the active blocker.
+- The gate was followed by the completed read-only audit, scoped fix, final audit, and visual QA recorded in `output/figma-execution-2026-06-30.md`.
+
+2026-06-29 current Codex desktop session:
+
+- Installed/registered official Figma remote MCP as `figma` at `https://mcp.figma.com/mcp`.
+- Opened two browser OAuth authorization flows, but both timed out waiting for the local callback.
+- After the user reported `127.0.0.1 refused connection`, started a fresh login with callback port `52427`, opened the new authorization URL, and verified Codex was listening on `127.0.0.1:52427`; that login still timed out without callback.
+- Reran `codex mcp login figma`; this time it returned `Successfully logged in to MCP server 'figma'`.
+- Final `codex mcp list` shows `figma` enabled with `OAuth`.
+- Loaded the required project and T11 context, plus `figma-use` and `figma-generate-design` instructions.
+- Tool discovery returned no callable Figma tools: no `whoami`, no `use_figma`, no `get_libraries`, and no `get_metadata`.
+- Before installation, local `codex mcp list` showed only `node_repl`; after installation and successful OAuth, it shows `figma` authenticated, but the already-running conversation has not loaded the tools.
+- Direct config inspection confirmed `/Users/victorwong/.codex/config.toml` contains `[mcp_servers.figma] url = "https://mcp.figma.com/mcp"`.
+- Because `whoami` is not callable, the required gate failed before file access.
+- The read-only audit script and fix script were not executed.
+- Figma file `Tappo App` (`anMsqgZYi8ZqmJXZah78KI`) was not read or modified.
+- The two prepared scripts still pass local JavaScript parsing with the bundled Codex Node runtime.
 
 2026-06-23 current-session verification succeeded through the official Figma MCP server in a prior refreshed session:
 
@@ -50,7 +102,7 @@ user_cancelled_mcp_tool_call
 
 - No Figma file or node was read or modified during this latest attempt.
 
-## Latest Local Progress
+## Historical Local Progress
 
 2026-06-23 follow-up after the user asked to push forward as much as possible:
 
@@ -60,7 +112,7 @@ user_cancelled_mcp_tool_call
 - The script also corrects sidebar/topbar/status labels to the Pad booking prototype and avoids changing non-booking frames.
 - Added execution and validation notes in `output/t11-execution-runbook.md`.
 - Local syntax validation passed with `node new Function(...)`.
-- The script has not been executed in Figma because file-level Figma access is still blocked/cancelled.
+- At that time, the script had not been executed in Figma because file-level Figma access was still blocked/cancelled. This is superseded by the completed 2026-06-30 Figma execution.
 - Final gate retry after preparing the artifacts still exposed only `mcp__codex_apps__figma`; `_whoami` failed with the same MCP startup handshake timeout.
 
 2026-06-23 continuation after user asked to continue:

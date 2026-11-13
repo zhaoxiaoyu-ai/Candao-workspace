@@ -1,0 +1,115 @@
+{
+  "version": "2026-08-19",
+  "project": "餐道国际官网重构",
+  "package": "stitch-ready-low-fidelity",
+  "locale": "zh-Hant",
+  "status": "external_stitch_input_ready",
+  "entry": "index.html",
+  "visual_media_layer": {
+    "status": "embedded_in_pages",
+    "source_task": "T31",
+    "types": [
+      "photo-scene",
+      "product-shot-frame",
+      "concept-illustration",
+      "motion-strip",
+      "video-thumb",
+      "metric-chart"
+    ],
+    "rule": "These are low-fidelity media structures that indicate where photography, product screenshots, concept illustrations, video entries, charts, or motion keyframes should be carried in high-fidelity design. They must not be treated as real product screenshots, customer photos, customer logos, certificate images, or video covers."
+  },
+  "assets": {
+    "css": "assets/stitch-ready.css",
+    "js": "assets/stitch-ready.js",
+    "logo": "assets/candao-blue-logo.svg"
+  },
+  "supporting_inputs": {
+    "element_placement_guide": "element-placement-guide.md",
+    "element_placement_map": "element-placement-map.json",
+    "prompt_pack": "stitch-ready-prompt-pack.md",
+    "visual_media_report": "../../T31/output/visual-media-layer-report-2026-08-19.md"
+  },
+  "global_rules": [
+    "Generate a Traditional Chinese first international SaaS website.",
+    "Language: Traditional Chinese.",
+    "Do not display bilingual content.",
+    "Include language switch: 繁中 / EN.",
+    "Use 餐道 as the visible Chinese / Traditional Chinese brand name.",
+    "Preserve protected terms exactly: iDMS, SaaS, AMS / Connector.",
+    "Do not invent customer logos, product screenshots, metrics, SLA, integration status, or third-party partner status."
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "title": "首頁",
+      "file": "home.html",
+      "stitch_screen_name": "Home / Desktop 1440 / TC / Low Fidelity External",
+      "page_task": "建立认知并导流到平台能力、客户案例和预约演示",
+      "primary_role": "品牌决策者",
+      "core_sections": ["Hero", "營運中樞", "能力探索器", "服務規模", "客戶案例摘要", "CTA"]
+    },
+    {
+      "id": "solutions",
+      "title": "解決方案",
+      "file": "solutions.html",
+      "stitch_screen_name": "Solutions / Desktop 1440 / TC / Low Fidelity External",
+      "page_task": "按营运问题确认相似场景",
+      "primary_role": "品牌决策者 / 总部运营",
+      "core_sections": ["Hero", "常見營運問題", "場景導覽"]
+    },
+    {
+      "id": "platform",
+      "title": "平台",
+      "file": "platform.html",
+      "stitch_screen_name": "Platform / Desktop 1440 / TC / Low Fidelity External",
+      "page_task": "说明产品如何承接业务对象、状态和操作",
+      "primary_role": "总部运营 / IT / 配送 / 财务",
+      "core_sections": ["Hero", "產品能力地圖", "產品演示入口", "CTA"]
+    },
+    {
+      "id": "integrations",
+      "title": "整合能力",
+      "file": "integrations.html",
+      "stitch_screen_name": "Integrations / Desktop 1440 / TC / Low Fidelity External",
+      "page_task": "验证系统接入、资料对象和状态回传",
+      "primary_role": "IT / 总部运营",
+      "core_sections": ["Hero", "接入對象", "資料流與適合情境"]
+    },
+    {
+      "id": "customers",
+      "title": "客戶案例",
+      "file": "customers.html",
+      "stitch_screen_name": "Customers / Desktop 1440 / TC / Low Fidelity External",
+      "page_task": "用服务规模、实名客户和行业案例证明落地",
+      "primary_role": "品牌决策者 / 销售",
+      "core_sections": ["Hero", "服務規模", "實名案例", "業態成果"]
+    },
+    {
+      "id": "resources",
+      "title": "資源",
+      "file": "resources.html",
+      "stitch_screen_name": "Resources / Desktop 1440 / TC / Low Fidelity External",
+      "page_task": "降低评估、导入、营运和技术疑问",
+      "primary_role": "采购方 / IT / 总部运营 / 支持",
+      "core_sections": ["Hero", "問題階段", "接入準備清單", "營運問答", "案例資源", "支援中心", "媒體與公司資料", "產品演示分流"]
+    },
+    {
+      "id": "about",
+      "title": "關於餐道",
+      "file": "about.html",
+      "stitch_screen_name": "About / Desktop 1440 / TC / Low Fidelity External",
+      "page_task": "建立公司可信、产品演进和服务交付认知",
+      "primary_role": "品牌决策者 / 采购方",
+      "core_sections": ["Hero", "企業旅程", "產品與服務能力", "OMS", "CDBI / 財務對賬", "DMS / iDMS", "AMS / Connector", "服務交付", "質量與可信", "CTA"]
+    },
+    {
+      "id": "demo",
+      "title": "預約產品演示",
+      "file": "demo.html",
+      "stitch_screen_name": "Demo / Desktop 1440 / TC / Low Fidelity External",
+      "page_task": "收集演示意图、品牌资料、系统现况和主要问题",
+      "primary_role": "采购方 / 销售",
+      "core_sections": ["Hero", "演示需求摘要", "聯絡意圖", "品牌與系統現況", "演示模組摘要"]
+    }
+  ]
+}

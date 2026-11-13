@@ -1,0 +1,26 @@
+{
+  "suite": "T45 demo sequential Stitch visible copy QA",
+  "total": 1,
+  "passed": 0,
+  "failed": 1,
+  "status": "fail",
+  "results": [
+    {
+      "id": "t45-demo-demo-3215bd49b04244d5ba8efc7f9f97e250-after-edit",
+      "component_type": "stitch_high_fidelity_candidate_visible_copy",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "brand_display_mismatch",
+          "message": "中文 / 繁體中文默认品牌显示应使用「餐道」，不应使用：Candao"
+        }
+      ],
+      "warnings": [
+        {
+          "code": "unknown_role",
+          "message": "角色未在业务上下文中显式定义：品牌决策者 / 总部运营 / IT / 销售"
+        }
+      ]
+    }
+  ]
+}

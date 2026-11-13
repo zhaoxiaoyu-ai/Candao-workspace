@@ -1,0 +1,21 @@
+{
+  "suite": "T36 Solutions Stitch edit writeback check",
+  "date": "2026-08-20",
+  "project_id": "10888304674441209287",
+  "target_screen_id": "4188f2a7f3f84566b5644b19efdedadd",
+  "edit_session_id": "9105741495013900777",
+  "poll_count": 10,
+  "poll_interval_seconds": 30,
+  "status": "fail",
+  "expected_result": "The selected Solutions screen should receive an updated HTML file and screenshot after one edit_screens call.",
+  "actual_result": "The selected screen remained unchanged and no new usable Solutions screen appeared in list_screens.",
+  "unchanged_signature": {
+    "title": "C v3 / 解決方案 - Candao International / Desktop TC",
+    "width": "2560",
+    "height": "9662",
+    "html_file_name": "projects/10888304674441209287/files/a86bed3d513d469aa69287e5f736b6c4",
+    "screenshot_file_name": "projects/10888304674441209287/files/f39fc10b0273428faf3dab17fa825765"
+  },
+  "formal_output_created": false,
+  "reason_formal_output_not_created": "Using the unchanged C v3 screen would violate the single-output QA gate because it contains hard failures."
+}

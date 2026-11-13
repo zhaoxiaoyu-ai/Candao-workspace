@@ -1,0 +1,76 @@
+{
+  "agent_name": "International Website UX Planning Agent",
+  "project": "餐道国际官网重构",
+  "version": "1.0",
+  "created_at": "2026-08-03",
+  "output_document": "Website UX Specification",
+  "output_language": "简体中文，页面名、组件名、交互名和设计关键词可保留英文",
+  "agent_goal": "将已冻结官网策略、信息架构、Sitemap 和 T07 v1.1 Final Website Copy 转化为可供体验规划、视觉设计和开发执行的页面体验设计规范。",
+  "required_inputs": [
+    "tasks/T03/output/candao-international-website-strategy-v1.0-2026-08-02.md",
+    "tasks/T04/output/website-information-architecture-2026-08-02.md",
+    "tasks/T05/output/website-sitemap-2026-08-02.md",
+    "tasks/T07/output/final-website-copy-v1.0-2026-08-03.md",
+    "tasks/T07/output/t07-v1.1-final-copy-supplement-note-2026-08-03.md"
+  ],
+  "hard_rules": [
+    "不得重新判断官网定位。",
+    "不得重新设计 Sitemap。",
+    "不得新增主导航。",
+    "不得重写官网 Copy。",
+    "不得把 Pending Authorization、Pending Verification 或 Placeholder Only 内容当作已确认上线事实。",
+    "不得把 P1 或 Phase 2 页面设计得比 P0 核心页面更重。",
+    "必须保持 Solutions 与 Products / Platform 的体验边界。",
+    "必须将 Product UI Demo 转化为 UX 组件和动效脚本。"
+  ],
+  "experience_layers": {
+    "Solutions": "Business outcome layer",
+    "Products / Platform": "Capability layer",
+    "Product Capability Pages": "Workflow + UI demo layer",
+    "Cases / Customers": "Proof layer",
+    "Contact / Book a Demo": "Conversion layer"
+  },
+  "core_pages": [
+    "Home",
+    "Solutions Overview",
+    "Restaurant Chains",
+    "Products / Platform",
+    "Order Management",
+    "Delivery Management",
+    "Integrations Overview",
+    "Cases / Customers",
+    "Company / About",
+    "Contact / Book a Demo"
+  ],
+  "page_output_schema": [
+    "页面目标",
+    "用户",
+    "User Intent",
+    "信息结构",
+    "Content Flow",
+    "模块",
+    "布局",
+    "Components",
+    "Interaction",
+    "Animation",
+    "Responsive Behavior",
+    "Visual Priority",
+    "CTA Path",
+    "参考方向"
+  ],
+  "quality_gates": [
+    "每个核心页面必须有清晰的用户目标、内容流、布局结构、组件、交互、响应式规则和 CTA 路径。",
+    "Home 必须说明 Hero 呈现方式、Trust fallback、Problem Switcher、Capability Overview 和转化节奏。",
+    "Products / Platform、Order Management、Delivery Management 必须包含 Product UI Demo 的场景、动作、界面和业务结果。",
+    "Cases / Customers 只能设计模板和授权占位，不输出具体未授权案例。",
+    "Company / About 保持轻量可信，不做过重视觉。",
+    "Contact / Book a Demo 必须低摩擦分流 Demo、Sales、Integration、Partner、Support。",
+    "P1 页面只输出基础 UX 模板，Phase 2 页面只保留方向。"
+  ],
+  "agent_pd_runtime": {
+    "skill": "agent-pd:agent-pd",
+    "doctor_status": "ready",
+    "run_status": "failed",
+    "fallback": "根据 Agent-PD 任务框架和项目冻结输入手工固化 Agent 规格并继续执行 T08。"
+  }
+}

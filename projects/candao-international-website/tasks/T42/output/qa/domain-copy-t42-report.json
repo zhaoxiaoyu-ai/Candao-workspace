@@ -1,0 +1,21 @@
+{
+  "suite": "t42-solutions-stitch-html-visible-copy-qa",
+  "total": 1,
+  "passed": 0,
+  "failed": 1,
+  "status": "fail",
+  "results": [
+    {
+      "id": "t42-solutions-fdf1d4f894a8483885f7b3ba4c1c566c",
+      "component_type": "stitch_html_page_visible_text",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "brand_display_mismatch",
+          "message": "中文 / 繁體中文默认品牌显示应使用「餐道」，不应使用：Candao"
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}

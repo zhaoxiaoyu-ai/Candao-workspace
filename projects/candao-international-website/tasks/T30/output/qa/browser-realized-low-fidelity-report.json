@@ -1,0 +1,288 @@
+{
+  "suite": "T30 realized low-fidelity browser QA",
+  "status": "pass",
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "results": [
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/index-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2039.234375,
+        "blankPixelsRisk": 797
+      },
+      "status": "pass"
+    },
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/index-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 3899.328125,
+        "blankPixelsRisk": 789
+      },
+      "status": "pass"
+    },
+    {
+      "page": "home.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/home-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 3379.921875,
+        "blankPixelsRisk": 1233
+      },
+      "status": "pass"
+    },
+    {
+      "page": "home.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/home-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 6248.765625,
+        "blankPixelsRisk": 1208
+      },
+      "status": "pass"
+    },
+    {
+      "page": "solutions.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/solutions-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2146.078125,
+        "blankPixelsRisk": 1008
+      },
+      "status": "pass"
+    },
+    {
+      "page": "solutions.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/solutions-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 3979.703125,
+        "blankPixelsRisk": 1021
+      },
+      "status": "pass"
+    },
+    {
+      "page": "platform.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/platform-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2798.640625,
+        "blankPixelsRisk": 1093
+      },
+      "status": "pass"
+    },
+    {
+      "page": "platform.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/platform-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 4612.078125,
+        "blankPixelsRisk": 1076
+      },
+      "status": "pass"
+    },
+    {
+      "page": "integrations.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/integrations-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2166.65625,
+        "blankPixelsRisk": 854
+      },
+      "status": "pass"
+    },
+    {
+      "page": "integrations.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/integrations-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 3268.5,
+        "blankPixelsRisk": 870
+      },
+      "status": "pass"
+    },
+    {
+      "page": "customers.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/customers-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2850.6875,
+        "blankPixelsRisk": 1344
+      },
+      "status": "pass"
+    },
+    {
+      "page": "customers.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/customers-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 5061.515625,
+        "blankPixelsRisk": 1351
+      },
+      "status": "pass"
+    },
+    {
+      "page": "resources.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/resources-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 4739.609375,
+        "blankPixelsRisk": 1701
+      },
+      "status": "pass"
+    },
+    {
+      "page": "resources.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/resources-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 8063.875,
+        "blankPixelsRisk": 1693
+      },
+      "status": "pass"
+    },
+    {
+      "page": "about.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/about-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 5873.484375,
+        "blankPixelsRisk": 1755
+      },
+      "status": "pass"
+    },
+    {
+      "page": "about.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/about-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 9189.75,
+        "blankPixelsRisk": 1747
+      },
+      "status": "pass"
+    },
+    {
+      "page": "demo.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/demo-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2130.6875,
+        "blankPixelsRisk": 878
+      },
+      "status": "pass"
+    },
+    {
+      "page": "demo.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T30/output/screenshots/demo-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 3623.078125,
+        "blankPixelsRisk": 870
+      },
+      "status": "pass"
+    }
+  ]
+}

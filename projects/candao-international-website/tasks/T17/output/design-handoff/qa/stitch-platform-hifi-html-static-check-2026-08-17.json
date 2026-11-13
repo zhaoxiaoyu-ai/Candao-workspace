@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "html": "tasks/T17/output/design-handoff/.stitch/designs/candao-platform-hifi-final-03fa757724764d32bc84634a727427b3.html",
+  "checks": {
+    "nav_items": true,
+    "brand_zh": true,
+    "protected_terms": true,
+    "forbidden_case_forms": true,
+    "no_internal_words_visible": true,
+    "no_icon_ligature_words_visible": true,
+    "no_fake_or_unauthorized_images": true,
+    "no_text_transform": true,
+    "capability_script_items": true,
+    "cta": true
+  },
+  "visible_text_excerpt": "平台 | 餐道 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN 預約演示 用真實產品能力承接訂單、餐單、配送、數據和接入 平台頁回答產品如何工作：每項能力都應對應真實產品截圖、業務對象、狀態、操作、下一步和產品視頻入口。 預約產品演示 查看整合能力 狀態追蹤 履約完成 多渠道訂單 OMS / COMS / SOMS 餐單與門店 Menu Center / Store Abnormity Management 會員與自有點餐 Mobile Ordering / QR / H5 / Web ordering 配送履約 DMS / iDMS 數據與對賬 CDBI / Finance Center AMS / Connector AMS / Connector / API ▦ 業務對象 ↔ 狀態 / 操作 □ 對應產品 → 下一步 OMS / COMS / SOMS 外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店按渠道、訂單狀態、配送狀態和異常類型處理。 業務對象 訂單、渠道、門店、訂單狀態、配送狀態、異常類型 下一步 查看訂單隊列、通知門店、進入配送或對賬流程。 預約訂單場景演示 → 按工作流查看不同模組的日常使用方式 ▶ OMS 多渠道訂單與門店接單 ▶ Menu / Store 餐單、售罄與門店狀態 ▶ DMS / iDMS 派單、第三方配送與配送異常 ▶ CDBI / Finance 報表、Finance Center 與對賬差異 根據當前能力，預約產品演示、查看整合能力或查看相關案例。 預約產品演示 查看整合能力 查看客戶案例 餐道 餐道｜餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN"
+}

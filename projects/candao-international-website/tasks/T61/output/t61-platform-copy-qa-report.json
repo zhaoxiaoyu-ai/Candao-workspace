@@ -1,0 +1,93 @@
+{
+  "suite": "",
+  "total": 12,
+  "passed": 12,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t61-platform-hero-h1",
+      "component_type": "hero_title",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-hero-lead",
+      "component_type": "hero_body",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-core-matrix",
+      "component_type": "section_heading",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-oms-card",
+      "component_type": "product_card",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-delivery-card",
+      "component_type": "product_card",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-cdbi-card",
+      "component_type": "product_card",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-connector-card",
+      "component_type": "product_card",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-capability-map",
+      "component_type": "capability_map",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-operational-workflow",
+      "component_type": "workflow",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-product-demo-entry",
+      "component_type": "demo_cards",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-conversion-cta",
+      "component_type": "cta",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t61-platform-footer",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

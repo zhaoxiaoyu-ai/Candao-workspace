@@ -1,0 +1,95 @@
+餐道
+首頁
+解決方案
+平台能力
+生態集成
+客戶案例
+資源中心
+繁/EN
+預約演示
+餐道真實影響力
+從不同餐飲業態看餐道如何改善訂單、配送與數據營運
+探索頂尖餐飲品牌如何利用餐道系統重塑數據流。從 OMS 到 iDMS，我們的解決方案將碎片化數據轉化為可追溯的清晰營運流，釋放前所未有的效率。
+預約相似場景演示
+arrow_forward
+服務規模
+餐道作為無聲的合作夥伴，每日穩定支撐龐大的餐飲營運網絡。
+5000+
+品牌數量
+500M+
+每日處理訂單
+400+
+覆蓋城市
+200K+
+門店數量
+4.5B+
+每月配送訂單 GMV
+30% up
+客戶效率提升
+實名案例解析
+Pizza-Box
+chevron_right
+JIA Group
+chevron_right
+Jardine Group
+chevron_right
+Pizza-Box
+連鎖速食
+面臨高峰期外送調度混亂與各平台數據割裂挑戰。
+案例營運視圖
+部署模組
+OMS + iDMS + AMS
+analytics
+導入前痛點
+horizontal_rule
+多平台訂單需人手轉錄，易漏單。
+horizontal_rule
+自有騎手與第三方運力缺乏統一調度中樞。
+check_circle
+導入後變化
+arrow_right_alt
+訂單直入廚房，處理時間縮短 40%。
+arrow_right_alt
+iDMS 智能派單，準點率提升至 98%。
+預約相似場景演示
+arrow_forward
+業態成果
+針對不同餐飲模型的定製化數據流最佳實踐。
+甜品連鎖
+icecream
+利用 Menu Center 實現多門店菜單一鍵同步，CDBI 深度分析季節性爆款趨勢。
+關鍵指標
+上新效率 +80%
+火鍋連鎖
+local_fire_department
+OMS 聚合堂食與外賣排隊，Finance Center 確保複雜分賬清晰無誤。
+關鍵指標
+對賬時間 -60%
+中餐連鎖
+restaurant
+透過 Connector 無縫對接現有 ERP，建立企業級 Data Asset。
+關鍵指標
+數據準確率 99.9%
+咖啡品牌
+local_cafe
+自營小程序深度結合 SaaS 會員體系，提升復購率與客戶黏性。
+關鍵指標
+會員活躍度 +45%
+鮮食零售
+storefront
+庫存與前端訂單即時連動，減少超賣現象，優化供應鏈調度。
+關鍵指標
+庫存週轉 +25%
+配送密集品牌
+moped
+高度依賴 iDMS 進行騎手路徑最佳化與多單聚合配送。
+關鍵指標
+單均配送成本 -15%
+餐道
+© 2024 餐道 Candao. 版權所有.
+SaaS系統
+iDMS 智能配送
+AMS 聚合管理
+Connector 連接器
+服務條款
+隱私政策

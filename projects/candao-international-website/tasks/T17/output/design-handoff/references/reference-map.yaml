@@ -1,0 +1,59 @@
+version: "2026-08-16"
+status: reference_master_missing
+expected_master:
+  file: tasks/T17/input/references/home-style-reference.png
+  expected_size: "1652x2047"
+  found: false
+rule:
+  - "未找到用户指定首页母版时，不生成替代参考切片。"
+  - "历史 Stitch / Figma 截图可作为候选参考，但不能自动替代 ref-00。"
+references:
+  - id: ref-00-home-master
+    file: references/ref-00-home-master.png
+    status: missing
+    use_for: "全局视觉母版"
+    not_for: "不能从其他截图自动替代"
+    pages: ["Home", "全站"]
+  - id: ref-01-hero-atmosphere
+    file: references/ref-01-hero-atmosphere.png
+    status: blocked_by_missing_master
+    use_for: "Header、Hero、字体、摄影遮罩"
+    not_for: "不用于客户 Logo、真实数据或产品 UI"
+    pages: ["Home", "About"]
+  - id: ref-02-product-stage
+    file: references/ref-02-product-stage.png
+    status: blocked_by_missing_master
+    use_for: "产品截图舞台、层次关系"
+    not_for: "不用于生成假产品截图"
+    pages: ["Home", "Platform"]
+  - id: ref-03-connector-section
+    file: references/ref-03-connector-section.png
+    status: blocked_by_missing_master
+    use_for: "连接中枢双栏构图"
+    not_for: "不用于复制具体模块文字"
+    pages: ["Home", "Integrations"]
+  - id: ref-04-isometric-material
+    file: references/ref-04-isometric-material.png
+    status: blocked_by_missing_master
+    use_for: "3D 图标材质、连线、粒子"
+    not_for: "不用于装饰性 3D blob"
+    pages: ["Home", "Integrations"]
+  - id: ref-05-typography
+    file: references/ref-05-typography.png
+    status: blocked_by_missing_master
+    use_for: "中文标题层级、蓝色重点词"
+    not_for: "不用于改变产品名大小写"
+    pages: ["全站"]
+  - id: ref-06-light-texture
+    file: references/ref-06-light-texture.png
+    status: blocked_by_missing_master
+    use_for: "蓝色光带和背景质感"
+    not_for: "不用于大面积装饰光斑"
+    pages: ["Home", "CTA"]
+candidate_existing_images:
+  - file: tasks/T11.5/output/stitch-cv4-home/home-operations-hub-complete-qa-full-1440.png
+    status: candidate_only
+    reason: "历史 Stitch 首页候选，可帮助理解方向，但尺寸和来源不符合用户指定母版。"
+  - file: tasks/T11.5/output/figma-current-page-narrative-audit-2026-08-12/01-home.png
+    status: candidate_only
+    reason: "Figma 当前页审查截图，可作为叙事问题证据，不作为视觉母版。"

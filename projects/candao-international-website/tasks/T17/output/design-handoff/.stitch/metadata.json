@@ -1,0 +1,96 @@
+{
+  "version": "2026-08-17",
+  "project": {
+    "name": "Candao International Website T11.5-C",
+    "project_id": "10888304674441209287"
+  },
+  "single_output_policy": {
+    "enabled": true,
+    "rule": "One page must have one target Stitch screen, one final HTML, and one final screenshot in the formal output directory.",
+    "generation": "Use one accurate generate_screen_from_text prompt per page. Record detail issues first. Use edit_screens only once on the same screen for blocking external-delivery defects.",
+    "detail_issue_policy": "Non-blocking details such as spacing, icon preference, visual polish, motion nuance, and later asset replacement are logged in QA/issue-log instead of triggering repeated Stitch generations.",
+    "hard_issue_criteria": [
+      "wrong page",
+      "missing navigation or core copy",
+      "visible internal notes",
+      "placeholder content",
+      "fake logos",
+      "unauthorized metrics or status counts",
+      "incorrect casing for protected product terms"
+    ],
+    "formal_output_directory": "designs/",
+    "intermediate_versions_in_formal_output": false
+  },
+  "screens": [
+    {
+      "page": "Home",
+      "locale": "zh-Hant",
+      "device_type": "DESKTOP",
+      "title": "餐道國際官網 - 首頁 (C v4 最終修正版) - Data Integrity Fix",
+      "screen_id": "d792eb1c55b14ee284b9e111474614dd",
+      "stitch_name": "projects/10888304674441209287/screens/d792eb1c55b14ee284b9e111474614dd",
+      "generated_from_design_system": "assets/12141666305108771015",
+      "final_design_system": "assets/a99f770bf474445d98b287cf983bc147",
+      "width": 2560,
+      "height": 8616,
+      "local_html": "designs/candao-home-hifi-final-d792eb1c55b14ee284b9e111474614dd.html",
+      "local_screenshot": "designs/candao-home-hifi-final-d792eb1c55b14ee284b9e111474614dd-full.png",
+      "qa_report": "../qa/stitch-home-hifi-copy-qa-result-2026-08-17.json",
+      "checks": {
+        "domain_copy_qa": "pass",
+        "internal_refs_visible": "pass",
+        "brand_locale": "pass",
+        "case_sensitive_terms": "pass",
+        "unconfirmed_hero_counts_removed": true,
+        "navigation_aligned_with_wireframe": true,
+        "footer_aligned_with_wireframe": true
+      }
+    },
+    {
+      "page": "Platform",
+      "locale": "zh-Hant",
+      "device_type": "DESKTOP",
+      "title": "平台 - 餐道國際 / Desktop TC / 產品能力地圖",
+      "screen_id": "03fa757724764d32bc84634a727427b3",
+      "stitch_name": "projects/10888304674441209287/screens/03fa757724764d32bc84634a727427b3",
+      "initial_generated_screen_id": "ea23e53acc3446a9bce5b1aa6a3d4dd6",
+      "generation_policy": {
+        "generate_screen_from_text_calls": 1,
+        "edit_screens_calls": 1,
+        "edit_reason": "首稿缺少 P02-P06 核心模块并出现外部生成图片和英文 Footer，属于硬性问题；按规则只对同一 screen 做一次定向编辑。",
+        "superseded_initial_html": "../superseded/platform/candao-platform-hifi-blocked-ea23e53acc3446a9bce5b1aa6a3d4dd6.html"
+      },
+      "generated_from_design_system": "assets/a99f770bf474445d98b287cf983bc147",
+      "final_design_system": "assets/a99f770bf474445d98b287cf983bc147",
+      "width": 2560,
+      "height": 5400,
+      "local_html": "designs/candao-platform-hifi-final-03fa757724764d32bc84634a727427b3.html",
+      "local_screenshot": "designs/candao-platform-hifi-final-03fa757724764d32bc84634a727427b3-full.png",
+      "qa_report": "../qa/stitch-platform-hifi-copy-qa-result-2026-08-17.json",
+      "static_check_report": "../qa/stitch-platform-hifi-html-static-check-2026-08-17.json",
+      "checks": {
+        "domain_copy_qa": "pass",
+        "html_static_scan": "pass",
+        "navigation_aligned_with_wireframe": true,
+        "brand_locale": "pass",
+        "case_sensitive_terms": "pass",
+        "no_text_transform": true,
+        "no_icon_ligature_words": true,
+        "no_img_tags": true,
+        "no_placeholder_or_internal_refs": true,
+        "no_fake_logos": true,
+        "no_unauthorized_metrics": true,
+        "screenshot_generated": true,
+        "formal_output_single_html_and_image_for_page": true
+      }
+    }
+  ],
+  "notes": [
+    "Generated in Stitch from the T17 design-ready homepage wireframe and T17 design handoff prompt pack.",
+    "Final pass removed English default brand text, placeholder backgrounds, forced uppercase text transforms, missing Resources nav item, unrelated footer legal links, and unconfirmed hero status counts.",
+    "Reference master images remain missing per references/reference-map.yaml; this Stitch screen should be treated as a high-fidelity design direction pending final real product screenshots and authorized visual assets.",
+    "2026-08-17: Platform generated after Home using one generate_screen_from_text call and one hard-issue edit_screens correction on the same page target.",
+    "Platform formal output keeps one final HTML and one target screenshot; initial blocked HTML was moved under .stitch/superseded/platform/.",
+    "Platform product screenshots and product videos remain missing per asset-manifest.yaml; final screen uses abstract screenshot slots and product-name video entries only, without fake UI, fake images, or fake thumbnails."
+  ]
+}

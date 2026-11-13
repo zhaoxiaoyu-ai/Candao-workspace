@@ -1,0 +1,22 @@
+{
+  "version": "2026-08-16",
+  "project": "餐道国际官网重构",
+  "locale": "zh-Hant",
+  "status": "prompt_pack_ready",
+  "design_tokens": "../design-tokens.json",
+  "module_manifest": "../module-manifest.yaml",
+  "asset_manifest": "../asset-manifest.yaml",
+  "motion_manifest": "../motion-manifest.yaml",
+  "recommended_generation_order": [
+    "GLOBAL-CONTEXT",
+    "HOME",
+    "PLATFORM",
+    "DEMO mobile",
+    "SOLUTIONS",
+    "INTEGRATIONS",
+    "CUSTOMERS",
+    "RESOURCES",
+    "ABOUT"
+  ],
+  "external_write_policy": "Do not upload or generate in external Stitch without user confirmation."
+}

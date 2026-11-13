@@ -1,0 +1,45 @@
+{
+  "task": "T57",
+  "checked_at": "2026-09-01T16:22:00+08:00",
+  "requirement": "用户要求英文版本使用 Google Translate 作为底稿，但不要直译，需要调整句式和表达。",
+  "result": "blocked_for_google_translate_fetch",
+  "checks": [
+    {
+      "target": "https://translate.googleapis.com/translate_a/single",
+      "method": "curl",
+      "result": "timeout",
+      "detail": "Failed to connect to translate.googleapis.com port 443 after 12006 ms"
+    },
+    {
+      "target": "https://translate.google.com/m",
+      "method": "curl",
+      "result": "timeout",
+      "detail": "Failed to connect to translate.google.com port 443 after 12003 ms"
+    },
+    {
+      "target": "https://www.google.com",
+      "method": "curl",
+      "result": "timeout",
+      "detail": "Failed to connect to www.google.com port 443 after 8005 ms"
+    },
+    {
+      "target": "https://clients5.google.com",
+      "method": "curl",
+      "result": "timeout",
+      "detail": "Failed to connect to clients5.google.com port 443 after 8005 ms"
+    },
+    {
+      "target": "https://translation.googleapis.com",
+      "method": "curl",
+      "result": "timeout",
+      "detail": "Failed to connect to translation.googleapis.com port 443 after 8009 ms"
+    },
+    {
+      "target": "https://www.gstatic.com",
+      "method": "curl",
+      "result": "reachable",
+      "detail": "HTTP/2 404 from server, proving the network stack itself was able to reach at least one Google-owned static domain."
+    }
+  ],
+  "follow_up_handling": "本轮继续完成英文首页版本，但英文文案标注为人工英文官网适配；不声称已成功取得 Google Translate 原始底稿。"
+}

@@ -1,0 +1,272 @@
+{
+  "spec_version": "0.1.0",
+  "agent_id": "competitive-analysis-agent",
+  "carrier": "subagent",
+  "tool_contract": [
+    {
+      "name": "fetch_webpage",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "dom_text": {
+            "type": "string"
+          },
+          "screenshot_desktop": {
+            "type": "string"
+          },
+          "screenshot_tablet": {
+            "type": "string"
+          },
+          "screenshot_mobile": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "dom_text",
+          "screenshot_desktop",
+          "screenshot_tablet",
+          "screenshot_mobile"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "extract_style_attributes",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "dom_text": {
+            "type": "string"
+          },
+          "screenshots": {
+            "type": "object",
+            "properties": {
+              "desktop": {
+                "type": "string"
+              },
+              "tablet": {
+                "type": "string"
+              },
+              "mobile": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "desktop",
+              "tablet",
+              "mobile"
+            ]
+          }
+        },
+        "required": [
+          "dom_text",
+          "screenshots"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "style_dna": {
+            "type": "object"
+          },
+          "do_avoid": {
+            "type": "object"
+          },
+          "design_tokens": {
+            "type": "object"
+          },
+          "section_spec": {
+            "type": "object"
+          },
+          "brief": {
+            "type": "object"
+          },
+          "qa_checklist": {
+            "type": "array"
+          },
+          "style_fit_report": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "style_dna",
+          "do_avoid",
+          "design_tokens",
+          "section_spec",
+          "brief",
+          "qa_checklist",
+          "style_fit_report"
+        ]
+      },
+      "side_effect": "write"
+    },
+    {
+      "name": "generate_report",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "style_attributes": {
+            "type": "object"
+          },
+          "conflict_matrix": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "style_attributes"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "markdown_report": {
+            "type": "string"
+          },
+          "json_handoff": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "markdown_report",
+          "json_handoff"
+        ]
+      },
+      "side_effect": "write"
+    }
+  ],
+  "permission_matrix": {
+    "allow": [
+      "fetch_webpage",
+      "extract_style_attributes",
+      "generate_report"
+    ],
+    "deny": [
+      "auto_search_urls",
+      "copy_assets"
+    ],
+    "hitl_required": [
+      "extract_style_attributes",
+      "generate_report"
+    ]
+  },
+  "failure_semantics": [
+    {
+      "failure": "fetch_webpage fails (network error, timeout, invalid URL)",
+      "detect": "HTTP error or timeout",
+      "fallback": "halt and report error to user"
+    },
+    {
+      "failure": "extract_style_attributes fails (missing data, analysis error)",
+      "detect": "analysis returns incomplete or error",
+      "fallback": "halt and escalate to human"
+    },
+    {
+      "failure": "generate_report fails (output generation error)",
+      "detect": "report generation error",
+      "fallback": "halt and escalate to human"
+    },
+    {
+      "failure": "conflict matrix requires human decision",
+      "detect": "multiple competitors with conflicting styles",
+      "fallback": "halt and ask human to choose primary reference or weights"
+    },
+    {
+      "failure": "compliance check fails (potential copyright infringement)",
+      "detect": "detected copying of unique brand assets",
+      "fallback": "halt and escalate to human"
+    }
+  ],
+  "context_budget": {
+    "token_cap": 8000,
+    "on_overflow": "summarize"
+  },
+  "state_ownership": {
+    "not_applicable": true,
+    "rationale": "Agent is stateless; each invocation processes new URLs independently."
+  },
+  "deployment_boundary": {
+    "not_applicable": true,
+    "rationale": "Deployment boundary is not defined as agent runs in a controlled environment."
+  },
+  "eval_cases": [
+    {
+      "id": "case_001",
+      "input": {
+        "urls": [
+          "https://example.com"
+        ]
+      },
+      "expect": "Output contains markdown report and JSON handoff with style_dna, do/avoid rules, design tokens, section_spec, brief, QA checklist, style_fit_report.",
+      "verify_cmd": "echo '{\"urls\":[\"https://example.com\"]}' | python3 -c \"import sys,json; d=json.load(sys.stdin); print('style_dna' in d and 'do_avoid' in d)\"",
+      "kind": "happy"
+    },
+    {
+      "id": "case_002",
+      "input": {
+        "urls": [
+          "https://example.com"
+        ]
+      },
+      "expect": "Screenshots for desktop, tablet, mobile are captured and referenced in report.",
+      "verify_cmd": "ls screenshots/ | grep -E 'desktop|tablet|mobile' | wc -l",
+      "kind": "happy"
+    },
+    {
+      "id": "case_003",
+      "input": {
+        "urls": [
+          "https://example.com"
+        ]
+      },
+      "expect": "Compliance score is 1.0 (no copying of logo, text, images, video, source code, or unique brand assets).",
+      "verify_cmd": "grep -c 'compliance.*1.0' report.md",
+      "kind": "happy"
+    },
+    {
+      "id": "case_004",
+      "input": {
+        "urls": [
+          "https://example.com"
+        ]
+      },
+      "expect": "Style-fit overall score >= 0.82 and each core dimension >= 0.78.",
+      "verify_cmd": "python3 -c \"import json; d=json.load(open('handoff.json')); s=d['style_fit_report']; assert s['overall']>=0.82 and all(v>=0.78 for v in [s['visual'],s['structure'],s['copy']])\"",
+      "kind": "happy"
+    },
+    {
+      "id": "case_005",
+      "input": {
+        "urls": [
+          "https://example.com",
+          "https://example.org"
+        ]
+      },
+      "expect": "When multiple competitors have conflicting styles, output conflict matrix and ask for primary reference or weights.",
+      "verify_cmd": "grep -q 'conflict_matrix' report.md && grep -q 'primary_reference' report.md",
+      "kind": "edge"
+    },
+    {
+      "id": "case_006",
+      "input": {
+        "urls": [
+          "https://example.com"
+        ]
+      },
+      "expect": "Agent does not automatically search for URLs; only uses provided URLs.",
+      "verify_cmd": "grep -c 'auto.search' report.md",
+      "kind": "adversarial"
+    }
+  ]
+}

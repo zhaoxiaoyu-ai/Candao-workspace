@@ -1,0 +1,61 @@
+{
+  "suite": "t26-design-ready-interaction-copy-2026-08-16",
+  "items": [
+    {
+      "id": "home-delivery-state",
+      "component_type": "capability_switch",
+      "role": "配送主管",
+      "page_task": "说明首页能力切换后的配送履约状态",
+      "text": "配送履約狀態。DMS / iDMS 呈現自有騎手、第三方配送、派單和配送異常。配送履約：DMS / iDMS 管理自有騎手、第三方配送、派單、轉派和配送異常。下一步查看配送履約演示或提交相似場景。",
+      "must_include": ["DMS", "iDMS", "第三方配送", "配送異常", "下一步"]
+    },
+    {
+      "id": "solutions-finance-state",
+      "component_type": "scenario_switch",
+      "role": "财务",
+      "page_task": "说明对账场景从问题到产品能力",
+      "text": "平台訂單與 OMS 訂單對賬差異進入可處理流程。財務和營運可比對平台訂單、OMS 訂單和對賬單，追蹤金額差異、狀態差異和漏單。承接能力：CDBI、Data Asset、Finance Center。下一步查看數據與對賬能力。",
+      "must_include": ["平台訂單", "OMS 訂單", "CDBI", "Finance Center", "下一步"]
+    },
+    {
+      "id": "integrations-pos-state",
+      "component_type": "integration_switch",
+      "role": "IT",
+      "page_task": "说明 POS / KDS 接入对象和下一步",
+      "text": "POS / KDS 與門店執行狀態對齊。接入前需要確認門店、訂單、打印、後廚單、出餐狀態和異常回傳方式。資料對象：Store、Order、Print、Kitchen status。下一步提交 POS / KDS 接入資料。",
+      "must_include": ["POS / KDS", "門店", "訂單", "異常", "下一步"]
+    },
+    {
+      "id": "customers-jardine-state",
+      "component_type": "case_carousel",
+      "role": "决策者",
+      "page_task": "说明实名客户案例切换后的业务证明",
+      "text": "Jardine Group。PPT 案例包含 KFC、Pizza Hut、PHD 等配送和門店履約線索，可用於展示 DMS 覆蓋場景。案例重點：Jardine Group DMS 覆蓋 200+ outlets。下一步查看配送履約和 DMS / iDMS 場景。",
+      "must_include": ["Jardine Group", "DMS", "200+", "iDMS", "下一步"]
+    },
+    {
+      "id": "resources-technical-state",
+      "component_type": "support_stage_switch",
+      "role": "IT",
+      "page_task": "说明技术查询阶段的接入边界",
+      "text": "技術查詢與接入評估。IT 團隊需要先確認 API、字段、權限、資料流和異常回傳方式。未確認系統類型和字段口徑前，不承諾所有系統均可接入。下一步提交技術查詢。",
+      "must_include": ["API", "字段", "權限", "異常", "下一步"]
+    },
+    {
+      "id": "about-products-state",
+      "component_type": "timeline_switch",
+      "role": "决策者",
+      "page_task": "说明产品演进切换后的服务体系",
+      "text": "OMS、CDBI、DMS 和 AMS / Connector 承接不同營運環節。OMS：多渠道訂單、門店接單、訂單處理和異常提醒。CDBI / Finance Center：報表、看板和平台訂單對賬差異。DMS / iDMS / AMS / Connector：配送履約、第三方配送和系統接入。下一步聯絡餐道。",
+      "must_include": ["OMS", "CDBI", "DMS", "AMS / Connector", "下一步"]
+    },
+    {
+      "id": "mobile-nav-state",
+      "component_type": "mobile_navigation",
+      "role": "采购方",
+      "page_task": "验证移动端导航不删关键页面入口",
+      "text": "移動端導航保留首頁、解決方案、平台、整合能力、客戶案例、資源、關於餐道和預約演示入口。下一步打開主導航後選擇對應頁面。",
+      "must_include": ["首頁", "平台", "整合能力", "客戶案例", "下一步"]
+    }
+  ]
+}

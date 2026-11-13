@@ -1,0 +1,59 @@
+{
+  "suite": "T49 interactive workbench prototype domain-copy QA",
+  "items": [
+    {
+      "id": "t49-hero-interactive-positioning",
+      "locale": "zh-Hant",
+      "role": "采购方",
+      "page_task": "把接入评估中心从文字页面改为交互式查看入口",
+      "component_type": "hero",
+      "text": "接入評估中心｜餐道。以前端工作台方式查看接入、案例與資源。選擇目前卡住的營運問題，頁面會同步切換系統來源、資料流、相似案例、資源入口與產品演示摘要。",
+      "must_include": ["餐道", "接入", "案例", "資源", "產品演示摘要"]
+    },
+    {
+      "id": "t49-system-workbench",
+      "locale": "zh-Hant",
+      "role": "IT",
+      "page_task": "说明系统接入对象、字段映射、同步状态和异常回传",
+      "component_type": "product_workbench",
+      "text": "接口與資料流評估。外賣平台、自建點餐、POS / KDS、CRM / 會員、支付 / ERP、配送 API 等來源進入 AMS / Connector，再回到 OMS、Menu Center、DMS / iDMS、財務對賬與 CDBI。工作台显示待映射、同步中、校驗同步、營運使用、異常回傳和重新對賬。",
+      "must_include": ["AMS / Connector", "OMS", "Menu Center", "DMS / iDMS", "財務對賬", "CDBI", "異常回傳"]
+    },
+    {
+      "id": "t49-scenario-states",
+      "locale": "zh-Hant",
+      "role": "总部运营",
+      "page_task": "按问题场景切换系统关系和下一步操作",
+      "component_type": "state_panel",
+      "text": "可切換問題包括漏單與接單超時、餐單同步、配送超時、對賬差異和多品牌門店。每个状态都保留目前問題、接入或產品關係、相似案例、資源下一步和建議演示模組。",
+      "must_include": ["漏單", "餐單同步", "配送超時", "對賬差異", "多品牌門店", "建議演示模組"]
+    },
+    {
+      "id": "t49-case-resource-router",
+      "locale": "zh-Hant",
+      "role": "销售",
+      "page_task": "把客户案例和资源入口转为同一问题下的证据切换",
+      "component_type": "tabs",
+      "text": "同一個問題下，切換查看案例、資源、支援和演示。案例索引保留 Pizza-Box、JIA Group、Jardine Group、甜品連鎖、火鍋連鎖、中餐連鎖、咖啡品牌、鮮食零售與配送密集品牌；資源入口包含接入準備清單、營運 FAQ、案例資源、支援中心、媒體與公司資料和產品演示分流。",
+      "must_include": ["Pizza-Box", "JIA Group", "Jardine Group", "接入準備清單", "營運 FAQ", "支援中心"]
+    },
+    {
+      "id": "t49-authorized-metrics",
+      "locale": "zh-Hant",
+      "role": "决策者",
+      "page_task": "展示已授权规模数据支撑采购评估",
+      "component_type": "metrics_band",
+      "text": "授權規模數據保留為獨立數據帶：5000+ 品牌數量、500M+ 每日處理訂單、400+ 覆蓋城市、200K+ 門店數量、4.5B+ 每月配送訂單交易額、30% 客戶效率提升。",
+      "must_include": ["5000+", "500M+", "400+", "200K+", "4.5B+", "30%"]
+    },
+    {
+      "id": "t49-demo-summary",
+      "locale": "zh-Hant",
+      "role": "销售",
+      "page_task": "把交互选择结果带入产品演示转化",
+      "component_type": "cta_summary",
+      "text": "把目前選擇的問題、系統、案例與資源帶到產品演示。演示摘要包含需要處理的問題、已使用系統、建議演示模組和推薦資源，避免銷售或售前從整合能力、客戶案例與資源三個頁面重新整理線索。",
+      "must_include": ["產品演示", "需要處理的問題", "已使用系統", "建議演示模組", "推薦資源"]
+    }
+  ]
+}

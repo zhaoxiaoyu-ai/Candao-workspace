@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Candao - 平台</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#528dff",
+                        success: "#10b981",
+                        warning: "#f59e0b",
+                        danger: "#ef4444",
+                    },
+                    fontFamily: {
+                        headline: ["Public Sans", "sans-serif"],
+                        display: ["Public Sans", "sans-serif"],
+                        body: ["Public Sans", "sans-serif"],
+                        label: ["Public Sans", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5); }
+        .saas-border { border: 1px solid #e5e7eb; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-body antialiased pt-20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-800 shadow-sm">
+<div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#528dff] tracking-tight">Candao</div>
+<div class="hidden md:flex space-x-8 items-center font-body text-sm font-medium">
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors active:opacity-80 transition-all" href="#">解決方案</a>
+<a class="text-[#528dff] border-b-2 border-[#528dff] pb-1 hover:text-[#528dff] transition-colors active:opacity-80 transition-all" href="#">平台</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors active:opacity-80 transition-all" href="#">整合能力</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors active:opacity-80 transition-all" href="#">客戶案例</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors active:opacity-80 transition-all" href="#">關於 Candao</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-neutral-600 text-sm font-medium hover:text-[#528dff] transition-colors">繁中 / EN</button>
+<button class="bg-[#528dff] text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-blue-600 transition-colors shadow-sm">預約產品演示</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 overflow-hidden bg-white">
+<div class="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-white pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                餐飲營運的核心能力，<br/>連接在同一個平台
+            </h1>
+<p class="font-body text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Candao 將訂單、菜單、門店、配送、自有點餐與數據智能連接，讓團隊以一致的流程管理複雜營運。
+            </p>
+<div class="flex justify-center gap-4 mb-16">
+<button class="bg-[#528dff] text-white px-8 py-3.5 rounded-md text-base font-medium hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/20 active:scale-95">探索平台能力</button>
+<button class="bg-white text-slate-700 border border-slate-200 px-8 py-3.5 rounded-md text-base font-medium hover:bg-slate-50 transition-all active:scale-95">預約產品演示</button>
+</div>
+<!-- Hero Visual: SaaS Dashboard Abstract -->
+<div class="relative w-full max-w-5xl mx-auto rounded-xl shadow-2xl saas-border bg-white overflow-hidden aspect-[16/9]" data-alt="高度專業且簡潔的 B2B SaaS 平台介面設計">
+<img alt="Candao 平台介面" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<!-- UI Overlay Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Capability Map Bento Grid -->
+<section class="py-24 bg-slate-50">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline text-3xl font-bold text-slate-900 mb-4">全面覆蓋營運場景</h2>
+<p class="text-slate-600 max-w-2xl mx-auto">從前台點餐到後台履約，一個平台掌握所有關鍵節點。</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Main Focus -->
+<div class="lg:col-span-2 bg-white rounded-xl p-8 saas-border shadow-soft flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/2">
+<div class="flex items-center gap-3 mb-4 text-[#528dff]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">list_alt</span>
+<span class="font-semibold text-sm tracking-wide">訂單管理</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 mb-3">統一的訂單心智模型</h3>
+<p class="text-slate-600 mb-6 text-sm leading-relaxed">
+                            面臨挑戰：多渠道訂單碎片化，門店手動處理耗時且易錯。<br/><br/>
+                            最終結果：所有訂單自動標準化、歸類並實時推播至相應工作站，實現零延遲處理。
+                        </p>
+<button class="text-[#528dff] font-medium text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                            了解更多 <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-1/2 bg-slate-50 rounded-lg p-4 border border-slate-100">
+<!-- Simulated UI Panel -->
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-white rounded shadow-sm border-l-4 border-success">
+<span class="text-xs font-medium text-slate-700">新訂單進入平台</span>
+<span class="material-symbols-outlined text-success text-sm">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-white rounded shadow-sm border-l-4 border-[#528dff]">
+<span class="text-xs font-medium text-slate-700">已自動歸類</span>
+<span class="material-symbols-outlined text-[#528dff] text-sm">sync</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-white rounded shadow-sm border-l-4 border-slate-300">
+<span class="text-xs font-medium text-slate-500">門店工作流更新中...</span>
+<span class="material-symbols-outlined text-slate-400 text-sm">hourglass_empty</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Card 1 -->
+<div class="bg-white rounded-xl p-6 saas-border shadow-soft flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4 text-[#528dff]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="font-semibold text-sm tracking-wide">配送管理</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">智慧運力調度</h3>
+<p class="text-slate-600 text-sm mb-4">面臨挑戰：高峰期運力短缺，履約時間難以預測。<br/>結果：自動媒合最佳配送資源。</p>
+</div>
+<div class="h-24 bg-slate-50 rounded border border-slate-100 p-3 relative overflow-hidden" data-alt="配送路線與司機位置的抽象視覺地圖" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyHB34nFaPJRkSC3B0AUhU41drCQD7_cOHjOnd_YuUhiUkumuiiM8jdGy4ugNj3PekjxcoB2FavoPwJEdBtc91Y6IX7nERPEPg5e1mkYw14Kz7hdxZWCWmlnXasDTYDCN0JxBqZzj-v97YB0tMNjLzvOT2hh8kBRkFZgnIAN1gVWgru-5H7_ok4m0RsGJ_jLP4iLPo7qdIa9FATudu6mNNTPSQ-Hm63TB48IYuO7ImAHkBg-r0aFyfSXQb7wfJvRBbdSvVgk_a6L7d')">
+<!-- Simulated Map UI -->
+</div>
+</div>
+<!-- Secondary Card 2 -->
+<div class="bg-white rounded-xl p-6 saas-border shadow-soft flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4 text-[#528dff]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-semibold text-sm tracking-wide">菜單與門店管理</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">一鍵全網同步</h3>
+<p class="text-slate-600 text-sm mb-4">挑戰：多平台菜單更新繁瑣。<br/>結果：總部統一管理，即時分發至所有終端。</p>
+</div>
+<div class="h-24 bg-slate-50 rounded border border-slate-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-300 text-4xl">storefront</span>
+</div>
+</div>
+<!-- Secondary Card 3 -->
+<div class="bg-white rounded-xl p-6 saas-border shadow-soft flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4 text-[#528dff]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">devices</span>
+<span class="font-semibold text-sm tracking-wide">自有點餐</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">打造私域流量池</h3>
+<p class="text-slate-600 text-sm mb-4">挑戰：依賴第三方平台，利潤受壓。<br/>結果：無縫接入的小程序與網頁點餐。</p>
+</div>
+<div class="h-24 bg-slate-50 rounded border border-slate-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-300 text-4xl">touch_app</span>
+</div>
+</div>
+<!-- Secondary Card 4 -->
+<div class="bg-white rounded-xl p-6 saas-border shadow-soft flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4 text-[#528dff]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">insights</span>
+<span class="font-semibold text-sm tracking-wide">數據智能</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-2">即時營運決策</h3>
+<p class="text-slate-600 text-sm mb-4">挑戰：數據孤島，無法形成全盤視角。<br/>結果：統一的 BI 看板，賦能精準營銷。</p>
+</div>
+<div class="h-24 bg-slate-50 rounded border border-slate-100 p-2 flex items-end gap-1">
+<div class="w-1/4 bg-[#528dff] opacity-40 h-1/3 rounded-t"></div>
+<div class="w-1/4 bg-[#528dff] opacity-60 h-2/3 rounded-t"></div>
+<div class="w-1/4 bg-[#528dff] opacity-80 h-1/2 rounded-t"></div>
+<div class="w-1/4 bg-[#528dff] h-full rounded-t"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Workflow Strip -->
+<section class="py-20 bg-white border-y border-slate-100">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="font-headline text-2xl font-bold text-center text-slate-900 mb-12">自動化的營運工作流</h2>
+<div class="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 relative">
+<!-- Line connector -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-slate-100 -z-10 -translate-y-1/2"></div>
+<div class="flex flex-col items-center bg-white p-2">
+<div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#528dff] mb-3 saas-border shadow-sm z-10">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<span class="text-sm font-medium text-slate-700">訂單進入</span>
+</div>
+<div class="hidden md:block w-8 h-[2px] bg-[#528dff]/30"></div>
+<div class="flex flex-col items-center bg-white p-2">
+<div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#528dff] mb-3 saas-border shadow-sm z-10">
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+<span class="text-sm font-medium text-slate-700">菜單與門店同步</span>
+</div>
+<div class="hidden md:block w-8 h-[2px] bg-[#528dff]/30"></div>
+<div class="flex flex-col items-center bg-white p-2">
+<div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#528dff] mb-3 saas-border shadow-sm z-10">
+<span class="material-symbols-outlined">moped</span>
+</div>
+<span class="text-sm font-medium text-slate-700">配送協同</span>
+</div>
+<div class="hidden md:block w-8 h-[2px] bg-[#528dff]/30"></div>
+<div class="flex flex-col items-center bg-white p-2">
+<div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#528dff] mb-3 saas-border shadow-sm z-10">
+<span class="material-symbols-outlined">dashboard</span>
+</div>
+<span class="text-sm font-medium text-slate-700">總部看板</span>
+</div>
+<div class="hidden md:block w-8 h-[2px] bg-[#528dff]/30"></div>
+<div class="flex flex-col items-center bg-white p-2">
+<div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#528dff] mb-3 saas-border shadow-sm z-10">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<span class="text-sm font-medium text-slate-700">數據回饋</span>
+</div>
+</div>
+</div>
+</section>
+<!-- UI Demo Section (Wide) -->
+<section class="py-24 bg-slate-900 text-white overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="w-full lg:w-1/3 space-y-6">
+<h2 class="font-headline text-3xl font-bold">總部視角，<br/>全局掌控</h2>
+<p class="text-slate-400 text-sm leading-relaxed">
+                        透過統一的平台介面，即時監控全國門店的營運健康度。從訂單積壓警告到運力異常，一切清晰可見。
+                    </p>
+<div class="space-y-4 pt-4">
+<div class="flex items-center gap-3 p-3 rounded bg-white/10 border border-white/5 cursor-pointer hover:bg-white/15 transition">
+<span class="material-symbols-outlined text-[#528dff]">monitor_heart</span>
+<span class="text-sm font-medium">即時營運監控</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded cursor-pointer hover:bg-white/5 transition text-slate-400">
+<span class="material-symbols-outlined">warning</span>
+<span class="text-sm font-medium">智能異常提醒</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-2/3">
+<div class="rounded-xl bg-slate-800 border border-slate-700 p-2 shadow-2xl relative" data-alt="深色模式 SaaS 看板介面" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARHBualcEyVMYoosoXytRGDgH9AnQ3aVhXew53CYmHGsbMRCoRKQ0tCB7E4h6o1HrVhSxHC62O8-R1bAkfC2O7hiLqGADrF2xckG789y8wcIUFpCWbMmG-1fcowLS3pZqlEEMJc23F6tf-vEfLpBCRCOi1KQP1tT6ya7hwCM8gb2p1D6ELACE9hh0CAKqQZBAoH2NtaGz7aee6QUFCYN5PTaar6JLBFgpyvvLvjJmd6E6Z2RACYlXs3nNm95-2TphircXLL_euSLJh')">
+<img alt="總部看版展示" class="w-full h-auto rounded-lg opacity-90 object-cover aspect-video mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC4JN5CgFe0AdDqKhcMz0clmgg41e9kJy-4ov2pz4__QEHPESb1vhGp9IYSqLfbGFIHALPZ4u4r4bcNPnTyoRyoraISVrFzmZHJWyO9gxZ9NbfFBaSsN1Qe7fhg2YWWDY1695W1-pleFy3q79QbQkSl4uHE-ExCjGsJQ0eg3pRhfLTWoZdO81sxCqtOoRYqeKRMrpb9_UjabFi2Jrxwr3wq-p1ihhPKN6vnvdla830YuBr6UHFzTCNZJk_etTs8l0tjKVeDUUa2ife"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Integrations Preview -->
+<section class="py-24 bg-slate-50">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<h2 class="font-headline text-3xl font-bold text-slate-900 mb-6">無縫整合現有生態</h2>
+<p class="text-slate-600 max-w-2xl mx-auto mb-16">Candao 作為中樞，輕鬆對接您正在使用的各種系統，打破數據孤島。</p>
+<div class="flex flex-wrap justify-center gap-4 md:gap-8">
+<div class="w-24 h-24 rounded-2xl bg-white shadow-soft saas-border flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-2xl">point_of_sale</span>
+<span class="text-xs font-medium text-slate-500">POS 系統</span>
+</div>
+<div class="w-24 h-24 rounded-2xl bg-white shadow-soft saas-border flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-2xl">takeout_dining</span>
+<span class="text-xs font-medium text-slate-500">外送平台</span>
+</div>
+<div class="w-24 h-24 rounded-2xl bg-white shadow-soft saas-border flex flex-col items-center justify-center gap-2 border-[#528dff] ring-2 ring-[#528dff]/20">
+<div class="text-[#528dff] font-black text-xl">C</div>
+<span class="text-xs font-medium text-[#528dff]">Candao 核心</span>
+</div>
+<div class="w-24 h-24 rounded-2xl bg-white shadow-soft saas-border flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-2xl">payments</span>
+<span class="text-xs font-medium text-slate-500">支付閘道</span>
+</div>
+<div class="w-24 h-24 rounded-2xl bg-white shadow-soft saas-border flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-2xl">groups</span>
+<span class="text-xs font-medium text-slate-500">會員 CRM</span>
+</div>
+</div>
+<div class="mt-12">
+<a class="text-[#528dff] font-medium text-sm hover:underline" href="#">查看完整整合能力清單 →</a>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 bg-white">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<h2 class="font-headline text-4xl font-bold text-slate-900 mb-6">看見 Candao 如何連接你的營運流程</h2>
+<p class="text-slate-600 mb-10 text-lg">預約由專家帶領的專屬產品演示，了解平台如何為您的業務創造價值。</p>
+<button class="bg-[#528dff] text-white px-10 py-4 rounded-md text-lg font-medium hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/20 active:scale-95">預約產品演示</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-16 bg-neutral-50 dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-800 flat no shadows">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 px-8 max-w-7xl mx-auto">
+<div class="col-span-2 lg:col-span-2">
+<div class="text-xl font-black text-neutral-900 dark:text-white tracking-tight mb-4">Candao</div>
+<p class="font-body text-sm text-neutral-500 dark:text-neutral-400">© Candao International</p>
+</div>
+<div class="flex flex-col space-y-3 font-body text-sm">
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors cursor-pointer" href="#">解決方案</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors cursor-pointer" href="#">平台</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors cursor-pointer" href="#">整合能力</a>
+</div>
+<div class="flex flex-col space-y-3 font-body text-sm">
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors cursor-pointer" href="#">客戶案例</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors cursor-pointer" href="#">關於 Candao</a>
+</div>
+<div class="flex flex-col space-y-3 font-body text-sm">
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors cursor-pointer" href="#">隱私政策</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors cursor-pointer" href="#">服務條款</a>
+</div>
+</div>
+</footer>
+</body></html>

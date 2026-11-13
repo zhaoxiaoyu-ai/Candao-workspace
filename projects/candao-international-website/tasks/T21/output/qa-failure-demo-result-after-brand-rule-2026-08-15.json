@@ -1,0 +1,98 @@
+{
+  "suite": "domain-copy-failure-demo-2026-08-15",
+  "total": 3,
+  "passed": 0,
+  "failed": 3,
+  "status": "fail",
+  "results": [
+    {
+      "id": "generic-copy",
+      "component_type": "page_description",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "generic_expression",
+          "message": "命中 AI 泛化表达：帮助企业数字化转型"
+        },
+        {
+          "code": "generic_expression",
+          "message": "命中 AI 泛化表达：打造智慧生态"
+        },
+        {
+          "code": "generic_expression",
+          "message": "命中 AI 泛化表达：提升用户体验"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：订单"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：门店"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：配送"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "undefined-metric",
+      "component_type": "metric_card",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "forbidden_expression",
+          "message": "命中禁止或未确认表达：24/7 SLA"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：99.99%"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：来源"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "locked-copy-rewritten",
+      "component_type": "prototype_copy",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：平台订单"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：餐道 OMS 订单"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：金额错误"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：状态错误"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：漏单"
+        },
+        {
+          "code": "locked_copy_changed",
+          "message": "approved_and_locked 文案被改写。"
+        }
+      ],
+      "warnings": [
+        {
+          "code": "possible_prototype_reduction",
+          "message": "当前文本比来源文本短超过 25%，需要确认是否删减业务对象、状态或条件。"
+        }
+      ]
+    }
+  ]
+}

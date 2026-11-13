@@ -1,0 +1,109 @@
+{
+  "task_id": "T35",
+  "title": "Figma homepage MCP token update ledger",
+  "date": "2026-08-20",
+  "figma_file": {
+    "file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+    "source_node_id": "336:7645",
+    "source_url": "https://www.figma.com/design/BMXIuVRzSUUt9YNhVAQA6K/Candao-International-Website-Visual-Prototype-T11.5?node-id=336-7645&m=dev"
+  },
+  "basis": [
+    "tasks/T35/output/figma-homepage-mcp-style-guide-2026-08-20.md",
+    "tasks/T35/output/stitch-input/homepage-mcp-stitch-guardrails-2026-08-20.md",
+    "tasks/T17/output/design-handoff/design-tokens.json",
+    "tasks/T17/output/design-handoff/.stitch/DESIGN.md"
+  ],
+  "local_files_updated": [
+    {
+      "path": "tasks/T17/output/design-handoff/design-tokens.json",
+      "status": "updated",
+      "version": "2026-08-20"
+    },
+    {
+      "path": "tasks/T17/output/design-handoff/.stitch/DESIGN.md",
+      "status": "updated",
+      "version": "2026-08-20"
+    }
+  ],
+  "figma_variable_collections": [
+    {
+      "name": "Candao / Color",
+      "id": "VariableCollectionId:3:10",
+      "mode_names": ["Value"],
+      "variable_count_after_update": 31
+    },
+    {
+      "name": "Candao / Spacing & Radius",
+      "id": "VariableCollectionId:3:22",
+      "mode_names": ["Value"],
+      "variable_count_after_update": 20
+    }
+  ],
+  "updated_variables": [
+    {
+      "name": "color/brand/blue",
+      "id": "VariableID:42:2",
+      "value": "rgba(82, 141, 255, 1)",
+      "web_syntax": "var(--color-brand-blue)"
+    }
+  ],
+  "created_or_verified_variables": [
+    {"name": "color/brand/blue-hover", "id": "VariableID:354:2", "value": "rgba(59, 130, 246, 1)", "web_syntax": "var(--color-brand-blue-hover)"},
+    {"name": "color/brand/blue-glow-border", "id": "VariableID:354:3", "value": "rgba(121, 179, 255, 1)", "web_syntax": "var(--color-brand-blue-glow-border)"},
+    {"name": "color/bg/hero-navy", "id": "VariableID:354:4", "value": "rgba(15, 23, 42, 1)", "web_syntax": "var(--color-bg-hero-navy)"},
+    {"name": "color/bg/deep-navy", "id": "VariableID:354:5", "value": "rgba(0, 13, 43, 1)", "web_syntax": "var(--color-bg-deep-navy)"},
+    {"name": "color/bg/product-panel", "id": "VariableID:354:6", "value": "rgba(20, 30, 48, 1)", "web_syntax": "var(--color-bg-product-panel)"},
+    {"name": "color/bg/product-sidebar", "id": "VariableID:354:7", "value": "rgba(15, 24, 41, 1)", "web_syntax": "var(--color-bg-product-sidebar)"},
+    {"name": "color/bg/product-sidebar-active", "id": "VariableID:354:8", "value": "rgba(30, 58, 95, 1)", "web_syntax": "var(--color-bg-product-sidebar-active)"},
+    {"name": "color/bg/chip", "id": "VariableID:354:9", "value": "rgba(241, 245, 249, 1)", "web_syntax": "var(--color-bg-chip)"},
+    {"name": "color/bg/footer", "id": "VariableID:354:10", "value": "rgba(20, 20, 20, 1)", "web_syntax": "var(--color-bg-footer)"},
+    {"name": "color/text/muted-on-dark", "id": "VariableID:354:11", "value": "rgba(131, 142, 156, 1)", "web_syntax": "var(--color-text-muted-on-dark)"},
+    {"name": "color/footer/link", "id": "VariableID:354:12", "value": "rgba(199, 213, 230, 1)", "web_syntax": "var(--color-footer-link)"},
+    {"name": "color/line/light", "id": "VariableID:354:13", "value": "rgba(226, 232, 240, 1)", "web_syntax": "var(--color-line-light)"},
+    {"name": "color/line/on-dark", "id": "VariableID:354:14", "value": "rgba(255, 255, 255, 0.07)", "web_syntax": "var(--color-line-on-dark)"},
+    {"name": "color/accent/blue-300", "id": "VariableID:354:15", "value": "rgba(147, 197, 253, 1)", "web_syntax": "var(--color-accent-blue-300)"},
+    {"name": "color/accent/blue-400", "id": "VariableID:354:16", "value": "rgba(96, 165, 250, 1)", "web_syntax": "var(--color-accent-blue-400)"},
+    {"name": "color/accent/blue-500", "id": "VariableID:354:17", "value": "rgba(59, 130, 246, 1)", "web_syntax": "var(--color-accent-blue-500)"},
+    {"name": "spacing/4xl", "id": "VariableID:354:18", "value": 64, "web_syntax": "var(--spacing-4xl)"},
+    {"name": "spacing/5xl", "id": "VariableID:354:19", "value": 80, "web_syntax": "var(--spacing-5xl)"},
+    {"name": "spacing/6xl", "id": "VariableID:354:20", "value": 104, "web_syntax": "var(--spacing-6xl)"},
+    {"name": "spacing/7xl", "id": "VariableID:354:21", "value": 128, "web_syntax": "var(--spacing-7xl)"},
+    {"name": "spacing/8xl", "id": "VariableID:354:22", "value": 160, "web_syntax": "var(--spacing-8xl)"},
+    {"name": "spacing/hero-top", "id": "VariableID:354:23", "value": 240, "web_syntax": "var(--spacing-hero-top)"},
+    {"name": "radius/tag", "id": "VariableID:354:24", "value": 4, "web_syntax": "var(--radius-tag)"},
+    {"name": "radius/case-card", "id": "VariableID:354:25", "value": 14, "web_syntax": "var(--radius-case-card)"},
+    {"name": "radius/full", "id": "VariableID:354:26", "value": 9999, "web_syntax": "var(--radius-full)"}
+  ],
+  "created_or_verified_text_styles": [
+    {"name": "Candao / Hero / TC MCP", "id": "S:b6f6e3979bf376ba211055ad6909792f60b404d4,"},
+    {"name": "Candao / Section H2 / TC MCP", "id": "S:651cea96494af2e42a9b539e4245ba2770609950,"},
+    {"name": "Candao / Subsection / TC MCP", "id": "S:5d7ee08da43ee51fca728e4683ba4630651ac8ea,"},
+    {"name": "Candao / Body Large / TC MCP", "id": "S:4502cf5c6f8c930c2a4f8cbf79860dead897267f,"},
+    {"name": "Candao / Body Tight / TC MCP", "id": "S:ab692a9060528d34ff591b828dfc5aee32f29f38,"},
+    {"name": "Candao / Body Medium / TC MCP", "id": "S:424093e6a8c0a7827d6cdc654c7de4ff6274f256,"},
+    {"name": "Candao / UI Small / TC MCP", "id": "S:472f44347d3d1ae5cf5a6b17f73826256bb81410,"},
+    {"name": "Candao / Stat Number / EN MCP", "id": "S:e8967e943fb0a0d57204854ae62bcebfdb130cfe,"}
+  ],
+  "created_or_verified_effect_styles": [
+    {"name": "Candao / Shadow / Button MCP", "id": "S:79d9b2a31f659f8cbc79072ad785a583f3446744,"},
+    {"name": "Candao / Shadow / CTA Button MCP", "id": "S:c0a93a105156a8146997a8af902fcc49604ff3ae,"},
+    {"name": "Candao / Shadow / Blue Panel MCP", "id": "S:873709635098e3efb8e01b6294ed377a5bca570e,"}
+  ],
+  "validation": {
+    "tool": "mcp__figma.use_figma",
+    "skill_names": "figma-use",
+    "checked_at": "2026-08-20",
+    "expected_variables_present": true,
+    "expected_text_styles_present": true,
+    "expected_effect_styles_present": true,
+    "no_all_scopes_on_expected_variables": true,
+    "expected_variables_have_web_syntax": true,
+    "collection_modes_renamed_from_mode_1": true,
+    "letter_spacing_for_new_text_styles": "0px",
+    "notes": [
+      "This was a read-only validation after the earlier variable/style update.",
+      "Homepage MCP tokens are available as the design-system baseline for the next Stitch high-fidelity pages.",
+      "The ledger does not approve business facts, final visual acceptance, or locked copy."
+    ]
+  }
+}

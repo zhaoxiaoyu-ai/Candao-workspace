@@ -1,0 +1,1495 @@
+{
+  "suite": "T57 Home English Figma Copy QA",
+  "items": [
+    {
+      "id": "T57-001",
+      "component_type": "headline_adaptation",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Bring Order to",
+      "source_text": "讓餐飲營運，從多平台混亂"
+    },
+    {
+      "id": "T57-002",
+      "component_type": "headline_adaptation_layout_safe",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Unified Operations",
+      "source_text": "走向一個清晰系統"
+    },
+    {
+      "id": "T57-003",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Candao connects orders, menus, stores, delivery, and data so F&B brands can run clearly across markets and locations.",
+      "source_text": "餐道連接訂單、菜單、門店、配送與數據，協助餐飲品牌在多市場、\n多門店中穩定營運與持續成長。"
+    },
+    {
+      "id": "T57-004",
+      "component_type": "cta",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Book a Demo",
+      "source_text": "預約產品演示"
+    },
+    {
+      "id": "T57-005",
+      "component_type": "cta",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Explore Platform",
+      "source_text": "探索平台能力"
+    },
+    {
+      "id": "T57-006",
+      "component_type": "layout_safe_adaptation",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "One Platform,\nCore Workflows",
+      "source_text": "一個平台，\n連接餐飲營運的關鍵流程"
+    },
+    {
+      "id": "T57-007",
+      "component_type": "layout_safe_adaptation",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Candao turns channel, system, and store signals into manageable workflows.",
+      "source_text": "餐道將分散在不同渠道、系統與門店中的營運訊號，\n整合成可管理的工作流"
+    },
+    {
+      "id": "T57-008",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "01",
+      "source_text": "01"
+    },
+    {
+      "id": "T57-009",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Channel Integration",
+      "source_text": "渠道整合"
+    },
+    {
+      "id": "T57-010",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Orders are scattered across platforms.",
+      "source_text": "多平台訂單分散，難以統一管理。"
+    },
+    {
+      "id": "T57-011",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Candao brings marketplace, owned-channel, and store orders into one queue to reduce missed and incorrect orders.",
+      "source_text": "餐道整合主流外賣平台、自有渠道與門店訂單，集中處理與分配，避免漏單、錯單，提升營運效率。"
+    },
+    {
+      "id": "T57-012",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Centralize orders across platforms",
+      "source_text": "整合多平台訂單，集中管理"
+    },
+    {
+      "id": "T57-013",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Auto de-duplicate and merge orders",
+      "source_text": "自動去重與訂單合併"
+    },
+    {
+      "id": "T57-014",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Route orders to the right store",
+      "source_text": "訂單智能分配至對應門店"
+    },
+    {
+      "id": "T57-015",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Sync order status across channels",
+      "source_text": "即時同步訂單狀態至各渠道"
+    },
+    {
+      "id": "T57-016",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Supported Platforms",
+      "source_text": "支援平台"
+    },
+    {
+      "id": "T57-017",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Uber\nEats",
+      "source_text": "Uber\nEats"
+    },
+    {
+      "id": "T57-018",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "🐼",
+      "source_text": "🐼"
+    },
+    {
+      "id": "T57-019",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Grab\nFood",
+      "source_text": "Grab\nFood"
+    },
+    {
+      "id": "T57-020",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "•••",
+      "source_text": "•••"
+    },
+    {
+      "id": "T57-021",
+      "component_type": "compact_ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Orders",
+      "source_text": "訂單管理"
+    },
+    {
+      "id": "T57-022",
+      "component_type": "compact_ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Overview",
+      "source_text": "訂單總覽"
+    },
+    {
+      "id": "T57-023",
+      "component_type": "compact_ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Pending",
+      "source_text": "待處理訂單"
+    },
+    {
+      "id": "T57-024",
+      "component_type": "compact_ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Active",
+      "source_text": "進行中訂單"
+    },
+    {
+      "id": "T57-025",
+      "component_type": "compact_ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "History",
+      "source_text": "歷史訂單"
+    },
+    {
+      "id": "T57-026",
+      "component_type": "compact_ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Settings",
+      "source_text": "訂單設定"
+    },
+    {
+      "id": "T57-027",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Search order ID, customer, or store",
+      "source_text": "搜尋訂單號、顧客或門店"
+    },
+    {
+      "id": "T57-028",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "All",
+      "source_text": "全部"
+    },
+    {
+      "id": "T57-029",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "To Accept",
+      "source_text": "待接單"
+    },
+    {
+      "id": "T57-030",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "32",
+      "source_text": "32"
+    },
+    {
+      "id": "T57-031",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Preparing",
+      "source_text": "製作中"
+    },
+    {
+      "id": "T57-032",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "18",
+      "source_text": "18"
+    },
+    {
+      "id": "T57-033",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Delivering",
+      "source_text": "配送中"
+    },
+    {
+      "id": "T57-034",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "24",
+      "source_text": "24"
+    },
+    {
+      "id": "T57-035",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Completed",
+      "source_text": "已完成"
+    },
+    {
+      "id": "T57-036",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Order Info",
+      "source_text": "訂單資訊"
+    },
+    {
+      "id": "T57-037",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Customer",
+      "source_text": "顧客"
+    },
+    {
+      "id": "T57-038",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Source",
+      "source_text": "來源平台"
+    },
+    {
+      "id": "T57-039",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "#8765",
+      "source_text": "#8765"
+    },
+    {
+      "id": "T57-040",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "2 items・$268",
+      "source_text": "2項商品・$268"
+    },
+    {
+      "id": "T57-041",
+      "component_type": "sample_data_localized",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Alex Wang",
+      "source_text": "王小明"
+    },
+    {
+      "id": "T57-042",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "0912-345-678",
+      "source_text": "0912-345-678"
+    },
+    {
+      "id": "T57-043",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "#8764",
+      "source_text": "#8764"
+    },
+    {
+      "id": "T57-044",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "3 items・$420",
+      "source_text": "3項商品・$420"
+    },
+    {
+      "id": "T57-045",
+      "component_type": "sample_data_localized",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Mia Lee",
+      "source_text": "李美麗"
+    },
+    {
+      "id": "T57-046",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "0921-234-567",
+      "source_text": "0921-234-567"
+    },
+    {
+      "id": "T57-047",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "#8763",
+      "source_text": "#8763"
+    },
+    {
+      "id": "T57-048",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "1 item・$120",
+      "source_text": "1項商品・$120"
+    },
+    {
+      "id": "T57-049",
+      "component_type": "sample_data_localized",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "David Chen",
+      "source_text": "陳大文"
+    },
+    {
+      "id": "T57-050",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "0933-456-789",
+      "source_text": "0933-456-789"
+    },
+    {
+      "id": "T57-051",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Owned App",
+      "source_text": "自有APP"
+    },
+    {
+      "id": "T57-052",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "#8762",
+      "source_text": "#8762"
+    },
+    {
+      "id": "T57-053",
+      "component_type": "ui_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "4 items・$560",
+      "source_text": "4項商品・$560"
+    },
+    {
+      "id": "T57-054",
+      "component_type": "sample_data_localized",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Amy Chang",
+      "source_text": "張小華"
+    },
+    {
+      "id": "T57-055",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "0911-222-333",
+      "source_text": "0911-222-333"
+    },
+    {
+      "id": "T57-056",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "#8761",
+      "source_text": "#8761"
+    },
+    {
+      "id": "T57-057",
+      "component_type": "sample_data_localized",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Henry Lin",
+      "source_text": "林小強"
+    },
+    {
+      "id": "T57-058",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "0977-888-999",
+      "source_text": "0977-888-999"
+    },
+    {
+      "id": "T57-059",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "L",
+      "source_text": "L"
+    },
+    {
+      "id": "T57-060",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Operational Problems",
+      "source_text": "對應營運問題"
+    },
+    {
+      "id": "T57-061",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Scattered Orders",
+      "source_text": "多平台訂單分散"
+    },
+    {
+      "id": "T57-062",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Many dashboards",
+      "source_text": "需切換多個後台查看"
+    },
+    {
+      "id": "T57-063",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Missed Orders",
+      "source_text": "訂單易漏接"
+    },
+    {
+      "id": "T57-064",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Peak-hour gaps",
+      "source_text": "高峰時段訂單漏單"
+    },
+    {
+      "id": "T57-065",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Manual Work",
+      "source_text": "人工處理耗時"
+    },
+    {
+      "id": "T57-066",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Slow routing",
+      "source_text": "訂單分配效率低"
+    },
+    {
+      "id": "T57-067",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Fragmented Data",
+      "source_text": "數據無法彙總"
+    },
+    {
+      "id": "T57-068",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Limited visibility",
+      "source_text": "營運狀況難掌握"
+    },
+    {
+      "id": "T57-069",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Impact Delivered",
+      "source_text": "帶來的效益"
+    },
+    {
+      "id": "T57-070",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Faster",
+      "source_text": "-80%"
+    },
+    {
+      "id": "T57-071",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Order handling",
+      "source_text": "訂單處理時間"
+    },
+    {
+      "id": "T57-072",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Less switching",
+      "source_text": "大幅提升處理效率"
+    },
+    {
+      "id": "T57-073",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Smoother",
+      "source_text": "+60%"
+    },
+    {
+      "id": "T57-074",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Operations",
+      "source_text": "營運效率"
+    },
+    {
+      "id": "T57-075",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Lower manual effort",
+      "source_text": "人力成本優化"
+    },
+    {
+      "id": "T57-076",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Fewer",
+      "source_text": "-95%"
+    },
+    {
+      "id": "T57-077",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Missed orders",
+      "source_text": "漏單率"
+    },
+    {
+      "id": "T57-078",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Cleaner order capture",
+      "source_text": "訂單準確度提升"
+    },
+    {
+      "id": "T57-079",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "One View",
+      "source_text": "100%"
+    },
+    {
+      "id": "T57-080",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Data integration",
+      "source_text": "數據整合"
+    },
+    {
+      "id": "T57-081",
+      "component_type": "compact_card_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "One operating view",
+      "source_text": "營運狀況一目瞭然"
+    },
+    {
+      "id": "T57-082",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Five Capabilities for Common Brand Operating Problems",
+      "source_text": "五項能力對應品牌常見運營問題"
+    },
+    {
+      "id": "T57-083",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Channel Aggregation",
+      "source_text": "渠道聚合"
+    },
+    {
+      "id": "T57-084",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Menu Sync",
+      "source_text": "菜單承接"
+    },
+    {
+      "id": "T57-085",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Order Fulfillment",
+      "source_text": "訂單履約"
+    },
+    {
+      "id": "T57-086",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Data Consolidation",
+      "source_text": "數據彙聚"
+    },
+    {
+      "id": "T57-087",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Ecosystem Connectivity",
+      "source_text": "生態接入"
+    },
+    {
+      "id": "T57-088",
+      "component_type": "cta",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Learn More →",
+      "source_text": "了解更多 →"
+    },
+    {
+      "id": "T57-089",
+      "component_type": "nav",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Solutions",
+      "source_text": "解決方案"
+    },
+    {
+      "id": "T57-090",
+      "component_type": "nav",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Platform",
+      "source_text": "平台"
+    },
+    {
+      "id": "T57-091",
+      "component_type": "nav",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Integrations",
+      "source_text": "整合能力"
+    },
+    {
+      "id": "T57-092",
+      "component_type": "nav",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Customers",
+      "source_text": "客戶案例"
+    },
+    {
+      "id": "T57-093",
+      "component_type": "nav",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Resources",
+      "source_text": "资源"
+    },
+    {
+      "id": "T57-094",
+      "component_type": "nav",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "About Candao",
+      "source_text": "關於餐道"
+    },
+    {
+      "id": "T57-095",
+      "component_type": "language_switcher_preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "繁中 / EN",
+      "source_text": "繁中 / EN"
+    },
+    {
+      "id": "T57-096",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "See How Similar Customers Put It Into Practice",
+      "source_text": "從相似客戶案例看落地方式"
+    },
+    {
+      "id": "T57-097",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "See how real customers connect order integration, delivery fulfillment, membership operations, and analytics.",
+      "source_text": "以實名客戶案例和業態案例呈現訂單整合、配送履約、會員營運、數據分析與對應改善。"
+    },
+    {
+      "id": "T57-098",
+      "component_type": "cta",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Customer Stories",
+      "source_text": "查看客戶案例"
+    },
+    {
+      "id": "T57-099",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Pizza\nBox",
+      "source_text": "Pizza\nBox"
+    },
+    {
+      "id": "T57-100",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Pizza-Box",
+      "source_text": "Pizza-Box"
+    },
+    {
+      "id": "T57-101",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Long-term partner",
+      "source_text": "合作超過 9 年"
+    },
+    {
+      "id": "T57-102",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Italian Dining",
+      "source_text": "意式餐厅"
+    },
+    {
+      "id": "T57-103",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Multi-Brand",
+      "source_text": "多品牌"
+    },
+    {
+      "id": "T57-104",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "End-to-End",
+      "source_text": "全链路"
+    },
+    {
+      "id": "T57-105",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Covers OMS, app/web ordering, third-party and owned delivery, marketing, BI, and customer service.",
+      "source_text": "覆蓋 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、BI 分析與客戶服務。"
+    },
+    {
+      "id": "T57-106",
+      "component_type": "cta",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Read Story →",
+      "source_text": "閱讀案例 →"
+    },
+    {
+      "id": "T57-107",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "JIA\nGroup",
+      "source_text": "JIA\nGroup"
+    },
+    {
+      "id": "T57-108",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "JIA Group",
+      "source_text": "JIA Group"
+    },
+    {
+      "id": "T57-109",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Multi-brand F&B Group",
+      "source_text": "多品牌餐飲集團"
+    },
+    {
+      "id": "T57-110",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Multi-Site",
+      "source_text": "多門店"
+    },
+    {
+      "id": "T57-111",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Membership",
+      "source_text": "會員管理"
+    },
+    {
+      "id": "T57-112",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Analytics",
+      "source_text": "數據分析"
+    },
+    {
+      "id": "T57-113",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Connects ordering, membership, delivery, and data across multi-brand, multi-site operations.\n",
+      "source_text": "覆蓋多品牌與多門店營運場景，整合點餐、會員、配送與數據，提升整體營運效率。\n"
+    },
+    {
+      "id": "T57-114",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Jardine\nGroup",
+      "source_text": "Jardine\nGroup"
+    },
+    {
+      "id": "T57-115",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Jardine Group",
+      "source_text": "Jardine Group"
+    },
+    {
+      "id": "T57-116",
+      "component_type": "term",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Delivery Management",
+      "source_text": "配送管理"
+    },
+    {
+      "id": "T57-117",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Brings delivery fulfillment, store orders, and third-party status into one monitoring flow.\n",
+      "source_text": "配送履约、门店订单和第三方平台状态能回到同一套监控与管理流程。\n"
+    },
+    {
+      "id": "T57-118",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Supporting F&B Brands Across Channels, Stores, and Markets",
+      "source_text": "支持餐飲品牌跨渠道、跨門店、跨市場營運"
+    },
+    {
+      "id": "T57-119",
+      "component_type": "approved_metric_preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "5000+",
+      "source_text": "5000+"
+    },
+    {
+      "id": "T57-120",
+      "component_type": "approved_metric_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Partner Brands",
+      "source_text": "合作品牌数量"
+    },
+    {
+      "id": "T57-121",
+      "component_type": "approved_metric_preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "500M+",
+      "source_text": "500M+"
+    },
+    {
+      "id": "T57-122",
+      "component_type": "approved_metric_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Daily Orders Processed",
+      "source_text": "日处理订单数"
+    },
+    {
+      "id": "T57-123",
+      "component_type": "approved_metric_preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "400+",
+      "source_text": "400+"
+    },
+    {
+      "id": "T57-124",
+      "component_type": "approved_metric_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Cities Covered",
+      "source_text": "覆盖城市数"
+    },
+    {
+      "id": "T57-125",
+      "component_type": "approved_metric_preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "200K+",
+      "source_text": "200K+"
+    },
+    {
+      "id": "T57-126",
+      "component_type": "approved_metric_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Stores Covered",
+      "source_text": "门店数量"
+    },
+    {
+      "id": "T57-127",
+      "component_type": "approved_metric_preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "4.5B+",
+      "source_text": "4.5B+"
+    },
+    {
+      "id": "T57-128",
+      "component_type": "approved_metric_label",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Monthly GMV from Delivered Orders",
+      "source_text": "月度交付订单GMV"
+    },
+    {
+      "id": "T57-129",
+      "component_type": "cta",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Ready to make operations clearer?",
+      "source_text": "準備好讓營運流程更清晰嗎？"
+    },
+    {
+      "id": "T57-130",
+      "component_type": "adapted",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Tell us your store scale, channel mix, and operating challenges. The Candao team will arrange the right product demo for your scenario.",
+      "source_text": "告訴我們你的門店規模、渠道組合與營運挑戰，\n餐道團隊將為你安排合適的產品演示。"
+    },
+    {
+      "id": "T57-131",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Mobile Ordering",
+      "source_text": "移動點餐"
+    },
+    {
+      "id": "T57-132",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Self-Ordering Kiosk",
+      "source_text": "自助點餐機訂購"
+    },
+    {
+      "id": "T57-133",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Delivery & Rider App",
+      "source_text": "配送管理與騎手應用"
+    },
+    {
+      "id": "T57-134",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Aggregated Logistics",
+      "source_text": "聚合物流管理"
+    },
+    {
+      "id": "T57-135",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Delivery Platform",
+      "source_text": "配送平台"
+    },
+    {
+      "id": "T57-136",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "POS System",
+      "source_text": "銷售點系統"
+    },
+    {
+      "id": "T57-137",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "CRM",
+      "source_text": "客戶關係管理"
+    },
+    {
+      "id": "T57-138",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Third-Party Logistics",
+      "source_text": "第三方物流"
+    },
+    {
+      "id": "T57-139",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Payment Gateway",
+      "source_text": "支付網關"
+    },
+    {
+      "id": "T57-140",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Resources",
+      "source_text": "資源"
+    },
+    {
+      "id": "T57-141",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Support",
+      "source_text": "支持"
+    },
+    {
+      "id": "T57-142",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "FAQs",
+      "source_text": "常見問題解答"
+    },
+    {
+      "id": "T57-143",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Press Releases",
+      "source_text": "新聞稿"
+    },
+    {
+      "id": "T57-144",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Case Studies",
+      "source_text": "展示案例"
+    },
+    {
+      "id": "T57-145",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Learn More",
+      "source_text": "了解更多"
+    },
+    {
+      "id": "T57-146",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "About Us",
+      "source_text": "關於我們"
+    },
+    {
+      "id": "T57-147",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Milestones",
+      "source_text": "里程碑"
+    },
+    {
+      "id": "T57-148",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Careers",
+      "source_text": "職業發展"
+    },
+    {
+      "id": "T57-149",
+      "component_type": "preserved",
+      "role": "总部运营",
+      "page_task": "英文首页可见文案本地化，保留餐饮营运、订单、门店、配送、数据与平台语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "© copyright Candao International 2026",
+      "source_text": "© copyright Candao International 2026"
+    }
+  ]
+}

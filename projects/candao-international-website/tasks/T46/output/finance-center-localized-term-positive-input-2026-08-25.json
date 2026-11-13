@@ -1,0 +1,33 @@
+{
+  "suite": "t46-finance-center-localized-term-positive-2026-08-25",
+  "items": [
+    {
+      "id": "zh-hant-reconciliation-standard",
+      "component_type": "backend_preview",
+      "role": "财务",
+      "page_task": "说明财务对账能力",
+      "locale": "zh-Hant",
+      "text": "CDBI 與財務對賬協助財務比對平台訂單與餐道 OMS 訂單，識別金額差異、狀態差異和漏單。",
+      "must_include": ["CDBI", "財務對賬", "平台訂單", "餐道 OMS 訂單", "金額差異", "狀態差異", "漏單"]
+    },
+    {
+      "id": "zh-hans-reconciliation-standard",
+      "component_type": "copy_rule_example",
+      "role": "财务",
+      "page_task": "说明财务对账能力",
+      "locale": "zh-Hans",
+      "text": "CDBI 与财务对账支持管理层、运营和财务查看报表、看板、平台订单与 OMS 订单对账差异。",
+      "must_include": ["CDBI", "财务对账", "平台订单", "OMS 订单", "对账差异"]
+    },
+    {
+      "id": "english-locale-source-term-allowed",
+      "component_type": "english_content_library",
+      "role": "采购方",
+      "page_task": "English Locale copy",
+      "locale": "en",
+      "text": "Finance Center compares marketplace orders with Candao OMS orders to identify amount, status, and missing-order discrepancies.",
+      "allow_english_brand": true,
+      "must_include": ["Finance Center", "OMS", "amount", "status"]
+    }
+  ]
+}

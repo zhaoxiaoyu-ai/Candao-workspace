@@ -1,6 +1,6 @@
 export default {
   app: {
-    name: 'Tappo Phone',
+    name: 'Tappo Pulse',
   },
   nav: {
     spec: '規範',

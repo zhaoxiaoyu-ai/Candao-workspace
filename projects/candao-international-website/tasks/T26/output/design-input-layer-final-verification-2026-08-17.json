@@ -1,0 +1,110 @@
+{
+  "module_manifest": {
+    "module_count": 47,
+    "unique_ids": 47,
+    "aggregated_ids": [],
+    "missing_field_entries": [],
+    "status": "pass"
+  },
+  "asset_manifest": {
+    "asset_count": 9,
+    "issues": [],
+    "status": "pass"
+  },
+  "qa_statuses": {
+    "design-ready-copy-qa-result-2026-08-16.json": "pass",
+    "design-ready-interaction-copy-qa-result-2026-08-16.json": "pass",
+    "design-ready-browser-check-2026-08-16.json": "pass",
+    "design-ready-interaction-browser-check-2026-08-16.json": "pass",
+    "module-manifest-copy-qa-result-2026-08-17.json": "pass"
+  },
+  "motion_storyboards": [
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/motion-storyboards/home-connector/storyboard.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/motion-storyboards/integration-network/storyboard.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/motion-storyboards/platform-overlays/storyboard.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/motion-storyboards/solution-scenarios/storyboard.md",
+      "missing": [],
+      "status": "pass"
+    }
+  ],
+  "prompt_pack_sections": [
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/stitch/ABOUT.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/stitch/CUSTOMERS.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/stitch/DEMO.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/stitch/HOME.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/stitch/INTEGRATIONS.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/stitch/PLATFORM.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/stitch/RESOURCES.md",
+      "missing": [],
+      "status": "pass"
+    },
+    {
+      "file": "projects/candao-international-website/tasks/T17/output/design-handoff/stitch/SOLUTIONS.md",
+      "missing": [],
+      "status": "pass"
+    }
+  ],
+  "design_tokens": {
+    "primary": "#528dff",
+    "text_dark": "#16233d",
+    "text_dark_alpha": [
+      "rgba(22, 35, 61, 0.95)",
+      "rgba(22, 35, 61, 0.65)",
+      "rgba(22, 35, 61, 0.45)"
+    ],
+    "page_width": "1440px",
+    "content_width": "1200px",
+    "radius": {
+      "small": "8px",
+      "large": "16px"
+    },
+    "status": "pass"
+  },
+  "required_paths": {
+    "missing": [],
+    "status": "pass"
+  },
+  "forbidden_scan": {
+    "hits": [],
+    "status": "pass"
+  },
+  "overall_status": "pass"
+}

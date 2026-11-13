@@ -1,0 +1,389 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "target": "projects/candao-international-website/tasks/T44/output/stitch-output/stitch-screen-b9cd15b7-solutions-cv4.html",
+  "hardRequirement": "Content contract coverage must be 100%. Any missing item fails the candidate.",
+  "summary": {
+    "found": 67,
+    "total": 69,
+    "ratio": 0.9710144927536232,
+    "status": "fail",
+    "visibleTextCharsNormalized": 1438,
+    "riskTermsPresent": [
+      "arrow_forward"
+    ]
+  },
+  "modules": {
+    "header_navigation": {
+      "status": "pass",
+      "found": 8,
+      "total": 8,
+      "ratio": 1,
+      "missing": [],
+      "checks": [
+        {
+          "expected": "首頁",
+          "found": true
+        },
+        {
+          "expected": "解決方案",
+          "found": true
+        },
+        {
+          "expected": "平台",
+          "found": true
+        },
+        {
+          "expected": "整合能力",
+          "found": true
+        },
+        {
+          "expected": "客戶案例",
+          "found": true
+        },
+        {
+          "expected": "資源",
+          "found": true
+        },
+        {
+          "expected": "關於餐道",
+          "found": true
+        },
+        {
+          "expected": "預約演示",
+          "found": true
+        }
+      ]
+    },
+    "hero_positioning": {
+      "status": "pass",
+      "found": 5,
+      "total": 5,
+      "ratio": 1,
+      "missing": [],
+      "checks": [
+        {
+          "expected": "營運場景",
+          "found": true
+        },
+        {
+          "expected": "按餐飲 O2O 營運問題，找到可落地的解決方案",
+          "found": true
+        },
+        {
+          "expected": "外賣平台、自有點餐、門店接單、配送和對賬分散",
+          "found": true
+        },
+        {
+          "expected": "預約相似場景演示",
+          "found": true
+        },
+        {
+          "expected": "查看平台能力",
+          "found": true
+        }
+      ]
+    },
+    "hero_scenario_map": {
+      "status": "fail",
+      "found": 8,
+      "total": 9,
+      "ratio": 0.8888888888888888,
+      "missing": [
+        "場景鏈路"
+      ],
+      "checks": [
+        {
+          "expected": "場景鏈路",
+          "found": false
+        },
+        {
+          "expected": "外賣平台",
+          "found": true
+        },
+        {
+          "expected": "門店接單",
+          "found": true
+        },
+        {
+          "expected": "餐道 OMS",
+          "found": true
+        },
+        {
+          "expected": "配送履約",
+          "found": true
+        },
+        {
+          "expected": "對賬分析",
+          "found": true
+        },
+        {
+          "expected": "多入口產生訂單",
+          "found": true
+        },
+        {
+          "expected": "OMS 統一處理",
+          "found": true
+        },
+        {
+          "expected": "履約與對賬回流",
+          "found": true
+        }
+      ]
+    },
+    "common_operational_problems": {
+      "status": "pass",
+      "found": 10,
+      "total": 10,
+      "ratio": 1,
+      "missing": [],
+      "checks": [
+        {
+          "expected": "常見營運問題",
+          "found": true
+        },
+        {
+          "expected": "每一類問題都對應一條可追蹤的營運鏈路",
+          "found": true
+        },
+        {
+          "expected": "多平台訂單履約",
+          "found": true
+        },
+        {
+          "expected": "集中處理外賣平台與自有入口訂單",
+          "found": true
+        },
+        {
+          "expected": "門店接單、打印、退款、取消和異常提醒回到 OMS",
+          "found": true
+        },
+        {
+          "expected": "門店與餐單營運",
+          "found": true
+        },
+        {
+          "expected": "總部可維護門店資料、營業時間、餐單、售罄和區域菜單",
+          "found": true
+        },
+        {
+          "expected": "配送營運與對賬",
+          "found": true
+        },
+        {
+          "expected": "DMS / iDMS 承接自有騎手、第三方配送、派單、超時和狀態回傳",
+          "found": true
+        },
+        {
+          "expected": "Finance Center 追蹤對賬差異",
+          "found": true
+        }
+      ]
+    },
+    "scenario_explorer_shell": {
+      "status": "pass",
+      "found": 8,
+      "total": 8,
+      "ratio": 1,
+      "missing": [],
+      "checks": [
+        {
+          "expected": "場景導覽",
+          "found": true
+        },
+        {
+          "expected": "選擇最接近你現況的營運場景",
+          "found": true
+        },
+        {
+          "expected": "多平台外賣訂單",
+          "found": true
+        },
+        {
+          "expected": "堂食掃碼與自有點餐",
+          "found": true
+        },
+        {
+          "expected": "配送營運與履約",
+          "found": true
+        },
+        {
+          "expected": "財務對賬與報表",
+          "found": true
+        },
+        {
+          "expected": "會員與營運數據",
+          "found": true
+        },
+        {
+          "expected": "門店與餐單管理",
+          "found": true
+        }
+      ]
+    },
+    "scenario_detail_panel": {
+      "status": "pass",
+      "found": 11,
+      "total": 11,
+      "ratio": 1,
+      "missing": [],
+      "checks": [
+        {
+          "expected": "讓多平台外賣訂單回到同一條處理鏈路",
+          "found": true
+        },
+        {
+          "expected": "集中查看外賣平台訂單",
+          "found": true
+        },
+        {
+          "expected": "門店接單、打印、退款、取消、配送狀態和財務對賬進入統一流程",
+          "found": true
+        },
+        {
+          "expected": "高峰訂單處理鏈路",
+          "found": true
+        },
+        {
+          "expected": "場景拆解",
+          "found": true
+        },
+        {
+          "expected": "漏單與重複維護",
+          "found": true
+        },
+        {
+          "expected": "OMS / DMS 承接",
+          "found": true
+        },
+        {
+          "expected": "總部追蹤狀態",
+          "found": true
+        },
+        {
+          "expected": "訂單高峰",
+          "found": true
+        },
+        {
+          "expected": "OMS + DMS",
+          "found": true
+        },
+        {
+          "expected": "數據回流",
+          "found": true
+        }
+      ]
+    },
+    "capability_and_next_step": {
+      "status": "fail",
+      "found": 2,
+      "total": 3,
+      "ratio": 0.6666666666666666,
+      "missing": [
+        "承接能力：OMS、Menu Center、DMS / iDMS、Finance Center。"
+      ],
+      "checks": [
+        {
+          "expected": "承接能力：OMS、Menu Center、DMS / iDMS、Finance Center。",
+          "found": false
+        },
+        {
+          "expected": "下一步：查看平台能力或預約相似場景演示。",
+          "found": true
+        },
+        {
+          "expected": "查看客戶案例",
+          "found": true
+        }
+      ]
+    },
+    "footer": {
+      "status": "pass",
+      "found": 9,
+      "total": 9,
+      "ratio": 1,
+      "missing": [],
+      "checks": [
+        {
+          "expected": "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector",
+          "found": true
+        },
+        {
+          "expected": "首頁",
+          "found": true
+        },
+        {
+          "expected": "解決方案",
+          "found": true
+        },
+        {
+          "expected": "平台",
+          "found": true
+        },
+        {
+          "expected": "整合能力",
+          "found": true
+        },
+        {
+          "expected": "客戶案例",
+          "found": true
+        },
+        {
+          "expected": "資源",
+          "found": true
+        },
+        {
+          "expected": "關於餐道",
+          "found": true
+        },
+        {
+          "expected": "預約演示",
+          "found": true
+        }
+      ]
+    },
+    "protected_product_terms": {
+      "status": "pass",
+      "found": 6,
+      "total": 6,
+      "ratio": 1,
+      "missing": [],
+      "checks": [
+        {
+          "expected": "OMS",
+          "found": true
+        },
+        {
+          "expected": "Menu Center",
+          "found": true
+        },
+        {
+          "expected": "DMS / iDMS",
+          "found": true
+        },
+        {
+          "expected": "Finance Center",
+          "found": true
+        },
+        {
+          "expected": "SaaS",
+          "found": true
+        },
+        {
+          "expected": "AMS / Connector",
+          "found": true
+        }
+      ]
+    },
+    "known_risk_terms_absent": {
+      "status": "fail",
+      "present": [
+        "arrow_forward"
+      ]
+    }
+  },
+  "scopedText": {
+    "body": "餐道 | 解決方案\n餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中\n/\nEN\n預約演示\n營運場景\n按餐飲 O2O 營運問題，找到可落地的解決方案\n當外賣平台、自有點餐、門店接單、配送和對賬分散在多個後台，品牌需要先判斷哪一段流程造成漏單、重複維護或異常追蹤壓力。餐道按常見營運場景整理方案，協助你對照現有問題與下一步演示重點。\n預約相似場景演示\n查看平台能力\n01\n多入口產生訂單\n外賣平台、自有小程序與門店渠道同時進入營運流程。\n外賣平台\n門店接單\n02\nOMS 統一處理\n把接單、門店狀態、缺貨、取消與退款放在同一工作台。\n餐道 OMS\n03\n履約與對賬回流\nDMS / iDMS、Finance Center 與 CDBI 將履約和數據回到總部判斷。\n配送履約\n對賬分析\n常見營運問題\n每一類問題都對應一條可追蹤的營運鏈路\n先讓總部營運、門店、配送和財務團隊對齊問題位置，再進入對應能力或演示場景。\n多平台訂單履約\nsync\n集中處理外賣平台與自有入口訂單，讓門店接單、打印、退款、取消和異常提醒回到 OMS 流程。\n外賣平台\n自有入口\nOMS\n門店與餐單營運\nstorefront\n總部可維護門店資料、營業時間、餐單、售罄和區域菜單，減少多平台重複更新。\n門店資料\n餐單版本\n售罄狀態\n配送營運與對賬\nlocal_shipping\nDMS / iDMS 承接自有騎手、第三方配送、派單、超時和狀態回傳，Finance Center 追蹤對賬差異。\nDMS / iDMS\n配送異常\nFinance Center\n場景導覽\n選擇最接近你現況的營運場景\n從高峰訂單、門店接單、配送履約到財務對賬，先確認最接近的營運壓力，再把演示重點帶到對應能力。\n多平台外賣訂單\n堂食掃碼與自有點餐\n配送營運與履約\n財務對賬與報表\n會員與營運數據\n門店與餐單管理\n讓多平台外賣訂單回到同一條處理鏈路\n集中查看外賣平台訂單，讓門店接單、打印、退款、取消、配送狀態和財務對賬進入統一流程。\n訂單高峰\n門店接單\n配送狀態\n對賬差異\n高峰訂單處理鏈路\n| 場景拆解 | 展示從第三方平台、自有入口到門店接單、製作、配送和客服補救的鏈路。\n問題\n漏單與重複維護\n能力\nOMS / DMS 承接\n結果\n總部追蹤狀態\n訂單高峰\narrow_forward\nOMS + DMS\narrow_forward\n數據回流\n承接能力：\nOMS、Menu Center、DMS / iDMS、Finance Center\n下一步：\n查看平台能力或預約相似場景演示。\n預約相似場景演示\n查看客戶案例\n下一步\n把相似營運問題帶到演示流程中確認\n若你已確認問題位置，可以進一步查看平台能力，或預約相似場景演示讓團隊按現況拆解。\n預約相似場景演示\n查看平台能力\napps\n外賣平台\n多入口訂單進入\n待接單\nstorefront\n門店接單\n接單、打印、退款、取消\n製作中\ndns\n餐道 OMS\n統一處理訂單狀態和異常\n處理中\nlocal_shipping\n配送履約\nDMS / iDMS 回傳履約狀態\n配送中\naccount_balance_wallet\n對賬分析\nFinance Center 追蹤對賬差異\n回流\n餐道\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n預約演示\n© 2024 餐道. 版權所有.",
+    "headerLike": "餐道 | 解決方案\n餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中",
+    "footerLike": "首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n預約演示\n© 2024 餐道. 版權所有."
+  }
+}

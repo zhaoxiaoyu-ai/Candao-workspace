@@ -1,0 +1,65 @@
+{
+  "suite": "t28-element-placement-domain-copy",
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t28-element-home",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-element-solutions",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-element-platform",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-element-integrations",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-element-customers",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-element-resources",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-element-about",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-element-demo",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

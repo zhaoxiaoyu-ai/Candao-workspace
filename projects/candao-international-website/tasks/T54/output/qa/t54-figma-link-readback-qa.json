@@ -1,0 +1,51 @@
+{
+  "suite": "t54-figma-link-readback-qa",
+  "date": "2026-09-01",
+  "figma_file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+  "page": {
+    "id": "3:5",
+    "name": "03 Desktop Pages / Bilingual Validation"
+  },
+  "panel": {
+    "id": "623:2",
+    "name": "最終層級超連結 / Web Desktop 1440",
+    "card_count": 9,
+    "text_node_count": 134,
+    "text_hyperlink_count": 100
+  },
+  "main_card_node_links": [
+    { "label": "首頁", "card_id": "623:17", "destination_id": "336:7645" },
+    { "label": "解決方案", "card_id": "623:40", "destination_id": "447:8876" },
+    { "label": "平台能力", "card_id": "623:66", "destination_id": "488:350" },
+    { "label": "整合能力", "card_id": "623:95", "destination_id": "488:668" },
+    { "label": "客戶案例", "card_id": "623:124", "destination_id": "488:1138" },
+    { "label": "資源與支援", "card_id": "623:147", "destination_id": "488:1413" },
+    { "label": "關於餐道", "card_id": "623:170", "destination_id": "488:2002" },
+    { "label": "預約產品演示", "card_id": "623:193", "destination_id": "488:2401" }
+  ],
+  "url_base": "https://www.can-dao.com.hk",
+  "url_link_scope": "二级路径与页脚法务路径使用 T05 Sitemap 路径并附加旧官网域名作为 Figma URL hyperlink；未新增业务事实。",
+  "archived_upper_reference_nodes": {
+    "count": 23,
+    "method": "set visible=false and prefix node name with T54 archived"
+  },
+  "visible_text_checks": {
+    "forbidden_visible_terms": [],
+    "checked_terms": [
+      "Finance Center",
+      "Candao",
+      "candao",
+      "Can Dao",
+      "粵ICP",
+      "中台",
+      "IDMS",
+      "SAAS"
+    ],
+    "status": "pass"
+  },
+  "screenshots": {
+    "before_page_overview": "tasks/T54/output/screenshots/t54-figma-page-before-overview.png",
+    "panel_after": "tasks/T54/output/screenshots/t54-final-hierarchy-links-panel-after.png"
+  },
+  "status": "pass"
+}

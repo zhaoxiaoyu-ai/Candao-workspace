@@ -1,0 +1,79 @@
+{
+  "task": "T58",
+  "status": "pass",
+  "checked_at": "2026-09-02",
+  "figma": {
+    "file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+    "source_node": {
+      "id": "447:8876",
+      "name": "解决方案",
+      "x": 4045,
+      "y": 7521,
+      "width": 1440,
+      "height": 3719,
+      "source_sample": [
+        "按餐飲 O2O 營運問題",
+        "找到可落地的解決方案",
+        "外賣平台、自有平台、門店接單、配送和對帳分散在多個後台，品牌需要找到哪個鏈路流程造成漏單、重複維護或非常態的壓力"
+      ]
+    },
+    "target_node": {
+      "id": "812:2",
+      "name": "Solutions / Desktop 1440 / EN",
+      "x": 16474,
+      "y": 7521,
+      "width": 1440,
+      "height": 3719
+    }
+  },
+  "text_checks": {
+    "visible_text_node_count": 84,
+    "unique_visible_text_count": 76,
+    "editable_cjk_residual_count": 1,
+    "allowed_cjk_residuals": [
+      {
+        "id": "812:42",
+        "text": "繁中 / EN",
+        "reason": "language switch control"
+      }
+    ],
+    "forbidden_terms": {
+      "Finance Center": 0,
+      "Business Center": 0,
+      "Data Center": 0
+    },
+    "brand_case_errors": 0,
+    "unapproved_metric_like_claims": 0,
+    "frame_overflow_count": 0
+  },
+  "required_text_checks": {
+    "Find the Right Solution": "present",
+    "for F&B O2O Operations": "present",
+    "Common Operating Problems": "present",
+    "Choose the Scenario Closest to Your Operation": "present",
+    "Capabilities: OMS, Menu Center, DMS / iDMS, financial reconciliation": "present",
+    "Bring Your Scenario Into the Demo Flow": "present",
+    "Customer Stories": "present"
+  },
+  "layout_fixes": {
+    "shortened_layout_sensitive_sentences": [
+      "Identify the pressure point across order sources, stores, delivery, and reconciliation, then focus the demo on the matching capability.",
+      "Track orders, store intake, printing, refunds, cancellations, delivery status, and financial returns in one workflow.",
+      "Know where the pressure sits? Review platform capabilities or book a scenario demo to confirm modules and workflow."
+    ],
+    "fixed_width_text_nodes": {
+      "812:116": 960,
+      "812:135": 768,
+      "812:195": 546
+    },
+    "resized_buttons": [
+      "812:41",
+      "812:44"
+    ]
+  },
+  "screenshot": {
+    "path": "tasks/T58/output/screenshots/t58-solutions-en-figma-812-2.png",
+    "pixel_width": 1444,
+    "pixel_height": 3720
+  }
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>00 Candao C v3 保留版索引 / 2026-08-11</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#528dff",
+              "primary-container": "#e0ecff",
+              "on-primary-container": "#00287a",
+              surface: "#f8fafc",
+              "surface-container-low": "#ffffff",
+              "surface-container-high": "#e2e8f0",
+              "on-surface": "#0f172a",
+              "on-surface-variant": "#475569",
+              "outline-variant": "#cbd5e1",
+              success: "#10b981",
+              warning: "#f59e0b",
+              error: "#ef4444"
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+            fontFamily: {
+              headline: ["Public Sans", "sans-serif"],
+              display: ["Public Sans", "sans-serif"],
+              body: ["Public Sans", "sans-serif"],
+              label: ["Public Sans", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center px-6 h-16 w-full fixed top-0 z-50 bg-surface border-b border-outline-variant">
+<div class="flex items-center gap-8">
+<div class="text-xl font-black text-primary">Candao Dashboard</div>
+<div class="hidden md:flex gap-6">
+<a class="font-body text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:opacity-80" href="#">專案總覽</a>
+<a class="font-body text-label-md text-primary font-bold border-b-2 border-primary pb-1 cursor-pointer active:opacity-80" href="#">設計評審</a>
+<a class="font-body text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:opacity-80" href="#">版本追蹤</a>
+<a class="font-body text-label-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:opacity-80" href="#">團隊協作</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded font-medium text-sm hover:opacity-90 transition-opacity">
+                建立新版本
+            </button>
+<div class="flex gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">settings</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-outline-variant overflow-hidden">
+<img alt="使用者頭像" class="w-full h-full object-cover" data-alt="A professional headshot of an Asian male project manager in his early 30s, wearing a smart-casual dark navy shirt, smiling subtly. The background is a blurred modern software company office with soft, cool daylight lighting. The image conveys reliability and global B2B SaaS professionalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh20E_US767AmXlF8IC11s8iPoa-jSzaP12bKCHAbpC5qM98gE3TjZ8kz9iAwZxjaa5QCEVVyREpw0zEl_2DW1ByME8xESKsitHVy31J00g-1zX4e7-SgqPrQbPUYpPCpdyYrD9dk-UpJkTJkKU5JD3KebvEkb_ccsBTiA4EQQjLvTiF39W0d5H44-rqsXXILpQapTOtdGTTL36fWJZfZ-j_xG74UmSjmQnnb2b6cBqLSbaiETZ7TJvPB7P6u_B86weSc0anrazIKN"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 bottom-0 w-64 flex flex-col p-4 z-40 bg-surface-container-low border-r border-outline-variant">
+<div class="mb-8 px-3">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">design_services</span>
+</div>
+<div>
+<h2 class="font-bold text-on-surface text-sm">設計評審系統</h2>
+<p class="text-xs text-on-surface-variant">Candao International</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2 font-body text-label-sm">
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-3 py-2 cursor-pointer active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+                儀表板
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-3 py-2 cursor-pointer active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">folder_open</span>
+                所有專案
+            </a>
+<a class="flex items-center gap-3 bg-primary-container text-on-primary-container rounded-lg px-3 py-2 font-bold cursor-pointer active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">category</span>
+                組件庫
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-3 py-2 cursor-pointer active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">architecture</span>
+                標註工具
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-3 py-2 cursor-pointer active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">archive</span>
+                存檔
+            </a>
+</nav>
+<div class="mt-auto pt-4 border-t border-outline-variant font-body text-label-sm flex flex-col gap-2">
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-3 py-2 cursor-pointer transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">language</span>
+                繁中 / EN
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg px-3 py-2 cursor-pointer transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+                說明中心
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 min-h-screen flex flex-col">
+<div class="flex-1 p-8 max-w-7xl w-full mx-auto">
+<!-- Page Header -->
+<div class="mb-8">
+<h1 class="text-3xl font-headline font-bold text-on-surface mb-2">00 Candao C v3 保留版索引</h1>
+<p class="text-on-surface-variant text-lg max-w-4xl">用于本轮 Stitch 评审：优先查看 C v3 / Fixed / Fixed QA 版本；旧探索和素材图不作为当前页面效果依据。</p>
+</div>
+<!-- Info Card -->
+<div class="bg-surface-container-low rounded-lg p-5 border border-outline-variant shadow-sm mb-8 flex flex-wrap gap-6 items-center">
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Project ID</span>
+<span class="font-mono text-sm">10888304674441209287</span>
+</div>
+<div class="h-8 w-px bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Design System</span>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-sm font-medium">Candao International SaaS Blue #528dff</span>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-1">Date</span>
+<span class="text-sm font-medium">2026-08-11</span>
+</div>
+</div>
+<!-- Review Table -->
+<div class="bg-surface-container-low rounded-lg border border-outline-variant shadow-sm mb-10 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm border-collapse">
+<thead class="bg-surface border-b border-outline-variant">
+<tr>
+<th class="py-3 px-4 font-semibold text-on-surface">一级目录</th>
+<th class="py-3 px-4 font-semibold text-on-surface">当前评审版本</th>
+<th class="py-3 px-4 font-semibold text-on-surface font-mono">Screen ID</th>
+<th class="py-3 px-4 font-semibold text-on-surface">状态</th>
+<th class="py-3 px-4 font-semibold text-on-surface w-1/3">说明</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-on-surface-variant">
+<tr class="hover:bg-surface/50 transition-colors">
+<td class="py-3 px-4 font-medium text-on-surface">首页</td>
+<td class="py-3 px-4">Candao Home - Desktop TC (Fixed)</td>
+<td class="py-3 px-4 font-mono text-xs">d38f6ed9fe2c42b29849f2ab5776ef90</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-surface-container-high text-on-surface-variant">沿用 C v2</span>
+</td>
+<td class="py-3 px-4 text-xs leading-relaxed">Home 本轮尝试编辑时 Stitch 返回 service unavailable，暂沿用 C v2；下一轮优先补导航中的资源入口与场景命名。</td>
+</tr>
+<tr class="hover:bg-surface/50 transition-colors">
+<td class="py-3 px-4 font-medium text-on-surface">解决方案</td>
+<td class="py-3 px-4">C v3 / 解決方案 - Candao International / Desktop TC</td>
+<td class="py-3 px-4 font-mono text-xs">4188f2a7f3f84566b5644b19efdedadd</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-primary-container text-on-primary-container">C v3 已生成</span>
+</td>
+<td class="py-3 px-4 text-xs leading-relaxed">已按 Solutions / Platform 差异化调整为业务场景页。</td>
+</tr>
+<tr class="hover:bg-surface/50 transition-colors bg-primary-container/20">
+<td class="py-3 px-4 font-medium text-on-surface">平台</td>
+<td class="py-3 px-4">C v3 / 平台 - Candao International / Desktop TC / Fixed QA</td>
+<td class="py-3 px-4 font-mono text-xs">0386a1f4c8a34c438d596d2cda0c4022</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800">C v3 Fixed QA</span>
+</td>
+<td class="py-3 px-4 text-xs leading-relaxed">已补齐资源导航，去除 dashboard 英文与金额型假数据。</td>
+</tr>
+<tr class="hover:bg-surface/50 transition-colors">
+<td class="py-3 px-4 font-medium text-on-surface">整合能力</td>
+<td class="py-3 px-4">整合能力 - Candao International (Fixed)</td>
+<td class="py-3 px-4 font-mono text-xs">621fecf4ef6945f58faa162d9f8af3b3</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-surface-container-high text-on-surface-variant">沿用 C v2</span>
+</td>
+<td class="py-3 px-4 text-xs leading-relaxed">下一轮只需补齐资源导航与 v3 页脚一致性。</td>
+</tr>
+<tr class="hover:bg-surface/50 transition-colors">
+<td class="py-3 px-4 font-medium text-on-surface">客户案例</td>
+<td class="py-3 px-4">客戶案例 - Candao International</td>
+<td class="py-3 px-4 font-mono text-xs">cae782557534431fa34ce1305f6ea348</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-surface-container-high text-on-surface-variant">沿用 C v2</span>
+</td>
+<td class="py-3 px-4 text-xs leading-relaxed">下一轮需审查匿名案例与未确认数据风险。</td>
+</tr>
+<tr class="hover:bg-surface/50 transition-colors bg-primary-container/20">
+<td class="py-3 px-4 font-medium text-on-surface">资源</td>
+<td class="py-3 px-4">C v3 / 資源 - Candao International / Desktop TC / Fixed</td>
+<td class="py-3 px-4 font-mono text-xs">efd66e8cb18442fb843910ab6ffb863f</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800">C v3 Fixed</span>
+</td>
+<td class="py-3 px-4 text-xs leading-relaxed">已恢复为一级目录主页，包含支援、FAQ、媒体、案例资源、查询表单。</td>
+</tr>
+<tr class="hover:bg-surface/50 transition-colors">
+<td class="py-3 px-4 font-medium text-on-surface">关于 Candao</td>
+<td class="py-3 px-4">關於 Candao - Candao International (Fixed)</td>
+<td class="py-3 px-4 font-mono text-xs">9c63c26edcbd481599e3d4cd689b378e</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-surface-container-high text-on-surface-variant">沿用 C v2</span>
+</td>
+<td class="py-3 px-4 text-xs leading-relaxed">下一轮补齐资源导航与关于子目录。</td>
+</tr>
+<tr class="hover:bg-surface/50 transition-colors">
+<td class="py-3 px-4 font-medium text-on-surface">预约产品演示</td>
+<td class="py-3 px-4">預約產品演示 - Candao International (Fixed)</td>
+<td class="py-3 px-4 font-mono text-xs">07cf801156f94a2681cf94c5e1102703</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-surface-container-high text-on-surface-variant">沿用 C v2</span>
+</td>
+<td class="py-3 px-4 text-xs leading-relaxed">下一轮补齐资源导航与查询分流一致性。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Bento Grid Layout for Rules and Actions -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+<!-- Rules Card -->
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-warning">rule</span>
+<h3 class="font-bold text-lg text-on-surface">评审规则</h3>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+<span class="text-sm text-on-surface-variant">只评审上表中的当前版本。</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+<span class="text-sm text-on-surface-variant">旧探索页、未 Fixed 版本、图片素材 Screen 不作为页面效果依据。</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+<span class="text-sm text-on-surface-variant">产品能力不得作为一级导航。</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+<span class="text-sm text-on-surface-variant">官网画面默认繁體中文单一 Locale，英文独立版本后续再做。</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+<span class="text-sm text-on-surface-variant">Stitch 截图较小，本地已保存 1440 全页面截图用于查看。</span>
+</li>
+</ul>
+</div>
+<!-- Next Actions Card -->
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-success">task</span>
+<h3 class="font-bold text-lg text-on-surface">Next Actions</h3>
+</div>
+<div class="space-y-4">
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="mt-1 rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-on-surface-variant group-hover:text-on-surface transition-colors">补 Home C v3：资源导航、场景命名、Hero 与 Product Showcase 精修。</span>
+</label>
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="mt-1 rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-on-surface-variant group-hover:text-on-surface transition-colors">补 Integrations / Customers / About / Contact 的 v3 一致性。</span>
+</label>
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="mt-1 rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-on-surface-variant group-hover:text-on-surface transition-colors">将图标字形 token 替换为真实 icon component。</span>
+</label>
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="mt-1 rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-on-surface-variant group-hover:text-on-surface transition-colors">进入视觉总监 B 复审。</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-4 px-6 flex justify-between items-center bg-surface border-t border-outline-variant mt-auto">
+<div class="font-body text-label-xs text-on-surface-variant">
+                © 2024 Candao International. 僅供內部使用
+            </div>
+<div class="flex gap-4 font-body text-label-xs text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" href="#">隱私政策</a>
+<a class="hover:text-on-surface transition-colors" href="#">使用條款</a>
+</div>
+</footer>
+</main>
+</body></html>

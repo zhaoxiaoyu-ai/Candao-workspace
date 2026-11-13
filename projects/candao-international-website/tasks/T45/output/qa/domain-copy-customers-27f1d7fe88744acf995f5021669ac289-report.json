@@ -1,0 +1,54 @@
+{
+  "suite": "T45 customers sequential Stitch visible copy QA",
+  "total": 1,
+  "passed": 0,
+  "failed": 1,
+  "status": "fail",
+  "results": [
+    {
+      "id": "t45-customers-customers-27f1d7fe88744acf995f5021669ac289",
+      "component_type": "stitch_high_fidelity_candidate_visible_copy",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "brand_display_mismatch",
+          "message": "中文 / 繁體中文默认品牌显示应使用「餐道」，不应使用：Candao"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：40%"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：98%"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：60%"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：99.9%"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：45%"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：25%"
+        },
+        {
+          "code": "undefined_metric",
+          "message": "使用未定义指标或数值：15%"
+        }
+      ],
+      "warnings": [
+        {
+          "code": "unknown_role",
+          "message": "角色未在业务上下文中显式定义：品牌决策者 / 总部运营 / IT / 销售"
+        }
+      ]
+    }
+  ]
+}

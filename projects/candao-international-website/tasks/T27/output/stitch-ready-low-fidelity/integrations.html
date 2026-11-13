@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>整合能力｜餐道</title>
+    <link rel="stylesheet" href="assets/stitch-ready.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar"><div class="nav-inner"><a class="brand" href="home.html"><img src="assets/candao-blue-logo.svg" alt="餐道" class="brand-logo"></a><nav class="nav-links" aria-label="主導航"><a href="home.html">首頁</a><a href="solutions.html">解決方案</a><a href="platform.html">平台</a><a href="integrations.html" aria-current="page">整合能力</a><a href="customers.html">客戶案例</a><a href="resources.html">資源</a><a href="about.html">關於餐道</a></nav><div class="nav-actions"><span class="language">繁中 / EN</span><a class="button primary" href="demo.html">預約演示</a></div></div></header>
+      <section class="hero">
+        <div class="container grid-2">
+          <div>
+            <p class="eyebrow">系統接入</p>
+            <h1>把外賣平台、POS / KDS、CRM、支付、ERP 與配送資料接回營運鏈路</h1>
+            <p class="lead">IT 與營運團隊可以了解餐道 Connector 如何承接不同系統類型、資料對象、狀態回傳與異常處理，讓外部渠道和門店系統回到 OMS、Data Asset、財務對賬與配送流程。</p>
+            <div class="hero-actions"><a class="button primary" href="demo.html">預約技術演示</a><a class="button" href="platform.html">查看平台能力</a></div>
+          </div>
+          <div class="connector-flow" aria-label="餐道接入拓撲">
+            <div class="connector-lane external">
+              <span>外部系統</span>
+              <strong>外賣平台 / POS / ERP / 支付 / 會員 / 配送</strong>
+            </div>
+            <div class="connector-lane hub">
+              <span>AMS / Connector</span>
+              <strong>接口管理、資料校驗、同步監控、異常回報</strong>
+            </div>
+            <div class="connector-lane internal">
+              <span>餐道平台</span>
+              <strong>OMS、Menu Center、DMS / iDMS、財務對賬、CDBI</strong>
+            </div>
+            <div class="concept-illustration" aria-label="AMS / Connector 接入概念圖">
+              <span class="concept-line"></span><span class="concept-line vertical"></span>
+              <span class="concept-node n1">POS / KDS</span><span class="concept-node n2">支付 / ERP</span>
+              <span class="concept-node hub">AMS / Connector</span>
+              <span class="concept-node n3">配送 API</span><span class="concept-node n4">OMS / CDBI</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container rail-layout">
+          <div>
+            <p class="eyebrow">接入對象</p>
+            <h2>按系統類型了解接入範圍、資料流和回傳狀態</h2>
+            <div class="rail"><button class="is-active" data-integration="delivery-platforms">外賣平台</button><button data-integration="owned-entry">自建點餐入口</button><button data-integration="pos-kds">POS / KDS</button><button data-integration="crm">CRM / 會員</button><button data-integration="payment-erp">支付 / ERP</button><button data-integration="delivery-api">配送與 API</button></div>
+          </div>
+          <div class="detail-panel">
+            <h3 id="integration-title">外賣平台訂單進入 OMS</h3>
+            <p id="integration-body" class="lead">訂單數據進入 Connector 後，需要標準化訂單、餐單、用戶和基礎資料，再回到 OMS、Data Asset 和財務對賬。</p>
+            <div class="detail-list">
+              <div id="integration-object"><strong>資料對象：</strong>餐單、訂單、用戶、基礎資料。</div>
+              <div id="integration-next"><strong>適合情境：</strong>需要把多平台訂單、餐單更新、用戶資料和對賬差異接回餐道流程。</div>
+            </div>
+            <div class="connection-tags" aria-label="常見資料對象">
+              <span>訂單</span><span>菜單</span><span>門店</span><span>庫存</span><span>會員</span><span>支付</span><span>配送</span><span>對賬</span>
+            </div>
+            <a id="integration-cta" class="button primary" href="demo.html">提交接入評估</a>
+          </div>
+        </div>
+      </section>
+      <section class="section data-flow-section">
+        <div class="container grid-2">
+          <div>
+            <p class="eyebrow">資料流向</p>
+            <h2>接入不是單點開接口，而是讓資料在營運鏈路中可校驗、可追蹤。</h2>
+            <p>本頁以資料對象、同步方向和異常回報位置呈現接入邊界，後續可替換為真實產品截圖或動效。</p>
+          </div>
+          <div class="flow-board compact">
+            <div class="motion-strip" aria-label="資料同步動效關鍵幀">
+              <div class="motion-frame"><span>來源</span><strong>平台 / POS / ERP</strong></div>
+              <div class="motion-frame"><span>校驗</span><strong>AMS / Connector</strong></div>
+              <div class="motion-frame"><span>使用</span><strong>OMS / 財務對賬 / CDBI</strong></div>
+            </div>
+            <div class="flow-grid">
+              <div class="flow-step"><span>資料來源</span><strong>平台 / POS / ERP</strong><p>訂單、菜單、門店、會員與交易資料進入接口層。</p></div>
+              <div class="flow-step"><span>校驗同步</span><strong>AMS / Connector</strong><p>映射字段、監控同步狀態，將異常回報給對應角色。</p></div>
+              <div class="flow-step"><span>營運使用</span><strong>OMS / 財務對賬 / CDBI</strong><p>支撐履約、對賬、報表與跨系統決策。</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-brand"><img src="assets/candao-blue-logo.svg" alt="餐道" class="brand-logo"><p>餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector</p></div>
+          <nav class="footer-links" aria-label="頁尾導航"><a href="home.html">首頁</a><a href="solutions.html">解決方案</a><a href="platform.html">平台</a><a href="integrations.html">整合能力</a><a href="customers.html">客戶案例</a><a href="resources.html">資源</a><a href="about.html">關於餐道</a><a href="demo.html">預約演示</a></nav>
+        </div>
+      </footer>
+    </main>
+    <script src="assets/stitch-ready.js"></script>
+  </body>
+</html>

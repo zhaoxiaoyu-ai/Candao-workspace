@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>餐道 | 營運中樞</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#528dff',
+                            light: '#80abff',
+                            dark: '#2c6dec',
+                            surface: '#f0f5ff'
+                        },
+                        neutral: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617'
+                        },
+                        semantic: {
+                            success: '#059669',
+                            warning: '#d97706',
+                            danger: '#dc2626'
+                        }
+                    },
+                    fontFamily: {
+                        headline: ["Noto Sans TC", "Public Sans", "sans-serif"],
+                        display: ["Noto Sans TC", "Public Sans", "sans-serif"],
+                        body: ["Noto Sans TC", "Public Sans", "sans-serif"],
+                        label: ["Public Sans", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(15, 23, 42, 0.05)',
+                        'float': '0 10px 40px -10px rgba(15, 23, 42, 0.08)',
+                        'inner-light': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)'
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        full: "9999px"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom utilities */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 24px -4px rgba(15, 23, 42, 0.06);
+        }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .anim-slide-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .anim-delay-1 { animation-delay: 0.1s; }
+        .anim-delay-2 { animation-delay: 0.2s; }
+        .anim-delay-3 { animation-delay: 0.3s; }
+        
+        /* Node connection lines */
+        .svg-connector {
+            stroke-dasharray: 8;
+            animation: dashMove 20s linear infinite;
+        }
+        @keyframes dashMove {
+            to {
+                stroke-dashoffset: -200;
+            }
+        }
+        
+        .pulse-dot {
+            animation: pulseDot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .5; transform: scale(1.2); }
+        }
+
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(82, 141, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(82, 141, 255, 0.1) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900 font-body antialiased overflow-x-hidden pt-[72px]">
+<!-- 1. TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-800 transition-all ease-in-out duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<!-- Brand -->
+<a class="text-xl font-headline font-bold text-neutral-900 dark:text-white flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[#528dff] font-variation-settings-'FILL'-1">restaurant</span>
+                餐道
+            </a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8 font-body text-label-sm tracking-wide">
+<a class="text-[#528dff] border-b-2 border-[#528dff] pb-1" href="#">首頁</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors duration-200" href="#">解決方案</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors duration-200" href="#">平台</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors duration-200" href="#">整合能力</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors duration-200" href="#">客戶案例</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors duration-200" href="#">資源</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors duration-200" href="#">關於餐道</a>
+</div>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-4">
+<button class="text-neutral-600 text-sm hover:text-[#528dff] transition-colors">繁中 / EN</button>
+<button class="bg-[#528dff] text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-[#2c6dec] transition-colors shadow-sm">
+                    預約演示
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-neutral-600">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- 2. Hero Section -->
+<section class="relative pt-16 pb-24 overflow-hidden">
+<!-- Background elements -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-white via-neutral-50 to-primary-surface/30"></div>
+<!-- Decorative circle -->
+<div class="absolute top-20 right-[-10%] w-[800px] h-[800px] rounded-full bg-primary-surface/40 blur-3xl opacity-60 pointer-events-none"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<!-- Copy -->
+<div class="lg:col-span-5 anim-slide-up">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-surface text-primary-dark text-xs font-semibold tracking-wider mb-6 border border-primary-light/20 shadow-inner-light">
+<span class="w-1.5 h-1.5 rounded-full bg-primary pulse-dot"></span>
+                    餐飲與零售 O2O 營運中樞
+                </div>
+<h1 class="text-4xl md:text-5xl lg:text-[54px] font-headline font-bold leading-[1.15] tracking-tight text-neutral-900 mb-6">
+                    把訂單、門店、配送與數據<span class="text-primary block mt-2">接成一條營運鏈路</span>
+</h1>
+<p class="text-lg text-neutral-600 leading-relaxed mb-10 font-body max-w-xl">
+                    餐道面向品牌總部和多門店營運，連接外賣平台、自有點餐入口、POS / KDS、CRM / 會員、配送資源、支付、ERP 和財務數據，讓訂單、餐單、履約、對賬與分析回到同一條可追溯鏈路。
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white px-8 py-3.5 rounded-lg font-medium hover:bg-primary-dark transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group">
+                        預約產品演示
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<button class="bg-white border border-neutral-200 text-neutral-700 px-8 py-3.5 rounded-lg font-medium hover:bg-neutral-50 hover:border-neutral-300 transition-all flex items-center justify-center gap-2">
+                        查看平台能力
+                    </button>
+</div>
+</div>
+<!-- Visual / Product Stage -->
+<div class="lg:col-span-7 relative anim-slide-up anim-delay-2 h-[600px] w-full">
+<!-- Base Image -->
+<div class="absolute inset-4 lg:inset-8 rounded-2xl overflow-hidden shadow-float">
+<div class="absolute inset-0 bg-neutral-900/20 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A highly detailed, professional B2B software marketing photograph showing peak-hour restaurant operations. A bustling, high-end commercial kitchen and front counter handoff area. Chefs preparing food and staff managing delivery bags. Cinematic lighting, focused on modern efficiency. The mood is fast-paced yet controlled and precise. The color palette emphasizes clean steel, warm ambient kitchen lighting, and neutral tones, aligning with a sophisticated tech-enabled business aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjRRleBzCbTdPAhEKEeZOMxyMnUSeJA7lf3qIfKMh1W6Ho6aBsWm3Z_1LmSwKDP7Ks-UbFXhPakRIjudnFkxULpJsh1sj0a-HHA6neptPG0mPgooBpQrGLNBTeeqmb2YSmgsKEX-yeLtuMVE7sZEIlxy0ZQ8IVGdr9fr_RHc_0vFIDSBrB3fdL1UT5maXHFISCiTn3enWS5Ol2YkbRNrAVfZ0jyemu2EsDGF7Jpd74rM2rHTx9n4ENFnTYK98BVLdSxCL-fxtc7Fy5"/>
+</div>
+<!-- Floating UI Cards -->
+<div class="absolute inset-0 pointer-events-none z-20">
+<!-- Callout 1: Orders -->
+<div class="absolute top-[10%] left-[-2%] glass-panel rounded-xl p-3 flex items-center gap-3 shadow-float border-l-4 border-l-primary">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+</div>
+<div>
+<div class="text-[10px] text-neutral-500 font-medium tracking-wide">外賣平台訂單</div>
+<div class="text-sm font-bold text-neutral-900">待接單</div>
+</div>
+</div>
+<!-- Callout 2: Store/KDS -->
+<div class="absolute top-[35%] right-[-5%] glass-panel rounded-xl p-3 flex items-center gap-3 shadow-float border-l-4 border-l-semantic-warning">
+<div class="w-10 h-10 rounded-full bg-semantic-warning/10 flex items-center justify-center text-semantic-warning">
+<span class="material-symbols-outlined text-xl">print</span>
+</div>
+<div>
+<div class="text-[10px] text-neutral-500 font-medium tracking-wide">門店接單與打印</div>
+<div class="text-sm font-bold text-neutral-900">製作中</div>
+</div>
+</div>
+<!-- Callout 3: Delivery -->
+<div class="absolute bottom-[25%] left-[5%] glass-panel rounded-xl p-3 flex items-center gap-3 shadow-float border-l-4 border-l-semantic-success">
+<div class="w-10 h-10 rounded-full bg-semantic-success/10 flex items-center justify-center text-semantic-success">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+</div>
+<div>
+<div class="text-[10px] text-neutral-500 font-medium tracking-wide">DMS / iDMS 配送</div>
+<div class="text-sm font-bold text-neutral-900">配送中</div>
+</div>
+</div>
+<!-- Connection Lines Overlay (SVG) -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path class="svg-connector" d="M 10 20 C 30 20, 30 50, 50 50" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"></path>
+<path class="svg-connector" d="M 90 40 C 70 40, 70 50, 50 50" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"></path>
+<path class="svg-connector" d="M 20 80 C 40 80, 40 50, 50 50" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"></path>
+<!-- Central Node Dot -->
+<circle class="pulse-dot" cx="50" cy="50" fill="#528dff" r="1.5"></circle>
+</svg>
+<!-- Central Small UI Chip -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-neutral-900 text-white px-4 py-2 rounded-lg shadow-xl border border-neutral-700 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">hub</span>
+<span class="text-xs font-medium tracking-wide">餐道營運中樞</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Proof Strip -->
+<div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mt-12 pt-8 border-t border-neutral-200">
+<div class="flex items-center gap-3 text-neutral-500 text-sm font-medium">
+<span class="material-symbols-outlined text-primary/70">verified</span>
+                服務多地餐飲品牌，支援連鎖門店、外賣平台與配送履約場景。
+            </div>
+</div>
+</section>
+<!-- 3. Connector Hub -->
+<section class="py-24 bg-white relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="text-sm font-bold tracking-widest text-primary mb-3">一個系統連接關鍵流程</div>
+<h2 class="text-3xl md:text-4xl font-headline font-bold text-neutral-900 mb-6">從多個入口進來，回到同一個營運中樞</h2>
+<p class="text-neutral-600 leading-relaxed">
+                    訂單渠道、門店執行系統、顧客與會員、支付與企業系統、配送資源和營運數據在餐道中被整理成可追蹤的工作流。
+                </p>
+</div>
+<!-- Bento Diagram Layout -->
+<div class="relative max-w-4xl mx-auto aspect-square md:aspect-video bg-neutral-50 rounded-2xl border border-neutral-100 p-8 flex items-center justify-center overflow-hidden">
+<!-- Central Node -->
+<div class="relative z-20 w-48 h-48 bg-white rounded-full shadow-float border-4 border-primary/10 flex flex-col items-center justify-center">
+<div class="w-16 h-16 bg-primary-surface rounded-full flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-3xl text-primary font-variation-settings-'FILL'-1">dashboard_customize</span>
+</div>
+<span class="font-bold text-neutral-900">餐道營運中樞</span>
+</div>
+<!-- Surrounding Nodes -->
+<!-- Top Left -->
+<div class="absolute top-12 left-12 md:top-24 md:left-24 z-10 bg-white px-5 py-3 rounded-lg shadow-sm border border-neutral-200 flex items-center gap-3">
+<span class="material-symbols-outlined text-neutral-400">storefront</span>
+<span class="text-sm font-medium text-neutral-700">訂單渠道</span>
+</div>
+<!-- Top Right -->
+<div class="absolute top-12 right-12 md:top-24 md:right-24 z-10 bg-white px-5 py-3 rounded-lg shadow-sm border border-neutral-200 flex items-center gap-3">
+<span class="material-symbols-outlined text-neutral-400">point_of_sale</span>
+<span class="text-sm font-medium text-neutral-700">門店執行系統</span>
+</div>
+<!-- Middle Left -->
+<div class="absolute left-4 md:left-12 z-10 bg-white px-5 py-3 rounded-lg shadow-sm border border-neutral-200 flex items-center gap-3">
+<span class="material-symbols-outlined text-neutral-400">group</span>
+<span class="text-sm font-medium text-neutral-700">會員與 CRM</span>
+</div>
+<!-- Middle Right -->
+<div class="absolute right-4 md:right-12 z-10 bg-white px-5 py-3 rounded-lg shadow-sm border border-neutral-200 flex items-center gap-3">
+<span class="material-symbols-outlined text-neutral-400">two_wheeler</span>
+<span class="text-sm font-medium text-neutral-700">配送資源</span>
+</div>
+<!-- Bottom Left -->
+<div class="absolute bottom-12 left-12 md:bottom-24 md:left-24 z-10 bg-white px-5 py-3 rounded-lg shadow-sm border border-neutral-200 flex items-center gap-3">
+<span class="material-symbols-outlined text-neutral-400">payments</span>
+<span class="text-sm font-medium text-neutral-700">支付</span>
+</div>
+<!-- Bottom Right -->
+<div class="absolute bottom-12 right-12 md:bottom-24 md:right-24 z-10 bg-white px-5 py-3 rounded-lg shadow-sm border border-neutral-200 flex items-center gap-3">
+<span class="material-symbols-outlined text-neutral-400">account_tree</span>
+<span class="text-sm font-medium text-neutral-700">ERP / 財務數據</span>
+</div>
+<!-- SVG Connecting Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" xmlns="http://www.w3.org/2000/svg">
+<g class="opacity-60" fill="none" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.5">
+<!-- Simplified straight lines to center for conceptual representation -->
+<line x1="20%" x2="50%" y1="20%" y2="50%"></line>
+<line x1="80%" x2="50%" y1="20%" y2="50%"></line>
+<line x1="15%" x2="50%" y1="50%" y2="50%"></line>
+<line x1="85%" x2="50%" y1="50%" y2="50%"></line>
+<line x1="20%" x2="50%" y1="80%" y2="50%"></line>
+<line x1="80%" x2="50%" y1="80%" y2="50%"></line>
+</g>
+</svg>
+</div>
+</div>
+</section>
+<!-- 4. Capability Explorer -->
+<section class="py-24 bg-neutral-900 text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-dark/20 to-transparent pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+<!-- Left: Headers & Tabs -->
+<div class="lg:col-span-4 flex flex-col">
+<div class="text-sm font-bold tracking-widest text-primary-light mb-3">能力探索器</div>
+<h2 class="text-3xl font-headline font-bold mb-10 leading-tight">五項能力對應<br/>品牌常見營運問題</h2>
+<div class="flex flex-col gap-2 relative">
+<!-- Active Indicator Line -->
+<div class="absolute left-0 top-0 bottom-0 w-0.5 bg-neutral-800 rounded-full"></div>
+<div class="absolute left-0 top-0 h-14 w-0.5 bg-primary rounded-full transition-all duration-300"></div>
+<!-- Tabs -->
+<button class="text-left pl-6 py-4 text-white font-medium bg-white/5 rounded-r-lg border-l-2 border-transparent relative">
+                            渠道聚合
+                        </button>
+<button class="text-left pl-6 py-4 text-neutral-400 font-medium hover:text-white transition-colors">
+                            營運承接
+                        </button>
+<button class="text-left pl-6 py-4 text-neutral-400 font-medium hover:text-white transition-colors">
+                            配送履約
+                        </button>
+<button class="text-left pl-6 py-4 text-neutral-400 font-medium hover:text-white transition-colors">
+                            數據對賬
+                        </button>
+<button class="text-left pl-6 py-4 text-neutral-400 font-medium hover:text-white transition-colors">
+                            生態接入
+                        </button>
+</div>
+</div>
+<!-- Right: Content Panel -->
+<div class="lg:col-span-8 lg:pl-12">
+<div class="bg-neutral-800/50 border border-neutral-700/50 rounded-2xl p-8 md:p-12 h-full flex flex-col justify-between backdrop-blur-sm">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary-light text-3xl font-variation-settings-'FILL'-1">donut_small</span>
+<h3 class="text-2xl font-bold">營運狀態總覽</h3>
+</div>
+<p class="text-neutral-300 leading-relaxed mb-8 text-lg">
+                                呈現訂單、門店、配送和對賬狀態如何在同一流程中被追蹤。
+                            </p>
+<div class="bg-neutral-900/50 rounded-xl p-6 border border-neutral-700 mb-8">
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex flex-shrink-0 items-center justify-center mt-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-light"></span>
+</div>
+<div>
+<h4 class="font-bold text-white mb-2">渠道聚合</h4>
+<p class="text-neutral-400 text-sm leading-relaxed">
+                                            外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入餐道 OMS。
+                                        </p>
+</div>
+</div>
+</div>
+<p class="text-sm text-neutral-500 italic">
+                                下一步：查看平台能力或預約相似場景演示。
+                            </p>
+</div>
+<div class="mt-10 pt-8 border-t border-neutral-700/50">
+<button class="text-primary-light font-medium flex items-center gap-2 hover:text-white transition-colors group">
+                                查看平台能力
+                                <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Scale Proof -->
+<section class="py-24 bg-neutral-50 border-b border-neutral-200">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="text-sm font-bold tracking-widest text-primary mb-3">服務規模</div>
+<h2 class="text-3xl font-headline font-bold text-neutral-900">用已公開的服務數據建立可信</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+<!-- Metric 1 -->
+<div class="bg-white p-8 rounded-2xl border border-neutral-100 shadow-soft text-center group hover:shadow-float transition-shadow">
+<div class="text-3xl lg:text-4xl font-headline font-black text-neutral-900 mb-2 group-hover:text-primary transition-colors">5000+</div>
+<div class="text-sm text-neutral-500 font-medium">品牌數量</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-white p-8 rounded-2xl border border-neutral-100 shadow-soft text-center group hover:shadow-float transition-shadow">
+<div class="text-3xl lg:text-4xl font-headline font-black text-neutral-900 mb-2 group-hover:text-primary transition-colors">500M+</div>
+<div class="text-sm text-neutral-500 font-medium">每日處理訂單</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-white p-8 rounded-2xl border border-neutral-100 shadow-soft text-center group hover:shadow-float transition-shadow">
+<div class="text-3xl lg:text-4xl font-headline font-black text-neutral-900 mb-2 group-hover:text-primary transition-colors">400+</div>
+<div class="text-sm text-neutral-500 font-medium">覆蓋城市</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-white p-8 rounded-2xl border border-neutral-100 shadow-soft text-center group hover:shadow-float transition-shadow">
+<div class="text-3xl lg:text-4xl font-headline font-black text-neutral-900 mb-2 group-hover:text-primary transition-colors">200K+</div>
+<div class="text-sm text-neutral-500 font-medium">門店數量</div>
+</div>
+<!-- Metric 5 -->
+<div class="bg-white p-8 rounded-2xl border border-neutral-100 shadow-soft text-center group hover:shadow-float transition-shadow">
+<div class="text-3xl lg:text-4xl font-headline font-black text-neutral-900 mb-2 group-hover:text-primary transition-colors">4.5B+</div>
+<div class="text-sm text-neutral-500 font-medium">每月配送訂單 GMV</div>
+</div>
+<!-- Metric 6 -->
+<div class="bg-primary p-8 rounded-2xl shadow-soft text-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+<div class="relative z-10">
+<div class="text-3xl lg:text-4xl font-headline font-black text-white mb-2">30% <span class="text-xl">up</span></div>
+<div class="text-sm text-primary-surface font-medium">客戶效率提升</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Customer Case Preview -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Left: Copy -->
+<div>
+<div class="text-sm font-bold tracking-widest text-primary mb-3">客戶案例</div>
+<h2 class="text-3xl md:text-4xl font-headline font-bold text-neutral-900 mb-6 leading-tight">從相似客戶案例<br/>看落地方式</h2>
+<p class="text-lg text-neutral-600 leading-relaxed mb-10">
+                        以實名客戶案例和業態案例呈現訂單整合、配送履約、會員營運、數據分析與對賬改善。
+                    </p>
+<button class="bg-neutral-900 text-white px-8 py-3.5 rounded-lg font-medium hover:bg-neutral-800 transition-all flex items-center justify-center gap-2 group">
+                        查看客戶案例
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<!-- Right: Cases Grid/Cards -->
+<div class="space-y-6">
+<div class="text-sm font-bold text-neutral-400 tracking-wider mb-2">案例摘要</div>
+<!-- Case 1 -->
+<div class="bg-neutral-50 rounded-2xl p-6 md:p-8 border border-neutral-100 hover:border-primary/30 transition-colors shadow-sm group">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold text-neutral-900">Pizza-Box</h3>
+</div>
+<p class="text-sm text-neutral-500 mb-4 leading-relaxed">合作超過 9 年，覆蓋 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、BI 分析與客戶服務。</p>
+<div class="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                            閱讀完整案例 <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+</div>
+</div>
+<!-- Case 2 -->
+<div class="bg-neutral-50 rounded-2xl p-6 md:p-8 border border-neutral-100 hover:border-primary/30 transition-colors shadow-sm group">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold text-neutral-900">JIA Group</h3>
+</div>
+<p class="text-sm text-neutral-500 mb-4 leading-relaxed">覆蓋多品牌與多門店營運場景。</p>
+<div class="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                            閱讀完整案例 <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Final CTA -->
+<section class="py-24 relative overflow-hidden bg-neutral-900">
+<div class="absolute inset-0 z-0 bg-grid-pattern opacity-30"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/80 to-transparent z-10 pointer-events-none"></div>
+<div class="relative z-20 max-w-4xl mx-auto px-6 lg:px-8 text-center text-white">
+<div class="text-sm font-bold tracking-widest text-primary-light mb-4">下一步</div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-10 leading-tight">帶著你的營運場景，<br/>看餐道如何接入</h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-medium hover:bg-primary-light transition-all shadow-lg text-lg flex items-center justify-center gap-2 group">
+                    預約相似場景演示
+                    <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<button class="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all text-lg flex items-center justify-center gap-2">
+                    查看平台能力
+                </button>
+</div>
+</div>
+</section>
+<!-- 8. Footer -->
+<footer class="bg-neutral-50 dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-800 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto space-y-4 md:space-y-0">
+<div class="font-headline font-bold text-neutral-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-[#528dff] font-variation-settings-'FILL'-1 text-lg">restaurant</span>
+                 餐道
+            </div>
+<div class="font-body text-sm text-neutral-500 dark:text-neutral-400">
+                餐道國際｜餐飲與零售 O2O 營運中樞
+            </div>
+<div class="flex items-center gap-6 font-body text-sm">
+<a class="text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all opacity-80 hover:opacity-100" href="#">解決方案</a>
+<a class="text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all opacity-80 hover:opacity-100" href="#">平台</a>
+<a class="text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all opacity-80 hover:opacity-100" href="#">整合能力</a>
+<a class="text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all opacity-80 hover:opacity-100" href="#">客戶案例</a>
+<a class="text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all opacity-80 hover:opacity-100" href="#">資源</a>
+<a class="text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all opacity-80 hover:opacity-100" href="#">關於餐道</a>
+</div>
+</div>
+</footer>
+</body></html>

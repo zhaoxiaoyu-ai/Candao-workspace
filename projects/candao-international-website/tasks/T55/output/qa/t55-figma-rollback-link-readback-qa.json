@@ -1,0 +1,40 @@
+{
+  "task": "T55",
+  "status": "archived",
+  "superseded_by": "T56",
+  "superseded_reason": "T55 restored screenshots but still changed original Aceternity source text into website sitemap labels. T56 restores the original source text and sets URL hyperlinks.",
+  "date": "2026-09-01",
+  "figma_file": "BMXIuVRzSUUt9YNhVAQA6K",
+  "page": {
+    "id": "3:5",
+    "name": "03 Desktop Pages / Bilingual Validation"
+  },
+  "user_correction": "回退 T54 的替换式执行；保留原来的截图，只把最上方路径文字直接改成超链接。",
+  "rollback": {
+    "removed_t54_panel_id": "623:2",
+    "panel_exists_after": false,
+    "archived_prefix_count_after": 0,
+    "restored_original_nodes_count": 23,
+    "original_screenshot_nodes_checked": 12,
+    "original_screenshot_nodes_visible": 12
+  },
+  "linked_top_path_text_nodes": [
+    { "id": "93:4676", "text": "首頁 /", "hyperlink": { "type": "NODE", "value": "336:7645" } },
+    { "id": "93:4681", "text": "首頁\n/", "hyperlink": { "type": "NODE", "value": "336:7645" } },
+    { "id": "93:4683", "text": "解決方案\n/solutions", "hyperlink": { "type": "NODE", "value": "447:8876" } },
+    { "id": "94:4687", "text": "平台能力\n/platform", "hyperlink": { "type": "NODE", "value": "488:350" } },
+    { "id": "94:4691", "text": "預約產品演示\n/book-a-demo", "hyperlink": { "type": "NODE", "value": "488:2401" } },
+    { "id": "94:4695", "text": "資源與支援\n/resources", "hyperlink": { "type": "NODE", "value": "488:1413" } },
+    { "id": "95:4699", "text": "整合能力\n/integrations", "hyperlink": { "type": "NODE", "value": "488:668" } },
+    { "id": "95:4703", "text": "頁腳法務\n/privacy-policy", "hyperlink": { "type": "URL", "value": "https://www.can-dao.com.hk/privacy-policy" } },
+    { "id": "95:4707", "text": "聯絡與預約\n/contact", "hyperlink": { "type": "NODE", "value": "488:2401" } },
+    { "id": "95:4714", "text": "資源\n/resources", "hyperlink": { "type": "NODE", "value": "488:1413" } },
+    { "id": "95:4718", "text": "常見問題\n/resources/faq", "hyperlink": { "type": "URL", "value": "https://www.can-dao.com.hk/resources/faq" } },
+    { "id": "95:4722", "text": "客戶案例\n/customers", "hyperlink": { "type": "NODE", "value": "488:1138" } }
+  ],
+  "counts": {
+    "linked_top_path_text_count": 12,
+    "missing_text_nodes": 0
+  },
+  "status": "pass"
+}

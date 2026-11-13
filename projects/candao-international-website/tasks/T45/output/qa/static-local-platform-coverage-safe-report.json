@@ -1,0 +1,43 @@
+{
+  "suite": "T45 sequential Stitch static QA",
+  "page": "platform",
+  "target": "projects/candao-international-website/tasks/T45/output/local-html/platform-coverage-safe-2026-08-23.html",
+  "status": "fail",
+  "checks": [
+    {
+      "name": "header_or_page_nav_complete",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "footer_nav_present_when_footer_exists",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "visible_risk_terms_absent",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "raw_disallowed_tokens_absent",
+      "status": "fail",
+      "detail": "text-transform"
+    },
+    {
+      "name": "case_sensitive_terms_preserved",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "brand_zh_visible",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "language_switch_visible",
+      "status": "pass",
+      "detail": ""
+    }
+  ]
+}

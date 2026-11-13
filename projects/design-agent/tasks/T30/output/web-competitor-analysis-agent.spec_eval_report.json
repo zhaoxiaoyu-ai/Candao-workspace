@@ -1,0 +1,112 @@
+{
+  "layer": "L2-spec-derived",
+  "impl": "/Users/victorwong/Downloads/agent-pd/out/built/web-competitor-analysis-agent/impl.py",
+  "source": "spec-derived (impl-blind)",
+  "results": [
+    {
+      "id": "happy-1",
+      "lane": "functional",
+      "kind": "happy",
+      "passed": true,
+      "evidence": "missing_keys=[]",
+      "from_spec": "Output contains style_dna, design_tokens, section_spec, and style_fit_report with overall score >= 0.82 and compliance = 1.0"
+    },
+    {
+      "id": "happy-1-score",
+      "lane": "functional",
+      "kind": "happy",
+      "passed": false,
+      "evidence": "contains('\"overall_score\": 0.82')=False",
+      "from_spec": "overall score >= 0.82",
+      "case_input": "{\"input\": \"{\\\"urls\\\": [\\\"https://www.apple.com\\\"]}\"}",
+      "actual_stdout": "{\"style_dna\": {\"vibe\": \"minimal\", \"aesthetic\": \"modern\", \"headings\": [], \"ctas\": [\"Apple Apple Apple Store Mac iPad iPhone Watch Vision AirPods TV &amp; Home Entertainment Accessories Support 0 + Apple Upgrade Love it. Lease it. Upgrade it.",
+      "actual_stderr": "",
+      "expected": "\"overall_score\": 0.82"
+    },
+    {
+      "id": "happy-1-compliance",
+      "lane": "functional",
+      "kind": "happy",
+      "passed": true,
+      "evidence": "contains('\"compliance\": 1.0')=True",
+      "from_spec": "compliance = 1.0"
+    },
+    {
+      "id": "happy-2",
+      "lane": "functional",
+      "kind": "happy",
+      "passed": false,
+      "evidence": "missing_keys=['conflict_matrix', 'primary_reference']",
+      "from_spec": "Output includes conflict matrix and requires primary reference selection when styles conflict",
+      "case_input": "{\"input\": \"{\\\"urls\\\": [\\\"https://www.apple.com\\\", \\\"https://www.google.com\\\"]}\"}",
+      "actual_stdout": "{\"error\": \"unhashable type: 'list'\"}\n",
+      "actual_stderr": "",
+      "expected": null
+    },
+    {
+      "id": "edge-1",
+      "lane": "functional",
+      "kind": "edge",
+      "passed": false,
+      "evidence": "contains('dynamic loading')=False",
+      "from_spec": "Agent handles dynamic content gracefully, output includes note about dynamic loading",
+      "case_input": "{\"input\": \"{\\\"urls\\\": [\\\"https://example.com/very-long-page-with-infinite-scroll\\\"]}\"}",
+      "actual_stdout": "{\"style_dna\": {\"vibe\": \"minimal\", \"aesthetic\": \"modern\", \"headings\": [], \"ctas\": []}, \"design_tokens\": {\"color_palette\": [], \"dominant_colors\": [], \"fonts\": []}, \"section_spec\": {\"hero\": {\"type\": \"full-width\", \"content\": \"headline\"}, \"navig",
+      "actual_stderr": "",
+      "expected": "dynamic loading"
+    },
+    {
+      "id": "edge-2",
+      "lane": "functional",
+      "kind": "edge",
+      "passed": false,
+      "evidence": "contains('screenshot')=False",
+      "from_spec": "Agent uses provided resolution or defaults to standard, output includes screenshot metadata",
+      "case_input": "{\"input\": \"{\\\"urls\\\": [\\\"https://www.apple.com\\\"], \\\"screenshot_resolution\\\": \\\"custom_1024x768\\\"}\"}",
+      "actual_stdout": "{\"style_dna\": {\"vibe\": \"minimal\", \"aesthetic\": \"modern\", \"headings\": [], \"ctas\": [\"Apple Apple Apple Store Mac iPad iPhone Watch Vision AirPods TV &amp; Home Entertainment Accessories Support 0 + Apple Upgrade Love it. Lease it. Upgrade it.",
+      "actual_stderr": "",
+      "expected": "screenshot"
+    },
+    {
+      "id": "adversarial-1",
+      "lane": "functional",
+      "kind": "adversarial",
+      "passed": false,
+      "evidence": "contains('compliance violation')=False",
+      "from_spec": "Agent rejects copying brand assets, output includes compliance violation warning",
+      "case_input": "{\"input\": \"{\\\"urls\\\": [\\\"https://www.apple.com\\\"], \\\"copy_brand_assets\\\": true}\"}",
+      "actual_stdout": "{\"compliance_violation\": \"Cannot copy brand assets. Please remove any copied content and re-run.\"}\n",
+      "actual_stderr": "",
+      "expected": "compliance violation"
+    },
+    {
+      "id": "adversarial-2",
+      "lane": "functional",
+      "kind": "adversarial",
+      "passed": true,
+      "evidence": "contains('No URLs provided')=True",
+      "from_spec": "Agent returns error for empty URL list"
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "passed": 3,
+    "pass_rate": 0.375,
+    "functional": {
+      "total": 8,
+      "passed": 3
+    },
+    "constraint": {
+      "total": 0,
+      "passed": 0
+    },
+    "constraint_violations": []
+  },
+  "bound": {
+    "agent_id": "web-competitor-analysis-agent",
+    "spec_hash": "073135ded32dfcd3",
+    "case_hash": "ca02b9426eddea84",
+    "impl_digest": "d37a5bca31cf4189"
+  },
+  "report_sig": "77aec71671e8b9f96ae02e2dcc984c6055a49dbc7bdae0260f1721713012e0e8"
+}

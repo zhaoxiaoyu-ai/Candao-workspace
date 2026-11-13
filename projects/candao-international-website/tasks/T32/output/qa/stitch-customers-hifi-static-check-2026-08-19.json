@@ -1,0 +1,29 @@
+{
+  "suite": "T32 Customers Stitch high-fidelity static check",
+  "screen_id": "ae3d839fa9e44a2a8526c6e099edfd16",
+  "status": "fail",
+  "checked_files": [
+    "tasks/T32/output/stitch-downloads/failed-home-generated-from-customers-prompt-ae3d839fa9e44a2a8526c6e099edfd16.html",
+    "tasks/T32/output/stitch-downloads/failed-home-generated-from-customers-prompt-ae3d839fa9e44a2a8526c6e099edfd16.png"
+  ],
+  "hard_failures": [
+    {
+      "code": "wrong_page_generated",
+      "message": "Stitch 首次生成结果是首页结构，title 为 Candao - 為複雜餐飲營運建立清晰連接，不是 Customers / 客戶案例页。"
+    },
+    {
+      "code": "brand_display_mismatch",
+      "message": "繁體中文可见页面中多处使用 Candao，未按项目规则显示为「餐道」。"
+    },
+    {
+      "code": "missing_customers_evidence",
+      "message": "缺少 Customers 页必须出现的 Pizza-Box、JIA Group、Jardine Group、授权规模指标、iDMS / SaaS / AMS / Connector 等内容。"
+    },
+    {
+      "code": "internal_placeholder_comment",
+      "message": "HTML 源码中仍出现 placeholder 注释，不允许进入正式 design-handoff 输出。"
+    }
+  ],
+  "decision": "do_not_promote_to_formal_output",
+  "next_required_action": "等待用户批准后，使用 stitch::upload-to-stitch 本地上传脚本把 T31 / T11.5 高保真参考 PNG 上传到 Stitch。"
+}

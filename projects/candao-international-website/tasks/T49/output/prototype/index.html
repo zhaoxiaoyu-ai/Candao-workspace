@@ -1,0 +1,2004 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>接入評估中心｜餐道</title>
+    <style>
+      :root {
+        --primary: #528dff;
+        --primary-strong: #3b82f6;
+        --primary-soft: #eef5ff;
+        --ink: #16233d;
+        --muted: rgba(22, 35, 61, 0.66);
+        --quiet: rgba(22, 35, 61, 0.46);
+        --line: rgba(22, 35, 61, 0.12);
+        --page: #f6f8fc;
+        --surface: #ffffff;
+        --navy: #0f172a;
+        --navy-deep: #000d2b;
+        --panel: #141e30;
+        --panel-side: #0f1829;
+        --panel-active: #1e3a5f;
+        --dark-muted: #9aa8bd;
+        --success: #00a884;
+        --warning: #ffab00;
+        --danger: #ef4444;
+        --content: 1200px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: #eef1f6;
+        color: var(--ink);
+        font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Inter, Arial, sans-serif;
+        letter-spacing: 0;
+      }
+
+      body {
+        margin: 0;
+        background: #eef1f6;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+        letter-spacing: 0;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1440px, 100%);
+        margin: 0 auto;
+        overflow: hidden;
+        background: var(--surface);
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.1);
+      }
+
+      .container {
+        width: min(var(--content), calc(100% - 56px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: absolute;
+        z-index: 50;
+        inset: 0 0 auto;
+        height: 78px;
+      }
+
+      .nav-inner {
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 15px;
+        font-weight: 760;
+      }
+
+      .brand img {
+        display: block;
+        width: 116px;
+        height: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        gap: 28px;
+      }
+
+      .nav-links a,
+      .language,
+      .footer-links a {
+        white-space: nowrap;
+      }
+
+      .nav-links a[aria-current="page"] {
+        color: #fff;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 22px;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 760;
+        line-height: 1;
+        white-space: nowrap;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      }
+
+      .button.primary {
+        border-color: var(--primary);
+        background: var(--primary);
+      }
+
+      .button.light {
+        border-color: rgba(22, 35, 61, 0.12);
+        background: #fff;
+        color: var(--ink);
+      }
+
+      .button.soft {
+        border-color: rgba(82, 141, 255, 0.24);
+        background: var(--primary-soft);
+        color: var(--primary-strong);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 930px;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(6, 12, 28, 0.96), rgba(10, 20, 43, 0.84) 48%, rgba(9, 18, 36, 0.76)),
+          url("home-hero-restaurant-ops-2026-08-08.png") center / cover;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 74% 30%, rgba(82, 141, 255, 0.24), transparent 24%),
+          linear-gradient(180deg, rgba(15, 23, 42, 0.05), rgba(15, 23, 42, 0.9)),
+          repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.024) 0 1px, transparent 1px 136px);
+        pointer-events: none;
+      }
+
+      .hero-main {
+        position: relative;
+        z-index: 2;
+        padding-top: 154px;
+      }
+
+      .hero-copy {
+        max-width: 980px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .eyebrow,
+      .kicker {
+        margin: 0 0 16px;
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 820;
+        line-height: 20px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 22px;
+        font-size: 64px;
+        line-height: 1.12;
+        font-weight: 820;
+      }
+
+      h1 span {
+        display: block;
+        color: var(--primary);
+      }
+
+      h2 {
+        margin: 0;
+        color: var(--ink);
+        font-size: 40px;
+        line-height: 46px;
+        font-weight: 820;
+      }
+
+      h3 {
+        margin-bottom: 8px;
+        color: var(--ink);
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 780;
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .hero .lead {
+        max-width: 820px;
+        margin: 0 auto;
+        color: rgba(226, 232, 240, 0.82);
+      }
+
+      .hero-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 32px;
+      }
+
+      .hero-shell {
+        position: relative;
+        z-index: 3;
+        width: min(1280px, calc(100% - 40px));
+        margin: 54px auto 0;
+        border: 1px solid rgba(121, 179, 255, 0.34);
+        border-radius: 16px;
+        background: rgba(20, 30, 48, 0.95);
+        box-shadow: 0 0 42px rgba(59, 130, 246, 0.16), 0 30px 80px rgba(0, 0, 0, 0.34);
+      }
+
+      .hero-toolbar,
+      .panel-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 16px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .window-dots {
+        display: flex;
+        gap: 8px;
+      }
+
+      .window-dots span {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.28);
+      }
+
+      .stage-title {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        min-width: 0;
+      }
+
+      .stage-title strong {
+        color: #fff;
+        font-size: 18px;
+      }
+
+      .stage-title span {
+        color: var(--dark-muted);
+        font-size: 13px;
+      }
+
+      .hero-mini-grid {
+        display: grid;
+        grid-template-columns: 240px minmax(0, 1fr) 288px;
+        min-height: 346px;
+      }
+
+      .mini-rail,
+      .hero-summary {
+        padding: 18px;
+        background: rgba(15, 24, 41, 0.78);
+      }
+
+      .mini-rail {
+        display: grid;
+        align-content: start;
+        gap: 10px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .mini-rail small,
+      .hero-summary small,
+      .summary-panel small,
+      .ui-card small,
+      .route-card small,
+      .metric-card small {
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 820;
+      }
+
+      .hero-choice,
+      .scenario-button,
+      .step-button,
+      .view-tab,
+      .summary-chip,
+      .filter-chip {
+        border: 1px solid rgba(82, 141, 255, 0.18);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+        color: #dbeafe;
+        font-size: 13px;
+        font-weight: 740;
+      }
+
+      .hero-choice {
+        min-height: 42px;
+        padding: 0 12px;
+        text-align: left;
+      }
+
+      .hero-choice[aria-pressed="true"],
+      .scenario-button[aria-pressed="true"] {
+        border-color: rgba(82, 141, 255, 0.72);
+        background: var(--panel-active);
+        color: #fff;
+      }
+
+      .hero-map {
+        padding: 22px;
+      }
+
+      .signal-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .signal {
+        min-height: 64px;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .signal strong {
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .signal span {
+        display: block;
+        margin-top: 4px;
+        color: rgba(226, 232, 240, 0.68);
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .live-map {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        align-items: center;
+        min-height: 206px;
+        padding: 18px;
+        border-radius: 12px;
+        border: 1px solid rgba(121, 179, 255, 0.24);
+        background:
+          linear-gradient(135deg, rgba(82, 141, 255, 0.12), rgba(255, 255, 255, 0.02)),
+          rgba(15, 24, 41, 0.74);
+      }
+
+      .node-stack {
+        display: grid;
+        gap: 10px;
+      }
+
+      .map-node,
+      .core-node {
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .map-node {
+        min-height: 52px;
+        display: grid;
+        align-content: center;
+        gap: 4px;
+        padding: 10px 12px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .map-node strong {
+        color: #fff;
+        font-size: 13px;
+      }
+
+      .map-node span {
+        color: rgba(226, 232, 240, 0.66);
+        font-size: 12px;
+      }
+
+      .core-node {
+        min-height: 154px;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        border-color: rgba(121, 179, 255, 0.5);
+        background:
+          radial-gradient(circle at center, rgba(82, 141, 255, 0.3), transparent 62%),
+          rgba(30, 58, 95, 0.72);
+        text-align: center;
+        box-shadow: inset 0 0 38px rgba(82, 141, 255, 0.1), 0 0 34px rgba(82, 141, 255, 0.16);
+      }
+
+      .core-node strong {
+        display: block;
+        color: #fff;
+        font-size: 22px;
+      }
+
+      .core-node span {
+        display: block;
+        margin-top: 8px;
+        color: #b9c9e3;
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .hero-summary {
+        display: grid;
+        align-content: start;
+        gap: 12px;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .summary-mini {
+        min-height: 74px;
+        padding: 13px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .summary-mini strong {
+        display: block;
+        margin-top: 6px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      section {
+        padding: 92px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.74fr) minmax(320px, 0.26fr);
+        gap: 44px;
+        align-items: end;
+        margin-bottom: 34px;
+      }
+
+      .section-copy {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        min-height: 26px;
+        align-items: center;
+        margin-bottom: 14px;
+        padding: 0 8px;
+        border-radius: 4px;
+        background: var(--primary-soft);
+        color: var(--primary-strong);
+        font-size: 12px;
+      }
+
+      .workspace {
+        background: #f8fbff;
+      }
+
+      .stepper {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1px;
+        overflow: hidden;
+        margin-bottom: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--line);
+      }
+
+      .step-button {
+        min-height: 78px;
+        padding: 14px;
+        background: #fff;
+        color: var(--ink);
+        text-align: left;
+      }
+
+      .step-button span {
+        display: block;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 820;
+      }
+
+      .step-button strong {
+        display: block;
+        margin-top: 8px;
+        color: var(--ink);
+        font-size: 15px;
+      }
+
+      .step-button[aria-pressed="true"] {
+        background: var(--navy);
+      }
+
+      .step-button[aria-pressed="true"] strong {
+        color: #fff;
+      }
+
+      .step-help {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        margin-bottom: 22px;
+        border: 1px solid rgba(82, 141, 255, 0.18);
+        border-radius: 8px;
+        background: var(--primary-soft);
+        color: rgba(22, 35, 61, 0.75);
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .workspace-grid {
+        display: grid;
+        grid-template-columns: 270px minmax(0, 1fr) 318px;
+        gap: 18px;
+        align-items: start;
+      }
+
+      .scenario-panel,
+      .operator-panel,
+      .summary-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 18px 48px rgba(22, 35, 61, 0.08);
+      }
+
+      .scenario-panel {
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        position: sticky;
+        top: 18px;
+      }
+
+      .scenario-button {
+        min-height: 78px;
+        display: grid;
+        gap: 5px;
+        align-content: center;
+        padding: 12px;
+        background: #f9fbff;
+        color: var(--ink);
+        text-align: left;
+      }
+
+      .scenario-button strong {
+        color: var(--ink);
+        font-size: 15px;
+      }
+
+      .scenario-button span {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .scenario-button[aria-pressed="true"] strong,
+      .scenario-button[aria-pressed="true"] span {
+        color: #fff;
+      }
+
+      .operator-panel {
+        overflow: hidden;
+        background: var(--panel);
+      }
+
+      .panel-toolbar {
+        background: rgba(15, 24, 41, 0.78);
+      }
+
+      .panel-search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 260px;
+        min-height: 38px;
+        padding: 0 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(226, 232, 240, 0.68);
+        font-size: 12px;
+      }
+
+      .operator-body {
+        padding: 20px;
+      }
+
+      .operator-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+        align-items: start;
+        margin-bottom: 18px;
+      }
+
+      .operator-header h3 {
+        color: #fff;
+      }
+
+      .operator-header p {
+        margin: 0;
+        color: rgba(226, 232, 240, 0.72);
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .status-badges,
+      .summary-chip-grid,
+      .filter-row,
+      .case-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .badge {
+        display: inline-flex;
+        min-height: 28px;
+        align-items: center;
+        padding: 0 10px;
+        border-radius: 6px;
+        color: #dbeafe;
+        background: rgba(82, 141, 255, 0.14);
+        border: 1px solid rgba(121, 179, 255, 0.22);
+        font-size: 12px;
+        font-weight: 740;
+      }
+
+      .badge.green {
+        color: #99f0d9;
+        background: rgba(0, 168, 132, 0.14);
+        border-color: rgba(0, 168, 132, 0.32);
+      }
+
+      .badge.amber {
+        color: #ffe0a3;
+        background: rgba(255, 171, 0, 0.14);
+        border-color: rgba(255, 171, 0, 0.32);
+      }
+
+      .badge.red {
+        color: #fecaca;
+        background: rgba(239, 68, 68, 0.14);
+        border-color: rgba(239, 68, 68, 0.32);
+      }
+
+      .system-board {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .topology-card,
+      .ui-card {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .topology-card {
+        min-height: 420px;
+        padding: 16px;
+      }
+
+      .topology {
+        display: grid;
+        grid-template-columns: 1fr 144px 1fr;
+        gap: 14px;
+        align-items: center;
+        min-height: 230px;
+      }
+
+      .source-list,
+      .output-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .source-pill,
+      .output-pill {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 0 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(226, 232, 240, 0.9);
+        font-size: 13px;
+        font-weight: 740;
+      }
+
+      .source-pill span,
+      .output-pill span {
+        color: rgba(226, 232, 240, 0.55);
+        font-size: 12px;
+      }
+
+      .hub-core {
+        min-height: 160px;
+        display: grid;
+        place-items: center;
+        padding: 16px;
+        border-radius: 14px;
+        border: 1px solid rgba(121, 179, 255, 0.54);
+        background:
+          radial-gradient(circle at center, rgba(82, 141, 255, 0.32), transparent 64%),
+          rgba(30, 58, 95, 0.76);
+        color: #fff;
+        text-align: center;
+      }
+
+      .hub-core strong {
+        display: block;
+        font-size: 19px;
+        line-height: 26px;
+      }
+
+      .hub-core span {
+        display: block;
+        margin-top: 8px;
+        color: #b9c9e3;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .flow-table {
+        overflow: hidden;
+        margin-top: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+      }
+
+      .flow-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1.2fr;
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .flow-row + .flow-row {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .flow-cell {
+        min-height: 48px;
+        display: grid;
+        align-content: center;
+        padding: 10px;
+        background: rgba(15, 24, 41, 0.54);
+        color: rgba(226, 232, 240, 0.76);
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .flow-row.header .flow-cell {
+        min-height: 38px;
+        color: #fff;
+        background: rgba(15, 24, 41, 0.86);
+        font-weight: 800;
+      }
+
+      .side-cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .ui-card {
+        min-height: 156px;
+        padding: 14px;
+      }
+
+      .ui-card strong {
+        display: block;
+        margin-top: 8px;
+        color: #fff;
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      .ui-card p {
+        margin: 8px 0 0;
+        color: rgba(226, 232, 240, 0.66);
+        font-size: 12px;
+        line-height: 19px;
+      }
+
+      .summary-panel {
+        position: sticky;
+        top: 18px;
+        overflow: hidden;
+      }
+
+      .summary-header {
+        min-height: 130px;
+        padding: 18px;
+        color: #fff;
+        background:
+          linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(82, 141, 255, 0.62)),
+          url("platform-dashboard-ui-rich-2026-08-05.png") center / cover;
+      }
+
+      .summary-header h3 {
+        color: #fff;
+      }
+
+      .summary-header p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .summary-body {
+        display: grid;
+        gap: 12px;
+        padding: 14px;
+      }
+
+      .summary-item {
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f9fbff;
+      }
+
+      .summary-item strong {
+        display: block;
+        margin-top: 6px;
+        color: var(--ink);
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      .summary-item span {
+        display: block;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .proof-router {
+        background: #fff;
+      }
+
+      .router-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(320px, 0.28fr);
+        gap: 18px;
+        align-items: start;
+      }
+
+      .view-tabs {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .view-tab {
+        min-height: 42px;
+        padding: 0 16px;
+        background: #f9fbff;
+        color: var(--ink);
+      }
+
+      .view-tab[aria-pressed="true"] {
+        background: var(--navy);
+        color: #fff;
+        border-color: var(--navy);
+      }
+
+      .view-panel,
+      .route-card,
+      .media-panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 18px 48px rgba(22, 35, 61, 0.08);
+      }
+
+      .view-panel {
+        overflow: hidden;
+      }
+
+      .view-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px;
+        align-items: start;
+        padding: 20px;
+        border-bottom: 1px solid var(--line);
+        background: #f9fbff;
+      }
+
+      .view-header p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .view-status {
+        display: grid;
+        gap: 6px;
+        justify-items: end;
+        color: var(--quiet);
+        font-size: 12px;
+      }
+
+      .artifact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        background: var(--line);
+      }
+
+      .artifact-card {
+        min-height: 224px;
+        display: grid;
+        align-content: space-between;
+        gap: 18px;
+        padding: 20px;
+        background: #fff;
+      }
+
+      .artifact-card:nth-child(2) {
+        background: var(--primary-soft);
+      }
+
+      .artifact-card strong {
+        color: var(--ink);
+        font-size: 19px;
+        line-height: 26px;
+      }
+
+      .artifact-card p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .artifact-card .tag {
+        width: fit-content;
+        max-width: 100%;
+        display: inline-flex;
+        min-height: 26px;
+        align-items: center;
+        padding: 0 8px;
+        border-radius: 6px;
+        background: rgba(82, 141, 255, 0.13);
+        color: var(--primary-strong);
+        font-size: 12px;
+        font-weight: 780;
+      }
+
+      .media-panel {
+        overflow: hidden;
+        position: sticky;
+        top: 18px;
+      }
+
+      .media-image {
+        min-height: 256px;
+        background:
+          linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.72)),
+          url("customers-hero-case-ops-2026-08-08.png") center / cover;
+      }
+
+      .media-body {
+        display: grid;
+        gap: 12px;
+        padding: 18px;
+      }
+
+      .media-body p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .filter-row {
+        margin-top: 8px;
+      }
+
+      .filter-chip {
+        min-height: 30px;
+        padding: 0 10px;
+        background: #f8fbff;
+        color: var(--muted);
+      }
+
+      .proof-band {
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(4, 10, 27, 0.97), rgba(11, 24, 53, 0.9)),
+          url("integrations-ecosystem-ui-2026-08-08.png") center / cover;
+      }
+
+      .proof-band h2 {
+        color: #fff;
+      }
+
+      .proof-band .lead {
+        color: rgba(226, 232, 240, 0.74);
+      }
+
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 1px;
+        overflow: hidden;
+        margin-top: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .metric-card {
+        min-height: 178px;
+        display: grid;
+        align-content: center;
+        gap: 8px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .metric-card strong {
+        color: #fff;
+        font-size: 40px;
+        line-height: 44px;
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      .metric-card span {
+        color: rgba(226, 232, 240, 0.74);
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .demo-cta {
+        background: #f8fbff;
+      }
+
+      .demo-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 32px;
+        align-items: stretch;
+      }
+
+      .demo-copy,
+      .demo-summary {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 18px 48px rgba(22, 35, 61, 0.08);
+      }
+
+      .demo-copy {
+        display: grid;
+        align-content: center;
+        padding: 34px;
+      }
+
+      .demo-copy p {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      .demo-summary {
+        overflow: hidden;
+      }
+
+      .demo-screen {
+        min-height: 240px;
+        background:
+          linear-gradient(135deg, rgba(15, 23, 42, 0.78), rgba(82, 141, 255, 0.36)),
+          url("home-product-showcase-operations-ui-2026-08-05.png") center / cover;
+      }
+
+      .demo-fields {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        background: var(--line);
+      }
+
+      .demo-field {
+        min-height: 98px;
+        padding: 16px;
+        background: #fff;
+      }
+
+      .demo-field small {
+        color: var(--primary-strong);
+        font-size: 12px;
+        font-weight: 820;
+      }
+
+      .demo-field strong {
+        display: block;
+        margin-top: 8px;
+        color: var(--ink);
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      .footer {
+        padding: 44px 0;
+        color: #c7d5e6;
+        background: #141414;
+      }
+
+      .footer-inner {
+        display: grid;
+        grid-template-columns: 220px 1fr auto;
+        gap: 34px;
+        align-items: center;
+      }
+
+      .footer img {
+        width: 112px;
+        height: auto;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+        font-size: 14px;
+      }
+
+      .footer-note {
+        color: rgba(199, 213, 230, 0.72);
+        font-size: 13px;
+        line-height: 20px;
+        text-align: right;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          width: min(calc(100% - 32px), var(--content));
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-bottom: 48px;
+        }
+
+        h1 {
+          font-size: 42px;
+        }
+
+        h2 {
+          font-size: 32px;
+          line-height: 38px;
+        }
+
+        .hero-mini-grid,
+        .workspace-grid,
+        .system-board,
+        .router-shell,
+        .demo-layout,
+        .footer-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .stepper,
+        .metrics-grid,
+        .artifact-grid,
+        .demo-fields,
+        .signal-strip {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-summary,
+        .mini-rail {
+          border: 0;
+        }
+
+        .scenario-panel,
+        .summary-panel,
+        .media-panel {
+          position: static;
+        }
+
+        .topology,
+        .live-map,
+        .flow-row,
+        .section-head {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-note {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar" aria-label="主導覽">
+        <div class="container nav-inner">
+          <a class="brand" href="#" aria-label="餐道首頁">
+            <img src="candao-blue-logo.svg" alt="餐道">
+          </a>
+          <nav class="nav-links" aria-label="網站導覽">
+            <a href="#">首頁</a>
+            <a href="#">解決方案</a>
+            <a href="#">平台</a>
+            <a href="#" aria-current="page">整合能力</a>
+            <a href="#">客戶案例</a>
+            <a href="#">資源</a>
+            <a href="#">關於餐道</a>
+          </nav>
+          <div class="nav-actions">
+            <span class="language">繁中 / EN</span>
+            <a class="button primary" href="#demo-summary">預約產品演示</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-main">
+            <div class="container hero-copy">
+              <p class="eyebrow">接入評估中心｜餐道</p>
+              <h1>以前端工作台方式<span>查看接入、案例與資源</span></h1>
+              <p class="lead">選擇目前卡住的營運問題，頁面會同步切換系統來源、資料流、相似案例、資源入口與產品演示摘要。</p>
+              <div class="hero-actions">
+                <a class="button primary" href="#interactive-workbench">開始接入評估</a>
+                <a class="button" href="#proof-router">查看案例與資源</a>
+              </div>
+            </div>
+
+            <div class="hero-shell" aria-label="接入評估工作台預覽">
+              <div class="hero-toolbar">
+                <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="stage-title">
+                  <strong>接入評估工作台</strong>
+                  <span>問題選擇後，即時更新接入、案例、資源與演示方向</span>
+                </div>
+                <div class="status-badges" id="heroBadges"></div>
+              </div>
+
+              <div class="hero-mini-grid">
+                <aside class="mini-rail" aria-label="快速問題選擇">
+                  <small>目前問題</small>
+                  <button class="hero-choice" type="button" data-scenario="orders" aria-pressed="true">漏單與接單超時</button>
+                  <button class="hero-choice" type="button" data-scenario="menu" aria-pressed="false">餐單同步</button>
+                  <button class="hero-choice" type="button" data-scenario="delivery" aria-pressed="false">配送超時</button>
+                  <button class="hero-choice" type="button" data-scenario="reconcile" aria-pressed="false">對賬差異</button>
+                  <button class="hero-choice" type="button" data-scenario="multiBrand" aria-pressed="false">多品牌門店</button>
+                </aside>
+
+                <div class="hero-map">
+                  <div class="signal-strip">
+                    <div class="signal">
+                      <strong id="heroIssue">多平台訂單分散</strong>
+                      <span>先看輸入來源</span>
+                    </div>
+                    <div class="signal">
+                      <strong id="heroProducts">OMS / CDBI</strong>
+                      <span>再看處理模組</span>
+                    </div>
+                    <div class="signal">
+                      <strong id="heroNext">預約相似場景演示</strong>
+                      <span>最後帶入銷售轉化</span>
+                    </div>
+                  </div>
+                  <div class="live-map">
+                    <div class="node-stack" id="heroSources"></div>
+                    <div class="core-node">
+                      <div>
+                        <strong>AMS / Connector</strong>
+                        <span>字段映射、校驗同步、異常回傳</span>
+                      </div>
+                    </div>
+                    <div class="node-stack" id="heroOutputs"></div>
+                  </div>
+                </div>
+
+                <aside class="hero-summary" aria-label="演示摘要預覽">
+                  <div class="summary-mini">
+                    <small>相似案例</small>
+                    <strong id="heroCase">Pizza-Box</strong>
+                  </div>
+                  <div class="summary-mini">
+                    <small>資源下一步</small>
+                    <strong id="heroResource">接入準備清單</strong>
+                  </div>
+                  <div class="summary-mini">
+                    <small>演示焦點</small>
+                    <strong id="heroDemo">多渠道訂單隊列與異常回傳</strong>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace" id="interactive-workbench">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <p class="kicker">互動查看模式</p>
+                <h2>用五步把內容收進互動工作台</h2>
+                <p class="section-copy">T49 不再把三頁內容平鋪成長文，而是讓訪客按問題查看接入判斷、系統關係、案例證據、資源路由與演示摘要。</p>
+              </div>
+              <p class="section-copy">每個選項都是一個可還原的前端狀態，後續可拆成 React state、Tab、Stepper、Filter、Summary Panel 與產品截圖組件。</p>
+            </div>
+
+            <div class="stepper" aria-label="評估步驟">
+              <button class="step-button" type="button" data-step="problem" aria-pressed="true"><span>01</span><strong>選擇問題</strong></button>
+              <button class="step-button" type="button" data-step="system" aria-pressed="false"><span>02</span><strong>核對系統</strong></button>
+              <button class="step-button" type="button" data-step="case" aria-pressed="false"><span>03</span><strong>查看案例</strong></button>
+              <button class="step-button" type="button" data-step="resource" aria-pressed="false"><span>04</span><strong>匹配資源</strong></button>
+              <button class="step-button" type="button" data-step="demo" aria-pressed="false"><span>05</span><strong>形成演示摘要</strong></button>
+            </div>
+            <div class="step-help" id="stepHelp">先選擇目前最明顯的營運問題，工作台會自動帶出接入對象與下一步。</div>
+
+            <div class="workspace-grid">
+              <aside class="scenario-panel" aria-label="問題場景">
+                <button class="scenario-button" type="button" data-scenario="orders" aria-pressed="true">
+                  <strong>漏單與接單超時</strong>
+                  <span>多平台訂單、門店接單、異常提醒</span>
+                </button>
+                <button class="scenario-button" type="button" data-scenario="menu" aria-pressed="false">
+                  <strong>餐單同步</strong>
+                  <span>餐單、庫存、售罄、平台差異</span>
+                </button>
+                <button class="scenario-button" type="button" data-scenario="delivery" aria-pressed="false">
+                  <strong>配送超時</strong>
+                  <span>DMS / iDMS、騎手、第三方轉派</span>
+                </button>
+                <button class="scenario-button" type="button" data-scenario="reconcile" aria-pressed="false">
+                  <strong>對賬差異</strong>
+                  <span>平台訂單與 OMS 訂單對賬</span>
+                </button>
+                <button class="scenario-button" type="button" data-scenario="multiBrand" aria-pressed="false">
+                  <strong>多品牌門店</strong>
+                  <span>品牌、區域、門店與總部可見性</span>
+                </button>
+              </aside>
+
+              <article class="operator-panel" aria-label="系統接入工作台">
+                <div class="panel-toolbar">
+                  <div class="stage-title">
+                    <strong>接口與資料流評估</strong>
+                    <span id="panelSubtitle">多平台訂單、門店接單、異常提醒</span>
+                  </div>
+                  <div class="panel-search">搜尋：渠道 / 門店 / 異常</div>
+                </div>
+
+                <div class="operator-body">
+                  <div class="operator-header">
+                    <div>
+                      <h3 id="panelTitle">漏單與接單超時</h3>
+                      <p id="panelIssue">外賣平台、自建點餐與 POS / KDS 分散處理時，門店容易漏接訂單或延遲接單，需要先核對來源、狀態與異常回傳。</p>
+                    </div>
+                    <div class="status-badges" id="panelBadges"></div>
+                  </div>
+
+                  <div class="system-board">
+                    <div class="topology-card">
+                      <div class="topology">
+                        <div class="source-list" id="sourceList"></div>
+                        <div class="hub-core">
+                          <div>
+                            <strong>AMS / Connector</strong>
+                            <span>接入對象、字段映射、校驗同步</span>
+                          </div>
+                        </div>
+                        <div class="output-list" id="outputList"></div>
+                      </div>
+
+                      <div class="flow-table" aria-label="資料流狀態表">
+                        <div class="flow-row header">
+                          <div class="flow-cell">資料對象</div>
+                          <div class="flow-cell">來源</div>
+                          <div class="flow-cell">狀態</div>
+                          <div class="flow-cell">下一步操作</div>
+                        </div>
+                        <div id="flowRows"></div>
+                      </div>
+                    </div>
+
+                    <div class="side-cards">
+                      <div class="ui-card">
+                        <small>目前問題</small>
+                        <strong id="cardIssue">多平台訂單、餐單更新、門店接單與漏單風險</strong>
+                        <p id="cardIssueDetail">先確認訂單來源、門店接單狀態與異常回傳條件。</p>
+                      </div>
+                      <div class="ui-card">
+                        <small>接入或產品關係</small>
+                        <strong id="cardRelation">外賣平台、自建點餐、POS / KDS 透過 AMS / Connector 回到 OMS</strong>
+                        <p id="cardRelationDetail">字段與狀態先進行映射，再進入營運工作台。</p>
+                      </div>
+                      <div class="ui-card">
+                        <small>可用於</small>
+                        <strong id="cardUsage">OMS / CDBI</strong>
+                        <p id="cardUsageDetail">營運團隊查看訂單處理，管理層查看趨勢與異常。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <aside class="summary-panel" aria-label="即時演示摘要">
+                <div class="summary-header">
+                  <h3>演示摘要</h3>
+                  <p>把目前選擇的問題、系統、案例與資源帶到產品演示。</p>
+                </div>
+                <div class="summary-body">
+                  <div class="summary-item">
+                    <small>問題</small>
+                    <strong id="summaryProblem">漏單與接單超時</strong>
+                    <span id="summaryProblemDetail">多平台訂單分散，門店需要統一接單與異常提醒。</span>
+                  </div>
+                  <div class="summary-item">
+                    <small>系統</small>
+                    <strong id="summarySystems">外賣平台、POS / KDS、OMS</strong>
+                    <span id="summaryModules">AMS / Connector、OMS、CDBI</span>
+                  </div>
+                  <div class="summary-item">
+                    <small>相似案例</small>
+                    <strong id="summaryCase">Pizza-Box</strong>
+                    <span id="summaryCaseDetail">多渠道訂單進入統一處理流程。</span>
+                  </div>
+                  <div class="summary-item">
+                    <small>資源下一步</small>
+                    <strong id="summaryResource">接入準備清單</strong>
+                    <span id="summarySupport">營運 FAQ 與案例資源可同步查看。</span>
+                  </div>
+                  <a class="button primary" href="#demo-summary">預約相似場景演示</a>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="proof-router" id="proof-router">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <p class="kicker">案例、資源與支援切換</p>
+                <h2>同一個問題下，切換看不同證據層</h2>
+                <p class="section-copy">訪客不需要讀完整合能力、客戶案例和資源三個長頁；選中問題後，在同一個界面切換案例、資源、支援和演示內容。</p>
+              </div>
+              <p class="section-copy">案例索引保留 Pizza-Box、JIA Group、Jardine Group、甜品連鎖、火鍋連鎖、中餐連鎖、咖啡品牌、鮮食零售與配送密集品牌。</p>
+            </div>
+
+            <div class="view-tabs" aria-label="證據層切換">
+              <button class="view-tab" type="button" data-view="case" aria-pressed="true">案例</button>
+              <button class="view-tab" type="button" data-view="resource" aria-pressed="false">資源</button>
+              <button class="view-tab" type="button" data-view="support" aria-pressed="false">支援</button>
+              <button class="view-tab" type="button" data-view="demo" aria-pressed="false">演示</button>
+            </div>
+
+            <div class="router-shell">
+              <article class="view-panel" aria-live="polite">
+                <div class="view-header">
+                  <div>
+                    <h3 id="viewTitle">從相似客戶案例看落地方式</h3>
+                    <p id="viewIntro">用當前問題匹配相似案例、使用產品和下一步演示方向。</p>
+                  </div>
+                  <div class="view-status">
+                    <span>當前問題</span>
+                    <strong id="viewScenarioLabel">漏單與接單超時</strong>
+                  </div>
+                </div>
+                <div class="artifact-grid" id="artifactGrid"></div>
+              </article>
+
+              <aside class="media-panel" aria-label="資源與案例預覽">
+                <div class="media-image" id="mediaImage"></div>
+                <div class="media-body">
+                  <p class="kicker">案例索引</p>
+                  <div class="case-strip" id="caseStrip"></div>
+                  <p id="mediaCaption">案例、資源與支援入口會跟隨左側問題同步切換。</p>
+                  <div class="filter-row">
+                    <span class="filter-chip">接入準備清單</span>
+                    <span class="filter-chip">營運 FAQ</span>
+                    <span class="filter-chip">案例資源</span>
+                    <span class="filter-chip">支援中心</span>
+                    <span class="filter-chip">媒體與公司資料</span>
+                    <span class="filter-chip">產品演示分流</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="proof-band" aria-label="授權規模指標">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">授權規模數據</p>
+                <h2>規模證明保留為獨立數據帶</h2>
+              </div>
+              <p class="lead">以下數據沿用已確認可展示的 PPT Slide 11 口徑，用於支持採購評估中的可信判斷。</p>
+            </div>
+            <div class="metrics-grid">
+              <div class="metric-card"><small>品牌數量</small><strong>5000+</strong><span>服務品牌規模</span></div>
+              <div class="metric-card"><small>每日處理訂單</small><strong>500M+</strong><span>高峰訂單處理參考</span></div>
+              <div class="metric-card"><small>覆蓋城市</small><strong>400+</strong><span>多城市營運範圍</span></div>
+              <div class="metric-card"><small>門店數量</small><strong>200K+</strong><span>門店網絡覆蓋</span></div>
+              <div class="metric-card"><small>每月配送訂單交易額</small><strong>4.5B+</strong><span>配送相關交易口徑</span></div>
+              <div class="metric-card"><small>客戶效率提升</small><strong>30%</strong><span>已授權展示指標</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="demo-cta" id="demo-summary">
+          <div class="container demo-layout">
+            <article class="demo-copy">
+              <p class="kicker">形成演示摘要</p>
+              <h2>把選擇結果直接帶入產品演示</h2>
+              <p>這一版原型把內容轉成前端狀態後，銷售或售前可以看到訪客關注的問題、已用系統、匹配案例、資源下一步和演示模組，不需要從三個頁面重新整理線索。</p>
+              <div class="hero-actions" style="justify-content:flex-start;margin-top:22px">
+                <a class="button primary" href="#">預約產品演示</a>
+                <a class="button light" href="#interactive-workbench">重新選擇問題</a>
+              </div>
+            </article>
+
+            <article class="demo-summary" aria-label="演示摘要表單預覽">
+              <div class="demo-screen"></div>
+              <div class="demo-fields">
+                <div class="demo-field"><small>需要處理的問題</small><strong id="demoProblem">漏單與接單超時</strong></div>
+                <div class="demo-field"><small>已使用系統</small><strong id="demoSystems">外賣平台、POS / KDS、自建點餐</strong></div>
+                <div class="demo-field"><small>建議演示模組</small><strong id="demoModules">OMS、AMS / Connector、CDBI</strong></div>
+                <div class="demo-field"><small>推薦資源</small><strong id="demoResource">接入準備清單、營運 FAQ、案例資源</strong></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <img src="candao-blue-logo.svg" alt="餐道">
+          <nav class="footer-links" aria-label="頁尾導覽">
+            <a href="#">首頁</a>
+            <a href="#">解決方案</a>
+            <a href="#">平台</a>
+            <a href="#">整合能力</a>
+            <a href="#">客戶案例</a>
+            <a href="#">資源</a>
+            <a href="#">關於餐道</a>
+            <a href="#">預約產品演示</a>
+          </nav>
+          <div class="footer-note">繁體中文網站原型<br>品牌顯示：餐道</div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const scenarios = {
+        orders: {
+          title: "漏單與接單超時",
+          subtitle: "多平台訂單、門店接單、異常提醒",
+          issue: "外賣平台、自建點餐與 POS / KDS 分散處理時，門店容易漏接訂單或延遲接單，需要先核對來源、狀態與異常回傳。",
+          compactIssue: "多平台訂單、餐單更新、門店接單與漏單風險",
+          issueDetail: "先確認訂單來源、門店接單狀態與異常回傳條件。",
+          sources: ["外賣平台", "自建點餐", "POS / KDS"],
+          outputs: ["OMS", "CDBI", "門店接單"],
+          products: ["AMS / Connector", "OMS", "CDBI"],
+          badges: [
+            ["待映射", "amber"],
+            ["同步中", ""],
+            ["異常回傳", "red"]
+          ],
+          rows: [
+            ["訂單", "外賣平台", "同步中", "核對渠道訂單與 OMS 訂單"],
+            ["門店", "POS / KDS", "待映射", "確認門店接單狀態"],
+            ["支付", "平台回傳", "異常回傳", "標記退款未處理與取消未同步"],
+            ["配送", "第三方配送", "同步中", "回傳配送狀態到 OMS / CDBI"]
+          ],
+          relation: "外賣平台、自建點餐、POS / KDS 透過 AMS / Connector 回到 OMS",
+          relationDetail: "字段與狀態先進行映射，再進入營運工作台。",
+          usage: "OMS / CDBI",
+          usageDetail: "營運團隊查看訂單處理，管理層查看趨勢與異常。",
+          caseName: "Pizza-Box",
+          caseDetail: "多渠道訂單進入統一接單流程，門店按狀態處理接單、製作與配送交接。",
+          caseProof: "Pizza-Box 使用 OMS 與自有點餐入口支援長期營運，適合用於多平台訂單與門店接單演示。",
+          resource: "接入準備清單",
+          resourceDetail: "先整理外賣平台、POS / KDS、自建點餐與門店接單狀態。",
+          support: "支援中心查詢：門店接單超時、退款未處理、取消未同步",
+          demoFocus: "多渠道訂單隊列與異常回傳",
+          demoModules: "OMS、AMS / Connector、CDBI",
+          media: "customers"
+        },
+        menu: {
+          title: "餐單同步",
+          subtitle: "餐單、庫存、售罄、平台差異",
+          issue: "餐單、庫存、售罄與區域菜單在多平台重複維護時，容易出現餐單更新失敗、價格差異或門店不可售。",
+          compactIssue: "餐單同步、庫存售罄與平台差異",
+          issueDetail: "先確認餐單模板、平台差異、庫存與售罄狀態。",
+          sources: ["Menu Center", "外賣平台", "門店"],
+          outputs: ["餐單", "庫存", "門店"],
+          products: ["AMS / Connector", "Menu Center", "OMS"],
+          badges: [
+            ["校驗同步", ""],
+            ["待映射", "amber"],
+            ["營運使用", "green"]
+          ],
+          rows: [
+            ["餐單", "Menu Center", "校驗同步", "更新平台餐單與區域菜單"],
+            ["庫存", "門店", "同步中", "同步售罄與可售狀態"],
+            ["SKU", "餐單模板", "待映射", "核對平台差異欄位"],
+            ["門店", "營業設定", "營運使用", "查看門店接單與餐單狀態"]
+          ],
+          relation: "Menu Center 維護餐單、庫存、售罄與平台差異，再透過 AMS / Connector 同步到各渠道",
+          relationDetail: "餐單資料需要先完成字段校驗，再同步到門店和外賣平台。",
+          usage: "Menu Center / OMS",
+          usageDetail: "總部維護餐單策略，門店查看售罄和接單狀態。",
+          caseName: "JIA Group",
+          caseDetail: "多品牌、多門店營運需要用統一餐單和門店資料降低重複維護。",
+          caseProof: "JIA Group 適合作為多品牌餐單、門店營運與總部管理視角的演示參考。",
+          resource: "營運 FAQ",
+          resourceDetail: "先查看餐單更新失敗、庫存售罄未同步、平台差異欄位處理方式。",
+          support: "支援中心查詢：餐單更新失敗、庫存售罄未同步、門店狀態異常",
+          demoFocus: "餐單同步與門店營運狀態",
+          demoModules: "Menu Center、OMS、AMS / Connector",
+          media: "platform"
+        },
+        delivery: {
+          title: "配送超時",
+          subtitle: "DMS / iDMS、騎手、第三方轉派",
+          issue: "配送高峰時，派單規則、騎手狀態和第三方配送狀態需要回到同一視圖，否則超時、轉派和異常處理都會分散。",
+          compactIssue: "配送超時、派單規則、第三方配送狀態回傳",
+          issueDetail: "先查看配送單、騎手狀態、第三方轉派與超時條件。",
+          sources: ["配送 API", "騎手 APP", "門店"],
+          outputs: ["DMS / iDMS", "OMS", "CDBI"],
+          products: ["AMS / Connector", "DMS / iDMS", "CDBI"],
+          badges: [
+            ["超時", "red"],
+            ["轉第三方", "amber"],
+            ["同步中", ""]
+          ],
+          rows: [
+            ["配送", "配送 API", "同步中", "回傳取餐、配送中、已送達"],
+            ["騎手", "騎手 APP", "營運使用", "查看已派單、到店、取餐"],
+            ["門店", "OMS", "超時", "標記配送超時與門店影響"],
+            ["第三方", "iDMS", "轉第三方", "記錄第三方配送狀態回傳"]
+          ],
+          relation: "配送 API、騎手 APP 與門店狀態透過 DMS / iDMS 回到 OMS 與 CDBI",
+          relationDetail: "配送履約需要同時看派單、騎手、第三方和異常回流。",
+          usage: "DMS / iDMS / CDBI",
+          usageDetail: "配送主管查看履約狀態，總部查看超時與轉派趨勢。",
+          caseName: "Jardine Group",
+          caseDetail: "DMS / iDMS 配送履約可用於多門店配送管理和第三方配送回傳。",
+          caseProof: "Jardine Group / KFC / Pizza Hut / PHD 線索可支援配送密集品牌的履約場景討論。",
+          resource: "案例資源",
+          resourceDetail: "先查看配送密集品牌案例、DMS / iDMS 模組和第三方回傳條件。",
+          support: "支援中心查詢：配送超時、缺少配送坐標、第三方轉派狀態中斷",
+          demoFocus: "配送派單、騎手追蹤與異常回流",
+          demoModules: "DMS / iDMS、AMS / Connector、CDBI",
+          media: "delivery"
+        },
+        reconcile: {
+          title: "對賬差異",
+          subtitle: "平台訂單與 OMS 訂單對賬",
+          issue: "平台訂單與 OMS 訂單在金額、狀態或漏單標記上不一致時，需要回到同一張對賬視圖追蹤來源和處理人。",
+          compactIssue: "平台訂單與 OMS 訂單金額、狀態與漏單差異",
+          issueDetail: "先確認平台訂單號、OMS 訂單號、金額差異、狀態差異與漏單標記。",
+          sources: ["支付 / ERP", "外賣平台", "OMS"],
+          outputs: ["財務對賬", "CDBI", "異常列表"],
+          products: ["AMS / Connector", "財務對賬", "CDBI"],
+          badges: [
+            ["金額不一致", "red"],
+            ["狀態不一致", "amber"],
+            ["重新對賬", ""]
+          ],
+          rows: [
+            ["對賬", "支付 / ERP", "金額不一致", "核對平台訂單與 OMS 訂單"],
+            ["訂單", "外賣平台", "漏單標記", "標記缺失訂單並回傳來源"],
+            ["狀態", "OMS", "狀態不一致", "核對退款、取消與完成狀態"],
+            ["報表", "CDBI", "重新對賬", "查看差異趨勢與處理結果"]
+          ],
+          relation: "支付 / ERP、外賣平台和 OMS 資料進入 AMS / Connector，再回到財務對賬與 CDBI",
+          relationDetail: "對賬重點是金額差異、狀態差異和漏單識別。",
+          usage: "財務對賬 / CDBI",
+          usageDetail: "財務團隊處理差異，管理層查看對賬趨勢。",
+          caseName: "甜品連鎖",
+          caseDetail: "甜品連鎖案例可搭配訂單量、銷售額與復購率趨勢，支援經營與財務視角討論。",
+          caseProof: "甜品連鎖訂單量 100K、190K、1.01M；銷售額 6.6M、7.74M、54.42M；復購率 19.88%、19.95%、25.83%。",
+          resource: "支援中心",
+          resourceDetail: "先查看對賬差異、金額不一致、狀態不一致和漏單識別問題。",
+          support: "支援中心查詢：金額不一致、狀態不一致、漏單標記、退款未處理",
+          demoFocus: "平台訂單與 OMS 訂單對賬差異",
+          demoModules: "財務對賬、CDBI、AMS / Connector",
+          media: "platform"
+        },
+        multiBrand: {
+          title: "多品牌門店",
+          subtitle: "品牌、區域、門店與總部可見性",
+          issue: "多品牌、多區域和多門店營運需要把渠道、餐單、門店狀態、配送與數據回到總部視圖，否則問題會分散在不同團隊。",
+          compactIssue: "多品牌、多區域、多門店的總部可見性",
+          issueDetail: "先確認品牌、門店、區域、渠道和營運角色之間的關係。",
+          sources: ["CRM / 會員", "門店", "自建點餐"],
+          outputs: ["OMS", "Menu Center", "CDBI"],
+          products: ["AMS / Connector", "OMS", "Menu Center", "CDBI"],
+          badges: [
+            ["營運使用", "green"],
+            ["同步中", ""],
+            ["總部可見", ""]
+          ],
+          rows: [
+            ["會員", "CRM / 會員", "同步中", "回到會員、訂單與活動視圖"],
+            ["門店", "門店資料", "營運使用", "查看營業時間與接單狀態"],
+            ["餐單", "Menu Center", "校驗同步", "按品牌和區域同步餐單"],
+            ["報表", "CDBI", "總部可見", "查看品牌、區域與門店表現"]
+          ],
+          relation: "CRM / 會員、門店與自建點餐資料透過 AMS / Connector 回到 OMS、Menu Center 與 CDBI",
+          relationDetail: "多品牌營運需要同時看門店、餐單、會員和總部報表。",
+          usage: "OMS / Menu Center / CDBI",
+          usageDetail: "總部營運查看門店健康、餐單狀態與品牌表現。",
+          caseName: "中餐連鎖",
+          caseDetail: "中餐連鎖、火鍋連鎖、咖啡品牌與鮮食零售可用於多業態對比和門店營運討論。",
+          caseProof: "中餐連鎖可展示訂單取消率改善、銷售增長與門店擴張率；咖啡品牌與鮮食零售可補充單店與線上訂單比例視角。",
+          resource: "媒體與公司資料",
+          resourceDetail: "先查看公司資料、案例資源和產品演示分流，支持管理層採購評估。",
+          support: "支援中心查詢：門店狀態異常、營業時間待同步、會員資料回流",
+          demoFocus: "總部營運視圖與多品牌門店管理",
+          demoModules: "OMS、Menu Center、CDBI、AMS / Connector",
+          media: "customers"
+        }
+      };
+
+      const stepHelp = {
+        problem: "先選擇目前最明顯的營運問題，工作台會自動帶出接入對象與下一步。",
+        system: "核對外賣平台、自建點餐、POS / KDS、CRM / 會員、支付 / ERP、配送 API 等來源如何進入 AMS / Connector。",
+        case: "查看 Pizza-Box、JIA Group、Jardine Group 或多業態案例，確認相似場景如何落地。",
+        resource: "把問題匹配到接入準備清單、營運 FAQ、案例資源、支援中心、媒體與公司資料或產品演示分流。",
+        demo: "把目前問題、接入或產品關係、相似案例和資源下一步形成演示摘要。"
+      };
+
+      const viewMeta = {
+        case: {
+          title: "從相似客戶案例看落地方式",
+          intro: "用當前問題匹配相似案例、使用產品和下一步演示方向。"
+        },
+        resource: {
+          title: "資源路由：按目前階段找到下一步",
+          intro: "把評估中、導入中、日常營運、技術查詢轉成具體資源入口。"
+        },
+        support: {
+          title: "支援中心：把異常問題轉成查詢入口",
+          intro: "用支援中心承接營運、IT、門店、配送和財務團隊的具體問題。"
+        },
+        demo: {
+          title: "產品演示分流：把問題帶入演示模組",
+          intro: "演示不再只是一個表單，而是根據目前問題決定展示 OMS、Menu Center、DMS / iDMS、財務對賬或 CDBI。"
+        }
+      };
+
+      const caseBank = ["Pizza-Box", "JIA Group", "Jardine Group", "甜品連鎖", "火鍋連鎖", "中餐連鎖", "咖啡品牌", "鮮食零售", "配送密集品牌"];
+
+      const mediaImages = {
+        customers: "linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.72)), url('customers-hero-case-ops-2026-08-08.png') center / cover",
+        delivery: "linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.72)), url('delivery-dispatch-map-ui-2026-08-05.png') center / cover",
+        platform: "linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.72)), url('platform-dashboard-ui-rich-2026-08-05.png') center / cover"
+      };
+
+      let activeScenario = "orders";
+      let activeView = "case";
+
+      function badgeMarkup(items) {
+        return items.map(([label, tone]) => `<span class="badge ${tone}">${label}</span>`).join("");
+      }
+
+      function nodeMarkup(items) {
+        return items.map((item, index) => `<div class="map-node"><strong>${item}</strong><span>來源 ${index + 1}</span></div>`).join("");
+      }
+
+      function pillMarkup(items, type) {
+        return items.map((item, index) => `<div class="${type}-pill"><strong>${item}</strong><span>${index + 1}</span></div>`).join("");
+      }
+
+      function rowMarkup(rows) {
+        return rows.map((row) => `
+          <div class="flow-row">
+            <div class="flow-cell">${row[0]}</div>
+            <div class="flow-cell">${row[1]}</div>
+            <div class="flow-cell">${row[2]}</div>
+            <div class="flow-cell">${row[3]}</div>
+          </div>
+        `).join("");
+      }
+
+      function viewCards(scenario, view) {
+        if (view === "case") {
+          return [
+            ["相似案例", scenario.caseName, scenario.caseDetail],
+            ["案例證據", "場景與產品對應", scenario.caseProof],
+            ["下一步", "預約相似場景演示", `演示焦點：${scenario.demoFocus}`]
+          ];
+        }
+
+        if (view === "resource") {
+          return [
+            ["評估中", "接入準備清單", scenario.resourceDetail],
+            ["導入中", "營運 FAQ", "查看字段映射、同步監控、異常回傳和門店使用常見問題。"],
+            ["日常營運", "案例資源", "用相似客戶案例協助採購、IT 與營運團隊判斷下一步。"]
+          ];
+        }
+
+        if (view === "support") {
+          return [
+            ["技術查詢", "支援中心", scenario.support],
+            ["異常對象", scenario.compactIssue, "問題會回到訂單、餐單、門店、配送、對賬或會員資料狀態。"],
+            ["處理方式", "異常回傳", "支援查詢需要包含來源、狀態、影響和下一步操作。"]
+          ];
+        }
+
+        return [
+          ["演示模組", scenario.demoModules, `建議先展示：${scenario.demoFocus}`],
+          ["演示輸入", scenario.sources.join("、"), "演示從現有系統與資料來源開始，而不是從通用功能清單開始。"],
+          ["演示輸出", scenario.outputs.join("、"), "讓採購方看到總部、門店、配送或財務團隊如何使用結果。"]
+        ];
+      }
+
+      function renderScenario() {
+        const scenario = scenarios[activeScenario];
+
+        document.querySelectorAll("[data-scenario]").forEach((button) => {
+          button.setAttribute("aria-pressed", button.dataset.scenario === activeScenario ? "true" : "false");
+        });
+
+        document.getElementById("heroBadges").innerHTML = badgeMarkup(scenario.badges);
+        document.getElementById("heroIssue").textContent = scenario.compactIssue;
+        document.getElementById("heroProducts").textContent = scenario.products.join(" / ");
+        document.getElementById("heroNext").textContent = scenario.resource;
+        document.getElementById("heroSources").innerHTML = nodeMarkup(scenario.sources);
+        document.getElementById("heroOutputs").innerHTML = nodeMarkup(scenario.outputs);
+        document.getElementById("heroCase").textContent = scenario.caseName;
+        document.getElementById("heroResource").textContent = scenario.resource;
+        document.getElementById("heroDemo").textContent = scenario.demoFocus;
+
+        document.getElementById("panelSubtitle").textContent = scenario.subtitle;
+        document.getElementById("panelTitle").textContent = scenario.title;
+        document.getElementById("panelIssue").textContent = scenario.issue;
+        document.getElementById("panelBadges").innerHTML = badgeMarkup(scenario.badges);
+        document.getElementById("sourceList").innerHTML = pillMarkup(scenario.sources, "source");
+        document.getElementById("outputList").innerHTML = pillMarkup(scenario.outputs, "output");
+        document.getElementById("flowRows").innerHTML = rowMarkup(scenario.rows);
+        document.getElementById("cardIssue").textContent = scenario.compactIssue;
+        document.getElementById("cardIssueDetail").textContent = scenario.issueDetail;
+        document.getElementById("cardRelation").textContent = scenario.relation;
+        document.getElementById("cardRelationDetail").textContent = scenario.relationDetail;
+        document.getElementById("cardUsage").textContent = scenario.usage;
+        document.getElementById("cardUsageDetail").textContent = scenario.usageDetail;
+
+        document.getElementById("summaryProblem").textContent = scenario.title;
+        document.getElementById("summaryProblemDetail").textContent = scenario.issueDetail;
+        document.getElementById("summarySystems").textContent = scenario.sources.join("、");
+        document.getElementById("summaryModules").textContent = scenario.products.join("、");
+        document.getElementById("summaryCase").textContent = scenario.caseName;
+        document.getElementById("summaryCaseDetail").textContent = scenario.caseDetail;
+        document.getElementById("summaryResource").textContent = scenario.resource;
+        document.getElementById("summarySupport").textContent = scenario.support;
+
+        document.getElementById("demoProblem").textContent = scenario.title;
+        document.getElementById("demoSystems").textContent = scenario.sources.join("、");
+        document.getElementById("demoModules").textContent = scenario.demoModules;
+        document.getElementById("demoResource").textContent = [scenario.resource, "營運 FAQ", "案例資源"].join("、");
+
+        renderView();
+      }
+
+      function renderView() {
+        const scenario = scenarios[activeScenario];
+        const meta = viewMeta[activeView];
+        document.querySelectorAll(".view-tab").forEach((button) => {
+          button.setAttribute("aria-pressed", button.dataset.view === activeView ? "true" : "false");
+        });
+        document.getElementById("viewTitle").textContent = meta.title;
+        document.getElementById("viewIntro").textContent = meta.intro;
+        document.getElementById("viewScenarioLabel").textContent = scenario.title;
+        document.getElementById("mediaImage").style.background = mediaImages[scenario.media];
+        document.getElementById("mediaCaption").textContent = `${scenario.title} 對應 ${scenario.caseName}、${scenario.resource} 與 ${scenario.demoFocus}。`;
+        document.getElementById("caseStrip").innerHTML = caseBank.map((item) => `<span class="filter-chip">${item}</span>`).join("");
+        document.getElementById("artifactGrid").innerHTML = viewCards(scenario, activeView).map(([tag, title, body]) => `
+          <article class="artifact-card">
+            <div>
+              <span class="tag">${tag}</span>
+              <h3>${title}</h3>
+              <p>${body}</p>
+            </div>
+          </article>
+        `).join("");
+      }
+
+      document.querySelectorAll("[data-scenario]").forEach((button) => {
+        button.addEventListener("click", () => {
+          activeScenario = button.dataset.scenario;
+          renderScenario();
+        });
+      });
+
+      document.querySelectorAll(".view-tab").forEach((button) => {
+        button.addEventListener("click", () => {
+          activeView = button.dataset.view;
+          renderView();
+        });
+      });
+
+      document.querySelectorAll(".step-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll(".step-button").forEach((item) => item.setAttribute("aria-pressed", "false"));
+          button.setAttribute("aria-pressed", "true");
+          document.getElementById("stepHelp").textContent = stepHelp[button.dataset.step];
+        });
+      });
+
+      renderScenario();
+    </script>
+  </body>
+</html>

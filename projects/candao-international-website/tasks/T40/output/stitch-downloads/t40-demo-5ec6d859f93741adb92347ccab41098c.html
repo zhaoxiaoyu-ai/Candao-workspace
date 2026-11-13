@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>預約產品演示 - 餐道</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Work+Sans:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#1a1c1e",
+                      "on-secondary-fixed-variant": "#00513e",
+                      "primary-fixed": "#d9e2ff",
+                      "primary": "#0057c2",
+                      "cloud-surface": "#F8FAFC",
+                      "surface-container-highest": "#e2e2e5",
+                      "on-primary-container": "#fefcff",
+                      "tertiary-container": "#9f6900",
+                      "tertiary": "#7f5300",
+                      "operational-blue": "#528DFF",
+                      "inverse-on-surface": "#f0f0f3",
+                      "ink-text": "#1A1C1E",
+                      "on-primary-fixed-variant": "#004299",
+                      "on-primary-fixed": "#001944",
+                      "outline": "#727785",
+                      "status-success": "#00A884",
+                      "secondary": "#006b53",
+                      "secondary-fixed-dim": "#59dcb5",
+                      "surface-container-lowest": "#ffffff",
+                      "surface": "#f9f9fc",
+                      "secondary-fixed": "#79f9d0",
+                      "surface-container-low": "#f3f3f6",
+                      "primary-container": "#2e70e0",
+                      "on-tertiary-container": "#fffbff",
+                      "tertiary-fixed-dim": "#ffb950",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#c2c6d6",
+                      "on-surface": "#1a1c1e",
+                      "on-primary": "#ffffff",
+                      "border-subtle": "#E2E8F0",
+                      "on-surface-variant": "#424753",
+                      "on-tertiary-fixed-variant": "#624000",
+                      "tertiary-fixed": "#ffddb3",
+                      "surface-container-high": "#e8e8ea",
+                      "surface-container": "#eeeef0",
+                      "on-tertiary-fixed": "#291800",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#afc6ff",
+                      "surface-dim": "#dadadc",
+                      "surface-tint": "#0059c7",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#007057",
+                      "inverse-surface": "#2f3133",
+                      "surface-bright": "#f9f9fc",
+                      "status-error": "#E11D48",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e2e2e5",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#76f6cd",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#afc6ff",
+                      "on-secondary-fixed": "#002117",
+                      "status-warning": "#FFAB00",
+                      "background": "#f9f9fc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "bento-gap": "16px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "body-md": ["Work Sans", "sans-serif"],
+                      "title-md": ["Work Sans", "sans-serif"],
+                      "label-sm": ["IBM Plex Sans", "sans-serif"],
+                      "headline-lg": ["Noto Serif", "serif"],
+                      "display-lg": ["Noto Serif", "serif"],
+                      "body-lg": ["Work Sans", "sans-serif"],
+                      "headline-lg-mobile": ["Noto Serif", "serif"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "title-md": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                      "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 0.5rem;
+            padding: 24px;
+        }
+        .dark-hero-bg {
+            background-color: #0F172A;
+            background-image: radial-gradient(circle at top right, rgba(82, 141, 255, 0.15), transparent 50%),
+                              radial-gradient(circle at bottom left, rgba(82, 141, 255, 0.05), transparent 40%);
+        }
+    </style>
+</head>
+<body class="bg-cloud-surface text-ink-text font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-7xl mx-auto bg-surface/90 backdrop-blur-md border-b border-border-subtle transition-all">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-bold text-primary" href="#">餐道</a>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">首頁</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">解決方案</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">平台</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">整合能力</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">客戶案例</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">資源</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">關於餐道</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-label-sm font-label-sm text-on-surface-variant hidden md:block">繁中 / EN</span>
+<a class="bg-operational-blue text-on-primary px-4 py-2 rounded-lg text-label-sm font-label-sm hover:opacity-90 transition-opacity" href="#">預約產品演示</a>
+</div>
+</nav>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="dark-hero-bg text-on-primary py-24 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<h1 class="font-display-lg text-display-lg mb-6">預約餐道產品演示</h1>
+<p class="font-body-lg text-body-lg text-inverse-on-surface mb-8 opacity-90 max-w-xl">
+                        探索餐道如何透過強大的整合中樞，為您的餐飲或零售業務解決營運痛點。我們將根據您的具體問題，為您量身定制演示旅程，展示最適合的系統模組與數據流解決方案。
+                    </p>
+<div class="flex gap-4">
+<a class="bg-operational-blue text-on-primary px-6 py-3 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity inline-flex items-center gap-2" href="#demo-form">
+<span>填寫需求</span>
+<span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+</a>
+</div>
+</div>
+<div class="z-10 bg-inverse-surface border border-outline/30 rounded-xl p-8 shadow-2xl relative">
+<div class="flex justify-between items-center border-b border-outline/20 pb-4 mb-6">
+<span class="font-label-sm text-label-sm text-on-primary opacity-70">系統演示預覽</span>
+<div class="flex gap-2">
+<span class="w-3 h-3 rounded-full bg-status-error opacity-50"></span>
+<span class="w-3 h-3 rounded-full bg-status-warning opacity-50"></span>
+<span class="w-3 h-3 rounded-full bg-status-success opacity-50"></span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center p-4 bg-on-background/50 rounded-lg border border-outline/10">
+<div>
+<div class="font-label-sm text-label-sm text-primary-fixed-dim mb-1">聯絡意向</div>
+<div class="font-title-md text-title-md">產品演示 &amp; 系統整合評估</div>
+</div>
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="fact_check">fact_check</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-on-background/50 rounded-lg border border-outline/10">
+<div class="font-label-sm text-label-sm text-primary-fixed-dim mb-2">推薦模組</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary-container text-on-primary-container px-2 py-1 rounded text-xs">OMS</span>
+<span class="bg-primary-container text-on-primary-container px-2 py-1 rounded text-xs">AMS</span>
+</div>
+</div>
+<div class="p-4 bg-on-background/50 rounded-lg border border-outline/10">
+<div class="font-label-sm text-label-sm text-primary-fixed-dim mb-2">預計流程</div>
+<div class="font-body-md text-body-md text-surface-dim">需求確認 → 安排演示</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Abstract background graphic elements -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none overflow-hidden flex justify-center items-center">
+<div class="w-[800px] h-[800px] border border-operational-blue/30 rounded-full absolute -right-[20%] -top-[20%]"></div>
+<div class="w-[600px] h-[600px] border border-operational-blue/20 rounded-full absolute -right-[10%] -top-[10%]"></div>
+</div>
+</section>
+<!-- Main Content Area -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto space-y-16" id="demo-form">
+<!-- Intent Selection -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-bento-gap">
+<label class="bento-card cursor-pointer border-operational-blue ring-1 ring-operational-blue bg-operational-blue/5 relative">
+<input checked="" class="hidden" name="intent" type="radio"/>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-operational-blue" data-icon="devices">devices</span>
+<h3 class="font-title-md text-title-md text-operational-blue">產品演示</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">了解餐道各模組功能，評估系統架構與業務契合度。</p>
+<span class="font-label-sm text-label-sm text-operational-blue flex items-center gap-1">填寫下方表單 <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span></span>
+</label>
+<label class="bento-card cursor-pointer hover:border-operational-blue/50 transition-colors">
+<input class="hidden" name="intent" type="radio"/>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="support_agent">support_agent</span>
+<h3 class="font-title-md text-title-md text-ink-text">銷售洽詢</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">已有明確需求或預算，希望直接與銷售團隊討論方案與報價。</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">即將導向業務諮詢 <span class="material-symbols-outlined text-[16px]" data-icon="open_in_new">open_in_new</span></span>
+</label>
+<label class="bento-card cursor-pointer hover:border-operational-blue/50 transition-colors">
+<input class="hidden" name="intent" type="radio"/>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="help_center">help_center</span>
+<h3 class="font-title-md text-title-md text-ink-text">支援查詢</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">現有客戶尋求技術支援、API 文件或操作指南。</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">前往資源中心 <span class="material-symbols-outlined text-[16px]" data-icon="open_in_new">open_in_new</span></span>
+</label>
+</div>
+<!-- Form Workspace & Summary Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-bento-gap items-start">
+<!-- Form Area (8 cols) -->
+<div class="lg:col-span-8 bento-card">
+<h2 class="font-title-md text-title-md mb-6 border-b border-border-subtle pb-4">需求登記表單</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">公司 / 品牌名稱 <span class="text-status-error">*</span></label>
+<input class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-operational-blue focus:border-operational-blue outline-none transition-all" placeholder="請輸入品牌名稱" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">市場 / 地區 <span class="text-status-error">*</span></label>
+<select class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-operational-blue focus:border-operational-blue outline-none bg-white">
+<option>台灣</option>
+<option>香港</option>
+<option>澳門</option>
+<option>其他</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">門店規模</label>
+<select class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-operational-blue focus:border-operational-blue outline-none bg-white">
+<option>1-5 間</option>
+<option>6-20 間</option>
+<option>21-50 間</option>
+<option>50 間以上</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">你的角色</label>
+<input class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-operational-blue focus:border-operational-blue outline-none transition-all" placeholder="例如：營運總監、IT 經理" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">目前銷售渠道 (可複選)</label>
+<div class="flex flex-wrap gap-3">
+<label class="flex items-center gap-2 bg-surface-container-low px-3 py-2 rounded-lg border border-border-subtle cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-operational-blue focus:ring-operational-blue rounded" type="checkbox"/> <span class="font-body-md text-sm">實體門市</span>
+</label>
+<label class="flex items-center gap-2 bg-surface-container-low px-3 py-2 rounded-lg border border-border-subtle cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-operational-blue focus:ring-operational-blue rounded" type="checkbox"/> <span class="font-body-md text-sm">自營外送/外帶平台</span>
+</label>
+<label class="flex items-center gap-2 bg-surface-container-low px-3 py-2 rounded-lg border border-border-subtle cursor-pointer hover:bg-surface-container transition-colors">
+<input class="text-operational-blue focus:ring-operational-blue rounded" type="checkbox"/> <span class="font-body-md text-sm">第三方外送平台 (UberEats, Foodpanda等)</span>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">已使用系統 (選填)</label>
+<input class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-operational-blue focus:border-operational-blue outline-none transition-all" placeholder="例如：某某 POS、某某 CRM、ERP系統等" type="text"/>
+<p class="text-xs text-outline mt-1">這將幫助我們評估 AMS / Connector 的整合需求。</p>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">主要問題描述 <span class="text-status-error">*</span></label>
+<textarea class="w-full border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-operational-blue focus:border-operational-blue outline-none transition-all resize-none" placeholder="請簡述您目前在營運、接單、數據分析或系統整合上遇到的最大挑戰..." rows="4"></textarea>
+</div>
+<div class="pt-4 flex gap-4 border-t border-border-subtle">
+<button class="bg-operational-blue text-on-primary px-6 py-3 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity" type="submit">提交演示需求</button>
+<button class="bg-surface-container text-on-surface px-6 py-3 rounded-lg font-label-sm text-label-sm hover:bg-surface-variant transition-colors border border-border-subtle" type="button">前往資源中心</button>
+</div>
+</form>
+</div>
+<!-- Dynamic Summary Panel (4 cols) -->
+<div class="lg:col-span-4 bg-inverse-surface rounded-xl p-6 shadow-lg text-on-primary sticky top-28">
+<div class="flex items-center gap-2 mb-6 border-b border-outline/20 pb-4">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="tune">tune</span>
+<h3 class="font-title-md text-title-md">分析與模組匹配</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="font-label-sm text-label-sm text-outline-variant mb-2">預期核心解決方案</div>
+<div class="space-y-3 relative">
+<!-- Connector line -->
+<div class="absolute left-4 top-4 bottom-4 w-px bg-operational-blue/30 z-0"></div>
+<div class="flex gap-3 relative z-10">
+<div class="w-8 h-8 rounded-full bg-surface-tint flex items-center justify-center shrink-0 border-2 border-inverse-surface">
+<span class="material-symbols-outlined text-[16px]" data-icon="sync_alt">sync_alt</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm font-bold">OMS / COMS / SOMS</div>
+<div class="text-xs text-inverse-on-surface/70 mt-1">全渠道訂單集中管理與門店同步</div>
+</div>
+</div>
+<div class="flex gap-3 relative z-10">
+<div class="w-8 h-8 rounded-full bg-surface-tint flex items-center justify-center shrink-0 border-2 border-inverse-surface">
+<span class="material-symbols-outlined text-[16px]" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm font-bold">DMS / iDMS</div>
+<div class="text-xs text-inverse-on-surface/70 mt-1">智能派單與物流追蹤</div>
+</div>
+</div>
+<div class="flex gap-3 relative z-10">
+<div class="w-8 h-8 rounded-full bg-surface-tint flex items-center justify-center shrink-0 border-2 border-inverse-surface">
+<span class="material-symbols-outlined text-[16px]" data-icon="bar_chart">bar_chart</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm font-bold">CDBI / Finance Center</div>
+<div class="text-xs text-inverse-on-surface/70 mt-1">數據洞察與財務對帳自動化</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 bg-on-background/40 rounded-lg border border-outline/10">
+<div class="font-label-sm text-label-sm text-outline-variant mb-2">後續流程</div>
+<ol class="text-sm space-y-2 text-inverse-on-surface/80">
+<li class="flex items-center gap-2"><span class="text-operational-blue">•</span> 1. 確認需求 (1-2 工作天)</li>
+<li class="flex items-center gap-2"><span class="text-operational-blue">•</span> 2. 匹配專屬系統模組</li>
+<li class="flex items-center gap-2"><span class="text-operational-blue">•</span> 3. 安排線上或線下演示</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full py-16 px-margin-mobile md:px-margin-desktop border-t border-border-subtle mt-16">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-bento-gap">
+<div class="space-y-4">
+<div class="font-headline-lg text-headline-lg font-bold text-primary">餐道</div>
+<div class="font-body-md text-body-md text-on-surface-variant">餐道國際｜餐飲與零售 O2O 營運中樞</div>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">首頁</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">解決方案</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">平台</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">整合能力</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">客戶案例</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">資源</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">關於餐道</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-border-subtle/50 font-label-sm text-label-sm text-outline">
+            © 2024 餐道. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

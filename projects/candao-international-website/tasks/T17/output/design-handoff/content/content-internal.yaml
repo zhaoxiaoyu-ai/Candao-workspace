@@ -1,0 +1,32 @@
+version: "2026-08-16"
+purpose: "从访客页面移出的内部说明、证据编号、约束和执行备注。"
+internal_notes:
+  - id: no_direct_stitch
+    note: "T25 HTML 是内部内容核对版，不应直接交给 Stitch 美化。必须先拆成内容层、模块语法、设计系统、素材清单和交互状态。"
+  - id: no_overwrite
+    note: "不得覆盖 `tasks/T17/output/low-fidelity-wireframe-prototype/`。"
+  - id: home_metrics_boundary
+    note: "Home 可以使用 Logo 带；Customers 可使用 PPT Slide 11 数据。若 Home 保留 Slide 11 数字，需要在最终业务验收时再次确认信息重心。"
+  - id: platform_screenshot_rule
+    note: "Platform 产品模块必须用真实产品截图；Stitch 和图片模型不得重绘后台 UI。"
+  - id: product_video_boundary
+    note: "旧官网存在产品视频入口线索，但本地未找到视频文件；正式使用前需确认素材、语言、封面和公开范围。"
+  - id: h3_reserved
+    note: "H3-01 低保真业务验收与 H3-02 approved_and_locked 仍为 reserved，Agent 不得自行批准。"
+evidence_source_labels:
+  - OLD-SOLUTION-292
+  - OLD-PRODUCT-285
+  - OLD-BIZ-289
+  - PPT-OPMODEL
+  - PPT-SaaS
+  - PPT-OMS-CORE
+  - PPT-OMS-MODULES
+  - PPT-DMS
+  - PPT-DATA
+  - PPT Slide 11
+constraints:
+  - "访客页面不得显示 PPT 页码、OLD 编号、内部警告、待确认说明、组件英文名称或设计备注。"
+  - "中文和繁體中文官网默认品牌显示使用「餐道」。"
+  - "产品名大小写必须保留，例如 iDMS、SaaS、AMS / Connector。"
+  - "不创造未确认客户、Logo、认证、新闻、地址、价格、SLA、系统接入承诺。"
+  - "遇到文字溢出时只报告布局问题，不自行缩短已审核内容。"

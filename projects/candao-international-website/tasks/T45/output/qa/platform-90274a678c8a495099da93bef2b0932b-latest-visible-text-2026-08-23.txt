@@ -1,0 +1,82 @@
+餐道
+首頁
+解決方案
+平台
+整合能力
+客戶案例
+資源
+EN
+預約演示
+看 OMS、Menu Center、DMS / iDMS、CDBI 和 Connector 如何支撐每日營運
+了解餐道產品如何工作：訂單如何進入 OMS，門店如何處理接單與售罄，配送如何派單與回傳狀態，報表與對賬如何追蹤差異。
+預約產品演示
+查看整合能力
+OMS 訂單隊列
+待接單
+Menu Center 售罄
+同步
+DMS 派單
+配送中
+Finance Center 對賬
+差異追蹤
+CDBI 看板
+分析
+AMS / Connector
+接入
+產品能力地圖
+從業務對象、狀態和操作理解餐道平台
+多渠道訂單
+餐單與門店
+會員與自有點餐
+配送履約
+數據與對賬
+AMS / Connector
+多渠道訂單進入 OMS 後台
+外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店可按渠道、訂單狀態、配送狀態和異常類型處理。
+check_circle
+業務對象
+訂單、渠道、門店、訂單狀態、配送狀態、異常類型。
+sync
+狀態 / 操作
+待接單、製作中、配送中、取消、退款、超時提醒。
+widgets
+對應產品
+OMS、COMS、SOMS、Order Processing Center。
+預約訂單場景演示
+chevron_right
+產品演示入口
+按工作流查看不同模組的日常使用方式
+你可以按 OMS、Menu / Store、DMS / iDMS、CDBI / Finance 選擇演示重點，快速看到訂單、餐單、配送和對賬在餐道內如何被處理。
+OMS: 訂單隊列與異常處理
+訂單整合、門店處理、異常追蹤和客服協同
+產品視頻, 接單 / 退款 / 缺貨
+play_circle
+Menu Center / Store: 餐單版本與門店狀態
+菜單、價格、營業時間、門店資料和品牌規則同步
+菜單版本 / 門店狀態
+menu_book
+DMS / iDMS: 派單、取餐與異常
+配送任務、騎手或車隊資源、第三方配送協同
+派單 / 取餐 / 異常
+local_shipping
+CDBI / Finance Center: 渠道報表與對賬差異
+營運數據、渠道分析、對賬和營收視角
+渠道報表 / 對賬
+bar_chart
+下一步
+看完產品能力後，評估接入方式或預約場景演示
+預約產品演示
+查看整合能力
+查看客戶案例
+餐道
+餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector
+© 2024 餐道 Candao. All Rights Reserved.
+解決方案
+解決方案
+平台與整合
+平台
+整合能力
+關於我們
+客戶案例
+資源
+關於餐道

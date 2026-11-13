@@ -1,0 +1,127 @@
+{
+  "spec_version": "0.1.0",
+  "agent_id": "candao-website-strategy-analyzer",
+  "carrier": "subagent",
+  "tool_contract": [
+    {
+      "name": "analyze_website_strategy",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "input_doc": {
+            "type": "string",
+            "description": "T01 v1.1输入文档内容"
+          }
+        },
+        "required": [
+          "input_doc"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "strategy_doc": {
+            "type": "string",
+            "description": "生成的《Website Strategy Analysis》文档，简体中文"
+          }
+        },
+        "required": [
+          "strategy_doc"
+        ]
+      },
+      "side_effect": "read"
+    }
+  ],
+  "permission_matrix": {
+    "allow": [
+      "read_input_doc",
+      "generate_strategy_doc"
+    ],
+    "deny": [
+      "write_final_web_copy",
+      "use_unconfirmed_facts",
+      "modify_input_doc"
+    ],
+    "hitl_required": [
+      "confirm_open_questions"
+    ]
+  },
+  "failure_semantics": [
+    {
+      "failure": "input_doc_missing_or_invalid",
+      "detect": "input_doc为空或格式错误",
+      "fallback": "halt并上报，请求人工提供有效T01 v1.1输入文档"
+    },
+    {
+      "failure": "analysis_generation_failed",
+      "detect": "生成策略文档时发生异常或超时",
+      "fallback": "halt并上报，不返回部分结果，请求人工介入"
+    },
+    {
+      "failure": "unconfirmed_facts_detected",
+      "detect": "检测到未确认的Logo、案例或集成状态被当作确定事实",
+      "fallback": "halt并上报，标记风险，请求人工确认后再继续"
+    },
+    {
+      "failure": "output_validation_failed",
+      "detect": "生成的文档缺少必需章节或包含禁止内容",
+      "fallback": "halt并上报，不输出文档，请求人工修正"
+    }
+  ],
+  "eval_cases": [
+    {
+      "id": "1",
+      "input": {},
+      "expect": "输出文档包含品牌定位分析、用户分析、官网目标分析、首页策略建议四个章节",
+      "verify_cmd": "grep -q '品牌定位分析' output.md && grep -q '用户分析' output.md && grep -q '官网目标分析' output.md && grep -q '首页策略建议' output.md",
+      "kind": "happy"
+    },
+    {
+      "id": "2",
+      "input": {},
+      "expect": "输出文档为简体中文，包含'风险'和'后续确认'相关表述",
+      "verify_cmd": "grep -q '风险' output.md && grep -q '后续确认' output.md && grep -qP '[\\x{4e00}-\\x{9fa5}]' output.md",
+      "kind": "happy"
+    },
+    {
+      "id": "3",
+      "input": {},
+      "expect": "输出文档中不包含未确认的Logo、案例或集成状态作为确定事实",
+      "verify_cmd": "! grep -qE '(Logo|案例|集成状态)' output.md",
+      "kind": "adversarial"
+    },
+    {
+      "id": "4",
+      "input": {},
+      "expect": "输出文档中所有待确认问题均以风险形式标注，并给出后续确认项",
+      "verify_cmd": "grep -q '风险' output.md && grep -q '确认项' output.md",
+      "kind": "happy"
+    },
+    {
+      "id": "5",
+      "input": {},
+      "expect": "输出文档不包含最终官网网页Copy，即不包含'立即购买'等营销文案",
+      "verify_cmd": "! grep -qE '(立即购买|免费试用|联系我们)' output.md",
+      "kind": "adversarial"
+    },
+    {
+      "id": "6",
+      "input": {},
+      "expect": "输出文档直接支撑T03，包含'策略'相关表述",
+      "verify_cmd": "grep -q '策略' output.md",
+      "kind": "happy"
+    }
+  ],
+  "context_budget": {
+    "token_cap": 8000,
+    "on_overflow": "summarize"
+  },
+  "state_ownership": {
+    "not_applicable": true,
+    "rationale": "该agent为无状态分析器，不维护跨调用状态，所有输入输出均为一次性处理。"
+  },
+  "deployment_boundary": {
+    "runtime": "subagent",
+    "irreversible_ops": []
+  }
+}

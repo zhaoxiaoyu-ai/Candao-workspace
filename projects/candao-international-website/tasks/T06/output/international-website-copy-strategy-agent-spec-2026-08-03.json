@@ -1,0 +1,278 @@
+{
+  "spec_version": "0.1.0",
+  "agent_id": "content-strategy-agent",
+  "carrier": "subagent",
+  "tool_contract": [
+    {
+      "name": "generate_website_copy",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "phase": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "pages",
+          "phase",
+          "lang"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "pages": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "sections": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "target": {
+                        "type": "string"
+                      },
+                      "headline_zh_Hant": {
+                        "type": "string"
+                      },
+                      "description_zh_Hant": {
+                        "type": "string"
+                      },
+                      "cta_zh_Hant": {
+                        "type": "string"
+                      },
+                      "headline_en": {
+                        "type": "string"
+                      },
+                      "description_en": {
+                        "type": "string"
+                      },
+                      "cta_en": {
+                        "type": "string"
+                      },
+                      "visual_direction": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "target",
+                      "headline_zh_Hant",
+                      "description_zh_Hant",
+                      "cta_zh_Hant",
+                      "headline_en",
+                      "description_en",
+                      "cta_en",
+                      "visual_direction"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "sections"
+              ]
+            }
+          }
+        },
+        "required": [
+          "pages"
+        ]
+      },
+      "side_effect": "write"
+    },
+    {
+      "name": "validate_compliance",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "copy_document": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "copy_document"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "valid": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "valid",
+          "errors"
+        ]
+      },
+      "side_effect": "read"
+    }
+  ],
+  "permission_matrix": {
+    "allow": [
+      "read_input_documents",
+      "generate_copy",
+      "validate_output",
+      "write_output_file"
+    ],
+    "deny": [
+      "access_unapproved_customer_data",
+      "use_simplified_chinese_for_official_copy",
+      "output_placeholder_text",
+      "use_buzzwords"
+    ],
+    "hitl_required": [
+      "publish_customer_case",
+      "confirm_integration_status",
+      "confirm_pricing"
+    ]
+  },
+  "failure_semantics": [
+    {
+      "failure": "input_document_missing",
+      "detect": "required input file not found or empty",
+      "fallback": "halt and escalate to human; do not proceed with generation"
+    },
+    {
+      "failure": "customer_case_unverified",
+      "detect": "customer name or logo not in authorized list",
+      "fallback": "halt and escalate; do not include as fact; mark as pending confirmation"
+    },
+    {
+      "failure": "integration_status_unknown",
+      "detect": "integration status not confirmed",
+      "fallback": "halt and escalate; do not claim status; use 'Request Integration' CTA"
+    },
+    {
+      "failure": "pricing_unavailable",
+      "detect": "pricing information not provided",
+      "fallback": "halt and escalate; do not output any price; output direction and pending items only"
+    },
+    {
+      "failure": "language_generation_error",
+      "detect": "translation or copy generation fails",
+      "fallback": "halt and escalate; do not output incomplete or mixed-language copy"
+    },
+    {
+      "failure": "compliance_check_failed",
+      "detect": "output contains simplified Chinese, placeholders, or buzzwords",
+      "fallback": "halt and escalate; do not release output; regenerate or fix"
+    }
+  ],
+  "eval_cases": [
+    {
+      "id": "C01",
+      "input": {
+        "pages": [
+          "Home",
+          "Platform",
+          "Integrations",
+          "Customers",
+          "Pricing"
+        ],
+        "phase": "P0",
+        "lang": "zh-Hant"
+      },
+      "expect": "输出包含所有P0页面的完整框架和双语Copy，无简体中文正式文案，无说明式占位。",
+      "verify_cmd": "python -c \"import json,sys; d=json.load(open('output.json')); assert all(p in d['pages'] for p in ['Home','Platform','Integrations','Customers','Pricing']); assert all('zh-Hant' in str(v) and 'en' in str(v) for v in d['pages'].values()); assert '这里' not in str(d) and '展示' not in str(d)\"",
+      "kind": "happy"
+    },
+    {
+      "id": "C02",
+      "input": {
+        "pages": [
+          "Platform"
+        ],
+        "phase": "P0",
+        "lang": "en"
+      },
+      "expect": "Platform页面遵循Business Problem→Solution→Product Capability→UI Demo→Business Outcome→CTA结构。",
+      "verify_cmd": "python -c \"import json; d=json.load(open('output.json')); s=d['pages']['Platform']['sections']; assert [x['name'] for x in s]==['Business Problem','Solution','Product Capability','UI Demo','Business Outcome','CTA']\"",
+      "kind": "happy"
+    },
+    {
+      "id": "C03",
+      "input": {
+        "pages": [
+          "Integrations"
+        ],
+        "phase": "P0",
+        "lang": "zh-Hant"
+      },
+      "expect": "Integrations页面包含Overview、Category Overview、Request Integration三个模块，且无未确认集成状态。",
+      "verify_cmd": "python -c \"import json; d=json.load(open('output.json')); s=d['pages']['Integrations']['sections']; assert any('Overview' in x['name'] for x in s); assert any('Category' in x['name'] for x in s); assert any('Request' in x['name'] for x in s); assert '已上线' not in str(d) and '开发中' not in str(d)\"",
+      "kind": "happy"
+    },
+    {
+      "id": "C04",
+      "input": {
+        "pages": [
+          "Customers"
+        ],
+        "phase": "P0",
+        "lang": "en"
+      },
+      "expect": "Customers页面使用Customer Proof Module、Story Template、Authorized Case结构，未授权客户不写成事实。",
+      "verify_cmd": "python -c \"import json; d=json.load(open('output.json')); s=d['pages']['Customers']['sections']; assert any('Customer Proof' in x['name'] for x in s); assert any('Story' in x['name'] for x in s); assert any('Authorized' in x['name'] for x in s); assert '客户' not in str(d) or '待确认' in str(d)\"",
+      "kind": "happy"
+    },
+    {
+      "id": "C05",
+      "input": {
+        "pages": [
+          "Pricing"
+        ],
+        "phase": "P0",
+        "lang": "zh-Hant"
+      },
+      "expect": "Pricing页面未确定时不输出具体价格，只输出方向和待确认项。",
+      "verify_cmd": "python -c \"import json; d=json.load(open('output.json')); p=d['pages']['Pricing']; assert '待确认' in str(p) or '方向' in str(p); assert 'NT$' not in str(p) and 'USD' not in str(p)\"",
+      "kind": "adversarial"
+    },
+    {
+      "id": "C06",
+      "input": {
+        "pages": [
+          "Home"
+        ],
+        "phase": "P0",
+        "lang": "zh-Hant"
+      },
+      "expect": "Home页面无套话如'一站式解决方案'、'行业领先'等，且无简体中文正式文案。",
+      "verify_cmd": "python -c \"import json; d=json.load(open('output.json')); s=str(d); assert '一站式解决方案' not in s and '行业领先' not in s and '赋能' not in s and '全面提升效率' not in s; assert not any('\\u4e00' <= ch <= '\\u9fff' and ch not in '繁' for ch in s)\"",
+      "kind": "adversarial"
+    }
+  ],
+  "context_budget": {
+    "token_cap": 8000,
+    "on_overflow": "summarize"
+  },
+  "state_ownership": {
+    "not_applicable": true,
+    "rationale": "该Agent为无状态的内容生成器，每次运行独立处理输入并输出结果，不维护跨会话状态。"
+  },
+  "deployment_boundary": {
+    "not_applicable": true,
+    "rationale": "该Agent运行于标准CI/CD流程中，无独立运行时环境，且不执行任何不可逆操作。"
+  }
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>C v4 / 首頁 - 餐道國際 / Desktop TC / 營運中樞修正版</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&amp;family=Work+Sans:wght@400;600&amp;family=IBM+Plex+Sans:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "border-subtle": "#E2E8F0",
+                        "outline": "#727785",
+                        "surface-variant": "#e2e2e5",
+                        "secondary": "#006b53",
+                        "tertiary": "#7f5300",
+                        "cloud-surface": "#F8FAFC",
+                        "ink-text": "#1A1C1E",
+                        "primary": "#0057c2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f9fc",
+                        "primary-fixed": "#d9e2ff",
+                        "background": "#f9f9fc",
+                        "inverse-primary": "#afc6ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#624000",
+                        "inverse-on-surface": "#f0f0f3",
+                        "on-background": "#1a1c1e",
+                        "secondary-fixed": "#79f9d0",
+                        "secondary-fixed-dim": "#59dcb5",
+                        "on-primary-fixed": "#001944",
+                        "on-primary-fixed-variant": "#004299",
+                        "surface-container-high": "#e8e8ea",
+                        "inverse-surface": "#2f3133",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-tint": "#0059c7",
+                        "surface-bright": "#f9f9fc",
+                        "surface-dim": "#dadadc",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e2e2e5",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#76f6cd",
+                        "outline-variant": "#c2c6d6",
+                        "on-secondary-fixed-variant": "#00513e",
+                        "error-container": "#ffdad6",
+                        "status-warning": "#FFAB00",
+                        "tertiary-fixed": "#ffddb3",
+                        "on-surface": "#1a1c1e",
+                        "primary-fixed-dim": "#afc6ff",
+                        "surface-container": "#eeeef0",
+                        "on-surface-variant": "#424753",
+                        "surface-container-low": "#f3f3f6",
+                        "operational-blue": "#528DFF",
+                        "on-tertiary-fixed": "#291800",
+                        "on-secondary-fixed": "#002117",
+                        "on-secondary-container": "#007057",
+                        "on-primary-container": "#fefcff",
+                        "primary-container": "#2e70e0",
+                        "status-success": "#00A884",
+                        "tertiary-fixed-dim": "#ffb950",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#9f6900",
+                        "status-error": "#E11D48",
+                        "on-error": "#ffffff"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        unit: "8px",
+                        "bento-gap": "16px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-sm": ["IBM Plex Sans"],
+                        "body-md": ["Work Sans"],
+                        "title-md": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "headline-lg-mobile": ["Noto Serif"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "700" }],
+                        "headline-lg": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "label-sm": ["13px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "title-md": ["20px", { lineHeight: "1.5", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.3", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased pt-20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-inverse-surface/80 border-b border-border-subtle dark:border-outline-variant">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-[1280px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-headline-lg text-headline-lg font-bold text-ink-text dark:text-surface-bright">餐道</span>
+<div class="hidden md:flex gap-6">
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-body-md text-body-md transition-colors hover:text-primary dark:hover:text-primary-fixed py-2" href="#">首頁</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md transition-colors hover:text-primary dark:hover:text-primary-fixed py-2" href="#">解決方案</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md transition-colors hover:text-primary dark:hover:text-primary-fixed py-2" href="#">平台</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md transition-colors hover:text-primary dark:hover:text-primary-fixed py-2" href="#">整合能力</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md transition-colors hover:text-primary dark:hover:text-primary-fixed py-2" href="#">客戶案例</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md transition-colors hover:text-primary dark:hover:text-primary-fixed py-2" href="#">資源</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md transition-colors hover:text-primary dark:hover:text-primary-fixed py-2" href="#">關於餐道</a>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<span class="text-on-surface-variant font-body-md text-body-md cursor-pointer hover:text-primary transition-colors">繁中 / EN</span>
+<button class="bg-operational-blue text-on-primary font-body-md text-body-md px-6 py-2 rounded-DEFAULT hover:bg-primary-container transition-colors font-medium">預約產品演示</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 overflow-hidden bg-cloud-surface">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-8">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-ink-text text-balance">餐道，連接餐飲營運的關鍵流程</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl text-balance">
+                    從多渠道訂單、門店菜單、配送履約到數據決策，將分散訊號整合為可管理的工作流。
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-operational-blue text-on-primary font-body-md text-body-md px-8 py-3 rounded-DEFAULT hover:bg-primary-container transition-colors shadow-sm font-medium">預約演示</button>
+<button class="bg-surface text-operational-blue border border-border-subtle font-body-md text-body-md px-8 py-3 rounded-DEFAULT hover:bg-surface-container-low transition-colors shadow-sm font-medium">查看平台能力</button>
+</div>
+</div>
+<div class="relative h-[500px] rounded-lg overflow-hidden border border-border-subtle shadow-sm bg-white">
+<img alt="Restaurant Operations" class="absolute inset-0 w-full h-full object-cover opacity-80" data-alt="A high-quality, authentic photo of a busy, modern restaurant kitchen and ordering counter during a rush. Chefs are preparing food while staff hand off a delivery bag to a courier. The lighting is bright and natural, capturing the fast-paced tactile reality of restaurant operations. Crisp details, professional grade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPEVbSQ90jbkNUVuWPU2uWXKRx1zF8rBRkhlIZSUXGaLCCCG8sqo5LFRUhOMwraCifYWfvMkxE_U343LJ-R3WPEzY44d0jfc9wJXWSj9oJ0uXga3xHOMmNAN2MelBuT7MJz1gXhubnGIhq1n4N4npsW7b0W9B3Gq3BhOZnDjgjIIjZ1V5-GhrgnUTQOKfhxBNkpUZK9eOYzL8yQGfl2H5jAihwOPqJCKVdnSOsD6pujOoQ7Gj6w6KyINus0IY-L8rHtofVI3UYe5xj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<!-- Floating UI Overlay -->
+<div class="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-[0px_4px_20px_rgba(0,0,0,0.1)] border border-border-subtle w-72">
+<div class="flex justify-between items-center mb-3 pb-2 border-b border-border-subtle">
+<span class="font-label-sm text-label-sm text-ink-text uppercase tracking-wider">統一訂單隊列</span>
+<span class="material-symbols-outlined text-operational-blue text-sm">notifications</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-3 bg-cloud-surface p-2 rounded">
+<span class="w-2 h-2 rounded-full bg-status-warning"></span>
+<div class="flex-1">
+<p class="text-xs font-semibold text-ink-text">#A1234 - UberEats</p>
+<p class="text-[10px] text-outline">製作中 • 5 min</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-cloud-surface p-2 rounded">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<div class="flex-1">
+<p class="text-xs font-semibold text-ink-text">#B5678 - Foodpanda</p>
+<p class="text-[10px] text-outline">待取餐 • 騎手已達</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Logo Cloud -->
+<section class="py-16 bg-white border-y border-border-subtle">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop text-center space-y-8">
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-widest">服務多地餐飲品牌，支援連鎖門店、外送平台與配送履約場景。</p>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-6 text-on-surface-variant font-title-md text-title-md grayscale opacity-70">
+<span>漢堡王</span>
+<span>肯德基</span>
+<span>必勝客</span>
+<span>吉野家</span>
+<span>棒約翰</span>
+<span>星巴克</span>
+<span>周黑鴨</span>
+<span>Jollibee</span>
+<span>Pizza Boss</span>
+<span>西貝</span>
+<span>真功夫</span>
+<span>蜜雪冰城</span>
+<span>PHD</span>
+</div>
+</div>
+</section>
+<!-- Metrics -->
+<section class="py-20 bg-cloud-surface">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8 divide-x divide-border-subtle">
+<div class="px-4 text-center">
+<p class="font-headline-lg text-headline-lg md:text-headline-lg text-operational-blue mb-2">5000+</p>
+<p class="font-label-sm text-label-sm text-ink-text uppercase">品牌</p>
+</div>
+<div class="px-4 text-center">
+<p class="font-headline-lg text-headline-lg md:text-headline-lg text-operational-blue mb-2">500M+</p>
+<p class="font-label-sm text-label-sm text-ink-text uppercase">每日處理訂單</p>
+</div>
+<div class="px-4 text-center">
+<p class="font-headline-lg text-headline-lg md:text-headline-lg text-operational-blue mb-2">400+</p>
+<p class="font-label-sm text-label-sm text-ink-text uppercase">覆蓋城市</p>
+</div>
+<div class="px-4 text-center">
+<p class="font-headline-lg text-headline-lg md:text-headline-lg text-operational-blue mb-2">200K+</p>
+<p class="font-label-sm text-label-sm text-ink-text uppercase">門店</p>
+</div>
+<div class="px-4 text-center">
+<p class="font-headline-lg text-headline-lg md:text-headline-lg text-operational-blue mb-2">4.5B+</p>
+<p class="font-label-sm text-label-sm text-ink-text uppercase">月配送訂單 GMV</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-cloud-surface dark:bg-inverse-surface w-full py-16 border-t border-border-subtle dark:border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-5 gap-gutter">
+<div class="col-span-2 md:col-span-1">
+<span class="font-headline-lg text-headline-lg font-bold text-ink-text dark:text-surface-bright block mb-6">餐道</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant mt-8">© 2024 餐道國際。版權所有。</p>
+</div>
+<div>
+<a class="block font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline mb-4" href="#">產品與解決方案</a>
+</div>
+<div>
+<a class="block font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline mb-4" href="#">營運平台</a>
+</div>
+<div>
+<a class="block font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline mb-4" href="#">整合與生態</a>
+</div>
+<div>
+<a class="block font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline mb-4" href="#">資源中心</a>
+<a class="block font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline mb-4" href="#">關於餐道</a>
+</div>
+</div>
+</footer>
+</body></html>

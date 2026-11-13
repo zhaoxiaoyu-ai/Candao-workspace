@@ -1,0 +1,1279 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candao International Website - C v3</title>
+    <style>
+      :root {
+        --blue: #528dff;
+        --blue-deep: #1f5ed8;
+        --ink: #101827;
+        --muted: #5f6b7c;
+        --soft: #f5f8fc;
+        --line: #dbe3ef;
+        --surface: #ffffff;
+        --green: #0f766e;
+        --amber: #b7791f;
+        --rose: #be3b5b;
+        --shadow: 0 22px 72px rgba(16, 24, 39, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--soft);
+        font-family:
+          Inter,
+          "Noto Sans TC",
+          "PingFang TC",
+          "Microsoft JhengHei",
+          Arial,
+          sans-serif;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+        min-height: 72px;
+        padding: 0 clamp(20px, 5vw, 72px);
+        border-bottom: 1px solid rgba(219, 227, 239, 0.82);
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 142px;
+        font-weight: 760;
+      }
+
+      .mark {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #1747b2, var(--blue) 62%, #a9caff);
+        box-shadow: 0 12px 26px rgba(82, 141, 255, 0.28);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        overflow-x: auto;
+      }
+
+      .nav button {
+        min-width: fit-content;
+        height: 40px;
+        padding: 0 12px;
+        border: 0;
+        border-radius: 8px;
+        background: transparent;
+        color: #344256;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .nav button:hover,
+      .nav button.active {
+        color: var(--blue-deep);
+        background: #eaf2ff;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .lang {
+        color: var(--muted);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .cta,
+      .ghost {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .cta {
+        border: 0;
+        color: #fff;
+        background: var(--blue);
+        box-shadow: 0 12px 28px rgba(82, 141, 255, 0.28);
+      }
+
+      .ghost {
+        border: 1px solid var(--line);
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.86);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 730px;
+        display: grid;
+        align-items: center;
+        padding: clamp(48px, 6vw, 92px) clamp(20px, 5vw, 72px);
+        color: #fff;
+        background: #07111f;
+        overflow: hidden;
+      }
+
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.72;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(7, 17, 31, 0.95), rgba(7, 17, 31, 0.72) 42%, rgba(7, 17, 31, 0.25)),
+          linear-gradient(180deg, rgba(7, 17, 31, 0.06), rgba(7, 17, 31, 0.48));
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        width: min(1320px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(320px, 0.95fr) minmax(400px, 1.05fr);
+        gap: clamp(28px, 5vw, 74px);
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0 10px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.86);
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 13px;
+      }
+
+      .hero h1 {
+        max-width: 760px;
+        margin: 24px 0 18px;
+        font-size: clamp(44px, 5vw, 76px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      .hero p {
+        max-width: 660px;
+        margin: 0 0 28px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: clamp(17px, 1.45vw, 21px);
+        line-height: 1.72;
+      }
+
+      .hero-actions,
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero-panel,
+      .product-panel,
+      .scene-panel {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--ink);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-panel {
+        justify-self: end;
+        width: min(580px, 100%);
+      }
+
+      .panel-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        min-height: 56px;
+        padding: 0 18px;
+        align-items: center;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.78);
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 99px;
+        background: var(--green);
+      }
+
+      .panel-body {
+        padding: 18px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .metric {
+        min-height: 112px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .metric small {
+        color: var(--muted);
+      }
+
+      .metric strong {
+        display: block;
+        margin: 8px 0;
+        font-size: 24px;
+      }
+
+      .bar {
+        height: 8px;
+        border-radius: 99px;
+        background: #e8edf6;
+        overflow: hidden;
+      }
+
+      .bar span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--blue), #21b7a8);
+      }
+
+      .section {
+        padding: clamp(56px, 7vw, 106px) clamp(20px, 5vw, 72px);
+      }
+
+      .section-inner {
+        width: min(1320px, 100%);
+        margin: 0 auto;
+      }
+
+      .section-kicker {
+        color: var(--blue-deep);
+        font-size: 14px;
+        font-weight: 720;
+      }
+
+      .section h2 {
+        max-width: 860px;
+        margin: 14px 0 16px;
+        font-size: clamp(30px, 3.4vw, 50px);
+        line-height: 1.12;
+        letter-spacing: 0;
+      }
+
+      .section-lead {
+        max-width: 760px;
+        margin: 0 0 30px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.72;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.82fr) minmax(420px, 1.18fr);
+        gap: 26px;
+        align-items: start;
+      }
+
+      .rail {
+        display: grid;
+        gap: 10px;
+      }
+
+      .rail button {
+        width: 100%;
+        min-height: 58px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        color: var(--ink);
+        text-align: left;
+        cursor: pointer;
+      }
+
+      .rail button.active {
+        border-color: rgba(82, 141, 255, 0.5);
+        background: #edf4ff;
+        color: var(--blue-deep);
+      }
+
+      .scene-panel,
+      .product-panel {
+        border-color: var(--line);
+        background: #fff;
+      }
+
+      .panel-grid {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.85fr) minmax(320px, 1.15fr);
+        gap: 18px;
+        padding: 18px;
+      }
+
+      .media-tile {
+        position: relative;
+        min-height: 340px;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #0d1625;
+      }
+
+      .media-tile img {
+        width: 100%;
+        height: 100%;
+        min-height: inherit;
+        object-fit: cover;
+        opacity: 0.84;
+      }
+
+      .media-caption {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        padding: 14px;
+        border-radius: 8px;
+        color: #fff;
+        background: rgba(8, 17, 31, 0.72);
+        backdrop-filter: blur(14px);
+      }
+
+      .panel-content h3 {
+        margin: 4px 0 12px;
+        font-size: clamp(24px, 2.4vw, 34px);
+        line-height: 1.16;
+      }
+
+      .panel-content p {
+        color: var(--muted);
+        line-height: 1.72;
+      }
+
+      .state-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin: 18px 0;
+      }
+
+      .state-box {
+        min-height: 112px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f8fafc;
+      }
+
+      .state-box span {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0 10px;
+        border: 1px solid #cfd8e6;
+        border-radius: 8px;
+        color: #334155;
+        background: #fff;
+        font-size: 13px;
+      }
+
+      .product-ui {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: linear-gradient(180deg, #f8fbff, #fff);
+      }
+
+      .ui-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 14px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        padding: 0 9px;
+        border-radius: 8px;
+        color: var(--blue-deep);
+        background: #eaf2ff;
+        font-size: 13px;
+      }
+
+      .workflow {
+        display: grid;
+        gap: 10px;
+      }
+
+      .workflow-item {
+        display: grid;
+        grid-template-columns: 32px 1fr auto;
+        gap: 10px;
+        align-items: center;
+        min-height: 56px;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .num {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        color: #fff;
+        background: var(--blue);
+        font-size: 13px;
+        font-weight: 740;
+      }
+
+      .flow-status {
+        color: var(--green);
+        font-size: 13px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .card {
+        min-height: 172px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .card h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.62;
+      }
+
+      .resource-grid {
+        display: grid;
+        grid-template-columns: 0.82fr 1.18fr;
+        gap: 18px;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 46px;
+        padding: 0 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      textarea {
+        min-height: 116px;
+        padding-top: 12px;
+        resize: vertical;
+      }
+
+      .footer {
+        padding: 34px clamp(20px, 5vw, 72px);
+        color: #d5deeb;
+        background: #101827;
+      }
+
+      .footer-inner {
+        width: min(1320px, 100%);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 1080px) {
+        .site-header {
+          align-items: flex-start;
+          min-height: 118px;
+          padding-top: 16px;
+          flex-wrap: wrap;
+        }
+
+        .nav {
+          order: 3;
+          width: 100%;
+          padding-bottom: 12px;
+        }
+
+        .hero-inner,
+        .split,
+        .panel-grid,
+        .resource-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-panel {
+          justify-self: stretch;
+        }
+
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 720px) {
+        .header-actions .cta {
+          display: none;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        .hero h1 {
+          font-size: 40px;
+        }
+
+        .metrics,
+        .state-boxes,
+        .cards,
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .media-tile {
+          min-height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="?page=home" aria-label="Candao">
+        <span class="mark"></span>
+        <span>Candao</span>
+      </a>
+      <nav class="nav" id="nav"></nav>
+      <div class="header-actions">
+        <span class="lang">繁中 / EN</span>
+        <button class="cta" data-page="contact">預約產品演示</button>
+      </div>
+    </header>
+
+    <main id="app"></main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <strong>Candao International Website C v3</strong>
+        <span>繁體中文原型 | 主色 #528dff | Solutions 與 Platform 已分層</span>
+      </div>
+    </footer>
+
+    <script>
+      const asset = (name) => `assets/${name}`;
+      const images = {
+        home: asset("home-hero-restaurant-ops-2026-08-08.png"),
+        solutions: asset("solutions-hero-multistore-ops-2026-08-08.png"),
+        platform: asset("platform-capability-ui-2026-08-08.png"),
+        integrations: asset("integrations-ecosystem-ui-2026-08-08.png"),
+        customers: asset("customers-hero-case-ops-2026-08-08.png"),
+        about: asset("about-contact-service-ops-2026-08-08.png")
+      };
+
+      const navItems = [
+        ["home", "首頁"],
+        ["solutions", "解決方案"],
+        ["platform", "平台"],
+        ["integrations", "整合能力"],
+        ["customers", "客戶案例"],
+        ["resources", "資源"],
+        ["about", "關於 Candao"],
+        ["contact", "預約產品演示"]
+      ];
+
+      const pageText = {
+        home: {
+          eyebrow: "全球餐飲智能營運 SaaS 平台",
+          title: "讓餐飲營運，從多平台混亂走向一個清晰系統",
+          desc: "Candao 連接訂單、菜單、門店、配送與數據，協助餐飲品牌在多市場、多門店中穩定營運與持續成長。",
+          image: images.home
+        },
+        solutions: {
+          eyebrow: "按場景理解 Candao",
+          title: "從營運問題出發，找到適合的 Candao 解決方案",
+          desc: "不同餐飲品牌面對的不是單一系統問題，而是跨渠道、跨門店、跨角色的營運壓力。Candao 先理解你的場景，再連接合適的平台能力。",
+          image: images.solutions
+        },
+        platform: {
+          eyebrow: "平台能力與產品證明",
+          title: "餐飲營運的核心能力，連接在同一個平台",
+          desc: "Candao 將訂單、菜單、門店、配送、點餐與數據智能連接，讓團隊以一致的工作流管理複雜營運。",
+          image: images.platform
+        },
+        integrations: {
+          eyebrow: "系統整合與資料流",
+          title: "連接餐飲營運需要的關鍵系統",
+          desc: "Candao 可與外送平台、POS、CRM、物流、支付與內部系統整合，讓資料和流程不再割裂。",
+          image: images.integrations
+        },
+        customers: {
+          eyebrow: "落地案例與信任",
+          title: "看 Candao 如何支援餐飲品牌穩定成長",
+          desc: "從多門店管理到配送協同，Candao 協助團隊將複雜營運變得清晰可控。",
+          image: images.customers
+        },
+        resources: {
+          eyebrow: "支援、FAQ 與查詢入口",
+          title: "探索 Candao 資源",
+          desc: "找到支援、常見問題、媒體資料、案例資源與查詢入口，讓評估與導入更清晰。",
+          image: images.integrations
+        },
+        about: {
+          eyebrow: "關於 Candao",
+          title: "為餐飲品牌打造可持續擴展的營運平台",
+          desc: "Candao 專注於餐飲營運數字化，協助品牌連接渠道、門店、配送與數據，支援跨市場成長。",
+          image: images.about
+        },
+        contact: {
+          eyebrow: "與 Candao 團隊討論",
+          title: "預約 Candao 產品演示",
+          desc: "告訴我們你的門店規模、渠道組合與營運挑戰，我們會安排合適的團隊與你討論。",
+          image: images.about
+        }
+      };
+
+      const solutions = [
+        {
+          name: "餐飲與零售",
+          title: "為餐飲與零售門店，建立更清晰的數字化營運入口",
+          desc: "從手機點餐、自助點餐到門店履約，Candao 協助品牌把顧客入口、門店工作流與後台營運連接起來。",
+          before: "選擇你的門店前端場景。",
+          after: "已顯示對應的顧客旅程、門店壓力與推薦平台能力。",
+          caps: ["自有點餐", "自助點餐", "訂單管理"]
+        },
+        {
+          name: "數字點餐與自助服務",
+          title: "建立品牌自己的點餐與自助服務入口",
+          desc: "Candao 支援品牌把手機點餐、自助點餐與會員經營連接起來，讓顧客入口不只是交易入口，也能回到營運系統。",
+          before: "從一次點餐開始，建立可持續的顧客關係。",
+          after: "已推薦自有點餐、自助點餐、CRM 與數據智能。",
+          caps: ["自有點餐", "自助點餐", "CRM", "數據智能"]
+        },
+        {
+          name: "配送營運與履約",
+          title: "讓外送、自有配送與物流履約保持可見",
+          desc: "當訂單來自不同渠道，履約又涉及門店、騎手和第三方物流，Candao 協助團隊把配送營運從人工追蹤變成可管理流程。",
+          before: "配送流程中哪一步最容易失控？",
+          after: "已推薦配送管理、配送調度、聚合物流管理與騎手 App。",
+          caps: ["配送管理", "配送調度", "聚合物流管理", "騎手 App"]
+        },
+        {
+          name: "連鎖餐飲",
+          title: "讓總部、區域與門店共享同一套營運節奏",
+          desc: "Candao 協助連鎖餐飲品牌整合渠道、門店與數據，讓管理不再依賴分散表格與人工追蹤。",
+          before: "選擇一個總部最關注的營運問題。",
+          after: "已推薦菜單與門店管理、訂單管理與數據智能。",
+          caps: ["菜單與門店管理", "訂單管理", "數據智能"]
+        },
+        {
+          name: "多門店營運",
+          title: "讓每一家門店，都在可追蹤的營運節奏中運作",
+          desc: "從菜單同步、門店狀態到訂單履約，Candao 幫助團隊降低跨店管理成本。",
+          before: "選擇一個門店營運問題。",
+          after: "已顯示對應的門店狀態與推薦平台能力。",
+          caps: ["菜單與門店管理", "訂單管理", "數據智能"]
+        },
+        {
+          name: "數據化營運",
+          title: "讓營運決策建立在即時、可行動的數據上",
+          desc: "Candao 將訂單、門店、配送與渠道數據整合，幫助管理團隊更快發現問題與機會。",
+          before: "選擇一個你想追蹤的指標。",
+          after: "已推薦數據智能、訂單管理與配送管理。",
+          caps: ["數據智能", "訂單管理", "配送管理"]
+        }
+      ];
+
+      const platform = [
+        {
+          name: "訂單管理",
+          title: "集中處理多渠道訂單，讓門店不再反覆切換系統",
+          desc: "Candao 將不同渠道的訂單匯入統一工作流，協助團隊降低錯單、漏單與人工處理成本。",
+          steps: ["接收多渠道訂單", "自動歸類與分流", "門店確認與異常提醒", "履約狀態回傳"],
+          result: "訂單已自動歸類並送入正確門店工作流。"
+        },
+        {
+          name: "配送管理",
+          title: "讓配送狀態、異常與履約進度保持可見",
+          desc: "Candao 協助團隊協調平台外送、自有配送、騎手與第三方物流，讓配送營運更可控。",
+          steps: ["配送訂單進入列表", "騎手與物流狀態同步", "異常訂單高亮", "履約完成並回傳數據"],
+          result: "異常訂單已高亮，建議處理動作已生成。"
+        },
+        {
+          name: "配送調度",
+          title: "用清晰的規則與狀態管理配送決策",
+          desc: "Candao 讓團隊在訂單、門店、騎手與物流資源之間做出更可追蹤的調度決策。",
+          steps: ["訂單等待分配", "讀取距離與時效", "套用優先級規則", "完成調度建議"],
+          result: "已根據距離、時效與資源狀態完成調度建議。"
+        },
+        {
+          name: "聚合物流管理",
+          title: "將多個物流資源整合成可管理的履約池",
+          desc: "Candao 支援品牌在第三方物流、自有配送與平台配送之間建立更穩定的履約策略。",
+          steps: ["讀取物流資源池", "比較狀態與預計時效", "選擇合適資源", "同步履約狀態"],
+          result: "已選擇合適資源並同步履約狀態。"
+        },
+        {
+          name: "自有點餐",
+          title: "打造品牌自有點餐體驗",
+          desc: "Candao 支援品牌建立自有點餐渠道，將顧客行為、會員資料與訂單流程連回營運平台。",
+          steps: ["顧客進入品牌入口", "完成菜單與支付", "會員資料更新", "訂單進入後台"],
+          result: "訂單進入後台，會員資料與偏好同步更新。"
+        },
+        {
+          name: "自助點餐",
+          title: "將自助點餐與門店履約流程連接",
+          desc: "Candao 讓 Kiosk 訂單、菜單、支付和出餐狀態與後台保持同步。",
+          steps: ["顧客於 Kiosk 下單", "支付狀態同步", "訂單進入出餐屏", "取餐狀態更新"],
+          result: "訂單已同步至門店履約屏，取餐狀態開始更新。"
+        },
+        {
+          name: "數據智能",
+          title: "將營運數據轉化為下一步行動",
+          desc: "Candao 將多渠道、多門店與多流程數據整理成可判斷、可追蹤、可行動的營運洞察。",
+          steps: ["選擇營運目標", "切換關鍵指標", "識別異常趨勢", "生成行動建議"],
+          result: "Dashboard 已切換指標，並展示建議行動。"
+        }
+      ];
+
+      const integrations = [
+        ["外送平台", "將外送平台訂單接入同一個營運流程。"],
+        ["POS", "讓前台交易與後台營運保持一致。"],
+        ["CRM", "將訂單行為、會員資料與顧客經營連接。"],
+        ["第三方物流", "協同物流資源與履約狀態。"],
+        ["支付閘道", "讓支付、退款、對帳與訂單流程同步。"],
+        ["申請整合", "沒有找到需要的整合時，提交系統與場景。"]
+      ];
+
+      const resources = [
+        ["支援中心", "取得導入、使用與營運支援。"],
+        ["常見問題", "快速了解產品能力、整合方式、導入流程與支援服務。"],
+        ["媒體與新聞", "查看 Candao 的最新消息與媒體資料。"],
+        ["案例資源", "按餐飲類型、門店規模與營運問題探索相關案例。"],
+        ["了解更多", "還不確定入口時，先提交你的問題。"],
+        ["查詢表單", "根據需求把問題送到合適的 Candao 團隊。"]
+      ];
+
+      const about = [
+        ["關於我們", "專注餐飲營運數字化的 SaaS 團隊。"],
+        ["里程碑", "看見 Candao 的成長節點和長期投入。"],
+        ["加入我們", "一起打造餐飲營運的未來。"],
+        ["聯絡我們", "根據需求選擇銷售、合作、支援、媒體或招聘入口。"],
+        ["安全與服務", "穩定、安全、可持續的餐飲營運支援。"]
+      ];
+
+      const state = {
+        page: new URLSearchParams(location.search).get("page") || "home",
+        solution: 0,
+        capability: 0,
+        resource: 0,
+        contact: 0
+      };
+
+      function setPage(page) {
+        state.page = page;
+        history.replaceState(null, "", `?page=${page}`);
+        render();
+        scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function renderNav() {
+        const nav = document.getElementById("nav");
+        nav.innerHTML = navItems
+          .map(([key, label]) => `<button class="${state.page === key ? "active" : ""}" data-page="${key}">${label}</button>`)
+          .join("");
+        document.querySelectorAll("[data-page]").forEach((button) => {
+          button.addEventListener("click", () => setPage(button.dataset.page));
+        });
+      }
+
+      function hero(page) {
+        const p = pageText[page] || pageText.home;
+        return `
+          <section class="hero">
+            <img src="${p.image}" alt="" />
+            <div class="hero-inner">
+              <div>
+                <span class="eyebrow">${p.eyebrow}</span>
+                <h1>${p.title}</h1>
+                <p>${p.desc}</p>
+                <div class="hero-actions">
+                  <button class="cta" data-page="contact">預約產品演示</button>
+                  <button class="ghost" data-page="${page === "platform" ? "solutions" : "platform"}">${page === "platform" ? "查看適用場景" : "探索平台能力"}</button>
+                </div>
+              </div>
+              ${heroPanel(page)}
+            </div>
+          </section>
+        `;
+      }
+
+      function heroPanel(page) {
+        const lines = page === "solutions"
+          ? ["場景問題", "推薦能力", "業務結果", "Demo 入口"]
+          : page === "platform"
+            ? ["能力地圖", "工作流", "UI 狀態", "數據回流"]
+            : ["訂單", "門店", "配送", "數據"];
+        return `
+          <div class="hero-panel">
+            <div class="panel-head">
+              <strong>Candao Operations View</strong>
+              <span class="status"><span class="dot"></span>即時同步</span>
+            </div>
+            <div class="panel-body">
+              <div class="metrics">
+                ${lines
+                  .map((item, index) => `
+                    <div class="metric">
+                      <small>${item}</small>
+                      <strong>${index === 0 ? "01" : "0" + (index + 1)}</strong>
+                      <div class="bar"><span style="width:${66 + index * 7}%"></span></div>
+                    </div>
+                  `)
+                  .join("")}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderHome() {
+        return `
+          ${hero("home")}
+          <section class="section">
+            <div class="section-inner split">
+              <div>
+                <span class="section-kicker">從問題到平台</span>
+                <h2>讓場景理解與產品能力接在一起</h2>
+                <p class="section-lead">這一版把解決方案與平台分開表達：先用業務場景建立理解，再用平台能力證明 Candao 如何實現。</p>
+                <div class="button-row">
+                  <button class="cta" data-page="solutions">查看解決方案</button>
+                  <button class="ghost" data-page="platform">查看平台</button>
+                </div>
+              </div>
+              ${homeFlow()}
+            </div>
+          </section>
+          ${cardsSection("首頁重點", [
+            ["大圖場景", "Hero 使用真實餐飲營運影像，建立品牌第一印象。"],
+            ["產品疊加", "用半真實 SaaS UI 說明訂單、配送、門店與數據如何連接。"],
+            ["清晰轉化", "Demo CTA 保持突出，避免首頁變成產品目錄。"]
+          ])}
+        `;
+      }
+
+      function homeFlow() {
+        return `
+          <div class="product-panel">
+            <div class="panel-head">
+              <strong>營運流程</strong>
+              <span class="pill">Workflow</span>
+            </div>
+            <div class="panel-body workflow">
+              ${["顧客下單", "訂單進入門店", "配送與履約同步", "數據回到總部"].map((step, index) => `
+                <div class="workflow-item">
+                  <span class="num">${index + 1}</span>
+                  <strong>${step}</strong>
+                  <span class="flow-status">${index === 3 ? "完成" : "同步中"}</span>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      function renderSolutions() {
+        const selected = solutions[state.solution];
+        return `
+          ${hero("solutions")}
+          <section class="section">
+            <div class="section-inner">
+              <span class="section-kicker">場景先行</span>
+              <h2>先理解業務壓力，再推薦平台能力</h2>
+              <p class="section-lead">解決方案頁不直接列產品功能，而是從場景、角色和結果出發，讓客戶判斷 Candao 是否理解自己的營運問題。</p>
+              <div class="split">
+                <div class="rail">
+                  ${solutions.map((item, index) => `<button class="${state.solution === index ? "active" : ""}" data-solution="${index}">${item.name}</button>`).join("")}
+                </div>
+                <div class="scene-panel">
+                  <div class="panel-grid">
+                    <div class="media-tile">
+                      <img src="${images.solutions}" alt="" />
+                      <div class="media-caption">真實營運場景 + 角色壓力 + 推薦能力</div>
+                    </div>
+                    <div class="panel-content">
+                      <span class="section-kicker">解決方案</span>
+                      <h3>${selected.title}</h3>
+                      <p>${selected.desc}</p>
+                      <div class="state-boxes">
+                        <div class="state-box"><span>互動前</span><strong>${selected.before}</strong></div>
+                        <div class="state-box"><span>互動後</span><strong>${selected.after}</strong></div>
+                      </div>
+                      <div class="tag-row">${selected.caps.map((cap) => `<span class="tag">${cap}</span>`).join("")}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          ${cardsSection("Solutions 不再写成功能目录", [
+            ["餐飲與零售", "讲门店高峰、顾客点餐、前台排队和后台承接。"],
+            ["數字點餐與自助服務", "讲顾客入口、会员回流和门店自助服务。"],
+            ["配送營運與履約", "讲门店、骑手、物流和调度中心之间的履约压力。"]
+          ])}
+        `;
+      }
+
+      function renderPlatform() {
+        const selected = platform[state.capability];
+        return `
+          ${hero("platform")}
+          <section class="section">
+            <div class="section-inner">
+              <span class="section-kicker">產品能力</span>
+              <h2>用 UI 狀態和工作流證明 Candao 如何實現</h2>
+              <p class="section-lead">平台頁保留能力名，但每個能力必須有具體流程、半真實 UI、數據流和業務結果。</p>
+              <div class="split">
+                <div class="rail">
+                  ${platform.map((item, index) => `<button class="${state.capability === index ? "active" : ""}" data-capability="${index}">${item.name}</button>`).join("")}
+                </div>
+                <div class="product-panel">
+                  <div class="panel-grid">
+                    <div class="product-ui">
+                      <div class="ui-top">
+                        <strong>${selected.name}</strong>
+                        <span class="pill">UI Demo</span>
+                      </div>
+                      <div class="workflow">
+                        ${selected.steps.map((step, index) => `
+                          <div class="workflow-item">
+                            <span class="num">${index + 1}</span>
+                            <strong>${step}</strong>
+                            <span class="flow-status">${index === selected.steps.length - 1 ? "已完成" : "進行中"}</span>
+                          </div>
+                        `).join("")}
+                      </div>
+                    </div>
+                    <div class="panel-content">
+                      <span class="section-kicker">平台</span>
+                      <h3>${selected.title}</h3>
+                      <p>${selected.desc}</p>
+                      <div class="state-boxes">
+                        <div class="state-box"><span>狀態變化</span><strong>${selected.result}</strong></div>
+                        <div class="state-box"><span>資料流</span><strong>訂單、門店、配送與數據已連接。</strong></div>
+                      </div>
+                      <button class="cta" data-page="contact">預約產品演示</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          ${cardsSection("Platform 与 Solutions 的差异", [
+            ["能力地图", "平台页以 Capability Map 和 UI Demo 建立产品理解。"],
+            ["状态变化", "每个能力展示从输入到结果的具体状态变化。"],
+            ["反向导流", "用户看完能力后，可以回到对应业务场景理解适用性。"]
+          ])}
+        `;
+      }
+
+      function renderIntegrations() {
+        return `
+          ${hero("integrations")}
+          ${cardsSection("整合能力", integrations)}
+          <section class="section">
+            <div class="section-inner split">
+              <div>
+                <span class="section-kicker">資料流向</span>
+                <h2>從外部系統到 Candao 工作流</h2>
+                <p class="section-lead">整合能力页只表达系统连接和数据流，不承诺未确认的合作状态、客户 Logo 或 SLA。</p>
+              </div>
+              ${homeFlow()}
+            </div>
+          </section>
+        `;
+      }
+
+      function renderCustomers() {
+        return `
+          ${hero("customers")}
+          ${cardsSection("案例筛选", [
+            ["按場景", "多門店、配送履約、數字點餐、整合能力。"],
+            ["按規模", "总部、区域、门店不同角色的落地故事。"],
+            ["按能力", "从挑战、方案、上线过程到业务结果。"]
+          ])}
+        `;
+      }
+
+      function renderResources() {
+        const selected = resources[state.resource];
+        return `
+          ${hero("resources")}
+          <section class="section">
+            <div class="section-inner resource-grid">
+              <div class="rail">
+                ${resources.map((item, index) => `<button class="${state.resource === index ? "active" : ""}" data-resource="${index}">${item[0]}</button>`).join("")}
+              </div>
+              <div class="scene-panel">
+                <div class="panel-grid">
+                  <div class="media-tile">
+                    <img src="${images.integrations}" alt="" />
+                    <div class="media-caption">支援、FAQ、媒體、案例與查詢入口</div>
+                  </div>
+                  <div class="panel-content">
+                    <span class="section-kicker">資源</span>
+                    <h3>${selected[0]}</h3>
+                    <p>${selected[1]}</p>
+                    <div class="state-boxes">
+                      <div class="state-box"><span>互動前</span><strong>選擇你想了解的內容。</strong></div>
+                      <div class="state-box"><span>互動後</span><strong>已顯示相關資源與下一步入口。</strong></div>
+                    </div>
+                    <button class="cta" data-page="contact">提交查詢</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function renderAbout() {
+        return `
+          ${hero("about")}
+          ${cardsSection("關於 Candao", about)}
+          <section class="section">
+            <div class="section-inner split">
+              <div>
+                <span class="section-kicker">公司可信度</span>
+                <h2>以长期服务方式支援餐饮营运数字化</h2>
+                <p class="section-lead">About 页面补齐关于我们、里程碑、招聘、联系和安全服务入口，避免公司页停留在口号。</p>
+              </div>
+              <div class="product-panel">
+                <div class="panel-body workflow">
+                  ${["關於我們", "里程碑", "加入我們", "聯絡我們", "安全與服務"].map((item, index) => `
+                    <div class="workflow-item">
+                      <span class="num">${index + 1}</span>
+                      <strong>${item}</strong>
+                      <span class="flow-status">可進入</span>
+                    </div>
+                  `).join("")}
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function renderContact() {
+        const intents = ["預約產品演示", "聯絡銷售", "合作洽詢", "支援查詢"];
+        return `
+          ${hero("contact")}
+          <section class="section">
+            <div class="section-inner split">
+              <div>
+                <span class="section-kicker">轉化分流</span>
+                <h2>先选择需求，再填写表单</h2>
+                <p class="section-lead">Contact / Demo 页面保持主转化职责，About 的联络入口不会替代预约演示。</p>
+                <div class="rail">
+                  ${intents.map((item, index) => `<button class="${state.contact === index ? "active" : ""}" data-contact="${index}">${item}</button>`).join("")}
+                </div>
+              </div>
+              <div class="product-panel">
+                <div class="panel-head">
+                  <strong>${intents[state.contact]}</strong>
+                  <span class="pill">Step 1</span>
+                </div>
+                <div class="panel-body">
+                  <div class="form-grid">
+                    <input placeholder="姓名" />
+                    <input placeholder="公司名稱" />
+                    <select>
+                      <option>關注場景</option>
+                      <option>配送營運與履約</option>
+                      <option>數字點餐與自助服務</option>
+                      <option>多門店營運</option>
+                    </select>
+                    <input placeholder="聯絡方式" />
+                  </div>
+                  <div style="height:12px"></div>
+                  <textarea placeholder="請簡述你的門店規模、渠道組合與營運挑戰"></textarea>
+                  <div style="height:14px"></div>
+                  <button class="cta">提交需求</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function cardsSection(title, items) {
+        return `
+          <section class="section">
+            <div class="section-inner">
+              <span class="section-kicker">${title}</span>
+              <h2>${title === "整合能力" ? "讓資料和流程不再割裂" : "这一版需要确认的内容层级"}</h2>
+              <div class="cards">
+                ${items.map((item) => `
+                  <article class="card">
+                    <h3>${item[0]}</h3>
+                    <p>${item[1]}</p>
+                  </article>
+                `).join("")}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function bindInteractions() {
+        document.querySelectorAll("[data-solution]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.solution = Number(button.dataset.solution);
+            render();
+          });
+        });
+        document.querySelectorAll("[data-capability]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.capability = Number(button.dataset.capability);
+            render();
+          });
+        });
+        document.querySelectorAll("[data-resource]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.resource = Number(button.dataset.resource);
+            render();
+          });
+        });
+        document.querySelectorAll("[data-contact]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.contact = Number(button.dataset.contact);
+            render();
+          });
+        });
+      }
+
+      function render() {
+        renderNav();
+        const app = document.getElementById("app");
+        const views = {
+          home: renderHome,
+          solutions: renderSolutions,
+          platform: renderPlatform,
+          integrations: renderIntegrations,
+          customers: renderCustomers,
+          resources: renderResources,
+          about: renderAbout,
+          contact: renderContact
+        };
+        app.innerHTML = (views[state.page] || views.home)();
+        document.querySelectorAll("[data-page]").forEach((button) => {
+          button.addEventListener("click", () => setPage(button.dataset.page));
+        });
+        bindInteractions();
+      }
+
+      render();
+    </script>
+  </body>
+</html>

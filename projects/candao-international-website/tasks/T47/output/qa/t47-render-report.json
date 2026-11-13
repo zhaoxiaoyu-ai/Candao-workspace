@@ -1,0 +1,34 @@
+{
+  "suite": "t47-render-qa",
+  "html": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T47/output/prototype/index.html",
+  "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T47/output/screenshots/t47-integrated-prototype-1440-full.png",
+  "visibleText": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T47/output/qa/t47-integrated-prototype-visible-text-2026-08-25.txt",
+  "diagnostics": {
+    "title": "接入證據與資源｜餐道",
+    "lang": "zh-Hant",
+    "textLength": 4887,
+    "forbiddenVisible": [],
+    "documentWidth": 1440,
+    "documentHeight": 8202,
+    "bodyWidth": 1440,
+    "bodyHeight": 8202,
+    "images": [
+      {
+        "src": "file:///Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T47/output/prototype/assets/candao-blue-logo.svg",
+        "complete": true,
+        "naturalWidth": 112,
+        "naturalHeight": 32
+      },
+      {
+        "src": "file:///Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T47/output/prototype/assets/candao-blue-logo.svg",
+        "complete": true,
+        "naturalWidth": 112,
+        "naturalHeight": 32
+      }
+    ],
+    "backgroundImageCount": 4
+  },
+  "imageFailures": [],
+  "status": "pass",
+  "failures": []
+}

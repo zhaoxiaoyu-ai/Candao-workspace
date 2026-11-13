@@ -1,0 +1,66 @@
+{
+  "task_id": "T37",
+  "task_name": "Integrations 高保真 Stitch 单页生成",
+  "date": "2026-08-20",
+  "status": "blocked",
+  "stitch_project_id": "10888304674441209287",
+  "design_system": "assets/a99f770bf474445d98b287cf983bc147",
+  "model_id": "GEMINI_3_PRO",
+  "page_target": {
+    "page": "Integrations",
+    "locale": "TC",
+    "device": "DESKTOP",
+    "visible_page_name": "整合能力"
+  },
+  "generation": {
+    "tool": "generate_screen_from_text",
+    "call_count": 1,
+    "session_id": "8812386093922816405",
+    "returned_output_components": false,
+    "returned_screen_id": null
+  },
+  "polling": {
+    "tool": "list_screens",
+    "poll_count": 10,
+    "interval_seconds": 30,
+    "result": "no_new_screen_found",
+    "attempts": [
+      {"attempt": 1, "result": "no_new_screen_found"},
+      {"attempt": 2, "result": "no_new_screen_found"},
+      {"attempt": 3, "result": "no_new_screen_found"},
+      {"attempt": 4, "result": "no_new_screen_found"},
+      {"attempt": 5, "result": "no_new_screen_found"},
+      {"attempt": 6, "result": "no_new_screen_found"},
+      {"attempt": 7, "result": "no_new_screen_found"},
+      {"attempt": 8, "result": "no_new_screen_found"},
+      {"attempt": 9, "result": "no_new_screen_found"},
+      {"attempt": 10, "result": "no_new_screen_found"}
+    ]
+  },
+  "old_integrations_screen_seen": {
+    "screen_id": "621fecf4ef6945f58faa162d9f8af3b3",
+    "title": "整合能力 - Candao International (Fixed)",
+    "width": 2560,
+    "height": 3576,
+    "html_file": "projects/10888304674441209287/files/7001591698750260085",
+    "screenshot_file": "projects/10888304674441209287/files/ba3b27ea39a842d694da0f348da925c8",
+    "usable_as_t37_formal_output": false,
+    "reason": "This screen existed before T37 and its title still contains Candao in TC context. It is not the new generation output and has not passed current T35/domain-copy/Stitch formal-output QA."
+  },
+  "formal_output": {
+    "html": null,
+    "screenshot": null,
+    "metadata_updated": false,
+    "reason": "Stitch did not write back a new Integrations screen after 10 polling attempts."
+  },
+  "policy_checks": {
+    "single_generate_call_respected": true,
+    "no_retry_generate": true,
+    "no_old_screen_promoted": true,
+    "domain_copy_qa_run": false,
+    "static_html_qa_run": false,
+    "browser_screenshot_qa_run": false,
+    "qa_not_run_reason": "No new downloadable T37 screen or HTML was created."
+  },
+  "next_action": "Retry only in a new task or after Stitch writeback recovers. Keep the same T37 prompt as baseline, then perform download, screenshot, static QA and domain-copy QA before any formal output registration."
+}

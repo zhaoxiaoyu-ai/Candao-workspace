@@ -1,0 +1,1044 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "source": "projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity",
+  "hardRequirement": "Each generated Stitch HTML must include every visible low-fidelity text item for its page. Any missing item fails content coverage.",
+  "pages": {
+    "platform": {
+      "id": "platform",
+      "title": "平台",
+      "file": "platform.html",
+      "pageTask": "说明产品如何承接业务对象、状态和操作",
+      "primaryRole": "总部运营 / IT / 配送 / 财务",
+      "storyRole": "说明餐道产品如何承接业务对象、状态、操作和下一步。",
+      "coreSections": [
+        "Hero",
+        "產品能力地圖",
+        "產品演示入口",
+        "CTA"
+      ],
+      "modulePlacements": [
+        {
+          "id": "platform-hero",
+          "section": "Hero",
+          "requiredElements": [
+            "product_stage",
+            "status_rows",
+            "dual_cta"
+          ],
+          "placement": "右侧状态面板展示 OMS 订单队列、Menu Center 售罄、DMS 派单。",
+          "fallback": "使用低保真状态面板，不重画真实产品 UI。",
+          "forbidden": [
+            "fake_product_ui",
+            "rewrite_product_names"
+          ]
+        },
+        {
+          "id": "platform-capability-map",
+          "section": "產品能力地圖",
+          "requiredElements": [
+            "six_item_rail",
+            "product_media_slot",
+            "business_object_list",
+            "status_action_list",
+            "product_mapping",
+            "demo_cta"
+          ],
+          "placement": "左侧能力 rail；右侧产品画面、标题、说明、业务对象、状态 / 操作、对应产品和 CTA。",
+          "fallback": "保留产品画面区域与业务对象列表。",
+          "forbidden": [
+            "remove_status_and_exception",
+            "generic_feature_grid"
+          ]
+        },
+        {
+          "id": "platform-demo-entry",
+          "section": "產品演示入口",
+          "requiredElements": [
+            "video_or_screenshot_cards"
+          ],
+          "placement": "卡片或 Carousel 至少包含 OMS、Menu / Store、DMS / iDMS、CDBI / Finance。",
+          "fallback": "保留演示入口卡，不生成视频封面或假产品影片。",
+          "forbidden": [
+            "fake_video_thumbnail",
+            "drop_cdbi_finance"
+          ]
+        },
+        {
+          "id": "platform-final-cta",
+          "section": "CTA",
+          "requiredElements": [
+            "demo_cta",
+            "integration_cta",
+            "customer_cta"
+          ],
+          "placement": "底部三按钮分流到 Demo、Integrations、Customers。",
+          "fallback": "无",
+          "forbidden": [
+            "single_vague_cta"
+          ]
+        }
+      ],
+      "visibleTextItems": [
+        "平台｜餐道",
+        "首頁",
+        "解決方案",
+        "平台",
+        "整合能力",
+        "客戶案例",
+        "資源",
+        "關於餐道",
+        "繁中 / EN",
+        "預約演示",
+        "平台能力",
+        "看 OMS、Menu Center、DMS / iDMS、CDBI 和 Connector 如何支撐每日營運",
+        "了解餐道產品如何工作：訂單如何進入 OMS，門店如何處理接單與售罄，配送如何派單與回傳狀態，報表與對賬如何追蹤差異。",
+        "預約產品演示",
+        "查看整合能力",
+        "OMS 訂單隊列",
+        "待接單",
+        "Menu Center 售罄",
+        "同步",
+        "DMS 派單",
+        "配送中",
+        "Finance Center 對賬",
+        "差異追蹤",
+        "CDBI 看板",
+        "分析",
+        "AMS / Connector",
+        "接入",
+        "OMS",
+        "訂單隊列切換",
+        "DMS",
+        "配送狀態推進",
+        "CDBI",
+        "對賬差異回流",
+        "產品能力地圖",
+        "從業務對象、狀態和操作理解餐道平台",
+        "多渠道訂單",
+        "餐單與門店",
+        "會員與自有點餐",
+        "配送履約",
+        "數據與對賬",
+        "平台工作台示意",
+        "統一營運",
+        "平台工作台",
+        "訂單｜OMS 匯入、分派、取消、退款",
+        "門店｜營業狀態、菜單版本、缺貨提示",
+        "配送｜DMS / iDMS 狀態、第三方協同",
+        "數據｜CDBI 報表、Finance Center 對賬",
+        "多渠道訂單進入 OMS 後台",
+        "外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店可按渠道、訂單狀態、配送狀態和異常類型處理。",
+        "業務對象：訂單、渠道、門店、訂單狀態、配送狀態、異常類型。",
+        "狀態 / 操作：待接單、製作中、配送中、取消、退款、超時提醒。",
+        "對應產品：OMS、COMS、SOMS、Order Processing Center。",
+        "預約訂單場景演示",
+        "產品演示入口",
+        "按工作流查看不同模組的日常使用方式",
+        "你可以按 OMS、Menu / Store、DMS / iDMS、CDBI / Finance 選擇演示重點，快速看到訂單、餐單、配送和對賬在餐道內如何被處理。",
+        "訂單隊列與異常處理",
+        "訂單整合、門店處理、異常追蹤和客服協同。",
+        "產品視頻",
+        "接單 / 退款 / 缺貨",
+        "Menu Center / Store",
+        "餐單版本與門店狀態",
+        "菜單、價格、營業時間、門店資料和品牌規則同步。",
+        "菜單版本 / 門店狀態",
+        "DMS / iDMS",
+        "派單、取餐與異常",
+        "配送任務、騎手或車隊資源、第三方配送協同。",
+        "派單 / 取餐 / 異常",
+        "CDBI / Finance Center",
+        "渠道報表與對賬差異",
+        "營運數據、渠道分析、對賬和營收視角。",
+        "渠道報表 / 對賬",
+        "下一步",
+        "看完產品能力後，評估接入方式或預約場景演示",
+        "查看客戶案例",
+        "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector"
+      ],
+      "total": 76
+    },
+    "integrations": {
+      "id": "integrations",
+      "title": "整合能力",
+      "file": "integrations.html",
+      "pageTask": "验证系统接入、资料对象和状态回传",
+      "primaryRole": "IT / 总部运营",
+      "storyRole": "让 IT 和运营团队验证接入对象、资料流和异常边界。",
+      "coreSections": [
+        "Hero",
+        "接入對象",
+        "資料流與適合情境"
+      ],
+      "modulePlacements": [
+        {
+          "id": "integrations-hero",
+          "section": "Hero",
+          "requiredElements": [
+            "connector_network",
+            "dual_cta"
+          ],
+          "placement": "右侧 Connector 网络图连接外卖平台、自建入口、POS / KDS、CRM、支付 / ERP、配送 API。",
+          "fallback": "使用系统节点拓扑图。",
+          "forbidden": [
+            "all_systems_supported_claim",
+            "unconfirmed_partner_status"
+          ]
+        },
+        {
+          "id": "integrations-switcher",
+          "section": "接入對象",
+          "requiredElements": [
+            "six_item_rail",
+            "data_object_list",
+            "suitable_context",
+            "assessment_cta"
+          ],
+          "placement": "左侧系统类型 rail；右侧显示资料对象、适合情境和接入评估按钮。",
+          "fallback": "使用文字和标签组。",
+          "forbidden": [
+            "seamless_integration_claim",
+            "invent_api_status"
+          ]
+        },
+        {
+          "id": "integrations-data-flow",
+          "section": "資料流向",
+          "requiredElements": [
+            "external_system_node",
+            "connector_node",
+            "destination_nodes"
+          ],
+          "placement": "以三段式表达外部系统 -> AMS / Connector -> OMS / Data Asset / Finance Center / DMS。",
+          "fallback": "使用低保真流向图。",
+          "forbidden": [
+            "fake_latency",
+            "fake_success_rate"
+          ]
+        }
+      ],
+      "visibleTextItems": [
+        "整合能力｜餐道",
+        "首頁",
+        "解決方案",
+        "平台",
+        "整合能力",
+        "客戶案例",
+        "資源",
+        "關於餐道",
+        "繁中 / EN",
+        "預約演示",
+        "系統接入",
+        "把外賣平台、POS / KDS、CRM、支付、ERP 與配送資料接回營運鏈路",
+        "IT 與營運團隊可以了解餐道 Connector 如何承接不同系統類型、資料對象、狀態回傳與異常處理，讓外部渠道和門店系統回到 OMS、Data Asset、Finance Center 與配送流程。",
+        "預約技術演示",
+        "查看平台能力",
+        "外部系統",
+        "外賣平台 / POS / ERP / 支付 / 會員 / 配送",
+        "AMS / Connector",
+        "接口管理、資料校驗、同步監控、異常回報",
+        "餐道平台",
+        "OMS、Menu Center、DMS / iDMS、Finance Center、CDBI",
+        "POS / KDS",
+        "支付 / ERP",
+        "配送 API",
+        "OMS / CDBI",
+        "接入對象",
+        "按系統類型了解接入範圍、資料流和回傳狀態",
+        "外賣平台",
+        "自建點餐入口",
+        "CRM / 會員",
+        "配送與 API",
+        "外賣平台訂單進入 OMS",
+        "訂單數據進入 Connector 後，需要標準化訂單、餐單、用戶和基礎資料，再回到 OMS、Data Asset 和 Finance Center。",
+        "資料對象：餐單、訂單、用戶、基礎資料。",
+        "適合情境：需要把多平台訂單、餐單更新、用戶資料和對賬差異接回餐道流程。",
+        "訂單",
+        "菜單",
+        "門店",
+        "庫存",
+        "會員",
+        "支付",
+        "配送",
+        "對賬",
+        "提交接入評估",
+        "資料流向",
+        "接入不是單點開接口，而是讓資料在營運鏈路中可校驗、可追蹤。",
+        "本頁以資料對象、同步方向和異常回報位置呈現接入邊界，後續可替換為真實產品截圖或動效。",
+        "來源",
+        "平台 / POS / ERP",
+        "校驗",
+        "使用",
+        "OMS / Finance / CDBI",
+        "資料來源",
+        "平台 / POS / ERP訂單、菜單、門店、會員與交易資料進入接口層。",
+        "校驗同步",
+        "AMS / Connector映射字段、監控同步狀態，將異常回報給對應角色。",
+        "營運使用",
+        "OMS / Finance / CDBI支撐履約、對賬、報表與跨系統決策。",
+        "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector"
+      ],
+      "total": 59
+    },
+    "customers": {
+      "id": "customers",
+      "title": "客戶案例",
+      "file": "customers.html",
+      "pageTask": "用服务规模、实名客户和行业案例证明落地",
+      "primaryRole": "品牌决策者 / 销售",
+      "storyRole": "用授权规模数据、实名客户和业态成果建立可信。",
+      "coreSections": [
+        "Hero",
+        "服務規模",
+        "實名案例",
+        "業態成果"
+      ],
+      "modulePlacements": [
+        {
+          "id": "customers-hero",
+          "section": "Hero",
+          "requiredElements": [
+            "case_story_intro"
+          ],
+          "placement": "首屏聚焦不同业态如何改善订单、配送与数据营运。",
+          "fallback": "无",
+          "forbidden": [
+            "generic_testimonial_wall"
+          ]
+        },
+        {
+          "id": "customers-metrics",
+          "section": "服務規模",
+          "requiredElements": [
+            "metric_cards"
+          ],
+          "placement": "六个授权指标卡，Customers 是主要证明场景。",
+          "fallback": "不适用。",
+          "forbidden": [
+            "new_metric",
+            "metric_rewrite"
+          ]
+        },
+        {
+          "id": "customers-named-cases",
+          "section": "實名案例",
+          "requiredElements": [
+            "customer_rail",
+            "case_detail_card",
+            "case_scope",
+            "case_next_step"
+          ],
+          "placement": "左侧客户切换，右侧显示客户名称、合作范围、导入后变化和下一步。",
+          "fallback": "使用客户名称文字，不生成 Logo。",
+          "forbidden": [
+            "fake_customer_logo",
+            "replace_named_customer_with_generic_case"
+          ]
+        },
+        {
+          "id": "customers-industry-outcomes",
+          "section": "業態成果",
+          "requiredElements": [
+            "industry_result_cards",
+            "authorized_metrics"
+          ],
+          "placement": "多业态卡片保留行业、产品关系和授权指标。",
+          "fallback": "使用卡片和趋势数字。",
+          "forbidden": [
+            "invent_new_case_metric",
+            "remove_before_after_data"
+          ]
+        }
+      ],
+      "visibleTextItems": [
+        "客戶案例｜餐道",
+        "首頁",
+        "解決方案",
+        "平台",
+        "整合能力",
+        "客戶案例",
+        "資源",
+        "關於餐道",
+        "繁中 / EN",
+        "預約演示",
+        "從不同餐飲業態看餐道如何改善訂單、配送與數據營運",
+        "不只看品牌使用了哪些產品，更看導入餐道後，分散的訂單、門店、餐單、配送、會員和對賬資料如何回到可追蹤的營運流程。",
+        "案例證據",
+        "Pizza-Box、JIA Group、Jardine Group",
+        "用品牌場景、上線前後對比與可追溯數據支撐銷售轉化，而不是只羅列客戶名稱。",
+        "品牌門店與外送高峰",
+        "案例數據看板",
+        "品牌數量",
+        "5000+",
+        "每日處理訂單",
+        "500M+",
+        "效率變化",
+        "30% up",
+        "導入前",
+        "工具分散",
+        "接入中",
+        "OMS / DMS 匯入",
+        "導入後",
+        "數據與服務回流",
+        "服務規模",
+        "用服務規模與營運數據建立初步可信",
+        "5000+品牌數量",
+        "500M+每日處理訂單",
+        "400+覆蓋城市",
+        "200K+門店數量",
+        "4.5B+每月配送訂單 GMV",
+        "30% up客戶效率提升",
+        "實名案例",
+        "從已落地品牌看合作範圍和營運變化",
+        "不同品牌的重點不一樣：有的先處理多平台訂單與門店出單，有的需要支撐多品牌營運，有的把配送狀態和騎手管理納入 DMS / iDMS。",
+        "Pizza-Box｜9 年合作，OMS + 自有點餐",
+        "JIA Group｜多品牌、多門店營運",
+        "Jardine Group｜DMS / iDMS 配送履約",
+        "Pizza-Box",
+        "JIA Group",
+        "Jardine Group",
+        "案例營運視圖",
+        "訂單整合",
+        "OMS",
+        "配送履約",
+        "DMS / iDMS",
+        "數據與服務",
+        "CDBI",
+        "合作超過 9 年；使用 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、BI 分析與客戶服務。",
+        "導入後變化：訂單、配送、營銷和客戶服務不再分散在多個工具中，品牌可以用同一套流程追蹤門店履約和服務狀態。",
+        "下一步：預約相似場景演示。",
+        "預約相似場景演示",
+        "業態成果",
+        "用多元餐飲環境補足相似場景參考",
+        "甜品連鎖",
+        "OMS 對接 POS，整合外賣平台資料並自動打印，降低漏單風險。",
+        "訂單量：100K → 190K → 1.01M",
+        "銷售額：6.6M → 7.74M → 54.42M",
+        "復購率：19.88% → 25.83%",
+        "火鍋連鎖",
+        "小程序訂單、門店聚合與騎手管理回到 OMS / DMS 流程。",
+        "訂單取消率：12.66% / 15.65% / 19.98%",
+        "年度銷售額：1,578 萬元",
+        "營運效率：147%",
+        "中餐連鎖",
+        "Business Center 和 Data Center 支援收購後的系統整合與跨系統數據管理。",
+        "訂單取消率改善：185%",
+        "銷售增長：665%",
+        "門店擴張率：116%",
+        "咖啡品牌",
+        "外賣平台對接、Menu Center 菜單同步與 CDBI 分析支援門店決策。",
+        "單店平均銷售額：+55%",
+        "單店平均訂單額增長：+74%",
+        "訂單量：1420 → 2472",
+        "鮮食零售",
+        "跨區域餐單、庫存與多平台同步，支援區域餐單和平台差異管理。",
+        "門店營運效率：30%",
+        "門店營運數字化：80%",
+        "線上訂單比例：26.7%",
+        "配送密集品牌",
+        "DMS / iDMS 管理自有騎手、第三方配送、派單規則、SMS 通知與配送異常。",
+        "Jardine Group DMS 覆蓋 200+ outlets",
+        "DMS 平台可用性：99.95% over",
+        "DMS 吞吐量：500 Order/second",
+        "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector"
+      ],
+      "total": 90
+    },
+    "resources": {
+      "id": "resources",
+      "title": "資源",
+      "file": "resources.html",
+      "pageTask": "降低评估、导入、营运和技术疑问",
+      "primaryRole": "采购方 / IT / 总部运营 / 支持",
+      "storyRole": "按评估、导入、日常营运和技术查询降低疑问。",
+      "coreSections": [
+        "Hero",
+        "問題階段",
+        "接入準備清單",
+        "營運問答",
+        "案例資源",
+        "支援中心",
+        "媒體與公司資料",
+        "產品演示分流"
+      ],
+      "modulePlacements": [
+        {
+          "id": "resources-hero",
+          "section": "Hero",
+          "requiredElements": [
+            "resource_router",
+            "stage_cards"
+          ],
+          "placement": "右侧资源路径卡显示评估中、导入中、日常营运。",
+          "fallback": "无",
+          "forbidden": [
+            "blog_homepage_layout"
+          ]
+        },
+        {
+          "id": "resources-stage-qa",
+          "section": "問題階段",
+          "requiredElements": [
+            "stage_rail",
+            "qa_panel",
+            "support_cta"
+          ],
+          "placement": "左 rail 切换阶段；右侧显示当前阶段的 Q&A 与支援或查詢 CTA。",
+          "fallback": "无",
+          "forbidden": [
+            "generic_faq_without_next_action"
+          ]
+        },
+        {
+          "id": "resources-access-checklist",
+          "section": "接入準備清單",
+          "requiredElements": [
+            "system_object_board"
+          ],
+          "placement": "用四列看板展示渠道与入口、门店系统、企业资料、AMS / Connector。",
+          "fallback": "无",
+          "forbidden": [
+            "all_systems_supported_claim"
+          ]
+        },
+        {
+          "id": "resources-faq",
+          "section": "營運 FAQ",
+          "requiredElements": [
+            "operation_question_cards"
+          ],
+          "placement": "以多平台订单、餐单同步、财务对账组织问题。",
+          "fallback": "无",
+          "forbidden": [
+            "generic_help_center_copy"
+          ]
+        },
+        {
+          "id": "resources-case-map",
+          "section": "案例資源",
+          "requiredElements": [
+            "industry_map"
+          ],
+          "placement": "用业态入口导向 Customers。",
+          "fallback": "无",
+          "forbidden": [
+            "fake_customer_icons"
+          ]
+        },
+        {
+          "id": "resources-support-board",
+          "section": "支援中心",
+          "requiredElements": [
+            "support_ticket_board"
+          ],
+          "placement": "支援查询板必须显示问题类型、相关系统、业务对象、可见异常。",
+          "fallback": "无",
+          "forbidden": [
+            "replace_exception_with_system_issue"
+          ]
+        },
+        {
+          "id": "resources-media-shelf",
+          "section": "媒體與公司資料",
+          "requiredElements": [
+            "media_shelf"
+          ],
+          "placement": "资料架显示公司资料、品牌资产、媒体联络。",
+          "fallback": "无",
+          "forbidden": [
+            "invent_news_title_or_date"
+          ]
+        },
+        {
+          "id": "resources-demo-routing",
+          "section": "產品演示分流",
+          "requiredElements": [
+            "routing_canvas",
+            "demo_cta"
+          ],
+          "placement": "用业态、门店规模、现有系统、主要问题、演示模块组成路由画布。",
+          "fallback": "无",
+          "forbidden": [
+            "remove_routing_conditions"
+          ]
+        }
+      ],
+      "visibleTextItems": [
+        "資源｜餐道",
+        "首頁",
+        "解決方案",
+        "平台",
+        "整合能力",
+        "客戶案例",
+        "資源",
+        "關於餐道",
+        "繁中 / EN",
+        "預約演示",
+        "資源中心",
+        "按你的問題，找到餐道導入、接入、案例與支援入口",
+        "採購、IT、營運、門店、配送和財務團隊可以在這裡找到接入準備、常見問題、支援查詢、案例資源和產品演示入口，減少評估與導入前的不確定。",
+        "售前方案",
+        "導入資料",
+        "技術對接",
+        "品牌案例",
+        "資源路徑",
+        "評估",
+        "確認問題",
+        "導入",
+        "整理系統",
+        "營運",
+        "提交支援",
+        "01",
+        "評估中了解餐道是否適合目前的訂單、門店、配送或對賬問題。",
+        "02",
+        "導入中整理外賣平台、自有點餐、POS、CRM、ERP、配送和支付資料。",
+        "03",
+        "日常營運提交接單超時、餐單同步、配送超時或對賬差異問題。",
+        "問題階段",
+        "用目前所處階段找到下一步",
+        "評估中",
+        "導入中",
+        "日常營運",
+        "技術查詢",
+        "問答",
+        "評估中常見問題",
+        "Q1",
+        "接入前要準備哪些系統類型？可先整理外賣平台、自建入口、POS / KDS、CRM、配送、支付和 ERP。",
+        "Q2",
+        "Finance Center 如何比對平台訂單與餐道 OMS 訂單，識別金額、狀態和漏單差異？",
+        "提交支援或查詢",
+        "資源能力",
+        "每一類資源都對應一個獨立能力板塊",
+        "接入準備、營運 FAQ、案例資源、支援中心、媒體資料和產品演示分流服務的問題不同，呈現方式也應不同。",
+        "接入準備清單",
+        "把接入前需要整理的系統對象一次看清",
+        "適合 IT 和營運團隊在接入前確認外賣平台、自有入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限與異常處理。",
+        "渠道與入口外賣平台",
+        "H5 / Web / APP / QR",
+        "門店系統POS / KDS",
+        "打印 / 後廚單",
+        "企業資料CRM / 會員",
+        "支付 / ERP",
+        "AMS / ConnectorAPI",
+        "字段",
+        "權限",
+        "異常回傳",
+        "多平台訂單渠道、門店、訂單狀態、配送狀態和異常類型如何在 OMS 內處理？",
+        "餐單同步Menu Center 如何處理餐單、庫存、售罄、區域菜單和平台差異？",
+        "財務對賬Finance Center 如何識別金額差異、狀態差異和漏單？",
+        "營運 FAQ",
+        "用真實營運問題組織問答與下一步",
+        "採購、營運、門店和財務團隊可以直接按問題類型閱讀答案，判斷下一步是看平台能力、提交查詢還是預約演示。",
+        "案例資源",
+        "按業態找到相似案例與可參考成果",
+        "Pizza / Fast Food多平台訂單、配送履約、長期服務",
+        "餐飲集團多品牌、多門店、COMS 營運數據",
+        "甜品連鎖POS 對接、自動打印、漏單降低",
+        "火鍋 / 中餐小程序訂單、門店聚合、系統整合",
+        "咖啡品牌Menu Center、外賣平台、CDBI 分析",
+        "鮮食零售區域餐單、庫存、多平台同步",
+        "支援中心",
+        "把既有客戶和導入中問題導向正確處理路徑",
+        "接入、營運和技術問題需要帶上相關系統、業務對象與異常狀態，方便支援團隊判斷是 OMS、DMS、iDMS、CDBI 還是 AMS / Connector 相關。",
+        "支援查詢",
+        "待分流",
+        "問題類型",
+        "接入 / 營運 / 技術",
+        "相關系統",
+        "OMS / DMS / iDMS / CDBI",
+        "業務對象",
+        "訂單 / 餐單 / 配送 / 對賬",
+        "可見異常",
+        "接單超時 / 配送超時 / 對賬差異",
+        "公司資料公司背景、據點、服務能力",
+        "品牌資產Logo、品牌資料、聯絡入口",
+        "媒體聯絡新聞、合作與採購查詢",
+        "媒體與公司資料",
+        "把採購、合作和媒體需要的資料集中呈現",
+        "這一板塊支援公司可信、合作溝通和資料索取，因此用資料架與聯絡入口呈現。",
+        "產品演示分流",
+        "把不確定的問題轉成可安排的演示模組",
+        "相似業態案例",
+        "演示分流",
+        "現有系統",
+        "POS / KDS",
+        "主要問題",
+        "漏單",
+        "推薦模組",
+        "OMS",
+        "填寫現況",
+        "匹配模組",
+        "安排演示",
+        "業態Pizza / 餐飲集團 / 甜品 / 咖啡 / 鮮食零售",
+        "門店規模單店、多門店、跨區域或多品牌營運",
+        "現有系統外賣平台、POS / KDS、CRM、ERP、配送",
+        "主要問題漏單、重複維護、配送超時、對賬差異",
+        "演示模組OMS、DMS、iDMS、CDBI、AMS / Connector",
+        "預約產品演示",
+        "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector"
+      ],
+      "total": 112
+    },
+    "about": {
+      "id": "about",
+      "title": "關於餐道",
+      "file": "about.html",
+      "pageTask": "建立公司可信、产品演进和服务交付认知",
+      "primaryRole": "品牌决策者 / 采购方",
+      "storyRole": "建立公司、产品演进、服务交付和长期合作可信。",
+      "coreSections": [
+        "Hero",
+        "企業旅程",
+        "產品與服務能力",
+        "OMS",
+        "CDBI / Finance Center",
+        "DMS / iDMS",
+        "AMS / Connector",
+        "服務交付",
+        "質量與可信",
+        "CTA"
+      ],
+      "modulePlacements": [
+        {
+          "id": "about-hero",
+          "section": "Hero",
+          "requiredElements": [
+            "company_network_map",
+            "contact_cta"
+          ],
+          "placement": "右侧公司与服务网络图展示广州总部、香港、北京、上海、成都营运中心。",
+          "fallback": "使用网络图，不生成虚构办公室照片。",
+          "forbidden": [
+            "fake_office_photo",
+            "new_office_location"
+          ]
+        },
+        {
+          "id": "about-journey",
+          "section": "企業旅程",
+          "requiredElements": [
+            "timeline"
+          ],
+          "placement": "时间轴保留 2000、2003、2008、2014、2017、2020 及对应阶段。",
+          "fallback": "无",
+          "forbidden": [
+            "invent_new_year_event"
+          ]
+        },
+        {
+          "id": "about-service-switcher",
+          "section": "服務交付",
+          "requiredElements": [
+            "three_item_stage_switcher",
+            "service_detail_list"
+          ],
+          "placement": "公司基础、产品演进、服务交付三项切换，右侧同步更新说明。",
+          "fallback": "无",
+          "forbidden": [
+            "brand_story_essay"
+          ]
+        },
+        {
+          "id": "about-product-capabilities",
+          "section": "產品與服務能力",
+          "requiredElements": [
+            "independent_capability_sections",
+            "low_fidelity_ui_panels"
+          ],
+          "placement": "分别展示 OMS / COMS / SOMS、CDBI / Finance Center、DMS / iDMS、AMS / Connector、Merchant Service / Helpdesk。",
+          "fallback": "使用低保真界面示意，不展示假产品数据。",
+          "forbidden": [
+            "merge_all_products_into_single_generic_platform"
+          ]
+        },
+        {
+          "id": "about-service-lifecycle",
+          "section": "服務生命周期",
+          "requiredElements": [
+            "four_step_lifecycle"
+          ],
+          "placement": "导入、培训、营运支援、Helpdesk 四段流程。",
+          "fallback": "无",
+          "forbidden": [
+            "unconfirmed_response_time_claim"
+          ]
+        },
+        {
+          "id": "about-trust",
+          "section": "質量與可信",
+          "requiredElements": [
+            "certification_metric_band"
+          ],
+          "placement": "展示 ISO 27001、ISO 20000、500 Order/second、99.95% over。",
+          "fallback": "没有证书图时使用文字指标带。",
+          "forbidden": [
+            "99.99_percent_claim",
+            "24_7_sla_claim"
+          ]
+        },
+        {
+          "id": "about-final-cta",
+          "section": "CTA",
+          "requiredElements": [
+            "demo_cta",
+            "resources_cta"
+          ],
+          "placement": "底部导向预约产品演示和资源入口。",
+          "fallback": "无",
+          "forbidden": [
+            "generic_partnership_slogan"
+          ]
+        }
+      ],
+      "visibleTextItems": [
+        "關於餐道｜餐道",
+        "首頁",
+        "解決方案",
+        "平台",
+        "整合能力",
+        "客戶案例",
+        "資源",
+        "關於餐道",
+        "繁中 / EN",
+        "預約演示",
+        "專注餐飲與零售 O2O 營運系統的產品與服務團隊",
+        "餐道成立於 2014 年，總部位於廣州，並在北京、上海、香港設有分支及成都營運中心。團隊以多年餐飲系統研發與外送業務經驗，支援品牌處理訂單、門店、配送、數據和持續營運。",
+        "2014 成立",
+        "廣州 總部",
+        "香港 / 北京 / 上海 / 成都 服務網絡",
+        "聯絡餐道",
+        "公司與服務網絡",
+        "香港",
+        "北京",
+        "上海",
+        "成都營運中心",
+        "導入、培訓與營運支援",
+        "多地團隊共同支援品牌導入、營運、技術協作與長期服務。",
+        "企業旅程",
+        "從餐飲系統研發到 O2O 營運平台",
+        "2000Call Center 服務",
+        "2003大型連鎖門店合作",
+        "2008第一代 SaaS 3.0",
+        "2014SaaS 平台 5.0",
+        "2017OMS 上線",
+        "2020SaaS 6.0 零售",
+        "服務交付",
+        "以產品平台、數據分析、配送履約和質量保障支撐長期營運",
+        "公司基礎 2014 年成立，總部廣州。",
+        "產品演進 OMS、CDBI、DMS、AMS / Connector 承接不同營運環節。",
+        "服務交付 Merchant Service、Operation 和 Helpdesk 支撐長期營運。",
+        "產品平台：訂單、餐單、門店、配送和接入。",
+        "數據分析：報表、看板、平台訂單與 OMS 訂單對賬差異。",
+        "質量保障：穩定性和服務交付。",
+        "產品與服務能力",
+        "每一項能力用不同方式說明它承接的營運工作",
+        "OMS、CDBI / Finance Center、DMS / iDMS、AMS / Connector 和 Merchant Service / Helpdesk 各自承接不同營運工作，因此以獨立板塊呈現。",
+        "OMS / COMS / SOMS",
+        "多渠道訂單進入同一個門店處理流程",
+        "OMS 承接外賣平台、自有入口和 Call Center 訂單，讓門店按渠道、訂單狀態、配送狀態和異常類型處理。",
+        "渠道",
+        "門店",
+        "狀態",
+        "OMS",
+        "外賣平台",
+        "待接單通知門店",
+        "自有 H5 / Web",
+        "製作中同步出餐",
+        "Call Center",
+        "配送中追蹤狀態",
+        "退款 / 取消",
+        "異常營運跟進",
+        "平台訂單",
+        "已匹配",
+        "OMS 訂單",
+        "待核對",
+        "金額差異",
+        "需追蹤",
+        "漏單標記",
+        "營運跟進",
+        "CDBI / Finance Center",
+        "報表、看板與對賬差異進入同一個分析視圖",
+        "CDBI 和 Finance Center 支援管理層、營運和財務查看報表、看板、平台訂單與 OMS 訂單對賬差異。",
+        "DMS / iDMS",
+        "配送履約從派單、取餐到第三方轉派可追蹤",
+        "DMS / iDMS 支援自有騎手、第三方配送、派單、SMS 通知、配送異常和履約監控。",
+        "騎手",
+        "第三方",
+        "配送中待派單 → 已派單 → 到店 → 取餐 → 已送達",
+        "自建入口",
+        "POS / KDS",
+        "AMS / ConnectorCRM / 會員",
+        "支付 / ERP",
+        "配送 API",
+        "AMS / Connector",
+        "把外部系統、API、字段和狀態回傳接回餐道",
+        "AMS / Connector 連接外賣平台、自建入口、POS / KDS、CRM、支付、ERP、配送和 API，讓資料回到訂單、會員、配送、數據和對賬流程。",
+        "Merchant Service / Operation / Helpdesk",
+        "產品之外，還需要導入、培訓、營運支援和日常查詢承接",
+        "導入梳理門店、餐單、渠道與現有系統。",
+        "培訓協助門店、營運、配送和支援角色理解流程。",
+        "營運支援跟進訂單、餐單、配送、對賬和異常處理。",
+        "Helpdesk承接日常查詢、接入問題和技術支援。",
+        "質量與可信",
+        "用安全、服務管理和配送系統穩定性支撐長期合作",
+        "ISO 27001資訊安全管理",
+        "ISO 20000IT 服務管理",
+        "DMS吞吐量與可用性看板",
+        "500 Order/secondDMS 並發吞吐量",
+        "99.95% overDMS 平台可用性",
+        "長期合作",
+        "讓餐道團隊了解你的營運場景與系統現況",
+        "預約產品演示",
+        "查看資源入口",
+        "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector"
+      ],
+      "total": 100
+    },
+    "demo": {
+      "id": "demo",
+      "title": "預約產品演示",
+      "file": "demo.html",
+      "pageTask": "收集演示意图、品牌资料、系统现况和主要问题",
+      "primaryRole": "采购方 / 销售",
+      "storyRole": "把访客意图、品牌资料、现有系统和主要问题转成演示分流。",
+      "coreSections": [
+        "Hero",
+        "演示需求摘要",
+        "聯絡意圖",
+        "品牌與系統現況",
+        "演示模組摘要"
+      ],
+      "modulePlacements": [
+        {
+          "id": "demo-hero",
+          "section": "Hero",
+          "requiredElements": [
+            "demo_summary_card"
+          ],
+          "placement": "右侧演示需求摘要显示意图、推荐模块、提交后下一步。",
+          "fallback": "无",
+          "forbidden": [
+            "contact_us_only_copy"
+          ]
+        },
+        {
+          "id": "demo-intent",
+          "section": "聯絡意圖",
+          "requiredElements": [
+            "three_choice_cards"
+          ],
+          "placement": "产品演示、销售洽询、支援查询三张选择卡。",
+          "fallback": "无",
+          "forbidden": [
+            "single_undifferentiated_form_entry"
+          ]
+        },
+        {
+          "id": "demo-form",
+          "section": "品牌與系統現況",
+          "requiredElements": [
+            "field_grid",
+            "submit_cta",
+            "support_cta"
+          ],
+          "placement": "字段包含公司 / 品牌、地区、门店规模、角色、当前渠道、已使用系统、主要问题。",
+          "fallback": "无",
+          "forbidden": [
+            "remove_demo_routing_fields",
+            "use_placeholder_as_final_copy"
+          ]
+        },
+        {
+          "id": "demo-module-summary",
+          "section": "演示模組摘要",
+          "requiredElements": [
+            "module_summary_panel"
+          ],
+          "placement": "摘要面板列出 OMS / COMS / SOMS、DMS / iDMS、CDBI / Finance Center、AMS / Connector。",
+          "fallback": "无",
+          "forbidden": [
+            "rewrite_product_terms"
+          ]
+        }
+      ],
+      "visibleTextItems": [
+        "預約產品演示｜餐道",
+        "首頁",
+        "解決方案",
+        "平台",
+        "整合能力",
+        "客戶案例",
+        "資源",
+        "關於餐道",
+        "繁中 / EN",
+        "預約演示",
+        "預約產品演示",
+        "預約餐道產品演示前，先告訴我們你的營運場景",
+        "請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。我們會根據場景安排 OMS、DMS、iDMS、CDBI 或接入演示。",
+        "演示準備",
+        "演示需求摘要",
+        "意圖",
+        "產品演示",
+        "推薦模組",
+        "OMS、DMS / iDMS、CDBI、AMS / Connector",
+        "下一步",
+        "提交後由團隊按場景安排演示。",
+        "需求分流視圖",
+        "業態與地區",
+        "由表單填入",
+        "現有系統",
+        "POS / ERP",
+        "推薦演示",
+        "OMS / iDMS",
+        "01",
+        "提交線索品牌決策者或營運負責人補充現況。",
+        "02",
+        "需求分流銷售、方案或技術團隊按問題類型承接。",
+        "03",
+        "安排演示以 OMS、DMS / iDMS、CDBI 或接入方案為主線。",
+        "步驟 1",
+        "選擇聯絡意圖",
+        "評估訂單、門店、配送、會員、數據或對賬能力。",
+        "銷售洽詢",
+        "了解合作範圍、場景適配和後續安排。",
+        "支援查詢",
+        "既有客戶或導入中團隊提交營運、技術或日常問題。",
+        "步驟 2",
+        "補充品牌與系統現況",
+        "公司 / 品牌名稱",
+        "例如品牌名稱。",
+        "市場 / 地區",
+        "例如香港或其他市場。",
+        "門店規模",
+        "1-10 間",
+        "11-50 間",
+        "50 間以上",
+        "你的角色",
+        "品牌決策者",
+        "總部營運",
+        "IT / 集成",
+        "配送 / 財務",
+        "目前渠道",
+        "外賣平台、自有點餐、Call Center。",
+        "已使用系統",
+        "POS、KDS、CRM、ERP、支付。",
+        "主要需要處理的問題",
+        "可描述多平台訂單、配送履約、餐單同步、財務對賬或系統接入問題。",
+        "提交演示需求",
+        "既有客戶支援",
+        "演示模組摘要",
+        "根據選擇推薦演示模組",
+        "提交現況",
+        "判斷模組",
+        "安排演示",
+        "多平台訂單：OMS / COMS / SOMS。",
+        "配送履約：DMS / iDMS。",
+        "數據與對賬：CDBI / Finance Center。",
+        "接入評估：AMS / Connector。",
+        "提交後，團隊會依據你的業態、門店規模、現有系統和主要問題安排合適的演示模組。",
+        "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector"
+      ],
+      "total": 75
+    }
+  }
+}

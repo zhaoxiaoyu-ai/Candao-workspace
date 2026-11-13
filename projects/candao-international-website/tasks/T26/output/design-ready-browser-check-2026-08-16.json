@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "date": "2026-08-16",
+  "method": "Google Chrome + Playwright via bundled Node.js",
+  "screenshots": [
+    "tasks/T17/output/design-ready-wireframe/screenshots/t26-home-1440.png",
+    "tasks/T17/output/design-ready-wireframe/screenshots/t26-platform-1440.png",
+    "tasks/T17/output/design-ready-wireframe/screenshots/t26-demo-1440.png",
+    "tasks/T17/output/design-ready-wireframe/screenshots/t26-demo-390.png"
+  ],
+  "checks": [
+    {
+      "page": "home",
+      "viewport": "1440",
+      "bad_terms": []
+    },
+    {
+      "page": "platform",
+      "viewport": "1440",
+      "bad_terms": []
+    },
+    {
+      "page": "demo",
+      "viewport": "1440",
+      "bad_terms": []
+    },
+    {
+      "page": "platform-interaction",
+      "result": "点击 menu、member、delivery、data、connector 后，标题切换为「接入對象、字段、權限和異常處理」。"
+    },
+    {
+      "page": "demo-mobile-interaction",
+      "viewport": "390",
+      "result": "点击「支援查詢」后，需求摘要同步显示「支援查詢」。"
+    }
+  ]
+}

@@ -1,0 +1,1504 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>接入證據與資源｜餐道</title>
+    <style>
+      :root {
+        --primary: #528dff;
+        --primary-strong: #3b82f6;
+        --primary-soft: #eef5ff;
+        --ink: #16233d;
+        --muted: rgba(22, 35, 61, 0.66);
+        --quiet: rgba(22, 35, 61, 0.46);
+        --line: rgba(22, 35, 61, 0.12);
+        --page: #f6f8fc;
+        --navy: #0f172a;
+        --navy-deep: #000d2b;
+        --panel: #141e30;
+        --panel-side: #0f1829;
+        --panel-active: #1e3a5f;
+        --dark-muted: #9aa8bd;
+        --green: #00a884;
+        --amber: #ffab00;
+        --content: 1200px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: #dfe6f2;
+        color: var(--ink);
+        font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Inter, Arial, sans-serif;
+        letter-spacing: 0;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1440px, 100%);
+        margin: 0 auto;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.1);
+      }
+
+      .container {
+        width: min(var(--content), calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: absolute;
+        z-index: 20;
+        inset: 0 0 auto;
+        height: 76px;
+      }
+
+      .nav-inner {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 15px;
+        font-weight: 650;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        min-width: 116px;
+      }
+
+      .brand img {
+        display: block;
+        width: 112px;
+        height: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        flex: 1;
+      }
+
+      .nav-links a,
+      .footer-links a {
+        white-space: nowrap;
+      }
+
+      .nav-links a[aria-current="page"] {
+        color: #fff;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .language {
+        color: rgba(255, 255, 255, 0.86);
+        white-space: nowrap;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 22px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 760;
+        line-height: 1;
+        white-space: nowrap;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      }
+
+      .button.primary {
+        border-color: var(--primary);
+        background: var(--primary);
+      }
+
+      .button.light {
+        border-color: rgba(22, 35, 61, 0.12);
+        background: #fff;
+        color: var(--ink);
+      }
+
+      .button.soft {
+        border-color: rgba(82, 141, 255, 0.24);
+        background: var(--primary-soft);
+        color: var(--primary-strong);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 720px;
+        padding: 154px 0 64px;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(6, 12, 28, 0.94), rgba(10, 20, 43, 0.8) 48%, rgba(9, 18, 36, 0.74)),
+          url("assets/home-hero-restaurant-ops-2026-08-08.png") center / cover;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(15, 23, 42, 0.18), rgba(15, 23, 42, 0.86)),
+          repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 138px);
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 820;
+        line-height: 20px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 24px;
+        font-size: clamp(48px, 4.8vw, 68px);
+        line-height: 1.08;
+        font-weight: 820;
+        letter-spacing: 0;
+      }
+
+      h1 span {
+        color: var(--primary);
+      }
+
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .hero .lead {
+        max-width: 820px;
+        margin: 0 auto;
+        color: rgba(226, 232, 240, 0.82);
+      }
+
+      .hero-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 34px;
+      }
+
+      .hero-board {
+        position: relative;
+        z-index: 2;
+        margin-top: 48px;
+        padding: 18px;
+        border: 1px solid rgba(121, 179, 255, 0.34);
+        border-radius: 16px;
+        background: rgba(20, 30, 48, 0.94);
+        box-shadow: 0 0 42px rgba(59, 130, 246, 0.14), 0 28px 70px rgba(0, 0, 0, 0.28);
+      }
+
+      .board-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .board-lane {
+        min-height: 178px;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        background: rgba(15, 24, 41, 0.92);
+      }
+
+      .lane-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 14px;
+      }
+
+      .lane-index {
+        color: var(--primary);
+        font-family: Inter, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 820;
+      }
+
+      .lane-title {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 780;
+      }
+
+      .lane-copy {
+        margin: 0;
+        color: var(--dark-muted);
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      .mini-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .mini-tags span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        padding: 0 10px;
+        border-radius: 6px;
+        background: rgba(82, 141, 255, 0.14);
+        color: #dbeafe;
+        font-size: 12px;
+        font-weight: 720;
+      }
+
+      .resource-section .mini-tags span {
+        color: var(--primary-strong);
+        background: #fff;
+        border: 1px solid rgba(82, 141, 255, 0.22);
+      }
+
+      section {
+        padding: 88px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(280px, 0.28fr);
+        gap: 40px;
+        align-items: end;
+        margin-bottom: 34px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        color: var(--ink);
+        font-size: 40px;
+        line-height: 46px;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        color: var(--ink);
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 780;
+        letter-spacing: 0;
+      }
+
+      .section-copy {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      .path-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .path-card,
+      .surface-card,
+      .metric-card,
+      .case-card,
+      .industry-card,
+      .faq-card,
+      .support-cell,
+      .route-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .path-card {
+        min-height: 250px;
+        padding: 24px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        min-height: 26px;
+        margin-bottom: 14px;
+        padding: 0 8px;
+        border-radius: 4px;
+        background: var(--primary-soft);
+        color: var(--primary-strong);
+        font-size: 12px;
+        font-weight: 820;
+      }
+
+      .path-card p,
+      .surface-card p,
+      .case-card p,
+      .industry-card p,
+      .faq-card p,
+      .route-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      .section-dark {
+        color: #fff;
+        background:
+          linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(0, 13, 43, 0.98)),
+          url("assets/integrations-ecosystem-ui-2026-08-08.png") center / cover;
+      }
+
+      .section-dark h2,
+      .section-dark h3 {
+        color: #fff;
+      }
+
+      .section-dark .section-copy,
+      .section-dark .lead {
+        color: rgba(226, 232, 240, 0.78);
+      }
+
+      .system-grid {
+        display: grid;
+        grid-template-columns: 320px minmax(0, 1fr);
+        gap: 22px;
+        align-items: stretch;
+      }
+
+      .system-rail {
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        background: rgba(15, 24, 41, 0.92);
+      }
+
+      .rail-item {
+        min-height: 52px;
+        padding: 15px 16px;
+        border: 1px solid rgba(121, 179, 255, 0.16);
+        border-radius: 8px;
+        color: #dbeafe;
+        font-weight: 740;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .rail-item.active {
+        border-color: rgba(82, 141, 255, 0.6);
+        background: var(--panel-active);
+        color: #fff;
+      }
+
+      .workbench {
+        overflow: hidden;
+        border: 1px solid rgba(121, 179, 255, 0.3);
+        border-radius: 16px;
+        background: var(--panel);
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.1);
+      }
+
+      .workbench-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 18px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .workbench-header strong {
+        font-size: 18px;
+      }
+
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0 10px;
+        border-radius: 4px;
+        background: rgba(0, 168, 132, 0.16);
+        color: #8cf2d4;
+        font-size: 12px;
+        font-weight: 780;
+      }
+
+      .workbench-body {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 0;
+      }
+
+      .detail-panel {
+        padding: 24px;
+      }
+
+      .detail-panel .lead {
+        color: rgba(226, 232, 240, 0.8);
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      .object-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 22px;
+      }
+
+      .object-list span {
+        min-height: 32px;
+        padding: 7px 10px;
+        border: 1px solid rgba(121, 179, 255, 0.22);
+        border-radius: 6px;
+        color: #dbeafe;
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .flow-panel {
+        display: grid;
+        gap: 10px;
+        padding: 18px;
+        border-left: 1px solid rgba(255, 255, 255, 0.07);
+        background: var(--panel-side);
+      }
+
+      .flow-step {
+        padding: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .flow-step small {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 820;
+      }
+
+      .flow-step span {
+        color: #e5edff;
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      .flow-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 22px;
+      }
+
+      .flow-strip .surface-card {
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.09);
+      }
+
+      .flow-strip p {
+        color: rgba(226, 232, 240, 0.72);
+      }
+
+      .cases-section {
+        background: #fff;
+      }
+
+      .proof-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.94fr) minmax(360px, 0.58fr);
+        gap: 28px;
+        align-items: start;
+      }
+
+      .proof-image {
+        min-height: 360px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background:
+          linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.36)),
+          url("assets/customers-hero-case-ops-2026-08-08.png") center / cover;
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .metric-card {
+        min-height: 132px;
+        padding: 18px;
+        background: #f8fbff;
+      }
+
+      .metric-card strong {
+        display: block;
+        color: var(--ink);
+        font-family: Inter, Arial, sans-serif;
+        font-size: 34px;
+        line-height: 42px;
+        font-weight: 760;
+      }
+
+      .metric-card span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+      }
+
+      .case-board {
+        display: grid;
+        grid-template-columns: 290px minmax(0, 1fr);
+        gap: 18px;
+        margin-top: 28px;
+      }
+
+      .case-rail {
+        display: grid;
+        gap: 10px;
+      }
+
+      .case-tab {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        font-weight: 760;
+      }
+
+      .case-tab.active {
+        border-color: rgba(82, 141, 255, 0.42);
+        background: var(--primary-soft);
+        color: var(--primary-strong);
+      }
+
+      .case-card {
+        padding: 24px;
+      }
+
+      .case-flow {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin: 20px 0;
+      }
+
+      .case-flow div {
+        min-height: 88px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f8fbff;
+      }
+
+      .case-flow small {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--quiet);
+        font-size: 12px;
+        font-weight: 780;
+      }
+
+      .case-flow strong {
+        color: var(--ink);
+      }
+
+      .industry-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+      }
+
+      .industry-card {
+        min-height: 250px;
+        padding: 20px;
+        background: #fff;
+      }
+
+      .metric-lines {
+        display: grid;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .metric-lines span {
+        display: block;
+        padding: 8px 10px;
+        border-radius: 6px;
+        background: #f6f8fc;
+        color: var(--ink);
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 700;
+      }
+
+      .resource-section {
+        background: var(--page);
+      }
+
+      .resource-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.88fr) minmax(380px, 0.62fr);
+        gap: 26px;
+        align-items: stretch;
+      }
+
+      .resource-router {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .route-card {
+        padding: 18px;
+      }
+
+      .route-card strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--ink);
+        font-size: 18px;
+      }
+
+      .qa-layout {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 18px;
+        margin-top: 26px;
+      }
+
+      .stage-rail {
+        display: grid;
+        gap: 10px;
+      }
+
+      .stage-rail span {
+        min-height: 46px;
+        padding: 13px 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        color: var(--muted);
+        font-weight: 720;
+      }
+
+      .stage-rail span:first-child {
+        border-color: rgba(82, 141, 255, 0.38);
+        background: var(--primary-soft);
+        color: var(--primary-strong);
+      }
+
+      .faq-card {
+        padding: 22px;
+      }
+
+      .faq-grid,
+      .checklist-grid,
+      .resource-grid,
+      .support-grid,
+      .routing-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .faq-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 22px;
+      }
+
+      .checklist-grid,
+      .resource-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 22px;
+      }
+
+      .support-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 22px;
+      }
+
+      .support-cell {
+        min-height: 112px;
+        padding: 16px;
+        background: #fff;
+      }
+
+      .support-cell small {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--quiet);
+        font-size: 12px;
+        font-weight: 780;
+      }
+
+      .support-cell strong {
+        color: var(--ink);
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      .routing-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        margin-top: 22px;
+      }
+
+      .matrix-section {
+        color: #fff;
+        background: linear-gradient(180deg, #0f172a, #000d2b);
+      }
+
+      .matrix-section h2,
+      .matrix-section h3 {
+        color: #fff;
+      }
+
+      .matrix-section .section-copy {
+        color: rgba(226, 232, 240, 0.78);
+      }
+
+      .matrix {
+        overflow: hidden;
+        border: 1px solid rgba(121, 179, 255, 0.26);
+        border-radius: 16px;
+        background: rgba(20, 30, 48, 0.86);
+      }
+
+      .matrix-row {
+        display: grid;
+        grid-template-columns: 1.05fr 1.1fr 1fr 1.1fr;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .matrix-row:first-child {
+        border-top: 0;
+        background: rgba(82, 141, 255, 0.14);
+      }
+
+      .matrix-row div {
+        min-height: 82px;
+        padding: 16px;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        color: rgba(226, 232, 240, 0.82);
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      .matrix-row div:first-child {
+        border-left: 0;
+      }
+
+      .matrix-row strong {
+        display: block;
+        color: #fff;
+      }
+
+      .final-cta {
+        background: #fff;
+      }
+
+      .cta-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.58fr);
+        gap: 28px;
+        align-items: stretch;
+        padding: 34px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0 28px 70px rgba(15, 23, 42, 0.08);
+      }
+
+      .summary-form {
+        display: grid;
+        gap: 10px;
+      }
+
+      .summary-field {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        min-height: 48px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f8fbff;
+      }
+
+      .summary-field small {
+        color: var(--quiet);
+        font-weight: 720;
+      }
+
+      .summary-field strong {
+        color: var(--ink);
+        text-align: right;
+      }
+
+      footer {
+        padding: 54px 0;
+        background: #141414;
+        color: #fff;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.8fr;
+        gap: 32px;
+        align-items: start;
+      }
+
+      .footer-note {
+        margin: 18px 0 0;
+        color: #c7d5e6;
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+        color: #c7d5e6;
+        font-size: 14px;
+      }
+
+      @media (max-width: 980px) {
+        .nav-inner,
+        .nav-links,
+        .nav-actions {
+          flex-wrap: wrap;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 118px;
+        }
+
+        .board-grid,
+        .path-grid,
+        .system-grid,
+        .workbench-body,
+        .flow-strip,
+        .proof-layout,
+        .metric-grid,
+        .case-board,
+        .industry-grid,
+        .resource-hero,
+        .resource-router,
+        .qa-layout,
+        .faq-grid,
+        .checklist-grid,
+        .resource-grid,
+        .support-grid,
+        .routing-grid,
+        .cta-panel,
+        .footer-grid,
+        .section-head {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-links {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="container nav-inner">
+          <a class="brand" href="#" aria-label="餐道首頁">
+            <img src="assets/candao-blue-logo.svg" alt="餐道">
+          </a>
+          <nav class="nav-links" aria-label="主導航">
+            <a href="#">首頁</a>
+            <a href="#">解決方案</a>
+            <a href="#">平台</a>
+            <a href="#" aria-current="page">整合能力</a>
+            <a href="#">客戶案例</a>
+            <a href="#">資源</a>
+            <a href="#">關於餐道</a>
+          </nav>
+          <div class="nav-actions">
+            <span class="language">繁中 / EN</span>
+            <a class="button primary" href="#">預約演示</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <p class="eyebrow">接入證據與資源｜餐道</p>
+              <h1>先確認系統能否接回餐道，<span>再用相似案例和資源完成評估</span></h1>
+              <p class="lead">把外賣平台、自有點餐、POS / KDS、CRM、支付、ERP、配送與 API 的接入問題，放到案例證據、FAQ、支援查詢和演示分流中一起判斷。</p>
+              <div class="hero-actions">
+                <a class="button primary" href="#">提交接入評估</a>
+                <a class="button" href="#">預約相似場景演示</a>
+              </div>
+            </div>
+            <div class="hero-board" aria-label="接入、案例與資源整合路徑">
+              <div class="board-grid">
+                <article class="board-lane">
+                  <div class="lane-top">
+                    <span class="lane-index">01</span>
+                    <span class="lane-title">接入驗證</span>
+                  </div>
+                  <p class="lane-copy">外部系統進入 AMS / Connector，先看資料對象、字段、權限、狀態回傳和異常回報。</p>
+                  <div class="mini-tags">
+                    <span>外賣平台 / POS / ERP / 支付 / 會員 / 配送</span>
+                    <span>接口管理、資料校驗、同步監控、異常回報</span>
+                  </div>
+                </article>
+                <article class="board-lane">
+                  <div class="lane-top">
+                    <span class="lane-index">02</span>
+                    <span class="lane-title">案例證據</span>
+                  </div>
+                  <p class="lane-copy">從不同餐飲業態看餐道如何改善訂單、配送與數據營運。</p>
+                  <div class="mini-tags">
+                    <span>Pizza-Box、JIA Group、Jardine Group</span>
+                    <span>導入前 工具分散</span>
+                    <span>導入後 數據與服務回流</span>
+                  </div>
+                </article>
+                <article class="board-lane">
+                  <div class="lane-top">
+                    <span class="lane-index">03</span>
+                    <span class="lane-title">資源下一步</span>
+                  </div>
+                  <p class="lane-copy">採購、IT、營運、門店、配送和財務團隊按問題階段找到下一個入口。</p>
+                  <div class="mini-tags">
+                    <span>評估 確認問題</span>
+                    <span>導入 整理系統</span>
+                    <span>營運 提交支援</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="journey-section">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">三頁合併方式</p>
+                <h2>不是把三個頁面拼長，而是把評估鏈路接起來</h2>
+              </div>
+              <p class="section-copy">整合能力回答「能不能接」；客戶案例回答「相似品牌如何落地」；資源回答「下一步要看什麼、提交什麼、找誰處理」。</p>
+            </div>
+            <div class="path-grid">
+              <article class="path-card">
+                <span class="kicker">整合能力｜餐道</span>
+                <h3>系統接入</h3>
+                <p>把外賣平台、POS / KDS、CRM、支付、ERP 與配送資料接回營運鏈路，讓外部渠道和門店系統回到 OMS、數據資產、財務對賬與配送流程。</p>
+              </article>
+              <article class="path-card">
+                <span class="kicker">客戶案例｜餐道</span>
+                <h3>案例營運視圖</h3>
+                <p>用品牌場景、上線前後對比與可追溯數據支撐銷售轉化，而不是只羅列客戶名稱。</p>
+              </article>
+              <article class="path-card">
+                <span class="kicker">資源｜餐道</span>
+                <h3>資源中心</h3>
+                <p>按你的問題，找到餐道導入、接入、案例與支援入口，減少評估與導入前的不確定。</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-dark">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">接入驗證</p>
+                <h2>按系統類型了解接入範圍、資料流和回傳狀態</h2>
+                <p class="section-copy">IT 與營運團隊可以了解餐道 Connector 如何承接不同系統類型、資料對象、狀態回傳與異常處理。</p>
+              </div>
+              <p class="section-copy">接入不是單點開接口，而是讓資料在營運鏈路中可校驗、可追蹤。</p>
+            </div>
+
+            <div class="system-grid">
+              <aside class="system-rail" aria-label="接入對象">
+                <div class="rail-item active">外賣平台</div>
+                <div class="rail-item">自建點餐入口</div>
+                <div class="rail-item">POS / KDS</div>
+                <div class="rail-item">CRM / 會員</div>
+                <div class="rail-item">支付 / ERP</div>
+                <div class="rail-item">配送與 API</div>
+              </aside>
+              <div class="workbench">
+                <div class="workbench-header">
+                  <strong>外賣平台訂單進入 OMS</strong>
+                  <span class="status-pill">餐道平台｜OMS、Menu Center、DMS / iDMS、財務對賬、CDBI</span>
+                </div>
+                <div class="workbench-body">
+                  <div class="detail-panel">
+                    <p class="lead">訂單數據進入 Connector 後，需要標準化訂單、餐單、用戶和基礎資料，再回到 OMS、數據資產和財務對賬。</p>
+                    <p class="lead">資料對象：餐單、訂單、用戶、基礎資料。適合情境：需要把多平台訂單、餐單更新、用戶資料和對賬差異接回餐道流程。</p>
+                    <div class="object-list">
+                      <span>訂單</span>
+                      <span>菜單</span>
+                      <span>門店</span>
+                      <span>庫存</span>
+                      <span>會員</span>
+                      <span>支付</span>
+                      <span>配送</span>
+                      <span>對賬</span>
+                      <span>OMS / CDBI</span>
+                      <span>提交接入評估</span>
+                    </div>
+                  </div>
+                  <div class="flow-panel">
+                    <div class="flow-step">
+                      <small>來源</small>
+                      <span>平台 / POS / ERP</span>
+                    </div>
+                    <div class="flow-step">
+                      <small>校驗</small>
+                      <span>AMS / Connector</span>
+                    </div>
+                    <div class="flow-step">
+                      <small>使用</small>
+                      <span>OMS / 財務對賬 / CDBI</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flow-strip">
+              <article class="surface-card">
+                <span class="kicker">資料來源</span>
+                <h3>外部系統</h3>
+                <p>平台 / POS / ERP 訂單、菜單、門店、會員與交易資料進入接口層。</p>
+              </article>
+              <article class="surface-card">
+                <span class="kicker">校驗同步</span>
+                <h3>AMS / Connector</h3>
+                <p>AMS / Connector 映射字段、監控同步狀態，將異常回報給對應角色。</p>
+              </article>
+              <article class="surface-card">
+                <span class="kicker">營運使用</span>
+                <h3>OMS / 財務對賬 / CDBI</h3>
+                <p>OMS / 財務對賬 / CDBI 支撐履約、對賬、報表與跨系統決策。</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="cases-section">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">案例證據</p>
+                <h2>從不同餐飲業態看餐道如何改善訂單、配送與數據營運</h2>
+                <p class="section-copy">不只看品牌使用了哪些產品，更看導入餐道後，分散的訂單、門店、餐單、配送、會員和對賬資料如何回到可追蹤的營運流程。</p>
+              </div>
+              <p class="section-copy">品牌門店與外送高峰需要一起看：案例數據看板先建立服務規模，再進入相似場景。</p>
+            </div>
+
+            <div class="proof-layout">
+              <div>
+                <div class="metric-grid" aria-label="服務規模">
+                  <div class="metric-card"><strong>5000+</strong><span>品牌數量</span></div>
+                  <div class="metric-card"><strong>500M+</strong><span>每日處理訂單</span></div>
+                  <div class="metric-card"><strong>400+</strong><span>覆蓋城市</span></div>
+                  <div class="metric-card"><strong>200K+</strong><span>門店數量</span></div>
+                  <div class="metric-card"><strong>4.5B+</strong><span>每月配送訂單交易額</span></div>
+                  <div class="metric-card"><strong>30%</strong><span>客戶效率提升</span></div>
+                </div>
+                <p class="section-copy">服務規模：用服務規模與營運數據建立初步可信。</p>
+              </div>
+              <div class="proof-image" role="img" aria-label="餐飲品牌門店與外送營運場景"></div>
+            </div>
+
+            <div class="case-board">
+              <div class="case-rail" aria-label="實名案例">
+                <div class="case-tab active">Pizza-Box｜9 年合作，OMS + 自有點餐</div>
+                <div class="case-tab">JIA Group｜多品牌、多門店營運</div>
+                <div class="case-tab">Jardine Group｜DMS / iDMS 配送履約</div>
+              </div>
+              <article class="case-card">
+                <span class="kicker">實名案例</span>
+                <h3>從已落地品牌看合作範圍和營運變化</h3>
+                <p>不同品牌的重點不一樣：有的先處理多平台訂單與門店出單，有的需要支撐多品牌營運，有的把配送狀態和騎手管理納入 DMS / iDMS。</p>
+                <div class="case-flow">
+                  <div><small>Pizza-Box</small><strong>訂單整合｜OMS</strong></div>
+                  <div><small>JIA Group</small><strong>數據與服務｜CDBI</strong></div>
+                  <div><small>Jardine Group</small><strong>配送履約｜DMS / iDMS</strong></div>
+                </div>
+                <p>合作超過 9 年；使用 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、經營分析與客戶服務。</p>
+                <p class="section-copy">導入後變化：訂單、配送、營銷和客戶服務不再分散在多個工具中，品牌可以用同一套流程追蹤門店履約和服務狀態。</p>
+                <p class="section-copy">下一步：預約相似場景演示。</p>
+              </article>
+            </div>
+
+            <div class="section-head" style="margin-top: 54px;">
+              <div>
+                <p class="eyebrow">業態成果</p>
+                <h2>用多元餐飲環境補足相似場景參考</h2>
+              </div>
+              <p class="section-copy">每張卡片都回到接入、履約、餐單、對賬或數據營運，不把案例做成單純品牌展示。</p>
+            </div>
+
+            <div class="industry-grid">
+              <article class="industry-card">
+                <span class="kicker">甜品連鎖</span>
+                <h3>POS 對接與自動打印</h3>
+                <p>OMS 對接 POS，整合外賣平台資料並自動打印，降低漏單風險。</p>
+                <div class="metric-lines">
+                  <span>訂單量：100K → 190K → 1.01M</span>
+                  <span>銷售額：6.6M → 7.74M → 54.42M</span>
+                  <span>復購率：19.88% → 25.83%</span>
+                </div>
+              </article>
+              <article class="industry-card">
+                <span class="kicker">火鍋連鎖</span>
+                <h3>小程序訂單與騎手管理</h3>
+                <p>小程序訂單、門店聚合與騎手管理回到 OMS / DMS 流程。</p>
+                <div class="metric-lines">
+                  <span>訂單取消率：12.66% / 15.65% / 19.98%</span>
+                  <span>年度銷售額：1,578 萬元</span>
+                  <span>營運效率：147%</span>
+                </div>
+              </article>
+              <article class="industry-card">
+                <span class="kicker">中餐連鎖</span>
+                <h3>收購後系統整合</h3>
+                <p>營運管理中心和數據分析中心支援收購後的系統整合與跨系統數據管理。</p>
+                <div class="metric-lines">
+                  <span>訂單取消率改善：185%</span>
+                  <span>銷售增長：665%</span>
+                  <span>門店擴張率：116%</span>
+                </div>
+              </article>
+              <article class="industry-card">
+                <span class="kicker">咖啡品牌</span>
+                <h3>Menu Center 與 CDBI 分析</h3>
+                <p>外賣平台對接、Menu Center 菜單同步與 CDBI 分析支援門店決策。</p>
+                <div class="metric-lines">
+                  <span>單店平均銷售額：+55%</span>
+                  <span>單店平均訂單額增長：+74%</span>
+                  <span>訂單量：1420 → 2472</span>
+                </div>
+              </article>
+              <article class="industry-card">
+                <span class="kicker">鮮食零售</span>
+                <h3>區域餐單與庫存同步</h3>
+                <p>跨區域餐單、庫存與多平台同步，支援區域餐單和平台差異管理。</p>
+                <div class="metric-lines">
+                  <span>門店營運效率：30%</span>
+                  <span>門店營運數字化：80%</span>
+                  <span>線上訂單比例：26.7%</span>
+                </div>
+              </article>
+              <article class="industry-card">
+                <span class="kicker">配送密集品牌</span>
+                <h3>派單規則與配送異常</h3>
+                <p>DMS / iDMS 管理自有騎手、第三方配送、派單規則、SMS 通知與配送異常。</p>
+                <div class="metric-lines">
+                  <span>Jardine Group DMS 覆蓋 200+ 間門店</span>
+                  <span>DMS 平台可用性：超過 99.95%</span>
+                  <span>DMS 吞吐量：每秒 500 筆訂單</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="resource-section">
+          <div class="container">
+            <div class="resource-hero">
+              <div>
+                <p class="eyebrow">資源中心</p>
+                <h2>按你的問題，找到餐道導入、接入、案例與支援入口</h2>
+                <p class="section-copy">採購、IT、營運、門店、配送和財務團隊可以在這裡找到接入準備、常見問題、支援查詢、案例資源和產品演示入口，減少評估與導入前的不確定。</p>
+                <div class="mini-tags" style="margin-top: 22px;">
+                  <span>售前方案</span>
+                  <span>導入資料</span>
+                  <span>技術對接</span>
+                  <span>品牌案例</span>
+                  <span>資源路徑</span>
+                </div>
+              </div>
+              <div class="resource-router" aria-label="問題階段">
+                <article class="route-card">
+                  <span class="kicker">01</span>
+                  <strong>評估｜確認問題</strong>
+                  <p>評估中了解餐道是否適合目前的訂單、門店、配送或對賬問題。</p>
+                </article>
+                <article class="route-card">
+                  <span class="kicker">02</span>
+                  <strong>導入｜整理系統</strong>
+                  <p>導入中整理外賣平台、自有點餐、POS、CRM、ERP、配送和支付資料。</p>
+                </article>
+                <article class="route-card">
+                  <span class="kicker">03</span>
+                  <strong>營運｜提交支援</strong>
+                  <p>日常營運提交接單超時、餐單同步、配送超時或對賬差異問題。</p>
+                </article>
+              </div>
+            </div>
+
+            <p class="section-copy" style="margin-top: 32px;">問題階段：用目前所處階段找到下一步。</p>
+            <div class="qa-layout">
+              <aside class="stage-rail" aria-label="用目前所處階段找到下一步">
+                <span>評估中</span>
+                <span>導入中</span>
+                <span>日常營運</span>
+                <span>技術查詢</span>
+              </aside>
+              <article class="faq-card">
+                <span class="kicker">問答</span>
+                <h3>評估中常見問題</h3>
+                <p><strong>Q1</strong> 接入前要準備哪些系統類型？可先整理外賣平台、自建入口、POS / KDS、CRM、配送、支付和 ERP。</p>
+                <p class="section-copy"><strong>Q2</strong> 財務對賬如何比對平台訂單與餐道 OMS 訂單，識別金額、狀態和漏單差異？</p>
+                <div class="hero-actions" style="justify-content: flex-start; margin-top: 22px;">
+                  <a class="button soft" href="#">提交支援或查詢</a>
+                  <a class="button light" href="#">查看平台能力</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="section-head" style="margin-top: 58px;">
+              <div>
+                <p class="eyebrow">資源能力</p>
+                <h2>每一類資源都對應一個獨立能力板塊</h2>
+                <p class="section-copy">接入準備、營運 FAQ、案例資源、支援中心、媒體資料和產品演示分流服務的問題不同，呈現方式也應不同。</p>
+              </div>
+            </div>
+
+            <div class="checklist-grid">
+              <article class="support-cell">
+                <small>接入準備清單</small>
+                <strong>把接入前需要整理的系統對象一次看清</strong>
+                <p class="section-copy">渠道與入口：外賣平台、H5 / Web / APP / QR</p>
+              </article>
+              <article class="support-cell">
+                <small>門店系統</small>
+                <strong>POS / KDS</strong>
+                <p class="section-copy">打印 / 後廚單</p>
+              </article>
+              <article class="support-cell">
+                <small>企業資料</small>
+                <strong>CRM / 會員</strong>
+                <p class="section-copy">支付 / ERP</p>
+              </article>
+              <article class="support-cell">
+                <small>AMS / Connector</small>
+                <strong>API、字段、權限、異常回傳</strong>
+                <p class="section-copy">適合 IT 和營運團隊在接入前確認外賣平台、自有入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限與異常處理。</p>
+              </article>
+            </div>
+
+            <div class="faq-grid">
+              <article class="faq-card">
+                <span class="kicker">營運 FAQ</span>
+                <h3>多平台訂單</h3>
+                <p>多平台訂單渠道、門店、訂單狀態、配送狀態和異常類型如何在 OMS 內處理？</p>
+              </article>
+              <article class="faq-card">
+                <span class="kicker">餐單同步</span>
+                <h3>Menu Center</h3>
+                <p>餐單同步：Menu Center 如何處理餐單、庫存、售罄、區域菜單和平台差異？</p>
+              </article>
+              <article class="faq-card">
+                <span class="kicker">財務對賬</span>
+                <h3>對賬差異</h3>
+                <p>財務對賬如何識別金額差異、狀態差異和漏單？採購、營運、門店和財務團隊可以直接按問題類型閱讀答案，判斷下一步是看平台能力、提交查詢還是預約演示。</p>
+              </article>
+            </div>
+
+            <div class="section-head" style="margin-top: 58px;">
+              <div>
+                <p class="eyebrow">案例資源</p>
+                <h2>按業態找到相似案例與可參考成果</h2>
+              </div>
+              <p class="section-copy">把 Customers 的案例證據變成 Resources 的入口，讓訪客按自己的業態進入。</p>
+            </div>
+            <div class="resource-grid">
+              <article class="support-cell"><small>Pizza / 快餐</small><strong>多平台訂單、配送履約、長期服務</strong></article>
+              <article class="support-cell"><small>餐飲集團</small><strong>多品牌、多門店、COMS 營運數據</strong></article>
+              <article class="support-cell"><small>甜品連鎖</small><strong>POS 對接、自動打印、漏單降低</strong></article>
+              <article class="support-cell"><small>火鍋 / 中餐</small><strong>小程序訂單、門店聚合、系統整合</strong></article>
+              <article class="support-cell"><small>咖啡品牌</small><strong>Menu Center、外賣平台、CDBI 分析</strong></article>
+              <article class="support-cell"><small>鮮食零售</small><strong>區域餐單、庫存、多平台同步</strong></article>
+              <article class="support-cell"><small>媒體與公司資料</small><strong>把採購、合作和媒體需要的資料集中呈現</strong></article>
+              <article class="support-cell"><small>公司資料</small><strong>公司背景、據點、服務能力</strong></article>
+            </div>
+
+            <div class="section-head" style="margin-top: 58px;">
+              <div>
+                <p class="eyebrow">支援中心</p>
+                <h2>把既有客戶和導入中問題導向正確處理路徑</h2>
+                <p class="section-copy">接入、營運和技術問題需要帶上相關系統、業務對象與異常狀態，方便支援團隊判斷是 OMS、DMS、iDMS、CDBI 還是 AMS / Connector 相關。</p>
+              </div>
+              <p class="section-copy">支援查詢進入後先待分流，再按問題類型、相關系統、業務對象和可見異常處理。</p>
+            </div>
+            <div class="support-grid">
+              <div class="support-cell"><small>問題類型</small><strong>接入 / 營運 / 技術</strong></div>
+              <div class="support-cell"><small>相關系統</small><strong>OMS / DMS / iDMS / CDBI</strong></div>
+              <div class="support-cell"><small>業務對象</small><strong>訂單 / 餐單 / 配送 / 對賬</strong></div>
+              <div class="support-cell"><small>可見異常</small><strong>接單超時 / 配送超時 / 對賬差異</strong></div>
+              <div class="support-cell"><small>品牌資產</small><strong>品牌標識、品牌資料、聯絡入口</strong></div>
+              <div class="support-cell"><small>媒體聯絡</small><strong>新聞、合作與採購查詢</strong></div>
+              <div class="support-cell"><small>產品演示分流</small><strong>把不確定的問題轉成可安排的演示模組</strong></div>
+              <div class="support-cell"><small>預約產品演示</small><strong>相似業態案例、現有系統、主要問題、推薦模組</strong></div>
+            </div>
+
+            <div class="routing-grid">
+              <article class="route-card"><span class="kicker">填寫現況</span><strong>業態</strong><p>Pizza / 餐飲集團 / 甜品 / 咖啡 / 鮮食零售</p></article>
+              <article class="route-card"><span class="kicker">匹配模組</span><strong>門店規模</strong><p>單店、多門店、跨區域或多品牌營運</p></article>
+              <article class="route-card"><span class="kicker">現有系統</span><strong>POS / KDS</strong><p>外賣平台、POS / KDS、CRM、ERP、配送</p></article>
+              <article class="route-card"><span class="kicker">主要問題</span><strong>漏單</strong><p>漏單、重複維護、配送超時、對賬差異</p></article>
+              <article class="route-card"><span class="kicker">安排演示</span><strong>OMS</strong><p>OMS、DMS、iDMS、CDBI、AMS / Connector</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="matrix-section">
+          <div class="container">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">整合判斷矩陣</p>
+                <h2>把接入問題、相似案例和資源入口放在同一個判斷面</h2>
+              </div>
+              <p class="section-copy">訪客不需要先猜自己該看哪一頁；頁面直接把問題、系統、案例和下一步排在一起。</p>
+            </div>
+            <div class="matrix">
+              <div class="matrix-row">
+                <div><strong>目前問題</strong></div>
+                <div><strong>接入 / 產品關係</strong></div>
+                <div><strong>相似案例</strong></div>
+                <div><strong>資源下一步</strong></div>
+              </div>
+              <div class="matrix-row">
+                <div>多平台訂單、餐單更新、門店接單與漏單風險</div>
+                <div>外賣平台、自建入口、POS / KDS 透過 AMS / Connector 回到 OMS 與 Menu Center</div>
+                <div>Pizza-Box、甜品連鎖、火鍋連鎖</div>
+                <div>接入準備清單、營運 FAQ、提交接入評估</div>
+              </div>
+              <div class="matrix-row">
+                <div>配送超時、派單規則、第三方配送協同與可見異常</div>
+                <div>DMS / iDMS 承接自有騎手、第三方配送、SMS 通知與配送異常</div>
+                <div>Jardine Group、配送密集品牌</div>
+                <div>支援查詢、預約相似場景演示</div>
+              </div>
+              <div class="matrix-row">
+                <div>平台訂單與 OMS 訂單金額、狀態、漏單差異</div>
+                <div>CDBI / 財務對賬支撐報表、看板、對賬與跨系統決策</div>
+                <div>咖啡品牌、鮮食零售、中餐連鎖</div>
+                <div>財務對賬 FAQ、案例資源、產品演示分流</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="final-cta">
+          <div class="container">
+            <div class="cta-panel">
+              <div>
+                <p class="eyebrow">Demo 承接</p>
+                <h2>把接入問題、相似案例和資源入口一起帶到演示中</h2>
+                <p class="section-copy">請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。團隊會根據場景安排 OMS、DMS、iDMS、CDBI 或 AMS / Connector 演示。</p>
+                <div class="hero-actions" style="justify-content: flex-start;">
+                  <a class="button primary" href="#">預約產品演示</a>
+                  <a class="button light" href="#">查看資源入口</a>
+                </div>
+              </div>
+              <div class="summary-form" aria-label="演示需求摘要">
+                <div class="summary-field"><small>意圖</small><strong>產品演示</strong></div>
+                <div class="summary-field"><small>推薦模組</small><strong>OMS、DMS / iDMS、CDBI、AMS / Connector</strong></div>
+                <div class="summary-field"><small>業態與地區</small><strong>由表單填入</strong></div>
+                <div class="summary-field"><small>現有系統</small><strong>外賣平台 / POS / ERP</strong></div>
+                <div class="summary-field"><small>下一步</small><strong>提交後由團隊按場景安排演示。</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container footer-grid">
+          <div>
+            <img src="assets/candao-blue-logo.svg" alt="餐道" width="112">
+            <p class="footer-note">餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector</p>
+          </div>
+          <nav class="footer-links" aria-label="頁尾導航">
+            <a href="#">首頁</a>
+            <a href="#">解決方案</a>
+            <a href="#">平台</a>
+            <a href="#">整合能力</a>
+            <a href="#">客戶案例</a>
+            <a href="#">資源</a>
+            <a href="#">關於餐道</a>
+            <a href="#">預約演示</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

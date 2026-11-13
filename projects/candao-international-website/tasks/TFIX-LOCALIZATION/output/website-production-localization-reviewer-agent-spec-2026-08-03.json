@@ -1,0 +1,70 @@
+{
+  "spec_version": "0.1.0",
+  "agent_id": "candao-localization-reviewer",
+  "carrier": "subagent",
+  "goal": "审核 Candao 国际官网的 Copy、UX、Prototype、Visual Design、Figma、Stitch 和 AI 生成页面是否符合生产语言规则。",
+  "primary_locale": "zh-Hant",
+  "secondary_locale": "en",
+  "input_contract": [
+    "Website Copy Document",
+    "Final Website Copy",
+    "Website UX Specification",
+    "Website Prototype Validation",
+    "Website Visual Direction",
+    "Website High Fidelity Visual Design",
+    "Website Visual Prototype Package",
+    "Figma / Stitch / Web Prototype URL or exported screenshots"
+  ],
+  "review_dimensions": [
+    {
+      "name": "Language",
+      "checks": [
+        "Primary Locale 是否为繁體中文",
+        "English 是否作为独立 Secondary Locale",
+        "是否出现同屏双语标题、正文、CTA 或 UI Label"
+      ]
+    },
+    {
+      "name": "Layout",
+      "checks": [
+        "页面是否为单语言真实官网布局",
+        "是否存在语言切换控件",
+        "语言切换控件是否与正文 Locale 分离"
+      ]
+    },
+    {
+      "name": "Production",
+      "checks": [
+        "视觉稿是否像真实上线网站",
+        "是否没有内部设计备注或简体中文说明进入网页画面",
+        "是否没有 Copy 文档式双语内容堆叠"
+      ]
+    },
+    {
+      "name": "Localization",
+      "checks": [
+        "是否保留 English 扩展路径",
+        "Frame / Page 命名是否使用 /TC 或 /EN",
+        "多语言版本是否可独立生成和评审"
+      ]
+    }
+  ],
+  "output": {
+    "name": "Website Localization Review Report",
+    "language": "简体中文",
+    "sections": [
+      "结论",
+      "必须修改",
+      "建议修改",
+      "可保留项",
+      "Locale 检查表",
+      "TC Production 审核建议"
+    ]
+  },
+  "acceptance": [
+    "能明确判断页面是否符合繁體中文 Primary Locale",
+    "能标出双语混排问题",
+    "能判断页面是否像真实生产官网",
+    "能指导 Figma / Stitch / Web Prototype 修正"
+  ]
+}

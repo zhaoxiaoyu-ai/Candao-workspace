@@ -1,0 +1,35 @@
+{
+  "suite": "t24-product-name-case-sensitive-failure-2026-08-15",
+  "items": [
+    {
+      "id": "wrong-idms-source-text",
+      "component_type": "product_name",
+      "role": "IT",
+      "page_task": "展示聚合配送产品能力",
+      "locale": "zh-Hant",
+      "text": "IDMS / DMS / Dispatch 管理配送呼叫、騎手、派單和監控。",
+      "must_include": ["DMS", "Dispatch"]
+    },
+    {
+      "id": "wrong-saas-source-text",
+      "component_type": "service_name",
+      "role": "采购方",
+      "page_task": "展示服务体系",
+      "locale": "zh-Hant",
+      "text": "SAAS、Data、Delivery 與 Quality Assurance 服務體系。",
+      "must_include": ["Data", "Delivery", "Quality Assurance"]
+    },
+    {
+      "id": "wrong-rendered-idms-by-css",
+      "component_type": "prototype_text",
+      "role": "IT",
+      "page_task": "验证渲染后的产品名显示",
+      "locale": "zh-Hant",
+      "text": "iDMS / DMS / Dispatch",
+      "rendered_text": "IDMS / DMS / DISPATCH",
+      "css_text": ".block-kicker { text-transform: uppercase; }",
+      "checks_style_case_sensitive_terms": true,
+      "must_include": ["iDMS", "DMS"]
+    }
+  ]
+}

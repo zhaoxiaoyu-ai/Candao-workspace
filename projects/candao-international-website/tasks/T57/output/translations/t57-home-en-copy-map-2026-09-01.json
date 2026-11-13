@@ -1,0 +1,1055 @@
+{
+  "task": "T57",
+  "source_file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+  "source_node_id": "336:7645",
+  "source_node_name": "首頁",
+  "target_locale": "en",
+  "google_translate_access": "blocked_for_current_network; see t57-google-translate-access-check-2026-09-01.json",
+  "translation_policy": "Use Google Translate as the requested baseline when reachable; because Google Translate domains timed out in this environment, this file records manual English website adaptation and does not claim Google baseline text was retrieved.",
+  "total_unique_visible_text": 149,
+  "items": [
+    {
+      "no": 1,
+      "source_text": "讓餐飲營運，從多平台混亂",
+      "google_translate_baseline": null,
+      "final_en": "Bring Order to",
+      "handling": "headline_adaptation"
+    },
+    {
+      "no": 2,
+      "source_text": "走向一個清晰系統",
+      "google_translate_baseline": null,
+      "final_en": "Unified Operations",
+      "handling": "headline_adaptation_layout_safe"
+    },
+    {
+      "no": 3,
+      "source_text": "餐道連接訂單、菜單、門店、配送與數據，協助餐飲品牌在多市場、\n多門店中穩定營運與持續成長。",
+      "google_translate_baseline": null,
+      "final_en": "Candao connects orders, menus, stores, delivery, and data so F&B brands can run clearly across markets and locations.",
+      "handling": "adapted"
+    },
+    {
+      "no": 4,
+      "source_text": "預約產品演示",
+      "google_translate_baseline": null,
+      "final_en": "Book a Demo",
+      "handling": "cta"
+    },
+    {
+      "no": 5,
+      "source_text": "探索平台能力",
+      "google_translate_baseline": null,
+      "final_en": "Explore Platform",
+      "handling": "cta"
+    },
+    {
+      "no": 6,
+      "source_text": "一個平台，\n連接餐飲營運的關鍵流程",
+      "google_translate_baseline": null,
+      "final_en": "One Platform,\nCore Workflows",
+      "handling": "layout_safe_adaptation"
+    },
+    {
+      "no": 7,
+      "source_text": "餐道將分散在不同渠道、系統與門店中的營運訊號，\n整合成可管理的工作流",
+      "google_translate_baseline": null,
+      "final_en": "Candao turns channel, system, and store signals into manageable workflows.",
+      "handling": "layout_safe_adaptation"
+    },
+    {
+      "no": 8,
+      "source_text": "01",
+      "google_translate_baseline": null,
+      "final_en": "01",
+      "handling": "preserved"
+    },
+    {
+      "no": 9,
+      "source_text": "渠道整合",
+      "google_translate_baseline": null,
+      "final_en": "Channel Integration",
+      "handling": "term"
+    },
+    {
+      "no": 10,
+      "source_text": "多平台訂單分散，難以統一管理。",
+      "google_translate_baseline": null,
+      "final_en": "Orders are scattered across platforms.",
+      "handling": "adapted"
+    },
+    {
+      "no": 11,
+      "source_text": "餐道整合主流外賣平台、自有渠道與門店訂單，集中處理與分配，避免漏單、錯單，提升營運效率。",
+      "google_translate_baseline": null,
+      "final_en": "Candao brings marketplace, owned-channel, and store orders into one queue to reduce missed and incorrect orders.",
+      "handling": "adapted"
+    },
+    {
+      "no": 12,
+      "source_text": "整合多平台訂單，集中管理",
+      "google_translate_baseline": null,
+      "final_en": "Centralize orders across platforms",
+      "handling": "adapted"
+    },
+    {
+      "no": 13,
+      "source_text": "自動去重與訂單合併",
+      "google_translate_baseline": null,
+      "final_en": "Auto de-duplicate and merge orders",
+      "handling": "adapted"
+    },
+    {
+      "no": 14,
+      "source_text": "訂單智能分配至對應門店",
+      "google_translate_baseline": null,
+      "final_en": "Route orders to the right store",
+      "handling": "adapted"
+    },
+    {
+      "no": 15,
+      "source_text": "即時同步訂單狀態至各渠道",
+      "google_translate_baseline": null,
+      "final_en": "Sync order status across channels",
+      "handling": "adapted"
+    },
+    {
+      "no": 16,
+      "source_text": "支援平台",
+      "google_translate_baseline": null,
+      "final_en": "Supported Platforms",
+      "handling": "term"
+    },
+    {
+      "no": 17,
+      "source_text": "Uber\nEats",
+      "google_translate_baseline": null,
+      "final_en": "Uber\nEats",
+      "handling": "preserved"
+    },
+    {
+      "no": 18,
+      "source_text": "🐼",
+      "google_translate_baseline": null,
+      "final_en": "🐼",
+      "handling": "preserved"
+    },
+    {
+      "no": 19,
+      "source_text": "Grab\nFood",
+      "google_translate_baseline": null,
+      "final_en": "Grab\nFood",
+      "handling": "preserved"
+    },
+    {
+      "no": 20,
+      "source_text": "•••",
+      "google_translate_baseline": null,
+      "final_en": "•••",
+      "handling": "preserved"
+    },
+    {
+      "no": 21,
+      "source_text": "訂單管理",
+      "google_translate_baseline": null,
+      "final_en": "Orders",
+      "handling": "compact_ui_label"
+    },
+    {
+      "no": 22,
+      "source_text": "訂單總覽",
+      "google_translate_baseline": null,
+      "final_en": "Overview",
+      "handling": "compact_ui_label"
+    },
+    {
+      "no": 23,
+      "source_text": "待處理訂單",
+      "google_translate_baseline": null,
+      "final_en": "Pending",
+      "handling": "compact_ui_label"
+    },
+    {
+      "no": 24,
+      "source_text": "進行中訂單",
+      "google_translate_baseline": null,
+      "final_en": "Active",
+      "handling": "compact_ui_label"
+    },
+    {
+      "no": 25,
+      "source_text": "歷史訂單",
+      "google_translate_baseline": null,
+      "final_en": "History",
+      "handling": "compact_ui_label"
+    },
+    {
+      "no": 26,
+      "source_text": "訂單設定",
+      "google_translate_baseline": null,
+      "final_en": "Settings",
+      "handling": "compact_ui_label"
+    },
+    {
+      "no": 27,
+      "source_text": "搜尋訂單號、顧客或門店",
+      "google_translate_baseline": null,
+      "final_en": "Search order ID, customer, or store",
+      "handling": "ui_label"
+    },
+    {
+      "no": 28,
+      "source_text": "全部",
+      "google_translate_baseline": null,
+      "final_en": "All",
+      "handling": "ui_label"
+    },
+    {
+      "no": 29,
+      "source_text": "待接單",
+      "google_translate_baseline": null,
+      "final_en": "To Accept",
+      "handling": "ui_label"
+    },
+    {
+      "no": 30,
+      "source_text": "32",
+      "google_translate_baseline": null,
+      "final_en": "32",
+      "handling": "preserved"
+    },
+    {
+      "no": 31,
+      "source_text": "製作中",
+      "google_translate_baseline": null,
+      "final_en": "Preparing",
+      "handling": "ui_label"
+    },
+    {
+      "no": 32,
+      "source_text": "18",
+      "google_translate_baseline": null,
+      "final_en": "18",
+      "handling": "preserved"
+    },
+    {
+      "no": 33,
+      "source_text": "配送中",
+      "google_translate_baseline": null,
+      "final_en": "Delivering",
+      "handling": "ui_label"
+    },
+    {
+      "no": 34,
+      "source_text": "24",
+      "google_translate_baseline": null,
+      "final_en": "24",
+      "handling": "preserved"
+    },
+    {
+      "no": 35,
+      "source_text": "已完成",
+      "google_translate_baseline": null,
+      "final_en": "Completed",
+      "handling": "ui_label"
+    },
+    {
+      "no": 36,
+      "source_text": "訂單資訊",
+      "google_translate_baseline": null,
+      "final_en": "Order Info",
+      "handling": "ui_label"
+    },
+    {
+      "no": 37,
+      "source_text": "顧客",
+      "google_translate_baseline": null,
+      "final_en": "Customer",
+      "handling": "ui_label"
+    },
+    {
+      "no": 38,
+      "source_text": "來源平台",
+      "google_translate_baseline": null,
+      "final_en": "Source",
+      "handling": "ui_label"
+    },
+    {
+      "no": 39,
+      "source_text": "#8765",
+      "google_translate_baseline": null,
+      "final_en": "#8765",
+      "handling": "preserved"
+    },
+    {
+      "no": 40,
+      "source_text": "2項商品・$268",
+      "google_translate_baseline": null,
+      "final_en": "2 items・$268",
+      "handling": "ui_label"
+    },
+    {
+      "no": 41,
+      "source_text": "王小明",
+      "google_translate_baseline": null,
+      "final_en": "Alex Wang",
+      "handling": "sample_data_localized"
+    },
+    {
+      "no": 42,
+      "source_text": "0912-345-678",
+      "google_translate_baseline": null,
+      "final_en": "0912-345-678",
+      "handling": "preserved"
+    },
+    {
+      "no": 43,
+      "source_text": "#8764",
+      "google_translate_baseline": null,
+      "final_en": "#8764",
+      "handling": "preserved"
+    },
+    {
+      "no": 44,
+      "source_text": "3項商品・$420",
+      "google_translate_baseline": null,
+      "final_en": "3 items・$420",
+      "handling": "ui_label"
+    },
+    {
+      "no": 45,
+      "source_text": "李美麗",
+      "google_translate_baseline": null,
+      "final_en": "Mia Lee",
+      "handling": "sample_data_localized"
+    },
+    {
+      "no": 46,
+      "source_text": "0921-234-567",
+      "google_translate_baseline": null,
+      "final_en": "0921-234-567",
+      "handling": "preserved"
+    },
+    {
+      "no": 47,
+      "source_text": "#8763",
+      "google_translate_baseline": null,
+      "final_en": "#8763",
+      "handling": "preserved"
+    },
+    {
+      "no": 48,
+      "source_text": "1項商品・$120",
+      "google_translate_baseline": null,
+      "final_en": "1 item・$120",
+      "handling": "ui_label"
+    },
+    {
+      "no": 49,
+      "source_text": "陳大文",
+      "google_translate_baseline": null,
+      "final_en": "David Chen",
+      "handling": "sample_data_localized"
+    },
+    {
+      "no": 50,
+      "source_text": "0933-456-789",
+      "google_translate_baseline": null,
+      "final_en": "0933-456-789",
+      "handling": "preserved"
+    },
+    {
+      "no": 51,
+      "source_text": "自有APP",
+      "google_translate_baseline": null,
+      "final_en": "Owned App",
+      "handling": "term"
+    },
+    {
+      "no": 52,
+      "source_text": "#8762",
+      "google_translate_baseline": null,
+      "final_en": "#8762",
+      "handling": "preserved"
+    },
+    {
+      "no": 53,
+      "source_text": "4項商品・$560",
+      "google_translate_baseline": null,
+      "final_en": "4 items・$560",
+      "handling": "ui_label"
+    },
+    {
+      "no": 54,
+      "source_text": "張小華",
+      "google_translate_baseline": null,
+      "final_en": "Amy Chang",
+      "handling": "sample_data_localized"
+    },
+    {
+      "no": 55,
+      "source_text": "0911-222-333",
+      "google_translate_baseline": null,
+      "final_en": "0911-222-333",
+      "handling": "preserved"
+    },
+    {
+      "no": 56,
+      "source_text": "#8761",
+      "google_translate_baseline": null,
+      "final_en": "#8761",
+      "handling": "preserved"
+    },
+    {
+      "no": 57,
+      "source_text": "林小強",
+      "google_translate_baseline": null,
+      "final_en": "Henry Lin",
+      "handling": "sample_data_localized"
+    },
+    {
+      "no": 58,
+      "source_text": "0977-888-999",
+      "google_translate_baseline": null,
+      "final_en": "0977-888-999",
+      "handling": "preserved"
+    },
+    {
+      "no": 59,
+      "source_text": "L",
+      "google_translate_baseline": null,
+      "final_en": "L",
+      "handling": "preserved"
+    },
+    {
+      "no": 60,
+      "source_text": "對應營運問題",
+      "google_translate_baseline": null,
+      "final_en": "Operational Problems",
+      "handling": "term"
+    },
+    {
+      "no": 61,
+      "source_text": "多平台訂單分散",
+      "google_translate_baseline": null,
+      "final_en": "Scattered Orders",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 62,
+      "source_text": "需切換多個後台查看",
+      "google_translate_baseline": null,
+      "final_en": "Many dashboards",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 63,
+      "source_text": "訂單易漏接",
+      "google_translate_baseline": null,
+      "final_en": "Missed Orders",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 64,
+      "source_text": "高峰時段訂單漏單",
+      "google_translate_baseline": null,
+      "final_en": "Peak-hour gaps",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 65,
+      "source_text": "人工處理耗時",
+      "google_translate_baseline": null,
+      "final_en": "Manual Work",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 66,
+      "source_text": "訂單分配效率低",
+      "google_translate_baseline": null,
+      "final_en": "Slow routing",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 67,
+      "source_text": "數據無法彙總",
+      "google_translate_baseline": null,
+      "final_en": "Fragmented Data",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 68,
+      "source_text": "營運狀況難掌握",
+      "google_translate_baseline": null,
+      "final_en": "Limited visibility",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 69,
+      "source_text": "帶來的效益",
+      "google_translate_baseline": null,
+      "final_en": "Impact Delivered",
+      "handling": "adapted"
+    },
+    {
+      "no": 70,
+      "source_text": "-80%",
+      "google_translate_baseline": null,
+      "final_en": "Faster",
+      "handling": "unconfirmed_source_metric_replaced_with_qualitative_label"
+    },
+    {
+      "no": 71,
+      "source_text": "訂單處理時間",
+      "google_translate_baseline": null,
+      "final_en": "Order handling",
+      "handling": "adapted"
+    },
+    {
+      "no": 72,
+      "source_text": "大幅提升處理效率",
+      "google_translate_baseline": null,
+      "final_en": "Less switching",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 73,
+      "source_text": "+60%",
+      "google_translate_baseline": null,
+      "final_en": "Smoother",
+      "handling": "unconfirmed_source_metric_replaced_with_qualitative_label"
+    },
+    {
+      "no": 74,
+      "source_text": "營運效率",
+      "google_translate_baseline": null,
+      "final_en": "Operations",
+      "handling": "adapted"
+    },
+    {
+      "no": 75,
+      "source_text": "人力成本優化",
+      "google_translate_baseline": null,
+      "final_en": "Lower manual effort",
+      "handling": "adapted"
+    },
+    {
+      "no": 76,
+      "source_text": "-95%",
+      "google_translate_baseline": null,
+      "final_en": "Fewer",
+      "handling": "unconfirmed_source_metric_replaced_with_qualitative_label"
+    },
+    {
+      "no": 77,
+      "source_text": "漏單率",
+      "google_translate_baseline": null,
+      "final_en": "Missed orders",
+      "handling": "adapted"
+    },
+    {
+      "no": 78,
+      "source_text": "訂單準確度提升",
+      "google_translate_baseline": null,
+      "final_en": "Cleaner order capture",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 79,
+      "source_text": "100%",
+      "google_translate_baseline": null,
+      "final_en": "One View",
+      "handling": "unconfirmed_source_metric_replaced_with_qualitative_label"
+    },
+    {
+      "no": 80,
+      "source_text": "數據整合",
+      "google_translate_baseline": null,
+      "final_en": "Data integration",
+      "handling": "term"
+    },
+    {
+      "no": 81,
+      "source_text": "營運狀況一目瞭然",
+      "google_translate_baseline": null,
+      "final_en": "One operating view",
+      "handling": "compact_card_label"
+    },
+    {
+      "no": 82,
+      "source_text": "五項能力對應品牌常見運營問題",
+      "google_translate_baseline": null,
+      "final_en": "Five Capabilities for Common Brand Operating Problems",
+      "handling": "adapted"
+    },
+    {
+      "no": 83,
+      "source_text": "渠道聚合",
+      "google_translate_baseline": null,
+      "final_en": "Channel Aggregation",
+      "handling": "term"
+    },
+    {
+      "no": 84,
+      "source_text": "菜單承接",
+      "google_translate_baseline": null,
+      "final_en": "Menu Sync",
+      "handling": "term"
+    },
+    {
+      "no": 85,
+      "source_text": "訂單履約",
+      "google_translate_baseline": null,
+      "final_en": "Order Fulfillment",
+      "handling": "term"
+    },
+    {
+      "no": 86,
+      "source_text": "數據彙聚",
+      "google_translate_baseline": null,
+      "final_en": "Data Consolidation",
+      "handling": "term"
+    },
+    {
+      "no": 87,
+      "source_text": "生態接入",
+      "google_translate_baseline": null,
+      "final_en": "Ecosystem Connectivity",
+      "handling": "term"
+    },
+    {
+      "no": 88,
+      "source_text": "了解更多 →",
+      "google_translate_baseline": null,
+      "final_en": "Learn More →",
+      "handling": "cta"
+    },
+    {
+      "no": 89,
+      "source_text": "解決方案",
+      "google_translate_baseline": null,
+      "final_en": "Solutions",
+      "handling": "nav"
+    },
+    {
+      "no": 90,
+      "source_text": "平台",
+      "google_translate_baseline": null,
+      "final_en": "Platform",
+      "handling": "nav"
+    },
+    {
+      "no": 91,
+      "source_text": "整合能力",
+      "google_translate_baseline": null,
+      "final_en": "Integrations",
+      "handling": "nav"
+    },
+    {
+      "no": 92,
+      "source_text": "客戶案例",
+      "google_translate_baseline": null,
+      "final_en": "Customers",
+      "handling": "nav"
+    },
+    {
+      "no": 93,
+      "source_text": "资源",
+      "google_translate_baseline": null,
+      "final_en": "Resources",
+      "handling": "nav"
+    },
+    {
+      "no": 94,
+      "source_text": "關於餐道",
+      "google_translate_baseline": null,
+      "final_en": "About Candao",
+      "handling": "nav"
+    },
+    {
+      "no": 95,
+      "source_text": "繁中 / EN",
+      "google_translate_baseline": null,
+      "final_en": "繁中 / EN",
+      "handling": "language_switcher_preserved"
+    },
+    {
+      "no": 96,
+      "source_text": "從相似客戶案例看落地方式",
+      "google_translate_baseline": null,
+      "final_en": "See How Similar Customers Put It Into Practice",
+      "handling": "adapted"
+    },
+    {
+      "no": 97,
+      "source_text": "以實名客戶案例和業態案例呈現訂單整合、配送履約、會員營運、數據分析與對應改善。",
+      "google_translate_baseline": null,
+      "final_en": "See how real customers connect order integration, delivery fulfillment, membership operations, and analytics.",
+      "handling": "adapted"
+    },
+    {
+      "no": 98,
+      "source_text": "查看客戶案例",
+      "google_translate_baseline": null,
+      "final_en": "Customer Stories",
+      "handling": "cta"
+    },
+    {
+      "no": 99,
+      "source_text": "Pizza\nBox",
+      "google_translate_baseline": null,
+      "final_en": "Pizza\nBox",
+      "handling": "preserved"
+    },
+    {
+      "no": 100,
+      "source_text": "Pizza-Box",
+      "google_translate_baseline": null,
+      "final_en": "Pizza-Box",
+      "handling": "preserved"
+    },
+    {
+      "no": 101,
+      "source_text": "合作超過 9 年",
+      "google_translate_baseline": null,
+      "final_en": "Long-term partner",
+      "handling": "unconfirmed_source_metric_replaced_with_qualitative_label"
+    },
+    {
+      "no": 102,
+      "source_text": "意式餐厅",
+      "google_translate_baseline": null,
+      "final_en": "Italian Dining",
+      "handling": "adapted"
+    },
+    {
+      "no": 103,
+      "source_text": "多品牌",
+      "google_translate_baseline": null,
+      "final_en": "Multi-Brand",
+      "handling": "tag"
+    },
+    {
+      "no": 104,
+      "source_text": "全链路",
+      "google_translate_baseline": null,
+      "final_en": "End-to-End",
+      "handling": "tag"
+    },
+    {
+      "no": 105,
+      "source_text": "覆蓋 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、BI 分析與客戶服務。",
+      "google_translate_baseline": null,
+      "final_en": "Covers OMS, app/web ordering, third-party and owned delivery, marketing, BI, and customer service.",
+      "handling": "adapted"
+    },
+    {
+      "no": 106,
+      "source_text": "閱讀案例 →",
+      "google_translate_baseline": null,
+      "final_en": "Read Story →",
+      "handling": "cta"
+    },
+    {
+      "no": 107,
+      "source_text": "JIA\nGroup",
+      "google_translate_baseline": null,
+      "final_en": "JIA\nGroup",
+      "handling": "preserved"
+    },
+    {
+      "no": 108,
+      "source_text": "JIA Group",
+      "google_translate_baseline": null,
+      "final_en": "JIA Group",
+      "handling": "preserved"
+    },
+    {
+      "no": 109,
+      "source_text": "多品牌餐飲集團",
+      "google_translate_baseline": null,
+      "final_en": "Multi-brand F&B Group",
+      "handling": "tag"
+    },
+    {
+      "no": 110,
+      "source_text": "多門店",
+      "google_translate_baseline": null,
+      "final_en": "Multi-Site",
+      "handling": "tag"
+    },
+    {
+      "no": 111,
+      "source_text": "會員管理",
+      "google_translate_baseline": null,
+      "final_en": "Membership",
+      "handling": "tag"
+    },
+    {
+      "no": 112,
+      "source_text": "數據分析",
+      "google_translate_baseline": null,
+      "final_en": "Analytics",
+      "handling": "tag"
+    },
+    {
+      "no": 113,
+      "source_text": "覆蓋多品牌與多門店營運場景，整合點餐、會員、配送與數據，提升整體營運效率。\n",
+      "google_translate_baseline": null,
+      "final_en": "Connects ordering, membership, delivery, and data across multi-brand, multi-site operations.\n",
+      "handling": "adapted"
+    },
+    {
+      "no": 114,
+      "source_text": "Jardine\nGroup",
+      "google_translate_baseline": null,
+      "final_en": "Jardine\nGroup",
+      "handling": "preserved"
+    },
+    {
+      "no": 115,
+      "source_text": "Jardine Group",
+      "google_translate_baseline": null,
+      "final_en": "Jardine Group",
+      "handling": "preserved"
+    },
+    {
+      "no": 116,
+      "source_text": "配送管理",
+      "google_translate_baseline": null,
+      "final_en": "Delivery Management",
+      "handling": "term"
+    },
+    {
+      "no": 117,
+      "source_text": "配送履约、门店订单和第三方平台状态能回到同一套监控与管理流程。\n",
+      "google_translate_baseline": null,
+      "final_en": "Brings delivery fulfillment, store orders, and third-party status into one monitoring flow.\n",
+      "handling": "adapted"
+    },
+    {
+      "no": 118,
+      "source_text": "支持餐飲品牌跨渠道、跨門店、跨市場營運",
+      "google_translate_baseline": null,
+      "final_en": "Supporting F&B Brands Across Channels, Stores, and Markets",
+      "handling": "adapted"
+    },
+    {
+      "no": 119,
+      "source_text": "5000+",
+      "google_translate_baseline": null,
+      "final_en": "5000+",
+      "handling": "approved_metric_preserved"
+    },
+    {
+      "no": 120,
+      "source_text": "合作品牌数量",
+      "google_translate_baseline": null,
+      "final_en": "Partner Brands",
+      "handling": "approved_metric_label"
+    },
+    {
+      "no": 121,
+      "source_text": "500M+",
+      "google_translate_baseline": null,
+      "final_en": "500M+",
+      "handling": "approved_metric_preserved"
+    },
+    {
+      "no": 122,
+      "source_text": "日处理订单数",
+      "google_translate_baseline": null,
+      "final_en": "Daily Orders Processed",
+      "handling": "approved_metric_label"
+    },
+    {
+      "no": 123,
+      "source_text": "400+",
+      "google_translate_baseline": null,
+      "final_en": "400+",
+      "handling": "approved_metric_preserved"
+    },
+    {
+      "no": 124,
+      "source_text": "覆盖城市数",
+      "google_translate_baseline": null,
+      "final_en": "Cities Covered",
+      "handling": "approved_metric_label"
+    },
+    {
+      "no": 125,
+      "source_text": "200K+",
+      "google_translate_baseline": null,
+      "final_en": "200K+",
+      "handling": "approved_metric_preserved"
+    },
+    {
+      "no": 126,
+      "source_text": "门店数量",
+      "google_translate_baseline": null,
+      "final_en": "Stores Covered",
+      "handling": "approved_metric_label"
+    },
+    {
+      "no": 127,
+      "source_text": "4.5B+",
+      "google_translate_baseline": null,
+      "final_en": "4.5B+",
+      "handling": "approved_metric_preserved"
+    },
+    {
+      "no": 128,
+      "source_text": "月度交付订单GMV",
+      "google_translate_baseline": null,
+      "final_en": "Monthly GMV from Delivered Orders",
+      "handling": "approved_metric_label"
+    },
+    {
+      "no": 129,
+      "source_text": "準備好讓營運流程更清晰嗎？",
+      "google_translate_baseline": null,
+      "final_en": "Ready to make operations clearer?",
+      "handling": "cta"
+    },
+    {
+      "no": 130,
+      "source_text": "告訴我們你的門店規模、渠道組合與營運挑戰，\n餐道團隊將為你安排合適的產品演示。",
+      "google_translate_baseline": null,
+      "final_en": "Tell us your store scale, channel mix, and operating challenges. The Candao team will arrange the right product demo for your scenario.",
+      "handling": "adapted"
+    },
+    {
+      "no": 131,
+      "source_text": "移動點餐",
+      "google_translate_baseline": null,
+      "final_en": "Mobile Ordering",
+      "handling": "footer"
+    },
+    {
+      "no": 132,
+      "source_text": "自助點餐機訂購",
+      "google_translate_baseline": null,
+      "final_en": "Self-Ordering Kiosk",
+      "handling": "footer"
+    },
+    {
+      "no": 133,
+      "source_text": "配送管理與騎手應用",
+      "google_translate_baseline": null,
+      "final_en": "Delivery & Rider App",
+      "handling": "footer"
+    },
+    {
+      "no": 134,
+      "source_text": "聚合物流管理",
+      "google_translate_baseline": null,
+      "final_en": "Aggregated Logistics",
+      "handling": "footer"
+    },
+    {
+      "no": 135,
+      "source_text": "配送平台",
+      "google_translate_baseline": null,
+      "final_en": "Delivery Platform",
+      "handling": "footer"
+    },
+    {
+      "no": 136,
+      "source_text": "銷售點系統",
+      "google_translate_baseline": null,
+      "final_en": "POS System",
+      "handling": "footer"
+    },
+    {
+      "no": 137,
+      "source_text": "客戶關係管理",
+      "google_translate_baseline": null,
+      "final_en": "CRM",
+      "handling": "footer"
+    },
+    {
+      "no": 138,
+      "source_text": "第三方物流",
+      "google_translate_baseline": null,
+      "final_en": "Third-Party Logistics",
+      "handling": "footer"
+    },
+    {
+      "no": 139,
+      "source_text": "支付網關",
+      "google_translate_baseline": null,
+      "final_en": "Payment Gateway",
+      "handling": "footer"
+    },
+    {
+      "no": 140,
+      "source_text": "資源",
+      "google_translate_baseline": null,
+      "final_en": "Resources",
+      "handling": "footer"
+    },
+    {
+      "no": 141,
+      "source_text": "支持",
+      "google_translate_baseline": null,
+      "final_en": "Support",
+      "handling": "footer"
+    },
+    {
+      "no": 142,
+      "source_text": "常見問題解答",
+      "google_translate_baseline": null,
+      "final_en": "FAQs",
+      "handling": "footer"
+    },
+    {
+      "no": 143,
+      "source_text": "新聞稿",
+      "google_translate_baseline": null,
+      "final_en": "Press Releases",
+      "handling": "footer"
+    },
+    {
+      "no": 144,
+      "source_text": "展示案例",
+      "google_translate_baseline": null,
+      "final_en": "Case Studies",
+      "handling": "footer"
+    },
+    {
+      "no": 145,
+      "source_text": "了解更多",
+      "google_translate_baseline": null,
+      "final_en": "Learn More",
+      "handling": "footer"
+    },
+    {
+      "no": 146,
+      "source_text": "關於我們",
+      "google_translate_baseline": null,
+      "final_en": "About Us",
+      "handling": "footer"
+    },
+    {
+      "no": 147,
+      "source_text": "里程碑",
+      "google_translate_baseline": null,
+      "final_en": "Milestones",
+      "handling": "footer"
+    },
+    {
+      "no": 148,
+      "source_text": "職業發展",
+      "google_translate_baseline": null,
+      "final_en": "Careers",
+      "handling": "footer"
+    },
+    {
+      "no": 149,
+      "source_text": "© copyright Candao International 2026",
+      "google_translate_baseline": null,
+      "final_en": "© copyright Candao International 2026",
+      "handling": "preserved"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "task": "T51",
+  "date": "2026-08-27",
+  "action": "stitch_edit_screens_second_pass",
+  "source_screen_id": "6159caff0a1c43c8ba7f3b504d26fe73",
+  "project_id": "10888304674441209287",
+  "device": "DESKTOP",
+  "model": "GEMINI_3_PRO",
+  "session_id": "13971866751685659541",
+  "edited_screen": {
+    "id": "f8b664b70bdc4d55a2674dfed40a2b2c",
+    "name": "projects/10888304674441209287/screens/f8b664b70bdc4d55a2674dfed40a2b2c",
+    "title": "接入評估中心 - 餐道 / Desktop TC / C v4 Production Final QA",
+    "width": 2560,
+    "height": 6862,
+    "html_download_url": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc4NDk1NGE5YjAzZjRkNjNiOTEyN2YxYjljN2ZhMzdlEgsSBxD0lM_B9g8YAZIBJAoKcHJvamVjdF9pZBIWQhQxMDg4ODMwNDY3NDQ0MTIwOTI4Nw&filename=&opi=96797242",
+    "screenshot_download_url": "https://lh3.googleusercontent.com/aida/AEtjO1WIvUrn3Kv8uG5zkNZqx5N5JOp1jOPNbEin-CI9Xv4CguWv_ikbA9g9cbgG7Vz2x5f2jEfmAIPZxz13SVUKPFuflw_I232vkJMqIiklvRYAPvgfSMDF5Xg-yq0BAzknd2ZHGSxsza-RMCzq1zsJ2TI5zsiCm-rQ62vgvnSpCdYUaH02_DT6E5Miw9QPSDFCG7oa_8saxAO_EVnwxAMV0o-egCsLiacFyCLf6jAHYaB2TNLKq0xzDBnH12i2"
+  },
+  "stitch_output_summary": [
+    "Stitch reported that it removed visible English brand/footer copy and unsupported 0.01% claims.",
+    "Stitch reported that it added missing scenario buttons, signal cards, summary panels, case/resource/support/demo routing, service-scale body copy and demo summary fields.",
+    "The edited screen still requires local static and rendered QA verification."
+  ],
+  "stitch_suggestions": [
+    "更新總覽索引頁以包含此最終版",
+    "為整合能力頁面進行同樣的 QA 修正",
+    "生成此頁面的移動端版本"
+  ],
+  "acceptance_status": "pending_reqa"
+}

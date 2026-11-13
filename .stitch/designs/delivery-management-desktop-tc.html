@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Candao - 配送管理</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#528dff',
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#528dff',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        },
+                        neutral: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        semantic: {
+                            success: '#0d9488',
+                            warning: '#d97706',
+                            danger: '#e11d48',
+                        }
+                    },
+                    fontFamily: {
+                        headline: ["Public Sans", "sans-serif"],
+                        display: ["Public Sans", "sans-serif"],
+                        body: ["Public Sans", "sans-serif"],
+                        label: ["Public Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "md": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="font-body text-neutral-800 bg-neutral-50 antialiased selection:bg-primary-100 selection:text-primary-700">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-800 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-black text-[#528dff] tracking-tight font-display" href="#">Candao</a>
+<div class="hidden md:flex space-x-8 items-center font-body text-label-md">
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">解決方案</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">平台</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">訂單管理</a>
+<a class="text-[#528dff] font-bold border-b-2 border-[#528dff] pb-1" href="#">配送管理</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">系統整合</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">客戶案例</a>
+<a class="text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">關於我們</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-neutral-600 hover:text-primary transition-colors text-sm font-medium">繁中 / EN</button>
+<button class="bg-primary hover:bg-primary-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm hover:shadow">預約演示</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center opacity-40" data-alt="A high-end restaurant scene during peak hours, showing seamless delivery handoff at the front counter. Operational clarity, clean lighting, B2B SaaS context, modern interior, deep blue and neutral tones, highly professional." src="https://lh3.googleusercontent.com/aida/AP1WRLuszgxoZ7V_lDG1_otfk1Ye-fkaFsAKFZNMTYbEGwlcDAFhH03GcksJ9UN3AsAvV_SiowrEA5tdieEFCWJHf6aep53oCvB2dntc3LuClB_zoHikxpuO5vW6VKMuzXA5eExlSacLzgxFFh4C-FbVZWyybhr3XInc_V9_0LzOCb9dDXnSe1W6k3Us_wdlwJ5MFxf2h6FDksaiiijBv2TPZ04uCh8U72bbWuIxJuDuYMOOKk9IRzi0Z5fpEs-t"/>
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 max-w-2xl">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary-50 text-primary-600 text-sm font-semibold mb-6 border border-primary-100">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span>配送管理</span>
+</div>
+<h1 class="text-4xl lg:text-5xl/tight font-extrabold text-neutral-900 tracking-tight font-headline mb-6">
+                    讓配送高峰不再只靠<br/>
+<span class="text-primary">人工臨場協調</span>
+</h1>
+<p class="text-lg text-neutral-600 mb-8 leading-relaxed">
+                    Candao 協助餐飲品牌在同一流程中協調自有配送與外部運力，追蹤履約狀態，並更快處理高峰期和異常情況。
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold transition-all shadow-sm hover:shadow-md flex items-center justify-center space-x-2">
+<span>了解配送管理</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="bg-white hover:bg-neutral-50 text-neutral-700 border border-neutral-200 px-6 py-3 rounded-lg font-semibold transition-all shadow-sm flex items-center justify-center">
+                        預約產品演示
+                    </button>
+</div>
+</div>
+<!-- UI Mockup overlay -->
+<div class="lg:w-1/2 w-full">
+<div class="glass-panel rounded-xl overflow-hidden shadow-2xl border border-white/50 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+<!-- Fake UI Header -->
+<div class="bg-white/80 border-b border-neutral-200/50 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded bg-primary-100 flex items-center justify-center text-primary-600">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</div>
+<div>
+<div class="text-sm font-bold text-neutral-800">信義旗艦店</div>
+<div class="text-xs text-semantic-success flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-semantic-success mr-1"></span> 運力正常</div>
+</div>
+</div>
+<div class="flex space-x-2">
+<span class="px-2 py-1 bg-neutral-100 rounded text-xs font-medium text-neutral-600">待派單 12</span>
+<span class="px-2 py-1 bg-semantic-warning/10 text-semantic-warning rounded text-xs font-medium">配送中 28</span>
+</div>
+</div>
+<!-- Fake UI Body -->
+<div class="p-4 bg-white/60 space-y-3">
+<!-- Order Item -->
+<div class="bg-white rounded-lg p-3 shadow-sm border border-neutral-100 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded bg-neutral-50 flex flex-col items-center justify-center border border-neutral-100">
+<span class="text-[10px] text-neutral-400 font-bold">#</span>
+<span class="text-sm font-black text-neutral-700">104</span>
+</div>
+<div>
+<div class="text-sm font-bold text-neutral-800">外送訂單 - NT$ 850</div>
+<div class="text-xs text-neutral-500">預計取餐: 12:45 (餘 5 分鐘)</div>
+</div>
+</div>
+<button class="px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded hover:bg-primary-600">指派運力</button>
+</div>
+<!-- Order Item -->
+<div class="bg-white rounded-lg p-3 shadow-sm border border-neutral-100 flex items-center justify-between opacity-80">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded bg-neutral-50 flex flex-col items-center justify-center border border-neutral-100">
+<span class="text-[10px] text-neutral-400 font-bold">#</span>
+<span class="text-sm font-black text-neutral-700">103</span>
+</div>
+<div>
+<div class="text-sm font-bold text-neutral-800">外送訂單 - NT$ 420</div>
+<div class="text-xs text-semantic-success flex items-center space-x-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>自有運力配送中</span>
+</div>
+</div>
+</div>
+<span class="text-xs font-medium text-neutral-400">詳情</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-neutral-50 dark:bg-neutral-950 w-full py-12 border-t border-neutral-200 dark:border-neutral-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<!-- Brand -->
+<div class="col-span-1">
+<a class="text-xl font-black text-[#528dff] font-display block mb-4" href="#">Candao</a>
+<p class="font-body text-label-sm text-neutral-500 dark:text-neutral-400">© 2024 Candao International. All Rights Reserved.</p>
+</div>
+<!-- Links 1 -->
+<div class="col-span-1 flex flex-col space-y-3 font-body text-label-sm">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#528dff] transition-colors opacity-80 hover:opacity-100" href="#">解決方案</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#528dff] transition-colors opacity-80 hover:opacity-100" href="#">平台</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#528dff] transition-colors opacity-80 hover:opacity-100" href="#">系統整合</a>
+</div>
+<!-- Links 2 -->
+<div class="col-span-1 flex flex-col space-y-3 font-body text-label-sm">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#528dff] transition-colors opacity-80 hover:opacity-100" href="#">訂單管理</a>
+<a class="text-[#528dff] opacity-80 hover:opacity-100" href="#">配送管理</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#528dff] transition-colors opacity-80 hover:opacity-100" href="#">客戶案例</a>
+</div>
+<!-- Links 3 -->
+<div class="col-span-1 flex flex-col space-y-3 font-body text-label-sm">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#528dff] transition-colors opacity-80 hover:opacity-100" href="#">關於我們</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#528dff] transition-colors opacity-80 hover:opacity-100" href="#">隱私政策</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#528dff] transition-colors opacity-80 hover:opacity-100" href="#">服務條款</a>
+</div>
+</div>
+</footer>
+</body></html>

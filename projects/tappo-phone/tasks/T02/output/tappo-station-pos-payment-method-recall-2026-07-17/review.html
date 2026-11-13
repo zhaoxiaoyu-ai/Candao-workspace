@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tappo Station 支付方式回显评审</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #171923;
+      --muted: #667085;
+      --border: #e4e7ec;
+      --brand: #ff8a3d;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans SC", "Noto Sans HK", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 18px;
+    }
+    p {
+      margin: 0 0 12px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    a {
+      color: var(--brand);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .pill {
+      border: 1px solid rgba(255, 138, 61, 0.28);
+      background: rgba(255, 138, 61, 0.08);
+      color: #a24612;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tappo Station 支付方式回显评审</h1>
+    <p>正确目标为 <strong>Tappo Station / anMsqgZYi8ZqmJXZah78KI / UI</strong>。旧 nHam 文件误放内容已撤回。</p>
+    <p>
+      <a href="https://www.figma.com/design/anMsqgZYi8ZqmJXZah78KI?node-id=121-21195">打开主支付画面</a>
+      ·
+      <a href="https://www.figma.com/design/anMsqgZYi8ZqmJXZah78KI?node-id=121-22298">打开提示态画面</a>
+    </p>
+
+    <div class="meta">
+      <span class="pill">新增其他支付方式分组</span>
+      <span class="pill">绑定 POS Design Tokens</span>
+      <span class="pill">说明收纳到 icon</span>
+      <span class="pill">Logo 只保留图形符号</span>
+      <span class="pill">同步主态与提示态</span>
+    </div>
+
+    <section class="grid">
+      <article class="card">
+        <h2>变更范围</h2>
+        <ul>
+          <li>保留 Cash / Kpay / Stripe / Adyen / Bbmsl / QFpay / mPay。</li>
+          <li>在 mPay 下方新增分隔、标题、说明图标与 4 个其他支付方式。</li>
+          <li>同步 `點餐-堂食/付款` 与 `點餐-堂食/付款/提示`。</li>
+          <li>不移动订单栏、数字键盘、收款按钮或已有支付方式。</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>通过标准</h2>
+        <ul>
+          <li>其他支付方式与原配置支付方式有明显间隔。</li>
+          <li>说明文案收纳在说明图标中，画面不展开长段说明。</li>
+          <li>新增文字与行背景绑定本地 POS tokens。</li>
+          <li>Logo 不使用临时字母占位，也不显示文字版 wordmark。</li>
+          <li>Octopus / PayMe 采用完整 PNG 图形资产；当前未找到官方 SVG，不使用截不全的截图片段。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>主支付画面 - 变更前</h2>
+        <img src="station-payment-before-0.5x.png" alt="Station payment before">
+      </article>
+      <article class="card">
+        <h2>主支付画面 - 最终</h2>
+        <img src="station-payment-after-complete-icon-main-2026-07-17.png" alt="Station payment final with complete icon-only logos">
+      </article>
+      <article class="card">
+        <h2>提示态 - 最终</h2>
+        <img src="station-payment-after-complete-icon-prompt-2026-07-17.png" alt="Station payment prompt final with complete icon-only logos">
+      </article>
+      <article class="card">
+        <h2>付款列表局部核对</h2>
+        <img src="station-payment-after-complete-icon-main-crop-payment-list-2026-07-17.png" alt="Payment list crop showing complete Octopus and PayMe icons">
+      </article>
+    </section>
+  </main>
+</body>
+</html>

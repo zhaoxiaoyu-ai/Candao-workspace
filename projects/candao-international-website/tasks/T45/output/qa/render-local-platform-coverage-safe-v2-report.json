@@ -1,0 +1,16 @@
+{
+  "page": "platform",
+  "status": "pass",
+  "screenshot": "projects/candao-international-website/tasks/T45/output/screenshots/local-platform-coverage-safe-v2-1440-full.png",
+  "metrics": {
+    "viewportWidth": 1440,
+    "viewportHeight": 1200,
+    "scrollHeight": 3791,
+    "pageWidth": 1440,
+    "textLength": 1753,
+    "overflowingCount": 0,
+    "overflowing": [],
+    "h1": "平台能力",
+    "bodyClass": ""
+  }
+}

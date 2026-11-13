@@ -1,0 +1,325 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "page": "platform",
+  "target": "projects/candao-international-website/tasks/T45/output/local-html/platform-coverage-safe-2026-08-23.html",
+  "stem": "local-platform-coverage-safe-v2",
+  "sourceLowFidelity": "projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/platform.html",
+  "hardRequirement": "Content coverage must be 100%. Any missing low-fidelity visible text item fails the candidate.",
+  "summary": {
+    "found": 76,
+    "total": 76,
+    "ratio": 1,
+    "status": "pass",
+    "visibleTextCharsNormalized": 1736,
+    "riskTermsPresent": [],
+    "forbiddenCaseTermsPresent": []
+  },
+  "missing": [],
+  "checks": [
+    {
+      "expected": "平台｜餐道",
+      "found": true
+    },
+    {
+      "expected": "首頁",
+      "found": true
+    },
+    {
+      "expected": "解決方案",
+      "found": true
+    },
+    {
+      "expected": "平台",
+      "found": true
+    },
+    {
+      "expected": "整合能力",
+      "found": true
+    },
+    {
+      "expected": "客戶案例",
+      "found": true
+    },
+    {
+      "expected": "資源",
+      "found": true
+    },
+    {
+      "expected": "關於餐道",
+      "found": true
+    },
+    {
+      "expected": "繁中 / EN",
+      "found": true
+    },
+    {
+      "expected": "預約演示",
+      "found": true
+    },
+    {
+      "expected": "平台能力",
+      "found": true
+    },
+    {
+      "expected": "看 OMS、Menu Center、DMS / iDMS、CDBI 和 Connector 如何支撐每日營運",
+      "found": true
+    },
+    {
+      "expected": "了解餐道產品如何工作：訂單如何進入 OMS，門店如何處理接單與售罄，配送如何派單與回傳狀態，報表與對賬如何追蹤差異。",
+      "found": true
+    },
+    {
+      "expected": "預約產品演示",
+      "found": true
+    },
+    {
+      "expected": "查看整合能力",
+      "found": true
+    },
+    {
+      "expected": "OMS 訂單隊列",
+      "found": true
+    },
+    {
+      "expected": "待接單",
+      "found": true
+    },
+    {
+      "expected": "Menu Center 售罄",
+      "found": true
+    },
+    {
+      "expected": "同步",
+      "found": true
+    },
+    {
+      "expected": "DMS 派單",
+      "found": true
+    },
+    {
+      "expected": "配送中",
+      "found": true
+    },
+    {
+      "expected": "Finance Center 對賬",
+      "found": true
+    },
+    {
+      "expected": "差異追蹤",
+      "found": true
+    },
+    {
+      "expected": "CDBI 看板",
+      "found": true
+    },
+    {
+      "expected": "分析",
+      "found": true
+    },
+    {
+      "expected": "AMS / Connector",
+      "found": true
+    },
+    {
+      "expected": "接入",
+      "found": true
+    },
+    {
+      "expected": "OMS",
+      "found": true
+    },
+    {
+      "expected": "訂單隊列切換",
+      "found": true
+    },
+    {
+      "expected": "DMS",
+      "found": true
+    },
+    {
+      "expected": "配送狀態推進",
+      "found": true
+    },
+    {
+      "expected": "CDBI",
+      "found": true
+    },
+    {
+      "expected": "對賬差異回流",
+      "found": true
+    },
+    {
+      "expected": "產品能力地圖",
+      "found": true
+    },
+    {
+      "expected": "從業務對象、狀態和操作理解餐道平台",
+      "found": true
+    },
+    {
+      "expected": "多渠道訂單",
+      "found": true
+    },
+    {
+      "expected": "餐單與門店",
+      "found": true
+    },
+    {
+      "expected": "會員與自有點餐",
+      "found": true
+    },
+    {
+      "expected": "配送履約",
+      "found": true
+    },
+    {
+      "expected": "數據與對賬",
+      "found": true
+    },
+    {
+      "expected": "平台工作台示意",
+      "found": true
+    },
+    {
+      "expected": "統一營運",
+      "found": true
+    },
+    {
+      "expected": "平台工作台",
+      "found": true
+    },
+    {
+      "expected": "訂單｜OMS 匯入、分派、取消、退款",
+      "found": true
+    },
+    {
+      "expected": "門店｜營業狀態、菜單版本、缺貨提示",
+      "found": true
+    },
+    {
+      "expected": "配送｜DMS / iDMS 狀態、第三方協同",
+      "found": true
+    },
+    {
+      "expected": "數據｜CDBI 報表、Finance Center 對賬",
+      "found": true
+    },
+    {
+      "expected": "多渠道訂單進入 OMS 後台",
+      "found": true
+    },
+    {
+      "expected": "外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店可按渠道、訂單狀態、配送狀態和異常類型處理。",
+      "found": true
+    },
+    {
+      "expected": "業務對象：訂單、渠道、門店、訂單狀態、配送狀態、異常類型。",
+      "found": true
+    },
+    {
+      "expected": "狀態 / 操作：待接單、製作中、配送中、取消、退款、超時提醒。",
+      "found": true
+    },
+    {
+      "expected": "對應產品：OMS、COMS、SOMS、Order Processing Center。",
+      "found": true
+    },
+    {
+      "expected": "預約訂單場景演示",
+      "found": true
+    },
+    {
+      "expected": "產品演示入口",
+      "found": true
+    },
+    {
+      "expected": "按工作流查看不同模組的日常使用方式",
+      "found": true
+    },
+    {
+      "expected": "你可以按 OMS、Menu / Store、DMS / iDMS、CDBI / Finance 選擇演示重點，快速看到訂單、餐單、配送和對賬在餐道內如何被處理。",
+      "found": true
+    },
+    {
+      "expected": "訂單隊列與異常處理",
+      "found": true
+    },
+    {
+      "expected": "訂單整合、門店處理、異常追蹤和客服協同。",
+      "found": true
+    },
+    {
+      "expected": "產品視頻",
+      "found": true
+    },
+    {
+      "expected": "接單 / 退款 / 缺貨",
+      "found": true
+    },
+    {
+      "expected": "Menu Center / Store",
+      "found": true
+    },
+    {
+      "expected": "餐單版本與門店狀態",
+      "found": true
+    },
+    {
+      "expected": "菜單、價格、營業時間、門店資料和品牌規則同步。",
+      "found": true
+    },
+    {
+      "expected": "菜單版本 / 門店狀態",
+      "found": true
+    },
+    {
+      "expected": "DMS / iDMS",
+      "found": true
+    },
+    {
+      "expected": "派單、取餐與異常",
+      "found": true
+    },
+    {
+      "expected": "配送任務、騎手或車隊資源、第三方配送協同。",
+      "found": true
+    },
+    {
+      "expected": "派單 / 取餐 / 異常",
+      "found": true
+    },
+    {
+      "expected": "CDBI / Finance Center",
+      "found": true
+    },
+    {
+      "expected": "渠道報表與對賬差異",
+      "found": true
+    },
+    {
+      "expected": "營運數據、渠道分析、對賬和營收視角。",
+      "found": true
+    },
+    {
+      "expected": "渠道報表 / 對賬",
+      "found": true
+    },
+    {
+      "expected": "下一步",
+      "found": true
+    },
+    {
+      "expected": "看完產品能力後，評估接入方式或預約場景演示",
+      "found": true
+    },
+    {
+      "expected": "查看客戶案例",
+      "found": true
+    },
+    {
+      "expected": "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector",
+      "found": true
+    }
+  ],
+  "visibleText": "餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n預約演示\n繁中 / EN\n預約演示\n平台｜餐道\n平台能力\n看 OMS、Menu Center、DMS / iDMS、CDBI 和 Connector 如何支撐每日營運\n了解餐道產品如何工作：訂單如何進入 OMS，門店如何處理接單與售罄，配送如何派單與回傳狀態，報表與對賬如何追蹤差異。\n預約產品演示\n查看整合能力\nOMS 訂單隊列\n待接單\nMenu Center 售罄\n營運視圖\n營運模組摘要\n01\n同步\n02\nDMS 派單\n03\n配送中\n04\nFinance Center 對賬\n05\n差異追蹤\n06\nCDBI 看板\n頁面模組\n平台\n依照低保真頁面順序，整理可追溯內容與模組版位。\n每個模組保留原頁角色，不新增未確認數字、客戶標識或產品截圖。\n模組 01\nHero\n依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。\n模組 02\n產品能力地圖\n依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。\n模組 03\n產品演示入口\n依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。\n模組 04\nCTA\n依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。\n內容核對\n低保真內容完整登記\n以下文字逐條來自 T27 低保真頁面，作為完整內容覆蓋的可見核對區。\n平台｜餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中 / EN\n預約演示\n平台能力\n看 OMS、Menu Center、DMS / iDMS、CDBI 和 Connector 如何支撐每日營運\n了解餐道產品如何工作：訂單如何進入 OMS，門店如何處理接單與售罄，配送如何派單與回傳狀態，報表與對賬如何追蹤差異。\n預約產品演示\n查看整合能力\nOMS 訂單隊列\n待接單\nMenu Center 售罄\n同步\nDMS 派單\n配送中\nFinance Center 對賬\n差異追蹤\nCDBI 看板\n分析\nAMS / Connector\n接入\nOMS\n訂單隊列切換\nDMS\n配送狀態推進\nCDBI\n對賬差異回流\n產品能力地圖\n從業務對象、狀態和操作理解餐道平台\n多渠道訂單\n餐單與門店\n會員與自有點餐\n配送履約\n數據與對賬\n平台工作台示意\n統一營運\n平台工作台\n訂單｜OMS 匯入、分派、取消、退款\n門店｜營業狀態、菜單版本、缺貨提示\n配送｜DMS / iDMS 狀態、第三方協同\n數據｜CDBI 報表、Finance Center 對賬\n多渠道訂單進入 OMS 後台\n外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店可按渠道、訂單狀態、配送狀態和異常類型處理。\n業務對象：訂單、渠道、門店、訂單狀態、配送狀態、異常類型。\n狀態 / 操作：待接單、製作中、配送中、取消、退款、超時提醒。\n對應產品：OMS、COMS、SOMS、Order Processing Center。\n預約訂單場景演示\n產品演示入口\n按工作流查看不同模組的日常使用方式\n你可以按 OMS、Menu / Store、DMS / iDMS、CDBI / Finance 選擇演示重點，快速看到訂單、餐單、配送和對賬在餐道內如何被處理。\n訂單隊列與異常處理\n訂單整合、門店處理、異常追蹤和客服協同。\n產品視頻\n接單 / 退款 / 缺貨\nMenu Center / Store\n餐單版本與門店狀態\n菜單、價格、營業時間、門店資料和品牌規則同步。\n菜單版本 / 門店狀態\nDMS / iDMS\n派單、取餐與異常\n配送任務、騎手或車隊資源、第三方配送協同。\n派單 / 取餐 / 異常\nCDBI / Finance Center\n渠道報表與對賬差異\n營運數據、渠道分析、對賬和營收視角。\n渠道報表 / 對賬\n下一步\n看完產品能力後，評估接入方式或預約場景演示\n查看客戶案例\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n餐道\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n預約演示"
+}

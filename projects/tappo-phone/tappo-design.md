@@ -1,17 +1,20 @@
-# Tappo Cross-Platform Design Contract
+# TAPPO Product Naming And Design Contract
 
-Version: 1.3.0
-Last updated: 2026-06-08
+Version: 1.3.1
+Last updated: 2026-07-17
 
 ## Purpose
 
-This file is the project-facing design contract for Tappo work. Tappo includes multiple product surfaces, so rules must be separated by endpoint:
+This file is the project-facing design contract for TAPPO-related work. Names must follow the corresponding Figma project/file names:
 
-- `App`: Tappo Phone mobile app / Flutter WebView.
-- `Pad`: Tappo Pad POS and larger operational screens.
-- `Web`: browser-based admin, MOS, or external web surfaces.
+- `Tappo Station`: corresponding to Tappo App, Tappo Pad, and TAPPO POS work.
+- `Tappo Pulse`: corresponding to Tappo phone work. Legacy `Tappo Phone` wording maps here.
+- `Tappo MOS`: corresponding to MOS/backend management work.
+- `Tappo微官网`: corresponding to merchant/customer-facing H5 microsite work.
 
-Do not apply Pad rules directly to App screens. Do not treat App screens as scaled-down Pad screens.
+Before doing Figma or source work, identify the product name first and operate under the matching project/file context. Do not mix Station, Pulse, MOS, and 微官网 components or visual rules unless the user explicitly asks for cross-product reuse.
+
+Historical notes may still contain names such as `TAPPO Pulse`, `TAPPO 微官网`, or `Tappo Phone`. Treat them as legacy/context aliases, not as new canonical project names. `Tappo App`, `Tappo Pad`, and `TAPPO POS` are not separate project names; they route to `Tappo Station`.
 
 ## Source Priority
 
@@ -22,17 +25,18 @@ Business content source of truth:
 
 Visual source of truth:
 
-- App latest owner home: `nHamLH3qlZYFXVC0OVxNqc / 138:281`.
-- App latest transaction record: `nHamLH3qlZYFXVC0OVxNqc / 538:3555`.
-- App style anchor: `nHamLH3qlZYFXVC0OVxNqc / 17:38`, used for AI companion, soft operational cards, smart insight treatment, and App Style Kit direction.
-- App style anchor: `nHamLH3qlZYFXVC0OVxNqc / 1:568`, used for asset/AI center treatment, health cards, status chips, and intelligent system surfaces.
-- Pad/settings reference: `anMsqgZYi8ZqmJXZah78KI / 287:32144`, applies to Pad-like settings and POS surfaces, not App home by default.
+- Tappo Station latest owner home: `nHamLH3qlZYFXVC0OVxNqc / 138:281`.
+- Tappo Station latest transaction record: `nHamLH3qlZYFXVC0OVxNqc / 538:3555`.
+- Tappo Station style anchor: `nHamLH3qlZYFXVC0OVxNqc / 17:38`, used for AI companion, soft operational cards, smart insight treatment, and Style Kit direction.
+- Tappo Station style anchor: `nHamLH3qlZYFXVC0OVxNqc / 1:568`, used for asset/AI center treatment, health cards, status chips, and intelligent system surfaces.
+- Tappo Station Pad/settings reference: `anMsqgZYi8ZqmJXZah78KI / 287:32144`, applies to Pad-like settings and POS surfaces, not phone home by default.
+- Tappo MOS source file for current MOS work: `25.1213_MOS_v2`, `1qe8d4ll9wLnxPAsiJAoa9 / 0:1`.
 
-When App and Pad visual rules conflict, App nodes win for Tappo Phone implementation.
+When product visual rules conflict, the matching Figma product/file wins. For example, Tappo MOS work must use Tappo MOS tokens/components, not Station or Pulse screen styling.
 
 ## Output Reviewability
 
-Every Tappo Phone output must be clearly visible, directly openable, and ready for human review.
+Every TAPPO-related output must be clearly visible, directly openable, and ready for human review.
 
 - Provide a concrete review entry: file path, screenshot path, asset review folder, Figma node, local preview URL, or route.
 - State what should be reviewed, what has changed, the pass/fail criteria, and the next action.
@@ -66,9 +70,9 @@ These rules apply to all endpoints:
 - Body text should generally be `14px` or larger.
 - Avoid generic mixed icon styles. Each endpoint should use one coherent icon family.
 
-## App Endpoint
+## Tappo Station
 
-Use this section for Tappo Phone / app-side screens.
+Use this section for Tappo App, Tappo Pad, and TAPPO POS work. These all route to the Tappo Station Figma project/file.
 
 ### App Style-System-First Rule
 
@@ -83,7 +87,7 @@ Do not refine App pages one by one as isolated visual patches. Build the App Sty
 
 The current App keywords are `light / clean / intelligent / operational / trustworthy`.
 
-Tappo orange remains the primary brand and action color. Light-blue reference images can guide atmosphere, airiness, softness, and intelligent visual cues, but Tappo Phone must not become a blue-first product.
+Tappo orange remains the primary brand and action color. Light-blue reference images can guide atmosphere, airiness, softness, and intelligent visual cues, but Tappo Station must not become a blue-first product.
 
 ### App Intelligent Tone Tiers
 
@@ -130,6 +134,8 @@ Avoid:
 - Generic clipart, emoji-like icons, stock illustration faces, fake logos, watermarks, or generated text inside images.
 
 Generated asset rule: if a Tappo logo appears, place the official project logo asset; never generate fake logo text.
+
+Payment logo rule: known payment-method brands in Tappo MOS or Tappo Station must use real sourced logo assets, not hand-drawn approximations or letter placeholders. Keep WeChat Pay, Alipay, Octopus, PayMe, and similar logos on white or transparent-white containers, preserve official aspect ratios, and reuse the same source across MOS setup and Station display. Use a system text-icon fallback only for custom or unknown payment methods.
 
 ### App Style Kit v0.1
 
@@ -199,9 +205,17 @@ Transaction record:
 - Do not shrink labels below `12px`.
 - Do not force long Chinese/HK labels into fixed-width no-wrap text unless the Figma card has proven space.
 
-## Pad Endpoint
+## Tappo Pulse
 
-Use this section for Tappo Pad, POS hardware, larger settings, and operational tablet screens.
+Use this section for Tappo phone work. In this workspace, the legacy `projects/tappo-phone/source` implementation belongs to Tappo Pulse naming.
+
+- Legacy `Tappo Phone` names should be corrected to `Tappo Pulse` in new visible UI and new records.
+- Keep Tappo Pulse independent from Tappo微官网 H5/PWA work unless the user explicitly asks for migration or shared assets.
+- If a task says `Tappo phone`, use Tappo Pulse context and the corresponding Figma project/file.
+
+## Tappo Station Pad/POS Notes
+
+Use this subsection for Tappo Station pad-like POS hardware, larger settings, and operational tablet screens.
 
 Pad can keep more of the previous warm Tappo visual system:
 
@@ -211,24 +225,34 @@ Pad can keep more of the previous warm Tappo visual system:
 - Pad layouts may use wider grids and denser side-by-side information.
 - Settings/POS reference `anMsqgZYi8ZqmJXZah78KI / 287:32144` remains useful for this endpoint.
 
-Pad rules must not be copied into App without checking App Figma nodes.
+Pad/POS rules must not be copied into Tappo Pulse without checking the matching Pulse Figma nodes.
 
-## Web Endpoint
+## Tappo微官网
 
-Web rules are not final yet. Until a Web-specific Figma source exists:
+Use this section for merchant/customer-facing H5 microsite work.
 
-- Treat Web as a separate endpoint, not an expanded App screen.
+- Treat Tappo微官网 as a separate product context, not an expanded Station or Pulse screen.
 - Prefer functional admin density, tables, filters, and predictable navigation.
-- Do not inherit App bottom nav, App card sizes, or App status-bar spacing.
-- Do not inherit Pad warm illustration density unless the Web product explicitly requires it.
+- Do not inherit Station/Pulse bottom nav, card sizes, or status-bar spacing unless the source Figma says so.
+- Do not inherit Pad warm illustration density unless the 微官网 product explicitly requires it.
+
+## Tappo MOS
+
+Use this section for backend MOS work.
+
+- Always operate in the matching Tappo MOS Figma file and reuse its Design Tokens, components, table styles, Switches, modals, inputs, and business components.
+- Do not redraw MOS pages from Station, Pulse, or 微官网 visual style.
+- Current MOS payment settings source file: `25.1213_MOS_v2`, `1qe8d4ll9wLnxPAsiJAoa9 / 0:1`.
 
 ## Implementation Mapping
 
-Current Tappo Phone source root:
+Current Tappo Pulse implementation source root:
 
 ```text
 E:\Projects\Candao-workspace\projects\tappo-phone\source
 ```
+
+`projects/tappo-phone/` is a legacy technical path only. It does not define the product name.
 
 Current App implementation stack:
 

@@ -1,0 +1,118 @@
+version: "2026-08-16"
+asset_status_values: ["ready", "needs-cleanup", "missing", "needs-authorization", "internal-only"]
+assets:
+  - id: candao-logo-svg
+    type: logo
+    content_description: "餐道蓝色品牌 Logo SVG，用于建立品牌识别。"
+    page: Home
+    module: H01
+    file: assets/logo/candao-blue-logo.svg
+    aspect_ratio: "source"
+    status: ready
+    public_usage: "Home Hero 下方 Logo 带、Header、Footer。"
+    sensitive_data: false
+    cleanup_required: false
+    fallback: "使用文字品牌名「餐道」。"
+  - id: product-screenshot-oms
+    type: product_screenshot
+    content_description: "OMS 多渠道订单处理界面截图，应展示订单来源、状态流转、门店承接和下一步处理信息。"
+    page: Platform
+    module: P03
+    related_modules: ["P02", "P04"]
+    file: null
+    aspect_ratio: "16:10 or 4:3"
+    status: missing
+    public_usage: "多渠道订单能力截图舞台。"
+    sensitive_data: true
+    cleanup_required: true
+    fallback: "显示产品截图位，不重绘产品 UI。"
+  - id: product-screenshot-menu-store
+    type: product_screenshot
+    content_description: "餐单与门店管理界面截图，应展示餐单、门店、渠道同步或上下架等真实产品状态。"
+    page: Platform
+    module: P03
+    related_modules: ["P02", "P04"]
+    file: null
+    aspect_ratio: "16:10 or 4:3"
+    status: missing
+    public_usage: "餐单与门店能力截图舞台。"
+    sensitive_data: true
+    cleanup_required: true
+    fallback: "显示产品截图位。"
+  - id: product-screenshot-dms-idms
+    type: product_screenshot
+    content_description: "DMS / iDMS 配送履约界面截图，应展示配送状态、骑手或第三方配送资源、异常处理等真实信息。"
+    page: Platform
+    module: P03
+    related_modules: ["P02", "P04"]
+    file: null
+    aspect_ratio: "16:10 or 4:3"
+    status: missing
+    public_usage: "配送履约能力截图舞台。"
+    sensitive_data: true
+    cleanup_required: true
+    fallback: "显示产品截图位。"
+  - id: product-screenshot-cdbi-finance
+    type: product_screenshot
+    content_description: "CDBI / 財務對賬 数据与对账界面截图，应展示订单、配送、支付或财务口径的汇总与追溯。"
+    page: Platform
+    module: P03
+    related_modules: ["P02", "P04"]
+    file: null
+    aspect_ratio: "16:10 or 4:3"
+    status: missing
+    public_usage: "数据与对账能力截图舞台。"
+    sensitive_data: true
+    cleanup_required: true
+    fallback: "显示产品截图位。"
+  - id: product-videos
+    type: video
+    content_description: "旧官网产品视频入口对应素材，按 OMS、Menu / Store、DMS / iDMS、CDBI / 財務對賬分组。"
+    page: Platform
+    module: P05
+    file: null
+    aspect_ratio: "16:9"
+    status: missing
+    public_usage: "OMS、Menu / Store、DMS / iDMS、CDBI / 財務對賬视频 Carousel。"
+    sensitive_data: true
+    cleanup_required: true
+    fallback: "保留视频入口，不生成假视频。"
+  - id: customer-logo-pack
+    type: customer_logo
+    content_description: "已授权实名客户 Logo，用于客户页 Logo 带、主案例和行业筛选。"
+    page: Customers
+    module: C02
+    related_modules: ["C03"]
+    file: null
+    aspect_ratio: "various"
+    status: needs-cleanup
+    public_usage: "实名客户 Logo 带和主案例。"
+    sensitive_data: false
+    cleanup_required: true
+    fallback: "使用客户名称文字，不生成 Logo。"
+  - id: case-photography
+    type: photography
+    content_description: "客户门店、运营现场或案例场景图片，用于承载实名客户故事和前后对比数据。"
+    page: Customers
+    module: C03
+    related_modules: ["C04"]
+    file: null
+    aspect_ratio: "16:9"
+    status: missing
+    public_usage: "客户案例现场或运营场景图片。"
+    sensitive_data: true
+    cleanup_required: true
+    fallback: "保留媒体位。"
+  - id: company-photography
+    type: photography
+    content_description: "餐道公司、团队、办公室或服务交付相关真实照片，用于关于餐道页面。"
+    page: About
+    module: A01
+    related_modules: ["A02", "A06"]
+    file: null
+    aspect_ratio: "16:9"
+    status: missing
+    public_usage: "公司 Hero、团队服务、城市地点。"
+    sensitive_data: true
+    cleanup_required: true
+    fallback: "保留媒体位。"

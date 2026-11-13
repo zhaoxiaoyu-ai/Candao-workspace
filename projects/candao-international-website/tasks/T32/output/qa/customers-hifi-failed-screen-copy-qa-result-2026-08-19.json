@@ -1,0 +1,73 @@
+{
+  "suite": "T32 Customers Stitch high-fidelity failed screen copy QA",
+  "total": 1,
+  "passed": 0,
+  "failed": 1,
+  "status": "fail",
+  "results": [
+    {
+      "id": "t32-customers-generated-screen",
+      "component_type": "stitch_screen_visible_copy",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "brand_display_mismatch",
+          "message": "中文 / 繁體中文默认品牌显示应使用「餐道」，不应使用：Candao"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：從不同餐飲業態看餐道如何改善訂單、配送與數據營運"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：Pizza-Box"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：JIA Group"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：Jardine Group"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：5000+"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：500M+"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：400+"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：200K+"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：4.5B+"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：30% up"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：iDMS"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：SaaS"
+        },
+        {
+          "code": "missing_required_info",
+          "message": "缺少必须信息：AMS / Connector"
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}

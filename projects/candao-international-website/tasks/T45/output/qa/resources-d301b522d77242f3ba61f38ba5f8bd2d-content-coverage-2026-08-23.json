@@ -1,0 +1,553 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "page": "resources",
+  "target": "projects/candao-international-website/tasks/T45/output/stitch-output/resources-d301b522d77242f3ba61f38ba5f8bd2d.html",
+  "stem": "resources-d301b522d77242f3ba61f38ba5f8bd2d",
+  "sourceLowFidelity": "projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/resources.html",
+  "hardRequirement": "Content coverage must be 100%. Any missing low-fidelity visible text item fails the candidate.",
+  "summary": {
+    "found": 32,
+    "total": 112,
+    "ratio": 0.2857142857142857,
+    "status": "fail",
+    "visibleTextCharsNormalized": 755,
+    "riskTermsPresent": [
+      "Candao",
+      "arrow_forward"
+    ],
+    "forbiddenCaseTermsPresent": []
+  },
+  "missing": [
+    "售前方案",
+    "導入資料",
+    "技術對接",
+    "品牌案例",
+    "資源路徑",
+    "整理系統",
+    "提交支援",
+    "評估中了解餐道是否適合目前的訂單、門店、配送或對賬問題。",
+    "導入中整理外賣平台、自有點餐、POS、CRM、ERP、配送和支付資料。",
+    "日常營運提交接單超時、餐單同步、配送超時或對賬差異問題。",
+    "問題階段",
+    "用目前所處階段找到下一步",
+    "評估中",
+    "導入中",
+    "日常營運",
+    "技術查詢",
+    "問答",
+    "評估中常見問題",
+    "Q1",
+    "接入前要準備哪些系統類型？可先整理外賣平台、自建入口、POS / KDS、CRM、配送、支付和 ERP。",
+    "Q2",
+    "Finance Center 如何比對平台訂單與餐道 OMS 訂單，識別金額、狀態和漏單差異？",
+    "提交支援或查詢",
+    "資源能力",
+    "每一類資源都對應一個獨立能力板塊",
+    "接入準備、營運 FAQ、案例資源、支援中心、媒體資料和產品演示分流服務的問題不同，呈現方式也應不同。",
+    "適合 IT 和營運團隊在接入前確認外賣平台、自有入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限與異常處理。",
+    "渠道與入口外賣平台",
+    "H5 / Web / APP / QR",
+    "門店系統POS / KDS",
+    "打印 / 後廚單",
+    "企業資料CRM / 會員",
+    "多平台訂單渠道、門店、訂單狀態、配送狀態和異常類型如何在 OMS 內處理？",
+    "餐單同步Menu Center 如何處理餐單、庫存、售罄、區域菜單和平台差異？",
+    "財務對賬Finance Center 如何識別金額差異、狀態差異和漏單？",
+    "營運 FAQ",
+    "用真實營運問題組織問答與下一步",
+    "採購、營運、門店和財務團隊可以直接按問題類型閱讀答案，判斷下一步是看平台能力、提交查詢還是預約演示。",
+    "按業態找到相似案例與可參考成果",
+    "Pizza / Fast Food多平台訂單、配送履約、長期服務",
+    "餐飲集團多品牌、多門店、COMS 營運數據",
+    "甜品連鎖POS 對接、自動打印、漏單降低",
+    "火鍋 / 中餐小程序訂單、門店聚合、系統整合",
+    "咖啡品牌Menu Center、外賣平台、CDBI 分析",
+    "鮮食零售區域餐單、庫存、多平台同步",
+    "支援中心",
+    "把既有客戶和導入中問題導向正確處理路徑",
+    "接入、營運和技術問題需要帶上相關系統、業務對象與異常狀態，方便支援團隊判斷是 OMS、DMS、iDMS、CDBI 還是 AMS / Connector 相關。",
+    "待分流",
+    "問題類型",
+    "接入 / 營運 / 技術",
+    "相關系統",
+    "OMS / DMS / iDMS / CDBI",
+    "業務對象",
+    "訂單 / 餐單 / 配送 / 對賬",
+    "可見異常",
+    "接單超時 / 配送超時 / 對賬差異",
+    "公司資料公司背景、據點、服務能力",
+    "品牌資產Logo、品牌資料、聯絡入口",
+    "媒體聯絡新聞、合作與採購查詢",
+    "媒體與公司資料",
+    "把採購、合作和媒體需要的資料集中呈現",
+    "這一板塊支援公司可信、合作溝通和資料索取，因此用資料架與聯絡入口呈現。",
+    "產品演示分流",
+    "把不確定的問題轉成可安排的演示模組",
+    "相似業態案例",
+    "演示分流",
+    "現有系統",
+    "主要問題",
+    "漏單",
+    "推薦模組",
+    "填寫現況",
+    "匹配模組",
+    "安排演示",
+    "業態Pizza / 餐飲集團 / 甜品 / 咖啡 / 鮮食零售",
+    "門店規模單店、多門店、跨區域或多品牌營運",
+    "現有系統外賣平台、POS / KDS、CRM、ERP、配送",
+    "主要問題漏單、重複維護、配送超時、對賬差異",
+    "演示模組OMS、DMS、iDMS、CDBI、AMS / Connector",
+    "預約產品演示"
+  ],
+  "checks": [
+    {
+      "expected": "資源｜餐道",
+      "found": true
+    },
+    {
+      "expected": "首頁",
+      "found": true
+    },
+    {
+      "expected": "解決方案",
+      "found": true
+    },
+    {
+      "expected": "平台",
+      "found": true
+    },
+    {
+      "expected": "整合能力",
+      "found": true
+    },
+    {
+      "expected": "客戶案例",
+      "found": true
+    },
+    {
+      "expected": "資源",
+      "found": true
+    },
+    {
+      "expected": "關於餐道",
+      "found": true
+    },
+    {
+      "expected": "繁中 / EN",
+      "found": true
+    },
+    {
+      "expected": "預約演示",
+      "found": true
+    },
+    {
+      "expected": "資源中心",
+      "found": true
+    },
+    {
+      "expected": "按你的問題，找到餐道導入、接入、案例與支援入口",
+      "found": true
+    },
+    {
+      "expected": "採購、IT、營運、門店、配送和財務團隊可以在這裡找到接入準備、常見問題、支援查詢、案例資源和產品演示入口，減少評估與導入前的不確定。",
+      "found": true
+    },
+    {
+      "expected": "售前方案",
+      "found": false
+    },
+    {
+      "expected": "導入資料",
+      "found": false
+    },
+    {
+      "expected": "技術對接",
+      "found": false
+    },
+    {
+      "expected": "品牌案例",
+      "found": false
+    },
+    {
+      "expected": "資源路徑",
+      "found": false
+    },
+    {
+      "expected": "評估",
+      "found": true
+    },
+    {
+      "expected": "確認問題",
+      "found": true
+    },
+    {
+      "expected": "導入",
+      "found": true
+    },
+    {
+      "expected": "整理系統",
+      "found": false
+    },
+    {
+      "expected": "營運",
+      "found": true
+    },
+    {
+      "expected": "提交支援",
+      "found": false
+    },
+    {
+      "expected": "01",
+      "found": true
+    },
+    {
+      "expected": "評估中了解餐道是否適合目前的訂單、門店、配送或對賬問題。",
+      "found": false
+    },
+    {
+      "expected": "02",
+      "found": true
+    },
+    {
+      "expected": "導入中整理外賣平台、自有點餐、POS、CRM、ERP、配送和支付資料。",
+      "found": false
+    },
+    {
+      "expected": "03",
+      "found": true
+    },
+    {
+      "expected": "日常營運提交接單超時、餐單同步、配送超時或對賬差異問題。",
+      "found": false
+    },
+    {
+      "expected": "問題階段",
+      "found": false
+    },
+    {
+      "expected": "用目前所處階段找到下一步",
+      "found": false
+    },
+    {
+      "expected": "評估中",
+      "found": false
+    },
+    {
+      "expected": "導入中",
+      "found": false
+    },
+    {
+      "expected": "日常營運",
+      "found": false
+    },
+    {
+      "expected": "技術查詢",
+      "found": false
+    },
+    {
+      "expected": "問答",
+      "found": false
+    },
+    {
+      "expected": "評估中常見問題",
+      "found": false
+    },
+    {
+      "expected": "Q1",
+      "found": false
+    },
+    {
+      "expected": "接入前要準備哪些系統類型？可先整理外賣平台、自建入口、POS / KDS、CRM、配送、支付和 ERP。",
+      "found": false
+    },
+    {
+      "expected": "Q2",
+      "found": false
+    },
+    {
+      "expected": "Finance Center 如何比對平台訂單與餐道 OMS 訂單，識別金額、狀態和漏單差異？",
+      "found": false
+    },
+    {
+      "expected": "提交支援或查詢",
+      "found": false
+    },
+    {
+      "expected": "資源能力",
+      "found": false
+    },
+    {
+      "expected": "每一類資源都對應一個獨立能力板塊",
+      "found": false
+    },
+    {
+      "expected": "接入準備、營運 FAQ、案例資源、支援中心、媒體資料和產品演示分流服務的問題不同，呈現方式也應不同。",
+      "found": false
+    },
+    {
+      "expected": "接入準備清單",
+      "found": true
+    },
+    {
+      "expected": "把接入前需要整理的系統對象一次看清",
+      "found": true
+    },
+    {
+      "expected": "適合 IT 和營運團隊在接入前確認外賣平台、自有入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限與異常處理。",
+      "found": false
+    },
+    {
+      "expected": "渠道與入口外賣平台",
+      "found": false
+    },
+    {
+      "expected": "H5 / Web / APP / QR",
+      "found": false
+    },
+    {
+      "expected": "門店系統POS / KDS",
+      "found": false
+    },
+    {
+      "expected": "打印 / 後廚單",
+      "found": false
+    },
+    {
+      "expected": "企業資料CRM / 會員",
+      "found": false
+    },
+    {
+      "expected": "支付 / ERP",
+      "found": true
+    },
+    {
+      "expected": "AMS / ConnectorAPI",
+      "found": true
+    },
+    {
+      "expected": "字段",
+      "found": true
+    },
+    {
+      "expected": "權限",
+      "found": true
+    },
+    {
+      "expected": "異常回傳",
+      "found": true
+    },
+    {
+      "expected": "多平台訂單渠道、門店、訂單狀態、配送狀態和異常類型如何在 OMS 內處理？",
+      "found": false
+    },
+    {
+      "expected": "餐單同步Menu Center 如何處理餐單、庫存、售罄、區域菜單和平台差異？",
+      "found": false
+    },
+    {
+      "expected": "財務對賬Finance Center 如何識別金額差異、狀態差異和漏單？",
+      "found": false
+    },
+    {
+      "expected": "營運 FAQ",
+      "found": false
+    },
+    {
+      "expected": "用真實營運問題組織問答與下一步",
+      "found": false
+    },
+    {
+      "expected": "採購、營運、門店和財務團隊可以直接按問題類型閱讀答案，判斷下一步是看平台能力、提交查詢還是預約演示。",
+      "found": false
+    },
+    {
+      "expected": "案例資源",
+      "found": true
+    },
+    {
+      "expected": "按業態找到相似案例與可參考成果",
+      "found": false
+    },
+    {
+      "expected": "Pizza / Fast Food多平台訂單、配送履約、長期服務",
+      "found": false
+    },
+    {
+      "expected": "餐飲集團多品牌、多門店、COMS 營運數據",
+      "found": false
+    },
+    {
+      "expected": "甜品連鎖POS 對接、自動打印、漏單降低",
+      "found": false
+    },
+    {
+      "expected": "火鍋 / 中餐小程序訂單、門店聚合、系統整合",
+      "found": false
+    },
+    {
+      "expected": "咖啡品牌Menu Center、外賣平台、CDBI 分析",
+      "found": false
+    },
+    {
+      "expected": "鮮食零售區域餐單、庫存、多平台同步",
+      "found": false
+    },
+    {
+      "expected": "支援中心",
+      "found": false
+    },
+    {
+      "expected": "把既有客戶和導入中問題導向正確處理路徑",
+      "found": false
+    },
+    {
+      "expected": "接入、營運和技術問題需要帶上相關系統、業務對象與異常狀態，方便支援團隊判斷是 OMS、DMS、iDMS、CDBI 還是 AMS / Connector 相關。",
+      "found": false
+    },
+    {
+      "expected": "支援查詢",
+      "found": true
+    },
+    {
+      "expected": "待分流",
+      "found": false
+    },
+    {
+      "expected": "問題類型",
+      "found": false
+    },
+    {
+      "expected": "接入 / 營運 / 技術",
+      "found": false
+    },
+    {
+      "expected": "相關系統",
+      "found": false
+    },
+    {
+      "expected": "OMS / DMS / iDMS / CDBI",
+      "found": false
+    },
+    {
+      "expected": "業務對象",
+      "found": false
+    },
+    {
+      "expected": "訂單 / 餐單 / 配送 / 對賬",
+      "found": false
+    },
+    {
+      "expected": "可見異常",
+      "found": false
+    },
+    {
+      "expected": "接單超時 / 配送超時 / 對賬差異",
+      "found": false
+    },
+    {
+      "expected": "公司資料公司背景、據點、服務能力",
+      "found": false
+    },
+    {
+      "expected": "品牌資產Logo、品牌資料、聯絡入口",
+      "found": false
+    },
+    {
+      "expected": "媒體聯絡新聞、合作與採購查詢",
+      "found": false
+    },
+    {
+      "expected": "媒體與公司資料",
+      "found": false
+    },
+    {
+      "expected": "把採購、合作和媒體需要的資料集中呈現",
+      "found": false
+    },
+    {
+      "expected": "這一板塊支援公司可信、合作溝通和資料索取，因此用資料架與聯絡入口呈現。",
+      "found": false
+    },
+    {
+      "expected": "產品演示分流",
+      "found": false
+    },
+    {
+      "expected": "把不確定的問題轉成可安排的演示模組",
+      "found": false
+    },
+    {
+      "expected": "相似業態案例",
+      "found": false
+    },
+    {
+      "expected": "演示分流",
+      "found": false
+    },
+    {
+      "expected": "現有系統",
+      "found": false
+    },
+    {
+      "expected": "POS / KDS",
+      "found": true
+    },
+    {
+      "expected": "主要問題",
+      "found": false
+    },
+    {
+      "expected": "漏單",
+      "found": false
+    },
+    {
+      "expected": "推薦模組",
+      "found": false
+    },
+    {
+      "expected": "OMS",
+      "found": true
+    },
+    {
+      "expected": "填寫現況",
+      "found": false
+    },
+    {
+      "expected": "匹配模組",
+      "found": false
+    },
+    {
+      "expected": "安排演示",
+      "found": false
+    },
+    {
+      "expected": "業態Pizza / 餐飲集團 / 甜品 / 咖啡 / 鮮食零售",
+      "found": false
+    },
+    {
+      "expected": "門店規模單店、多門店、跨區域或多品牌營運",
+      "found": false
+    },
+    {
+      "expected": "現有系統外賣平台、POS / KDS、CRM、ERP、配送",
+      "found": false
+    },
+    {
+      "expected": "主要問題漏單、重複維護、配送超時、對賬差異",
+      "found": false
+    },
+    {
+      "expected": "演示模組OMS、DMS、iDMS、CDBI、AMS / Connector",
+      "found": false
+    },
+    {
+      "expected": "預約產品演示",
+      "found": false
+    },
+    {
+      "expected": "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector",
+      "found": true
+    }
+  ],
+  "visibleText": "餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中 / EN\n預約演示\n資源｜餐道\n資源中心\n按你的問題，找到餐道導入、接入、案例與支援入口\n採購、IT、營運、門店、配送和財務團隊可以在這裡找到接入準備、常見問題、支援查詢、案例資源和產品演示入口，減少評估與導入前的不確定。\n01\n評估\n確認問題與系統需求，了解產品架構。\n02\n導入\n梳理系統對接清單，確保 AMS / Connector 順暢連通。\n03\n營運\n日常排錯指南、支援工單提交與系統狀態查詢。\n接入準備清單\n把接入前需要整理的系統對象一次看清\n渠道與入口\ncheck_circle\n外賣平台接入\ncheck_circle\nH5 / Web / APP\ncheck_circle\nQR Code 點餐\n門店系統\ndns\nPOS / KDS 整合\nprint\n打印與後廚單配置\n企業資料\ngroup\nCRM / 會員系統\naccount_balance_wallet\n支付 / ERP 對接\nAMS / Connector\nAPI 規格\ncode\n字段對應\ndata_object\n權限設定\nlock\n異常回傳邏輯\nwarning\naccount_tree\nOMS 邏輯\narrow_forward_ios\nrestaurant_menu\nMenu Center\narrow_forward_ios\naccount_balance\nFinance Center\n餐道\n解決方案\nSaaS\niDMS\nAMS / Connector\n法律與支援\n隱私政策\n服務條款\n技術支援\n© 2024 餐道 Candao. All Rights Reserved.\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector"
+}

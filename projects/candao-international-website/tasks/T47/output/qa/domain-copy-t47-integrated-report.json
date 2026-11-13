@@ -1,0 +1,65 @@
+{
+  "suite": "T47 integrated integrations-customers-resources prototype domain-copy QA",
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t47-hero",
+      "component_type": "hero",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t47-integration-workbench",
+      "component_type": "system_workbench",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t47-data-flow",
+      "component_type": "flow",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t47-proof-scale",
+      "component_type": "proof_metrics",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t47-named-cases",
+      "component_type": "case_detail",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t47-industry-results",
+      "component_type": "industry_cards",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t47-resource-router",
+      "component_type": "resource_router",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t47-support-demo",
+      "component_type": "support_and_demo",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

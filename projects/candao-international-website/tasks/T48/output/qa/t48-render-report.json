@@ -1,0 +1,34 @@
+{
+  "suite": "t48-render-qa",
+  "html": "projects/candao-international-website/tasks/T48/output/prototype/index.html",
+  "screenshot": "projects/candao-international-website/tasks/T48/output/screenshots/t48-hifi-ready-prototype-1440-full.png",
+  "visibleText": "projects/candao-international-website/tasks/T48/output/qa/t48-visible-text-2026-08-26.txt",
+  "diagnostics": {
+    "title": "接入評估中心｜餐道",
+    "lang": "zh-Hant",
+    "textLength": 4251,
+    "forbiddenVisible": [],
+    "documentWidth": 1440,
+    "documentHeight": 7175,
+    "bodyWidth": 1440,
+    "bodyHeight": 7175,
+    "images": [
+      {
+        "src": "file:///Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T48/output/prototype/candao-blue-logo.svg",
+        "complete": true,
+        "naturalWidth": 112,
+        "naturalHeight": 32
+      },
+      {
+        "src": "file:///Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T48/output/prototype/candao-blue-logo.svg",
+        "complete": true,
+        "naturalWidth": 112,
+        "naturalHeight": 32
+      }
+    ],
+    "backgroundImageCount": 10
+  },
+  "imageFailures": [],
+  "status": "pass",
+  "failures": []
+}

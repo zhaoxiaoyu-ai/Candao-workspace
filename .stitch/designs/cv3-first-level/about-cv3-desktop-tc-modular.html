@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>C v3 / 關於 Candao - Candao International / Desktop TC / 模組化展開版</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#528dff',
+                            50: '#eff4ff',
+                            100: '#dbe7ff',
+                            200: '#bed5ff',
+                            300: '#93bdff',
+                            400: '#609eff',
+                            500: '#528dff',
+                            600: '#255df5',
+                            700: '#1d48e2',
+                            800: '#1d3ab7',
+                            900: '#1c3491',
+                        },
+                        neutral: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Public Sans", "sans-serif"],
+                        "display": ["Public Sans", "sans-serif"],
+                        "body": ["Public Sans", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="font-body text-neutral-900 bg-neutral-50 antialiased pt-20">
+<!-- Section 1: TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-800 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#528dff] tracking-tight">Candao</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-headline text-body-lg text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">首頁</a>
+<a class="font-headline text-body-lg text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">解決方案</a>
+<a class="font-headline text-body-lg text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">平台</a>
+<a class="font-headline text-body-lg text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">整合能力</a>
+<a class="font-headline text-body-lg text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">客戶案例</a>
+<a class="font-headline text-body-lg text-neutral-600 dark:text-neutral-400 hover:text-[#528dff] transition-colors" href="#">資源</a>
+<a class="font-headline text-body-lg text-[#528dff] font-bold border-b-2 border-[#528dff] pb-1" href="#">關於 Candao</a>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<button class="text-neutral-600 hover:text-[#528dff] font-medium text-sm transition-colors">繁中 / EN</button>
+<button class="bg-[#528dff] text-white px-5 py-2.5 rounded-lg font-semibold hover:opacity-80 transition-opacity active:scale-95 duration-200">預約產品演示</button>
+</div>
+<button class="md:hidden text-neutral-800">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Section 2: Hero Section -->
+<header class="relative pt-24 pb-32 overflow-hidden bg-neutral-900">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A cinematic, high-quality editorial photograph of a modern, busy restaurant kitchen during peak hours. Professional chefs in clean uniforms are coordinating efficiently. The foreground shows a sleek digital POS tablet displaying a complex SaaS interface with order queues and operational data. The lighting is bright and clean, emphasizing professionalism and operational clarity. The mood is focused and high-energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeZKw9Oza1UFSVu2Sgym8pr7UFo_JN9EkXJgcBUL_Qr-P0wyf3t3mIZttxfMfIeF6YnzqxVecaPJ3Z1DlxBempm14ajvxUKuYDoXCsqm3iy6GOZyyZpLqM-F1hYeWVL4dtM3SMjsygvKGHybgJYt8HFN1EOleB_zHohWRylYTdyaQIxjg8eaPI03quVYDQCPoMYlAc5mK3ANb6R3QXrhi_CONPpTq_p5xX7fstsWKZli3aITbIXRn5aWLQn2EyW05CdDkhDnk4RUiH"/>
+<div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+<div class="max-w-2xl">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
+                    為餐飲品牌打造可持續擴展的營運平台
+                </h1>
+<p class="text-xl text-neutral-300 mb-10 leading-relaxed font-light">
+                    Candao 專注於餐飲營運數字化，協助品牌連接渠道、門店、配送與數據，支援跨市場成長。
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-primary-600 transition-colors shadow-lg shadow-primary/30">認識 Candao</button>
+<button class="bg-white/10 text-white border border-white/20 px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-white/20 transition-colors backdrop-blur-sm">預約產品演示</button>
+</div>
+</div>
+<div class="hidden lg:grid grid-cols-2 gap-4 relative">
+<div class="space-y-4 translate-y-8">
+<div class="glass-panel p-6 rounded-xl text-white">
+<span class="material-symbols-outlined text-primary-300 mb-2 text-3xl">handshake</span>
+<h3 class="font-bold text-lg mb-1">導入協作</h3>
+<p class="text-sm text-neutral-300">系統無縫接軌</p>
+</div>
+<div class="glass-panel p-6 rounded-xl text-white">
+<span class="material-symbols-outlined text-teal-300 mb-2 text-3xl">support_agent</span>
+<h3 class="font-bold text-lg mb-1">營運支援</h3>
+<p class="text-sm text-neutral-300">全天候解決方案</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="glass-panel p-6 rounded-xl text-white">
+<span class="material-symbols-outlined text-amber-300 mb-2 text-3xl">hub</span>
+<h3 class="font-bold text-lg mb-1">系統連接</h3>
+<p class="text-sm text-neutral-300">打破數據孤島</p>
+</div>
+<div class="glass-panel p-6 rounded-xl text-white">
+<span class="material-symbols-outlined text-primary-300 mb-2 text-3xl">trending_up</span>
+<h3 class="font-bold text-lg mb-1">持續優化</h3>
+<p class="text-sm text-neutral-300">數據驅動成長</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Section 3: Company Positioning -->
+<section class="py-24 bg-white relative">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col lg:flex-row gap-20 items-center">
+<div class="lg:w-5/12">
+<div class="text-primary font-semibold tracking-wider mb-4 text-sm">關於我們</div>
+<h2 class="font-headline text-4xl font-bold text-neutral-900 mb-6 leading-tight">專注餐飲營運數字化的 SaaS 團隊</h2>
+<p class="text-lg text-neutral-600 mb-8 leading-relaxed">
+                        Candao 以餐飲營運場景為核心，打造能支援多市場、多門店、多渠道協作的平台能力。
+                    </p>
+<button class="text-primary font-semibold flex items-center gap-2 hover:text-primary-700 transition-colors group">
+                        聯絡 Candao
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="lg:w-7/12 w-full">
+<div class="bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm relative overflow-hidden h-[400px]">
+<!-- Abstract Platform Map -->
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<div class="relative w-full max-w-md aspect-square">
+<!-- Center Hub -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/10 rounded-full flex items-center justify-center z-10 border-4 border-white shadow-lg">
+<div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-inner">Candao</div>
+</div>
+<!-- Nodes -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 bg-white rounded-xl shadow-md border border-neutral-100 flex flex-col items-center justify-center gap-1 z-20">
+<span class="material-symbols-outlined text-neutral-500">store</span>
+<span class="text-sm font-medium">門店</span>
+</div>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-20 bg-white rounded-xl shadow-md border border-neutral-100 flex flex-col items-center justify-center gap-1 z-20">
+<span class="material-symbols-outlined text-neutral-500">account_tree</span>
+<span class="text-sm font-medium">渠道</span>
+</div>
+<div class="absolute top-1/2 left-0 -translate-y-1/2 w-20 h-20 bg-white rounded-xl shadow-md border border-neutral-100 flex flex-col items-center justify-center gap-1 z-20">
+<span class="material-symbols-outlined text-neutral-500">local_shipping</span>
+<span class="text-sm font-medium">配送</span>
+</div>
+<div class="absolute top-1/2 right-0 -translate-y-1/2 w-20 h-20 bg-white rounded-xl shadow-md border border-neutral-100 flex flex-col items-center justify-center gap-1 z-20">
+<span class="material-symbols-outlined text-neutral-500">bar_chart</span>
+<span class="text-sm font-medium">數據</span>
+</div>
+<div class="absolute top-4 right-4 w-20 h-20 bg-white rounded-xl shadow-md border border-neutral-100 flex flex-col items-center justify-center gap-1 z-20">
+<span class="material-symbols-outlined text-neutral-500">corporate_fare</span>
+<span class="text-sm font-medium">總部</span>
+</div>
+<!-- Connecting Lines (SVG) -->
+<svg class="absolute inset-0 w-full h-full text-neutral-200 z-0" style="stroke-dasharray: 4; animation: dash 20s linear infinite;">
+<line stroke="currentColor" stroke-width="2" x1="50%" x2="50%" y1="50%" y2="10%"></line>
+<line stroke="currentColor" stroke-width="2" x1="50%" x2="50%" y1="50%" y2="90%"></line>
+<line stroke="currentColor" stroke-width="2" x1="50%" x2="10%" y1="50%" y2="50%"></line>
+<line stroke="currentColor" stroke-width="2" x1="50%" x2="90%" y1="50%" y2="50%"></line>
+<line stroke="currentColor" stroke-width="2" x1="50%" x2="85%" y1="50%" y2="15%"></line>
+</svg>
+<style>
+                                    @keyframes dash {
+                                        to { stroke-dashoffset: -100; }
+                                    }
+                                </style>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Belief / Mission -->
+<section class="py-32 bg-neutral-900 text-center">
+<div class="max-w-4xl mx-auto px-8">
+<div class="space-y-12">
+<h3 class="font-headline text-3xl md:text-5xl font-bold text-white tracking-tight">讓複雜營運變得清晰可管理</h3>
+<h3 class="font-headline text-3xl md:text-5xl font-bold text-neutral-400 tracking-tight">用餐飲場景理解產品決策</h3>
+<h3 class="font-headline text-3xl md:text-5xl font-bold text-neutral-600 tracking-tight">以平台能力支援長期成長</h3>
+</div>
+</div>
+</section>
+<!-- Section 11: Footer -->
+<footer class="w-full py-12 bg-neutral-50 dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-black text-neutral-900 dark:text-white mb-6 tracking-tight">Candao</div>
+<p class="font-body text-label-md text-neutral-500">© Candao. 版權所有。</p>
+</div>
+<div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div class="flex flex-col space-y-4">
+<a class="font-body text-label-md text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all cursor-pointer" href="#">解決方案</a>
+<a class="font-body text-label-md text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all cursor-pointer" href="#">平台</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-body text-label-md text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all cursor-pointer" href="#">整合能力</a>
+<a class="font-body text-label-md text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all cursor-pointer" href="#">資源</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-body text-label-md text-[#528dff] hover:underline transition-all cursor-pointer" href="#">關於 Candao</a>
+<a class="font-body text-label-md text-neutral-500 dark:text-neutral-500 hover:text-[#528dff] hover:underline transition-all cursor-pointer" href="#">預約產品演示</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

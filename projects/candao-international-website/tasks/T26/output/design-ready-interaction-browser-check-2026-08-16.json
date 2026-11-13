@@ -1,0 +1,68 @@
+{
+  "suite": "t26-design-ready-interaction-browser-check-2026-08-16",
+  "total": 10,
+  "passed": 10,
+  "failed": 0,
+  "results": [
+    {
+      "id": "home-delivery-switch",
+      "status": "pass",
+      "text": "配送履約狀態",
+      "expectedText": "配送履約"
+    },
+    {
+      "id": "solutions-finance-switch",
+      "status": "pass",
+      "text": "平台訂單與 OMS 訂單對賬差異進入可處理流程",
+      "expectedText": "對賬差異"
+    },
+    {
+      "id": "integrations-pos-switch",
+      "status": "pass",
+      "text": "POS / KDS 與門店執行狀態對齊",
+      "expectedText": "POS / KDS"
+    },
+    {
+      "id": "customers-jardine-switch",
+      "status": "pass",
+      "text": "Jardine Group",
+      "expectedText": "Jardine Group"
+    },
+    {
+      "id": "resources-technical-switch",
+      "status": "pass",
+      "text": "技術查詢與接入評估",
+      "expectedText": "技術查詢"
+    },
+    {
+      "id": "about-products-switch",
+      "status": "pass",
+      "text": "OMS、CDBI、DMS 和 AMS / Connector 承接不同營運環節",
+      "expectedText": "OMS、CDBI、DMS"
+    },
+    {
+      "id": "platform-connector-switch",
+      "status": "pass",
+      "text": "接入對象、字段、權限和異常處理",
+      "expectedText": "接入對象"
+    },
+    {
+      "id": "demo-support-intent",
+      "status": "pass",
+      "text": "支援查詢",
+      "expectedText": "支援查詢"
+    },
+    {
+      "id": "mobile-nav-drawer",
+      "status": "pass",
+      "open": true,
+      "aria": "true"
+    },
+    {
+      "id": "mobile-home-forbidden-visible-text",
+      "status": "pass",
+      "hits": []
+    }
+  ],
+  "status": "pass"
+}

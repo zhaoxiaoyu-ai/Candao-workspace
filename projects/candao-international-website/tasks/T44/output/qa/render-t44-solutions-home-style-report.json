@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "screenshot": "projects/candao-international-website/tasks/T44/output/screenshots/solutions-home-style-100-coverage-1440-full.png",
+  "metrics": {
+    "viewportWidth": 1440,
+    "viewportHeight": 1200,
+    "scrollHeight": 3572,
+    "pageWidth": 1440,
+    "heroHeight": 980,
+    "footerTop": 3310,
+    "textLength": 1403,
+    "overflowingCount": 0,
+    "overflowing": [],
+    "h1": "按餐飲 O2O\n營運問題，\n找到可落地的解決方案"
+  }
+}

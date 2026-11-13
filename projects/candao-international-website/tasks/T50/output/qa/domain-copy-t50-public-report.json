@@ -1,0 +1,51 @@
+{
+  "suite": "t50-public-hifi-domain-copy",
+  "total": 6,
+  "passed": 6,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t50-hero",
+      "component_type": "hero",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t50-workbench",
+      "component_type": "interactive_workbench",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t50-scenarios",
+      "component_type": "scenario_content",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t50-cases-resources",
+      "component_type": "proof_router",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t50-scale",
+      "component_type": "metrics_band",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t50-demo-summary",
+      "component_type": "demo_summary",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

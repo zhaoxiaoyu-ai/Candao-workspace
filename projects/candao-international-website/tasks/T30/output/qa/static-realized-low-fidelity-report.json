@@ -1,0 +1,29 @@
+{
+  "suite": "T30 realized low-fidelity static QA",
+  "status": "pass",
+  "date": "2026-08-19",
+  "checked_paths": [
+    "tasks/T27/output/stitch-ready-low-fidelity/index.html",
+    "tasks/T27/output/stitch-ready-low-fidelity/home.html",
+    "tasks/T27/output/stitch-ready-low-fidelity/solutions.html",
+    "tasks/T27/output/stitch-ready-low-fidelity/platform.html",
+    "tasks/T27/output/stitch-ready-low-fidelity/integrations.html",
+    "tasks/T27/output/stitch-ready-low-fidelity/customers.html",
+    "tasks/T27/output/stitch-ready-low-fidelity/resources.html",
+    "tasks/T27/output/stitch-ready-low-fidelity/about.html",
+    "tasks/T27/output/stitch-ready-low-fidelity/demo.html",
+    "tasks/T27/output/stitch-ready-low-fidelity/assets/stitch-ready.css"
+  ],
+  "checks": [
+    "no_visible_or_raw_T29_element_configuration_blocks",
+    "required_realized_modules_present_per_page",
+    "navigation_and_demo_cta_present",
+    "HTML_parser_accepts_all_pages",
+    "no_forbidden_case_sensitive_term_forms",
+    "no_text_transform_case_mutation_risk"
+  ],
+  "notes": [
+    "T29 bottom instruction sections have been removed from visible HTML.",
+    "Element placement guide and map remain as structured internal source files only."
+  ]
+}

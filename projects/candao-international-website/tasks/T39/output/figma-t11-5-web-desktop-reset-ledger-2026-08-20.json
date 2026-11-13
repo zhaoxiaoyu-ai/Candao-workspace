@@ -1,0 +1,111 @@
+{
+  "task_id": "T39",
+  "title": "Figma T11.5 Web Desktop-first scope reset",
+  "date": "2026-08-20",
+  "figma_file": {
+    "file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+    "name": "Candao International Website Visual Prototype T11.5",
+    "url": "https://www.figma.com/design/BMXIuVRzSUUt9YNhVAQA6K/Candao-International-Website-Visual-Prototype-T11.5"
+  },
+  "user_decisions": [
+    "04-10 content does not fit and must not be retained as current design basis.",
+    "00/01/02 content must be updated accordingly.",
+    "Basic Web desktop is not confirmed yet; responsive work is not needed first."
+  ],
+  "created_baseline_nodes": [
+    {
+      "page_id": "3:2",
+      "page_name": "00 Cover",
+      "node_id": "370:2",
+      "node_name": "CURRENT BASELINE / Web Desktop First Reset / 2026-08-20"
+    },
+    {
+      "page_id": "3:3",
+      "page_name": "01 Design Tokens",
+      "node_id": "371:2",
+      "node_name": "WEB DESKTOP TOKENS / Current Baseline / 2026-08-20"
+    },
+    {
+      "page_id": "3:4",
+      "page_name": "02 Components",
+      "node_id": "372:2",
+      "node_name": "WEB DESKTOP COMPONENTS / Current Baseline / 2026-08-20"
+    }
+  ],
+  "renamed_pages": [
+    {
+      "page_id": "3:6",
+      "old_name": "04 Mobile Pages / Bilingual Validation",
+      "new_name": "04 不保留 / Mobile Pages / Bilingual Validation",
+      "banner_node_id": "374:2"
+    },
+    {
+      "page_id": "3:7",
+      "old_name": "05 Motion Storyboards",
+      "new_name": "05 不保留 / Motion Storyboards",
+      "banner_node_id": "374:5"
+    },
+    {
+      "page_id": "3:8",
+      "old_name": "06 Prototype Flow",
+      "new_name": "06 不保留 / Prototype Flow",
+      "banner_node_id": "374:8"
+    },
+    {
+      "page_id": "3:9",
+      "old_name": "07 Visual Review",
+      "new_name": "07 不保留 / Visual Review",
+      "banner_node_id": "374:11"
+    },
+    {
+      "page_id": "18:2",
+      "old_name": "08 Desktop Pages / TC Production",
+      "new_name": "08 不保留 / Desktop Pages / TC Production",
+      "banner_node_id": "374:14"
+    },
+    {
+      "page_id": "20:2",
+      "old_name": "09 Mobile Pages / TC Production",
+      "new_name": "09 不保留 / Mobile Pages / TC Production",
+      "banner_node_id": "374:17"
+    },
+    {
+      "page_id": "21:2",
+      "old_name": "10 TC Production Review",
+      "new_name": "10 不保留 / TC Production Review",
+      "banner_node_id": "374:20"
+    }
+  ],
+  "scope_after_reset": {
+    "current_work_basis": "Web Desktop 1440 first",
+    "not_current_basis": [
+      "04 Mobile Pages / Bilingual Validation",
+      "05 Motion Storyboards",
+      "06 Prototype Flow",
+      "07 Visual Review",
+      "08 Desktop Pages / TC Production",
+      "09 Mobile Pages / TC Production",
+      "10 TC Production Review"
+    ],
+    "responsive_status": "not_started_until_basic_web_desktop_confirmed",
+    "motion_status": "not_started_until_basic_web_desktop_confirmed",
+    "t12_entry": "must be revised; old 08/09/10 production pages are no longer valid review input"
+  },
+  "verification": {
+    "tool": "mcp__figma.use_figma",
+    "checked_at": "2026-08-20",
+    "status": "pass",
+    "nodes_present": 10,
+    "missing_nodes": [],
+    "missing_renamed_pages": [],
+    "text_findings": [],
+    "domain_copy_qa": {
+      "status": "pass",
+      "input": "tasks/T39/output/qa-input-figma-web-desktop-reset-copy-2026-08-20.json",
+      "output": "tasks/T39/output/qa-figma-web-desktop-reset-copy-2026-08-20.json",
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    }
+  }
+}

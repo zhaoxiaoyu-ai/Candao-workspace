@@ -1,0 +1,864 @@
+{
+  "suite": "T31 visual media low-fidelity browser QA",
+  "status": "pass",
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "results": [
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/index-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2058.96875,
+        "textLength": 821,
+        "visualCount": 1
+      },
+      "boxes": [
+        {
+          "selector": ".stage-motion",
+          "box": {
+            "x": 767,
+            "y": 536,
+            "width": 530,
+            "height": 70
+          }
+        },
+        {
+          "selector": ".page-preview",
+          "box": {
+            "x": 145,
+            "y": 1056.15625,
+            "width": 338,
+            "height": 110
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/index-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 3965.328125,
+        "textLength": 813,
+        "visualCount": 1
+      },
+      "boxes": [
+        {
+          "selector": ".stage-motion",
+          "box": {
+            "x": 39,
+            "y": 943.828125,
+            "width": 312,
+            "height": 70
+          }
+        },
+        {
+          "selector": ".page-preview",
+          "box": {
+            "x": 41,
+            "y": 1411.921875,
+            "width": 308,
+            "height": 110
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "home.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/home-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 3748.65625,
+        "textLength": 1356,
+        "visualCount": 4
+      },
+      "boxes": [
+        {
+          "selector": ".stage-motion",
+          "box": {
+            "x": 767,
+            "y": 536,
+            "width": 530,
+            "height": 70
+          }
+        },
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 538,
+            "y": 1528.71875,
+            "width": 730,
+            "height": 230
+          }
+        },
+        {
+          "selector": ".photo-scene",
+          "box": {
+            "x": 773,
+            "y": 2794.6875,
+            "width": 252,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 767,
+            "y": 536,
+            "width": 530,
+            "height": 70
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "home.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/home-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 6905.671875,
+        "textLength": 1331,
+        "visualCount": 4
+      },
+      "boxes": [
+        {
+          "selector": ".stage-motion",
+          "box": {
+            "x": 39,
+            "y": 937.828125,
+            "width": 312,
+            "height": 76
+          }
+        },
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 68,
+            "y": 3338.390625,
+            "width": 254,
+            "height": 305
+          }
+        },
+        {
+          "selector": ".photo-scene",
+          "box": {
+            "x": 45,
+            "y": 5627.484375,
+            "width": 300,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 39,
+            "y": 937.828125,
+            "width": 312,
+            "height": 76
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "solutions.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/solutions-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2272.53125,
+        "textLength": 1072,
+        "visualCount": 2
+      },
+      "boxes": [
+        {
+          "selector": ".concept-illustration",
+          "box": {
+            "x": 767,
+            "y": 245.71875,
+            "width": 530,
+            "height": 178
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 538,
+            "y": 1541.34375,
+            "width": 730,
+            "height": 88
+          }
+        },
+        {
+          "selector": ".flow-board",
+          "box": {
+            "x": 744,
+            "y": 169,
+            "width": 576,
+            "height": 458.71875
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "solutions.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/solutions-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 4298.703125,
+        "textLength": 1085,
+        "visualCount": 2
+      },
+      "boxes": [
+        {
+          "selector": ".concept-illustration",
+          "box": {
+            "x": 39,
+            "y": 653.546875,
+            "width": 312,
+            "height": 178
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 68,
+            "y": 3168.703125,
+            "width": 254,
+            "height": 109
+          }
+        },
+        {
+          "selector": ".flow-board",
+          "box": {
+            "x": 16,
+            "y": 576.828125,
+            "width": 358,
+            "height": 692.71875
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "platform.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/platform-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 3053.640625,
+        "textLength": 1186,
+        "visualCount": 6
+      },
+      "boxes": [
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 538,
+            "y": 1001.734375,
+            "width": 730,
+            "height": 230
+          }
+        },
+        {
+          "selector": ".video-thumb",
+          "box": {
+            "x": 769,
+            "y": 1853.953125,
+            "width": 229,
+            "height": 120
+          }
+        },
+        {
+          "selector": ".stage-motion",
+          "box": {
+            "x": 767,
+            "y": 581.5,
+            "width": 530,
+            "height": 70
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "platform.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/platform-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 5320.078125,
+        "textLength": 1169,
+        "visualCount": 6
+      },
+      "boxes": [
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 68,
+            "y": 1840.671875,
+            "width": 254,
+            "height": 458
+          }
+        },
+        {
+          "selector": ".video-thumb",
+          "box": {
+            "x": 41,
+            "y": 3313.171875,
+            "width": 308,
+            "height": 120
+          }
+        },
+        {
+          "selector": ".stage-motion",
+          "box": {
+            "x": 39,
+            "y": 991.578125,
+            "width": 312,
+            "height": 70
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "integrations.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/integrations-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2194.34375,
+        "textLength": 968,
+        "visualCount": 2
+      },
+      "boxes": [
+        {
+          "selector": ".concept-illustration",
+          "box": {
+            "x": 767,
+            "y": 458.328125,
+            "width": 530,
+            "height": 178
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 767,
+            "y": 1651.96875,
+            "width": 530,
+            "height": 88
+          }
+        },
+        {
+          "selector": ".connector-flow",
+          "box": {
+            "x": 744,
+            "y": 186.328125,
+            "width": 576,
+            "height": 473
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "integrations.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/integrations-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 3583.5,
+        "textLength": 984,
+        "visualCount": 2
+      },
+      "boxes": [
+        {
+          "selector": ".concept-illustration",
+          "box": {
+            "x": 39,
+            "y": 954.71875,
+            "width": 312,
+            "height": 178
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 39,
+            "y": 2736.125,
+            "width": 312,
+            "height": 109
+          }
+        },
+        {
+          "selector": ".connector-flow",
+          "box": {
+            "x": 16,
+            "y": 616.71875,
+            "width": 358,
+            "height": 539
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "customers.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/customers-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 3003.78125,
+        "textLength": 1469,
+        "visualCount": 10
+      },
+      "boxes": [
+        {
+          "selector": ".photo-scene",
+          "box": {
+            "x": 767,
+            "y": 308.71875,
+            "width": 258,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 1039,
+            "y": 308.71875,
+            "width": 258,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 767,
+            "y": 558.71875,
+            "width": 530,
+            "height": 88
+          }
+        },
+        {
+          "selector": ".metric-chart",
+          "box": {
+            "x": 139,
+            "y": 1060.15625,
+            "width": 162.828125,
+            "height": 56
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "customers.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/customers-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 6214.515625,
+        "textLength": 1476,
+        "visualCount": 10
+      },
+      "boxes": [
+        {
+          "selector": ".photo-scene",
+          "box": {
+            "x": 39,
+            "y": 648.203125,
+            "width": 312,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 39,
+            "y": 898.203125,
+            "width": 312,
+            "height": 230
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 39,
+            "y": 1142.203125,
+            "width": 312,
+            "height": 94
+          }
+        },
+        {
+          "selector": ".metric-chart",
+          "box": {
+            "x": 35,
+            "y": 1597.578125,
+            "width": 320,
+            "height": 56
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "resources.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/resources-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 5039.6875,
+        "textLength": 1793,
+        "visualCount": 6
+      },
+      "boxes": [
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 773,
+            "y": 243.71875,
+            "width": 518,
+            "height": 88
+          }
+        },
+        {
+          "selector": ".photo-scene",
+          "box": {
+            "x": 120,
+            "y": 4287.3125,
+            "width": 390.65625,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 524.65625,
+            "y": 4287.3125,
+            "width": 390.671875,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".route-media-grid",
+          "box": {
+            "x": 120,
+            "y": 4287.3125,
+            "width": 1200,
+            "height": 236
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "resources.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/resources-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 8801.875,
+        "textLength": 1785,
+        "visualCount": 6
+      },
+      "boxes": [
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 45,
+            "y": 603.515625,
+            "width": 300,
+            "height": 88
+          }
+        },
+        {
+          "selector": ".photo-scene",
+          "box": {
+            "x": 16,
+            "y": 7335.46875,
+            "width": 358,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 16,
+            "y": 7585.46875,
+            "width": 358,
+            "height": 230
+          }
+        },
+        {
+          "selector": ".route-media-grid",
+          "box": {
+            "x": 16,
+            "y": 7335.46875,
+            "width": 358,
+            "height": 582
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "about.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/about-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 6287.875,
+        "textLength": 1815,
+        "visualCount": 5
+      },
+      "boxes": [
+        {
+          "selector": ".photo-scene",
+          "box": {
+            "x": 773,
+            "y": 513.71875,
+            "width": 518,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".cert-tile",
+          "box": {
+            "x": 655.296875,
+            "y": 5227.25,
+            "width": 212.234375,
+            "height": 110
+          }
+        },
+        {
+          "selector": ".office-network",
+          "box": {
+            "x": 744,
+            "y": 169,
+            "width": 576,
+            "height": 635.625
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "about.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/about-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 9827.75,
+        "textLength": 1807,
+        "visualCount": 5
+      },
+      "boxes": [
+        {
+          "selector": ".photo-scene",
+          "box": {
+            "x": 45,
+            "y": 1113.546875,
+            "width": 300,
+            "height": 236
+          }
+        },
+        {
+          "selector": ".cert-tile",
+          "box": {
+            "x": 16,
+            "y": 8182,
+            "width": 358,
+            "height": 110
+          }
+        },
+        {
+          "selector": ".office-network",
+          "box": {
+            "x": 16,
+            "y": 666.828125,
+            "width": 358,
+            "height": 763.53125
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "demo.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1200
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/demo-1440.png",
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "bodyHeight": 2378.6875,
+        "textLength": 952,
+        "visualCount": 2
+      },
+      "boxes": [
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 767,
+            "y": 579.4375,
+            "width": 530,
+            "height": 230
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 881.796875,
+            "y": 1276.15625,
+            "width": 409.203125,
+            "height": 88
+          }
+        },
+        {
+          "selector": ".demo-summary-card",
+          "box": {
+            "x": 744,
+            "y": 169,
+            "width": 576,
+            "height": 826.4375
+          }
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "page": "demo.html",
+      "viewport": {
+        "width": 390,
+        "height": 1200,
+        "isMobile": true
+      },
+      "screenshot": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T31/output/screenshots/demo-390.png",
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "bodyHeight": 3969.078125,
+        "textLength": 944,
+        "visualCount": 2
+      },
+      "boxes": [
+        {
+          "selector": ".product-shot-frame",
+          "box": {
+            "x": 39,
+            "y": 906.984375,
+            "width": 312,
+            "height": 230
+          }
+        },
+        {
+          "selector": ".motion-strip",
+          "box": {
+            "x": 45,
+            "y": 3214.078125,
+            "width": 300,
+            "height": 88
+          }
+        },
+        {
+          "selector": ".demo-summary-card",
+          "box": {
+            "x": 16,
+            "y": 492.796875,
+            "width": 358,
+            "height": 1044.1875
+          }
+        }
+      ],
+      "status": "pass"
+    }
+  ]
+}

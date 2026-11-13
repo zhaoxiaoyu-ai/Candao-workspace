@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "projectId": "10888304674441209287",
+  "designSystem": "assets/a99f770bf474445d98b287cf983bc147",
+  "scope": [
+    "platform",
+    "integrations",
+    "customers",
+    "resources",
+    "about",
+    "demo"
+  ],
+  "stitchNativeScreens": [
+    {
+      "page": "platform",
+      "screenId": "90274a678c8a495099da93bef2b0932b",
+      "sessionId": "17453856949078027205",
+      "editSessionId": "5584964276956719772",
+      "html": "projects/candao-international-website/tasks/T45/output/stitch-output/platform-90274a678c8a495099da93bef2b0932b-latest.html",
+      "screenshot": "projects/candao-international-website/tasks/T45/output/stitch-output/platform-90274a678c8a495099da93bef2b0932b-latest.png",
+      "qaStem": "platform-90274a678c8a495099da93bef2b0932b-latest",
+      "coverage": "56/76",
+      "status": "fail",
+      "notes": "下载版仍缺 20 项并可见 Candao；edit_screens 返回操作但下载 HTML 未改善。"
+    },
+    {
+      "page": "integrations",
+      "screenId": "1aa52e363ae84b8cb939efb82e3e8f2d",
+      "sessionId": "12619143836154516190",
+      "editSessionId": "7096081062896359881",
+      "html": "projects/candao-international-website/tasks/T45/output/stitch-output/integrations-1aa52e363ae84b8cb939efb82e3e8f2d-latest.html",
+      "screenshot": "projects/candao-international-website/tasks/T45/output/stitch-output/integrations-1aa52e363ae84b8cb939efb82e3e8f2d-latest.png",
+      "qaStem": "integrations-1aa52e363ae84b8cb939efb82e3e8f2d-latest",
+      "coverage": "48/59",
+      "status": "fail",
+      "notes": "domain-copy 通过，但内容缺 11 项，静态检查和 1440 渲染检查失败；edit_screens 未改善下载版。"
+    },
+    {
+      "page": "customers",
+      "screenId": "27f1d7fe88744acf995f5021669ac289",
+      "sessionId": "6726924000930743067",
+      "html": "projects/candao-international-website/tasks/T45/output/stitch-output/customers-27f1d7fe88744acf995f5021669ac289.html",
+      "screenshot": "projects/candao-international-website/tasks/T45/output/stitch-output/customers-27f1d7fe88744acf995f5021669ac289.png",
+      "qaStem": "customers-27f1d7fe88744acf995f5021669ac289",
+      "coverage": "36/90",
+      "status": "fail",
+      "notes": "原始生成严重压缩内容，出现 Candao、arrow_forward、無縫對接和未授权指标。"
+    },
+    {
+      "page": "customers",
+      "screenId": "314b2b95ec834c39a95523426e899d99",
+      "sessionId": "14278538817256167033",
+      "html": "projects/candao-international-website/tasks/T45/output/stitch-output/customers-314b2b95ec834c39a95523426e899d99-exact.html",
+      "screenshot": "projects/candao-international-website/tasks/T45/output/stitch-output/customers-314b2b95ec834c39a95523426e899d99-exact.png",
+      "qaStem": "customers-314b2b95ec834c39a95523426e899d99-exact",
+      "coverage": "40/90",
+      "status": "fail",
+      "notes": "copy-register 增强提示词重试后仍只覆盖 40/90，说明 Stitch 会压缩大段逐字清单。"
+    },
+    {
+      "page": "resources",
+      "screenId": "d301b522d77242f3ba61f38ba5f8bd2d",
+      "sessionId": "995018813943146093",
+      "html": "projects/candao-international-website/tasks/T45/output/stitch-output/resources-d301b522d77242f3ba61f38ba5f8bd2d.html",
+      "screenshot": "projects/candao-international-website/tasks/T45/output/stitch-output/resources-d301b522d77242f3ba61f38ba5f8bd2d.png",
+      "qaStem": "resources-d301b522d77242f3ba61f38ba5f8bd2d",
+      "coverage": "32/112",
+      "status": "fail",
+      "notes": "下载版严重压缩 112 条内容，且可见 Candao 与 arrow_forward。"
+    },
+    {
+      "page": "about",
+      "screenId": "a452fefebffb4ac5972b3fa25e1f1c2f",
+      "sessionId": "12262407200357742828",
+      "html": "projects/candao-international-website/tasks/T45/output/stitch-output/about-a452fefebffb4ac5972b3fa25e1f1c2f.html",
+      "screenshot": "projects/candao-international-website/tasks/T45/output/stitch-output/about-a452fefebffb4ac5972b3fa25e1f1c2f.png",
+      "qaStem": "about-a452fefebffb4ac5972b3fa25e1f1c2f",
+      "coverage": "31/100",
+      "status": "fail",
+      "notes": "下载版严重压缩公司旅程、能力和质量可信内容，并残留 arrow_forward。"
+    },
+    {
+      "page": "demo",
+      "screenId": "3215bd49b04244d5ba8efc7f9f97e250",
+      "sessionId": "6405375273909025532",
+      "editSessionId": "9505109051988243007",
+      "html": "projects/candao-international-website/tasks/T45/output/stitch-output/demo-3215bd49b04244d5ba8efc7f9f97e250-after-edit.html",
+      "screenshot": "projects/candao-international-website/tasks/T45/output/stitch-output/demo-3215bd49b04244d5ba8efc7f9f97e250-after-edit.png",
+      "qaStem": "demo-3215bd49b04244d5ba8efc7f9f97e250-after-edit",
+      "coverage": "67/75",
+      "status": "fail",
+      "notes": "原生生成最接近，但仍缺 8 项并可见 Candao / arrow_forward；精准 edit 返回操作但 get_screen 仍为原 HTML。"
+    }
+  ],
+  "localUploadReadyCandidates": [
+    {
+      "page": "platform",
+      "html": "projects/candao-international-website/tasks/T45/output/local-html/platform-coverage-safe-2026-08-23.html",
+      "qaStem": "local-platform-coverage-safe-v2",
+      "coverage": "76/76",
+      "status": "pass"
+    },
+    {
+      "page": "integrations",
+      "html": "projects/candao-international-website/tasks/T45/output/local-html/integrations-coverage-safe-2026-08-23.html",
+      "qaStem": "local-integrations-coverage-safe-v2",
+      "coverage": "59/59",
+      "status": "pass"
+    },
+    {
+      "page": "customers",
+      "html": "projects/candao-international-website/tasks/T45/output/local-html/customers-coverage-safe-2026-08-23.html",
+      "qaStem": "local-customers-coverage-safe-v2",
+      "coverage": "90/90",
+      "status": "pass"
+    },
+    {
+      "page": "resources",
+      "html": "projects/candao-international-website/tasks/T45/output/local-html/resources-coverage-safe-2026-08-23.html",
+      "qaStem": "local-resources-coverage-safe-v2",
+      "coverage": "112/112",
+      "status": "pass"
+    },
+    {
+      "page": "about",
+      "html": "projects/candao-international-website/tasks/T45/output/local-html/about-coverage-safe-2026-08-23.html",
+      "qaStem": "local-about-coverage-safe-v2",
+      "coverage": "100/100",
+      "status": "pass"
+    },
+    {
+      "page": "demo",
+      "html": "projects/candao-international-website/tasks/T45/output/local-html/demo-coverage-safe-2026-08-23.html",
+      "qaStem": "local-demo-coverage-safe-v2",
+      "coverage": "75/75",
+      "status": "pass"
+    }
+  ],
+  "uploadStatus": "not_uploaded",
+  "uploadBlocker": "stitch::upload-to-stitch 技能要求上传前列出文件并等待用户明确批准。"
+}

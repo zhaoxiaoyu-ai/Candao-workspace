@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>資源中心 | 餐道</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Noto+Serif:wght@600;700&family=Work+Sans:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&family=Noto+Serif:wght@100..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9fc",
+                        "primary": "#0057c2",
+                        "inverse-on-surface": "#f0f0f3",
+                        "tertiary": "#7f5300",
+                        "surface-container-low": "#f3f3f6",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#76f6cd",
+                        "status-warning": "#FFAB00",
+                        "on-secondary-container": "#007057",
+                        "inverse-surface": "#2f3133",
+                        "secondary-fixed": "#79f9d0",
+                        "on-primary-fixed-variant": "#004299",
+                        "surface-dim": "#dadadc",
+                        "primary-container": "#2e70e0",
+                        "on-error": "#ffffff",
+                        "surface": "#f9f9fc",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#fefcff",
+                        "on-background": "#1a1c1e",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-bright": "#f9f9fc",
+                        "inverse-primary": "#afc6ff",
+                        "on-tertiary-fixed": "#291800",
+                        "cloud-surface": "#F8FAFC",
+                        "on-primary-fixed": "#001944",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1a1c1e",
+                        "surface-tint": "#0059c7",
+                        "ink-text": "#1A1C1E",
+                        "status-error": "#E11D48",
+                        "operational-blue": "#528DFF",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#424753",
+                        "on-secondary-fixed": "#002117",
+                        "surface-container-high": "#e8e8ea",
+                        "tertiary-container": "#9f6900",
+                        "primary-fixed-dim": "#afc6ff",
+                        "surface-variant": "#e2e2e5",
+                        "border-subtle": "#E2E8F0",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb950",
+                        "tertiary-fixed": "#ffddb3",
+                        "surface-container-highest": "#e2e2e5",
+                        "status-success": "#00A884",
+                        "surface-container": "#eeeef0",
+                        "primary-fixed": "#d9e2ff",
+                        "outline": "#727785",
+                        "on-secondary-fixed-variant": "#00513e",
+                        "secondary-fixed-dim": "#59dcb5",
+                        "secondary": "#006b53",
+                        "outline-variant": "#c2c6d6",
+                        "on-tertiary-fixed-variant": "#624000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "bento-gap": "16px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-md": ["Work Sans"],
+                        "label-sm": ["IBM Plex Sans"],
+                        "display-lg": ["Noto Serif"],
+                        "title-md": ["Work Sans"],
+                        "body-lg": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["13px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                        "title-md": ["20px", { "lineHeight": "1.5", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; background-color: #F8FAFC; color: #1a1c1e; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1; }
+        .bento-card { background-color: #ffffff; border: 1px solid #E2E8F0; border-radius: 0.5rem; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background-color: #0057c2; transition: width 0.3s ease; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .connection-line { position: absolute; background-color: #528DFF; opacity: 0.3; }
+        .connection-line.vertical { width: 1px; height: 100%; }
+        .connection-line.horizontal { height: 1px; width: 100%; }
+    </style>
+</head>
+<body class="bg-cloud-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface text-primary dark:text-inverse-primary docked full-width top-0 sticky z-50 border-b border-border-subtle dark:border-outline-variant flat no shadows">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit max-w-7xl mx-auto h-20">
+<div class="text-title-md font-headline-lg font-bold text-primary dark:text-inverse-primary">
+                餐道
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">首頁</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">解決方案</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">平台</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">整合能力</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">客戶案例</a>
+<a class="font-label-sm text-label-sm text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 font-bold" href="#">資源</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">關於餐道</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="font-label-sm text-label-sm text-on-surface-variant">繁中 / EN</button>
+<button class="bg-operational-blue text-on-primary font-label-sm text-label-sm px-6 py-2.5 rounded hover:bg-primary transition-colors">預約演示</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="bg-inverse-surface text-on-primary py-24 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="bg-cover bg-center w-full h-full" data-alt="A striking digital installation art piece featuring glowing, generative geometric shapes suspended in a vast, minimalist gallery space. The room is illuminated by high-key, soft white lighting that creates a bright, modern light-mode aesthetic. The artwork relies on a sophisticated palette of deep blacks and pristine whites, punctuated by intense accents of vibrant red. The mood is serene yet technologically advanced." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDW4G9PlcNManR7sZsaJ7lctIblng6-Lmcqhom15YAj4Ddrtcm9dCjgql5w_kThynTPqpigGBuUBFIEyWZtz4l-lMO63dM_CFNkkfwz-mewy-DdBk_x0CB2J4kgAqd9j-oNg0s65FWl8mJIz5LmKzf5jYfAsQII1QRpiJz1X5NcCF_YgPigh_7WbhojzTqr8Uv0QZ0eyKVeIOjSiktChEIuaEIrdQrXHkQOZ6rPoaWtdBkDSJ3y4OwU-TSGWldvqW6ZuYinziK1lYj')"></div>
+</div>
+<div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="font-label-sm text-primary-fixed-dim tracking-widest uppercase mb-4 block">資源｜餐道</span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">資源中心</h1>
+<p class="font-title-md text-title-md text-surface-variant mb-6">按你的問題，找到餐道導入、接入、案例與支援入口</p>
+<p class="font-body-md text-body-md text-surface-variant opacity-80 max-w-xl">
+                    採購、IT、營運、門店、配送和財務團隊可以在這裡找到接入準備、常見問題、支援查詢、案例資源和產品演示入口，減少評估與導入前的不確定。
+                </p>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-surface-container-lowest/10 backdrop-blur-sm border border-surface-container-lowest/20 p-6 rounded-lg">
+<div class="flex items-center gap-4 mb-2">
+<span class="font-label-sm text-primary-fixed-dim bg-primary-fixed/10 px-2 py-1 rounded">01</span>
+<h3 class="font-title-md text-title-md">評估</h3>
+</div>
+<p class="font-body-md text-body-md text-surface-variant text-sm">確認問題與系統需求，了解產品架構。</p>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-sm border border-surface-container-lowest/20 p-6 rounded-lg">
+<div class="flex items-center gap-4 mb-2">
+<span class="font-label-sm text-primary-fixed-dim bg-primary-fixed/10 px-2 py-1 rounded">02</span>
+<h3 class="font-title-md text-title-md">導入</h3>
+</div>
+<p class="font-body-md text-body-md text-surface-variant text-sm">梳理系統對接清單，確保 AMS / Connector 順暢連通。</p>
+</div>
+<div class="bg-surface-container-lowest/10 backdrop-blur-sm border border-surface-container-lowest/20 p-6 rounded-lg">
+<div class="flex items-center gap-4 mb-2">
+<span class="font-label-sm text-primary-fixed-dim bg-primary-fixed/10 px-2 py-1 rounded">03</span>
+<h3 class="font-title-md text-title-md">營運</h3>
+</div>
+<p class="font-body-md text-body-md text-surface-variant text-sm">日常排錯指南、支援工單提交與系統狀態查詢。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Sections Container -->
+<main class="py-20 px-margin-mobile md:px-margin-desktop space-y-32">
+<div class="max-w-7xl mx-auto">
+<!-- Access Prep (Preparations Board) -->
+<section class="mb-32 relative">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-ink-text mb-4">接入準備清單</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">把接入前需要整理的系統對象一次看清</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-bento-gap">
+<!-- Column 1 -->
+<div class="bento-card p-6 relative">
+<h3 class="font-label-sm text-label-sm text-primary mb-4 pb-2 border-b border-border-subtle uppercase tracking-wide">渠道與入口</h3>
+<ul class="space-y-4 font-body-md text-body-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-operational-blue text-sm mt-1">check_circle</span>
+<span>外賣平台接入</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-operational-blue text-sm mt-1">check_circle</span>
+<span>H5 / Web / APP</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-operational-blue text-sm mt-1">check_circle</span>
+<span>QR Code 點餐</span>
+</li>
+</ul>
+</div>
+<!-- Column 2 -->
+<div class="bento-card p-6">
+<h3 class="font-label-sm text-label-sm text-primary mb-4 pb-2 border-b border-border-subtle uppercase tracking-wide">門店系統</h3>
+<ul class="space-y-4 font-body-md text-body-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-operational-blue text-sm mt-1">dns</span>
+<span>POS / KDS 整合</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-operational-blue text-sm mt-1">print</span>
+<span>打印與後廚單配置</span>
+</li>
+</ul>
+</div>
+<!-- Column 3 -->
+<div class="bento-card p-6">
+<h3 class="font-label-sm text-label-sm text-primary mb-4 pb-2 border-b border-border-subtle uppercase tracking-wide">企業資料</h3>
+<ul class="space-y-4 font-body-md text-body-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-operational-blue text-sm mt-1">group</span>
+<span>CRM / 會員系統</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-operational-blue text-sm mt-1">account_balance_wallet</span>
+<span>支付 / ERP 對接</span>
+</li>
+</ul>
+</div>
+<!-- Column 4 -->
+<div class="bento-card p-6 bg-surface-container-low">
+<h3 class="font-label-sm text-label-sm text-on-surface mb-4 pb-2 border-b border-border-subtle uppercase tracking-wide">AMS / Connector</h3>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
+<li class="flex items-center justify-between">
+<span>API 規格</span>
+<span class="material-symbols-outlined text-outline text-sm">code</span>
+</li>
+<li class="flex items-center justify-between">
+<span>字段對應</span>
+<span class="material-symbols-outlined text-outline text-sm">data_object</span>
+</li>
+<li class="flex items-center justify-between">
+<span>權限設定</span>
+<span class="material-symbols-outlined text-outline text-sm">lock</span>
+</li>
+<li class="flex items-center justify-between">
+<span>異常回傳邏輯</span>
+<span class="material-symbols-outlined text-status-warning text-sm">warning</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-8 bento-card p-6 bg-cloud-surface flex items-center justify-center gap-8">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">account_tree</span> OMS 邏輯</span>
+<span class="material-symbols-outlined text-outline-variant">arrow_forward_ios</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">restaurant_menu</span> Menu Center</span>
+<span class="material-symbols-outlined text-outline-variant">arrow_forward_ios</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">account_balance</span> Finance Center</span>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest w-full px-margin-desktop py-20 grid grid-cols-1 md:grid-cols-4 gap-bento-gap max-w-7xl mx-auto">
+<div class="text-title-md font-headline-lg font-bold text-on-primary dark:text-primary mb-6 md:mb-0">
+            餐道
+        </div>
+<div class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-primary dark:text-primary font-bold uppercase tracking-wider mb-2">解決方案</span>
+<a class="hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200" href="#">SaaS</a>
+<a class="hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200" href="#">iDMS</a>
+<a class="hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200" href="#">AMS / Connector</a>
+</div>
+<div class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-primary dark:text-primary font-bold uppercase tracking-wider mb-2">法律與支援</span>
+<a class="hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200" href="#">隱私政策</a>
+<a class="hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200" href="#">服務條款</a>
+<a class="hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200" href="#">技術支援</a>
+</div>
+<div class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant mt-auto text-right">
+            © 2024 餐道 Candao. All Rights Reserved.
+        </div>
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-surface-variant/20 text-center font-label-sm text-surface-variant opacity-70">
+            餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector
+        </div>
+</footer>
+</body></html>

@@ -1,0 +1,16 @@
+{
+  "page": "about",
+  "status": "pass",
+  "screenshot": "projects/candao-international-website/tasks/T45/output/screenshots/about-a452fefebffb4ac5972b3fa25e1f1c2f-1440-full.png",
+  "metrics": {
+    "viewportWidth": 1440,
+    "viewportHeight": 1200,
+    "scrollHeight": 2269,
+    "pageWidth": 1440,
+    "textLength": 490,
+    "overflowingCount": 0,
+    "overflowing": [],
+    "h1": "專注餐飲與零售 O2O 營運系統的產品與服務團隊",
+    "bodyClass": "bg-cloud-surface text-on-surface font-body-md antialiased overflow-x-hidden pt-20"
+  }
+}

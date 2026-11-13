@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>預約產品演示｜餐道</title>
+    <link rel="stylesheet" href="assets/design-ready.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <div class="nav-inner">
+          <a class="brand" href="home.html"><span class="brand-mark">餐</span><span>餐道</span></a>
+          <nav class="nav-links" aria-label="主導航">
+            <a href="home.html">首頁</a>
+            <a href="solutions.html">解決方案</a>
+            <a href="platform.html">平台</a>
+            <a href="integrations.html">整合能力</a>
+            <a href="customers.html">客戶案例</a>
+            <a href="resources.html">資源</a>
+            <a href="about.html">關於餐道</a>
+          </nav>
+          <div class="nav-actions"><span class="language">繁中 / EN</span><a class="button primary" href="demo.html" aria-current="page">預約演示</a></div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="container grid-2">
+          <div>
+            <p class="eyebrow">Book a Demo</p>
+            <h1>預約餐道產品演示前，先告訴我們你的營運場景</h1>
+            <p class="lead">請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。我們會根據場景安排 OMS、DMS、iDMS、CDBI 或接入演示。</p>
+          </div>
+          <div class="detail-panel">
+            <h3>演示需求摘要</h3>
+            <div class="list-row"><strong>意圖：</strong><span id="intent-summary">產品演示</span></div>
+            <div class="list-row"><strong>推薦模組：</strong>OMS、DMS / iDMS、CDBI、AMS / Connector</div>
+            <div class="list-row"><strong>下一步：</strong>提交後由團隊按場景安排演示。</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container form-layout">
+          <form class="form-panel">
+            <p class="eyebrow">Step 1</p>
+            <h2>選擇聯絡意圖</h2>
+            <div class="card-grid">
+              <button class="choice is-active" type="button" data-intent="產品演示"><strong>產品演示</strong><br><span>評估訂單、門店、配送、會員、數據或對賬能力。</span></button>
+              <button class="choice" type="button" data-intent="銷售洽詢"><strong>銷售洽詢</strong><br><span>了解合作範圍、場景適配和後續安排。</span></button>
+              <button class="choice" type="button" data-intent="支援查詢"><strong>支援查詢</strong><br><span>既有客戶或導入中團隊提交營運、技術或日常問題。</span></button>
+            </div>
+
+            <div style="height: 28px"></div>
+            <p class="eyebrow">Step 2</p>
+            <h2>補充品牌與系統現況</h2>
+            <div class="field-grid">
+              <div class="field"><label for="brand">公司 / 品牌名稱</label><input id="brand" name="brand" placeholder="品牌名稱"></div>
+              <div class="field"><label for="region">市場 / 地區</label><input id="region" name="region" placeholder="香港 / 其他市場"></div>
+              <div class="field"><label for="stores">門店規模</label><select id="stores" name="stores"><option>1-10 間</option><option>11-50 間</option><option>50 間以上</option></select></div>
+              <div class="field"><label for="role">你的角色</label><select id="role" name="role"><option>品牌決策者</option><option>總部營運</option><option>IT / 集成</option><option>配送 / 財務</option></select></div>
+              <div class="field"><label for="channels">目前渠道</label><input id="channels" name="channels" placeholder="外賣平台、自有點餐、Call Center"></div>
+              <div class="field"><label for="systems">已使用系統</label><input id="systems" name="systems" placeholder="POS、KDS、CRM、ERP、支付"></div>
+              <div class="field" style="grid-column: 1 / -1"><label for="issue">主要需要處理的問題</label><textarea id="issue" name="issue" placeholder="例如多平台訂單、配送履約、餐單同步、財務對賬或系統接入"></textarea></div>
+            </div>
+            <div class="hero-actions">
+              <button class="button primary" type="button">提交演示需求</button>
+              <a class="button" href="resources.html">既有客戶支援</a>
+            </div>
+          </form>
+
+          <aside class="form-panel summary">
+            <p class="eyebrow">Live Summary</p>
+            <h3>根據選擇推薦演示模組</h3>
+            <div class="detail-list">
+              <div>多平台訂單：OMS / COMS / SOMS。</div>
+              <div>配送履約：DMS / iDMS。</div>
+              <div>數據與對賬：CDBI / 財務對賬。</div>
+              <div>接入評估：AMS / Connector。</div>
+            </div>
+            <p class="muted">提交後，團隊會依據你的業態、門店規模、現有系統和主要問題安排合適的演示模組。</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="assets/design-ready.js"></script>
+  </body>
+</html>

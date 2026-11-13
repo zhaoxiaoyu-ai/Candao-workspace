@@ -1,0 +1,395 @@
+{
+  "task": "T58",
+  "file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+  "source_node": "447:8876",
+  "target_locale": "en",
+  "source_locale": "zh-Hant",
+  "google_translate_status": "unavailable_timeout",
+  "translation_policy": "Manual English website adaptation based on the Traditional Chinese source copy, project glossary, and T57 English homepage style. Do not claim a Google Translate baseline was retrieved.",
+  "items": [
+    {
+      "source": "按餐飲 O2O 營運問題",
+      "english": "Find the Right Solution",
+      "component_type": "hero_headline",
+      "note": "Rewritten for English landing-page rhythm, not literal translation."
+    },
+    {
+      "source": "找到可落地的解決方案",
+      "english": "for F&B O2O Operations",
+      "component_type": "hero_headline",
+      "note": "Keeps the restaurant O2O business object explicit."
+    },
+    {
+      "source": "外賣平台、自有平台、門店接單、配送和對帳分散在多個後台，\n品牌需要找到哪個鏈路流程造成漏單、重複維護或非常態的壓力",
+      "english": "Map delivery platforms, owned channels, store acceptance, fulfillment, and reconciliation to the workflow causing missed orders, repeated updates, or abnormal pressure.",
+      "component_type": "hero_description"
+    },
+    {
+      "source": "預約相似場景演示",
+      "english": "Book a Demo",
+      "component_type": "primary_cta"
+    },
+    {
+      "source": "探索平台能力",
+      "english": "Explore Platform",
+      "component_type": "secondary_cta"
+    },
+    {
+      "source": "解決方案",
+      "english": "Solutions",
+      "component_type": "navigation_or_footer"
+    },
+    {
+      "source": "平台",
+      "english": "Platform",
+      "component_type": "navigation_or_footer"
+    },
+    {
+      "source": "整合能力",
+      "english": "Integrations",
+      "component_type": "navigation"
+    },
+    {
+      "source": "客戶案例",
+      "english": "Customers",
+      "component_type": "navigation"
+    },
+    {
+      "source": "资源",
+      "english": "Resources",
+      "component_type": "navigation"
+    },
+    {
+      "source": "資源",
+      "english": "Resources",
+      "component_type": "footer"
+    },
+    {
+      "source": "關於餐道",
+      "english": "About Candao",
+      "component_type": "navigation_or_footer"
+    },
+    {
+      "source": "繁中 / EN",
+      "english": "繁中 / EN",
+      "component_type": "language_switch",
+      "note": "Allowed mixed-language control."
+    },
+    {
+      "source": "預約產品演示",
+      "english": "Book a Demo",
+      "component_type": "header_cta"
+    },
+    {
+      "source": "常見營運問題",
+      "english": "Common Operating Problems",
+      "component_type": "section_heading"
+    },
+    {
+      "source": "每一類問題都對應一條可追蹤的營運鏈路",
+      "english": "Every problem points to a traceable workflow",
+      "component_type": "section_subheading"
+    },
+    {
+      "source": "先清楚訂單源、門店、配送和財務回到時軸的位置，再進入對應能力或演示場景。",
+      "english": "Locate where order sources, stores, delivery, and financial reconciliation sit on the timeline before choosing the right capability or demo.",
+      "component_type": "section_description"
+    },
+    {
+      "source": "多平台訂單架構差异",
+      "english": "Order Channel Gaps",
+      "component_type": "problem_card_title"
+    },
+    {
+      "source": "集中處理外賣平台與自有入口訂單，門店接單、打印、退款、取消和異常處理回到 OMS 流程。",
+      "english": "Centralize marketplace and owned-channel orders so store acceptance, printing, refunds, cancellations, and exceptions return to the OMS workflow.",
+      "component_type": "problem_card_body"
+    },
+    {
+      "source": "外賣平台",
+      "english": "Delivery",
+      "component_type": "tag"
+    },
+    {
+      "source": "自有入口",
+      "english": "Owned",
+      "component_type": "tag"
+    },
+    {
+      "source": "門店端接單混亂",
+      "english": "Store Intake Confusion",
+      "component_type": "problem_card_title"
+    },
+    {
+      "source": "經理同時處理門店訂料、靈活時程、餐單、進貨和配送訂單，減少多平台重複更新。",
+      "english": "Let store managers handle procurement, schedules, menus, stock-in, and delivery orders in one place, reducing repeated updates across platforms.",
+      "component_type": "problem_card_body"
+    },
+    {
+      "source": "門店資料",
+      "english": "Store Data",
+      "component_type": "tag"
+    },
+    {
+      "source": "餐單版本",
+      "english": "Menus",
+      "component_type": "tag"
+    },
+    {
+      "source": "營銷狀態",
+      "english": "Marketing",
+      "component_type": "tag"
+    },
+    {
+      "source": "配送資源難歸集",
+      "english": "Delivery Resource Gaps",
+      "component_type": "problem_card_title"
+    },
+    {
+      "source": "DMS / iDMS 承接自有騎手、第三方配送、外賣與即時配，報表追蹤財務差異。",
+      "english": "DMS / iDMS connects owned riders, third-party delivery, marketplace fulfillment, and instant delivery, while reports track reconciliation differences.",
+      "component_type": "problem_card_body"
+    },
+    {
+      "source": "配送調度",
+      "english": "Dispatch",
+      "component_type": "tag"
+    },
+    {
+      "source": "配送異常",
+      "english": "Exceptions",
+      "component_type": "tag"
+    },
+    {
+      "source": "報表",
+      "english": "Reports",
+      "component_type": "tag"
+    },
+    {
+      "source": "選擇最接近你現況的營運場景",
+      "english": "Choose the Scenario Closest to Your Operation",
+      "component_type": "section_heading"
+    },
+    {
+      "source": "從訂單源、門店接單、配送履約到財務服務，先定位最接近的營運壓力，再把演示重點帶到對應能力。",
+      "english": "Identify the pressure point across order sources, stores, delivery, and reconciliation, then focus the demo on the matching capability.",
+      "component_type": "section_description"
+    },
+    {
+      "source": "多平台外賣訂單",
+      "english": "Marketplace Orders",
+      "component_type": "scenario_tab"
+    },
+    {
+      "source": "堂食／現場自有餐廳",
+      "english": "Dine-In / Owned Stores",
+      "component_type": "scenario_tab"
+    },
+    {
+      "source": "配送資源履約",
+      "english": "Delivery Fulfillment",
+      "component_type": "scenario_tab"
+    },
+    {
+      "source": "財務到店帳報表",
+      "english": "Reconciliation Reports",
+      "component_type": "scenario_tab"
+    },
+    {
+      "source": "會員與數據接入",
+      "english": "Membership & Data",
+      "component_type": "scenario_tab"
+    },
+    {
+      "source": "門店與餐廳管理",
+      "english": "Store Management",
+      "component_type": "scenario_tab"
+    },
+    {
+      "source": "讓多平台外賣訂單回到同一條處理鏈路",
+      "english": "Bring Marketplace Orders Into One Workflow",
+      "component_type": "scenario_title"
+    },
+    {
+      "source": "集中查看外賣平台訂單、門店接單、打印、退款、取消、配送狀態和財務回傳，放到統一一流程。",
+      "english": "Track orders, store intake, printing, refunds, cancellations, delivery status, and financial returns in one workflow.",
+      "component_type": "scenario_body"
+    },
+    {
+      "source": "訂單高峰",
+      "english": "Order Peaks",
+      "component_type": "tag_or_flow"
+    },
+    {
+      "source": "門店端接",
+      "english": "Store Intake",
+      "component_type": "tag"
+    },
+    {
+      "source": "配送狀態",
+      "english": "Delivery Status",
+      "component_type": "tag"
+    },
+    {
+      "source": "對帳異常",
+      "english": "Reconciliation",
+      "component_type": "tag"
+    },
+    {
+      "source": "問題",
+      "english": "Problem",
+      "component_type": "flow_label"
+    },
+    {
+      "source": "漏單與重複維護",
+      "english": "Missed / Rework",
+      "component_type": "flow_value"
+    },
+    {
+      "source": "能力",
+      "english": "Capability",
+      "component_type": "flow_label"
+    },
+    {
+      "source": "OMS / DMS 承接",
+      "english": "OMS / DMS",
+      "component_type": "flow_value"
+    },
+    {
+      "source": "結果",
+      "english": "Result",
+      "component_type": "flow_label"
+    },
+    {
+      "source": "總部可視化效率",
+      "english": "HQ Visibility",
+      "component_type": "flow_value"
+    },
+    {
+      "source": "→",
+      "english": "→",
+      "component_type": "flow_arrow"
+    },
+    {
+      "source": "OMS + DMS",
+      "english": "OMS + DMS",
+      "component_type": "flow_value"
+    },
+    {
+      "source": "故障回流",
+      "english": "Exception Loop",
+      "component_type": "flow_value"
+    },
+    {
+      "source": "系統能力：OMS、Menu Center、DMS / iDMS、Finance Center",
+      "english": "Capabilities: OMS, Menu Center, DMS / iDMS, financial reconciliation",
+      "component_type": "capability_line",
+      "note": "Uses production expression instead of carrying the historical Finance Center source label."
+    },
+    {
+      "source": "查看客戶案例",
+      "english": "Customer Stories",
+      "component_type": "secondary_cta"
+    },
+    {
+      "source": "把相似營運問題帶到演示流程中確認",
+      "english": "Bring Your Scenario Into the Demo Flow",
+      "component_type": "final_cta_heading"
+    },
+    {
+      "source": "若你已發現問題站位，可以進一步查看平台能力，或預約相似場景演示來確認模塊和流程拆解。",
+      "english": "Know where the pressure sits? Review platform capabilities or book a scenario demo to confirm modules and workflow.",
+      "component_type": "final_cta_body"
+    },
+    {
+      "source": "移動點餐",
+      "english": "Mobile Ordering",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "自助點餐機訂購",
+      "english": "Self-Ordering Kiosk",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "配送管理與騎手應用",
+      "english": "Delivery & Rider App",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "聚合物流管理",
+      "english": "Aggregated Logistics",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "配送平台",
+      "english": "Delivery Platform",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "銷售點系統",
+      "english": "POS System",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "客戶關係管理",
+      "english": "CRM",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "第三方物流",
+      "english": "Third-Party Logistics",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "支付網關",
+      "english": "Payment Gateway",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "支持",
+      "english": "Support",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "常見問題解答",
+      "english": "FAQs",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "新聞稿",
+      "english": "Press Releases",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "展示案例",
+      "english": "Case Studies",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "了解更多",
+      "english": "Learn More",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "關於我們",
+      "english": "About Us",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "里程碑",
+      "english": "Milestones",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "職業發展",
+      "english": "Careers",
+      "component_type": "footer_link"
+    },
+    {
+      "source": "© copyright Candao International 2026",
+      "english": "© copyright Candao International 2026",
+      "component_type": "footer_legal"
+    }
+  ]
+}

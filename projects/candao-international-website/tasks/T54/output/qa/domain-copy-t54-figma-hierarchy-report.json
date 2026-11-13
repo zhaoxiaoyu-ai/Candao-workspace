@@ -1,0 +1,16 @@
+{
+  "suite": "t54-figma-final-hierarchy-links-domain-copy",
+  "total": 1,
+  "passed": 1,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t54-figma-final-hierarchy-links",
+      "component_type": "figma_navigation_index",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

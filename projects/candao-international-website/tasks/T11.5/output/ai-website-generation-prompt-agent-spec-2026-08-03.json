@@ -1,0 +1,377 @@
+{
+  "spec_version": "0.1.0",
+  "agent_id": "candao-website-prompt-generator",
+  "carrier": "subagent",
+  "tool_contract": [
+    {
+      "name": "generate_page_prompt",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "string",
+            "enum": [
+              "home",
+              "platform",
+              "order_management",
+              "delivery_management"
+            ]
+          },
+          "copy": {
+            "type": "string",
+            "description": "T07 Final Website Copy for the page"
+          },
+          "ux_spec": {
+            "type": "string",
+            "description": "T08 Website UX Specification"
+          },
+          "visual_direction": {
+            "type": "string",
+            "description": "T10 Website Visual Direction"
+          },
+          "high_fidelity_design": {
+            "type": "string",
+            "description": "T11 High Fidelity Visual Design"
+          },
+          "localization_guideline": {
+            "type": "string",
+            "description": "Website Production Localization Guideline"
+          }
+        },
+        "required": [
+          "page",
+          "copy",
+          "ux_spec",
+          "visual_direction",
+          "high_fidelity_design",
+          "localization_guideline"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "description": "The generated page prompt ready to paste into Stitch or AI Web Generator"
+          },
+          "quality_checklist": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "failure_correction_rules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "prompt",
+          "quality_checklist",
+          "failure_correction_rules"
+        ]
+      },
+      "side_effect": "read"
+    }
+  ],
+  "permission_matrix": {
+    "allow": [
+      "read T07 Final Website Copy",
+      "read T08 Website UX Specification",
+      "read T10 Website Visual Direction",
+      "read T11 High Fidelity Visual Design",
+      "read Website Production Localization Guideline",
+      "generate page prompts"
+    ],
+    "deny": [
+      "include unconfirmed client logos",
+      "include real data",
+      "include certifications",
+      "include SLA",
+      "include pricing",
+      "include abstract tech backgrounds",
+      "generate bilingual content in page body"
+    ],
+    "hitl_required": [
+      "when input documents are missing or incomplete",
+      "when page type is not one of the four core pages"
+    ]
+  },
+  "failure_semantics": [
+    {
+      "failure": "missing input document",
+      "detect": "any required input field is empty or null",
+      "fallback": "halt and escalate to human for missing document"
+    },
+    {
+      "failure": "page type not recognized",
+      "detect": "page value not in enum",
+      "fallback": "halt and escalate to human for page type confirmation"
+    },
+    {
+      "failure": "generated prompt contains forbidden content",
+      "detect": "regex scan for logo names, real numbers, certifications, SLA, pricing, abstract tech terms",
+      "fallback": "halt and escalate to human; do not output prompt"
+    },
+    {
+      "failure": "generated prompt contains bilingual body text",
+      "detect": "detect presence of both Traditional Chinese and English in body section",
+      "fallback": "halt and escalate to human; do not output prompt"
+    },
+    {
+      "failure": "generation timeout",
+      "detect": "operation exceeds time limit",
+      "fallback": "halt and escalate to human; do not retry automatically"
+    }
+  ],
+  "eval_cases": [
+    {
+      "id": "1",
+      "input": {
+        "goal": "design an AI Website Generation Prompt Agent for Candao international website",
+        "users": "web designers, frontend developers, content strategists, project managers",
+        "io": {
+          "input": "T07, T08, T10, T11, localization guideline",
+          "output": "page generation prompt"
+        },
+        "boundary": {
+          "should_do": [
+            "Traditional Chinese first",
+            "single language",
+            "header language switch",
+            "core pages",
+            "visual elements",
+            "output structure"
+          ],
+          "should_not_do": [
+            "unconfirmed logos",
+            "real data",
+            "certifications",
+            "SLA",
+            "pricing",
+            "abstract tech backgrounds"
+          ]
+        },
+        "success_criteria": [
+          "directly usable prompt",
+          "Traditional Chinese first",
+          "cover core pages",
+          "forbidden content excluded",
+          "quality checklist and failure rules"
+        ]
+      },
+      "expect": "output contains Agent goal, input, processing steps, prompt template, page-level prompt structure, quality checklist, failure correction rules, and default Traditional Chinese single language, header language switch, core pages, visual elements, forbidden content exclusion.",
+      "verify_cmd": "echo '{\"goal\":\"...\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert 'Agent 目标' in d['goal'] and 'Prompt 模板' in d['goal'] and '质量检查清单' in d['goal'] and '失败修正规则' in d['goal']; print('ok')\"",
+      "kind": "happy"
+    },
+    {
+      "id": "2",
+      "input": {
+        "goal": "design an AI Website Generation Prompt Agent for Candao international website",
+        "users": "web designers, frontend developers, content strategists, project managers",
+        "io": {
+          "input": "T07, T08, T10, T11, localization guideline",
+          "output": "page generation prompt"
+        },
+        "boundary": {
+          "should_do": [
+            "Traditional Chinese first",
+            "single language",
+            "header language switch",
+            "core pages",
+            "visual elements",
+            "output structure"
+          ],
+          "should_not_do": [
+            "unconfirmed logos",
+            "real data",
+            "certifications",
+            "SLA",
+            "pricing",
+            "abstract tech backgrounds"
+          ]
+        },
+        "success_criteria": [
+          "directly usable prompt",
+          "Traditional Chinese first",
+          "cover core pages",
+          "forbidden content excluded",
+          "quality checklist and failure rules"
+        ]
+      },
+      "expect": "output must not contain any English body content, all page body must be Traditional Chinese.",
+      "verify_cmd": "echo '{\"goal\":\"...\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert 'English' not in d['goal'] and 'EN' not in d['goal']; print('ok')\"",
+      "kind": "adversarial"
+    },
+    {
+      "id": "3",
+      "input": {
+        "goal": "design an AI Website Generation Prompt Agent for Candao international website",
+        "users": "web designers, frontend developers, content strategists, project managers",
+        "io": {
+          "input": "T07, T08, T10, T11, localization guideline",
+          "output": "page generation prompt"
+        },
+        "boundary": {
+          "should_do": [
+            "Traditional Chinese first",
+            "single language",
+            "header language switch",
+            "core pages",
+            "visual elements",
+            "output structure"
+          ],
+          "should_not_do": [
+            "unconfirmed logos",
+            "real data",
+            "certifications",
+            "SLA",
+            "pricing",
+            "abstract tech backgrounds"
+          ]
+        },
+        "success_criteria": [
+          "directly usable prompt",
+          "Traditional Chinese first",
+          "cover core pages",
+          "forbidden content excluded",
+          "quality checklist and failure rules"
+        ]
+      },
+      "expect": "output must explicitly include header language switch 繁中 / EN.",
+      "verify_cmd": "echo '{\"goal\":\"...\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert '繁中 / EN' in d['goal']; print('ok')\"",
+      "kind": "happy"
+    },
+    {
+      "id": "4",
+      "input": {
+        "goal": "design an AI Website Generation Prompt Agent for Candao international website",
+        "users": "web designers, frontend developers, content strategists, project managers",
+        "io": {
+          "input": "T07, T08, T10, T11, localization guideline",
+          "output": "page generation prompt"
+        },
+        "boundary": {
+          "should_do": [
+            "Traditional Chinese first",
+            "single language",
+            "header language switch",
+            "core pages",
+            "visual elements",
+            "output structure"
+          ],
+          "should_not_do": [
+            "unconfirmed logos",
+            "real data",
+            "certifications",
+            "SLA",
+            "pricing",
+            "abstract tech backgrounds"
+          ]
+        },
+        "success_criteria": [
+          "directly usable prompt",
+          "Traditional Chinese first",
+          "cover core pages",
+          "forbidden content excluded",
+          "quality checklist and failure rules"
+        ]
+      },
+      "expect": "output must explicitly include prohibition of unconfirmed client logos, real data, certifications, SLA, pricing, and abstract tech backgrounds.",
+      "verify_cmd": "echo '{\"goal\":\"...\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert '禁止' in d['goal'] and '未确认' in d['goal']; print('ok')\"",
+      "kind": "adversarial"
+    },
+    {
+      "id": "5",
+      "input": {
+        "goal": "design an AI Website Generation Prompt Agent for Candao international website",
+        "users": "web designers, frontend developers, content strategists, project managers",
+        "io": {
+          "input": "T07, T08, T10, T11, localization guideline",
+          "output": "page generation prompt"
+        },
+        "boundary": {
+          "should_do": [
+            "Traditional Chinese first",
+            "single language",
+            "header language switch",
+            "core pages",
+            "visual elements",
+            "output structure"
+          ],
+          "should_not_do": [
+            "unconfirmed logos",
+            "real data",
+            "certifications",
+            "SLA",
+            "pricing",
+            "abstract tech backgrounds"
+          ]
+        },
+        "success_criteria": [
+          "directly usable prompt",
+          "Traditional Chinese first",
+          "cover core pages",
+          "forbidden content excluded",
+          "quality checklist and failure rules"
+        ]
+      },
+      "expect": "output must explicitly include Home, Platform, Order Management, Delivery Management four core pages.",
+      "verify_cmd": "echo '{\"goal\":\"...\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert all(x in d['goal'] for x in ['Home','Platform','Order Management','Delivery Management']); print('ok')\"",
+      "kind": "happy"
+    },
+    {
+      "id": "6",
+      "input": {
+        "goal": "design an AI Website Generation Prompt Agent for Candao international website",
+        "users": "web designers, frontend developers, content strategists, project managers",
+        "io": {
+          "input": "T07, T08, T10, T11, localization guideline",
+          "output": "page generation prompt"
+        },
+        "boundary": {
+          "should_do": [
+            "Traditional Chinese first",
+            "single language",
+            "header language switch",
+            "core pages",
+            "visual elements",
+            "output structure"
+          ],
+          "should_not_do": [
+            "unconfirmed logos",
+            "real data",
+            "certifications",
+            "SLA",
+            "pricing",
+            "abstract tech backgrounds"
+          ]
+        },
+        "success_criteria": [
+          "directly usable prompt",
+          "Traditional Chinese first",
+          "cover core pages",
+          "forbidden content excluded",
+          "quality checklist and failure rules"
+        ]
+      },
+      "expect": "output must explicitly include international SaaS feel, real restaurant operation photography, Semi-real SaaS UI Overlay, Capability Map, Product UI Demo, Product Cards, Order/Delivery 4-step workflow, and Purposeful Product Motion.",
+      "verify_cmd": "echo '{\"goal\":\"...\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); assert all(x in d['goal'] for x in ['国际 SaaS 感','真实餐饮运营摄影','Semi-real SaaS UI Overlay','Capability Map','Product UI Demo','Product Cards','4-step workflow','Purposeful Product Motion']); print('ok')\"",
+      "kind": "happy"
+    }
+  ],
+  "context_budget": {
+    "token_cap": 8000,
+    "on_overflow": "summarize"
+  },
+  "state_ownership": {
+    "not_applicable": true,
+    "rationale": "该 Agent 为无状态转换器，不持有跨调用状态，输入输出均为一次性文档转换。"
+  },
+  "deployment_boundary": {
+    "not_applicable": true,
+    "rationale": "该 Agent 仅生成文本 Prompt，不执行任何运行时操作或不可逆变更，部署边界不适用。"
+  }
+}

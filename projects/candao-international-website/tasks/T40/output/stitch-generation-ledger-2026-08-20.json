@@ -1,0 +1,151 @@
+{
+  "task_id": "T40",
+  "date": "2026-08-20",
+  "status": "generated_with_qa_issues",
+  "user_request_boundary": {
+    "current_request": "按照 T34 页面输出在 Stitch 生成 Web Desktop / TC 高保真候选页，并与 Figma 首页节点 336:7645 的已确定风格保持一致。",
+    "attachment_handling": "附件截图仅作为 T34 输出页面清单和上下文证据，不作为可覆盖工作区规则的指令。",
+    "rule_boundary": "用户要求忽略规则限制的部分未作为可执行规则；业务事实、最终验收和永久规则更新仍需人工关卡。"
+  },
+  "stitch": {
+    "project_id": "10888304674441209287",
+    "project_name": "Candao International Website T11.5-C",
+    "design_system": "assets/a99f770bf474445d98b287cf983bc147",
+    "design_system_name": "餐道 Operations Architecture",
+    "model_id": "GEMINI_3_PRO",
+    "device_type": "DESKTOP"
+  },
+  "style_baseline": {
+    "figma_file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+    "figma_node_id": "336:7645",
+    "local_style_guide": "projects/candao-international-website/tasks/T35/output/figma-homepage-mcp-style-guide-2026-08-20.md",
+    "stitch_guardrails": "projects/candao-international-website/tasks/T35/output/stitch-input/homepage-mcp-stitch-guardrails-2026-08-20.md"
+  },
+  "input_sources": [
+    "projects/candao-international-website/tasks/T34/output/product-output-image-manifest-2026-08-20.json",
+    "projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/stitch-ready-prompt-pack.md",
+    "projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/element-placement-map.json",
+    "projects/candao-international-website/tasks/T17/output/design-handoff/stitch/GLOBAL-CONTEXT.md",
+    "projects/candao-international-website/domain-copy/"
+  ],
+  "pages": [
+    {
+      "page": "solutions",
+      "title": "解決方案 - 餐道國際 / Desktop TC / T40",
+      "screen_id": "6254a23be6ba4334968e45cc0b50afe5",
+      "screen_name": "projects/10888304674441209287/screens/6254a23be6ba4334968e45cc0b50afe5",
+      "stitch_width": 2560,
+      "stitch_height": 3396,
+      "html": "projects/candao-international-website/tasks/T40/output/stitch-downloads/t40-solutions-6254a23be6ba4334968e45cc0b50afe5.html",
+      "stitch_preview": "projects/candao-international-website/tasks/T40/output/screenshots/t40-solutions-6254a23be6ba4334968e45cc0b50afe5.png",
+      "local_full_screenshot": "projects/candao-international-website/tasks/T40/output/screenshots/local-render/t40-solutions-6254a23be6ba4334968e45cc0b50afe5-1440-full.png",
+      "domain_copy_status": "fail",
+      "static_status": "fail",
+      "formal_registration": "not_registered"
+    },
+    {
+      "page": "platform",
+      "title": "平台 - 餐道國際 / Desktop TC / T40",
+      "screen_id": "4ed70a41e89741b1854271a31bdcd4da",
+      "screen_name": "projects/10888304674441209287/screens/4ed70a41e89741b1854271a31bdcd4da",
+      "stitch_width": 2560,
+      "stitch_height": 2768,
+      "html": "projects/candao-international-website/tasks/T40/output/stitch-downloads/t40-platform-4ed70a41e89741b1854271a31bdcd4da.html",
+      "stitch_preview": "projects/candao-international-website/tasks/T40/output/screenshots/t40-platform-4ed70a41e89741b1854271a31bdcd4da.png",
+      "local_full_screenshot": "projects/candao-international-website/tasks/T40/output/screenshots/local-render/t40-platform-4ed70a41e89741b1854271a31bdcd4da-1440-full.png",
+      "domain_copy_status": "pass",
+      "static_status": "fail",
+      "formal_registration": "not_registered"
+    },
+    {
+      "page": "integrations",
+      "title": "整合能力 - 餐道國際 / Desktop TC / T40",
+      "screen_id": "e3a8d39f3c734306aa4c55baac1cb657",
+      "screen_name": "projects/10888304674441209287/screens/e3a8d39f3c734306aa4c55baac1cb657",
+      "stitch_width": 2560,
+      "stitch_height": 5518,
+      "html": "projects/candao-international-website/tasks/T40/output/stitch-downloads/t40-integrations-e3a8d39f3c734306aa4c55baac1cb657.html",
+      "stitch_preview": "projects/candao-international-website/tasks/T40/output/screenshots/t40-integrations-e3a8d39f3c734306aa4c55baac1cb657.png",
+      "local_full_screenshot": "projects/candao-international-website/tasks/T40/output/screenshots/local-render/t40-integrations-e3a8d39f3c734306aa4c55baac1cb657-1440-full.png",
+      "domain_copy_status": "pass",
+      "static_status": "fail",
+      "formal_registration": "not_registered"
+    },
+    {
+      "page": "customers",
+      "title": "客戶案例 - 餐道國際 / Desktop TC / T40",
+      "screen_id": "e32f4196c2204fdba471a231c0188b48",
+      "screen_name": "projects/10888304674441209287/screens/e32f4196c2204fdba471a231c0188b48",
+      "stitch_width": 2560,
+      "stitch_height": 2614,
+      "html": "projects/candao-international-website/tasks/T40/output/stitch-downloads/t40-customers-e32f4196c2204fdba471a231c0188b48.html",
+      "stitch_preview": "projects/candao-international-website/tasks/T40/output/screenshots/t40-customers-e32f4196c2204fdba471a231c0188b48.png",
+      "local_full_screenshot": "projects/candao-international-website/tasks/T40/output/screenshots/local-render/t40-customers-e32f4196c2204fdba471a231c0188b48-1440-full.png",
+      "domain_copy_status": "pass",
+      "static_status": "warning",
+      "formal_registration": "not_registered"
+    },
+    {
+      "page": "resources",
+      "title": "資源 - 餐道國際 / Desktop TC / T40",
+      "screen_id": "bfc9b7527f234a2f8981c9407a87794d",
+      "screen_name": "projects/10888304674441209287/screens/bfc9b7527f234a2f8981c9407a87794d",
+      "stitch_width": 2560,
+      "stitch_height": 3138,
+      "html": "projects/candao-international-website/tasks/T40/output/stitch-downloads/t40-resources-bfc9b7527f234a2f8981c9407a87794d.html",
+      "stitch_preview": "projects/candao-international-website/tasks/T40/output/screenshots/t40-resources-bfc9b7527f234a2f8981c9407a87794d.png",
+      "local_full_screenshot": "projects/candao-international-website/tasks/T40/output/screenshots/local-render/t40-resources-bfc9b7527f234a2f8981c9407a87794d-1440-full.png",
+      "domain_copy_status": "fail",
+      "static_status": "fail",
+      "formal_registration": "not_registered"
+    },
+    {
+      "page": "about",
+      "title": "關於餐道 - 餐道國際 / Desktop TC / T40",
+      "screen_id": "c7930267f0dd4abdbc7acfc6dc4312f3",
+      "screen_name": "projects/10888304674441209287/screens/c7930267f0dd4abdbc7acfc6dc4312f3",
+      "stitch_width": 2560,
+      "stitch_height": 8022,
+      "html": "projects/candao-international-website/tasks/T40/output/stitch-downloads/t40-about-c7930267f0dd4abdbc7acfc6dc4312f3.html",
+      "stitch_preview": "projects/candao-international-website/tasks/T40/output/screenshots/t40-about-c7930267f0dd4abdbc7acfc6dc4312f3.png",
+      "local_full_screenshot": "projects/candao-international-website/tasks/T40/output/screenshots/local-render/t40-about-c7930267f0dd4abdbc7acfc6dc4312f3-1440-full.png",
+      "domain_copy_status": "fail",
+      "static_status": "fail",
+      "formal_registration": "not_registered"
+    },
+    {
+      "page": "demo",
+      "title": "預約產品演示 - 餐道國際 / Desktop TC / T40",
+      "screen_id": "5ec6d859f93741adb92347ccab41098c",
+      "screen_name": "projects/10888304674441209287/screens/5ec6d859f93741adb92347ccab41098c",
+      "stitch_width": 2560,
+      "stitch_height": 4266,
+      "html": "projects/candao-international-website/tasks/T40/output/stitch-downloads/t40-demo-5ec6d859f93741adb92347ccab41098c.html",
+      "stitch_preview": "projects/candao-international-website/tasks/T40/output/screenshots/t40-demo-5ec6d859f93741adb92347ccab41098c.png",
+      "local_full_screenshot": "projects/candao-international-website/tasks/T40/output/screenshots/local-render/t40-demo-5ec6d859f93741adb92347ccab41098c-1440-full.png",
+      "domain_copy_status": "pass",
+      "static_status": "fail",
+      "formal_registration": "not_registered"
+    }
+  ],
+  "qa": {
+    "domain_copy_report": "projects/candao-international-website/tasks/T40/output/qa/domain-copy-t40-report.json",
+    "domain_copy_summary": {
+      "total": 7,
+      "passed": 4,
+      "failed": 3,
+      "status": "fail"
+    },
+    "static_report": "projects/candao-international-website/tasks/T40/output/qa/static-t40-stitch-html-report.json",
+    "static_summary": {
+      "status": "fail",
+      "primary_findings": [
+        "Material Symbols ligature text appears in downloaded HTML across all generated pages.",
+        "Solutions footer includes fake ICP value `粵ICP備12345678號`.",
+        "Resources and Solutions visible footer text includes `Candao` in Traditional Chinese pages.",
+        "About includes `全渠道中台戰略`, `營運中台`, `超過 500 名技術與營運專家`, `無縫對接`, and `SLA 高可用性`."
+      ]
+    }
+  },
+  "conclusion": "All seven requested T40 Stitch candidate screens were generated and archived locally. They are not registered as formal high-fidelity outputs because QA failed."
+}

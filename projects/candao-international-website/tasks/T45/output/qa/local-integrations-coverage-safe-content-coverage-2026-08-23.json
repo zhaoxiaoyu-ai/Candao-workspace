@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "page": "integrations",
+  "target": "projects/candao-international-website/tasks/T45/output/local-html/integrations-coverage-safe-2026-08-23.html",
+  "stem": "local-integrations-coverage-safe",
+  "sourceLowFidelity": "projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/integrations.html",
+  "hardRequirement": "Content coverage must be 100%. Any missing low-fidelity visible text item fails the candidate.",
+  "summary": {
+    "found": 59,
+    "total": 59,
+    "ratio": 1,
+    "status": "pass",
+    "visibleTextCharsNormalized": 1887,
+    "riskTermsPresent": [],
+    "forbiddenCaseTermsPresent": []
+  },
+  "missing": [],
+  "checks": [
+    {
+      "expected": "整合能力｜餐道",
+      "found": true
+    },
+    {
+      "expected": "首頁",
+      "found": true
+    },
+    {
+      "expected": "解決方案",
+      "found": true
+    },
+    {
+      "expected": "平台",
+      "found": true
+    },
+    {
+      "expected": "整合能力",
+      "found": true
+    },
+    {
+      "expected": "客戶案例",
+      "found": true
+    },
+    {
+      "expected": "資源",
+      "found": true
+    },
+    {
+      "expected": "關於餐道",
+      "found": true
+    },
+    {
+      "expected": "繁中 / EN",
+      "found": true
+    },
+    {
+      "expected": "預約演示",
+      "found": true
+    },
+    {
+      "expected": "系統接入",
+      "found": true
+    },
+    {
+      "expected": "把外賣平台、POS / KDS、CRM、支付、ERP 與配送資料接回營運鏈路",
+      "found": true
+    },
+    {
+      "expected": "IT 與營運團隊可以了解餐道 Connector 如何承接不同系統類型、資料對象、狀態回傳與異常處理，讓外部渠道和門店系統回到 OMS、Data Asset、Finance Center 與配送流程。",
+      "found": true
+    },
+    {
+      "expected": "預約技術演示",
+      "found": true
+    },
+    {
+      "expected": "查看平台能力",
+      "found": true
+    },
+    {
+      "expected": "外部系統",
+      "found": true
+    },
+    {
+      "expected": "外賣平台 / POS / ERP / 支付 / 會員 / 配送",
+      "found": true
+    },
+    {
+      "expected": "AMS / Connector",
+      "found": true
+    },
+    {
+      "expected": "接口管理、資料校驗、同步監控、異常回報",
+      "found": true
+    },
+    {
+      "expected": "餐道平台",
+      "found": true
+    },
+    {
+      "expected": "OMS、Menu Center、DMS / iDMS、Finance Center、CDBI",
+      "found": true
+    },
+    {
+      "expected": "POS / KDS",
+      "found": true
+    },
+    {
+      "expected": "支付 / ERP",
+      "found": true
+    },
+    {
+      "expected": "配送 API",
+      "found": true
+    },
+    {
+      "expected": "OMS / CDBI",
+      "found": true
+    },
+    {
+      "expected": "接入對象",
+      "found": true
+    },
+    {
+      "expected": "按系統類型了解接入範圍、資料流和回傳狀態",
+      "found": true
+    },
+    {
+      "expected": "外賣平台",
+      "found": true
+    },
+    {
+      "expected": "自建點餐入口",
+      "found": true
+    },
+    {
+      "expected": "CRM / 會員",
+      "found": true
+    },
+    {
+      "expected": "配送與 API",
+      "found": true
+    },
+    {
+      "expected": "外賣平台訂單進入 OMS",
+      "found": true
+    },
+    {
+      "expected": "訂單數據進入 Connector 後，需要標準化訂單、餐單、用戶和基礎資料，再回到 OMS、Data Asset 和 Finance Center。",
+      "found": true
+    },
+    {
+      "expected": "資料對象：餐單、訂單、用戶、基礎資料。",
+      "found": true
+    },
+    {
+      "expected": "適合情境：需要把多平台訂單、餐單更新、用戶資料和對賬差異接回餐道流程。",
+      "found": true
+    },
+    {
+      "expected": "訂單",
+      "found": true
+    },
+    {
+      "expected": "菜單",
+      "found": true
+    },
+    {
+      "expected": "門店",
+      "found": true
+    },
+    {
+      "expected": "庫存",
+      "found": true
+    },
+    {
+      "expected": "會員",
+      "found": true
+    },
+    {
+      "expected": "支付",
+      "found": true
+    },
+    {
+      "expected": "配送",
+      "found": true
+    },
+    {
+      "expected": "對賬",
+      "found": true
+    },
+    {
+      "expected": "提交接入評估",
+      "found": true
+    },
+    {
+      "expected": "資料流向",
+      "found": true
+    },
+    {
+      "expected": "接入不是單點開接口，而是讓資料在營運鏈路中可校驗、可追蹤。",
+      "found": true
+    },
+    {
+      "expected": "本頁以資料對象、同步方向和異常回報位置呈現接入邊界，後續可替換為真實產品截圖或動效。",
+      "found": true
+    },
+    {
+      "expected": "來源",
+      "found": true
+    },
+    {
+      "expected": "平台 / POS / ERP",
+      "found": true
+    },
+    {
+      "expected": "校驗",
+      "found": true
+    },
+    {
+      "expected": "使用",
+      "found": true
+    },
+    {
+      "expected": "OMS / Finance / CDBI",
+      "found": true
+    },
+    {
+      "expected": "資料來源",
+      "found": true
+    },
+    {
+      "expected": "平台 / POS / ERP訂單、菜單、門店、會員與交易資料進入接口層。",
+      "found": true
+    },
+    {
+      "expected": "校驗同步",
+      "found": true
+    },
+    {
+      "expected": "AMS / Connector映射字段、監控同步狀態，將異常回報給對應角色。",
+      "found": true
+    },
+    {
+      "expected": "營運使用",
+      "found": true
+    },
+    {
+      "expected": "OMS / Finance / CDBI支撐履約、對賬、報表與跨系統決策。",
+      "found": true
+    },
+    {
+      "expected": "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector",
+      "found": true
+    }
+  ],
+  "visibleText": "餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n預約演示\n繁中 / EN\n預約演示\n整合能力｜餐道\n系統接入\n把外賣平台、POS / KDS、CRM、支付、ERP 與配送資料接回營運鏈路\nIT 與營運團隊可以了解餐道 Connector 如何承接不同系統類型、資料對象、狀態回傳與異常處理，讓外部渠道和門店系統回到 OMS、Data Asset、Finance Center 與配送流程。\n預約技術演示\n查看平台能力\n外部系統\n外賣平台 / POS / ERP / 支付 / 會員 / 配送\nAMS / Connector\nOPERATIONS MAP\n让 IT 和运营团队验证接入对象、资料流和异常边界。\n01接口管理、資料校驗、同步監控、異常回報\n02餐道平台\n03OMS、Menu Center、DMS / iDMS、Finance Center、CDBI\n04POS / KDS\n05支付 / ERP\n06配送 API\nPAGE MODULES\n整合能力\n验证系统接入、资料对象和状态回传｜IT / 总部运营\n让 IT 和运营团队验证接入对象、资料流和异常边界。\nMODULE 01\nHero\n右侧 Connector 网络图连接外卖平台、自建入口、POS / KDS、CRM、支付 / ERP、配送 API。\nconnector_network\ndual_cta\nMODULE 02\n接入對象\n左侧系统类型 rail；右侧显示资料对象、适合情境和接入评估按钮。\nsix_item_rail\ndata_object_list\nsuitable_context\nassessment_cta\nMODULE 03\n資料流向\n以三段式表达外部系统 -> AMS / Connector -> OMS / Data Asset / Finance Center / DMS。\nexternal_system_node\nconnector_node\ndestination_nodes\nCONTENT COVERAGE\n低保真內容完整登記\n以下文字逐條來自 T27 低保真頁面，作為 100% 內容覆蓋的可見核對區。\n整合能力｜餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中 / EN\n預約演示\n系統接入\n把外賣平台、POS / KDS、CRM、支付、ERP 與配送資料接回營運鏈路\nIT 與營運團隊可以了解餐道 Connector 如何承接不同系統類型、資料對象、狀態回傳與異常處理，讓外部渠道和門店系統回到 OMS、Data Asset、Finance Center 與配送流程。\n預約技術演示\n查看平台能力\n外部系統\n外賣平台 / POS / ERP / 支付 / 會員 / 配送\nAMS / Connector\n接口管理、資料校驗、同步監控、異常回報\n餐道平台\nOMS、Menu Center、DMS / iDMS、Finance Center、CDBI\nPOS / KDS\n支付 / ERP\n配送 API\nOMS / CDBI\n接入對象\n按系統類型了解接入範圍、資料流和回傳狀態\n外賣平台\n自建點餐入口\nCRM / 會員\n配送與 API\n外賣平台訂單進入 OMS\n訂單數據進入 Connector 後，需要標準化訂單、餐單、用戶和基礎資料，再回到 OMS、Data Asset 和 Finance Center。\n資料對象：餐單、訂單、用戶、基礎資料。\n適合情境：需要把多平台訂單、餐單更新、用戶資料和對賬差異接回餐道流程。\n訂單\n菜單\n門店\n庫存\n會員\n支付\n配送\n對賬\n提交接入評估\n資料流向\n接入不是單點開接口，而是讓資料在營運鏈路中可校驗、可追蹤。\n本頁以資料對象、同步方向和異常回報位置呈現接入邊界，後續可替換為真實產品截圖或動效。\n來源\n平台 / POS / ERP\n校驗\n使用\nOMS / Finance / CDBI\n資料來源\n平台 / POS / ERP訂單、菜單、門店、會員與交易資料進入接口層。\n校驗同步\nAMS / Connector映射字段、監控同步狀態，將異常回報給對應角色。\n營運使用\nOMS / Finance / CDBI支撐履約、對賬、報表與跨系統決策。\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n餐道\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n預約演示"
+}

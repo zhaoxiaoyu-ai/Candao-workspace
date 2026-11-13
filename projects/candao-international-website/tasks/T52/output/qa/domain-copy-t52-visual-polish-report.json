@@ -1,0 +1,51 @@
+{
+  "suite": "t52-visual-polish-domain-copy",
+  "total": 6,
+  "passed": 6,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t52-hero",
+      "component_type": "hero",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t52-workbench",
+      "component_type": "interactive_workbench",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t52-scenarios",
+      "component_type": "scenario_content",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t52-cases-resources",
+      "component_type": "proof_router",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t52-scale",
+      "component_type": "metrics_band",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t52-demo-summary",
+      "component_type": "demo_summary",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

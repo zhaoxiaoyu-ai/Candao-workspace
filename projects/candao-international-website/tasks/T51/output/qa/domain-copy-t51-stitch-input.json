@@ -1,0 +1,59 @@
+{
+  "suite": "t51-stitch-final-domain-copy",
+  "items": [
+    {
+      "id": "t51-stitch-hero",
+      "component_type": "hero",
+      "role": "采购方",
+      "page_task": "进入接入评估中心，判断餐道是否适合当前系统和营运问题。",
+      "locale": "zh-Hant",
+      "text": "接入評估中心｜餐道。先判斷現有系統如何接入，再查看案例與資源。選擇目前最需要處理的營運問題，核對外部系統、資料對象與餐道產品模組，再帶著相似案例和資源進入產品演示。開始接入評估。查看案例與資源。",
+      "must_include": ["餐道", "接入評估", "案例", "資源", "產品演示"]
+    },
+    {
+      "id": "t51-stitch-workbench",
+      "component_type": "interactive_workbench",
+      "role": "总部运营",
+      "page_task": "按问题查看系统来源、接入层、输出对象和下一步资源。",
+      "locale": "zh-Hant",
+      "text": "接入評估工作台。按問題整理系統來源、資料流、相似案例與演示重點。漏單與接單超時、餐單同步、配送超時、對賬差異、多品牌門店。核對系統來源、確認處理模組、帶入演示安排。外賣平台、自建點餐、POS、KDS、CRM / 會員、支付 / ERP、配送 API 透過 AMS / Connector 回到 OMS、Menu Center、DMS / iDMS、財務對賬、CDBI 和門店接單。待映射、同步中、異常回傳、校驗同步、營運使用、總部可見、重新對賬。",
+      "must_include": ["AMS / Connector", "OMS", "Menu Center", "DMS / iDMS", "財務對賬", "CDBI"]
+    },
+    {
+      "id": "t51-stitch-scenarios-visible",
+      "component_type": "scenario_content",
+      "role": "门店",
+      "page_task": "理解不同营运问题对应的状态、来源和处理结果。",
+      "locale": "zh-Hant",
+      "text": "漏單與接單超時：多平台訂單、門店接單、異常提醒。餐單同步：平台餐單、POS 更新、庫存同步。配送超時：配送派單、騎手狀態、逾時預警。對賬差異：平台賬單、門店對賬、異常款項。甜品連鎖訂單量 100K、190K、1.01M；銷售額 6.6M、7.74M、54.42M；復購率 19.88%、19.95%、25.83%。多品牌門店：品牌管理、權限劃分、數據隔離。",
+      "must_include": ["漏單", "餐單", "配送", "對賬", "多品牌"]
+    },
+    {
+      "id": "t51-stitch-cases-resources",
+      "component_type": "proof_router",
+      "role": "采购方",
+      "page_task": "在同一问题下查看相似案例、资源和支持入口。",
+      "locale": "zh-Hant",
+      "text": "同一個問題下，查看案例、資源與支援。Pizza-Box、JIA Group、Jardine Group、甜品連鎖、火鍋連鎖、中餐連鎖、咖啡品牌、鮮食零售、配送密集品牌。從相似客戶案例看落地方式。資源路由：按目前階段找到下一步。支援中心：把異常問題轉成查詢入口。產品演示分流：把問題帶入演示模組。接入準備清單、營運 FAQ、案例資源、支援中心。",
+      "must_include": ["Pizza-Box", "JIA Group", "Jardine Group", "支援中心", "營運 FAQ"]
+    },
+    {
+      "id": "t51-stitch-scale",
+      "component_type": "metrics_band",
+      "role": "管理层",
+      "page_task": "用已允许展示的服务规模支持采购判断。",
+      "locale": "zh-Hant",
+      "text": "用服務規模支持採購判斷。品牌在評估接入方案時，可以先查看餐道服務品牌、訂單、城市、門店和配送交易相關規模。5000+ 品牌數量，500M+ 每日處理訂單，400+ 覆蓋城市，200K+ 門店數量，4.5B+ 每月配送訂單交易額，30% 客戶效率提升。",
+      "must_include": ["5000+", "500M+", "400+", "200K+", "4.5B+", "30%"]
+    },
+    {
+      "id": "t51-stitch-demo-summary",
+      "component_type": "demo_summary",
+      "role": "销售",
+      "page_task": "把访客选择结果带入售前演示安排。",
+      "locale": "zh-Hant",
+      "text": "形成演示摘要。把選擇結果直接帶入產品演示。把目前選擇的問題、系統、案例與資源帶到產品演示。需要處理的問題：漏單與接單超時。已使用系統：外賣平台、自建點餐、POS / KDS。建議演示模組：OMS、AMS / Connector、CDBI。推薦資源：接入準備清單、營運 FAQ、案例資源。預約產品演示。重新選擇問題。",
+      "must_include": ["演示摘要", "建議演示模組", "OMS", "AMS / Connector", "CDBI", "營運 FAQ"]
+    }
+  ]
+}

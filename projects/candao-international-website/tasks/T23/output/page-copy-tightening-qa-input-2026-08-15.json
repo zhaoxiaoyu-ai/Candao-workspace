@@ -1,0 +1,122 @@
+{
+  "suite": "t23-page-copy-business-audit-and-tightening-2026-08-15",
+  "items": [
+    {
+      "id": "home-hero",
+      "component_type": "page_hero",
+      "role": "决策者",
+      "page_task": "建立餐道作为餐饮与零售 O2O 营运中枢的第一认知",
+      "locale": "zh-Hant",
+      "text": "把複雜餐飲 O2O 訂單、門店與配送，接成可管理的營運鏈路。餐道連接外賣平台、自有點餐入口、門店系統、配送資源、會員與營運數據，讓總部、門店與配送團隊在同一鏈路處理訂單、菜單、履約與分析。",
+      "must_include": ["餐飲 O2O", "訂單", "門店", "配送", "餐道"]
+    },
+    {
+      "id": "solutions-overview",
+      "component_type": "page_overview",
+      "role": "总部运营",
+      "page_task": "确认业务场景并导向平台能力",
+      "locale": "zh-Hant",
+      "text": "從多平台訂單、門店、配送到對賬，梳理餐飲 O2O 營運場景。訂單、門店、菜單、配送和會員不能停留在不同後台，導向 OMS / AMS / DMS；多渠道資料導向 CDBI / Finance Center；自有點餐、會員、營銷和配送導向 Mobile Ordering / iDMS。",
+      "must_include": ["多平台訂單", "門店", "配送", "對賬", "OMS", "CDBI", "iDMS"]
+    },
+    {
+      "id": "platform-capability-map",
+      "component_type": "capability_map",
+      "role": "IT",
+      "page_task": "展示产品模块如何承接营运节点",
+      "locale": "zh-Hant",
+      "text": "從訂單到配送，餐道用產品模組承接每個營運節點。OMS / COMS / SOMS 管理多渠道訂單、門店狀態、接單與異常；CDBI / Finance 管理報表、看板、對賬、異常識別；iDMS / DMS / Dispatch 管理配送呼叫、騎手、派單、監控；AMS / Connector 管理 API、系統類型、標準接口和中間件。",
+      "must_include": ["OMS", "COMS", "CDBI", "Finance", "iDMS", "DMS", "AMS / Connector", "API"]
+    },
+    {
+      "id": "platform-order-processing",
+      "component_type": "backend_preview",
+      "role": "门店经理",
+      "page_task": "处理多渠道订单状态",
+      "locale": "zh-Hant",
+      "text": "一個後台查看多渠道訂單狀態。渠道篩選 / 訂單狀態 / 異常提示。訂單列表：待接單 / 製作中 / 配送中 / 異常。訊息與提醒：催單 / 取消 / 退款 / 超時。",
+      "must_include": ["多渠道", "渠道", "訂單狀態", "待接單", "配送中", "異常", "退款"]
+    },
+    {
+      "id": "integrations-connector",
+      "component_type": "integration_map",
+      "role": "IT",
+      "page_task": "验证接入对象和数据流",
+      "locale": "zh-Hant",
+      "text": "連接餐飲 O2O 營運中的關鍵系統類型。外賣平台、自建系統、POS / KDS / 後廚、CRM / 會員、配送供應商、線上支付、ERP / Finance 按實際系統和 API 條件評估接入。香港生態圖使用餐道 Connector，不展示未確認 Logo。",
+      "must_include": ["餐飲 O2O", "POS", "KDS", "CRM", "ERP", "API", "餐道 Connector"]
+    },
+    {
+      "id": "customers-performance-metrics",
+      "component_type": "metric_cards",
+      "role": "决策者",
+      "page_task": "证明公开授权规模数据",
+      "locale": "zh-Hant",
+      "text": "PPT Slide 11 授權數據：品牌數量 5000+，每日處理訂單 500M+，覆蓋城市 400+，門店數量 200K+，每月配送訂單 GMV 4.5B+，客戶效率提升 30% up。",
+      "must_include": ["PPT Slide 11", "5000+", "500M+", "400+", "200K+", "4.5B+", "30% up"]
+    },
+    {
+      "id": "customers-named-cases",
+      "component_type": "case_cards",
+      "role": "销售",
+      "page_task": "用实名案例证明落地",
+      "locale": "zh-Hant",
+      "text": "Pizza-Box 合作超過 9 年；JIA Group 使用 COMS 管理訂單、餐單、配送、會員和營運數據；Jardine Group 為 KFC、Pizza Hut、PHD 提供服務，DMS 覆蓋 200+ outlets，並用餐道 OMS 整合 Foodpanda / Deliveroo。",
+      "must_include": ["Pizza-Box", "JIA Group", "Jardine Group", "KFC", "Pizza Hut", "PHD", "DMS", "200+", "餐道 OMS"]
+    },
+    {
+      "id": "customers-vertical-cases",
+      "component_type": "case_summary",
+      "role": "决策者",
+      "page_task": "说明不同业态问题和结果指标",
+      "locale": "zh-Hant",
+      "text": "甜品連鎖使用 OMS 對接 POS，整合外賣平台資料並自動打印，降低漏單；PPT 指標包括訂單量 100K → 190K → 1.01M、銷售額 6.6M → 7.74M → 54.42M、復購率 19.88% → 19.95% → 25.83%。",
+      "must_include": ["甜品連鎖", "OMS", "POS", "漏單", "100K", "1.01M", "25.83%"]
+    },
+    {
+      "id": "resources-access-guide",
+      "component_type": "resource_card",
+      "role": "IT",
+      "page_task": "降低接入前疑问",
+      "locale": "zh-Hant",
+      "text": "接入指南先整理系統類型，不預設接入結果。Checklist 協助 IT / 營運確認外賣、自有點餐、POS / KDS、CRM、配送、支付、ERP、API、字段、權限與異常處理。",
+      "must_include": ["接入指南", "POS", "KDS", "CRM", "ERP", "API", "字段", "權限", "異常處理"]
+    },
+    {
+      "id": "about-company",
+      "component_type": "company_profile",
+      "role": "采购方",
+      "page_task": "建立企业可信",
+      "locale": "zh-Hant",
+      "text": "餐道成立於 2014 年，總部位於廣州，並在北京、上海、香港設有分支及成都營運中心；累積 20 年餐飲系統研發與外送業務經驗。2014 年成立，Candao Information Technology Co., Ltd.",
+      "must_include": ["餐道", "2014", "廣州", "香港", "20 年", "Candao Information Technology Co., Ltd."]
+    },
+    {
+      "id": "about-security-quality",
+      "component_type": "trust_block",
+      "role": "IT",
+      "page_task": "说明安全认证和 DMS 稳定性口径",
+      "locale": "zh-Hant",
+      "text": "PPT 提及 ISO 27001、ISO 20000；DMS 口徑：500 Order/second、99.95% over。",
+      "must_include": ["ISO 27001", "ISO 20000", "DMS", "500 Order/second", "99.95%"]
+    },
+    {
+      "id": "demo-form-routing",
+      "component_type": "form_help",
+      "role": "采购方",
+      "page_task": "分流产品演示",
+      "locale": "zh-Hant",
+      "text": "請留下品牌、地區、門店規模、外賣平台、POS 和主要問題。餐道按場景安排 OMS、DMS、iDMS、CDBI 或 AMS / Connector 演示。",
+      "must_include": ["品牌", "地區", "門店規模", "外賣平台", "POS", "OMS", "DMS", "iDMS", "CDBI", "AMS / Connector"]
+    },
+    {
+      "id": "demo-after-submit",
+      "component_type": "success_state",
+      "role": "销售",
+      "page_task": "说明提交后的下一步",
+      "locale": "zh-Hant",
+      "text": "提交後顯示需求摘要：品牌、地區、門店規模、目前渠道、已使用系統、關注場景和建議演示模組。若資訊不足，提示補充，而不是編造方案。",
+      "must_include": ["提交後", "需求摘要", "品牌", "門店規模", "建議演示", "資訊不足", "提示補充"]
+    }
+  ]
+}

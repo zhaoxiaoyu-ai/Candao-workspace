@@ -1,0 +1,37 @@
+{
+  "suite": "T39 Figma Web Desktop reset visible copy",
+  "total": 4,
+  "passed": 4,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t39-00-cover-baseline",
+      "component_type": "Figma baseline board",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t39-01-token-baseline",
+      "component_type": "Figma token board",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t39-02-component-baseline",
+      "component_type": "Figma component board",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t39-04-10-not-retained-banner",
+      "component_type": "Figma scope banner",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

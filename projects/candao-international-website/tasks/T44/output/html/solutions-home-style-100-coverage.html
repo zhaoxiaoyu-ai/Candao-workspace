@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>解決方案｜餐道</title>
+    <style>
+      :root {
+        --primary: #528dff;
+        --primary-strong: #3b82f6;
+        --primary-soft: #eef5ff;
+        --ink: #16233d;
+        --muted: rgba(22, 35, 61, 0.65);
+        --quiet: rgba(22, 35, 61, 0.45);
+        --line: #e2e8f0;
+        --page: #f6f8fc;
+        --navy: #0f172a;
+        --navy-deep: #000d2b;
+        --panel: #141e30;
+        --panel-side: #0f1829;
+        --panel-active: #1e3a5f;
+        --dark-muted: #838e9c;
+        --glow: #79b3ff;
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        background: #f2f4ef;
+        color: var(--ink);
+        font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Inter, Arial, sans-serif;
+        letter-spacing: 0;
+      }
+
+      body {
+        margin: 0;
+        background: #f2f4ef;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1440px, 100%);
+        margin: 0 auto;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+      }
+
+      .container {
+        width: min(1200px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: absolute;
+        z-index: 20;
+        inset: 0 0 auto;
+        height: 76px;
+      }
+
+      .nav-inner {
+        width: min(1200px, calc(100% - 48px));
+        height: 76px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        min-width: 116px;
+      }
+
+      .brand img {
+        width: 112px;
+        height: auto;
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 34px;
+        flex: 1;
+      }
+
+      .nav-links a,
+      .footer-links a {
+        white-space: nowrap;
+      }
+
+      .nav-links a[aria-current="page"] {
+        color: #fff;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .language {
+        color: rgba(255, 255, 255, 0.86);
+        white-space: nowrap;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 24px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+        white-space: nowrap;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      }
+
+      .button.primary {
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .button.light {
+        color: var(--ink);
+        border-color: rgba(22, 35, 61, 0.12);
+        background: #fff;
+      }
+
+      .button.soft {
+        color: var(--primary);
+        background: var(--primary-soft);
+        border-color: rgba(82, 141, 255, 0.24);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 980px;
+        padding: 188px 0 0;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(6, 12, 28, 0.92), rgba(11, 21, 44, 0.76) 42%, rgba(11, 20, 37, 0.58)),
+          radial-gradient(circle at 72% 12%, rgba(82, 141, 255, 0.28), transparent 34%),
+          radial-gradient(circle at 78% 42%, rgba(255, 182, 118, 0.2), transparent 28%),
+          linear-gradient(135deg, #0f172a, #000d2b 62%, #182a4d);
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(15, 23, 42, 0.86), rgba(15, 23, 42, 0.44)),
+          repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 138px);
+        opacity: 0.8;
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(520px, 1.05fr);
+        gap: 56px;
+        align-items: start;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 20px;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(44px, 4.55vw, 64px);
+        line-height: 1.1;
+        font-weight: 800;
+      }
+
+      .hero h1 span {
+        color: var(--primary);
+      }
+
+      .lead {
+        margin: 24px 0 0;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .hero .lead {
+        max-width: 620px;
+        color: rgba(226, 232, 240, 0.78);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 36px;
+      }
+
+      .scenario-stage {
+        position: relative;
+        margin-top: 8px;
+      }
+
+      .scene-pane {
+        position: absolute;
+        inset: -72px 0 auto auto;
+        width: 440px;
+        height: 292px;
+        border-radius: 22px;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.02)),
+          radial-gradient(circle at 80% 30%, rgba(255, 197, 132, 0.22), transparent 28%),
+          linear-gradient(135deg, rgba(82, 141, 255, 0.22), rgba(15, 23, 42, 0.05));
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        filter: blur(0.1px);
+        opacity: 0.82;
+      }
+
+      .flow-board {
+        position: relative;
+        z-index: 1;
+        border-radius: 18px;
+        padding: 22px;
+        background: rgba(20, 30, 48, 0.94);
+        border: 1px solid rgba(121, 179, 255, 0.34);
+        box-shadow: 0 0 42px rgba(59, 130, 246, 0.14), 0 28px 70px rgba(0, 0, 0, 0.28);
+      }
+
+      .board-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+
+      .board-header h2,
+      .board-header h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 32px;
+        color: #fff;
+      }
+
+      .board-header span {
+        color: var(--dark-muted);
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .concept-map {
+        position: relative;
+        min-height: 312px;
+        border-radius: 16px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 50%, rgba(82, 141, 255, 0.22), transparent 34%),
+          linear-gradient(135deg, #111c31, #0f1829);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .concept-map::before,
+      .concept-map::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 999px;
+        border: 1px solid rgba(82, 141, 255, 0.26);
+      }
+
+      .concept-map::before {
+        width: 360px;
+        height: 170px;
+      }
+
+      .concept-map::after {
+        width: 238px;
+        height: 238px;
+      }
+
+      .node {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 112px;
+        min-height: 42px;
+        padding: 0 14px;
+        border-radius: 8px;
+        color: #dbeafe;
+        background: rgba(15, 24, 41, 0.9);
+        border: 1px solid rgba(121, 179, 255, 0.24);
+        font-size: 14px;
+        font-weight: 800;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+      }
+
+      .node.hub {
+        left: 50%;
+        top: 50%;
+        min-width: 142px;
+        min-height: 68px;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        background: linear-gradient(135deg, #1d4ed8, #528dff);
+        border-color: rgba(255, 255, 255, 0.34);
+      }
+
+      .node.n1 { left: 42px; top: 50px; }
+      .node.n2 { right: 44px; top: 54px; }
+      .node.n3 { left: 70px; bottom: 54px; }
+      .node.n4 { right: 70px; bottom: 54px; }
+
+      .board-steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .flow-step {
+        min-height: 146px;
+        padding: 16px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .flow-step span,
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        height: 24px;
+        padding: 0 8px;
+        border-radius: 5px;
+        color: var(--primary);
+        background: rgba(82, 141, 255, 0.12);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .flow-step strong {
+        display: block;
+        margin-top: 12px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .flow-step p {
+        margin: 8px 0 0;
+        color: var(--dark-muted);
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .section {
+        padding: 112px 0;
+        background: #fff;
+      }
+
+      .section.soft {
+        background: var(--page);
+      }
+
+      .section.dark {
+        color: #fff;
+        background:
+          radial-gradient(circle at 78% 24%, rgba(82, 141, 255, 0.2), transparent 32%),
+          linear-gradient(135deg, var(--navy-deep), #142342 70%, #263a62);
+      }
+
+      .section-heading {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(280px, 0.42fr);
+        gap: 48px;
+        align-items: end;
+        margin-bottom: 42px;
+      }
+
+      .section h2 {
+        margin: 0;
+        max-width: 780px;
+        color: var(--ink);
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 800;
+      }
+
+      .section.dark h2 {
+        color: #fff;
+      }
+
+      .section-copy {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 28px;
+      }
+
+      .section.dark .section-copy {
+        color: rgba(226, 232, 240, 0.72);
+      }
+
+      .problem-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .problem-card {
+        min-height: 300px;
+        padding: 28px;
+        border-radius: 14px;
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+      }
+
+      .problem-card h3 {
+        margin: 24px 0 12px;
+        color: var(--ink);
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .problem-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      .card-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 12px;
+        background: var(--primary-soft);
+        border: 1px solid rgba(82, 141, 255, 0.16);
+        position: relative;
+      }
+
+      .card-icon::before,
+      .card-icon::after {
+        content: "";
+        position: absolute;
+        border-radius: 4px;
+        border: 2px solid var(--primary);
+      }
+
+      .card-icon::before {
+        left: 15px;
+        top: 14px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .card-icon::after {
+        right: 12px;
+        bottom: 12px;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+      }
+
+      .signal-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 24px;
+      }
+
+      .signal-list span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0 10px;
+        border-radius: 5px;
+        color: var(--ink);
+        background: #f3f7ff;
+        border: 1px solid rgba(82, 141, 255, 0.14);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .explorer {
+        display: grid;
+        grid-template-columns: 360px minmax(0, 1fr);
+        gap: 42px;
+        align-items: start;
+      }
+
+      .rail {
+        display: grid;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .rail button {
+        width: 100%;
+        min-height: 54px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.74);
+        background: rgba(255, 255, 255, 0.05);
+        font: inherit;
+        font-size: 16px;
+        font-weight: 800;
+        text-align: left;
+        padding: 0 18px;
+      }
+
+      .rail button:first-child {
+        color: #fff;
+        background: rgba(82, 141, 255, 0.24);
+        border-color: rgba(121, 179, 255, 0.52);
+      }
+
+      .detail-panel {
+        border-radius: 18px;
+        padding: 28px;
+        background: rgba(20, 30, 48, 0.9);
+        border: 1px solid rgba(121, 179, 255, 0.24);
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.08);
+      }
+
+      .detail-panel > h3 {
+        margin: 0;
+        max-width: 700px;
+        color: #fff;
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      .detail-panel > .lead {
+        color: rgba(226, 232, 240, 0.72);
+      }
+
+      .workbench {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: 180px minmax(0, 1fr);
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--panel);
+      }
+
+      .workbench-side {
+        background: var(--panel-side);
+        padding: 18px;
+        display: grid;
+        gap: 10px;
+        align-content: start;
+      }
+
+      .side-item {
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.66);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .side-item.active {
+        color: #fff;
+        background: var(--panel-active);
+      }
+
+      .workbench-main {
+        padding: 20px;
+      }
+
+      .workbench-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 16px;
+      }
+
+      .workbench-title h4 {
+        margin: 0;
+        color: #fff;
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      .workbench-title span {
+        color: var(--dark-muted);
+        font-size: 13px;
+      }
+
+      .motion-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .motion-frame {
+        min-height: 94px;
+        padding: 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .motion-frame span {
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .motion-frame strong {
+        display: block;
+        margin-top: 12px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .detail-list {
+        display: grid;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .detail-list div {
+        padding: 16px 18px;
+        border-radius: 10px;
+        color: rgba(255, 255, 255, 0.82);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      .next-step {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1fr);
+        gap: 60px;
+        align-items: center;
+      }
+
+      .cta-panel {
+        border-radius: 18px;
+        min-height: 360px;
+        padding: 28px;
+        background:
+          radial-gradient(circle at 82% 16%, rgba(82, 141, 255, 0.18), transparent 26%),
+          linear-gradient(135deg, #ffffff, #f6f8fc);
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      }
+
+      .mini-flow {
+        display: grid;
+        gap: 12px;
+      }
+
+      .mini-row {
+        display: grid;
+        grid-template-columns: 106px minmax(0, 1fr) 130px;
+        gap: 12px;
+        align-items: center;
+        min-height: 56px;
+        padding: 12px;
+        border-radius: 10px;
+        background: #fff;
+        border: 1px solid var(--line);
+      }
+
+      .mini-row strong {
+        color: var(--ink);
+        font-size: 14px;
+      }
+
+      .mini-row span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .status {
+        color: var(--primary);
+        font-weight: 800;
+        text-align: right;
+      }
+
+      .footer {
+        padding: 92px 0 56px;
+        color: #c7d5e6;
+        background: #141414;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 320px minmax(0, 1fr);
+        gap: 90px;
+        align-items: start;
+      }
+
+      .footer-brand img {
+        width: 148px;
+        display: block;
+        margin-bottom: 24px;
+      }
+
+      .footer-brand p {
+        margin: 0;
+        max-width: 340px;
+        color: #8fa0b8;
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px 32px;
+      }
+
+      .footer-links a {
+        color: #c7d5e6;
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      @media (max-width: 980px) {
+        .nav-links { display: none; }
+        .hero { min-height: auto; padding-bottom: 80px; }
+        .hero-grid,
+        .section-heading,
+        .explorer,
+        .next-step,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .scenario-stage { margin-top: 32px; }
+        .problem-grid,
+        .board-steps,
+        .motion-strip {
+          grid-template-columns: 1fr;
+        }
+        .workbench {
+          grid-template-columns: 1fr;
+        }
+        .workbench-side {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container,
+        .nav-inner {
+          width: min(100% - 32px, 1200px);
+        }
+        .nav-actions .language { display: none; }
+        .hero h1 { font-size: 42px; line-height: 50px; }
+        .section h2 { font-size: 32px; line-height: 40px; }
+        .problem-card,
+        .detail-panel,
+        .cta-panel {
+          padding: 22px;
+        }
+        .mini-row {
+          grid-template-columns: 1fr;
+        }
+        .status { text-align: left; }
+        .footer-links {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="nav-inner">
+          <a class="brand" href="../../../T27/output/stitch-ready-low-fidelity/home.html" aria-label="餐道首頁">
+            <img src="../../../../assets/logo/candao-blue-logo.svg" alt="餐道">
+          </a>
+          <nav class="nav-links" aria-label="主導航">
+            <a href="../../../T27/output/stitch-ready-low-fidelity/home.html">首頁</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/solutions.html" aria-current="page">解決方案</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/platform.html">平台</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/integrations.html">整合能力</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/customers.html">客戶案例</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/resources.html">資源</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/about.html">關於餐道</a>
+          </nav>
+          <div class="nav-actions">
+            <span class="language">繁中 / EN</span>
+            <a class="button primary" href="../../../T27/output/stitch-ready-low-fidelity/demo.html">預約演示</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">營運場景</p>
+            <h1>按餐飲 O2O<br>營運問題，<br>找到可落地的<span>解決方案</span></h1>
+            <p class="lead">當外賣平台、自有點餐、門店接單、配送和對賬分散在多個後台，品牌需要先判斷哪一段流程造成漏單、重複維護或異常追蹤壓力。餐道按常見營運場景整理方案，協助你對照現有問題與下一步演示重點。</p>
+            <div class="hero-actions">
+              <a class="button primary" href="../../../T27/output/stitch-ready-low-fidelity/demo.html">預約相似場景演示</a>
+              <a class="button" href="../../../T27/output/stitch-ready-low-fidelity/platform.html">查看平台能力</a>
+            </div>
+          </div>
+
+          <div class="scenario-stage">
+            <div class="scene-pane" aria-hidden="true"></div>
+            <div class="flow-board">
+              <div class="board-header">
+                <h2>場景鏈路</h2>
+                <span>從問題到承接能力</span>
+              </div>
+              <div class="concept-map" aria-label="解決方案場景概念圖">
+                <span class="node n1">外賣平台</span>
+                <span class="node n2">門店接單</span>
+                <span class="node hub">餐道 OMS</span>
+                <span class="node n3">配送履約</span>
+                <span class="node n4">對賬分析</span>
+              </div>
+              <div class="board-steps">
+                <div class="flow-step"><span>01</span><strong>多入口產生訂單</strong><p>外賣平台、自有小程序與門店渠道同時進入營運流程。</p></div>
+                <div class="flow-step"><span>02</span><strong>OMS 統一處理</strong><p>把接單、門店狀態、缺貨、取消與退款放在同一工作台。</p></div>
+                <div class="flow-step"><span>03</span><strong>履約與對賬回流</strong><p>DMS / iDMS、財務對賬與 CDBI 將履約和數據回到總部判斷。</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">常見營運問題</p>
+              <h2>每一類問題都對應一條可追蹤的營運鏈路</h2>
+            </div>
+            <p class="section-copy">先讓總部營運、門店、配送和財務團隊對齊問題位置，再進入對應能力或演示場景。</p>
+          </div>
+
+          <div class="problem-grid">
+            <article class="problem-card">
+              <div class="card-icon" aria-hidden="true"></div>
+              <h3>多平台訂單履約</h3>
+              <p>集中處理外賣平台與自有入口訂單，讓門店接單、打印、退款、取消和異常提醒回到 OMS 流程。</p>
+              <div class="signal-list"><span>外賣平台</span><span>自有入口</span><span>OMS</span></div>
+            </article>
+            <article class="problem-card">
+              <div class="card-icon" aria-hidden="true"></div>
+              <h3>門店與餐單營運</h3>
+              <p>總部可維護門店資料、營業時間、餐單、售罄和區域菜單，減少多平台重複更新。</p>
+              <div class="signal-list"><span>門店資料</span><span>餐單版本</span><span>售罄狀態</span></div>
+            </article>
+            <article class="problem-card">
+              <div class="card-icon" aria-hidden="true"></div>
+              <h3>配送營運與對賬</h3>
+              <p>DMS / iDMS 承接自有騎手、第三方配送、派單、超時和狀態回傳，財務對賬追蹤差異。</p>
+              <div class="signal-list"><span>DMS / iDMS</span><span>配送異常</span><span>財務對賬</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="container explorer">
+          <div>
+            <p class="eyebrow">場景導覽</p>
+            <h2>選擇最接近你現況的營運場景</h2>
+            <p class="section-copy">從高峰訂單、門店接單、配送履約到財務對賬，先確認最接近的營運壓力，再把演示重點帶到對應能力。</p>
+            <div class="rail" aria-label="場景選擇">
+              <button type="button">多平台外賣訂單</button>
+              <button type="button">堂食掃碼與自有點餐</button>
+              <button type="button">配送營運與履約</button>
+              <button type="button">財務對賬與報表</button>
+              <button type="button">會員與營運數據</button>
+              <button type="button">門店與餐單管理</button>
+            </div>
+          </div>
+
+          <article class="detail-panel">
+            <h3>讓多平台外賣訂單回到同一條處理鏈路</h3>
+            <p class="lead">集中查看外賣平台訂單，讓門店接單、打印、退款、取消、配送狀態和財務對賬進入統一流程。</p>
+
+            <div class="workbench">
+              <div class="workbench-side" aria-label="產品工作台抽象導航">
+                <div class="side-item active">訂單高峰</div>
+                <div class="side-item">門店接單</div>
+                <div class="side-item">配送狀態</div>
+                <div class="side-item">對賬差異</div>
+              </div>
+              <div class="workbench-main">
+                <div class="workbench-title">
+                  <h4>高峰訂單處理鏈路</h4>
+                  <span>場景拆解</span>
+                </div>
+                <p class="section-copy">展示從第三方平台、自有入口到門店接單、製作、配送和客服補救的鏈路。</p>
+                <div class="motion-strip" aria-label="場景切換動效關鍵幀">
+                  <div class="motion-frame"><span>問題</span><strong>漏單與重複維護</strong></div>
+                  <div class="motion-frame"><span>能力</span><strong>OMS / DMS 承接</strong></div>
+                  <div class="motion-frame"><span>結果</span><strong>總部追蹤狀態</strong></div>
+                </div>
+                <div class="board-steps">
+                  <div class="flow-step"><span>問題</span><strong>訂單高峰</strong><p>入口多、門店壓力高，異常需要及時暴露。</p></div>
+                  <div class="flow-step"><span>能力</span><strong>OMS + DMS</strong><p>統一接單與履約狀態，減少人工切換。</p></div>
+                  <div class="flow-step"><span>結果</span><strong>數據回流</strong><p>總部按渠道、門店、時段追蹤營運表現。</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-list">
+              <div>承接能力：OMS、Menu Center、DMS / iDMS、財務對賬。</div>
+              <div>下一步：查看平台能力或預約相似場景演示。</div>
+            </div>
+            <div class="hero-actions">
+              <a class="button primary" href="../../../T27/output/stitch-ready-low-fidelity/demo.html">預約相似場景演示</a>
+              <a class="button" href="../../../T27/output/stitch-ready-low-fidelity/customers.html">查看客戶案例</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section soft">
+        <div class="container next-step">
+          <div>
+            <p class="eyebrow">下一步</p>
+            <h2>把相似營運問題帶到演示流程中確認</h2>
+            <p class="section-copy">若你已確認問題位置，可以進一步查看平台能力，或預約相似場景演示讓團隊按現況拆解。</p>
+            <div class="hero-actions">
+              <a class="button primary" href="../../../T27/output/stitch-ready-low-fidelity/demo.html">預約相似場景演示</a>
+              <a class="button light" href="../../../T27/output/stitch-ready-low-fidelity/platform.html">查看平台能力</a>
+            </div>
+          </div>
+          <div class="cta-panel">
+            <div class="mini-flow">
+              <div class="mini-row"><strong>外賣平台</strong><span>多入口訂單進入</span><div class="status">待接單</div></div>
+              <div class="mini-row"><strong>門店接單</strong><span>接單、打印、退款、取消</span><div class="status">製作中</div></div>
+              <div class="mini-row"><strong>餐道 OMS</strong><span>統一處理訂單狀態和異常</span><div class="status">處理中</div></div>
+              <div class="mini-row"><strong>配送履約</strong><span>DMS / iDMS 回傳履約狀態</span><div class="status">配送中</div></div>
+              <div class="mini-row"><strong>對賬分析</strong><span>財務對賬追蹤差異</span><div class="status">回流</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <img src="../../../../assets/logo/candao-blue-logo.svg" alt="餐道">
+            <p>餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector</p>
+          </div>
+          <nav class="footer-links" aria-label="頁尾導航">
+            <a href="../../../T27/output/stitch-ready-low-fidelity/home.html">首頁</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/solutions.html">解決方案</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/platform.html">平台</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/integrations.html">整合能力</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/customers.html">客戶案例</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/resources.html">資源</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/about.html">關於餐道</a>
+            <a href="../../../T27/output/stitch-ready-low-fidelity/demo.html">預約演示</a>
+          </nav>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

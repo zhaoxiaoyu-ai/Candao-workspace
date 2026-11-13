@@ -1,0 +1,20 @@
+{
+  "suite": "T45 demo sequential Stitch visible copy QA",
+  "items": [
+    {
+      "id": "t45-demo-demo-3215bd49b04244d5ba8efc7f9f97e250-after-edit",
+      "locale": "zh-Hant",
+      "role": "品牌决策者 / 总部运营 / IT / 销售",
+      "page_task": "收集演示意图、品牌资料、系统现况和主要问题",
+      "component_type": "stitch_high_fidelity_candidate_visible_copy",
+      "text": "餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n繁中 / EN\n預約產品演示\n預約餐道產品演示前，先告訴我們你的營運場景\n請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。我們會根據場景安排 OMS、DMS、iDMS、CDBI 或接入演示。\nassignment\n演示需求摘要\n意圖\n產品演示\n推薦模組\nOMS、DMS / iDMS、CDBI、AMS / Connector\n下一步\n提交後由團隊按場景安排演示。\n步驟 1 - 選擇聯絡意圖\n評估訂單、門店、配送、會員、數據或對賬能力。\ncheck_circle\n產品演示\n了解合作範圍、場景適配和後續安排。\n銷售洽詢\n討論報價、合約及客製化需求。\n支援查詢\n既有客戶或導入中團隊提交營運、技術或日常問題。\n步驟 2 - 補充品牌與系統現況\n公司 / 品牌名稱\n市場 / 地區\n門店規模\n1-10 間\n11-50 間\n50 間以上\n你的角色\n品牌決策者\n總部營運\nIT / 集成\n配送 / 財務\n目前渠道\n已使用系統\n主要需要處理的問題\n提交演示需求\n既有客戶支援\n需求分流視圖\n01\n業態與地區\n由表單填入\n提交線索品牌決策者或營運負責人補充現況。\n02\n現有系統\nPOS / ERP\n需求分流銷售、方案或技術團隊按問題類型承接。\n03\n推薦演示\nOMS / iDMS\n安排演示以 OMS、DMS / iDMS、CDBI 或接入方案為主線。\n根據選擇推薦演示模組\n提交現況\narrow_forward\n判斷模組\narrow_forward\n安排演示\ncheck_circle\n多平台訂單：OMS / COMS / SOMS。\ncheck_circle\n配送履約：DMS / iDMS。\ncheck_circle\n數據與對賬：CDBI / Finance Center。\ncheck_circle\n接入評估：AMS / Connector。\n提交後，團隊會依據你的業態、門店規模、現有系統和主要問題安排合適的演示模組。\n餐道\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\nSaaS\niDMS\nAMS / Connector\n隱私政策\n服務條款\n關於餐道\n預約演示\n© 2024 餐道 Candao. All Rights Reserved.\n",
+      "must_include": [
+        "餐道",
+        "OMS",
+        "DMS / iDMS",
+        "CDBI",
+        "AMS / Connector"
+      ]
+    }
+  ]
+}

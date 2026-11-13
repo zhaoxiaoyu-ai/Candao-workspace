@@ -1,0 +1,493 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "page": "about",
+  "target": "projects/candao-international-website/tasks/T45/output/stitch-output/about-a452fefebffb4ac5972b3fa25e1f1c2f.html",
+  "stem": "about-a452fefebffb4ac5972b3fa25e1f1c2f",
+  "sourceLowFidelity": "projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/about.html",
+  "hardRequirement": "Content coverage must be 100%. Any missing low-fidelity visible text item fails the candidate.",
+  "summary": {
+    "found": 31,
+    "total": 100,
+    "ratio": 0.31,
+    "status": "fail",
+    "visibleTextCharsNormalized": 470,
+    "riskTermsPresent": [
+      "arrow_forward"
+    ],
+    "forbiddenCaseTermsPresent": []
+  },
+  "missing": [
+    "關於餐道｜餐道",
+    "預約演示",
+    "公司與服務網絡",
+    "導入、培訓與營運支援",
+    "多地團隊共同支援品牌導入、營運、技術協作與長期服務。",
+    "從餐飲系統研發到 O2O 營運平台",
+    "服務交付",
+    "以產品平台、數據分析、配送履約和質量保障支撐長期營運",
+    "公司基礎 2014 年成立，總部廣州。",
+    "產品演進 OMS、CDBI、DMS、AMS / Connector 承接不同營運環節。",
+    "服務交付 Merchant Service、Operation 和 Helpdesk 支撐長期營運。",
+    "產品平台：訂單、餐單、門店、配送和接入。",
+    "數據分析：報表、看板、平台訂單與 OMS 訂單對賬差異。",
+    "質量保障：穩定性和服務交付。",
+    "產品與服務能力",
+    "每一項能力用不同方式說明它承接的營運工作",
+    "OMS、CDBI / Finance Center、DMS / iDMS、AMS / Connector 和 Merchant Service / Helpdesk 各自承接不同營運工作，因此以獨立板塊呈現。",
+    "OMS / COMS / SOMS",
+    "多渠道訂單進入同一個門店處理流程",
+    "OMS 承接外賣平台、自有入口和 Call Center 訂單，讓門店按渠道、訂單狀態、配送狀態和異常類型處理。",
+    "渠道",
+    "狀態",
+    "外賣平台",
+    "待接單通知門店",
+    "自有 H5 / Web",
+    "製作中同步出餐",
+    "配送中追蹤狀態",
+    "退款 / 取消",
+    "異常營運跟進",
+    "平台訂單",
+    "已匹配",
+    "OMS 訂單",
+    "待核對",
+    "金額差異",
+    "需追蹤",
+    "漏單標記",
+    "營運跟進",
+    "CDBI / Finance Center",
+    "報表、看板與對賬差異進入同一個分析視圖",
+    "CDBI 和 Finance Center 支援管理層、營運和財務查看報表、看板、平台訂單與 OMS 訂單對賬差異。",
+    "DMS / iDMS",
+    "配送履約從派單、取餐到第三方轉派可追蹤",
+    "DMS / iDMS 支援自有騎手、第三方配送、派單、SMS 通知、配送異常和履約監控。",
+    "騎手",
+    "第三方",
+    "配送中待派單 → 已派單 → 到店 → 取餐 → 已送達",
+    "自建入口",
+    "POS / KDS",
+    "AMS / ConnectorCRM / 會員",
+    "支付 / ERP",
+    "配送 API",
+    "把外部系統、API、字段和狀態回傳接回餐道",
+    "AMS / Connector 連接外賣平台、自建入口、POS / KDS、CRM、支付、ERP、配送和 API，讓資料回到訂單、會員、配送、數據和對賬流程。",
+    "Merchant Service / Operation / Helpdesk",
+    "產品之外，還需要導入、培訓、營運支援和日常查詢承接",
+    "導入梳理門店、餐單、渠道與現有系統。",
+    "培訓協助門店、營運、配送和支援角色理解流程。",
+    "營運支援跟進訂單、餐單、配送、對賬和異常處理。",
+    "Helpdesk承接日常查詢、接入問題和技術支援。",
+    "質量與可信",
+    "用安全、服務管理和配送系統穩定性支撐長期合作",
+    "ISO 27001資訊安全管理",
+    "ISO 20000IT 服務管理",
+    "DMS吞吐量與可用性看板",
+    "500 Order/secondDMS 並發吞吐量",
+    "99.95% overDMS 平台可用性",
+    "長期合作",
+    "讓餐道團隊了解你的營運場景與系統現況",
+    "查看資源入口"
+  ],
+  "checks": [
+    {
+      "expected": "關於餐道｜餐道",
+      "found": false
+    },
+    {
+      "expected": "首頁",
+      "found": true
+    },
+    {
+      "expected": "解決方案",
+      "found": true
+    },
+    {
+      "expected": "平台",
+      "found": true
+    },
+    {
+      "expected": "整合能力",
+      "found": true
+    },
+    {
+      "expected": "客戶案例",
+      "found": true
+    },
+    {
+      "expected": "資源",
+      "found": true
+    },
+    {
+      "expected": "關於餐道",
+      "found": true
+    },
+    {
+      "expected": "繁中 / EN",
+      "found": true
+    },
+    {
+      "expected": "預約演示",
+      "found": false
+    },
+    {
+      "expected": "專注餐飲與零售 O2O 營運系統的產品與服務團隊",
+      "found": true
+    },
+    {
+      "expected": "餐道成立於 2014 年，總部位於廣州，並在北京、上海、香港設有分支及成都營運中心。團隊以多年餐飲系統研發與外送業務經驗，支援品牌處理訂單、門店、配送、數據和持續營運。",
+      "found": true
+    },
+    {
+      "expected": "2014 成立",
+      "found": true
+    },
+    {
+      "expected": "廣州 總部",
+      "found": true
+    },
+    {
+      "expected": "香港 / 北京 / 上海 / 成都 服務網絡",
+      "found": true
+    },
+    {
+      "expected": "聯絡餐道",
+      "found": true
+    },
+    {
+      "expected": "公司與服務網絡",
+      "found": false
+    },
+    {
+      "expected": "香港",
+      "found": true
+    },
+    {
+      "expected": "北京",
+      "found": true
+    },
+    {
+      "expected": "上海",
+      "found": true
+    },
+    {
+      "expected": "成都營運中心",
+      "found": true
+    },
+    {
+      "expected": "導入、培訓與營運支援",
+      "found": false
+    },
+    {
+      "expected": "多地團隊共同支援品牌導入、營運、技術協作與長期服務。",
+      "found": false
+    },
+    {
+      "expected": "企業旅程",
+      "found": true
+    },
+    {
+      "expected": "從餐飲系統研發到 O2O 營運平台",
+      "found": false
+    },
+    {
+      "expected": "2000Call Center 服務",
+      "found": true
+    },
+    {
+      "expected": "2003大型連鎖門店合作",
+      "found": true
+    },
+    {
+      "expected": "2008第一代 SaaS 3.0",
+      "found": true
+    },
+    {
+      "expected": "2014SaaS 平台 5.0",
+      "found": true
+    },
+    {
+      "expected": "2017OMS 上線",
+      "found": true
+    },
+    {
+      "expected": "2020SaaS 6.0 零售",
+      "found": true
+    },
+    {
+      "expected": "服務交付",
+      "found": false
+    },
+    {
+      "expected": "以產品平台、數據分析、配送履約和質量保障支撐長期營運",
+      "found": false
+    },
+    {
+      "expected": "公司基礎 2014 年成立，總部廣州。",
+      "found": false
+    },
+    {
+      "expected": "產品演進 OMS、CDBI、DMS、AMS / Connector 承接不同營運環節。",
+      "found": false
+    },
+    {
+      "expected": "服務交付 Merchant Service、Operation 和 Helpdesk 支撐長期營運。",
+      "found": false
+    },
+    {
+      "expected": "產品平台：訂單、餐單、門店、配送和接入。",
+      "found": false
+    },
+    {
+      "expected": "數據分析：報表、看板、平台訂單與 OMS 訂單對賬差異。",
+      "found": false
+    },
+    {
+      "expected": "質量保障：穩定性和服務交付。",
+      "found": false
+    },
+    {
+      "expected": "產品與服務能力",
+      "found": false
+    },
+    {
+      "expected": "每一項能力用不同方式說明它承接的營運工作",
+      "found": false
+    },
+    {
+      "expected": "OMS、CDBI / Finance Center、DMS / iDMS、AMS / Connector 和 Merchant Service / Helpdesk 各自承接不同營運工作，因此以獨立板塊呈現。",
+      "found": false
+    },
+    {
+      "expected": "OMS / COMS / SOMS",
+      "found": false
+    },
+    {
+      "expected": "多渠道訂單進入同一個門店處理流程",
+      "found": false
+    },
+    {
+      "expected": "OMS 承接外賣平台、自有入口和 Call Center 訂單，讓門店按渠道、訂單狀態、配送狀態和異常類型處理。",
+      "found": false
+    },
+    {
+      "expected": "渠道",
+      "found": false
+    },
+    {
+      "expected": "門店",
+      "found": true
+    },
+    {
+      "expected": "狀態",
+      "found": false
+    },
+    {
+      "expected": "OMS",
+      "found": true
+    },
+    {
+      "expected": "外賣平台",
+      "found": false
+    },
+    {
+      "expected": "待接單通知門店",
+      "found": false
+    },
+    {
+      "expected": "自有 H5 / Web",
+      "found": false
+    },
+    {
+      "expected": "製作中同步出餐",
+      "found": false
+    },
+    {
+      "expected": "Call Center",
+      "found": true
+    },
+    {
+      "expected": "配送中追蹤狀態",
+      "found": false
+    },
+    {
+      "expected": "退款 / 取消",
+      "found": false
+    },
+    {
+      "expected": "異常營運跟進",
+      "found": false
+    },
+    {
+      "expected": "平台訂單",
+      "found": false
+    },
+    {
+      "expected": "已匹配",
+      "found": false
+    },
+    {
+      "expected": "OMS 訂單",
+      "found": false
+    },
+    {
+      "expected": "待核對",
+      "found": false
+    },
+    {
+      "expected": "金額差異",
+      "found": false
+    },
+    {
+      "expected": "需追蹤",
+      "found": false
+    },
+    {
+      "expected": "漏單標記",
+      "found": false
+    },
+    {
+      "expected": "營運跟進",
+      "found": false
+    },
+    {
+      "expected": "CDBI / Finance Center",
+      "found": false
+    },
+    {
+      "expected": "報表、看板與對賬差異進入同一個分析視圖",
+      "found": false
+    },
+    {
+      "expected": "CDBI 和 Finance Center 支援管理層、營運和財務查看報表、看板、平台訂單與 OMS 訂單對賬差異。",
+      "found": false
+    },
+    {
+      "expected": "DMS / iDMS",
+      "found": false
+    },
+    {
+      "expected": "配送履約從派單、取餐到第三方轉派可追蹤",
+      "found": false
+    },
+    {
+      "expected": "DMS / iDMS 支援自有騎手、第三方配送、派單、SMS 通知、配送異常和履約監控。",
+      "found": false
+    },
+    {
+      "expected": "騎手",
+      "found": false
+    },
+    {
+      "expected": "第三方",
+      "found": false
+    },
+    {
+      "expected": "配送中待派單 → 已派單 → 到店 → 取餐 → 已送達",
+      "found": false
+    },
+    {
+      "expected": "自建入口",
+      "found": false
+    },
+    {
+      "expected": "POS / KDS",
+      "found": false
+    },
+    {
+      "expected": "AMS / ConnectorCRM / 會員",
+      "found": false
+    },
+    {
+      "expected": "支付 / ERP",
+      "found": false
+    },
+    {
+      "expected": "配送 API",
+      "found": false
+    },
+    {
+      "expected": "AMS / Connector",
+      "found": true
+    },
+    {
+      "expected": "把外部系統、API、字段和狀態回傳接回餐道",
+      "found": false
+    },
+    {
+      "expected": "AMS / Connector 連接外賣平台、自建入口、POS / KDS、CRM、支付、ERP、配送和 API，讓資料回到訂單、會員、配送、數據和對賬流程。",
+      "found": false
+    },
+    {
+      "expected": "Merchant Service / Operation / Helpdesk",
+      "found": false
+    },
+    {
+      "expected": "產品之外，還需要導入、培訓、營運支援和日常查詢承接",
+      "found": false
+    },
+    {
+      "expected": "導入梳理門店、餐單、渠道與現有系統。",
+      "found": false
+    },
+    {
+      "expected": "培訓協助門店、營運、配送和支援角色理解流程。",
+      "found": false
+    },
+    {
+      "expected": "營運支援跟進訂單、餐單、配送、對賬和異常處理。",
+      "found": false
+    },
+    {
+      "expected": "Helpdesk承接日常查詢、接入問題和技術支援。",
+      "found": false
+    },
+    {
+      "expected": "質量與可信",
+      "found": false
+    },
+    {
+      "expected": "用安全、服務管理和配送系統穩定性支撐長期合作",
+      "found": false
+    },
+    {
+      "expected": "ISO 27001資訊安全管理",
+      "found": false
+    },
+    {
+      "expected": "ISO 20000IT 服務管理",
+      "found": false
+    },
+    {
+      "expected": "DMS吞吐量與可用性看板",
+      "found": false
+    },
+    {
+      "expected": "500 Order/secondDMS 並發吞吐量",
+      "found": false
+    },
+    {
+      "expected": "99.95% overDMS 平台可用性",
+      "found": false
+    },
+    {
+      "expected": "長期合作",
+      "found": false
+    },
+    {
+      "expected": "讓餐道團隊了解你的營運場景與系統現況",
+      "found": false
+    },
+    {
+      "expected": "預約產品演示",
+      "found": true
+    },
+    {
+      "expected": "查看資源入口",
+      "found": false
+    },
+    {
+      "expected": "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector",
+      "found": true
+    }
+  ],
+  "visibleText": "餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中 / EN\n預約產品演示\n專注餐飲與零售 O2O 營運系統的產品與服務團隊\n餐道成立於 2014 年，總部位於廣州，並在北京、上海、香港設有分支及成都營運中心。團隊以多年餐飲系統研發與外送業務經驗，支援品牌處理訂單、門店、配送、數據和持續營運。\n聯絡餐道\narrow_forward\ncorporate_fare\n廣州 總部\n2014 成立\nhub\n香港 / 北京 / 上海 / 成都 服務網絡\n企業旅程\n00\n2000\nCall Center 服務\n03\n2003\n大型連鎖門店合作\n08\n2008\n第一代 SaaS 3.0\n14\n2014\nSaaS 平台 5.0\n17\n2017\nOMS 上線\n20\n2020\nSaaS 6.0 零售\n餐道\n© 2024 餐道. All Rights Reserved. 餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\nOMS\nDMS\nCDBI"
+}

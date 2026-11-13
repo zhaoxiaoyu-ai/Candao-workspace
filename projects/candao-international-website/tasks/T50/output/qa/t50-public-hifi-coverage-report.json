@@ -1,0 +1,103 @@
+{
+  "suite": "t50-public-hifi-qa",
+  "html": "projects/candao-international-website/tasks/T50/output/prototype/index.html",
+  "contract": "projects/candao-international-website/tasks/T50/output/contracts/t50-public-hifi-contract.json",
+  "screenshot": "projects/candao-international-website/tasks/T50/output/screenshots/t50-public-hifi-1440-full.png",
+  "visibleUnion": "projects/candao-international-website/tasks/T50/output/qa/t50-visible-text-union-2026-08-27.txt",
+  "states_checked": 31,
+  "required_default_total": 58,
+  "required_default_present": 58,
+  "required_interaction_total": 99,
+  "required_interaction_present": 99,
+  "missing_default": [],
+  "missing_interaction": [],
+  "forbidden_by_state": [],
+  "overflow_states": [],
+  "image_failures": [],
+  "missing_modules": [],
+  "style_risks": [],
+  "render_diagnostics": {
+    "title": "接入評估中心｜餐道",
+    "lang": "zh-Hant",
+    "documentWidth": 1440,
+    "documentHeight": 5108,
+    "imageCount": 2,
+    "images": [
+      {
+        "src": "file:///Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T50/output/prototype/candao-blue-logo.svg",
+        "complete": true,
+        "naturalWidth": 112,
+        "naturalHeight": 32
+      },
+      {
+        "src": "file:///Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T50/output/prototype/candao-blue-logo.svg",
+        "complete": true,
+        "naturalWidth": 112,
+        "naturalHeight": 32
+      }
+    ],
+    "backgroundImageCount": 8,
+    "moduleSelectorCounts": [
+      {
+        "selector": ".topbar",
+        "count": 1
+      },
+      {
+        "selector": ".hero",
+        "count": 1
+      },
+      {
+        "selector": ".hero-shell",
+        "count": 1
+      },
+      {
+        "selector": "#interactive-workbench",
+        "count": 1
+      },
+      {
+        "selector": ".stepper",
+        "count": 1
+      },
+      {
+        "selector": ".scenario-panel",
+        "count": 1
+      },
+      {
+        "selector": ".operator-panel",
+        "count": 1
+      },
+      {
+        "selector": ".summary-panel",
+        "count": 1
+      },
+      {
+        "selector": "#proof-router",
+        "count": 1
+      },
+      {
+        "selector": ".view-tabs",
+        "count": 1
+      },
+      {
+        "selector": ".proof-band",
+        "count": 1
+      },
+      {
+        "selector": "#demo-summary",
+        "count": 1
+      },
+      {
+        "selector": ".footer",
+        "count": 1
+      }
+    ],
+    "controls": {
+      "scenarios": 5,
+      "heroChoices": 5,
+      "steps": 5,
+      "views": 4
+    }
+  },
+  "status": "pass",
+  "failures": []
+}

@@ -1,0 +1,95 @@
+{
+  "task": "T59",
+  "status": "pass",
+  "checked_at": "2026-09-02",
+  "figma": {
+    "file_key": "BMXIuVRzSUUt9YNhVAQA6K",
+    "source_node": {
+      "id": "447:8876",
+      "name": "解决方案",
+      "source_retained": true,
+      "source_sample": [
+        "按餐飲 O2O 營運問題",
+        "找到可落地的解決方案",
+        "外賣平台、自有平台、門店接單、配送和對帳分散在多個後台，品牌需要找到哪個鏈路流程造成漏單、重複維護或非常態的壓力"
+      ]
+    },
+    "previous_english_node": {
+      "id": "812:2",
+      "name": "Solutions / Desktop 1440 / EN",
+      "retained": true
+    },
+    "target_node": {
+      "id": "842:2",
+      "name": "Solutions / Desktop 1440 / EN / Revision 2",
+      "x": 17994,
+      "y": 7521,
+      "width": 1440,
+      "height": 3744
+    }
+  },
+  "text_checks": {
+    "visible_text_node_count": 84,
+    "unique_visible_text_count": 75,
+    "editable_cjk_residual_count": 1,
+    "allowed_cjk_residuals": [
+      {
+        "id": "842:42",
+        "text": "繁中 / EN",
+        "reason": "language switch control"
+      }
+    ],
+    "forbidden_terms": {
+      "Finance Center": 0,
+      "Business Center": 0,
+      "Data Center": 0
+    },
+    "brand_case_errors": 0,
+    "unapproved_metric_like_claims": 0,
+    "missing_required_text_count": 0
+  },
+  "layout_checks": {
+    "frame_overflow_count": 0,
+    "parent_overflow_count": 0,
+    "button_overlap_count": 0
+  },
+  "required_text_checks": {
+    "Match F&B O2O Problems": "present",
+    "to Practical Solutions": "present",
+    "Operating Problems to Solve": "present",
+    "Choose the Scenario Closest to Your Operation": "present",
+    "Bring Multi-Platform Delivery Orders Into One Workflow": "present",
+    "Capabilities: OMS, Menu Center, DMS / iDMS, financial reconciliation": "present",
+    "Bring This Scenario Into a Working Demo": "present",
+    "View Customer Stories": "present"
+  },
+  "layout_fixes": {
+    "shortened_layout_sensitive_copy": [
+      "Channel Order Gaps",
+      "Store Intake Gaps",
+      "Delivery Resource Gaps",
+      "Track orders, store intake, printouts, refunds, cancellations, delivery status, and financial returns."
+    ],
+    "fixed_width_text_nodes": {
+      "842:55": 960,
+      "842:116": 960,
+      "842:135": 674,
+      "842:195": 546
+    },
+    "expanded_parent_nodes": [
+      "842:54",
+      "842:63",
+      "842:79",
+      "842:96",
+      "842:115"
+    ],
+    "repositioned_buttons": [
+      "842:200"
+    ]
+  },
+  "screenshot": {
+    "path": "tasks/T59/output/screenshots/t59-solutions-en-revision2-figma-842-2.png",
+    "pixel_width": 1444,
+    "pixel_height": 3745
+  }
+}

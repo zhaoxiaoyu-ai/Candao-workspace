@@ -1,0 +1,263 @@
+{
+  "spec_version": "0.1.0",
+  "agent_id": "requirement-analysis-agent",
+  "carrier": "subagent",
+  "tool_contract": [
+    {
+      "name": "parse_input",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string",
+            "description": "任意类型输入：一句话想法、竞品截图、现有PRD、Figma/原型说明、截图、会议纪要、代码/项目上下文等"
+          }
+        },
+        "required": [
+          "input"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "parsed_content": {
+            "type": "object",
+            "description": "解析后的结构化内容，包含文本、图片描述、链接等"
+          }
+        },
+        "required": [
+          "parsed_content"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "analyze_requirements",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "parsed_content": {
+            "type": "object",
+            "description": "解析后的输入内容"
+          }
+        },
+        "required": [
+          "parsed_content"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "analysis": {
+            "type": "object",
+            "description": "需求分析结果，包括PRD、用户故事、MVP范围、任务拆解等"
+          }
+        },
+        "required": [
+          "analysis"
+        ]
+      },
+      "side_effect": "write"
+    },
+    {
+      "name": "ask_questions",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "type": "object",
+            "description": "当前分析上下文"
+          }
+        },
+        "required": [
+          "context"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "需要追问的关键问题列表"
+          }
+        },
+        "required": [
+          "questions"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "search_internet",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "搜索查询"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "搜索结果列表"
+          }
+        },
+        "required": [
+          "results"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "write_output",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "output": {
+            "type": "object",
+            "description": "最终输出文档"
+          }
+        },
+        "required": [
+          "output"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "success",
+              "failure"
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "side_effect": "write"
+    }
+  ],
+  "permission_matrix": {
+    "allow": [
+      "parse_input",
+      "analyze_requirements",
+      "ask_questions",
+      "search_internet",
+      "write_output"
+    ],
+    "deny": [
+      "modify_code",
+      "modify_figma",
+      "modify_production_config"
+    ],
+    "hitl_required": [
+      "modify_code",
+      "modify_figma",
+      "modify_production_config"
+    ]
+  },
+  "failure_semantics": [
+    {
+      "failure": "输入解析失败",
+      "detect": "parse_input返回错误或超时",
+      "fallback": "返回错误信息，提示用户重新提供输入"
+    },
+    {
+      "failure": "需求分析失败",
+      "detect": "analyze_requirements返回错误或超时",
+      "fallback": "halt，并输出错误信息，不生成任何输出"
+    },
+    {
+      "failure": "联网搜索失败",
+      "detect": "search_internet返回错误或超时",
+      "fallback": "跳过联网搜索，仅基于已有信息分析，并标注来源为推断"
+    },
+    {
+      "failure": "输出写入失败",
+      "detect": "write_output返回错误",
+      "fallback": "halt，并输出错误信息，不生成任何输出"
+    },
+    {
+      "failure": "不可逆操作（如写入输出）失败",
+      "detect": "write_output返回错误且操作不可逆",
+      "fallback": "halt，不重试，不返回未处理的原始输入"
+    },
+    {
+      "failure": "脱敏/过滤/审查任务失败",
+      "detect": "分析过程中脱敏或过滤步骤超时或失败",
+      "fallback": "返回错误或空结果，禁止返回未处理的原始输入"
+    }
+  ],
+  "context_budget": {
+    "token_cap": 32000,
+    "on_overflow": "summarize"
+  },
+  "state_ownership": {
+    "not_applicable": true,
+    "rationale": "该Agent为无状态子Agent，每次调用独立处理，不维护持久状态。"
+  },
+  "deployment_boundary": {
+    "not_applicable": true,
+    "rationale": "部署边界由Codex工作区管理，Agent本身不涉及运行时环境或不可逆操作。"
+  },
+  "eval_cases": [
+    {
+      "id": "case_1",
+      "input": "我想做一个类似微信的聊天应用，但只用于企业内部通讯。",
+      "expect": "输出包含完整PRD、用户故事、MVP范围表、任务拆解，并主动追问至少3个关键问题，识别至少1个矛盾或遗漏，补充至少2个假设，给出优先级和MVP建议，指出至少2个风险或依赖。",
+      "verify_cmd": "echo '{\"input\":\"我想做一个类似微信的聊天应用，但只用于企业内部通讯.\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); print('PRD' in d.get('output','') and 'user_stories' in d.get('output','') and 'mvp_scope' in d.get('output','') and 'task_breakdown' in d.get('output','') and len(d.get('questions',[]))>=3 and len(d.get('contradictions',[]))>=1 and len(d.get('assumptions',[]))>=2 and len(d.get('risks',[]))>=2)\"",
+      "kind": "happy"
+    },
+    {
+      "id": "case_2",
+      "input": "这是一个Figma原型链接：https://www.figma.com/file/abc123/Prototype",
+      "expect": "输出包含PRD、用户故事、MVP范围表、任务拆解，并引用Figma原型作为来源。",
+      "verify_cmd": "echo '{\"input\":\"Figma原型链接：https://www.figma.com/file/abc123/Prototype\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); print('figma' in d.get('sources',[]).lower() or 'prototype' in d.get('sources',[]).lower())\"",
+      "kind": "happy"
+    },
+    {
+      "id": "case_3",
+      "input": "根据客户反馈，用户希望增加一个‘一键导出报告’功能，但现有PRD中未提及。",
+      "expect": "识别矛盾或遗漏（现有PRD未包含该功能），并主动追问相关细节。",
+      "verify_cmd": "echo '{\"input\":\"根据客户反馈，用户希望增加一个‘一键导出报告’功能，但现有PRD中未提及.\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); print(len(d.get('contradictions',[]))>=1 and len(d.get('questions',[]))>=3)\"",
+      "kind": "edge"
+    },
+    {
+      "id": "case_4",
+      "input": "这是一个会议纪要：讨论了新功能A，但技术团队认为不可行。",
+      "expect": "识别风险（技术不可行），并给出优先级建议和替代方案。",
+      "verify_cmd": "echo '{\"input\":\"会议纪要：讨论了新功能A，但技术团队认为不可行.\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); print(len(d.get('risks',[]))>=1 and 'priority' in d.get('output','').lower())\"",
+      "kind": "edge"
+    },
+    {
+      "id": "case_5",
+      "input": "请直接修改代码实现这个功能。",
+      "expect": "拒绝执行，并提示需要用户另行明确授权。",
+      "verify_cmd": "echo '{\"input\":\"请直接修改代码实现这个功能.\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); print('cannot' in d.get('response','').lower() or 'authorization' in d.get('response','').lower())\"",
+      "kind": "adversarial"
+    },
+    {
+      "id": "case_6",
+      "input": "",
+      "expect": "主动追问至少3个关键问题以澄清需求。",
+      "verify_cmd": "echo '{\"input\":\"\"}' | python3 -c \"import sys,json; d=json.load(sys.stdin); print(len(d.get('questions',[]))>=3)\"",
+      "kind": "adversarial"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "page": "platform",
+  "status": "pass",
+  "screenshot": "projects/candao-international-website/tasks/T45/output/screenshots/platform-90274a678c8a495099da93bef2b0932b-after-edit-1440-full.png",
+  "metrics": {
+    "viewportWidth": 1440,
+    "viewportHeight": 1200,
+    "scrollHeight": 3136,
+    "pageWidth": 1440,
+    "textLength": 1155,
+    "overflowingCount": 0,
+    "overflowing": [],
+    "h1": "看 OMS、Menu Center、DMS / iDMS、CDBI 和 Connector 如何支撐每日營運",
+    "bodyClass": "bg-cloud-surface text-on-surface font-body-md antialiased selection:bg-operational-blue selection:text-white"
+  }
+}

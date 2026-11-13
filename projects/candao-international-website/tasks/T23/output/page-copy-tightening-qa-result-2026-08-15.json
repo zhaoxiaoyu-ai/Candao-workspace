@@ -1,0 +1,100 @@
+{
+  "suite": "t23-page-copy-business-audit-and-tightening-2026-08-15",
+  "total": 13,
+  "passed": 13,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "home-hero",
+      "component_type": "page_hero",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "solutions-overview",
+      "component_type": "page_overview",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform-capability-map",
+      "component_type": "capability_map",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform-order-processing",
+      "component_type": "backend_preview",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "integrations-connector",
+      "component_type": "integration_map",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "customers-performance-metrics",
+      "component_type": "metric_cards",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "customers-named-cases",
+      "component_type": "case_cards",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "customers-vertical-cases",
+      "component_type": "case_summary",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "resources-access-guide",
+      "component_type": "resource_card",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "about-company",
+      "component_type": "company_profile",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "about-security-quality",
+      "component_type": "trust_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo-form-routing",
+      "component_type": "form_help",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo-after-submit",
+      "component_type": "success_state",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

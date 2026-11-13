@@ -1,0 +1,47 @@
+{
+  "suite": "domain-copy-failure-demo-2026-08-15",
+  "items": [
+    {
+      "id": "generic-copy",
+      "component_type": "page_description",
+      "role": "总部运营",
+      "page_task": "说明产品价值",
+      "text": "帮助企业数字化转型，打造智慧生态，提升用户体验。",
+      "must_include": [
+        "订单",
+        "门店",
+        "配送"
+      ],
+      "autofix_changes": []
+    },
+    {
+      "id": "undefined-metric",
+      "component_type": "metric_card",
+      "role": "决策者",
+      "page_task": "证明稳定性",
+      "text": "平台稳定性 99.99%，支持 24/7 SLA。",
+      "must_include": [
+        "来源"
+      ],
+      "autofix_changes": []
+    },
+    {
+      "id": "locked-copy-rewritten",
+      "component_type": "prototype_copy",
+      "role": "财务",
+      "page_task": "原型构建",
+      "approved_and_locked": true,
+      "locked_text": "比对平台订单与 Candao OMS 订单，识别金额错误、状态错误和漏单。",
+      "text": "查看对账结果。",
+      "source_text": "比对平台订单与 Candao OMS 订单，识别金额错误、状态错误和漏单。",
+      "must_include": [
+        "平台订单",
+        "Candao OMS 订单",
+        "金额错误",
+        "状态错误",
+        "漏单"
+      ],
+      "autofix_changes": []
+    }
+  ]
+}

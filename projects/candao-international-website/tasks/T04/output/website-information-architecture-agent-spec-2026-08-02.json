@@ -1,0 +1,424 @@
+{
+  "spec_version": "0.1.0",
+  "agent_id": "website-ia-architect",
+  "carrier": "subagent",
+  "tool_contract": [
+    {
+      "name": "generate_ia_document",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "goal": {
+            "type": "string"
+          },
+          "users": {
+            "type": "string"
+          },
+          "io": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "string"
+              },
+              "output": {
+                "type": "string"
+              }
+            }
+          },
+          "boundary": {
+            "type": "object",
+            "properties": {
+              "should_do": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "should_not_do": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "success_criteria": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "open_questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "goal",
+          "users",
+          "io",
+          "boundary",
+          "success_criteria",
+          "open_questions"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "document_path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "document_path",
+          "content"
+        ]
+      },
+      "side_effect": "write"
+    }
+  ],
+  "permission_matrix": {
+    "allow": [
+      "generate_ia_document"
+    ],
+    "deny": [
+      "modify_t03_strategy",
+      "access_unconfirmed_data",
+      "generate_final_copy"
+    ],
+    "hitl_required": [
+      "generate_ia_document"
+    ]
+  },
+  "failure_semantics": [
+    {
+      "failure": "input_documents_missing",
+      "detect": "required input files T01, T02, T03 not found or unreadable",
+      "fallback": "halt and escalate to human for missing inputs"
+    },
+    {
+      "failure": "output_write_failure",
+      "detect": "unable to write output document to filesystem",
+      "fallback": "halt and escalate, do not retry"
+    },
+    {
+      "failure": "unconfirmed_data_required",
+      "detect": "attempt to include unconfirmed customer logos, scale data, certifications, integration status, pricing, or case specifics",
+      "fallback": "halt and escalate, do not fabricate or default values"
+    },
+    {
+      "failure": "language_violation",
+      "detect": "output contains Simplified Chinese formal web copy instead of internal strategy language",
+      "fallback": "halt and escalate, do not output raw content"
+    }
+  ],
+  "eval_cases": [
+    {
+      "id": "1",
+      "input": {
+        "goal": "基于 T03 冻结的官网定位、菜单目录与产品体系，生成国际官网信息架构与 Sitemap 前置结构，输出《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分及访客路径，并遵守项目输出语言规范与内容约束。",
+        "users": "餐道国际官网重构项目的网站策划、信息架构师、UX 设计师、内容策略师、开发团队及项目管理者，用于指导官网设计与开发。",
+        "io": {
+          "input": "T01《Candao International Website Input Document》、T02《Website Strategy Analysis》、T03《Candao International Website Strategy V1.0》、菜单目录、产品体系。",
+          "output": "《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、每个页面的服务对象、页面目的、核心内容、Phase 1/Phase 2 划分、访客路径，以及结构预留说明。"
+        },
+        "boundary": {
+          "should_do": [
+            "严格基于 T03 冻结的官网定位（Intelligent SaaS Platform for Global Restaurant Operations）进行信息架构设计",
+            "使用简体中文编写内部策略及执行文档，页面英文名称、导航字段、组件名可保留英文",
+            "生成一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分",
+            "设计访客路径：进入官网 → 理解品牌 → 了解产品 → 建立信任 → 提交咨询",
+            "将 Home 作为品牌与转化入口，Solutions 讲场景，Products/Platform 讲能力，Integrations 作为一级战略入口，Contact/Book a Demo 作为转化闭环，Resources 第一阶段低承诺",
+            "对未确认客户 Logo、规模数据、认证、集成状态、Pricing 和案例进行结构预留",
+            "输出《Website Information Architecture》文档"
+          ],
+          "should_not_do": [
+            "禁止重新判断官网定位",
+            "禁止直接搬运 Excel 原始菜单",
+            "禁止重新展开品牌策略分析",
+            "禁止生成最终官网 Copy",
+            "禁止输出简体中文正式网页文案",
+            "禁止在信息架构中写入未确认的客户 Logo、规模数据、认证、集成状态、Pricing 和案例的具体内容"
+          ]
+        },
+        "success_criteria": [
+          "输出文档包含完整的一级导航和二级页面结构",
+          "每个页面均明确服务对象、页面目的、核心内容",
+          "页面关系清晰，体现访客路径",
+          "Phase 1/Phase 2 划分合理，符合资源预留原则",
+          "所有内容遵守语言规范和边界约束",
+          "文档可直接用于后续设计与开发"
+        ],
+        "open_questions": [
+          "是否需要为每个页面提供 wireframe 级别的布局建议？",
+          "Phase 1 和 Phase 2 的具体时间节点或里程碑是否已确定？",
+          "是否需要在信息架构中体现多语言版本（如英语、中文等）的切换逻辑？",
+          "对于 Integrations 页面，是否有已知的集成合作伙伴列表（即使未确认）？",
+          "Resources 第一阶段低承诺的具体内容范围是什么？"
+        ]
+      },
+      "expect": "输出文档包含一级导航、二级页面、页面关系、服务对象、页面目的、核心内容、Phase 划分及访客路径，且遵守所有边界约束。",
+      "verify_cmd": "test -f 'Website_Information_Architecture.md' && grep -q '一级导航' 'Website_Information_Architecture.md' && grep -q 'Phase 1' 'Website_Information_Architecture.md' && grep -q 'Phase 2' 'Website_Information_Architecture.md' && grep -q '访客路径' 'Website_Information_Architecture.md'",
+      "kind": "happy"
+    },
+    {
+      "id": "2",
+      "input": {
+        "goal": "基于 T03 冻结的官网定位、菜单目录与产品体系，生成国际官网信息架构与 Sitemap 前置结构，输出《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分及访客路径，并遵守项目输出语言规范与内容约束。",
+        "users": "餐道国际官网重构项目的网站策划、信息架构师、UX 设计师、内容策略师、开发团队及项目管理者，用于指导官网设计与开发。",
+        "io": {
+          "input": "T01《Candao International Website Input Document》、T02《Website Strategy Analysis》、T03《Candao International Website Strategy V1.0》、菜单目录、产品体系。",
+          "output": "《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、每个页面的服务对象、页面目的、核心内容、Phase 1/Phase 2 划分、访客路径，以及结构预留说明。"
+        },
+        "boundary": {
+          "should_do": [
+            "严格基于 T03 冻结的官网定位（Intelligent SaaS Platform for Global Restaurant Operations）进行信息架构设计",
+            "使用简体中文编写内部策略及执行文档，页面英文名称、导航字段、组件名可保留英文",
+            "生成一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分",
+            "设计访客路径：进入官网 → 理解品牌 → 了解产品 → 建立信任 → 提交咨询",
+            "将 Home 作为品牌与转化入口，Solutions 讲场景，Products/Platform 讲能力，Integrations 作为一级战略入口，Contact/Book a Demo 作为转化闭环，Resources 第一阶段低承诺",
+            "对未确认客户 Logo、规模数据、认证、集成状态、Pricing 和案例进行结构预留",
+            "输出《Website Information Architecture》文档"
+          ],
+          "should_not_do": [
+            "禁止重新判断官网定位",
+            "禁止直接搬运 Excel 原始菜单",
+            "禁止重新展开品牌策略分析",
+            "禁止生成最终官网 Copy",
+            "禁止输出简体中文正式网页文案",
+            "禁止在信息架构中写入未确认的客户 Logo、规模数据、认证、集成状态、Pricing 和案例的具体内容"
+          ]
+        },
+        "success_criteria": [
+          "输出文档包含完整的一级导航和二级页面结构",
+          "每个页面均明确服务对象、页面目的、核心内容",
+          "页面关系清晰，体现访客路径",
+          "Phase 1/Phase 2 划分合理，符合资源预留原则",
+          "所有内容遵守语言规范和边界约束",
+          "文档可直接用于后续设计与开发"
+        ],
+        "open_questions": [
+          "是否需要为每个页面提供 wireframe 级别的布局建议？",
+          "Phase 1 和 Phase 2 的具体时间节点或里程碑是否已确定？",
+          "是否需要在信息架构中体现多语言版本（如英语、中文等）的切换逻辑？",
+          "对于 Integrations 页面，是否有已知的集成合作伙伴列表（即使未确认）？",
+          "Resources 第一阶段低承诺的具体内容范围是什么？"
+        ]
+      },
+      "expect": "文档中每个页面均包含服务对象、页面目的、核心内容字段。",
+      "verify_cmd": "grep -c '服务对象' 'Website_Information_Architecture.md' && grep -c '页面目的' 'Website_Information_Architecture.md' && grep -c '核心内容' 'Website_Information_Architecture.md'",
+      "kind": "happy"
+    },
+    {
+      "id": "3",
+      "input": {
+        "goal": "基于 T03 冻结的官网定位、菜单目录与产品体系，生成国际官网信息架构与 Sitemap 前置结构，输出《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分及访客路径，并遵守项目输出语言规范与内容约束。",
+        "users": "餐道国际官网重构项目的网站策划、信息架构师、UX 设计师、内容策略师、开发团队及项目管理者，用于指导官网设计与开发。",
+        "io": {
+          "input": "T01《Candao International Website Input Document》、T02《Website Strategy Analysis》、T03《Candao International Website Strategy V1.0》、菜单目录、产品体系。",
+          "output": "《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、每个页面的服务对象、页面目的、核心内容、Phase 1/Phase 2 划分、访客路径，以及结构预留说明。"
+        },
+        "boundary": {
+          "should_do": [
+            "严格基于 T03 冻结的官网定位（Intelligent SaaS Platform for Global Restaurant Operations）进行信息架构设计",
+            "使用简体中文编写内部策略及执行文档，页面英文名称、导航字段、组件名可保留英文",
+            "生成一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分",
+            "设计访客路径：进入官网 → 理解品牌 → 了解产品 → 建立信任 → 提交咨询",
+            "将 Home 作为品牌与转化入口，Solutions 讲场景，Products/Platform 讲能力，Integrations 作为一级战略入口，Contact/Book a Demo 作为转化闭环，Resources 第一阶段低承诺",
+            "对未确认客户 Logo、规模数据、认证、集成状态、Pricing 和案例进行结构预留",
+            "输出《Website Information Architecture》文档"
+          ],
+          "should_not_do": [
+            "禁止重新判断官网定位",
+            "禁止直接搬运 Excel 原始菜单",
+            "禁止重新展开品牌策略分析",
+            "禁止生成最终官网 Copy",
+            "禁止输出简体中文正式网页文案",
+            "禁止在信息架构中写入未确认的客户 Logo、规模数据、认证、集成状态、Pricing 和案例的具体内容"
+          ]
+        },
+        "success_criteria": [
+          "输出文档包含完整的一级导航和二级页面结构",
+          "每个页面均明确服务对象、页面目的、核心内容",
+          "页面关系清晰，体现访客路径",
+          "Phase 1/Phase 2 划分合理，符合资源预留原则",
+          "所有内容遵守语言规范和边界约束",
+          "文档可直接用于后续设计与开发"
+        ],
+        "open_questions": [
+          "是否需要为每个页面提供 wireframe 级别的布局建议？",
+          "Phase 1 和 Phase 2 的具体时间节点或里程碑是否已确定？",
+          "是否需要在信息架构中体现多语言版本（如英语、中文等）的切换逻辑？",
+          "对于 Integrations 页面，是否有已知的集成合作伙伴列表（即使未确认）？",
+          "Resources 第一阶段低承诺的具体内容范围是什么？"
+        ]
+      },
+      "expect": "文档中不包含任何未确认的客户 Logo、规模数据、认证、集成状态、Pricing 或案例的具体内容。",
+      "verify_cmd": "! grep -E '客户Logo|规模数据|认证|集成状态|Pricing|案例' 'Website_Information_Architecture.md' | grep -v '预留'",
+      "kind": "adversarial"
+    },
+    {
+      "id": "4",
+      "input": {
+        "goal": "基于 T03 冻结的官网定位、菜单目录与产品体系，生成国际官网信息架构与 Sitemap 前置结构，输出《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分及访客路径，并遵守项目输出语言规范与内容约束。",
+        "users": "餐道国际官网重构项目的网站策划、信息架构师、UX 设计师、内容策略师、开发团队及项目管理者，用于指导官网设计与开发。",
+        "io": {
+          "input": "T01《Candao International Website Input Document》、T02《Website Strategy Analysis》、T03《Candao International Website Strategy V1.0》、菜单目录、产品体系。",
+          "output": "《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、每个页面的服务对象、页面目的、核心内容、Phase 1/Phase 2 划分、访客路径，以及结构预留说明。"
+        },
+        "boundary": {
+          "should_do": [
+            "严格基于 T03 冻结的官网定位（Intelligent SaaS Platform for Global Restaurant Operations）进行信息架构设计",
+            "使用简体中文编写内部策略及执行文档，页面英文名称、导航字段、组件名可保留英文",
+            "生成一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分",
+            "设计访客路径：进入官网 → 理解品牌 → 了解产品 → 建立信任 → 提交咨询",
+            "将 Home 作为品牌与转化入口，Solutions 讲场景，Products/Platform 讲能力，Integrations 作为一级战略入口，Contact/Book a Demo 作为转化闭环，Resources 第一阶段低承诺",
+            "对未确认客户 Logo、规模数据、认证、集成状态、Pricing 和案例进行结构预留",
+            "输出《Website Information Architecture》文档"
+          ],
+          "should_not_do": [
+            "禁止重新判断官网定位",
+            "禁止直接搬运 Excel 原始菜单",
+            "禁止重新展开品牌策略分析",
+            "禁止生成最终官网 Copy",
+            "禁止输出简体中文正式网页文案",
+            "禁止在信息架构中写入未确认的客户 Logo、规模数据、认证、集成状态、Pricing 和案例的具体内容"
+          ]
+        },
+        "success_criteria": [
+          "输出文档包含完整的一级导航和二级页面结构",
+          "每个页面均明确服务对象、页面目的、核心内容",
+          "页面关系清晰，体现访客路径",
+          "Phase 1/Phase 2 划分合理，符合资源预留原则",
+          "所有内容遵守语言规范和边界约束",
+          "文档可直接用于后续设计与开发"
+        ],
+        "open_questions": [
+          "是否需要为每个页面提供 wireframe 级别的布局建议？",
+          "Phase 1 和 Phase 2 的具体时间节点或里程碑是否已确定？",
+          "是否需要在信息架构中体现多语言版本（如英语、中文等）的切换逻辑？",
+          "对于 Integrations 页面，是否有已知的集成合作伙伴列表（即使未确认）？",
+          "Resources 第一阶段低承诺的具体内容范围是什么？"
+        ]
+      },
+      "expect": "文档中一级导航包含 Home、Solutions、Products/Platform、Integrations、Resources、Contact/Book a Demo。",
+      "verify_cmd": "grep -q 'Home' 'Website_Information_Architecture.md' && grep -q 'Solutions' 'Website_Information_Architecture.md' && grep -q 'Products' 'Website_Information_Architecture.md' && grep -q 'Integrations' 'Website_Information_Architecture.md' && grep -q 'Resources' 'Website_Information_Architecture.md' && grep -q 'Contact' 'Website_Information_Architecture.md'",
+      "kind": "happy"
+    },
+    {
+      "id": "5",
+      "input": {
+        "goal": "基于 T03 冻结的官网定位、菜单目录与产品体系，生成国际官网信息架构与 Sitemap 前置结构，输出《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分及访客路径，并遵守项目输出语言规范与内容约束。",
+        "users": "餐道国际官网重构项目的网站策划、信息架构师、UX 设计师、内容策略师、开发团队及项目管理者，用于指导官网设计与开发。",
+        "io": {
+          "input": "T01《Candao International Website Input Document》、T02《Website Strategy Analysis》、T03《Candao International Website Strategy V1.0》、菜单目录、产品体系。",
+          "output": "《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、每个页面的服务对象、页面目的、核心内容、Phase 1/Phase 2 划分、访客路径，以及结构预留说明。"
+        },
+        "boundary": {
+          "should_do": [
+            "严格基于 T03 冻结的官网定位（Intelligent SaaS Platform for Global Restaurant Operations）进行信息架构设计",
+            "使用简体中文编写内部策略及执行文档，页面英文名称、导航字段、组件名可保留英文",
+            "生成一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分",
+            "设计访客路径：进入官网 → 理解品牌 → 了解产品 → 建立信任 → 提交咨询",
+            "将 Home 作为品牌与转化入口，Solutions 讲场景，Products/Platform 讲能力，Integrations 作为一级战略入口，Contact/Book a Demo 作为转化闭环，Resources 第一阶段低承诺",
+            "对未确认客户 Logo、规模数据、认证、集成状态、Pricing 和案例进行结构预留",
+            "输出《Website Information Architecture》文档"
+          ],
+          "should_not_do": [
+            "禁止重新判断官网定位",
+            "禁止直接搬运 Excel 原始菜单",
+            "禁止重新展开品牌策略分析",
+            "禁止生成最终官网 Copy",
+            "禁止输出简体中文正式网页文案",
+            "禁止在信息架构中写入未确认的客户 Logo、规模数据、认证、集成状态、Pricing 和案例的具体内容"
+          ]
+        },
+        "success_criteria": [
+          "输出文档包含完整的一级导航和二级页面结构",
+          "每个页面均明确服务对象、页面目的、核心内容",
+          "页面关系清晰，体现访客路径",
+          "Phase 1/Phase 2 划分合理，符合资源预留原则",
+          "所有内容遵守语言规范和边界约束",
+          "文档可直接用于后续设计与开发"
+        ],
+        "open_questions": [
+          "是否需要为每个页面提供 wireframe 级别的布局建议？",
+          "Phase 1 和 Phase 2 的具体时间节点或里程碑是否已确定？",
+          "是否需要在信息架构中体现多语言版本（如英语、中文等）的切换逻辑？",
+          "对于 Integrations 页面，是否有已知的集成合作伙伴列表（即使未确认）？",
+          "Resources 第一阶段低承诺的具体内容范围是什么？"
+        ]
+      },
+      "expect": "文档中访客路径明确体现：进入官网 → 理解品牌 → 了解产品 → 建立信任 → 提交咨询。",
+      "verify_cmd": "grep -q '进入官网' 'Website_Information_Architecture.md' && grep -q '理解品牌' 'Website_Information_Architecture.md' && grep -q '了解产品' 'Website_Information_Architecture.md' && grep -q '建立信任' 'Website_Information_Architecture.md' && grep -q '提交咨询' 'Website_Information_Architecture.md'",
+      "kind": "happy"
+    },
+    {
+      "id": "6",
+      "input": {
+        "goal": "基于 T03 冻结的官网定位、菜单目录与产品体系，生成国际官网信息架构与 Sitemap 前置结构，输出《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分及访客路径，并遵守项目输出语言规范与内容约束。",
+        "users": "餐道国际官网重构项目的网站策划、信息架构师、UX 设计师、内容策略师、开发团队及项目管理者，用于指导官网设计与开发。",
+        "io": {
+          "input": "T01《Candao International Website Input Document》、T02《Website Strategy Analysis》、T03《Candao International Website Strategy V1.0》、菜单目录、产品体系。",
+          "output": "《Website Information Architecture》文档，包含一级导航、二级页面、页面关系、每个页面的服务对象、页面目的、核心内容、Phase 1/Phase 2 划分、访客路径，以及结构预留说明。"
+        },
+        "boundary": {
+          "should_do": [
+            "严格基于 T03 冻结的官网定位（Intelligent SaaS Platform for Global Restaurant Operations）进行信息架构设计",
+            "使用简体中文编写内部策略及执行文档，页面英文名称、导航字段、组件名可保留英文",
+            "生成一级导航、二级页面、页面关系、页面服务对象、页面目的、核心内容、Phase 1/Phase 2 划分",
+            "设计访客路径：进入官网 → 理解品牌 → 了解产品 → 建立信任 → 提交咨询",
+            "将 Home 作为品牌与转化入口，Solutions 讲场景，Products/Platform 讲能力，Integrations 作为一级战略入口，Contact/Book a Demo 作为转化闭环，Resources 第一阶段低承诺",
+            "对未确认客户 Logo、规模数据、认证、集成状态、Pricing 和案例进行结构预留",
+            "输出《Website Information Architecture》文档"
+          ],
+          "should_not_do": [
+            "禁止重新判断官网定位",
+            "禁止直接搬运 Excel 原始菜单",
+            "禁止重新展开品牌策略分析",
+            "禁止生成最终官网 Copy",
+            "禁止输出简体中文正式网页文案",
+            "禁止在信息架构中写入未确认的客户 Logo、规模数据、认证、集成状态、Pricing 和案例的具体内容"
+          ]
+        },
+        "success_criteria": [
+          "输出文档包含完整的一级导航和二级页面结构",
+          "每个页面均明确服务对象、页面目的、核心内容",
+          "页面关系清晰，体现访客路径",
+          "Phase 1/Phase 2 划分合理，符合资源预留原则",
+          "所有内容遵守语言规范和边界约束",
+          "文档可直接用于后续设计与开发"
+        ],
+        "open_questions": [
+          "是否需要为每个页面提供 wireframe 级别的布局建议？",
+          "Phase 1 和 Phase 2 的具体时间节点或里程碑是否已确定？",
+          "是否需要在信息架构中体现多语言版本（如英语、中文等）的切换逻辑？",
+          "对于 Integrations 页面，是否有已知的集成合作伙伴列表（即使未确认）？",
+          "Resources 第一阶段低承诺的具体内容范围是什么？"
+        ]
+      },
+      "expect": "文档中明确标注了结构预留说明，用于未确认内容。",
+      "verify_cmd": "grep -q '结构预留' 'Website_Information_Architecture.md'",
+      "kind": "edge"
+    }
+  ],
+  "context_budget": {
+    "token_cap": 8000,
+    "on_overflow": "summarize"
+  },
+  "state_ownership": {
+    "not_applicable": true,
+    "rationale": "该子代理为无状态文档生成器，不维护跨调用状态。"
+  },
+  "deployment_boundary": {
+    "runtime": "subagent",
+    "irreversible_ops": [
+      "generate_ia_document"
+    ]
+  }
+}

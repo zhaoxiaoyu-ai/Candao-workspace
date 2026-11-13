@@ -1,0 +1,86 @@
+{
+  "suite": "t26-design-ready-wireframe-copy-2026-08-16",
+  "total": 11,
+  "passed": 11,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "home-hero",
+      "component_type": "page_hero",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "home-connector",
+      "component_type": "ecosystem_map",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "home-metrics",
+      "component_type": "metric_cards",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform-orders",
+      "component_type": "capability_tab",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform-delivery",
+      "component_type": "capability_tab",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform-data",
+      "component_type": "capability_tab",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform-connector",
+      "component_type": "capability_tab",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo-form",
+      "component_type": "form",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "resources-faq",
+      "component_type": "faq",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "about-service",
+      "component_type": "company_profile",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "case-sensitive-css",
+      "component_type": "style_check",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

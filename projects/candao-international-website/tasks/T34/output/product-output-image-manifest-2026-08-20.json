@@ -1,0 +1,75 @@
+{
+  "task_id": "T34",
+  "updated": "2026-08-20",
+  "status": "corrected",
+  "purpose": "Define which exported images can be treated as product-facing page outputs.",
+  "rule": "Overview or index screenshots are internal navigation / QA references only. Product output images must correspond to real website pages.",
+  "product_output_images": [
+    {
+      "page": "Home",
+      "label": "首頁",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/home.html",
+      "image": "tasks/T34/output/images/02-home-low-fidelity-1440-full.png"
+    },
+    {
+      "page": "Solutions",
+      "label": "解決方案",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/solutions.html",
+      "image": "tasks/T34/output/images/03-solutions-low-fidelity-1440-full.png"
+    },
+    {
+      "page": "Platform",
+      "label": "平台",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/platform.html",
+      "image": "tasks/T34/output/images/04-platform-low-fidelity-1440-full.png"
+    },
+    {
+      "page": "Integrations",
+      "label": "整合能力",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/integrations.html",
+      "image": "tasks/T34/output/images/05-integrations-low-fidelity-1440-full.png"
+    },
+    {
+      "page": "Customers",
+      "label": "客戶案例",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/customers.html",
+      "image": "tasks/T34/output/images/06-customers-low-fidelity-1440-full.png"
+    },
+    {
+      "page": "Resources",
+      "label": "資源",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/resources.html",
+      "image": "tasks/T34/output/images/07-resources-low-fidelity-1440-full.png"
+    },
+    {
+      "page": "About",
+      "label": "關於餐道",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/about.html",
+      "image": "tasks/T34/output/images/08-about-low-fidelity-1440-full.png"
+    },
+    {
+      "page": "Demo",
+      "label": "預約產品演示",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/demo.html",
+      "image": "tasks/T34/output/images/09-demo-low-fidelity-1440-full.png"
+    }
+  ],
+  "excluded_internal_reference_images": [
+    {
+      "label": "T34 overview export",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/index.html",
+      "image": "tasks/T34/output/images/01-index-low-fidelity-1440-full.png",
+      "reason": "Index overview is a navigation and QA reference, not a real product page output."
+    },
+    {
+      "label": "Single index export",
+      "source_html": "tasks/T27/output/stitch-ready-low-fidelity/index.html",
+      "image": "tasks/T27/output/stitch-ready-low-fidelity/index-1440-content.png",
+      "reason": "Single index screenshot was generated from the overview entry and must not be included in product-facing deliverables."
+    }
+  ],
+  "counts": {
+    "product_output_images": 8,
+    "excluded_internal_reference_images": 2
+  }
+}

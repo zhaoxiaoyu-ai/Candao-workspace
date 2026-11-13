@@ -1,0 +1,338 @@
+{
+  "suite": "t26-module-manifest-copy-2026-08-17",
+  "total": 47,
+  "passed": 47,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "H01",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "H02",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "H03",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "H04",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "H05",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "H06",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "S01",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "S02",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "S03",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "S04",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "S05",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "S06",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "P01",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "P02",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "P03",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "P04",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "P05",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "P06",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "I01",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "I02",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "I03",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "I04",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "I05",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "C01",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "C02",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "C03",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "C04",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "C05",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "C06",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "R01",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "R02",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "R03",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "R04",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "R05",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "A01",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "A02",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "A03",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "A04",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "A05",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "A06",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "A07",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "D01",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "D02",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "D03",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "D04",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "D05",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "D06",
+      "component_type": "module_manifest",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

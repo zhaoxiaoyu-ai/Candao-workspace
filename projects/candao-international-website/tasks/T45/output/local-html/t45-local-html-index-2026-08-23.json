@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "purpose": "Upload-ready fallback HTML pages when Stitch text generation does not preserve 100% visible low-fidelity content.",
+  "pages": [
+    {
+      "page": "platform",
+      "file": "projects/candao-international-website/tasks/T45/output/local-html/platform-coverage-safe-2026-08-23.html"
+    },
+    {
+      "page": "integrations",
+      "file": "projects/candao-international-website/tasks/T45/output/local-html/integrations-coverage-safe-2026-08-23.html"
+    },
+    {
+      "page": "customers",
+      "file": "projects/candao-international-website/tasks/T45/output/local-html/customers-coverage-safe-2026-08-23.html"
+    },
+    {
+      "page": "resources",
+      "file": "projects/candao-international-website/tasks/T45/output/local-html/resources-coverage-safe-2026-08-23.html"
+    },
+    {
+      "page": "about",
+      "file": "projects/candao-international-website/tasks/T45/output/local-html/about-coverage-safe-2026-08-23.html"
+    },
+    {
+      "page": "demo",
+      "file": "projects/candao-international-website/tasks/T45/output/local-html/demo-coverage-safe-2026-08-23.html"
+    }
+  ]
+}

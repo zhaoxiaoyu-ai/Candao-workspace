@@ -1,0 +1,95 @@
+version: "2026-08-16"
+source_scope:
+  primary_business_sources:
+    - id: old_website
+      label: 旧餐道国际官网
+      role: 业务专属性、产品体系、旧官网讲述逻辑
+    - id: ppt
+      label: Candao Introduction PPT
+      role: 授权指标、客户案例、产品痛点、公司详情、服务体系
+    - id: t25
+      label: T25 低保真叙事局部重构
+      file: tasks/T25/output/low-fidelity-narrative-restructure-report-2026-08-16.md
+      role: 当前低保真叙事修正基准
+    - id: domain_copy
+      label: domain-copy 资料目录
+      file: domain-copy/
+      role: 术语、指标、状态、文案质量门槛
+    - id: t17_text_inventory
+      label: T17 低保真 HTML 可见文本分类清单
+      file: tasks/T17/output/design-handoff/content/content-classification-inventory.json
+      role: 逐条区分 public_copy、internal_note、evidence_source、constraint 和 missing，防止后续设计或前端阶段误删、误公开或误补。
+  design_sources:
+    - id: user_design_attachment
+      label: 2026-08-16 设计输入包执行指令
+      role: 页面语法、设计系统、Stitch Prompt Pack、Motion storyboard 要求
+    - id: stitch_cv4_home_candidate
+      label: Stitch C v4 首页候选截图
+      file: tasks/T11.5/output/stitch-cv4-home/home-operations-hub-complete-qa-full-1440.png
+      role: 候选视觉参考，不替代缺失的首页母版
+
+page_source_map:
+  home:
+    public_role: 建立餐道的行业认知、规模可信和全链路营运中枢印象
+    source_refs:
+      - old_website
+      - ppt_slide_11
+      - ppt_opmodel
+      - t25
+    must_not_show_publicly:
+      - PPT 页码
+      - OLD 编号
+      - 内部警告
+      - 待确认说明
+  solutions:
+    public_role: 按业务场景确认品牌遇到的问题和适配路径
+    source_refs:
+      - old_website
+      - ppt_oms_pain
+      - ppt_delivery
+      - t25
+  platform:
+    public_role: 展示餐道产品如何承接订单、餐单、门店、配送、数据和接入
+    source_refs:
+      - old_product_system
+      - ppt_oms_core
+      - ppt_oms_modules
+      - ppt_dms
+      - t25
+  integrations:
+    public_role: 验证外卖平台、自有入口、POS / KDS、CRM、支付、ERP 和配送等接入对象
+    source_refs:
+      - old_biz_integration
+      - ppt_saas
+      - t25
+  customers:
+    public_role: 证明规模、实名客户、行业案例和前后对比数据
+    source_refs:
+      - ppt_slide_11
+      - ppt_slides_38_to_45
+      - user_h2_06
+  resources:
+    public_role: 分流采购、IT、运营、门店、配送和财务疑问
+    source_refs:
+      - old_website
+      - t22
+      - t25
+  about:
+    public_role: 建立公司可信、服务交付、质量保障和地点联系
+    source_refs:
+      - ppt_company
+      - ppt_slides_4_to_6
+      - ppt_slides_131_to_132
+      - t25
+  demo:
+    public_role: 通过意图、场景和当前系统分流产品演示、销售、合作和支持查询
+    source_refs:
+      - t22
+      - domain_copy
+
+evidence_rules:
+  - 每条关键公开内容必须能追溯到旧官网、PPT、T25 或 domain-copy。
+  - 后续高保真、Stitch、Figma 或前端实现必须读取 `content-classification-inventory.json`；只有 `public_copy` 可进入访客页面。
+  - 缺素材时保留结构和素材需求，不生成假图、假视频、假 Logo 或假客户数据。
+  - 首页参考图缺失时，不裁切替代图片，只记录缺口。
+  - 历史 Stitch / Figma 截图可以作为候选参考，但不能替代用户指定参考图。

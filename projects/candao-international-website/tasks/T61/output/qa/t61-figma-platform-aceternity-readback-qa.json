@@ -1,0 +1,112 @@
+{
+  "task": "T61",
+  "date": "2026-09-02",
+  "figma": {
+    "fileKey": "BMXIuVRzSUUt9YNhVAQA6K",
+    "page": "03 Desktop Pages / Bilingual Validation",
+    "pageNodeId": "3:5",
+    "sourceNodeId": "488:350",
+    "wrapperNodeId": "925:2",
+    "wrapperName": "Platform / Desktop 1440 / TC / Aceternity Mapping T61",
+    "wrapperSize": {
+      "width": 1440,
+      "height": 5700
+    }
+  },
+  "sections": [
+    {
+      "nodeId": "928:2",
+      "name": "Hero Section With Images Grid and Navbar / Platform T61",
+      "aceternityReference": "Hero Section With Images Grid and Navbar",
+      "theme": "dark",
+      "height": 980
+    },
+    {
+      "nodeId": "931:5",
+      "name": "Features Bento Grid With Skeletons / Core Product Matrix T61",
+      "aceternityReference": "Features Bento Grid With Skeletons",
+      "theme": "dark",
+      "height": 1120
+    },
+    {
+      "nodeId": "944:5",
+      "name": "Symmetric Bento Grid / Platform Capability Map T61",
+      "aceternityReference": "Symmetric Bento Grid",
+      "theme": "light",
+      "height": 900
+    },
+    {
+      "nodeId": "949:5",
+      "name": "Symmetric Bento Grid / Operational Workflow T61",
+      "aceternityReference": "Symmetric Bento Grid",
+      "theme": "light",
+      "height": 640
+    },
+    {
+      "nodeId": "950:5",
+      "name": "Three Columns With Images / Product Demo Entry T61",
+      "aceternityReference": "Three Columns With Images",
+      "theme": "light",
+      "height": 850
+    },
+    {
+      "nodeId": "952:5",
+      "name": "CTA With Masonry Images / Platform Conversion T61",
+      "aceternityReference": "CTA With Masonry Images",
+      "theme": "light",
+      "height": 620
+    },
+    {
+      "nodeId": "953:5",
+      "name": "Simple Footer With Four Grids / Footer T61",
+      "aceternityReference": "Simple Footer With Four Grids",
+      "theme": "dark",
+      "height": 590
+    }
+  ],
+  "readbackChecks": {
+    "textCount": 212,
+    "forbiddenHits": [],
+    "caseIssues": [],
+    "nonProductionTexts": [],
+    "candaoVisibleTexts": [],
+    "supportTerms": [],
+    "badFamilies": [],
+    "overflowCount": 0,
+    "overflow": []
+  },
+  "visualFixesApplied": [
+    {
+      "nodeId": "928:23",
+      "issue": "Hero H1 wrapped into three lines and compressed the lead copy.",
+      "fix": "Expanded text width to 1120px and set 58px type with 72px line height."
+    },
+    {
+      "nodeIds": [
+        "950:27",
+        "950:45",
+        "950:61",
+        "950:82"
+      ],
+      "issue": "Product demo card bodies were too close to two-line titles.",
+      "fix": "Moved body, meta, CTA, and arrow layers lower within each demo card."
+    },
+    {
+      "nodeIds": [
+        "928:22",
+        "939:28",
+        "939:31"
+      ],
+      "issue": "Visible copy included an internal Aceternity mapping label and support wording.",
+      "fix": "Changed to production-facing TC copy: 平台產品能力、導入支援、使用支援."
+    }
+  ],
+  "screenshot": {
+    "path": "tasks/T61/output/screenshots/t61-platform-aceternity-mapping-figma-925-2.png",
+    "width": 1440,
+    "height": 5700,
+    "bytes": 1800926,
+    "visualInspection": "pass"
+  },
+  "status": "pass"
+}

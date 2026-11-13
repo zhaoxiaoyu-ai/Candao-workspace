@@ -1,0 +1,79 @@
+{
+  "suite": "resources-demo-low-fidelity-copy-qa-2026-08-15",
+  "total": 10,
+  "passed": 10,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "resources-overview",
+      "component_type": "page_description",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "resources-support-center",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "resources-finance-faq",
+      "component_type": "faq_item",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "resources-enquiry-form",
+      "component_type": "form_help",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo-hero",
+      "component_type": "form_help",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo-intent-router",
+      "component_type": "segmented_control",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo-scenario-step",
+      "component_type": "form_step",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo-system-fields",
+      "component_type": "form",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo-routing-result",
+      "component_type": "success_prompt",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "about-brand-display-check",
+      "component_type": "page_description",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "suite": "T39 Figma Web Desktop reset visible copy",
+  "items": [
+    {
+      "id": "t39-00-cover-baseline",
+      "component_type": "Figma baseline board",
+      "role": "决策者",
+      "page_task": "明确当前设计范围",
+      "locale": "zh-Hant",
+      "text": "餐道國際官網：先回到 Web Desktop 基線。目前連基本 Web 端仍未確認，因此本輪不推進 Mobile、Responsive、Motion 或舊 Production Review。先確認桌面官網的故事路徑、內容深度、產品展示、可信證據與 CTA，再決定是否進入響應式。當前工作基線只處理 Web Desktop 1440 的內容、結構、視覺語氣和產品展示。03 可作素材與歷史探索參考，但不能被視為已確認輸出。04、05、06、07、08、09、10 的內容均不作為後續 Figma、Stitch、React 或 T12 / T13 的輸入依據。中文 / 繁體中文品牌顯示使用「餐道」。產品名保持 OMS、DMS、iDMS、CDBI、SaaS、AMS / Connector，不使用會改變大小寫的樣式。",
+      "must_include": ["餐道", "Web Desktop", "04", "10", "iDMS", "SaaS", "AMS / Connector"]
+    },
+    {
+      "id": "t39-01-token-baseline",
+      "component_type": "Figma token board",
+      "role": "IT",
+      "page_task": "明确当前 token 使用边界",
+      "locale": "zh-Hant",
+      "text": "Web Desktop token 基線。此頁只固化目前可用於 1440 Desktop Web 評審的基礎 token。它來自 T35 Figma Home MCP 風格提取，不代表 Mobile、Responsive Rules、Motion 或最終前端設計已確認。繁體中文使用 Noto Sans TC / PingFang TC / Microsoft JhengHei；英文、數字和技術詞使用 Inter。letter-spacing 固定 0。不得用 text-transform 改寫 iDMS、SaaS、AMS / Connector、OMS、DMS、CDBI 或客戶 / 產品名。",
+      "must_include": ["Web Desktop", "iDMS", "SaaS", "AMS / Connector", "letter-spacing"]
+    },
+    {
+      "id": "t39-02-component-baseline",
+      "component_type": "Figma component board",
+      "role": "销售",
+      "page_task": "明确当前桌面组件范围",
+      "locale": "zh-Hant",
+      "text": "Web Desktop 元件基線。本頁新增的不是最終元件庫，而是下一輪桌面 Web 評審的元件清單。先把首頁、平台、案例、資源、關於餐道和 Demo 需要的桌面元件說清楚；Mobile、Responsive variants 和 Motion storyboards 暫不進入製作。當前納入 Header / Desktop 1440、Hero + Product Workbench、Platform Capability Map、Evidence / Customer Cards、Resources / Support Routing、Demo Intent Form。輸出前 QA：不得出現占位文字、缺失標記、假 Logo、未授權數字；中文與繁體中文品牌使用「餐道」；iDMS、SaaS、AMS / Connector 不被改寫大小寫。",
+      "must_include": ["Web Desktop", "餐道", "iDMS", "SaaS", "AMS / Connector"]
+    },
+    {
+      "id": "t39-04-10-not-retained-banner",
+      "component_type": "Figma scope banner",
+      "role": "决策者",
+      "page_task": "阻止旧稿误用",
+      "locale": "zh-Hant",
+      "text": "此頁不保留。2026-08-20 使用者確認：基本 Web 端尚未定稿，其他響應式不需要先做。本頁只保留為歷史痕跡，不得用於 Figma、Stitch、React、T12 或 T13 的當前依據。",
+      "must_include": ["不保留", "Web", "響應式", "T12", "T13"]
+    }
+  ]
+}

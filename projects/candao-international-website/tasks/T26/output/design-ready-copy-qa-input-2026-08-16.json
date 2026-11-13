@@ -1,0 +1,95 @@
+{
+  "suite": "t26-design-ready-wireframe-copy-2026-08-16",
+  "items": [
+    {
+      "id": "home-hero",
+      "component_type": "page_hero",
+      "role": "决策者",
+      "page_task": "建立认知",
+      "text": "把訂單、門店、配送與數據接成一條營運鏈路。餐道面向品牌總部和多門店營運，連接外賣平台、自有點餐入口、POS / KDS、CRM / 會員、配送資源、支付、ERP 和財務數據，讓訂單、餐單、履約、對賬與分析回到同一條可追溯鏈路。下一步預約產品演示或查看平台能力。",
+      "must_include": ["訂單", "門店", "配送", "數據", "下一步"]
+    },
+    {
+      "id": "home-connector",
+      "component_type": "ecosystem_map",
+      "role": "总部运营",
+      "page_task": "说明连接对象",
+      "text": "訂單渠道、門店執行系統、顧客與會員、支付與企業系統、配送資源和營運數據在餐道中被整理成可追蹤的工作流。下一步查看平台能力。",
+      "must_include": ["訂單渠道", "門店", "配送資源", "營運數據", "下一步"]
+    },
+    {
+      "id": "home-metrics",
+      "component_type": "metric_cards",
+      "role": "决策者",
+      "page_task": "证明规模与可信",
+      "text": "品牌數量 5000+；每日處理訂單 500M+；覆蓋城市 400+；門店數量 200K+；每月配送訂單 GMV 4.5B+；客戶效率提升 30% up。下一步查看客戶案例。",
+      "must_include": ["品牌數量", "5000+", "每日處理訂單", "500M+", "下一步"]
+    },
+    {
+      "id": "platform-orders",
+      "component_type": "capability_tab",
+      "role": "总部运营",
+      "page_task": "展示订单处理能力",
+      "text": "外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店按渠道、訂單狀態、配送狀態和異常類型處理。下一步查看訂單隊列、通知門店、進入配送或對賬流程。",
+      "must_include": ["OMS", "渠道", "門店", "訂單狀態", "下一步"]
+    },
+    {
+      "id": "platform-delivery",
+      "component_type": "capability_tab",
+      "role": "配送主管",
+      "page_task": "展示配送履约能力",
+      "text": "DMS / iDMS 管理自有騎手、第三方配送、智能派單、人工派單、第三方溢出、SMS 通知和配送異常。下一步查看派單、轉派第三方配送或追蹤配送異常。",
+      "must_include": ["DMS", "iDMS", "配送異常", "轉派第三方配送", "下一步"]
+    },
+    {
+      "id": "platform-data",
+      "component_type": "capability_tab",
+      "role": "财务",
+      "page_task": "展示对账和数据能力",
+      "text": "CDBI 和 Finance Center 比對平台訂單與餐道 OMS 訂單，標記金額差異、狀態差異和漏單，支援管理層、營運和財務查看。下一步查看報表、重新對賬或追蹤差異來源。",
+      "must_include": ["CDBI", "Finance Center", "平台訂單", "OMS 訂單", "下一步"]
+    },
+    {
+      "id": "platform-connector",
+      "component_type": "capability_tab",
+      "role": "IT",
+      "page_task": "验证接入对象和边界",
+      "text": "AMS / Connector 接入不以 Logo 牆證明，而是先確認外賣平台、自建入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限和異常處理。下一步提交接入評估或預約技術演示。",
+      "must_include": ["AMS / Connector", "API", "權限", "異常處理", "下一步"]
+    },
+    {
+      "id": "demo-form",
+      "component_type": "form",
+      "role": "采购方",
+      "page_task": "分流 Demo",
+      "text": "請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。我們會根據場景安排 OMS、DMS、iDMS、CDBI 或接入演示。下一步提交演示需求。",
+      "must_include": ["品牌", "地區", "門店規模", "POS", "下一步"]
+    },
+    {
+      "id": "resources-faq",
+      "component_type": "faq",
+      "role": "支持",
+      "page_task": "降低评估和导入疑问",
+      "text": "接入前要準備哪些系統類型？外賣平台、自建入口、POS / KDS、CRM、配送、支付和 ERP 需要先梳理。下一步提交支援或查詢。",
+      "must_include": ["外賣平台", "POS / KDS", "CRM", "ERP", "下一步"]
+    },
+    {
+      "id": "about-service",
+      "component_type": "company_profile",
+      "role": "决策者",
+      "page_task": "建立公司可信",
+      "text": "餐道以產品平台、數據分析、配送履約和質量保障支撐長期營運。產品平台承接訂單、餐單、門店、配送和接入；Data Analysis 支援報表、看板、平台訂單與 OMS 訂單對賬差異。下一步聯絡餐道。",
+      "must_include": ["餐道", "訂單", "配送", "OMS", "下一步"]
+    },
+    {
+      "id": "case-sensitive-css",
+      "component_type": "style_check",
+      "role": "IT",
+      "page_task": "检查大小写敏感术语",
+      "text": "DMS / iDMS 与 SaaS 术语保持标准写法。下一步检查样式层不改写产品名。",
+      "css_text": ":root { letter-spacing: 0; }",
+      "checks_style_case_sensitive_terms": true,
+      "must_include": ["iDMS", "SaaS", "下一步"]
+    }
+  ]
+}

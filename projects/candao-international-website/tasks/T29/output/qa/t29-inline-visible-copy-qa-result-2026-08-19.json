@@ -1,0 +1,72 @@
+{
+  "suite": "t29-inline-element-visible-copy",
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t29-inline-visible-index",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t29-inline-visible-home",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t29-inline-visible-solutions",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t29-inline-visible-platform",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t29-inline-visible-integrations",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t29-inline-visible-customers",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t29-inline-visible-resources",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t29-inline-visible-about",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t29-inline-visible-demo",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

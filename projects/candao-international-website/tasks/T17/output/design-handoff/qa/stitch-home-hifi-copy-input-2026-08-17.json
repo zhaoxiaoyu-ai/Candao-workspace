@@ -1,0 +1,97 @@
+{
+  "suite": "T17 Stitch Home high-fidelity copy QA",
+  "items": [
+    {
+      "id": "stitch-home-hifi-header",
+      "locale": "zh-Hant",
+      "component_type": "header",
+      "role": "决策者",
+      "page_task": "建立首页导航和演示转化入口",
+      "text": "餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN 預約演示",
+      "must_include": ["餐道", "預約演示"]
+    },
+    {
+      "id": "stitch-home-hifi-hero",
+      "locale": "zh-Hant",
+      "component_type": "hero",
+      "role": "决策者",
+      "page_task": "建立餐飲與零售 O2O 營運中樞认知",
+      "text": "餐飲與零售 O2O 營運中樞 把訂單、門店、配送與數據接成一條營運鏈路 餐道面向品牌總部和多門店營運，連接外賣平台、自有點餐入口、POS / KDS、CRM / 會員、配送資源、支付、ERP 和財務數據，讓訂單、餐單、履約、對賬與分析回到同一條可追溯鏈路。 預約產品演示 查看平台能力",
+      "must_include": ["餐飲與零售 O2O", "營運中樞", "訂單", "門店", "配送", "數據", "預約產品演示", "查看平台能力"]
+    },
+    {
+      "id": "stitch-home-hifi-product-stage",
+      "locale": "zh-Hant",
+      "component_type": "product-stage",
+      "role": "总部运营",
+      "page_task": "展示订单、门店、配送和对账状态如何被承接",
+      "text": "外賣平台訂單 待接單 門店接單與打印 製作中 DMS / iDMS 配送 配送中 Finance Center 對賬 差異追蹤 CDBI 看板 分析 AMS / Connector 接入",
+      "css_text": "tracking-wide only; no text-transform",
+      "checks_style_case_sensitive_terms": true,
+      "must_include": ["DMS / iDMS", "Finance Center", "CDBI", "AMS / Connector", "待接單", "製作中", "配送中", "差異追蹤"]
+    },
+    {
+      "id": "stitch-home-hifi-proof-strip",
+      "locale": "zh-Hant",
+      "component_type": "proof-strip",
+      "role": "决策者",
+      "page_task": "用公开、非虚构的方式建立服务场景可信",
+      "text": "服務多地餐飲品牌，支援連鎖門店、外賣平台與配送履約場景。",
+      "must_include": ["餐飲品牌", "連鎖門店", "外賣平台", "配送履約"]
+    },
+    {
+      "id": "stitch-home-hifi-connector",
+      "locale": "zh-Hant",
+      "component_type": "connector-hub",
+      "role": "IT",
+      "page_task": "说明餐道连接哪些系统和业务对象",
+      "text": "一個系統連接關鍵流程 從多個入口進來，回到同一個營運中樞 訂單渠道、門店執行系統、顧客與會員、支付與企業系統、配送資源和營運數據在餐道中被整理成可追蹤的工作流。 餐道營運中樞 訂單渠道 門店執行系統 會員與 CRM 配送資源 支付 ERP / 財務數據",
+      "must_include": ["訂單渠道", "門店執行系統", "會員", "配送資源", "支付", "ERP", "營運中樞"]
+    },
+    {
+      "id": "stitch-home-hifi-capability-explorer",
+      "locale": "zh-Hant",
+      "component_type": "capability-explorer",
+      "role": "总部运营",
+      "page_task": "展示五项能力对应品牌常见营运问题",
+      "text": "能力探索器 五項能力對應品牌常見營運問題 渠道聚合 營運承接 配送履約 數據對賬 生態接入 營運狀態總覽 呈現訂單、門店、配送和對賬狀態如何在同一流程中被追蹤。 渠道聚合：外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入餐道 OMS。 下一步：查看平台能力或預約相似場景演示。 查看平台能力",
+      "must_include": ["渠道聚合", "營運承接", "配送履約", "數據對賬", "生態接入", "OMS", "查看平台能力"]
+    },
+    {
+      "id": "stitch-home-hifi-scale-proof",
+      "locale": "zh-Hant",
+      "component_type": "metrics",
+      "role": "决策者",
+      "page_task": "证明规模与可信",
+      "text": "服務規模 用已公開的服務數據建立可信 5000+ 品牌數量 500M+ 每日處理訂單 400+ 覆蓋城市 200K+ 門店數量 4.5B+ 每月配送訂單 GMV 30% up 客戶效率提升",
+      "must_include": ["5000+", "500M+", "400+", "200K+", "4.5B+", "30% up", "品牌數量", "每日處理訂單", "門店數量"]
+    },
+    {
+      "id": "stitch-home-hifi-case-preview",
+      "locale": "zh-Hant",
+      "component_type": "case-preview",
+      "role": "决策者",
+      "page_task": "用实名客户案例引导查看落地方式",
+      "text": "客戶案例 從相似客戶案例看落地方式 以實名客戶案例和業態案例呈現訂單整合、配送履約、會員營運、數據分析與對賬改善。 查看客戶案例 案例摘要 Pizza-Box 合作超過 9 年，覆蓋 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、BI 分析與客戶服務。 JIA Group 覆蓋多品牌與多門店營運場景。",
+      "must_include": ["Pizza-Box", "JIA Group", "OMS", "配送履約", "會員營運", "數據分析", "對賬改善"]
+    },
+    {
+      "id": "stitch-home-hifi-final-cta",
+      "locale": "zh-Hant",
+      "component_type": "cta",
+      "role": "采购方",
+      "page_task": "完成预约演示或查看平台能力转化",
+      "text": "下一步 帶著你的營運場景，看餐道如何接入 預約相似場景演示 查看平台能力",
+      "must_include": ["營運場景", "餐道", "預約相似場景演示", "查看平台能力"]
+    },
+    {
+      "id": "stitch-home-hifi-footer",
+      "locale": "zh-Hant",
+      "component_type": "footer",
+      "role": "决策者",
+      "page_task": "保持品牌和核心导航",
+      "text": "餐道 餐道國際｜餐飲與零售 O2O 營運中樞 解決方案 平台 資源 關於餐道",
+      "must_include": ["餐道", "餐飲與零售 O2O"]
+    }
+  ]
+}

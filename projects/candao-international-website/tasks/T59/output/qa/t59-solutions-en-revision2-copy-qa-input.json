@@ -1,0 +1,765 @@
+{
+  "suite": "T59 Solutions English Revision 2 Copy QA",
+  "items": [
+    {
+      "id": "T59-1",
+      "component_type": "hero_headline",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Match F&B O2O Problems",
+      "source_text": "按餐飲 O2O 營運問題"
+    },
+    {
+      "id": "T59-2",
+      "component_type": "hero_headline",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "to Practical Solutions",
+      "source_text": "找到可落地的解決方案"
+    },
+    {
+      "id": "T59-3",
+      "component_type": "hero_description",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "When delivery marketplaces, owned channels, store acceptance, dispatch, and reconciliation are split across systems, pinpoint the workflow causing missed orders, repeated updates, or abnormal pressure.",
+      "source_text": "外賣平台、自有平台、門店接單、配送和對帳分散在多個後台，\n品牌需要找到哪個鏈路流程造成漏單、重複維護或非常態的壓力"
+    },
+    {
+      "id": "T59-4",
+      "component_type": "primary_cta",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Book Scenario Demo",
+      "source_text": "預約相似場景演示"
+    },
+    {
+      "id": "T59-5",
+      "component_type": "secondary_cta",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Explore Platform",
+      "source_text": "探索平台能力"
+    },
+    {
+      "id": "T59-6",
+      "component_type": "navigation_or_footer",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Solutions",
+      "source_text": "解決方案"
+    },
+    {
+      "id": "T59-7",
+      "component_type": "navigation_or_footer",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Platform",
+      "source_text": "平台"
+    },
+    {
+      "id": "T59-8",
+      "component_type": "navigation",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Integrations",
+      "source_text": "整合能力"
+    },
+    {
+      "id": "T59-9",
+      "component_type": "navigation",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Customers",
+      "source_text": "客戶案例"
+    },
+    {
+      "id": "T59-10",
+      "component_type": "navigation",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Resources",
+      "source_text": "资源"
+    },
+    {
+      "id": "T59-11",
+      "component_type": "footer",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Resources",
+      "source_text": "資源"
+    },
+    {
+      "id": "T59-12",
+      "component_type": "navigation_or_footer",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "About Candao",
+      "source_text": "關於餐道"
+    },
+    {
+      "id": "T59-13",
+      "component_type": "language_switch",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "繁中 / EN",
+      "source_text": "繁中 / EN"
+    },
+    {
+      "id": "T59-14",
+      "component_type": "header_cta",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Book a Demo",
+      "source_text": "預約產品演示"
+    },
+    {
+      "id": "T59-15",
+      "component_type": "section_heading",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Operating Problems to Solve",
+      "source_text": "常見營運問題"
+    },
+    {
+      "id": "T59-16",
+      "component_type": "section_subheading",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Each problem maps to a traceable workflow",
+      "source_text": "每一類問題都對應一條可追蹤的營運鏈路"
+    },
+    {
+      "id": "T59-17",
+      "component_type": "section_description",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Locate where orders, stores, delivery, and financial reconciliation sit in the workflow before choosing a capability or demo path.",
+      "source_text": "先清楚訂單源、門店、配送和財務回到時軸的位置，再進入對應能力或演示場景。"
+    },
+    {
+      "id": "T59-18",
+      "component_type": "problem_card_title",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Channel Order Gaps",
+      "source_text": "多平台訂單架構差异"
+    },
+    {
+      "id": "T59-19",
+      "component_type": "problem_card_body",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Bring marketplace and owned-channel orders into OMS, covering store acceptance, printing, refunds, cancellations, and exception handling.",
+      "source_text": "集中處理外賣平台與自有入口訂單，門店接單、打印、退款、取消和異常處理回到 OMS 流程。"
+    },
+    {
+      "id": "T59-20",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Marketplaces",
+      "source_text": "外賣平台"
+    },
+    {
+      "id": "T59-21",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Owned Channels",
+      "source_text": "自有入口"
+    },
+    {
+      "id": "T59-22",
+      "component_type": "problem_card_title",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Store Intake Gaps",
+      "source_text": "門店端接單混亂"
+    },
+    {
+      "id": "T59-23",
+      "component_type": "problem_card_body",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Help store managers handle procurement, schedules, menus, stock-in, and delivery orders without repeating updates across platforms.",
+      "source_text": "經理同時處理門店訂料、靈活時程、餐單、進貨和配送訂單，減少多平台重複更新。"
+    },
+    {
+      "id": "T59-24",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Store Data",
+      "source_text": "門店資料"
+    },
+    {
+      "id": "T59-25",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Menus",
+      "source_text": "餐單版本"
+    },
+    {
+      "id": "T59-26",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Marketing",
+      "source_text": "營銷狀態"
+    },
+    {
+      "id": "T59-27",
+      "component_type": "problem_card_title",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Delivery Resource Gaps",
+      "source_text": "配送資源難歸集"
+    },
+    {
+      "id": "T59-28",
+      "component_type": "problem_card_body",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "DMS / iDMS connects owned riders, third-party delivery, marketplace fulfillment, and instant delivery, while reports track reconciliation differences.",
+      "source_text": "DMS / iDMS 承接自有騎手、第三方配送、外賣與即時配，報表追蹤財務差異。"
+    },
+    {
+      "id": "T59-29",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Dispatch",
+      "source_text": "配送調度"
+    },
+    {
+      "id": "T59-30",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Exceptions",
+      "source_text": "配送異常"
+    },
+    {
+      "id": "T59-31",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Reports",
+      "source_text": "報表"
+    },
+    {
+      "id": "T59-32",
+      "component_type": "section_heading",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Choose the Scenario Closest to Your Operation",
+      "source_text": "選擇最接近你現況的營運場景"
+    },
+    {
+      "id": "T59-33",
+      "component_type": "section_description",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Start with the pressure point across order sources, store intake, delivery fulfillment, and financial reconciliation. Then use the demo to focus on the matching capabilities.",
+      "source_text": "從訂單源、門店接單、配送履約到財務服務，先定位最接近的營運壓力，再把演示重點帶到對應能力。"
+    },
+    {
+      "id": "T59-34",
+      "component_type": "scenario_tab",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Marketplace Orders",
+      "source_text": "多平台外賣訂單"
+    },
+    {
+      "id": "T59-35",
+      "component_type": "scenario_tab",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Dine-In / Owned Stores",
+      "source_text": "堂食／現場自有餐廳"
+    },
+    {
+      "id": "T59-36",
+      "component_type": "scenario_tab",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Delivery Fulfillment",
+      "source_text": "配送資源履約"
+    },
+    {
+      "id": "T59-37",
+      "component_type": "scenario_tab",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Reconciliation Reports",
+      "source_text": "財務到店帳報表"
+    },
+    {
+      "id": "T59-38",
+      "component_type": "scenario_tab",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Membership & Data",
+      "source_text": "會員與數據接入"
+    },
+    {
+      "id": "T59-39",
+      "component_type": "scenario_tab",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Store Management",
+      "source_text": "門店與餐廳管理"
+    },
+    {
+      "id": "T59-40",
+      "component_type": "scenario_title",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Bring Multi-Platform Delivery Orders Into One Workflow",
+      "source_text": "讓多平台外賣訂單回到同一條處理鏈路"
+    },
+    {
+      "id": "T59-41",
+      "component_type": "scenario_body",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Track orders, store intake, printouts, refunds, cancellations, delivery status, and financial returns.",
+      "source_text": "集中查看外賣平台訂單、門店接單、打印、退款、取消、配送狀態和財務回傳，放到統一一流程。"
+    },
+    {
+      "id": "T59-42",
+      "component_type": "tag_or_flow",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Order Peaks",
+      "source_text": "訂單高峰"
+    },
+    {
+      "id": "T59-43",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Store Intake",
+      "source_text": "門店端接"
+    },
+    {
+      "id": "T59-44",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Delivery Status",
+      "source_text": "配送狀態"
+    },
+    {
+      "id": "T59-45",
+      "component_type": "tag",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Reconciliation",
+      "source_text": "對帳異常"
+    },
+    {
+      "id": "T59-46",
+      "component_type": "flow_label",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Problem",
+      "source_text": "問題"
+    },
+    {
+      "id": "T59-47",
+      "component_type": "flow_value",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Missed Orders",
+      "source_text": "漏單與重複維護"
+    },
+    {
+      "id": "T59-48",
+      "component_type": "flow_label",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Capability",
+      "source_text": "能力"
+    },
+    {
+      "id": "T59-49",
+      "component_type": "flow_value",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "OMS / DMS",
+      "source_text": "OMS / DMS 承接"
+    },
+    {
+      "id": "T59-50",
+      "component_type": "flow_label",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Result",
+      "source_text": "結果"
+    },
+    {
+      "id": "T59-51",
+      "component_type": "flow_value",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "HQ Visibility",
+      "source_text": "總部可視化效率"
+    },
+    {
+      "id": "T59-52",
+      "component_type": "flow_arrow",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "→",
+      "source_text": "→"
+    },
+    {
+      "id": "T59-53",
+      "component_type": "flow_value",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "OMS + DMS",
+      "source_text": "OMS + DMS"
+    },
+    {
+      "id": "T59-54",
+      "component_type": "flow_value",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Exception Loop",
+      "source_text": "故障回流"
+    },
+    {
+      "id": "T59-55",
+      "component_type": "capability_line",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Capabilities: OMS, Menu Center, DMS / iDMS, financial reconciliation",
+      "source_text": "系統能力：OMS、Menu Center、DMS / iDMS、Finance Center"
+    },
+    {
+      "id": "T59-56",
+      "component_type": "secondary_cta",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "View Customer Stories",
+      "source_text": "查看客戶案例"
+    },
+    {
+      "id": "T59-57",
+      "component_type": "final_cta_heading",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Bring This Scenario Into a Working Demo",
+      "source_text": "把相似營運問題帶到演示流程中確認"
+    },
+    {
+      "id": "T59-58",
+      "component_type": "final_cta_body",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Already know where the pressure sits? Review platform capabilities or book a scenario demo to confirm modules and workflow.",
+      "source_text": "若你已發現問題站位，可以進一步查看平台能力，或預約相似場景演示來確認模塊和流程拆解。"
+    },
+    {
+      "id": "T59-59",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Mobile Ordering",
+      "source_text": "移動點餐"
+    },
+    {
+      "id": "T59-60",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Self-Ordering Kiosk",
+      "source_text": "自助點餐機訂購"
+    },
+    {
+      "id": "T59-61",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Delivery & Rider App",
+      "source_text": "配送管理與騎手應用"
+    },
+    {
+      "id": "T59-62",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Aggregated Logistics",
+      "source_text": "聚合物流管理"
+    },
+    {
+      "id": "T59-63",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Delivery Platform",
+      "source_text": "配送平台"
+    },
+    {
+      "id": "T59-64",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "POS System",
+      "source_text": "銷售點系統"
+    },
+    {
+      "id": "T59-65",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "CRM",
+      "source_text": "客戶關係管理"
+    },
+    {
+      "id": "T59-66",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Third-Party Logistics",
+      "source_text": "第三方物流"
+    },
+    {
+      "id": "T59-67",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Payment Gateway",
+      "source_text": "支付網關"
+    },
+    {
+      "id": "T59-68",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Support",
+      "source_text": "支持"
+    },
+    {
+      "id": "T59-69",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "FAQs",
+      "source_text": "常見問題解答"
+    },
+    {
+      "id": "T59-70",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Press Releases",
+      "source_text": "新聞稿"
+    },
+    {
+      "id": "T59-71",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Case Studies",
+      "source_text": "展示案例"
+    },
+    {
+      "id": "T59-72",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Learn More",
+      "source_text": "了解更多"
+    },
+    {
+      "id": "T59-73",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "About Us",
+      "source_text": "關於我們"
+    },
+    {
+      "id": "T59-74",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Milestones",
+      "source_text": "里程碑"
+    },
+    {
+      "id": "T59-75",
+      "component_type": "footer_link",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "Careers",
+      "source_text": "職業發展"
+    },
+    {
+      "id": "T59-76",
+      "component_type": "footer_legal",
+      "role": "总部运营",
+      "page_task": "英文解决方案页面重做，保留餐饮 O2O 营运问题、订单、门店、配送、财务对账、演示分流和跨页导流语义",
+      "locale": "en",
+      "allow_english_brand": true,
+      "text": "© copyright Candao International 2026",
+      "source_text": "© copyright Candao International 2026"
+    }
+  ]
+}

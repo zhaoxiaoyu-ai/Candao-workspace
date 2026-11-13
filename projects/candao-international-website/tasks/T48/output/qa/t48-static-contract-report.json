@@ -1,0 +1,12 @@
+{
+  "suite": "t48-static-contract-qa",
+  "html": "projects/candao-international-website/tasks/T48/output/prototype/index.html",
+  "contract": "projects/candao-international-website/tasks/T48/output/contracts/t48-hifi-readiness-contract.json",
+  "required_total": 83,
+  "required_present": 83,
+  "missing": [],
+  "forbidden_visible": [],
+  "style_risks": [],
+  "module_missing": [],
+  "status": "pass"
+}

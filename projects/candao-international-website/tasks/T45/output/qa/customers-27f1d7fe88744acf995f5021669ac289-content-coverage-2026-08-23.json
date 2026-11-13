@@ -1,0 +1,440 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "page": "customers",
+  "target": "projects/candao-international-website/tasks/T45/output/stitch-output/customers-27f1d7fe88744acf995f5021669ac289.html",
+  "stem": "customers-27f1d7fe88744acf995f5021669ac289",
+  "sourceLowFidelity": "projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/customers.html",
+  "hardRequirement": "Content coverage must be 100%. Any missing low-fidelity visible text item fails the candidate.",
+  "summary": {
+    "found": 36,
+    "total": 90,
+    "ratio": 0.4,
+    "status": "fail",
+    "visibleTextCharsNormalized": 1143,
+    "riskTermsPresent": [
+      "Candao",
+      "arrow_forward",
+      "無縫對接"
+    ],
+    "forbiddenCaseTermsPresent": []
+  },
+  "missing": [
+    "客戶案例｜餐道",
+    "整合能力",
+    "關於餐道",
+    "繁中 / EN",
+    "不只看品牌使用了哪些產品，更看導入餐道後，分散的訂單、門店、餐單、配送、會員和對賬資料如何回到可追蹤的營運流程。",
+    "案例證據",
+    "Pizza-Box、JIA Group、Jardine Group",
+    "用品牌場景、上線前後對比與可追溯數據支撐銷售轉化，而不是只羅列客戶名稱。",
+    "品牌門店與外送高峰",
+    "案例數據看板",
+    "效率變化",
+    "工具分散",
+    "接入中",
+    "OMS / DMS 匯入",
+    "數據與服務回流",
+    "用服務規模與營運數據建立初步可信",
+    "從已落地品牌看合作範圍和營運變化",
+    "不同品牌的重點不一樣：有的先處理多平台訂單與門店出單，有的需要支撐多品牌營運，有的把配送狀態和騎手管理納入 DMS / iDMS。",
+    "Pizza-Box｜9 年合作，OMS + 自有點餐",
+    "JIA Group｜多品牌、多門店營運",
+    "Jardine Group｜DMS / iDMS 配送履約",
+    "訂單整合",
+    "配送履約",
+    "DMS / iDMS",
+    "數據與服務",
+    "合作超過 9 年；使用 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、BI 分析與客戶服務。",
+    "導入後變化：訂單、配送、營銷和客戶服務不再分散在多個工具中，品牌可以用同一套流程追蹤門店履約和服務狀態。",
+    "下一步：預約相似場景演示。",
+    "用多元餐飲環境補足相似場景參考",
+    "OMS 對接 POS，整合外賣平台資料並自動打印，降低漏單風險。",
+    "訂單量：100K → 190K → 1.01M",
+    "銷售額：6.6M → 7.74M → 54.42M",
+    "復購率：19.88% → 25.83%",
+    "小程序訂單、門店聚合與騎手管理回到 OMS / DMS 流程。",
+    "訂單取消率：12.66% / 15.65% / 19.98%",
+    "年度銷售額：1,578 萬元",
+    "營運效率：147%",
+    "Business Center 和 Data Center 支援收購後的系統整合與跨系統數據管理。",
+    "訂單取消率改善：185%",
+    "銷售增長：665%",
+    "門店擴張率：116%",
+    "外賣平台對接、Menu Center 菜單同步與 CDBI 分析支援門店決策。",
+    "單店平均銷售額：+55%",
+    "單店平均訂單額增長：+74%",
+    "訂單量：1420 → 2472",
+    "跨區域餐單、庫存與多平台同步，支援區域餐單和平台差異管理。",
+    "門店營運效率：30%",
+    "門店營運數字化：80%",
+    "線上訂單比例：26.7%",
+    "DMS / iDMS 管理自有騎手、第三方配送、派單規則、SMS 通知與配送異常。",
+    "Jardine Group DMS 覆蓋 200+ outlets",
+    "DMS 平台可用性：99.95% over",
+    "DMS 吞吐量：500 Order/second",
+    "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector"
+  ],
+  "checks": [
+    {
+      "expected": "客戶案例｜餐道",
+      "found": false
+    },
+    {
+      "expected": "首頁",
+      "found": true
+    },
+    {
+      "expected": "解決方案",
+      "found": true
+    },
+    {
+      "expected": "平台",
+      "found": true
+    },
+    {
+      "expected": "整合能力",
+      "found": false
+    },
+    {
+      "expected": "客戶案例",
+      "found": true
+    },
+    {
+      "expected": "資源",
+      "found": true
+    },
+    {
+      "expected": "關於餐道",
+      "found": false
+    },
+    {
+      "expected": "繁中 / EN",
+      "found": false
+    },
+    {
+      "expected": "預約演示",
+      "found": true
+    },
+    {
+      "expected": "從不同餐飲業態看餐道如何改善訂單、配送與數據營運",
+      "found": true
+    },
+    {
+      "expected": "不只看品牌使用了哪些產品，更看導入餐道後，分散的訂單、門店、餐單、配送、會員和對賬資料如何回到可追蹤的營運流程。",
+      "found": false
+    },
+    {
+      "expected": "案例證據",
+      "found": false
+    },
+    {
+      "expected": "Pizza-Box、JIA Group、Jardine Group",
+      "found": false
+    },
+    {
+      "expected": "用品牌場景、上線前後對比與可追溯數據支撐銷售轉化，而不是只羅列客戶名稱。",
+      "found": false
+    },
+    {
+      "expected": "品牌門店與外送高峰",
+      "found": false
+    },
+    {
+      "expected": "案例數據看板",
+      "found": false
+    },
+    {
+      "expected": "品牌數量",
+      "found": true
+    },
+    {
+      "expected": "5000+",
+      "found": true
+    },
+    {
+      "expected": "每日處理訂單",
+      "found": true
+    },
+    {
+      "expected": "500M+",
+      "found": true
+    },
+    {
+      "expected": "效率變化",
+      "found": false
+    },
+    {
+      "expected": "30% up",
+      "found": true
+    },
+    {
+      "expected": "導入前",
+      "found": true
+    },
+    {
+      "expected": "工具分散",
+      "found": false
+    },
+    {
+      "expected": "接入中",
+      "found": false
+    },
+    {
+      "expected": "OMS / DMS 匯入",
+      "found": false
+    },
+    {
+      "expected": "導入後",
+      "found": true
+    },
+    {
+      "expected": "數據與服務回流",
+      "found": false
+    },
+    {
+      "expected": "服務規模",
+      "found": true
+    },
+    {
+      "expected": "用服務規模與營運數據建立初步可信",
+      "found": false
+    },
+    {
+      "expected": "5000+品牌數量",
+      "found": true
+    },
+    {
+      "expected": "500M+每日處理訂單",
+      "found": true
+    },
+    {
+      "expected": "400+覆蓋城市",
+      "found": true
+    },
+    {
+      "expected": "200K+門店數量",
+      "found": true
+    },
+    {
+      "expected": "4.5B+每月配送訂單 GMV",
+      "found": true
+    },
+    {
+      "expected": "30% up客戶效率提升",
+      "found": true
+    },
+    {
+      "expected": "實名案例",
+      "found": true
+    },
+    {
+      "expected": "從已落地品牌看合作範圍和營運變化",
+      "found": false
+    },
+    {
+      "expected": "不同品牌的重點不一樣：有的先處理多平台訂單與門店出單，有的需要支撐多品牌營運，有的把配送狀態和騎手管理納入 DMS / iDMS。",
+      "found": false
+    },
+    {
+      "expected": "Pizza-Box｜9 年合作，OMS + 自有點餐",
+      "found": false
+    },
+    {
+      "expected": "JIA Group｜多品牌、多門店營運",
+      "found": false
+    },
+    {
+      "expected": "Jardine Group｜DMS / iDMS 配送履約",
+      "found": false
+    },
+    {
+      "expected": "Pizza-Box",
+      "found": true
+    },
+    {
+      "expected": "JIA Group",
+      "found": true
+    },
+    {
+      "expected": "Jardine Group",
+      "found": true
+    },
+    {
+      "expected": "案例營運視圖",
+      "found": true
+    },
+    {
+      "expected": "訂單整合",
+      "found": false
+    },
+    {
+      "expected": "OMS",
+      "found": true
+    },
+    {
+      "expected": "配送履約",
+      "found": false
+    },
+    {
+      "expected": "DMS / iDMS",
+      "found": false
+    },
+    {
+      "expected": "數據與服務",
+      "found": false
+    },
+    {
+      "expected": "CDBI",
+      "found": true
+    },
+    {
+      "expected": "合作超過 9 年；使用 OMS、APP / Web 點餐、第三方配送整合、自有配送、營銷工具、BI 分析與客戶服務。",
+      "found": false
+    },
+    {
+      "expected": "導入後變化：訂單、配送、營銷和客戶服務不再分散在多個工具中，品牌可以用同一套流程追蹤門店履約和服務狀態。",
+      "found": false
+    },
+    {
+      "expected": "下一步：預約相似場景演示。",
+      "found": false
+    },
+    {
+      "expected": "預約相似場景演示",
+      "found": true
+    },
+    {
+      "expected": "業態成果",
+      "found": true
+    },
+    {
+      "expected": "用多元餐飲環境補足相似場景參考",
+      "found": false
+    },
+    {
+      "expected": "甜品連鎖",
+      "found": true
+    },
+    {
+      "expected": "OMS 對接 POS，整合外賣平台資料並自動打印，降低漏單風險。",
+      "found": false
+    },
+    {
+      "expected": "訂單量：100K → 190K → 1.01M",
+      "found": false
+    },
+    {
+      "expected": "銷售額：6.6M → 7.74M → 54.42M",
+      "found": false
+    },
+    {
+      "expected": "復購率：19.88% → 25.83%",
+      "found": false
+    },
+    {
+      "expected": "火鍋連鎖",
+      "found": true
+    },
+    {
+      "expected": "小程序訂單、門店聚合與騎手管理回到 OMS / DMS 流程。",
+      "found": false
+    },
+    {
+      "expected": "訂單取消率：12.66% / 15.65% / 19.98%",
+      "found": false
+    },
+    {
+      "expected": "年度銷售額：1,578 萬元",
+      "found": false
+    },
+    {
+      "expected": "營運效率：147%",
+      "found": false
+    },
+    {
+      "expected": "中餐連鎖",
+      "found": true
+    },
+    {
+      "expected": "Business Center 和 Data Center 支援收購後的系統整合與跨系統數據管理。",
+      "found": false
+    },
+    {
+      "expected": "訂單取消率改善：185%",
+      "found": false
+    },
+    {
+      "expected": "銷售增長：665%",
+      "found": false
+    },
+    {
+      "expected": "門店擴張率：116%",
+      "found": false
+    },
+    {
+      "expected": "咖啡品牌",
+      "found": true
+    },
+    {
+      "expected": "外賣平台對接、Menu Center 菜單同步與 CDBI 分析支援門店決策。",
+      "found": false
+    },
+    {
+      "expected": "單店平均銷售額：+55%",
+      "found": false
+    },
+    {
+      "expected": "單店平均訂單額增長：+74%",
+      "found": false
+    },
+    {
+      "expected": "訂單量：1420 → 2472",
+      "found": false
+    },
+    {
+      "expected": "鮮食零售",
+      "found": true
+    },
+    {
+      "expected": "跨區域餐單、庫存與多平台同步，支援區域餐單和平台差異管理。",
+      "found": false
+    },
+    {
+      "expected": "門店營運效率：30%",
+      "found": false
+    },
+    {
+      "expected": "門店營運數字化：80%",
+      "found": false
+    },
+    {
+      "expected": "線上訂單比例：26.7%",
+      "found": false
+    },
+    {
+      "expected": "配送密集品牌",
+      "found": true
+    },
+    {
+      "expected": "DMS / iDMS 管理自有騎手、第三方配送、派單規則、SMS 通知與配送異常。",
+      "found": false
+    },
+    {
+      "expected": "Jardine Group DMS 覆蓋 200+ outlets",
+      "found": false
+    },
+    {
+      "expected": "DMS 平台可用性：99.95% over",
+      "found": false
+    },
+    {
+      "expected": "DMS 吞吐量：500 Order/second",
+      "found": false
+    },
+    {
+      "expected": "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector",
+      "found": false
+    }
+  ],
+  "visibleText": "餐道\n首頁\n解決方案\n平台能力\n生態集成\n客戶案例\n資源中心\n繁/EN\n預約演示\n餐道真實影響力\n從不同餐飲業態看餐道如何改善訂單、配送與數據營運\n探索頂尖餐飲品牌如何利用餐道系統重塑數據流。從 OMS 到 iDMS，我們的解決方案將碎片化數據轉化為可追溯的清晰營運流，釋放前所未有的效率。\n預約相似場景演示\narrow_forward\n服務規模\n餐道作為無聲的合作夥伴，每日穩定支撐龐大的餐飲營運網絡。\n5000+\n品牌數量\n500M+\n每日處理訂單\n400+\n覆蓋城市\n200K+\n門店數量\n4.5B+\n每月配送訂單 GMV\n30% up\n客戶效率提升\n實名案例解析\nPizza-Box\nchevron_right\nJIA Group\nchevron_right\nJardine Group\nchevron_right\nPizza-Box\n連鎖速食\n面臨高峰期外送調度混亂與各平台數據割裂挑戰。\n案例營運視圖\n部署模組\nOMS + iDMS + AMS\nanalytics\n導入前痛點\nhorizontal_rule\n多平台訂單需人手轉錄，易漏單。\nhorizontal_rule\n自有騎手與第三方運力缺乏統一調度中樞。\ncheck_circle\n導入後變化\narrow_right_alt\n訂單直入廚房，處理時間縮短 40%。\narrow_right_alt\niDMS 智能派單，準點率提升至 98%。\n預約相似場景演示\narrow_forward\n業態成果\n針對不同餐飲模型的定製化數據流最佳實踐。\n甜品連鎖\nicecream\n利用 Menu Center 實現多門店菜單一鍵同步，CDBI 深度分析季節性爆款趨勢。\n關鍵指標\n上新效率 +80%\n火鍋連鎖\nlocal_fire_department\nOMS 聚合堂食與外賣排隊，Finance Center 確保複雜分賬清晰無誤。\n關鍵指標\n對賬時間 -60%\n中餐連鎖\nrestaurant\n透過 Connector 無縫對接現有 ERP，建立企業級 Data Asset。\n關鍵指標\n數據準確率 99.9%\n咖啡品牌\nlocal_cafe\n自營小程序深度結合 SaaS 會員體系，提升復購率與客戶黏性。\n關鍵指標\n會員活躍度 +45%\n鮮食零售\nstorefront\n庫存與前端訂單即時連動，減少超賣現象，優化供應鏈調度。\n關鍵指標\n庫存週轉 +25%\n配送密集品牌\nmoped\n高度依賴 iDMS 進行騎手路徑最佳化與多單聚合配送。\n關鍵指標\n單均配送成本 -15%\n餐道\n© 2024 餐道 Candao. 版權所有.\nSaaS系統\niDMS 智能配送\nAMS 聚合管理\nConnector 連接器\n服務條款\n隱私政策"
+}

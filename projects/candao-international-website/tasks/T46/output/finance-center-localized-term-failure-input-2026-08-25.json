@@ -1,0 +1,24 @@
+{
+  "suite": "t46-finance-center-localized-term-failure-2026-08-25",
+  "items": [
+    {
+      "id": "zh-hant-finance-center-visible",
+      "component_type": "stitch_visible_copy",
+      "role": "财务",
+      "page_task": "说明财务对账能力",
+      "locale": "zh-Hant",
+      "text": "CDBI 和 Finance Center 支援管理層、營運和財務查看報表、看板、平台訂單與 OMS 訂單對賬差異。",
+      "must_include": ["CDBI", "平台訂單", "OMS 訂單"]
+    },
+    {
+      "id": "zh-hant-rendered-finance-center",
+      "component_type": "rendered_text_check",
+      "role": "财务",
+      "page_task": "验证渲染后的中文生产表达",
+      "locale": "zh-Hant",
+      "text": "CDBI / 財務對賬",
+      "rendered_text": "CDBI / Finance Center",
+      "must_include": ["CDBI", "財務對賬"]
+    }
+  ]
+}

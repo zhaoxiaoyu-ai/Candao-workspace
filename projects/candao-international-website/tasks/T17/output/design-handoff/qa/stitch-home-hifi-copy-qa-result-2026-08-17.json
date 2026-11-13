@@ -1,0 +1,79 @@
+{
+  "suite": "T17 Stitch Home high-fidelity copy QA",
+  "total": 10,
+  "passed": 10,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "stitch-home-hifi-header",
+      "component_type": "header",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-home-hifi-hero",
+      "component_type": "hero",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-home-hifi-product-stage",
+      "component_type": "product-stage",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-home-hifi-proof-strip",
+      "component_type": "proof-strip",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-home-hifi-connector",
+      "component_type": "connector-hub",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-home-hifi-capability-explorer",
+      "component_type": "capability-explorer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-home-hifi-scale-proof",
+      "component_type": "metrics",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-home-hifi-case-preview",
+      "component_type": "case-preview",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-home-hifi-final-cta",
+      "component_type": "cta",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "stitch-home-hifi-footer",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

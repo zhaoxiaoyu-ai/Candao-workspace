@@ -1,0 +1,1057 @@
+{
+  "suite": "T57 Home English Figma Copy QA",
+  "total": 149,
+  "passed": 149,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "T57-001",
+      "component_type": "headline_adaptation",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-002",
+      "component_type": "headline_adaptation_layout_safe",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-003",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-004",
+      "component_type": "cta",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-005",
+      "component_type": "cta",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-006",
+      "component_type": "layout_safe_adaptation",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-007",
+      "component_type": "layout_safe_adaptation",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-008",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-009",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-010",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-011",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-012",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-013",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-014",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-015",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-016",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-017",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-018",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-019",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-020",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-021",
+      "component_type": "compact_ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-022",
+      "component_type": "compact_ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-023",
+      "component_type": "compact_ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-024",
+      "component_type": "compact_ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-025",
+      "component_type": "compact_ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-026",
+      "component_type": "compact_ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-027",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-028",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-029",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-030",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-031",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-032",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-033",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-034",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-035",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-036",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-037",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-038",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-039",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-040",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-041",
+      "component_type": "sample_data_localized",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-042",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-043",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-044",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-045",
+      "component_type": "sample_data_localized",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-046",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-047",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-048",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-049",
+      "component_type": "sample_data_localized",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-050",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-051",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-052",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-053",
+      "component_type": "ui_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-054",
+      "component_type": "sample_data_localized",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-055",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-056",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-057",
+      "component_type": "sample_data_localized",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-058",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-059",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-060",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-061",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-062",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-063",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-064",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-065",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-066",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-067",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-068",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-069",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-070",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-071",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-072",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-073",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-074",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-075",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-076",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-077",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-078",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-079",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-080",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-081",
+      "component_type": "compact_card_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-082",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-083",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-084",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-085",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-086",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-087",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-088",
+      "component_type": "cta",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-089",
+      "component_type": "nav",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-090",
+      "component_type": "nav",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-091",
+      "component_type": "nav",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-092",
+      "component_type": "nav",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-093",
+      "component_type": "nav",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-094",
+      "component_type": "nav",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-095",
+      "component_type": "language_switcher_preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-096",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-097",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-098",
+      "component_type": "cta",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-099",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-100",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-101",
+      "component_type": "unconfirmed_source_metric_replaced_with_qualitative_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-102",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-103",
+      "component_type": "tag",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-104",
+      "component_type": "tag",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-105",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-106",
+      "component_type": "cta",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-107",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-108",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-109",
+      "component_type": "tag",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-110",
+      "component_type": "tag",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-111",
+      "component_type": "tag",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-112",
+      "component_type": "tag",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-113",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-114",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-115",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-116",
+      "component_type": "term",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-117",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-118",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-119",
+      "component_type": "approved_metric_preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-120",
+      "component_type": "approved_metric_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-121",
+      "component_type": "approved_metric_preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-122",
+      "component_type": "approved_metric_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-123",
+      "component_type": "approved_metric_preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-124",
+      "component_type": "approved_metric_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-125",
+      "component_type": "approved_metric_preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-126",
+      "component_type": "approved_metric_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-127",
+      "component_type": "approved_metric_preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-128",
+      "component_type": "approved_metric_label",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-129",
+      "component_type": "cta",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-130",
+      "component_type": "adapted",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-131",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-132",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-133",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-134",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-135",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-136",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-137",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": [
+        {
+          "code": "possible_prototype_reduction",
+          "message": "当前文本比来源文本短超过 25%，需要确认是否删减业务对象、状态或条件。"
+        }
+      ]
+    },
+    {
+      "id": "T57-138",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-139",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-140",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-141",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-142",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-143",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-144",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-145",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-146",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-147",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-148",
+      "component_type": "footer",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "T57-149",
+      "component_type": "preserved",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

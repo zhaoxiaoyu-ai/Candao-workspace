@@ -1,0 +1,72 @@
+{
+  "suite": "T31 visual media low-fidelity visible copy QA",
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t31-index",
+      "component_type": "prototype_page_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t31-home",
+      "component_type": "prototype_page_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t31-solutions",
+      "component_type": "prototype_page_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t31-platform",
+      "component_type": "prototype_page_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t31-integrations",
+      "component_type": "prototype_page_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t31-customers",
+      "component_type": "prototype_page_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t31-resources",
+      "component_type": "prototype_page_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t31-about",
+      "component_type": "prototype_page_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t31-demo",
+      "component_type": "prototype_page_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

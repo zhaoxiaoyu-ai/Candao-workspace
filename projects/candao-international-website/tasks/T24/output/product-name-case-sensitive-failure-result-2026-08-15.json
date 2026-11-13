@@ -1,0 +1,53 @@
+{
+  "suite": "t24-product-name-case-sensitive-failure-2026-08-15",
+  "total": 3,
+  "passed": 0,
+  "failed": 3,
+  "status": "fail",
+  "results": [
+    {
+      "id": "wrong-idms-source-text",
+      "component_type": "product_name",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "forbidden_expression",
+          "message": "命中禁止或未确认表达：IDMS"
+        },
+        {
+          "code": "case_sensitive_term_mismatch",
+          "message": "产品名或术语大小写错误：应使用 `iDMS`，不应使用 `IDMS`。"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "wrong-saas-source-text",
+      "component_type": "service_name",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "case_sensitive_term_mismatch",
+          "message": "产品名或术语大小写错误：应使用 `SaaS`，不应使用 `SAAS`。"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "wrong-rendered-idms-by-css",
+      "component_type": "prototype_text",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "case_sensitive_render_mismatch",
+          "message": "渲染结果中的产品名或术语大小写错误：应显示 `iDMS`，不应显示 `IDMS`。"
+        },
+        {
+          "code": "case_sensitive_style_transform",
+          "message": "样式层使用 `text-transform: uppercase`，可能改写大小写敏感产品名。"
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}

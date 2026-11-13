@@ -1,0 +1,50 @@
+{
+  "agent_name": "Website High Fidelity Design Execution Workflow",
+  "date": "2026-08-05",
+  "language": "简体中文",
+  "status": "manual_fallback_after_agent_pd_runtime_error",
+  "agent_pd": {
+    "doctor_status": "ready",
+    "run_status": "failed",
+    "failure": "ImportError: module ''langchain_core.embeddings'.'embeddings'' not found (No module named 'langchain_core.embeddings.embeddings')"
+  },
+  "purpose": "把 Candao 国际官网的 Copy、UX、Prototype Validation、Visual Direction、Benchmark 和审查意见转成 Figma 高保真页面、Design Token、组件、Motion Storyboard、Design System 和视觉 QA 报告。",
+  "inputs": [
+    "T07 Final Copy",
+    "T08 UX Specification",
+    "T09 Prototype Validation",
+    "T10 Website Visual Direction",
+    "T11 High Fidelity Visual Specification",
+    "T11.5 Stitch / Visual Director outputs"
+  ],
+  "capabilities": [
+    "Figma Design Execution",
+    "Design System Builder",
+    "UI Prototype Builder",
+    "Motion Storyboard Builder",
+    "Visual QA Reviewer"
+  ],
+  "hard_rules": [
+    "Primary visual locale is Traditional Chinese / TC.",
+    "Do not display bilingual body copy in one production frame.",
+    "Primary action and connection color is #528dff.",
+    "Do not invent customer logos, customer names, metrics, certifications, SLA, pricing, or integration status.",
+    "Every generated Figma write must return created or mutated node IDs."
+  ],
+  "required_figma_frames": [
+    "Home / Desktop 1440 / TC",
+    "Home / Mobile 390 / TC",
+    "Platform / Desktop 1440 / TC",
+    "Platform UI Motion Storyboard / TC",
+    "Product Motion Storyboard / TC",
+    "Candao Website Design System v1.0"
+  ],
+  "acceptance_gates": [
+    "Home includes Hero, photography/video direction, UI Overlay, Trust Module, Problem Switcher, Product Showcase, and Final CTA.",
+    "Platform includes Ordering Channels to Candao Platform to Store, Delivery, Data, HQ Visibility.",
+    "Product Motion includes Order and Delivery four-step UI demos.",
+    "Design System includes tokens, components, and states.",
+    "High Fidelity Review answers brand, visual, product, workflow, business value, localization, and unsupported-claim criteria."
+  ]
+}
+

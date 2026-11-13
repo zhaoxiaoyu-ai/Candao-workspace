@@ -1,0 +1,16 @@
+{
+  "suite": "T44 Solutions home-style 100 coverage visible copy QA",
+  "total": 1,
+  "passed": 1,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t44-solutions-home-style-100",
+      "component_type": "high_fidelity_candidate_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "task_id": "T42",
+  "updated": "2026-08-20",
+  "page": "Solutions",
+  "label": "解決方案",
+  "status": "generated_but_qa_failed",
+  "formal_registration": false,
+  "project": {
+    "project_id": "10888304674441209287",
+    "project_name": "Candao International Website T11.5-C",
+    "design_system": "assets/a99f770bf474445d98b287cf983bc147",
+    "design_system_name": "餐道 Operations Architecture",
+    "model": "GEMINI_3_PRO",
+    "device": "DESKTOP"
+  },
+  "generation": {
+    "screen_id": "fdf1d4f894a8483885f7b3ba4c1c566c",
+    "screen_name": "projects/10888304674441209287/screens/fdf1d4f894a8483885f7b3ba4c1c566c",
+    "title": "解決方案 - 餐道國際 / Desktop TC / 營運場景導航",
+    "session_id": "950404505638462701",
+    "width": 2560,
+    "height": 3790,
+    "html_download_url": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzMwOWIzMTc3NjlmZDQyZTg5Y2YxZTJjZmY4ZTBjZTA5EgsSBxD0lM_B9g8YAZIBJAoKcHJvamVjdF9pZBIWQhQxMDg4ODMwNDY3NDQ0MTIwOTI4Nw&filename=&opi=96797242",
+    "screenshot_download_url": "https://lh3.googleusercontent.com/aida/AP1WRLtknR9QJcJLjCWHNCjmOqbs3tlC4-RKqb_yllkcVgUuGN1Vzf68I-F7jf9k-Q3-qKurSm3YVCbmmTIsJTzP6gW523FUijMQmsygD_GOz9Eko7yePZbmBiQ5B9w8U0ZWWS0YfTb5PqiUQOGo5G_Bx8gj1o02-AYZy6VL5VhVrHv2zBHEMd7jEmCsJkaNIXFxF-QiT_GaZ-irmJtA4FPr3C90szyxUgX6vmNvEgzCkD4pcFL5cm3qz82MIklD"
+  },
+  "edit_attempt": {
+    "used": true,
+    "session_id": "4198916200482572705",
+    "result": "edit_screens returned DOM operations, but the downloadable HTML and screen metadata still exposed the pre-edit HTML during QA.",
+    "durable_writeback": false
+  },
+  "local_outputs": {
+    "prompt": "tasks/T42/output/stitch-input/solutions-prompt-v2-2026-08-20.md",
+    "html": "tasks/T42/output/stitch-downloads/t42-solutions-fdf1d4f894a8483885f7b3ba4c1c566c.html",
+    "stitch_preview": "tasks/T42/output/screenshots/t42-solutions-fdf1d4f894a8483885f7b3ba4c1c566c-stitch-preview.png",
+    "local_render": "tasks/T42/output/screenshots/local-render/t42-solutions-fdf1d4f894a8483885f7b3ba4c1c566c-1440-full.png",
+    "domain_copy_qa": "tasks/T42/output/qa/domain-copy-t42-report.json",
+    "static_qa": "tasks/T42/output/qa/static-t42-solutions-html-report.json",
+    "render_metrics": "tasks/T42/output/qa/render-metrics-t42-solutions.json"
+  },
+  "qa_summary": {
+    "domain_copy_qa": "fail",
+    "static_html_qa": "fail",
+    "render": "pass_with_content_issues",
+    "blocking_issues": [
+      "Header navigation missing 資源 in the downloadable HTML.",
+      "Visible Material Symbols ligature words remain in rendered text: receipt_long, storefront, local_shipping, account_balance_wallet, group, hub, warning, arrow_forward.",
+      "Footer contains Candao and generic copyright boilerplate in Traditional Chinese page.",
+      "Product Capability Bridge section is missing from downloadable HTML.",
+      "Proof / Next Step section is missing from downloadable HTML.",
+      "edit_screens cleanup did not durably write back to downloadable HTML."
+    ]
+  },
+  "metadata_updated": false
+}

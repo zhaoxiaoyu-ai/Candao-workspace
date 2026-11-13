@@ -1,0 +1,208 @@
+{
+  "suite": "t42-solutions-stitch-html-static-check",
+  "screen_id": "fdf1d4f894a8483885f7b3ba4c1c566c",
+  "source_html": "tasks/T42/output/stitch-downloads/t42-solutions-fdf1d4f894a8483885f7b3ba4c1c566c.html",
+  "status": "fail",
+  "checks": {
+    "header_navigation": {
+      "status": "fail",
+      "navText": "餐道 首頁 解決方案 平台 整合能力 客戶案例 關於餐道 繁中 / EN 預約產品演示 menu",
+      "missingHeaderNavItems": [
+        "資源"
+      ]
+    },
+    "required_sections": [
+      {
+        "id": "hero",
+        "status": "pass",
+        "missingTerms": []
+      },
+      {
+        "id": "scenario_explorer",
+        "status": "pass",
+        "missingTerms": []
+      },
+      {
+        "id": "product_capability_bridge",
+        "status": "fail",
+        "missingTerms": [
+          "Product Capability Bridge",
+          "產品能力",
+          "DMS / iDMS",
+          "CDBI / Finance Center",
+          "AMS / Connector"
+        ]
+      },
+      {
+        "id": "proof_next_step",
+        "status": "fail",
+        "missingTerms": [
+          "查看客戶案例"
+        ]
+      }
+    ],
+    "visible_ligature_words": {
+      "status": "fail",
+      "words": [
+        "receipt_long",
+        "storefront",
+        "local_shipping",
+        "account_balance_wallet",
+        "group",
+        "hub",
+        "warning",
+        "arrow_forward"
+      ]
+    },
+    "static_pattern_hits": {
+      "status": "fail",
+      "hits": [
+        {
+          "pattern": "placeholder",
+          "line": 276,
+          "excerpt": "<!-- Placeholder for Hero Visual -->"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 166,
+          "excerpt": ".material-symbols-outlined {"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 248,
+          "excerpt": "<span class=\"material-symbols-outlined text-2xl\">menu</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 294,
+          "excerpt": "<span class=\"material-symbols-outlined text-primary\">receipt_long</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 300,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">storefront</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 306,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">local_shipping</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 312,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">account_balance_wallet</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 318,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">group</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 324,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">hub</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 335,
+          "excerpt": "<span class=\"material-symbols-outlined text-status-warning\" style=\"font-variation-settings: 'FILL' 1;\">warning</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 352,
+          "excerpt": "預約流程演示 <span class=\"material-symbols-outlined\">arrow_forward</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 359,
+          "excerpt": "<span class=\"material-symbols-outlined text-status-warning\" style=\"font-variation-settings: 'FILL' 1;\">warning</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 376,
+          "excerpt": "查看同步邏輯 <span class=\"material-symbols-outlined\">arrow_forward</span>"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 416,
+          "excerpt": "t.querySelector('.material-symbols-outlined').classList.replace('text-primary', 'text-on-surface-variant');"
+        },
+        {
+          "pattern": "material-symbols",
+          "line": 423,
+          "excerpt": "tab.querySelector('.material-symbols-outlined').classList.replace('text-on-surface-variant', 'text-primary');"
+        },
+        {
+          "pattern": "arrow_forward",
+          "line": 352,
+          "excerpt": "預約流程演示 <span class=\"material-symbols-outlined\">arrow_forward</span>"
+        },
+        {
+          "pattern": "arrow_forward",
+          "line": 376,
+          "excerpt": "查看同步邏輯 <span class=\"material-symbols-outlined\">arrow_forward</span>"
+        },
+        {
+          "pattern": "receipt_long",
+          "line": 294,
+          "excerpt": "<span class=\"material-symbols-outlined text-primary\">receipt_long</span>"
+        },
+        {
+          "pattern": "storefront",
+          "line": 300,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">storefront</span>"
+        },
+        {
+          "pattern": "local_shipping",
+          "line": 306,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">local_shipping</span>"
+        },
+        {
+          "pattern": "account_balance_wallet",
+          "line": 312,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">account_balance_wallet</span>"
+        },
+        {
+          "pattern": "group ligature",
+          "line": 318,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">group</span>"
+        },
+        {
+          "pattern": "hub ligature",
+          "line": 324,
+          "excerpt": "<span class=\"material-symbols-outlined text-on-surface-variant\">hub</span>"
+        },
+        {
+          "pattern": "warning ligature",
+          "line": 335,
+          "excerpt": "<span class=\"material-symbols-outlined text-status-warning\" style=\"font-variation-settings: 'FILL' 1;\">warning</span>"
+        },
+        {
+          "pattern": "warning ligature",
+          "line": 359,
+          "excerpt": "<span class=\"material-symbols-outlined text-status-warning\" style=\"font-variation-settings: 'FILL' 1;\">warning</span>"
+        },
+        {
+          "pattern": "Candao",
+          "line": 392,
+          "excerpt": "<p class=\"font-body-md text-body-md text-on-surface-variant\">© 2024 餐道 Candao. All rights reserved.</p>"
+        },
+        {
+          "pattern": "copyright symbol",
+          "line": 392,
+          "excerpt": "<p class=\"font-body-md text-body-md text-on-surface-variant\">© 2024 餐道 Candao. All rights reserved.</p>"
+        },
+        {
+          "pattern": "All rights reserved",
+          "line": 392,
+          "excerpt": "<p class=\"font-body-md text-body-md text-on-surface-variant\">© 2024 餐道 Candao. All rights reserved.</p>"
+        }
+      ]
+    },
+    "visible_text_length": 523,
+    "downloadable_edit_writeback": {
+      "status": "fail",
+      "note": "edit_screens returned DOM operations but get_screen and original download URL still expose the pre-edit HTML."
+    }
+  }
+}

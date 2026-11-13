@@ -1,0 +1,100 @@
+version: "2026-08-16"
+locale: zh-Hant
+pages:
+  home:
+    title: "把餐飲與零售 O2O 的訂單、門店、配送與數據接成一條營運鏈路"
+    description: "餐道面向品牌總部和多門店營運，連接外賣平台、自有點餐入口、POS / KDS、CRM / 會員、配送資源、支付、ERP 和財務數據，讓訂單、餐單、履約、對賬與分析回到同一條可追溯鏈路。"
+    primary_cta: "預約產品演示"
+    secondary_cta: "查看平台能力"
+    modules:
+      - id: H01
+        heading: "讓多平台營運回到同一個清晰入口"
+        body: "餐道把外賣、自有點餐、門店接單、配送履約和財務對賬放回同一條營運鏈路，協助品牌看清每張訂單和每個狀態。"
+      - id: H02
+        heading: "一個營運中樞，連接關鍵流程"
+        body: "訂單渠道、門店執行系統、會員入口、配送資源、支付與企業系統先被標準化，再回到 OMS、DMS、iDMS、CDBI 和財務對賬能力。"
+      - id: H03
+        heading: "五項能力，對應品牌最常見的營運問題"
+        items:
+          - "渠道聚合：外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入餐道 OMS。"
+          - "營運承接：門店、餐單、售罄、接單、打印與異常提醒回到統一流程。"
+          - "配送履約：DMS / iDMS 管理自有騎手、第三方配送、派單、轉派和配送異常。"
+          - "數據對賬：CDBI / 財務對賬支援報表、看板與平台訂單對賬差異。"
+          - "生態接入：AMS / Connector 對接外賣平台、自建入口、POS / KDS、CRM、支付、ERP 和配送。"
+      - id: H04
+        heading: "用授權數據建立可信"
+        metrics:
+          - label: "品牌數量"
+            value: "5000+"
+          - label: "每日處理訂單"
+            value: "500M+"
+          - label: "覆蓋城市"
+            value: "400+"
+          - label: "門店數量"
+            value: "200K+"
+          - label: "每月配送訂單 GMV"
+            value: "4.5B+"
+          - label: "客戶效率提升"
+            value: "30% up"
+      - id: H05
+        heading: "從相似客戶案例看落地方式"
+        body: "以实名客户案例和業態案例呈現訂單整合、配送履約、會員營運、數據分析與對賬改善。"
+      - id: H06
+        heading: "帶著你的營運場景，看餐道如何接入"
+        cta: "預約相似場景演示"
+  solutions:
+    title: "從多平台訂單、門店、配送到對賬，梳理餐飲 O2O 營運場景"
+    description: "解決方案頁按品牌遇到的問題組織內容，不把產品逐項平鋪。使用者先確認場景，再進入平台能力、案例或演示。"
+    primary_cta: "預約相似場景演示"
+    secondary_cta: "查看平台能力"
+  platform:
+    title: "用真實產品能力承接訂單、餐單、配送、數據和接入"
+    description: "平台頁回答產品如何工作：每項能力都應對應真實產品截圖、業務對象、狀態、操作、下一步和產品視頻入口。"
+    primary_cta: "預約產品演示"
+    secondary_cta: "查看整合能力"
+    capability_tabs:
+      - title: "多渠道訂單"
+        product: "OMS / COMS / SOMS"
+        body: "外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店按渠道、訂單狀態、配送狀態和異常類型處理。"
+        next: "查看訂單隊列、通知門店、進入配送或對賬流程。"
+      - title: "餐單與門店"
+        product: "Menu Center / Store Abnormity Management"
+        body: "總部和門店維護餐單、庫存、售罄、區域菜單、營業時間、配送條件和門店接單狀態，減少多平台重複更新。"
+        next: "同步餐單、檢查售罄、更新營業時間或處理門店異常。"
+      - title: "會員與自有點餐"
+        product: "Mobile Ordering / QR / H5 / Web ordering"
+        body: "自有點餐入口承接堂食掃碼、外賣、自取、預約和會員活動，讓顧客下單後回到門店接單與後台管理。"
+        next: "檢查點餐入口、會員活動和門店接單狀態。"
+      - title: "配送履約"
+        product: "DMS / iDMS"
+        body: "DMS / iDMS 管理自有騎手、第三方配送、智能派單、人工派單、第三方溢出、SMS 通知和配送異常。"
+        next: "查看派單、轉派第三方配送或追蹤配送異常。"
+      - title: "數據與對賬"
+        product: "CDBI / 財務對賬"
+        body: "CDBI 和財務對賬能力比對平台訂單與餐道 OMS 訂單，標記金額差異、狀態差異和漏單，支援管理層、營運和財務查看。"
+        next: "查看報表、重新對賬或追蹤差異來源。"
+      - title: "AMS / Connector"
+        product: "AMS / Connector / API"
+        body: "接入不以 Logo 牆證明，而是先確認外賣平台、自建入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限和異常處理。"
+        next: "提交接入評估或預約技術演示。"
+  integrations:
+    title: "先確認接入對象、資料方向與異常處理，再談整合"
+    description: "整合能力頁以 Connector 為中心，說明外賣平台、自建入口、POS / KDS、CRM、支付、ERP、配送和 API 如何回到餐道營運鏈路。"
+    primary_cta: "預約技術演示"
+  customers:
+    title: "從实名客户和業態案例看餐道如何落地"
+    description: "客戶案例頁集中呈現授權規模數據、客户案例、前後對比和相似場景演示入口。"
+    primary_cta: "預約相似場景演示"
+  resources:
+    title: "把接入、導入、日常營運和技術問題分流到正確入口"
+    description: "資源頁降低評估和導入前疑問，提供支援中心、FAQ、接入指南、案例資源和查詢入口，不虛構文章或新聞。"
+    primary_cta: "提交支援或查詢"
+  about:
+    title: "專注餐飲與零售 O2O 營運系統的產品與服務團隊"
+    description: "關於餐道頁說明公司背景、產品演進、服務交付、品質保障、辦公地點和聯絡方式，建立長期合作可信度。"
+    primary_cta: "聯絡餐道"
+  demo:
+    title: "預約餐道產品演示前，先告訴我們你的營運場景"
+    description: "請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。我們會根據場景安排 OMS、DMS、iDMS、CDBI 或接入演示。"
+    primary_cta: "提交演示需求"
+    support_cta: "既有客戶支援"

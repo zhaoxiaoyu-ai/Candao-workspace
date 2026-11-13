@@ -1,0 +1,14 @@
+{
+  "suite": "T36 Solutions C v3 source copy QA",
+  "items": [
+    {
+      "id": "solutions-cv3-visible-copy",
+      "component_type": "prototype_page",
+      "locale": "zh-Hant",
+      "role": "决策者",
+      "page_task": "确认场景并导向平台能力或演示",
+      "text": "Candao 首頁 解決方案 平台 整合能力 客戶案例 資源 關於 Candao 繁中 / EN 預約產品演示 從營運問題出發，找到適合的 Candao 解決方案 不同餐飲品牌面對的不是單一系統問題，而是跨渠道、跨門店、跨角色的營運壓力。Candao 先理解你的場景，再連接合適的平台能力。營運監控 在線訂單 142 配送中 38 配送管理 配送調度 聚合物流管理 騎手 App 門店 騎手 調度中心 第三方物流 從手機點餐、自助點餐到門店履約，Candao 協助品牌把顧客入口、門店工作流與後台營運連接起來。已打烊 42 營業中 248 高峰期 12 異常狀態 3 告訴我們你的門店規模、渠道組合與營運挑戰，Candao 團隊將為你安排合適的產品演示。隱私政策 服務條款",
+      "must_include": ["解決方案", "餐道", "OMS", "DMS", "iDMS", "Finance Center"]
+    }
+  ]
+}

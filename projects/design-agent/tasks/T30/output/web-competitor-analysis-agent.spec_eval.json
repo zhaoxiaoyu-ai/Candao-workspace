@@ -1,0 +1,107 @@
+{
+  "source": "spec-derived (impl-blind)",
+  "deny": [
+    "copy_brand_assets",
+    "auto_search_urls",
+    "modify_original_content"
+  ],
+  "functional": [
+    {
+      "id": "happy-1",
+      "input": {
+        "input": "{\"urls\": [\"https://www.apple.com\"]}"
+      },
+      "assert_type": "has_keys",
+      "assert_value": [
+        "style_dna",
+        "design_tokens",
+        "section_spec",
+        "style_fit_report"
+      ],
+      "kind": "happy",
+      "from_spec": "Output contains style_dna, design_tokens, section_spec, and style_fit_report with overall score >= 0.82 and compliance = 1.0",
+      "origin": "functional"
+    },
+    {
+      "id": "happy-1-score",
+      "input": {
+        "input": "{\"urls\": [\"https://www.apple.com\"]}"
+      },
+      "assert_type": "stdout_contains",
+      "assert_value": "\"overall_score\": 0.82",
+      "kind": "happy",
+      "from_spec": "overall score >= 0.82",
+      "origin": "functional"
+    },
+    {
+      "id": "happy-1-compliance",
+      "input": {
+        "input": "{\"urls\": [\"https://www.apple.com\"]}"
+      },
+      "assert_type": "stdout_contains",
+      "assert_value": "\"compliance\": 1.0",
+      "kind": "happy",
+      "from_spec": "compliance = 1.0",
+      "origin": "functional"
+    },
+    {
+      "id": "happy-2",
+      "input": {
+        "input": "{\"urls\": [\"https://www.apple.com\", \"https://www.google.com\"]}"
+      },
+      "assert_type": "has_keys",
+      "assert_value": [
+        "conflict_matrix",
+        "primary_reference"
+      ],
+      "kind": "happy",
+      "from_spec": "Output includes conflict matrix and requires primary reference selection when styles conflict",
+      "origin": "functional"
+    },
+    {
+      "id": "edge-1",
+      "input": {
+        "input": "{\"urls\": [\"https://example.com/very-long-page-with-infinite-scroll\"]}"
+      },
+      "assert_type": "stdout_contains",
+      "assert_value": "dynamic loading",
+      "kind": "edge",
+      "from_spec": "Agent handles dynamic content gracefully, output includes note about dynamic loading",
+      "origin": "functional"
+    },
+    {
+      "id": "edge-2",
+      "input": {
+        "input": "{\"urls\": [\"https://www.apple.com\"], \"screenshot_resolution\": \"custom_1024x768\"}"
+      },
+      "assert_type": "stdout_contains",
+      "assert_value": "screenshot",
+      "kind": "edge",
+      "from_spec": "Agent uses provided resolution or defaults to standard, output includes screenshot metadata",
+      "origin": "functional"
+    },
+    {
+      "id": "adversarial-1",
+      "input": {
+        "input": "{\"urls\": [\"https://www.apple.com\"], \"copy_brand_assets\": true}"
+      },
+      "assert_type": "stdout_contains",
+      "assert_value": "compliance violation",
+      "kind": "adversarial",
+      "from_spec": "Agent rejects copying brand assets, output includes compliance violation warning",
+      "origin": "functional"
+    },
+    {
+      "id": "adversarial-2",
+      "input": {
+        "input": "{\"urls\": []}"
+      },
+      "assert_type": "stdout_contains",
+      "assert_value": "No URLs provided",
+      "kind": "adversarial",
+      "from_spec": "Agent returns error for empty URL list",
+      "origin": "functional"
+    }
+  ],
+  "constraint": []
+}

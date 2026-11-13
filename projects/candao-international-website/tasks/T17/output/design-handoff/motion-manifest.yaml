@@ -1,0 +1,69 @@
+version: "2026-08-16"
+status: storyboard_only
+rule: "本轮只输出关键帧故事板，不创建最终 Remotion 视频。"
+compositions:
+  - id: HomeConnectorLoop
+    purpose: "解释多渠道订单、门店、配送、数据和企业系统如何进入餐道营运中枢。"
+    duration: "10s"
+    fps: 30
+    aspect_ratio: "16:9"
+    sequence:
+      - "0-1s: 深蓝画布和中心餐道节点出现。"
+      - "1-3s: 外围订单渠道、门店、会员、配送、支付与企业系统节点出现。"
+      - "3-5s: 数据线从外围汇入中心。"
+      - "5-7s: OMS、DMS / iDMS、CDBI、財務對賬分发。"
+      - "7-9s: 异常订单和对账差异被标注。"
+      - "9-10s: 回到循环首帧。"
+    elements: ["central hub", "six nodes", "data lines", "status packets"]
+    assets: ["logo svg ready", "reference master missing"]
+    loop_behavior: "seamless"
+    poster: "missing"
+    reduced_motion_fallback: "static central hub poster"
+    stitch_keyframes: ["home-connector/keyframe-01", "home-connector/keyframe-02", "home-connector/keyframe-03"]
+  - id: SolutionScenarioFlow
+    purpose: "按解决方案场景说明问题、能力和结果如何变化。"
+    duration: "6-8s per scenario"
+    fps: 30
+    aspect_ratio: "16:10"
+    sequence:
+      - "问题状态出现。"
+      - "对应产品能力介入。"
+      - "订单、门店、配送或对账状态回到可处理流程。"
+    elements: ["scenario nodes", "product capability", "before-after state"]
+    assets: ["scenario image missing", "product screenshot missing"]
+    loop_behavior: "per scenario, no forced autoplay"
+    poster: "missing"
+    reduced_motion_fallback: "scenario before-after static panel"
+    stitch_keyframes: ["solution-scenarios/keyframe-01", "solution-scenarios/keyframe-02"]
+  - id: PlatformScreenshotOverlay
+    purpose: "在真实产品截图外部解释订单状态、异常、派单或对账变化。"
+    duration: "5-6s"
+    fps: 30
+    aspect_ratio: "16:10"
+    sequence:
+      - "截图出现。"
+      - "热点标注依序出现。"
+      - "订单行或配送状态高亮。"
+      - "异常或下一步操作出现。"
+    elements: ["real screenshot", "overlay hotspots", "status labels", "CTA"]
+    assets: ["real product screenshot missing"]
+    loop_behavior: "stop at final state"
+    poster: "missing"
+    reduced_motion_fallback: "static screenshot with labels"
+    stitch_keyframes: ["platform-overlays/keyframe-01", "platform-overlays/keyframe-02", "platform-overlays/keyframe-03"]
+  - id: IntegrationDataFlow
+    purpose: "说明 Menu、Order、User、Basic Info API 数据如何经 Connector 流向 OMS、Data 和 Finance。"
+    duration: "8s"
+    fps: 30
+    aspect_ratio: "16:10"
+    sequence:
+      - "四类 API 数据对象出现。"
+      - "数据包进入 Connector。"
+      - "标准化后流向 OMS、Data Asset、財務對賬。"
+      - "异常回传到接入评估。"
+    elements: ["API packets", "Connector", "OMS", "Data Asset", "財務對賬"]
+    assets: ["none required for storyboard"]
+    loop_behavior: "soft loop"
+    poster: "missing"
+    reduced_motion_fallback: "static topology map"
+    stitch_keyframes: ["integration-network/keyframe-01", "integration-network/keyframe-02", "integration-network/keyframe-03"]

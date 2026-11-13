@@ -1,0 +1,95 @@
+{
+  "suite": "stitch-platform-hifi-copy-preflight-2026-08-17",
+  "items": [
+    {
+      "id": "platform-page-title-description-cta",
+      "locale": "zh-Hant",
+      "component_type": "page_title_description_cta",
+      "role": "决策者",
+      "page_task": "展示能力",
+      "text": "用真實產品能力承接訂單、餐單、配送、數據和接入。平台頁回答產品如何工作：每項能力都應對應真實產品截圖、業務對象、狀態、操作、下一步和產品視頻入口。預約產品演示。查看整合能力。",
+      "must_include": ["訂單", "餐單", "配送", "數據", "接入", "產品視頻入口", "預約產品演示", "查看整合能力"]
+    },
+    {
+      "id": "platform-capability-tabs-summary",
+      "locale": "zh-Hant",
+      "component_type": "product_page_module",
+      "role": "总部运营",
+      "page_task": "展示能力",
+      "text": "多渠道訂單：OMS / COMS / SOMS。餐單與門店：Menu Center / Store Abnormity Management。會員與自有點餐：Mobile Ordering / QR / H5 / Web ordering。配送履約：DMS / iDMS。數據與對賬：CDBI / Finance Center。AMS / Connector：API、POS / KDS、CRM、ERP、支付、配送。",
+      "must_include": ["OMS", "Menu Center", "Mobile Ordering", "DMS", "iDMS", "CDBI", "Finance Center", "AMS / Connector"]
+    },
+    {
+      "id": "platform-capability-orders",
+      "locale": "zh-Hant",
+      "component_type": "product_page_module",
+      "role": "总部运营",
+      "page_task": "展示能力",
+      "text": "外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店按渠道、訂單狀態、配送狀態和異常類型處理。下一步：查看訂單隊列、通知門店、進入配送或對賬流程。",
+      "must_include": ["OMS", "訂單狀態", "配送狀態", "異常類型", "下一步"]
+    },
+    {
+      "id": "platform-capability-menu-store",
+      "locale": "zh-Hant",
+      "component_type": "product_page_module",
+      "role": "总部运营",
+      "page_task": "展示能力",
+      "text": "總部和門店維護餐單、庫存、售罄、區域菜單、營業時間、配送條件和門店接單狀態，減少多平台重複更新。下一步：同步餐單、檢查售罄、更新營業時間或處理門店異常。對應產品：Menu Center / Store Abnormity Management。",
+      "must_include": ["Menu Center", "門店", "售罄", "營業時間", "下一步"]
+    },
+    {
+      "id": "platform-capability-member-ordering",
+      "locale": "zh-Hant",
+      "component_type": "product_page_module",
+      "role": "市场",
+      "page_task": "展示能力",
+      "text": "自有點餐入口承接堂食掃碼、外賣、自取、預約和會員活動，讓顧客下單後回到門店接單與後台管理。下一步：檢查點餐入口、會員活動和門店接單狀態。對應產品：Mobile Ordering / QR / H5 / Web ordering。",
+      "must_include": ["Mobile Ordering", "QR", "H5", "Web ordering", "會員", "下一步"]
+    },
+    {
+      "id": "platform-capability-delivery",
+      "locale": "zh-Hant",
+      "component_type": "product_page_module",
+      "role": "配送主管",
+      "page_task": "展示能力",
+      "text": "DMS / iDMS 管理自有騎手、第三方配送、智能派單、人工派單、第三方溢出、SMS 通知和配送異常。下一步：查看派單、轉派第三方配送或追蹤配送異常。",
+      "must_include": ["DMS", "iDMS", "派單", "第三方配送", "配送異常", "下一步"]
+    },
+    {
+      "id": "platform-capability-data-finance",
+      "locale": "zh-Hant",
+      "component_type": "product_page_module",
+      "role": "财务",
+      "page_task": "展示能力",
+      "text": "CDBI 和 Finance Center 比對平台訂單與餐道 OMS 訂單，標記金額差異、狀態差異和漏單，支援管理層、營運和財務查看。下一步：查看報表、重新對賬或追蹤差異來源。",
+      "must_include": ["CDBI", "Finance Center", "金額差異", "狀態差異", "漏單", "下一步"]
+    },
+    {
+      "id": "platform-capability-connector",
+      "locale": "zh-Hant",
+      "component_type": "product_page_module",
+      "role": "IT",
+      "page_task": "验证接入",
+      "text": "接入不以 Logo 牆證明，而是先確認外賣平台、自建入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限和異常處理。下一步：提交接入評估或預約技術演示。對應產品：AMS / Connector / API。",
+      "must_include": ["AMS / Connector", "API", "POS / KDS", "CRM", "ERP", "支付", "異常處理", "下一步"]
+    },
+    {
+      "id": "platform-video-entry",
+      "locale": "zh-Hant",
+      "component_type": "product_page_module",
+      "role": "销售",
+      "page_task": "展示能力",
+      "text": "產品視頻入口：OMS、Menu / Store、DMS / iDMS、CDBI / Finance。按工作流查看不同模組的日常使用方式，不生成假視頻封面。",
+      "must_include": ["產品視頻入口", "OMS", "Menu / Store", "DMS / iDMS", "CDBI / Finance"]
+    },
+    {
+      "id": "platform-final-cta",
+      "locale": "zh-Hant",
+      "component_type": "button",
+      "role": "销售",
+      "page_task": "完成转化",
+      "text": "根據當前能力，預約產品演示、查看整合能力或查看相關案例。",
+      "must_include": ["預約產品演示", "查看整合能力", "查看相關案例"]
+    }
+  ]
+}

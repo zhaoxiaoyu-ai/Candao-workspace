@@ -1,0 +1,40 @@
+{
+  "suite": "T36 Solutions C v3 source static check",
+  "date": "2026-08-20",
+  "source_html": "tasks/T36/output/stitch-downloads/solutions-cv3-source-4188f2a7f3f84566b5644b19efdedadd.html",
+  "source_html_sha256": "3e325847200753ed4836acc87bc3723c51ca8c69022eaf4156857771201700c7",
+  "rendered_screenshot": "tasks/T36/output/screenshots/solutions-cv3-source-1440-full.png",
+  "rendered_screenshot_sha256": "56c7f912f3c322e2f9959c69ef8d4626b3db9df32a2c681d1a002d4c662b3a66",
+  "rendered_dimensions": {
+    "width": 1440,
+    "height": 4168
+  },
+  "status": "fail",
+  "hard_failures": [
+    {
+      "code": "brand_display_mismatch",
+      "evidence": "Visible Chinese / Traditional Chinese page text includes `Candao`, `關於 Candao`, and `找到適合的 Candao 解決方案`."
+    },
+    {
+      "code": "fake_or_unapproved_images",
+      "evidence": "HTML contains multiple external `<img>` tags using generated or hosted restaurant / dashboard imagery."
+    },
+    {
+      "code": "unauthorized_status_counts",
+      "evidence": "Visible operational counts include `142`, `38`, `248`, `12`, `3`, and `42`, which are not confirmed metrics for this Solutions page."
+    },
+    {
+      "code": "visible_icon_ligatures",
+      "evidence": "Material icon names are visible in HTML text, including `check_circle`, `store`, `two_wheeler`, `admin_panel_settings`, `local_shipping`, `sync_alt`, `motorcycle`, `route`, `hub`, and `arrow_forward`."
+    },
+    {
+      "code": "footer_not_aligned",
+      "evidence": "Footer still uses `Candao` and includes Traditional Chinese legal links `隱私政策` / `服務條款` that are not part of the confirmed T27/T35 primary footer requirement."
+    },
+    {
+      "code": "core_copy_not_aligned",
+      "evidence": "Hero headline is `從營運問題出發，找到適合的 Candao 解決方案`, not the current approved Solutions direction `按餐飲 O2O 營運問題，找到可落地的解決方案`."
+    }
+  ],
+  "conclusion": "The existing C v3 Solutions screen is not eligible for formal design-handoff output."
+}

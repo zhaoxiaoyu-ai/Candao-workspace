@@ -1,0 +1,95 @@
+{
+  "suite": "resources-demo-low-fidelity-copy-qa-2026-08-15",
+  "items": [
+    {
+      "id": "resources-overview",
+      "locale": "zh-Hant",
+      "component_type": "page_description",
+      "role": "采购方",
+      "page_task": "降低评估和导入前疑问",
+      "text": "資源頁不重複產品銷售內容，而是把採購、IT、營運、門店、配送和財務常見問題分流到合適的下一步：查看接入準備、閱讀 FAQ、提交支援查詢、進入案例資源或預約產品演示。",
+      "must_include": ["資源", "採購", "IT", "營運", "門店", "配送", "財務", "接入準備", "支援查詢", "案例資源", "預約產品演示"]
+    },
+    {
+      "id": "resources-support-center",
+      "locale": "zh-Hant",
+      "component_type": "prototype_block",
+      "role": "支持",
+      "page_task": "分流支持问题",
+      "text": "評估中需要確認 OMS、Menu Center、DMS、iDMS、CDBI 或 AMS / Connector 是否適合現有營運問題。導入中需要整理外賣平台、自有點餐、POS、CRM、ERP、配送和支付等接入對象。日常營運需要處理接單超時、餐單更新失敗、配送超時、退款未處理或對賬差異。技術查詢需要確認 API、字段、權限、資料流、異常狀態和系統邊界。",
+      "must_include": ["OMS", "Menu Center", "DMS", "iDMS", "CDBI", "AMS / Connector", "外賣平台", "POS", "CRM", "ERP", "接單超時", "餐單更新失敗", "對賬差異", "API", "權限"]
+    },
+    {
+      "id": "resources-finance-faq",
+      "locale": "zh-Hant",
+      "component_type": "faq_item",
+      "role": "财务",
+      "page_task": "解释财务对账问题",
+      "text": "Finance Center 如何比對平台訂單與餐道 OMS 訂單，識別金額、狀態和漏單差異？",
+      "must_include": ["Finance Center", "平台訂單", "餐道 OMS 訂單", "金額", "狀態", "漏單"]
+    },
+    {
+      "id": "resources-enquiry-form",
+      "locale": "zh-Hant",
+      "component_type": "form_help",
+      "role": "采购方",
+      "page_task": "承接非销售型查询",
+      "text": "查詢類型：支援 / 接入 / 媒體 / 案例 / 招聘 / 其他。公司或品牌名稱、地區、角色、聯絡方式。相關系統：OMS、DMS、iDMS、CDBI、AMS / Connector 或不確定。送出後顯示建議路徑：支援中心、預約產品演示或公司聯絡入口。",
+      "must_include": ["查詢類型", "支援", "接入", "公司或品牌名稱", "地區", "角色", "聯絡方式", "相關系統", "OMS", "DMS", "iDMS", "CDBI", "送出後"]
+    },
+    {
+      "id": "demo-hero",
+      "locale": "zh-Hant",
+      "component_type": "form_help",
+      "role": "采购方",
+      "page_task": "分流 Demo",
+      "text": "請留下品牌、地區、門店規模、目前使用的外賣平台與 POS 系統，以及最需要處理的營運問題。餐道會根據你的場景安排 OMS、DMS、iDMS、CDBI 或 AMS / Connector 相關演示。",
+      "must_include": ["品牌", "地區", "門店規模", "外賣平台", "POS", "營運問題", "餐道", "OMS", "DMS", "iDMS", "CDBI", "AMS / Connector"]
+    },
+    {
+      "id": "demo-intent-router",
+      "locale": "zh-Hant",
+      "component_type": "segmented_control",
+      "role": "销售",
+      "page_task": "识别联系目的",
+      "text": "聯絡目的分為產品演示、聯絡銷售、合作洽詢和支援查詢。產品演示用於評估多平台訂單、門店、菜單、配送、會員、數據或對賬能力；支援查詢用於既有客戶或導入中團隊提交接入、營運、技術或日常問題。",
+      "must_include": ["產品演示", "聯絡銷售", "合作洽詢", "支援查詢", "多平台訂單", "門店", "菜單", "配送", "對賬", "既有客戶"]
+    },
+    {
+      "id": "demo-scenario-step",
+      "locale": "zh-Hant",
+      "component_type": "form_step",
+      "role": "采购方",
+      "page_task": "选择演示场景",
+      "text": "Step 1 選擇營運場景：多平台訂單、菜單與庫存、配送營運與履約、數字點餐、數據與對賬、系統整合、托管 / 代運營，或先提交不確定問題由團隊協助分流。",
+      "must_include": ["多平台訂單", "菜單與庫存", "配送營運與履約", "數字點餐", "數據與對賬", "系統整合", "托管 / 代運營", "不確定", "分流"]
+    },
+    {
+      "id": "demo-system-fields",
+      "locale": "zh-Hant",
+      "component_type": "form",
+      "role": "IT",
+      "page_task": "收集系统现况",
+      "text": "Step 2 整理現有系統和接入對象：公司 / 品牌名稱、所在地區、門店規模、聯絡人和角色；訂單來源包括外賣平台、自有 H5 / Web / APP / QR、Call Center 或其他入口；門店系統包括 POS、KDS、打印、小票、後廚、支付、CRM、ERP 或會員系統；配送方式包括自有騎手、第三方配送、平台配送、混合履約或尚未確定。",
+      "must_include": ["公司 / 品牌名稱", "所在地區", "門店規模", "聯絡人", "角色", "訂單來源", "外賣平台", "POS", "KDS", "支付", "CRM", "ERP", "配送方式"]
+    },
+    {
+      "id": "demo-routing-result",
+      "locale": "zh-Hant",
+      "component_type": "success_prompt",
+      "role": "销售",
+      "page_task": "说明提交后下一步",
+      "text": "提交後顯示需求摘要：品牌、地區、門店規模、目前渠道、已使用系統、關注場景和建議演示模組。若資訊不足，提示補充，而不是編造方案。",
+      "must_include": ["提交後", "需求摘要", "品牌", "地區", "門店規模", "目前渠道", "已使用系統", "關注場景", "建議演示模組", "資訊不足", "提示補充"]
+    },
+    {
+      "id": "about-brand-display-check",
+      "locale": "zh-Hant",
+      "component_type": "page_description",
+      "role": "决策者",
+      "page_task": "建立公司可信",
+      "text": "Candao Information Technology Co., Ltd. 成立於 2014 年，總部位於廣州，並在北京、上海、香港設有分支及成都營運中心。餐道在餐飲系統研發與餐飲外送業務中累積 20 年實戰經驗。",
+      "must_include": ["Candao Information Technology Co., Ltd.", "2014", "廣州", "香港", "餐道", "餐飲系統研發", "餐飲外送"]
+    }
+  ]
+}

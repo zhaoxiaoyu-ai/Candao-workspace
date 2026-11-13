@@ -1,0 +1,9 @@
+{
+  "suite": "t28-stitch-ready-static-after-element-layer",
+  "status": "pass",
+  "files_checked": 17,
+  "html_pages_checked": 9,
+  "element_pages_checked": 8,
+  "element_modules_checked": 41,
+  "errors": []
+}

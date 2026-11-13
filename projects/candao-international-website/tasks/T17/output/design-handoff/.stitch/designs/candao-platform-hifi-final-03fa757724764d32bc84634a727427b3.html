@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>平台 | 餐道</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&amp;family=Noto+Serif:wght@600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#0059c7",
+                        "on-primary-container": "#fefcff",
+                        "primary": "#0057c2",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f0f3",
+                        "on-primary": "#ffffff",
+                        "status-warning": "#FFAB00",
+                        "border-subtle": "#E2E8F0",
+                        "status-success": "#00A884",
+                        "error-container": "#ffdad6",
+                        "status-error": "#E11D48",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadadc",
+                        "secondary-container": "#76f6cd",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary-container": "#007057",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1a1c1e",
+                        "secondary": "#006b53",
+                        "surface-container-low": "#f3f3f6",
+                        "primary-fixed": "#d9e2ff",
+                        "outline": "#727785",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#afc6ff",
+                        "ink-text": "#1A1C1E",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container": "#eeeef0",
+                        "surface": "#f9f9fc",
+                        "surface-container-highest": "#e2e2e5",
+                        "inverse-surface": "#2f3133",
+                        "secondary-fixed-dim": "#59dcb5",
+                        "secondary-fixed": "#79f9d0",
+                        "primary-container": "#2e70e0",
+                        "on-secondary-fixed-variant": "#00513e",
+                        "tertiary-fixed": "#ffddb3",
+                        "background": "#f9f9fc",
+                        "on-secondary-fixed": "#002117",
+                        "tertiary-container": "#9f6900",
+                        "tertiary": "#7f5300",
+                        "outline-variant": "#c2c6d6",
+                        "tertiary-fixed-dim": "#ffb950",
+                        "inverse-primary": "#afc6ff",
+                        "cloud-surface": "#F8FAFC",
+                        "on-primary-fixed": "#001944",
+                        "surface-container-high": "#e8e8ea",
+                        "on-surface": "#1a1c1e",
+                        "on-tertiary-fixed-variant": "#624000",
+                        "error": "#ba1a1a",
+                        "operational-blue": "#528DFF",
+                        "surface-variant": "#e2e2e5",
+                        "on-primary-fixed-variant": "#004299",
+                        "surface-bright": "#f9f9fc",
+                        "on-surface-variant": "#424753"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        unit: "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "bento-gap": "16px",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Work Sans"],
+                        "label-sm": ["IBM Plex Sans"],
+                        "title-md": ["Work Sans"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-lg": ["Work Sans"],
+                        "display-lg": ["Noto Serif"],
+                        "headline-lg-mobile": ["Noto Serif"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-sm": ["13px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "title-md": ["20px", { lineHeight: "1.5", fontWeight: "600" }],
+                        "headline-lg": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "display-lg": ["48px", { lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "700" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.3", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+        .connection-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, #528DFF, transparent);
+            height: 1px;
+            animation: flow 3s infinite linear;
+        }
+        @keyframes flow {
+            0% { transform: translateX(-100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(100%); opacity: 0; }
+        }
+        .tab-active {
+            background-color: white;
+            border-left: 4px solid #528DFF;
+            color: #528DFF;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased pt-[80px]">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-[80px] max-w-[1280px] mx-auto bg-surface/90 backdrop-blur-md dark:bg-surface-container/90 border-b border-border-subtle">
+<div class="flex items-center gap-12">
+<a class="text-title-md font-title-md font-bold text-primary dark:text-primary-fixed" href="#">餐道</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">首頁</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">解決方案</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-body-md text-body-md pb-1" href="#">平台</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">整合能力</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">客戶案例</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">資源</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">關於餐道</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md">繁中 / EN</button>
+<button class="bg-operational-blue text-white px-6 py-2 rounded-lg font-body-md font-semibold hover:bg-primary transition-colors">預約演示</button>
+</div>
+</header>
+<section class="py-[120px] px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto relative overflow-hidden">
+<div class="absolute inset-0 z-0 pointer-events-none opacity-20" style="background-image: radial-gradient(circle at 80% 20%, #528DFF 0%, transparent 40%);"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter relative z-10 items-center">
+<div class="lg:col-span-5 space-y-8">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-tight">
+                    用真實產品能力承接訂單、餐單、配送、數據和接入
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    平台頁回答產品如何工作：每項能力都應對應真實產品截圖、業務對象、狀態、操作、下一步和產品視頻入口。
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-operational-blue text-white px-8 py-4 rounded-lg font-title-md text-title-md hover:bg-primary transition-colors shadow-sm">
+                        預約產品演示
+                    </button>
+<button class="bg-white border border-border-subtle text-on-surface px-8 py-4 rounded-lg font-title-md text-title-md hover:border-operational-blue hover:text-operational-blue transition-colors">
+                        查看整合能力
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-7 relative mt-12 lg:mt-0">
+<div class="relative w-full aspect-[4/3] bg-cloud-surface rounded-xl border border-border-subtle shadow-xl overflow-hidden bento-card p-4">
+<div class="flex items-center gap-2 mb-4 border-b border-border-subtle pb-4">
+<div class="w-3 h-3 rounded-full bg-border-subtle"></div>
+<div class="w-3 h-3 rounded-full bg-border-subtle"></div>
+<div class="w-3 h-3 rounded-full bg-border-subtle"></div>
+<div class="ml-4 h-6 w-1/2 bg-surface-container rounded-sm"></div>
+</div>
+<div class="w-full h-[calc(100%-48px)] bg-surface-container-low rounded-lg relative overflow-hidden flex flex-col gap-4 p-6">
+<div class="flex gap-4">
+<div class="w-1/4 h-8 bg-surface-container-high rounded-md"></div>
+<div class="w-3/4 h-8 bg-surface-container-high rounded-md"></div>
+</div>
+<div class="flex-1 flex gap-4">
+<div class="w-1/4 h-full bg-surface-container rounded-md flex flex-col gap-2 p-2">
+<div class="w-full h-4 bg-surface-container-high rounded-sm"></div>
+<div class="w-3/4 h-4 bg-surface-container-high rounded-sm"></div>
+<div class="w-5/6 h-4 bg-surface-container-high rounded-sm"></div>
+<div class="w-full h-4 bg-surface-container-high rounded-sm mt-auto"></div>
+</div>
+<div class="w-3/4 h-full bg-white rounded-md border border-border-subtle flex flex-col p-4 gap-4">
+<div class="w-full h-12 bg-surface-container-low rounded-sm"></div>
+<div class="flex-1 bg-surface-container-lowest rounded-sm border border-border-subtle flex flex-col gap-2 p-2">
+<div class="w-full h-6 bg-surface-container-low rounded-sm"></div>
+<div class="w-full h-6 bg-surface-container-low rounded-sm"></div>
+<div class="w-full h-6 bg-surface-container-low rounded-sm"></div>
+<div class="w-full h-6 bg-surface-container-low rounded-sm"></div>
+<div class="w-full h-6 bg-surface-container-low rounded-sm"></div>
+</div>
+</div>
+</div>
+<div class="absolute inset-0 pointer-events-none p-6 flex flex-col justify-between">
+<div class="flex justify-end w-full">
+<div class="bg-white px-4 py-2 rounded shadow-sm border border-border-subtle text-label-sm font-label-sm text-operational-blue flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-operational-blue"></span>
+                                    狀態追蹤
+                                </div>
+</div>
+<div class="flex justify-start w-full">
+<div class="bg-white px-4 py-2 rounded shadow-sm border border-border-subtle text-label-sm font-label-sm text-status-success flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+                                    履約完成
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-[80px] px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto bg-white border-y border-border-subtle">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/4 flex flex-col gap-2">
+<button type="button" data-capability="orders" class="capability-tab text-left px-6 py-4 rounded-lg text-body-lg font-body-lg tab-active transition-all"><span class="block">多渠道訂單</span><span class="block text-label-sm font-label-sm text-on-surface-variant mt-2">OMS / COMS / SOMS</span></button>
+<button type="button" data-capability="menu" class="capability-tab text-left px-6 py-4 rounded-lg text-body-lg font-body-lg text-on-surface-variant hover:bg-surface-container-low transition-all"><span class="block">餐單與門店</span><span class="block text-label-sm font-label-sm text-on-surface-variant mt-2">Menu Center / Store Abnormity Management</span></button>
+<button type="button" data-capability="member" class="capability-tab text-left px-6 py-4 rounded-lg text-body-lg font-body-lg text-on-surface-variant hover:bg-surface-container-low transition-all"><span class="block">會員與自有點餐</span><span class="block text-label-sm font-label-sm text-on-surface-variant mt-2">Mobile Ordering / QR / H5 / Web ordering</span></button>
+<button type="button" data-capability="delivery" class="capability-tab text-left px-6 py-4 rounded-lg text-body-lg font-body-lg text-on-surface-variant hover:bg-surface-container-low transition-all"><span class="block">配送履約</span><span class="block text-label-sm font-label-sm text-on-surface-variant mt-2">DMS / iDMS</span></button>
+<button type="button" data-capability="data" class="capability-tab text-left px-6 py-4 rounded-lg text-body-lg font-body-lg text-on-surface-variant hover:bg-surface-container-low transition-all"><span class="block">數據與對賬</span><span class="block text-label-sm font-label-sm text-on-surface-variant mt-2">CDBI / Finance Center</span></button>
+<button type="button" data-capability="connector" class="capability-tab text-left px-6 py-4 rounded-lg text-body-lg font-body-lg text-on-surface-variant hover:bg-surface-container-low transition-all"><span class="block">AMS / Connector</span><span class="block text-label-sm font-label-sm text-on-surface-variant mt-2">AMS / Connector / API</span></button>
+</div>
+<div class="w-full md:w-3/4 flex flex-col gap-6">
+<div class="flex gap-4 mb-4 flex-wrap">
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-on-surface-variant">
+<span aria-hidden="true" class="text-[16px] leading-none">▦</span> 業務對象
+                </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-on-surface-variant">
+<span aria-hidden="true" class="text-[16px] leading-none">↔</span> 狀態 / 操作
+                </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-on-surface-variant">
+<span aria-hidden="true" class="text-[16px] leading-none">□</span> 對應產品
+                </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-on-surface-variant">
+<span aria-hidden="true" class="text-[16px] leading-none">→</span> 下一步
+                </span>
+</div>
+<div class="w-full aspect-[16/9] bg-surface-container-low rounded-xl border border-border-subtle flex items-center justify-center p-8">
+<div class="w-full h-full bg-white rounded-lg shadow-sm border border-border-subtle flex flex-col">
+<div class="h-12 border-b border-border-subtle flex items-center px-4 gap-4 bg-surface-container-lowest rounded-t-lg">
+<div class="w-24 h-4 bg-surface-container rounded"></div>
+<div class="w-16 h-4 bg-surface-container rounded"></div>
+<div class="w-32 h-4 bg-surface-container rounded ml-auto"></div>
+</div>
+<div class="flex-1 p-6 flex gap-6">
+<div class="w-1/3 flex flex-col gap-4">
+<div class="w-full h-32 bg-surface-container-low rounded"></div>
+<div class="w-full h-8 bg-surface-container-low rounded"></div>
+<div class="w-2/3 h-8 bg-surface-container-low rounded"></div>
+</div>
+<div class="w-2/3 flex flex-col gap-4">
+<div class="w-full h-12 bg-surface-container-low rounded"></div>
+<div class="w-full flex-1 bg-surface-container-low rounded"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 id="cap-product" class="text-headline-lg font-headline-lg text-on-surface">OMS / COMS / SOMS</h3>
+<p id="cap-body" class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl">外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店按渠道、訂單狀態、配送狀態和異常類型處理。</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+<div class="bg-surface-container-low rounded-lg p-4 border border-border-subtle">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-2">業務對象</p>
+<p id="cap-object" class="text-body-md font-body-md text-on-surface">訂單、渠道、門店、訂單狀態、配送狀態、異常類型</p>
+</div>
+<div class="bg-surface-container-low rounded-lg p-4 border border-border-subtle">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-2">下一步</p>
+<p id="cap-next" class="text-body-md font-body-md text-on-surface">查看訂單隊列、通知門店、進入配送或對賬流程。</p>
+</div>
+</div>
+<div class="pt-4">
+<button id="cap-cta" class="bg-white border border-border-subtle text-operational-blue px-6 py-3 rounded-lg font-title-md text-title-md hover:bg-surface-container-low transition-colors flex items-center gap-2">
+                        預約訂單場景演示 <span aria-hidden="true">→</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-[80px] px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto bg-surface">
+<h2 class="text-headline-lg font-headline-lg text-on-surface text-center mb-12">按工作流查看不同模組的日常使用方式</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<button class="group bg-white p-6 rounded-xl border border-border-subtle shadow-sm hover:shadow-md transition-all text-left flex flex-col h-full bento-card">
+<div class="w-12 h-12 rounded-full bg-operational-blue/10 text-operational-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span aria-hidden="true" class="text-[24px] leading-none">▶</span>
+</div>
+<h3 class="text-title-md font-title-md text-on-surface font-semibold mt-auto">OMS</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">多渠道訂單與門店接單</p>
+</button>
+<button class="group bg-white p-6 rounded-xl border border-border-subtle shadow-sm hover:shadow-md transition-all text-left flex flex-col h-full bento-card">
+<div class="w-12 h-12 rounded-full bg-operational-blue/10 text-operational-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span aria-hidden="true" class="text-[24px] leading-none">▶</span>
+</div>
+<h3 class="text-title-md font-title-md text-on-surface font-semibold mt-auto">Menu / Store</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">餐單、售罄與門店狀態</p>
+</button>
+<button class="group bg-white p-6 rounded-xl border border-border-subtle shadow-sm hover:shadow-md transition-all text-left flex flex-col h-full bento-card">
+<div class="w-12 h-12 rounded-full bg-operational-blue/10 text-operational-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span aria-hidden="true" class="text-[24px] leading-none">▶</span>
+</div>
+<h3 class="text-title-md font-title-md text-on-surface font-semibold mt-auto">DMS / iDMS</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">派單、第三方配送與配送異常</p>
+</button>
+<button class="group bg-white p-6 rounded-xl border border-border-subtle shadow-sm hover:shadow-md transition-all text-left flex flex-col h-full bento-card">
+<div class="w-12 h-12 rounded-full bg-operational-blue/10 text-operational-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span aria-hidden="true" class="text-[24px] leading-none">▶</span>
+</div>
+<h3 class="text-title-md font-title-md text-on-surface font-semibold mt-auto">CDBI / Finance</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">報表、Finance Center 與對賬差異</p>
+</button>
+</div>
+</section>
+<section class="py-[80px] px-margin-mobile md:px-margin-desktop max-w-[800px] mx-auto text-center">
+<p class="text-title-md font-title-md text-on-surface-variant mb-8">根據當前能力，預約產品演示、查看整合能力或查看相關案例。</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-operational-blue text-white px-8 py-4 rounded-lg font-title-md text-title-md hover:bg-primary transition-colors shadow-sm">
+            預約產品演示
+        </button>
+<button class="bg-white border border-border-subtle text-on-surface px-8 py-4 rounded-lg font-title-md text-title-md hover:border-operational-blue hover:text-operational-blue transition-colors">
+            查看整合能力
+        </button>
+<button class="bg-white border border-border-subtle text-on-surface px-8 py-4 rounded-lg font-title-md text-title-md hover:border-operational-blue hover:text-operational-blue transition-colors">
+            查看客戶案例
+        </button>
+</div>
+</section>
+<footer class="w-full py-[80px] px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter max-w-[1280px] mx-auto bg-cloud-surface dark:bg-surface-container-low border-t border-border-subtle">
+<div class="flex flex-col gap-4 max-w-sm">
+<span class="text-headline-lg font-headline-lg text-on-surface dark:text-on-primary-fixed font-bold">餐道</span>
+<p class="font-body-md text-body-md text-on-surface-variant">餐道｜餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full md:w-auto">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-operational-blue transition-all" href="#">首頁</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-operational-blue transition-all" href="#">解決方案</a>
+<a class="font-body-md text-body-md text-primary font-semibold hover:text-operational-blue transition-all" href="#">平台</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-operational-blue transition-all" href="#">整合能力</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-operational-blue transition-all" href="#">客戶案例</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-operational-blue transition-all" href="#">資源</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-operational-blue transition-all" href="#">關於餐道</a>
+<button class="font-body-md text-body-md text-on-surface-variant hover:text-operational-blue transition-all text-left">繁中 / EN</button>
+</div>
+</footer>
+<script>
+const capabilityContent = {
+  orders: {
+    product: "OMS / COMS / SOMS",
+    body: "外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入 OMS，門店按渠道、訂單狀態、配送狀態和異常類型處理。",
+    object: "訂單、渠道、門店、訂單狀態、配送狀態、異常類型",
+    next: "查看訂單隊列、通知門店、進入配送或對賬流程。",
+    cta: "預約訂單場景演示"
+  },
+  menu: {
+    product: "Menu Center / Store Abnormity Management",
+    body: "總部和門店維護餐單、庫存、售罄、區域菜單、營業時間、配送條件和門店接單狀態，減少多平台重複更新。",
+    object: "餐單、庫存、售罄、區域菜單、營業時間、配送條件、門店接單狀態",
+    next: "同步餐單、檢查售罄、更新營業時間或處理門店異常。",
+    cta: "預約餐單與門店演示"
+  },
+  member: {
+    product: "Mobile Ordering / QR / H5 / Web ordering",
+    body: "自有點餐入口承接堂食掃碼、外賣、自取、預約和會員活動，讓顧客下單後回到門店接單與後台管理。",
+    object: "堂食掃碼、外賣、自取、預約、會員活動、門店接單",
+    next: "檢查點餐入口、會員活動和門店接單狀態。",
+    cta: "預約自有點餐演示"
+  },
+  delivery: {
+    product: "DMS / iDMS",
+    body: "DMS / iDMS 管理自有騎手、第三方配送、智能派單、人工派單、第三方溢出、SMS 通知和配送異常。",
+    object: "配送單、騎手、第三方配送、派單方式、SMS 通知、配送異常",
+    next: "查看派單、轉派第三方配送或追蹤配送異常。",
+    cta: "預約配送履約演示"
+  },
+  data: {
+    product: "CDBI / Finance Center",
+    body: "CDBI 和 Finance Center 比對平台訂單與餐道 OMS 訂單，標記金額差異、狀態差異和漏單，支援管理層、營運和財務查看。",
+    object: "平台訂單、餐道 OMS 訂單、金額差異、狀態差異、漏單、報表",
+    next: "查看報表、重新對賬或追蹤差異來源。",
+    cta: "預約數據與對賬演示"
+  },
+  connector: {
+    product: "AMS / Connector / API",
+    body: "接入不以 Logo 牆證明，而是先確認外賣平台、自建入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限和異常處理。",
+    object: "外賣平台、自建入口、POS / KDS、CRM、配送、支付、ERP、API、字段、權限、異常處理",
+    next: "提交接入評估或預約技術演示。",
+    cta: "預約技術演示"
+  }
+};
+
+const tabs = document.querySelectorAll(".capability-tab");
+const product = document.getElementById("cap-product");
+const body = document.getElementById("cap-body");
+const object = document.getElementById("cap-object");
+const next = document.getElementById("cap-next");
+const cta = document.getElementById("cap-cta");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const item = capabilityContent[tab.dataset.capability];
+    if (!item) return;
+    tabs.forEach((target) => {
+      target.classList.remove("tab-active");
+      target.classList.add("text-on-surface-variant");
+    });
+    tab.classList.add("tab-active");
+    tab.classList.remove("text-on-surface-variant");
+    product.textContent = item.product;
+    body.textContent = item.body;
+    object.textContent = item.object;
+    next.textContent = item.next;
+    cta.childNodes[0].textContent = item.cta + " ";
+  });
+});
+</script>
+</body></html>

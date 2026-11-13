@@ -1,0 +1,108 @@
+{
+  "suite": "stitch-ready-low-fidelity-browser-check-2026-08-19",
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "index",
+      "file": "index.html",
+      "screenshot": "tasks/T27/output/stitch-ready-low-fidelity/screenshots/t27-index-1440-full.png",
+      "expected_content": true,
+      "forbidden_visible_hits": [],
+      "interaction_checked": false,
+      "interaction_pass": true,
+      "header_at_top_before_interaction": true,
+      "body_length": 640
+    },
+    {
+      "id": "home",
+      "file": "home.html",
+      "screenshot": "tasks/T27/output/stitch-ready-low-fidelity/screenshots/t27-home-1440-full.png",
+      "expected_content": true,
+      "forbidden_visible_hits": [],
+      "interaction_checked": true,
+      "interaction_pass": true,
+      "header_at_top_before_interaction": true,
+      "body_length": 967
+    },
+    {
+      "id": "solutions",
+      "file": "solutions.html",
+      "screenshot": "tasks/T27/output/stitch-ready-low-fidelity/screenshots/t27-solutions-1440-full.png",
+      "expected_content": true,
+      "forbidden_visible_hits": [],
+      "interaction_checked": true,
+      "interaction_pass": true,
+      "header_at_top_before_interaction": true,
+      "body_length": 762
+    },
+    {
+      "id": "platform",
+      "file": "platform.html",
+      "screenshot": "tasks/T27/output/stitch-ready-low-fidelity/screenshots/t27-platform-1440-full.png",
+      "expected_content": true,
+      "forbidden_visible_hits": [],
+      "interaction_checked": true,
+      "interaction_pass": true,
+      "header_at_top_before_interaction": true,
+      "body_length": 846
+    },
+    {
+      "id": "integrations",
+      "file": "integrations.html",
+      "screenshot": "tasks/T27/output/stitch-ready-low-fidelity/screenshots/t27-integrations-1440-full.png",
+      "expected_content": true,
+      "forbidden_visible_hits": [],
+      "interaction_checked": true,
+      "interaction_pass": true,
+      "header_at_top_before_interaction": true,
+      "body_length": 568
+    },
+    {
+      "id": "customers",
+      "file": "customers.html",
+      "screenshot": "tasks/T27/output/stitch-ready-low-fidelity/screenshots/t27-customers-1440-full.png",
+      "expected_content": true,
+      "forbidden_visible_hits": [],
+      "interaction_checked": true,
+      "interaction_pass": true,
+      "header_at_top_before_interaction": true,
+      "body_length": 1194
+    },
+    {
+      "id": "resources",
+      "file": "resources.html",
+      "screenshot": "tasks/T27/output/stitch-ready-low-fidelity/screenshots/t27-resources-1440-full.png",
+      "expected_content": true,
+      "forbidden_visible_hits": [],
+      "interaction_checked": true,
+      "interaction_pass": true,
+      "header_at_top_before_interaction": true,
+      "body_length": 1681
+    },
+    {
+      "id": "about",
+      "file": "about.html",
+      "screenshot": "tasks/T27/output/stitch-ready-low-fidelity/screenshots/t27-about-1440-full.png",
+      "expected_content": true,
+      "forbidden_visible_hits": [],
+      "interaction_checked": true,
+      "interaction_pass": true,
+      "header_at_top_before_interaction": true,
+      "body_length": 1718
+    },
+    {
+      "id": "demo",
+      "file": "demo.html",
+      "screenshot": "tasks/T27/output/stitch-ready-low-fidelity/screenshots/t27-demo-1440-full.png",
+      "expected_content": true,
+      "forbidden_visible_hits": [],
+      "interaction_checked": true,
+      "interaction_pass": true,
+      "header_at_top_before_interaction": true,
+      "body_length": 775
+    }
+  ]
+}

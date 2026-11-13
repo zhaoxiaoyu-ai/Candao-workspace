@@ -31,7 +31,7 @@ const iconRows = ['home', 'report', 'customer', 'asset', 'inventory', 'receipt',
 <template>
   <main class="tp-page">
     <div class="tp-shell tp-stack">
-      <TpTopBar title="Tappo Phone v0.1" subtitle="Design tokens and first runnable shell" />
+      <TpTopBar title="Tappo Pulse v0.1" subtitle="Design tokens and first runnable shell" />
 
       <section class="spec-hero">
         <img :src="logoUrl" alt="Tappo" />

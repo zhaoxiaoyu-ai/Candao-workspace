@@ -1,0 +1,16 @@
+{
+  "page": "demo",
+  "status": "pass",
+  "screenshot": "projects/candao-international-website/tasks/T45/output/screenshots/demo-3215bd49b04244d5ba8efc7f9f97e250-1440-full.png",
+  "metrics": {
+    "viewportWidth": 1440,
+    "viewportHeight": 1200,
+    "scrollHeight": 2597,
+    "pageWidth": 1440,
+    "textLength": 996,
+    "overflowingCount": 0,
+    "overflowing": [],
+    "h1": "預約餐道產品演示前，先告訴我們你的營運場景",
+    "bodyClass": "bg-background text-on-background font-body-md min-h-screen flex flex-col"
+  }
+}

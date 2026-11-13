@@ -1,0 +1,61 @@
+{
+  "suite": "t40-stitch-html-visible-copy-qa",
+  "items": [
+    {
+      "id": "t40-about-c7930267f0dd4abdbc7acfc6dc4312f3",
+      "component_type": "stitch_html_page_visible_text",
+      "role": "决策者",
+      "page_task": "建立公司可信与服务交付",
+      "locale": "zh-Hant",
+      "text": "關於餐道 - 餐道國際 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN 預約產品演示 為餐飲品牌打造可持續擴展的營運平台 餐道專注於餐飲營運數字化，協助品牌連接渠道、門店、配送與數據，支援跨市場成長。 了解解決方案 arrow_forward 發展歷程 持續創新的數字化營運架構演進 2000 創立與初期探索 2003 基礎服務構建 2008 進入連鎖餐飲市場 2014 SaaS 化轉型 2017 數字化營運架構研發 2020 全渠道中台戰略 服務核心 公司基礎 chevron_right 產品演進 chevron_right 服務交付 chevron_right apartment 企業架構 穩健的公司基礎與全球佈局 總部位於廣州，並在香港、北京、上海、成都設立營運與研發中心。以強大的技術研發團隊與深厚的行業經驗，為全球餐飲品牌提供穩定可靠的技術基建。 group 專業團隊 超過 500 名技術與營運專家 public 全球佈局 支援跨國多時區、多語言營運 核心產品矩陣 以模塊化架構打造的全方位營運中台 list_alt 訂單與渠道管理 Core Hub OMS 全渠道訂單匯聚與路由，統一管理外賣與堂食訂單。 COMS 連鎖品牌集中訂單管理，支援複雜層級架構。 SOMS 門店營運系統，提升前線接單與製餐效率。 local_shipping 配送調度 DMS / iDMS 智能運力聚合與派單演算法，降低配送成本，提升準時率。 bar_chart 數據與財務 CDBI 餐飲大數據洞察，可視化營運報表。 Finance Center 自動化對帳與結算，財務流轉數字化。 hub 整合與支援 AMS / Connector 標準化 API 網關，無縫對接第三方 POS 與 ERP。 Merchant Service Helpdesk 與商家支援，保障系統平穩運行。 標準化服務生命週期 從對接到營運，全鏈路保障成功交付 1 導入 需求分析、系統配置與資料遷移，確保平滑過渡。 Target IT / 營運總部 2 培訓 提供標準化操作手冊與實操培訓，加速上手。 Target 門店經理 / 員工 3 營運支援 日常系統監控、營運策略優化建議與定期回顧。 Target 區域督導 / 品牌經理 4 Helpdesk 多渠道技術支援，快速回應並解決突發異常。 Action 提交工單 verified_user ISO 27001 資訊安全認證 gpp_good ISO 20000 IT服務管理 speed 500 Order/s 高併發處理能力 memory 99.95% SLA 高可用性 準備好深入了解餐道？ 與我們的技術顧問討論，為您的餐飲品牌量身定制數字化轉型方案。 預約產品演示 查看資源 餐道 © 2024 餐道國際｜餐飲與零售 O2O 營運中樞 產品與服務 首頁 解決方案 平台 生態與成功 整合能力 客戶案例 關於我們 資源 關於餐道"
+    },
+    {
+      "id": "t40-customers-e32f4196c2204fdba471a231c0188b48",
+      "component_type": "stitch_html_page_visible_text",
+      "role": "决策者",
+      "page_task": "证明客户案例与规模可信",
+      "locale": "zh-Hant",
+      "text": "客戶案例 - 餐道 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN 預約產品演示 從不同餐飲業態看餐道如何改善訂單、配送與數據營運 以服務規模、實名客戶與業態成果，呈現餐道如何在多平台訂單、門店處理、配送履約、會員營運與數據分析中落地。 Pizza-Box JIA Group 多渠道訂單整合 OMS 配送運力履約 DMS 用服務規模與營運數據建立初步可信 餐道作為營運中樞，支撐著龐大的餐飲與零售生態系運作。 5000+ 品牌數量 500M+ 每日處理訂單 400+ 覆蓋城市 200K+ 門店數量 4.5B+ 每月配送訂單 GMV 30% up 客戶效率提升 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 © 餐道國際｜餐飲與零售 O2O 營運中樞"
+    },
+    {
+      "id": "t40-demo-5ec6d859f93741adb92347ccab41098c",
+      "component_type": "stitch_html_page_visible_text",
+      "role": "采购方",
+      "page_task": "分流产品演示、销售与支援查询",
+      "locale": "zh-Hant",
+      "text": "預約產品演示 - 餐道 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN 預約產品演示 預約餐道產品演示 探索餐道如何透過強大的整合中樞，為您的餐飲或零售業務解決營運痛點。我們將根據您的具體問題，為您量身定制演示旅程，展示最適合的系統模組與數據流解決方案。 填寫需求 arrow_downward 系統演示預覽 聯絡意向 產品演示 & 系統整合評估 fact_check 推薦模組 OMS AMS 預計流程 需求確認 → 安排演示 devices 產品演示 了解餐道各模組功能，評估系統架構與業務契合度。 填寫下方表單 arrow_forward support_agent 銷售洽詢 已有明確需求或預算，希望直接與銷售團隊討論方案與報價。 即將導向業務諮詢 open_in_new help_center 支援查詢 現有客戶尋求技術支援、API 文件或操作指南。 前往資源中心 open_in_new 需求登記表單 公司 / 品牌名稱 * 市場 / 地區 * 台灣 香港 澳門 其他 門店規模 1-5 間 6-20 間 21-50 間 50 間以上 你的角色 目前銷售渠道 (可複選) 實體門市 自營外送/外帶平台 第三方外送平台 (UberEats, Foodpanda等) 已使用系統 (選填) 這將幫助我們評估 AMS / Connector 的整合需求。 主要問題描述 * 提交演示需求 前往資源中心 tune 分析與模組匹配 預期核心解決方案 sync_alt OMS / COMS / SOMS 全渠道訂單集中管理與門店同步 local_shipping DMS / iDMS 智能派單與物流追蹤 bar_chart CDBI / Finance Center 數據洞察與財務對帳自動化 後續流程 • 1. 確認需求 (1-2 工作天) • 2. 匹配專屬系統模組 • 3. 安排線上或線下演示 餐道 餐道國際｜餐飲與零售 O2O 營運中樞 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 © 2024 餐道. All Rights Reserved."
+    },
+    {
+      "id": "t40-integrations-e3a8d39f3c734306aa4c55baac1cb657",
+      "component_type": "stitch_html_page_visible_text",
+      "role": "IT",
+      "page_task": "说明整合能力与接入对象",
+      "locale": "zh-Hant",
+      "text": "餐道 | 整合能力 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN 預約產品演示 把外賣平台、POS / KDS、CRM、支付、ERP 與配送資料接回營運鏈路 餐道透過 AMS / Connector 承接外部系統、接口對象、資料字段與狀態回傳，讓訂單、餐單、會員、配送和對賬資料能回到同一套營運流程。 預約技術演示 查看平台能力 按系統類型了解接入範圍、資料流和回傳狀態 外賣平台 自建點餐入口 POS / KDS CRM / 會員 支付 / ERP 配送與 API 外賣平台訂單進入 OMS 外部平台訂單經 AMS / Connector 進入 OMS 後，可按渠道、門店、訂單狀態、配送狀態與異常類型回到營運工作流。 資料對象清單 訂單 門店 菜品 支付狀態 配送狀態 取消 / 退款狀態 info 場景：多平台外賣、自有點餐併行、門店接單與總部追蹤. 提交接入評估 外賣平台 AMS / Connector OMS sync 狀態同步 接入不是單點開接口，而是讓資料在營運鏈路中可校驗、可追蹤 先確認系統類型、資料對象與狀態回傳，再安排技術演示 預約技術演示 查看平台能力 餐道 © 2024 餐道. All Rights Reserved. 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 隱私政策 服務條款"
+    },
+    {
+      "id": "t40-platform-4ed70a41e89741b1854271a31bdcd4da",
+      "component_type": "stitch_html_page_visible_text",
+      "role": "IT",
+      "page_task": "说明平台产品能力与业务对象",
+      "locale": "zh-Hant",
+      "text": "平台 - 餐道國際 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN 預約產品演示 看 OMS、Menu Center、DMS / iDMS、CDBI 和 Connector 如何支撐每日營運 餐道把訂單、餐單、門店、配送、會員、數據、財務對賬與系統接入放在同一條營運鏈路中，讓不同角色按狀態和下一步操作處理問題。 預約產品演示 查看整合能力 receipt_long OMS 待接單 製作中 menu_book Menu Center 售罄 餐單同步 local_shipping DMS / iDMS 配送中 轉第三方 按工作流查看不同模組的日常使用方式 play_arrow OMS 訂單隊列與異常處理 play_arrow Menu Center / Store 餐單版本與門店狀態 play_arrow DMS / iDMS 派單、取餐與異常 play_arrow CDBI / Finance Center 渠道報表與對賬差異 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 © 餐道國際｜餐飲與零售 O2O 營運中樞"
+    },
+    {
+      "id": "t40-resources-bfc9b7527f234a2f8981c9407a87794d",
+      "component_type": "stitch_html_page_visible_text",
+      "role": "支持",
+      "page_task": "路由资源、支援与演示需求",
+      "locale": "zh-Hant",
+      "text": "資源 - 餐道國際 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN 預約產品演示 探索餐道資源， 支撐你的營運決策。 從初步評估、系統導入到日常營運與技術查詢，我們為不同階段的夥伴提供精確的導航。 評估中 導入中 日常營運 查看平台能力、客戶案例、解決方案。 預約產品演示 arrow_forward 評估餐道是否適合 準備系統接入 處理日常營運問題 查詢技術支援 評估 餐道如何解決漏單問題？ chevron_right 如何比對多渠道對賬？ chevron_right 查看解決方案 arrow_forward 接入準備清單 接入前請確認各業務對象的權限與數據口徑。 storefront 渠道與入口 外賣平台 自有 H5 / Web 小程序 QR Code point_of_sale 門店系統 POS KDS 打印系統 database 企業資料 CRM 會員資料 ERP 財務系統 api AMS / Connector 字段對應 權限管理 異常處理 API 連接 餐道 © 2024 餐道 Candao International. All rights reserved. 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道"
+    },
+    {
+      "id": "t40-solutions-6254a23be6ba4334968e45cc0b50afe5",
+      "component_type": "stitch_html_page_visible_text",
+      "role": "总部运营",
+      "page_task": "说明解決方案场景与导向演示",
+      "locale": "zh-Hant",
+      "text": "解決方案 - 餐道 餐道 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 繁中 / EN 登入 預約產品演示 menu 按餐飲 O2O 營運問題，找到可落地的解決方案 從多平台外賣、門店與餐單、配送履約、財務對賬到會員與數據，先確認問題所在，再看餐道如何承接對應流程。 預約相似場景演示 arrow_forward 查看平台能力 OMS POS 餐道 DONE 訂單積壓 鏈路暢通 每一類問題都對應一條可追蹤的營運鏈路 receipt_long 多平台訂單履約 check_circle 外賣平台 check_circle 自有點餐 check_circle 門店接單 check_circle 漏單與訂單狀態 storefront 門店與餐單營運 check_circle 餐單版本 check_circle 售罄 check_circle 營業時間 error 門店狀態與同步異常 local_shipping 配送營運與對賬 check_circle DMS / iDMS 派單 check_circle 第三方轉派 check_circle 配送狀態 account_balance_wallet Finance Center 對賬差異 餐道 © 2024 餐道 Candao. All rights reserved. 粵ICP備12345678號 首頁 解決方案 平台 整合能力 客戶案例 資源 關於餐道 隱私政策 服務條款"
+    }
+  ]
+}

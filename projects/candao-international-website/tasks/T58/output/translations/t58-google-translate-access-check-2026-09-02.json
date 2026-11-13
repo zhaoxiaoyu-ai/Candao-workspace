@@ -1,0 +1,33 @@
+{
+  "task": "T58",
+  "checked_at": "2026-09-02 01:12:10 CST",
+  "purpose": "Check whether Google Translate can be used as a machine-translation baseline for the Solutions English page.",
+  "result": "unavailable",
+  "checks": [
+    {
+      "url": "https://translate.googleapis.com/translate_a/single",
+      "sample_query": "解決方案",
+      "http_status": "000",
+      "curl_exit_code": 28,
+      "total_time_seconds": 12.001546,
+      "error": "Connection timed out after 12001 milliseconds"
+    },
+    {
+      "url": "https://translate.google.com/m",
+      "sample_query": "解決方案",
+      "http_status": "000",
+      "curl_exit_code": 28,
+      "total_time_seconds": 12.004505,
+      "error": "Connection timed out after 12004 milliseconds"
+    },
+    {
+      "url": "https://www.gstatic.com",
+      "purpose": "Google-owned static domain reachability check",
+      "http_status": "404",
+      "curl_exit_code": 0,
+      "total_time_seconds": 0.827685,
+      "note": "Domain is reachable; Translate endpoints still timed out."
+    }
+  ],
+  "decision": "Do not claim a Google Translate baseline was retrieved. Continue with manual English website adaptation using the source Traditional Chinese copy and project glossary."
+}

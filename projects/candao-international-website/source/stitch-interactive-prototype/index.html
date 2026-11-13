@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Candao Stitch Interactive Prototype</title>
+    <style>
+      :root {
+        --primary: #528dff;
+        --ink: #172033;
+        --muted: #687386;
+        --line: #dbe3f0;
+        --soft: #f5f7fb;
+        --panel: #ffffff;
+        --success: #24a67a;
+        --warning: #d98b1f;
+        --danger: #c95050;
+        --shadow: 0 18px 50px rgba(23, 32, 51, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        background: #eef3fb;
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      button,
+      a {
+        font: inherit;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .app {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        min-height: 100%;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 280px minmax(380px, 1fr) auto;
+        align-items: center;
+        gap: 18px;
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(16px);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        min-width: 0;
+      }
+
+      .mark {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        background: var(--primary);
+        color: white;
+        font-weight: 800;
+        box-shadow: 0 8px 20px rgba(82, 141, 255, 0.35);
+      }
+
+      .brand-text {
+        min-width: 0;
+      }
+
+      .brand-title {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 760;
+      }
+
+      .brand-subtitle {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.3;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .tabs,
+      .view-controls {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .tabs {
+        min-width: 0;
+        overflow-x: auto;
+        scrollbar-width: thin;
+      }
+
+      .tab,
+      .segmented,
+      .link-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 36px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        color: #334155;
+        cursor: pointer;
+        transition:
+          border-color 160ms ease,
+          background 160ms ease,
+          color 160ms ease,
+          box-shadow 160ms ease,
+          transform 160ms ease;
+      }
+
+      .tab {
+        flex: 0 0 auto;
+        gap: 8px;
+        padding: 0 12px;
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .tab:hover,
+      .segmented:hover,
+      .link-button:hover {
+        border-color: rgba(82, 141, 255, 0.6);
+        transform: translateY(-1px);
+      }
+
+      .tab.is-active,
+      .segmented.is-active {
+        border-color: rgba(82, 141, 255, 0.8);
+        background: rgba(82, 141, 255, 0.1);
+        color: #225ed6;
+        box-shadow: inset 0 0 0 1px rgba(82, 141, 255, 0.12);
+      }
+
+      .tab-index {
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 780;
+      }
+
+      .view-controls {
+        justify-content: flex-end;
+        white-space: nowrap;
+      }
+
+      .segmented {
+        min-width: 74px;
+        padding: 0 11px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .workspace {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 356px;
+        min-height: 0;
+      }
+
+      .viewer {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        min-width: 0;
+        min-height: 0;
+        padding: 16px;
+      }
+
+      .viewer-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 12px;
+      }
+
+      .page-kicker {
+        margin: 0 0 5px;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 780;
+        text-transform: uppercase;
+      }
+
+      .page-title {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.25;
+        font-weight: 780;
+      }
+
+      .page-subtitle {
+        margin: 5px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .viewer-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex: 0 0 auto;
+      }
+
+      .link-button {
+        min-width: 92px;
+        padding: 0 12px;
+        color: #26364f;
+        font-size: 12px;
+        font-weight: 720;
+      }
+
+      .device-stage {
+        min-height: 0;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background:
+          linear-gradient(45deg, rgba(82, 141, 255, 0.05) 25%, transparent 25%),
+          linear-gradient(-45deg, rgba(82, 141, 255, 0.05) 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, rgba(82, 141, 255, 0.05) 75%),
+          linear-gradient(-45deg, transparent 75%, rgba(82, 141, 255, 0.05) 75%);
+        background-color: #e8edf6;
+        background-position:
+          0 0,
+          0 10px,
+          10px -10px,
+          -10px 0;
+        background-size: 20px 20px;
+        box-shadow: var(--shadow);
+        overflow: auto;
+      }
+
+      .device {
+        width: var(--device-width, 1440px);
+        max-width: none;
+        min-height: 100%;
+        margin: 18px auto;
+        border: 1px solid #cdd7e7;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 10px 34px rgba(23, 32, 51, 0.16);
+        overflow: hidden;
+      }
+
+      .device-stage[data-mode="fluid"] .device {
+        width: calc(100% - 36px);
+      }
+
+      .device-stage[data-mode="mobile"] .device {
+        width: 390px;
+      }
+
+      .preview-frame {
+        display: block;
+        width: 100%;
+        height: calc(100vh - 168px);
+        min-height: 720px;
+        border: 0;
+        background: #fff;
+      }
+
+      .device-stage[data-mode="mobile"] .preview-frame {
+        height: 760px;
+        min-height: 760px;
+      }
+
+      .inspector {
+        display: grid;
+        grid-template-rows: minmax(0, 1fr);
+        border-left: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.94);
+        min-height: 0;
+      }
+
+      .inspector-scroll {
+        overflow: auto;
+        padding: 16px;
+      }
+
+      .section {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        margin-bottom: 12px;
+        padding: 14px;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0 0 10px;
+        font-size: 13px;
+        font-weight: 780;
+      }
+
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 0 8px;
+        border-radius: 8px;
+        background: rgba(36, 166, 122, 0.1);
+        color: #15735a;
+        font-size: 11px;
+        font-weight: 740;
+      }
+
+      .score-row {
+        display: grid;
+        grid-template-columns: 54px minmax(0, 1fr) 42px;
+        align-items: center;
+        gap: 9px;
+        margin: 9px 0;
+        color: #3a4659;
+        font-size: 12px;
+      }
+
+      .score-track {
+        height: 7px;
+        border-radius: 8px;
+        background: #e6ebf3;
+        overflow: hidden;
+      }
+
+      .score-fill {
+        width: var(--score);
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--primary), #24a67a);
+      }
+
+      .big-score {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+      }
+
+      .score-number {
+        display: grid;
+        place-items: center;
+        width: 70px;
+        height: 70px;
+        border: 1px solid rgba(82, 141, 255, 0.3);
+        border-radius: 8px;
+        background: rgba(82, 141, 255, 0.09);
+        color: #205fdb;
+        font-size: 22px;
+        font-weight: 820;
+      }
+
+      .score-copy {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .notes,
+      .checks {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .notes li,
+      .checks li {
+        display: grid;
+        grid-template-columns: 8px minmax(0, 1fr);
+        gap: 8px;
+        align-items: start;
+        color: #3b4658;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .notes li::before,
+      .checks li::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        margin-top: 5px;
+        border-radius: 50%;
+        background: var(--primary);
+      }
+
+      .checks li.warning::before {
+        background: var(--warning);
+      }
+
+      .checks li.good::before {
+        background: var(--success);
+      }
+
+      .shot-link {
+        display: block;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f7f9fc;
+      }
+
+      .shot-link img {
+        display: block;
+        width: 100%;
+        height: 164px;
+        object-fit: cover;
+        object-position: top center;
+      }
+
+      .shot-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 9px 10px;
+        color: #39475d;
+        font-size: 12px;
+        font-weight: 680;
+      }
+
+      .meta-grid {
+        display: grid;
+        grid-template-columns: 96px minmax(0, 1fr);
+        gap: 8px 10px;
+        color: #3a4659;
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .meta-grid dt {
+        color: var(--muted);
+      }
+
+      .meta-grid dd {
+        margin: 0;
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .fine-print {
+        margin: 0;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.55;
+      }
+
+      @media (max-width: 1180px) {
+        .topbar {
+          grid-template-columns: 1fr;
+          align-items: stretch;
+        }
+
+        .view-controls {
+          justify-content: flex-start;
+        }
+
+        .workspace {
+          grid-template-columns: 1fr;
+        }
+
+        .inspector {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+        }
+
+        .preview-frame {
+          height: 760px;
+          min-height: 680px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        body {
+          overflow: auto;
+        }
+
+        .topbar {
+          position: static;
+          padding: 12px;
+        }
+
+        .viewer {
+          padding: 12px;
+        }
+
+        .viewer-head {
+          display: grid;
+        }
+
+        .viewer-actions {
+          flex-wrap: wrap;
+        }
+
+        .link-button {
+          min-width: 0;
+          flex: 1 1 120px;
+        }
+
+        .device {
+          margin: 12px;
+        }
+
+        .device-stage[data-mode="desktop"] .device {
+          width: 960px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <a class="brand" href="./index.html" aria-label="返回原型首页">
+          <span class="mark">C</span>
+          <span class="brand-text">
+            <span class="brand-title">Candao Stitch Prototype</span>
+            <span class="brand-subtitle">T11.5 交互评审入口 · 主色 #528dff</span>
+          </span>
+        </a>
+
+        <nav class="tabs" aria-label="页面切换">
+          <button class="tab is-active" type="button" data-page="home">
+            <span class="tab-index">01</span> Home
+          </button>
+          <button class="tab" type="button" data-page="platform">
+            <span class="tab-index">02</span> Platform
+          </button>
+          <button class="tab" type="button" data-page="order">
+            <span class="tab-index">03</span> Order
+          </button>
+          <button class="tab" type="button" data-page="delivery">
+            <span class="tab-index">04</span> Delivery
+          </button>
+        </nav>
+
+        <div class="view-controls" aria-label="视口切换">
+          <button class="segmented is-active" type="button" data-mode="desktop">
+            1440
+          </button>
+          <button class="segmented" type="button" data-mode="fluid">
+            自适应
+          </button>
+          <button class="segmented" type="button" data-mode="mobile">
+            390
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="viewer" aria-label="网页预览">
+          <div class="viewer-head">
+            <div>
+              <p class="page-kicker" id="pageKicker">Home / Desktop / TC</p>
+              <h1 class="page-title" id="pageTitle">首頁真实 Stitch HTML</h1>
+              <p class="page-subtitle" id="pageSubtitle">
+                Hero、摄影、UI Overlay、Product Showcase 的综合验证页。
+              </p>
+            </div>
+            <div class="viewer-actions">
+              <a class="link-button" id="openHtml" href="pages/home-desktop-tc.html" target="_blank" rel="noreferrer">
+                原始 HTML
+              </a>
+              <a class="link-button" id="openShot" href="screenshots/01-home-desktop-tc-full.png" target="_blank" rel="noreferrer">
+                1440 大图
+              </a>
+            </div>
+          </div>
+
+          <div class="device-stage" id="deviceStage" data-mode="desktop">
+            <div class="device">
+              <iframe
+                class="preview-frame"
+                id="previewFrame"
+                title="Candao Stitch 页面预览"
+                src="pages/home-desktop-tc.html"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
+        <aside class="inspector" aria-label="视觉评审摘要">
+          <div class="inspector-scroll">
+            <section class="section">
+              <div class="section-title">
+                <span>当前结论</span>
+                <span class="status-pill" id="statusPill">方向成立</span>
+              </div>
+              <div class="big-score">
+                <div class="score-number" id="scoreNumber">7.1</div>
+                <p class="score-copy" id="scoreCopy">
+                  Home 可进入评审，但需要重点精修 Product Showcase、占位图、Footer、CTA 和圆角。
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <p class="section-title">Benchmark Score</p>
+              <div id="scoreRows"></div>
+            </section>
+
+            <section class="section">
+              <p class="section-title">视觉判断</p>
+              <ul class="checks" id="checkList"></ul>
+            </section>
+
+            <section class="section">
+              <p class="section-title">优化优先级</p>
+              <ul class="notes" id="priorityList"></ul>
+            </section>
+
+            <section class="section">
+              <p class="section-title">完整截图</p>
+              <a class="shot-link" id="shotCard" href="screenshots/01-home-desktop-tc-full.png" target="_blank" rel="noreferrer">
+                <img id="shotImage" src="screenshots/01-home-desktop-tc-full.png" alt="当前页面完整截图预览" />
+                <span class="shot-meta">
+                  <span id="shotLabel">Home 1440 x 2883</span>
+                  <span>打开大图</span>
+                </span>
+              </a>
+            </section>
+
+            <section class="section">
+              <p class="section-title">来源信息</p>
+              <dl class="meta-grid">
+                <dt>任务</dt>
+                <dd>T11.5-C / Stitch 真实生成</dd>
+                <dt>Project ID</dt>
+                <dd>10888304674441209287</dd>
+                <dt>Design System</dt>
+                <dd>assets/12141666305108771015</dd>
+                <dt>Screen ID</dt>
+                <dd id="screenId">ae3d839fa9e44a2a8526c6e099edfd16</dd>
+                <dt>页面语言</dt>
+                <dd>繁體中文单一 Locale，保留语言切换「繁中 / EN」</dd>
+              </dl>
+            </section>
+
+            <section class="section">
+              <p class="section-title">评审边界</p>
+              <p class="fine-print">
+                当前入口用于查看 Stitch 真实 HTML 与完整页面截图。移动 390 为同一 HTML 的响应式检查视口，不代表已生成独立 Stitch Mobile 页面。
+              </p>
+            </section>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script>
+      const pages = {
+        home: {
+          kicker: "Home / Desktop / TC",
+          title: "首頁真实 Stitch HTML",
+          subtitle: "Hero、摄影、UI Overlay、Product Showcase 的综合验证页。",
+          file: "pages/home-desktop-tc.html",
+          shot: "screenshots/01-home-desktop-tc-full.png",
+          shotLabel: "Home 1440 x 2883",
+          screenId: "ae3d839fa9e44a2a8526c6e099edfd16",
+          status: "方向成立",
+          score: "7.1",
+          scoreCopy:
+            "Home 可进入评审，但需要重点精修 Product Showcase、占位图、Footer、CTA 和圆角。",
+          metrics: [
+            ["SaaS感", 74],
+            ["国际感", 72],
+            ["产品感", 68],
+            ["转化", 71],
+          ],
+          checks: [
+            ["good", "5 秒理解基本通过，Hero 能建立餐饮运营与 SaaS 平台关系。"],
+            ["good", "真实餐饮场景加 UI Overlay 的方向符合 T10。"],
+            ["warning", "中段占位图和通用卡片感会暴露 AI 生成痕迹。"],
+            ["warning", "Footer 英文版权句与繁中单一 Locale 规则不一致。"],
+          ],
+          priorities: [
+            "P0：替换中段灰色占位图。",
+            "P0：统一 CTA 为「預約產品演示」，清理 Footer 语言。",
+            "P1：把 Product Showcase 重构为 Order → Store/Menu → Delivery → Data 能力流。",
+            "P2：收敛圆角、阴影和图标尺度。",
+          ],
+        },
+        platform: {
+          kicker: "Platform / Desktop / TC v2",
+          title: "平台能力页真实 Stitch HTML",
+          subtitle: "Capability Map、UI Demo、Product Cards 的平台价值验证页。",
+          file: "pages/platform-v2-desktop-tc.html",
+          shot: "screenshots/02-platform-v2-desktop-tc-full.png",
+          shotLabel: "Platform 1440 x 3749",
+          screenId: "b4ccb5387cc24c9f824f4f9444507179",
+          status: "方向通过",
+          score: "7.9",
+          scoreCopy:
+            "Platform v2 产品感明显增强，Capability Map 成立，下一步重点是真实 UI 信息密度与 Motion 精修。",
+          metrics: [
+            ["SaaS感", 81],
+            ["国际感", 78],
+            ["产品感", 83],
+            ["转化", 75],
+          ],
+          checks: [
+            ["good", "中心化 Capability Map 符合平台页重点要求。"],
+            ["good", "#528dff 用在连接线与关键状态，平台连接感清晰。"],
+            ["warning", "Hero 偏白、偏通用 SaaS，餐饮运营情境不够强。"],
+            ["warning", "能力节点仍偏示意图，需要输入、处理、输出关系更明确。"],
+          ],
+          priorities: [
+            "P0：保留 Platform v2 作为最终 Stitch 版本。",
+            "P1：给 Capability Map 增加渠道输入、平台处理、门店执行、总部可见标签。",
+            "P1：强化 Platform Hero 的餐饮运营情境。",
+            "P2：统一 Product Cards 与 Demo 区的组件语言。",
+          ],
+        },
+        order: {
+          kicker: "Order Management / Desktop / TC",
+          title: "订单管理页真实 Stitch HTML",
+          subtitle: "多渠道订单、统一队列、状态回流和工作流表达验证页。",
+          file: "pages/order-management-desktop-tc.html",
+          shot: "screenshots/03-order-management-desktop-tc-full.png",
+          shotLabel: "Order 1440 x 4313",
+          screenId: "ecc37f07411e4003bb25e4b879584b7e",
+          status: "方向通过",
+          score: "7.9",
+          scoreCopy:
+            "Order Management 的产品展示强于 Home，订单队列、状态分发和系统同步关系已经清楚。",
+          metrics: [
+            ["SaaS感", 81],
+            ["国际感", 78],
+            ["产品感", 83],
+            ["转化", 75],
+          ],
+          checks: [
+            ["good", "订单队列、状态分发、系统同步、总部回流关系清楚。"],
+            ["good", "深色产品展示区增强 Demo 的视觉重点。"],
+            ["warning", "Motion 目前仍是静态 storyboard，需要后续 stepper 或滚动状态变化。"],
+            ["warning", "模拟数字必须持续保持脱敏，不写成真实官网事实。"],
+          ],
+          priorities: [
+            "P0：保留当前页面结构进入 T12 审核。",
+            "P1：增加渠道来源、门店动作、异常状态的层级差异。",
+            "P1：把四步 Workflow 做成有状态变化的 Demo 脚本。",
+            "P2：CTA 前补一句业务结果总结，不使用未确认数字。",
+          ],
+        },
+        delivery: {
+          kicker: "Delivery Management / Desktop / TC v2",
+          title: "配送管理页真实 Stitch HTML",
+          subtitle: "配送工作台、路线状态、异常提示和高峰工作流验证页。",
+          file: "pages/delivery-v2-desktop-tc.html",
+          shot: "screenshots/04-delivery-v2-desktop-tc-full.png",
+          shotLabel: "Delivery 1440 x 3098",
+          screenId: "e56b1d92bf564feb8d837a9ea864e83e",
+          status: "方向通过",
+          score: "7.9",
+          scoreCopy:
+            "Delivery v2 是目前产品展示最完整的页面之一，工作台结构成立，需重绘地图与异常协同细节。",
+          metrics: [
+            ["SaaS感", 81],
+            ["国际感", 78],
+            ["产品感", 83],
+            ["转化", 75],
+          ],
+          checks: [
+            ["good", "出单佇列、路线图、配送分配、异常提示和时间线形成完整工作台。"],
+            ["good", "四步 Workflow 能表达高峰、分配、追踪、异常回流。"],
+            ["warning", "抽象路线图后续需要重绘为 Candao 产品风格。"],
+            ["warning", "Footer 英文版权句需在生产化前清理。"],
+          ],
+          priorities: [
+            "P0：保留 Delivery v2 作为最终 Stitch 版本。",
+            "P1：重绘路线图，避免泛地图素材感。",
+            "P1：强化异常处理回到总部视图、门店协同、人工介入的状态链路。",
+            "P2：清理 Footer 语言并统一组件圆角。",
+          ],
+        },
+      };
+
+      const frame = document.querySelector("#previewFrame");
+      const stage = document.querySelector("#deviceStage");
+      const tabs = Array.from(document.querySelectorAll("[data-page]"));
+      const modes = Array.from(document.querySelectorAll(".segmented[data-mode]"));
+      const openHtml = document.querySelector("#openHtml");
+      const openShot = document.querySelector("#openShot");
+      const shotCard = document.querySelector("#shotCard");
+      const shotImage = document.querySelector("#shotImage");
+
+      function renderScores(page) {
+        const rows = document.querySelector("#scoreRows");
+        rows.innerHTML = page.metrics
+          .map(
+            ([label, value]) => `
+              <div class="score-row">
+                <span>${label}</span>
+                <span class="score-track">
+                  <span class="score-fill" style="--score: ${value}%"></span>
+                </span>
+                <strong>${(value / 10).toFixed(1)}</strong>
+              </div>
+            `
+          )
+          .join("");
+      }
+
+      function renderList(selector, items, classAware = false) {
+        const list = document.querySelector(selector);
+        list.innerHTML = items
+          .map((item) => {
+            if (classAware) {
+              return `<li class="${item[0]}"><span>${item[1]}</span></li>`;
+            }
+            return `<li><span>${item}</span></li>`;
+          })
+          .join("");
+      }
+
+      function setPage(pageKey) {
+        const page = pages[pageKey];
+        if (!page) return;
+
+        tabs.forEach((tab) => {
+          tab.classList.toggle("is-active", tab.dataset.page === pageKey);
+        });
+
+        document.querySelector("#pageKicker").textContent = page.kicker;
+        document.querySelector("#pageTitle").textContent = page.title;
+        document.querySelector("#pageSubtitle").textContent = page.subtitle;
+        document.querySelector("#statusPill").textContent = page.status;
+        document.querySelector("#scoreNumber").textContent = page.score;
+        document.querySelector("#scoreCopy").textContent = page.scoreCopy;
+        document.querySelector("#screenId").textContent = page.screenId;
+        document.querySelector("#shotLabel").textContent = page.shotLabel;
+
+        frame.src = page.file;
+        openHtml.href = page.file;
+        openShot.href = page.shot;
+        shotCard.href = page.shot;
+        shotImage.src = page.shot;
+        shotImage.alt = `${page.title} 完整截图预览`;
+
+        renderScores(page);
+        renderList("#checkList", page.checks, true);
+        renderList("#priorityList", page.priorities);
+
+        const params = new URLSearchParams(window.location.search);
+        params.set("page", pageKey);
+        const nextUrl = `${window.location.pathname}?${params.toString()}`;
+        window.history.replaceState({}, "", nextUrl);
+      }
+
+      function setMode(mode) {
+        stage.dataset.mode = mode;
+        modes.forEach((button) => {
+          button.classList.toggle("is-active", button.dataset.mode === mode);
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        params.set("mode", mode);
+        const pageKey = params.get("page") || "home";
+        params.set("page", pageKey);
+        const nextUrl = `${window.location.pathname}?${params.toString()}`;
+        window.history.replaceState({}, "", nextUrl);
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => setPage(tab.dataset.page));
+      });
+
+      modes.forEach((button) => {
+        button.addEventListener("click", () => setMode(button.dataset.mode));
+      });
+
+      const initialParams = new URLSearchParams(window.location.search);
+      setPage(initialParams.get("page") || "home");
+      setMode(initialParams.get("mode") || "desktop");
+    </script>
+  </body>
+</html>

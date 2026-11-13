@@ -1,0 +1,73 @@
+{
+  "suite": "t28-element-placement-domain-copy",
+  "items": [
+    {
+      "id": "t28-element-home",
+      "component_type": "prototype_block",
+      "role": "决策者",
+      "page_task": "建立餐道认知并导流到平台能力、客户案例和预约演示",
+      "text": "首頁元素包括餐道 Hero 產品舞台、營運中樞拓撲、能力探索器、服務規模指標、客戶案例摘要和 Demo CTA，保留訂單、門店、DMS / iDMS 配送、Finance Center 對賬、5000+、500M+、400+、200K+、4.5B+、30% up。",
+      "must_include": [
+        "餐道"
+      ]
+    },
+    {
+      "id": "t28-element-solutions",
+      "component_type": "prototype_block",
+      "role": "总部运营",
+      "page_task": "按餐饮 O2O 营运问题确认场景",
+      "text": "解決方案元素包括場景地圖、常見營運問題卡、六項場景 rail、問題能力結果鏈路和案例入口，保留多平台外賣訂單、門店與餐單、配送履約、財務對賬、會員與營運數據。",
+      "must_include": []
+    },
+    {
+      "id": "t28-element-platform",
+      "component_type": "prototype_block",
+      "role": "总部运营",
+      "page_task": "说明产品如何承接业务对象、状态和操作",
+      "text": "平台元素包括產品舞台、六項能力 rail、業務對象列表、狀態與操作列表、產品演示入口和 CTA，保留 OMS、COMS、SOMS、Menu Center、DMS / iDMS、CDBI / Finance Center、AMS / Connector。",
+      "must_include": []
+    },
+    {
+      "id": "t28-element-integrations",
+      "component_type": "prototype_block",
+      "role": "IT",
+      "page_task": "验证系统接入、资料对象和状态回传",
+      "text": "整合能力元素包括 Connector 網絡、系統類型 rail、資料對象列表、資料流向圖和接入評估 CTA，保留外賣平台、自建點餐入口、POS / KDS、CRM / 會員、支付 / ERP、配送與 API。",
+      "must_include": []
+    },
+    {
+      "id": "t28-element-customers",
+      "component_type": "prototype_block",
+      "role": "决策者",
+      "page_task": "用服务规模、实名客户和业态成果证明落地",
+      "text": "客戶案例元素包括服務規模指標、实名客户切換、案例範圍卡和業態成果卡，保留 Pizza-Box、JIA Group、Jardine Group、5000+、500M+、400+、200K+、4.5B+、30% up、99.95%、500 Order/second。",
+      "must_include": []
+    },
+    {
+      "id": "t28-element-resources",
+      "component_type": "prototype_block",
+      "role": "采购方",
+      "page_task": "降低评估、导入、营运和技术疑问",
+      "text": "資源元素包括資源路徑、階段問答、接入準備清單、營運 FAQ、案例資源、支援查詢板、媒體資料架和演示分流，保留 OMS、DMS、iDMS、CDBI、AMS / Connector、接單超時、配送超時、對賬差異。",
+      "must_include": []
+    },
+    {
+      "id": "t28-element-about",
+      "component_type": "prototype_block",
+      "role": "决策者",
+      "page_task": "建立公司、产品演进、服务交付和质量可信",
+      "text": "關於餐道元素包括公司網絡、企業旅程時間軸、產品能力分區、服務生命周期和質量可信指標，保留廣州總部、香港、北京、上海、成都營運中心、OMS、CDBI / Finance Center、DMS / iDMS、AMS / Connector、ISO 27001、ISO 20000、500 Order/second、99.95% over。",
+      "must_include": [
+        "餐道"
+      ]
+    },
+    {
+      "id": "t28-element-demo",
+      "component_type": "prototype_block",
+      "role": "销售",
+      "page_task": "收集演示意图、品牌资料、系统现况和主要问题",
+      "text": "預約產品演示元素包括演示需求摘要、三項聯絡意圖、品牌與系統欄位網格、演示模組摘要和支援入口，保留公司 / 品牌名稱、市場 / 地區、門店規模、目前渠道、已使用系統、主要問題、OMS、DMS / iDMS、CDBI、AMS / Connector。",
+      "must_include": []
+    }
+  ]
+}

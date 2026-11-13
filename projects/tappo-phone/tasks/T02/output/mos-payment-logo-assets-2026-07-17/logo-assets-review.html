@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TAPPO MOS 支付方式真实 logo 资产评审</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #17233d;
+      --muted: #62718c;
+      --line: #d8e0ee;
+      --blue: #2f73ff;
+      --warn-bg: #fff7e6;
+      --warn-line: #ffd591;
+      --warn-text: #8a4b00;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    main {
+      width: min(1120px, calc(100vw - 48px));
+      margin: 40px auto;
+    }
+    h1 { margin: 0 0 8px; font-size: 24px; }
+    p { margin: 0; color: var(--muted); }
+    .meta {
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 24px;
+      font-size: 14px;
+    }
+    .notice {
+      margin: 20px 0;
+      padding: 14px 16px;
+      border: 1px solid var(--warn-line);
+      border-radius: 8px;
+      background: var(--warn-bg);
+      color: var(--warn-text);
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      overflow: hidden;
+    }
+    .logo-box {
+      height: 132px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(45deg, #f4f6fa 25%, transparent 25%),
+        linear-gradient(-45deg, #f4f6fa 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #f4f6fa 75%),
+        linear-gradient(-45deg, transparent 75%, #f4f6fa 75%);
+      background-size: 18px 18px;
+      background-position: 0 0, 0 9px, 9px -9px, -9px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .logo-tile {
+      width: 108px;
+      height: 44px;
+      padding: 6px 10px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+    .logo-tile.square {
+      width: 44px;
+      height: 44px;
+      padding: 8px;
+    }
+    .logo-tile img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .content { padding: 14px; }
+    .name { font-weight: 700; margin-bottom: 4px; }
+    .source { color: var(--muted); font-size: 13px; min-height: 40px; }
+    .hash {
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 6px;
+      background: #f7f9fd;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: #3d4b66;
+      word-break: break-all;
+    }
+    .spec {
+      margin-top: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--card);
+      padding: 18px;
+    }
+    .spec h2 { margin: 0 0 12px; font-size: 18px; }
+    .spec ul { margin: 0; padding-left: 20px; color: var(--muted); }
+    .spec li + li { margin-top: 6px; }
+    code {
+      padding: 2px 4px;
+      border-radius: 4px;
+      background: #eef3ff;
+      color: #1f5fe0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>TAPPO MOS 支付方式真实 logo 资产评审</h1>
+    <p>用于 `25.1213 MOS v2` 支付设置，并作为后续 Tappo Station 支付方式回显的真实 logo 资产基础。</p>
+
+    <section class="meta">
+      <div><strong>Figma 文件：</strong>25.1213_MOS_v2</div>
+      <div><strong>fileKey：</strong>1qe8d4ll9wLnxPAsiJAoa9</div>
+      <div><strong>主态节点：</strong>2254:32924</div>
+      <div><strong>新增支付方式弹窗：</strong>2256:33130</div>
+      <div><strong>素材状态：</strong>微信支付与支付宝已改为 SVG；八达通与 PayMe 使用真实品牌图片</div>
+      <div><strong>节点替换状态：</strong>已直接替换主态表格、弹窗背景表格和新增支付方式弹窗默认图标</div>
+    </section>
+
+    <section class="notice">
+      Figma UI 已完成回填：旧的 W / A / O / P 字母占位已清除，logo 容器改为白底并绑定 MOS 本地颜色变量。
+      复核截图：<a href="./figma-main-after-svg-replace-2026-07-17.png">主态</a> /
+      <a href="./figma-modal-after-svg-replace-2026-07-17.png">新增支付方式弹窗</a>。
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <div class="logo-box">
+          <div class="logo-tile square"><img src="normalized/wechat-logo-iconify.png" alt="WeChat Pay logo" /></div>
+        </div>
+        <div class="content">
+          <div class="name">微信支付 / WeChat Pay</div>
+          <div class="source">来源：Iconify / Simple Icons `wechat`，使用品牌绿色。</div>
+          <div class="hash">Figma imageHash: 721086bb8b27e67f8aaf080015e3612a4ee5ca41<br />placed node: 2287:33610</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="logo-box">
+          <div class="logo-tile square"><img src="normalized/alipay-logo-iconify.png" alt="Alipay logo" /></div>
+        </div>
+        <div class="content">
+          <div class="name">支付宝 / Alipay</div>
+          <div class="source">来源：Iconify / Simple Icons `alipay`，使用品牌蓝色。</div>
+          <div class="hash">Figma imageHash: aa6fa081874497d185380b1c0981a3b94e63d75c<br />placed node: 2288:33610</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="logo-box">
+          <div class="logo-tile"><img src="normalized/octopus-logo-full-cropped.jpg" alt="Octopus logo" /></div>
+        </div>
+        <div class="content">
+          <div class="name">八达通 / Octopus</div>
+          <div class="source">来源：Octopus 官方品牌包 `ocl-logo.zip`，保留横版官方形态。</div>
+          <div class="hash">Figma imageHash: 9b306981210c9460d59694a970eaa86c0a9fb478<br />placed node: 2285:33610</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="logo-box">
+          <div class="logo-tile"><img src="normalized/payme-logo-official-cropped.png" alt="PayMe logo" /></div>
+        </div>
+        <div class="content">
+          <div class="name">PayMe</div>
+          <div class="source">来源：PayMe by HSBC 官方站点 header logo。</div>
+          <div class="hash">Figma imageHash: 7625253caffeeb4592fa7a7880721255d6160f56<br />placed node: 2289:33610</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="spec">
+      <h2>回填规则</h2>
+      <ul>
+        <li>表格图标列使用白底小容器，建议 `32x24` 或 `36x24`，logo 等比居中，不再使用字母色块。</li>
+        <li>新增支付方式弹窗默认图标卡片使用白底 logo 区域，建议 `92x32`，文字图标仍保留系统默认样式。</li>
+        <li>后续 Tappo Station 支付方式回显复用同一套 logo 资产；不要重新临摹或使用不同来源的同名 logo。</li>
+        <li>八达通不强行裁成单独符号，优先使用完整官方横版 logo，避免破坏品牌形态。</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

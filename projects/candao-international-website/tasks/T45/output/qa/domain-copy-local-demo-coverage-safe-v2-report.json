@@ -1,0 +1,21 @@
+{
+  "suite": "T45 demo sequential Stitch visible copy QA",
+  "total": 1,
+  "passed": 1,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t45-demo-local-demo-coverage-safe-v2",
+      "component_type": "stitch_high_fidelity_candidate_visible_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": [
+        {
+          "code": "unknown_role",
+          "message": "角色未在业务上下文中显式定义：品牌决策者 / 总部运营 / IT / 销售"
+        }
+      ]
+    }
+  ]
+}

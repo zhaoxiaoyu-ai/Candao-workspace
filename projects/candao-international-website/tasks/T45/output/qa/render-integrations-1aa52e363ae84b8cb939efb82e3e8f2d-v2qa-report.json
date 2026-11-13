@@ -1,0 +1,41 @@
+{
+  "page": "integrations",
+  "status": "fail",
+  "screenshot": "projects/candao-international-website/tasks/T45/output/screenshots/integrations-1aa52e363ae84b8cb939efb82e3e8f2d-v2qa-1440-full.png",
+  "metrics": {
+    "viewportWidth": 1440,
+    "viewportHeight": 1200,
+    "scrollHeight": 2514,
+    "pageWidth": 1440,
+    "textLength": 834,
+    "overflowingCount": 2,
+    "overflowing": [
+      {
+        "tag": "section",
+        "className": "bg-inverse-surface text-cloud-surface relative overflow-hidden py-[120px] px-margin-mobile md:px-margin-desktop",
+        "text": "把外賣平台、POS / KDS、CRM、支付、ERP 與配送資料接回營運鏈路\n                    \n\n                        IT 與營運團隊可以了解餐道 Connector 如何承接不同系統類型",
+        "rect": {
+          "left": 0,
+          "right": 1440,
+          "width": 1440
+        },
+        "scrollWidth": 1707,
+        "clientWidth": 1440
+      },
+      {
+        "tag": "div",
+        "className": "absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none",
+        "text": "",
+        "rect": {
+          "left": 907,
+          "right": 1707,
+          "width": 800
+        },
+        "scrollWidth": 800,
+        "clientWidth": 800
+      }
+    ],
+    "h1": "把外賣平台、POS / KDS、CRM、支付、ERP 與配送資料接回營運鏈路",
+    "bodyClass": "bg-background text-on-background font-body-md min-h-screen flex flex-col"
+  }
+}

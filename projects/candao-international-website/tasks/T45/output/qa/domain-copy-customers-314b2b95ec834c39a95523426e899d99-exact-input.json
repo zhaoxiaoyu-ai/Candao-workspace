@@ -1,0 +1,16 @@
+{
+  "suite": "T45 customers sequential Stitch visible copy QA",
+  "items": [
+    {
+      "id": "t45-customers-customers-314b2b95ec834c39a95523426e899d99-exact",
+      "locale": "zh-Hant",
+      "role": "品牌决策者 / 总部运营 / IT / 销售",
+      "page_task": "用服务规模、实名客户和行业案例证明落地",
+      "component_type": "stitch_high_fidelity_candidate_visible_copy",
+      "text": "餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中/EN\n預約演示\nCR-001 客戶案例｜餐道\nCR-011 從不同餐飲業態看餐道如何改善訂單、配送與數據營運\nCR-012 不只看品牌使用了哪些產品，更看導入餐道後...\nCR-013\nCR-015\nCR-017\nCR-031 用服務規模與營運數據建立初步可信\nCR-032 5000+品牌數量\nCR-033 500M+每日處理訂單\nCR-034 400+覆蓋城市\nCR-035 200K+門店數量\nCR-036 4.5B+每月配送訂單 GMV\nCR-037 30% up客戶效率提升\nCR-038\nCR-039\nCR-040\nCR-041 Pizza-Box｜9 年合作, OMS + 自有點餐\nCR-044 Pizza-Box\nCR-045 JIA Group\nCR-046 Jardine Group\nCR-047 案例營運視圖\nCR-048 訂單整合\nCR-049 OMS\nCR-050 配送履約\nCR-051 DMS / iDMS\nCR-054 合作超過 9 年...\nCR-055 導入後變化...\nCR-056 下一步：預約相似場景演示\nCR-057 預約相似場景演示\nCR-058\nCR-059\nCR-060\nCR-061 甜品連鎖\nCR-062\nCR-063\nCR-064\nCR-066 火鍋連鎖\nCR-067\nCR-068\nCR-069\nCR-071 中餐連鎖\nCR-072\nCR-073\nCR-074\nCR-076 咖啡品牌\nCR-077\nCR-078\nCR-079\nCR-081 鮮食零售\nCR-082\nCR-083\nCR-084\nCR-086 配送密集品牌\nCR-087 Jardine Group DMS\nCR-088\nCR-089\nCR-090 SaaS, iDMS, AMS / Connector\n餐道\n© 2024 餐道. All Rights Reserved. SaaS | iDMS | AMS / Connector\n",
+      "must_include": [
+        "餐道"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "suite": "T32 Customers Stitch high-fidelity failed screen copy QA",
+  "items": [
+    {
+      "id": "t32-customers-generated-screen",
+      "component_type": "stitch_screen_visible_copy",
+      "role": "决策者",
+      "page_task": "判断客户案例页是否真实承接餐道已授权客户案例、服务规模和业态成效证据",
+      "locale": "TC",
+      "text": "Candao - 為複雜餐飲營運建立清晰連接。Candao 協助成長中的餐飲品牌連接跨渠道訂單、多門店流程、配送履約與營運數據，讓總部看得更清楚，讓門店更專注服務。客戶案例。不同渠道同時產生訂單，門店需要更清晰的接單流程。Candao 將所有來源的訂單統一匯整至單一視圖，消滅平板叢林，減少漏單風險，讓前台人員專注於顧客服務。© 2024 Candao International. All Rights Reserved.",
+      "must_include": [
+        "從不同餐飲業態看餐道如何改善訂單、配送與數據營運",
+        "Pizza-Box",
+        "JIA Group",
+        "Jardine Group",
+        "5000+",
+        "500M+",
+        "400+",
+        "200K+",
+        "4.5B+",
+        "30% up",
+        "iDMS",
+        "SaaS",
+        "AMS / Connector"
+      ]
+    }
+  ]
+}

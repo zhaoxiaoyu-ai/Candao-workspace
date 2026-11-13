@@ -1,0 +1,16 @@
+{
+  "page": "resources",
+  "status": "pass",
+  "screenshot": "projects/candao-international-website/tasks/T45/output/screenshots/resources-d301b522d77242f3ba61f38ba5f8bd2d-1440-full.png",
+  "metrics": {
+    "viewportWidth": 1440,
+    "viewportHeight": 1200,
+    "scrollHeight": 1779,
+    "pageWidth": 1440,
+    "textLength": 766,
+    "overflowingCount": 0,
+    "overflowing": [],
+    "h1": "資源中心",
+    "bodyClass": "bg-cloud-surface text-on-surface antialiased"
+  }
+}

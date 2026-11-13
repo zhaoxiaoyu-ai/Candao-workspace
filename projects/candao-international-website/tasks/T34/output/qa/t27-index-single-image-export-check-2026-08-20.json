@@ -1,0 +1,19 @@
+{
+  "suite": "T34 T27 index.html single full-page image export",
+  "generated_at": "2026-08-20T03:01:38+08:00",
+  "source": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/index.html",
+  "output": "/Users/victorwong/Documents/Codex/Candao-workspace/projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/index-1440-content.png",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "fullPage": true
+  },
+  "status": "pass",
+  "file_size_bytes": 545484,
+  "render_engine": "Google Chrome via Playwright",
+  "browserTitle": "餐道國際官網頁面總覽",
+  "viewportWidth": 1440,
+  "viewportHeight": 900,
+  "documentWidth": 1440,
+  "documentHeight": 2059
+}

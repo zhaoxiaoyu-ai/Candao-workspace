@@ -1,0 +1,35 @@
+{
+  "suite": "t46-finance-center-localized-term-failure-2026-08-25",
+  "total": 2,
+  "passed": 0,
+  "failed": 2,
+  "status": "fail",
+  "results": [
+    {
+      "id": "zh-hant-finance-center-visible",
+      "component_type": "stitch_visible_copy",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "localized_display_term_mismatch",
+          "message": "中文 / 繁體中文生产稿应使用「財務對賬」，不应直接展示 `Finance Center`。",
+          "field": "text"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "zh-hant-rendered-finance-center",
+      "component_type": "rendered_text_check",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "localized_display_term_mismatch",
+          "message": "中文 / 繁體中文生产稿应使用「財務對賬」，不应直接展示 `Finance Center`。",
+          "field": "rendered_text"
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}

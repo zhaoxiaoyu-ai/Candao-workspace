@@ -1,0 +1,72 @@
+{
+  "suite": "T30 realized low-fidelity copy QA",
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "index",
+      "component_type": "website_page_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "home",
+      "component_type": "website_page_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "solutions",
+      "component_type": "website_page_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform",
+      "component_type": "website_page_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "integrations",
+      "component_type": "website_page_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "customers",
+      "component_type": "website_page_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "resources",
+      "component_type": "website_page_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "about",
+      "component_type": "website_page_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo",
+      "component_type": "website_page_copy",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

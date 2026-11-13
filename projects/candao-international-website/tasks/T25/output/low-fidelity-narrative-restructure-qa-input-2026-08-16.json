@@ -1,0 +1,113 @@
+{
+  "suite": "t25-low-fidelity-narrative-restructure-2026-08-16",
+  "items": [
+    {
+      "id": "home-hero-restructured",
+      "component_type": "page_hero",
+      "role": "决策者",
+      "page_task": "建立餐道作为餐饮与零售 O2O 营运中枢的第一认知",
+      "locale": "zh-Hant",
+      "text": "餐道把餐飲與零售 O2O 的渠道、門店、配送與數據接成營運中樞。面向品牌總部和多門店營運，餐道連接外賣平台、自有點餐入口、POS / KDS、CRM / 會員、配送資源、支付、ERP 和財務數據，讓訂單、餐單、履約、對賬與分析回到同一條可追溯鏈路。查看全鏈路能力。預約產品演示。查看產品視頻。",
+      "must_include": ["餐道", "餐飲與零售 O2O", "渠道", "門店", "配送", "數據", "營運中樞", "POS", "KDS", "ERP"]
+    },
+    {
+      "id": "home-complexity-map-restructured",
+      "component_type": "ecosystem_map",
+      "role": "总部运营",
+      "page_task": "说明餐饮 O2O 复杂度，避免混杂产品和功能层级",
+      "locale": "zh-Hant",
+      "text": "Complexity Map 只展示餐飲 O2O 生態複雜度：訂單渠道、門店執行系統、顧客與會員、支付與企業系統、配送資源、營運對象、異常狀態和餐道 Connector。節點包括外賣平台、H5 / Web / APP / QR、POS / KDS、打印、後廚、CRM、會員、Payment、ERP、Finance、平台配送、第三方物流、自有騎手、餐單、庫存、門店、區域、漏單、超時、退款、對賬差異。",
+      "must_include": ["訂單渠道", "門店執行系統", "配送資源", "營運對象", "異常狀態", "餐道 Connector", "POS", "KDS", "ERP"]
+    },
+    {
+      "id": "home-authority-snapshot",
+      "component_type": "metric_cards",
+      "role": "决策者",
+      "page_task": "在首页建立规模和可信证明",
+      "locale": "zh-Hant",
+      "text": "Authority Snapshot 使用 PPT Slide 11 同一組口徑：5000+ 品牌數量、200K+ 門店數量、400+ 覆蓋城市、4.5B+ 每月配送訂單 GMV、30% up 客戶效率提升；另保留 20 年餐飲系統研發與餐飲外送業務實戰經驗。",
+      "must_include": ["PPT Slide 11", "5000+", "200K+", "400+", "4.5B+", "30% up", "20 年"]
+    },
+    {
+      "id": "home-operating-loop-specific",
+      "component_type": "workflow",
+      "role": "总部运营",
+      "page_task": "把泛化的营运判断改为有依据的状态和操作",
+      "locale": "zh-Hant",
+      "text": "從訂單進入，到餐單、配送、對賬和異常處理。流程包含訂單進入、菜單與庫存同步、門店接單與異常提醒、配送履約與狀態追蹤、報表分析與財務對賬、售罄、轉派、退款或對賬跟進。",
+      "must_include": ["訂單進入", "菜單", "庫存", "門店接單", "異常提醒", "配送履約", "財務對賬", "售罄", "轉派", "退款"]
+    },
+    {
+      "id": "home-capability-overview",
+      "component_type": "capability_overview",
+      "role": "决策者",
+      "page_task": "首页只保留全链路能力总览，完整产品体系导向 Platform",
+      "locale": "zh-Hant",
+      "text": "首頁保留能力總覽，完整產品體系放入 Platform。渠道聚合：外賣平台、自有 H5 / Web / APP / QR 和 Call Center 訂單進入餐道 OMS。營運承接：門店接單、打印、餐單、庫存、售罄、門店狀態和異常提醒在同一流程處理。配送履約：iDMS 承接聚合配送，DMS 承接自有騎手、派單、第三方溢出和狀態追蹤。數據對賬：CDBI / Finance Center 支援報表、看板、平台訂單與 OMS 訂單對賬差異。生態接入：AMS / Connector 按系統類型、API、字段、權限和異常條件評估接入。",
+      "must_include": ["Platform", "OMS", "iDMS", "DMS", "CDBI", "Finance Center", "AMS / Connector", "API"]
+    },
+    {
+      "id": "solutions-cta",
+      "component_type": "cta_group",
+      "role": "销售",
+      "page_task": "从业务场景导向平台能力、相似演示和客户案例",
+      "locale": "zh-Hant",
+      "text": "Solutions CTA：從場景進入，再查看對應平台能力或案例。查看 Platform 如何承接這些場景，預約相似場景演示，查看客戶案例。",
+      "must_include": ["場景", "Platform", "預約相似場景演示", "客戶案例"]
+    },
+    {
+      "id": "platform-capability-map-interactive",
+      "component_type": "capability_map",
+      "role": "IT",
+      "page_task": "展示平台能力地图每项切换后右侧承载内容",
+      "locale": "zh-Hant",
+      "text": "Platform 能力地圖按營運鏈路查看餐道產品如何承接狀態、資料與操作。左側可切換多渠道訂單、餐單與門店、會員與自有點餐、配送履約、數據與對賬、AMS / Connector。右側固定承載場景、業務對象、狀態 / 操作、對應產品、來源和下一步。",
+      "must_include": ["多渠道訂單", "餐單與門店", "會員與自有點餐", "配送履約", "數據與對賬", "AMS / Connector", "業務對象", "狀態", "來源", "下一步"]
+    },
+    {
+      "id": "platform-delivery-tab",
+      "component_type": "capability_tab",
+      "role": "配送主管",
+      "page_task": "说明 DMS / iDMS 配送履约能力",
+      "locale": "zh-Hant",
+      "text": "配送履約同時承接聚合配送和自有騎手。iDMS 支援第三方配送呼叫與交易追蹤；DMS 支援自有騎手、智能派單、人工派單、第三方溢出、Rider App 和 Consumer SMS。狀態 / 操作：待派單、已派單、到店、取餐、配送中、已送達、轉第三方、配送超時。",
+      "must_include": ["iDMS", "DMS", "第三方配送", "自有騎手", "人工派單", "第三方溢出", "Rider App", "Consumer SMS", "配送超時"]
+    },
+    {
+      "id": "platform-video-entry",
+      "component_type": "video_entry",
+      "role": "采购方",
+      "page_task": "补齐旧官网产品视频入口并标注素材确认边界",
+      "locale": "zh-Hant",
+      "text": "產品視頻入口按能力場景分發：OMS 演示視頻展示多渠道訂單、門店接單、異常提醒和打印流程；Menu / Store 演示視頻展示餐單、庫存、售罄、區域菜單與門店狀態同步；DMS / iDMS 演示視頻展示配送呼叫、派單、騎手 App、第三方溢出和狀態追蹤；CDBI / Finance 演示視頻展示報表、看板、平台訂單與 OMS 訂單對賬差異。正式放入前需確認視頻素材、語言版本、封面和公開範圍。",
+      "must_include": ["產品視頻", "OMS", "Menu", "DMS", "iDMS", "CDBI", "Finance", "視頻素材", "公開範圍"]
+    },
+    {
+      "id": "integrations-cta",
+      "component_type": "cta_group",
+      "role": "IT",
+      "page_task": "从接入对象导向接入评估和技术演示",
+      "locale": "zh-Hant",
+      "text": "Integrations CTA：接入前先整理系統類型、接口對象和異常條件。提交接入評估，查看 AMS / Connector，預約技術演示。",
+      "must_include": ["系統類型", "接口對象", "異常條件", "接入評估", "AMS / Connector", "技術演示"]
+    },
+    {
+      "id": "about-company-rewritten",
+      "component_type": "company_profile",
+      "role": "采购方",
+      "page_task": "用专业企业定位替换 AI 化公司故事表达",
+      "locale": "zh-Hant",
+      "text": "專注餐飲與零售 O2O 營運系統的產品與服務團隊。餐道成立於 2014 年，總部位於廣州，並在北京、上海、香港設有分支及成都營運中心；以 20 年餐飲系統研發與外送業務實戰經驗，支援品牌處理訂單、門店、配送、數據和持續營運。",
+      "must_include": ["餐飲與零售 O2O", "產品與服務團隊", "餐道", "2014", "廣州", "香港", "20 年", "訂單", "配送"]
+    },
+    {
+      "id": "about-service-delivery",
+      "component_type": "service_system",
+      "role": "决策者",
+      "page_task": "解释 SaaS / Data / Delivery / QA 的来源和页面价值",
+      "locale": "zh-Hant",
+      "text": "以產品平台、數據分析、配送履約和質量保障支撐長期營運。SaaS Platform 承接 OMS、CDBI、DMS、iDMS、AMS / Connector 等產品能力；Data Analysis 支援報表、看板、平台訂單與 OMS 訂單對賬差異；Delivery 支援聚合配送、自有騎手、派單、第三方溢出和狀態追蹤；Quality Assurance 作為導入、服務管理、安全認證和持續營運的可信支撐。此模組來源於 PPT 公司能力描述。",
+      "must_include": ["SaaS", "OMS", "CDBI", "DMS", "iDMS", "AMS / Connector", "Data Analysis", "Delivery", "Quality Assurance", "PPT"]
+    }
+  ]
+}

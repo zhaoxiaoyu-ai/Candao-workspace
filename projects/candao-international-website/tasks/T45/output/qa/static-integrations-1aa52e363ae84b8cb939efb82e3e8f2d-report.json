@@ -1,0 +1,43 @@
+{
+  "suite": "T45 sequential Stitch static QA",
+  "page": "integrations",
+  "target": "projects/candao-international-website/tasks/T45/output/stitch-output/integrations-1aa52e363ae84b8cb939efb82e3e8f2d.html",
+  "status": "fail",
+  "checks": [
+    {
+      "name": "header_or_page_nav_complete",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "footer_nav_present_when_footer_exists",
+      "status": "fail",
+      "detail": "首頁, 解決方案, 平台, 整合能力, 客戶案例, 資源, 關於餐道, 預約演示"
+    },
+    {
+      "name": "visible_risk_terms_absent",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "raw_disallowed_tokens_absent",
+      "status": "fail",
+      "detail": "Material Symbols"
+    },
+    {
+      "name": "case_sensitive_terms_preserved",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "brand_zh_visible",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "language_switch_visible",
+      "status": "pass",
+      "detail": ""
+    }
+  ]
+}

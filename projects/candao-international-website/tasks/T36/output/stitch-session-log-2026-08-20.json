@@ -1,0 +1,33 @@
+{
+  "task": "T36",
+  "page": "Solutions",
+  "project_id": "10888304674441209287",
+  "target_screen_id": "4188f2a7f3f84566b5644b19efdedadd",
+  "previous_generate_session_id": "6134769186452970130",
+  "previous_generate_result": "Stitch returned a session id only and no new Solutions screen appeared in list_screens.",
+  "edit_session_id": "9105741495013900777",
+  "edit_policy": {
+    "generate_screen_from_text_calls_for_current_solutions_target": 0,
+    "generate_screen_from_text_retry": false,
+    "edit_screens_calls_for_target_screen": 1,
+    "selected_screen_ids": ["4188f2a7f3f84566b5644b19efdedadd"]
+  },
+  "polls": [
+    {
+      "poll_count": 10,
+      "interval_seconds": 30,
+      "checked_screen_id": "4188f2a7f3f84566b5644b19efdedadd",
+      "result": "unchanged",
+      "unchanged_signature": {
+        "title": "C v3 / 解決方案 - Candao International / Desktop TC",
+        "width": "2560",
+        "height": "9662",
+        "html_file_name": "projects/10888304674441209287/files/a86bed3d513d469aa69287e5f736b6c4",
+        "screenshot_file_name": "projects/10888304674441209287/files/f39fc10b0273428faf3dab17fa825765"
+      },
+      "list_screens_final_check": "No new formal Solutions screen appeared after the edit session."
+    }
+  ],
+  "final_status": "blocked",
+  "blocking_reason": "Stitch accepted edit_screens and returned a session id, but did not write back an updated screen or downloadable output after 10 polls."
+}

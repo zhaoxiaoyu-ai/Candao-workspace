@@ -1,0 +1,16 @@
+{
+  "page": "customers",
+  "status": "pass",
+  "screenshot": "projects/candao-international-website/tasks/T45/output/screenshots/local-customers-coverage-safe-v2-1440-full.png",
+  "metrics": {
+    "viewportWidth": 1440,
+    "viewportHeight": 1200,
+    "scrollHeight": 4143,
+    "pageWidth": 1440,
+    "textLength": 2082,
+    "overflowingCount": 0,
+    "overflowing": [],
+    "h1": "從不同餐飲業態看餐道如何改善訂單、配送與數據營運",
+    "bodyClass": ""
+  }
+}

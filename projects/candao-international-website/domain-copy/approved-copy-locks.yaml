@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-15",
+  "policy": {
+    "status_name": "approved_and_locked",
+    "layout_only_after_locked": true,
+    "prototype_may_not_rewrite": true,
+    "overflow_requires_report": true
+  },
+  "lock_schema": {
+    "id": "stable page/module/component identifier",
+    "status": "approved_and_locked",
+    "locale": "zh-Hant | en",
+    "page": "page name",
+    "component": "component type",
+    "text": "approved copy",
+    "source": "evidence source",
+    "approved_by": "user or reviewer",
+    "approved_at": "YYYY-MM-DD",
+    "allowed_changes": ["layout", "line_break", "container_width"],
+    "forbidden_changes": ["delete", "shorten", "rewrite", "replace_with_placeholder"]
+  },
+  "locks": [],
+  "overflow_report_template": {
+    "page_position": "",
+    "current_text": "",
+    "current_length": "",
+    "available_space": "",
+    "overflow_reason": "",
+    "suggested_adjustment": "",
+    "requires_business_confirmation": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "suite": "t29-inline-element-static-check",
+  "status": "pass",
+  "page_count": 8,
+  "module_count": 41,
+  "index_has_page_summaries": true,
+  "element_overview_markers": 1,
+  "element_reference_pages": 8,
+  "css_text_transform_risk": false,
+  "issues": []
+}

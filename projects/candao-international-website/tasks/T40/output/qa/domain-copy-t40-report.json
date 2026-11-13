@@ -1,0 +1,73 @@
+{
+  "suite": "t40-stitch-html-visible-copy-qa",
+  "total": 7,
+  "passed": 4,
+  "failed": 3,
+  "status": "fail",
+  "results": [
+    {
+      "id": "t40-about-c7930267f0dd4abdbc7acfc6dc4312f3",
+      "component_type": "stitch_html_page_visible_text",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "forbidden_expression",
+          "message": "命中禁止或未确认表达：中台"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "t40-customers-e32f4196c2204fdba471a231c0188b48",
+      "component_type": "stitch_html_page_visible_text",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t40-demo-5ec6d859f93741adb92347ccab41098c",
+      "component_type": "stitch_html_page_visible_text",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t40-integrations-e3a8d39f3c734306aa4c55baac1cb657",
+      "component_type": "stitch_html_page_visible_text",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t40-platform-4ed70a41e89741b1854271a31bdcd4da",
+      "component_type": "stitch_html_page_visible_text",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t40-resources-bfc9b7527f234a2f8981c9407a87794d",
+      "component_type": "stitch_html_page_visible_text",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "brand_display_mismatch",
+          "message": "中文 / 繁體中文默认品牌显示应使用「餐道」，不应使用：Candao"
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "id": "t40-solutions-6254a23be6ba4334968e45cc0b50afe5",
+      "component_type": "stitch_html_page_visible_text",
+      "status": "fail",
+      "issues": [
+        {
+          "code": "brand_display_mismatch",
+          "message": "中文 / 繁體中文默认品牌显示应使用「餐道」，不应使用：Candao"
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}

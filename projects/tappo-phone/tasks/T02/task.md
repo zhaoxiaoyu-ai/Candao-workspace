@@ -1,14 +1,15 @@
-# T02: Visual Polish And Content Preservation Rules
+# T02: TAPPO Naming, Visual Polish, And Content Preservation Rules
 
 ## Goal
 
-Upgrade the initial Tappo Phone implementation from a functional scaffold into a more refined mobile UI direction, while hardening the project rules around content preservation and typography.
+Maintain TAPPO product-group records and upgrade the Tappo Pulse implementation from a functional scaffold into a more refined mobile UI direction, while hardening Figma-file naming boundaries, content preservation, and typography rules.
 
 ## Scope
 
 - Write project rules for content completeness, visual quality, generated assets, and legibility.
 - Recalibrate design tokens and base components against the Tappo mobile Figma owner-home reference.
 - Replace generic owner/staff presentation with a more polished card, metric, visual, and icon system.
+- Keep Figma-file names separated: Tappo Station, Tappo Pulse, Tappo MOS, and Tappo微官网.
 - Keep all existing prototype-derived content visible unless explicitly approved for removal.
 - Use generated raster assets for unified illustration/icon direction where appropriate.
 

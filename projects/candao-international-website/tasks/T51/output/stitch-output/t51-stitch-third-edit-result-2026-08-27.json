@@ -1,0 +1,30 @@
+{
+  "task": "T51",
+  "date": "2026-08-27",
+  "action": "stitch_edit_screens_third_pass_content_coverage",
+  "source_screen_id": "f8b664b70bdc4d55a2674dfed40a2b2c",
+  "project_id": "10888304674441209287",
+  "device": "DESKTOP",
+  "model": "GEMINI_3_PRO",
+  "session_id": "15758664959752750170",
+  "edited_screen": {
+    "id": "5d13339cb5a44dc6a73169adf3eec6d3",
+    "name": "projects/10888304674441209287/screens/5d13339cb5a44dc6a73169adf3eec6d3",
+    "title": "接入評估中心 - 餐道 / Desktop TC / C v4 Final Content Coverage",
+    "width": 2560,
+    "height": 7114,
+    "html_download_url": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzY4ZTNlZGE1Y2RlMjRhYzI5OWI0OGIyNTUzYThkM2RjEgsSBxD0lM_B9g8YAZIBJAoKcHJvamVjdF9pZBIWQhQxMDg4ODMwNDY3NDQ0MTIwOTI4Nw&filename=&opi=96797242",
+    "screenshot_download_url": "https://lh3.googleusercontent.com/aida/AEtjO1UZLocww1ko3xaj9d7L0qN2hEejtKbSlWY8aJgU4AirayHrrHk31w25wKNkJ3xdn-QDUUuYcWxF_oplk6gMdIteC_DNeT7AvR_jJ9AvUS4zaLriNN2ZpSdG6WdFKFfMT7-kH8_Zi5tD_WylrFTX8nAoTcx8qWER1bxcKv9SaZPzgipPWnPVmY7tn1R5813Km0mnGR89BawkEWqI6gPXCDEs3KN74BmGP8bVQAsVvgeud2B_x6bTOeWpjIof"
+  },
+  "stitch_output_summary": [
+    "Stitch reported that it completed full content coverage for the five operating scenarios and routing modules.",
+    "Stitch reported that visible English footer copy, icon ligatures and unsupported 0.01% metrics were removed.",
+    "Local QA verification remains the acceptance source."
+  ],
+  "stitch_suggestions": [
+    "更新索引頁面將此版本設為候選",
+    "為「解決方案」頁面進行同樣的內容補齊",
+    "優化「資源中心」的具體文件下載列表內容"
+  ],
+  "acceptance_status": "qa_fail_content_coverage"
+}

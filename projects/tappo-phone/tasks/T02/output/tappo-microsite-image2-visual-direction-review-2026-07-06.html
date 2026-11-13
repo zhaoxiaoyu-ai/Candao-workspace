@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAPPO 微官网 Image2 视觉方向样张</title>
+    <style>
+      :root {
+        --bg: #f6f4ef;
+        --text: #201a17;
+        --muted: #766b63;
+        --line: rgba(32, 26, 23, 0.12);
+        --primary: #ff6a3a;
+        --panel: rgba(255, 255, 255, 0.76);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "OPPO Sans 4.0", "OPPO Sans", "PingFang SC", system-ui, sans-serif;
+        letter-spacing: 0;
+      }
+
+      main {
+        width: min(1120px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 32px 0 48px;
+      }
+
+      header {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(24px, 4vw, 38px);
+        line-height: 1.16;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .layout,
+      .gallery {
+        display: grid;
+        grid-template-columns: minmax(300px, 430px) minmax(280px, 1fr);
+        gap: 24px;
+        align-items: start;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 24px;
+      }
+
+      .phone {
+        overflow: hidden;
+        border-radius: 32px;
+        border: 1px solid var(--line);
+        background: white;
+        box-shadow: 0 24px 80px rgba(65, 43, 28, 0.16);
+      }
+
+      .phone img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .panel {
+        display: grid;
+        gap: 16px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 18px;
+        box-shadow: 0 18px 50px rgba(65, 43, 28, 0.08);
+        backdrop-filter: blur(18px);
+      }
+
+      .asset {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: 0 18px 50px rgba(65, 43, 28, 0.08);
+      }
+
+      .asset img {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: #eee6dc;
+      }
+
+      .asset figcaption {
+        display: grid;
+        gap: 4px;
+        padding: 14px;
+      }
+
+      .asset strong {
+        font-size: 15px;
+      }
+
+      .asset span {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        border-radius: 999px;
+        background: rgba(255, 106, 58, 0.12);
+        color: var(--primary);
+        padding: 6px 10px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      @media (max-width: 840px) {
+        main {
+          width: min(430px, calc(100vw - 24px));
+          padding-top: 20px;
+        }
+
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="tag">Tappo Pulse / Image2 Direction</span>
+        <h1>TAPPO 微官网视觉升级方向样张</h1>
+        <p>
+          用于指导 Lovable 后续通过 Image2 重做顶部轮播图、入口图标和卡片质感。样张表达方向和可用资产候选；生产使用时仍需避免把可读文字、假 logo、水印直接烧进图片。
+        </p>
+      </header>
+
+      <section class="layout">
+        <figure class="phone">
+          <img
+            src="./tappo-microsite-image2-visual-direction-sample-2026-07-06.png"
+            alt="TAPPO 微官网 Image2 视觉方向样张"
+          />
+        </figure>
+
+        <aside class="panel">
+          <section class="card">
+            <h2>需要保留的范围</h2>
+            <ul>
+              <li>首页保留点餐/电子菜单入口和订座预约入口。</li>
+              <li>菜单入口保留，但菜单内容页暂不做；只允许轻量空状态或提示。</li>
+              <li>订座预约必须保留，并继续支持预约表单、校验、成功弹窗和离开确认。</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>参考图提炼</h2>
+            <ul>
+              <li>顶部轮播图需要广告大片质感、真实材质、光影、景深和食物细节。</li>
+              <li>UI 卡片应有半透明材质、柔和阴影和足够留白，不只是一张白卡。</li>
+              <li>图标可以是小型 Image2 图形资产，不要只用单一线性图标。</li>
+              <li>样式需要适配任意主题色，因此色彩应通过 token 注入，图片避免强绑定单一色值。</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>验收重点</h2>
+            <ul>
+              <li>首页视觉第一屏必须更像餐饮品牌广告，而不是普通餐厅照片列表。</li>
+              <li>点餐入口存在但不展示菜品分类、菜名、价格、购物车或下单 CTA。</li>
+              <li>订座入口进入可用的 `/booking` 表单。</li>
+              <li>图片和图标不出现假 logo、乱码文字、水印或不可控品牌文案。</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+
+      <section class="gallery" aria-label="Image2 generated asset set">
+        <figure class="asset">
+          <img
+            src="./tappo-microsite-image2-hero-burger-2026-07-06.png"
+            alt="Image2 生成的汉堡主视觉轮播候选"
+          />
+          <figcaption>
+            <strong>Hero 01 / 招牌汉堡</strong>
+            <span>暖橙聚光、食物近景、浅景深；适合作为首屏第一张。</span>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <img
+            src="./tappo-microsite-image2-hero-combo-2026-07-06.png"
+            alt="Image2 生成的套餐外带主视觉轮播候选"
+          />
+          <figcaption>
+            <strong>Hero 02 / 套餐外带</strong>
+            <span>纸袋、冷饮、薯条与汉堡组合；适合表达堂食和外卖。</span>
+          </figcaption>
+        </figure>
+
+        <figure class="asset">
+          <img
+            src="./tappo-microsite-image2-hero-restaurant-2026-07-06.png"
+            alt="Image2 生成的餐厅氛围主视觉轮播候选"
+          />
+          <figcaption>
+            <strong>Hero 03 / 门店氛围</strong>
+            <span>夜间餐厅、桌面餐具、暖光反射；适合品牌与订座情绪。</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="gallery" aria-label="Image2 generated icon direction">
+        <figure class="asset">
+          <img
+            src="./tappo-microsite-image2-entry-icons-2026-07-06.png"
+            alt="Image2 生成的入口图标材质方向"
+          />
+          <figcaption>
+            <strong>入口图标材质方向</strong>
+            <span>轻拟物、纸质、金属、玻璃与柔和阴影；用于指导点餐、订座、外卖、服务小卡。</span>
+          </figcaption>
+        </figure>
+        <section class="card">
+          <h2>图标落地规则</h2>
+          <ul>
+            <li>入口图标可从这张方向稿拆分重绘，或在 Lovable 内用 Image2 分别生成单独小资产。</li>
+            <li>同屏保持统一光源、统一材质厚度和统一圆角；不要混用摄影图、线框图和扁平插画。</li>
+            <li>图标 badge 使用主题主色和透明度 token，物件主体保持中性，确保换主题色也成立。</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>轮播落地规则</h2>
+          <ul>
+            <li>首屏图片建议以 40%-50% 页面高度呈现，叠加轻量品牌信息和轮播控件。</li>
+            <li>图片不承担文案，不烧入品牌名；文案由页面组件叠加并跟随主题样式。</li>
+            <li>不同主题色只调整 UI token，不强制重染图片，保持食品广告图的通用高级感。</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "suite": "t54-figma-final-hierarchy-links-domain-copy",
+  "items": [
+    {
+      "id": "t54-figma-final-hierarchy-links",
+      "component_type": "figma_navigation_index",
+      "role": "销售",
+      "page_task": "在 Figma 画布顶部快速进入最终网站层级与对应页面 Frame。",
+      "locale": "zh-Hant",
+      "text": "餐道國際官網最終層級超連結。主卡點擊跳轉到對應 Web Desktop 1440 Frame；二級項目保留最終 URL 路徑。T05 Sitemap。TC 單語版。點擊可跳轉。首頁 Home / 建立品牌認知，導向場景、能力與預約演示。Hero。Problem Switcher。Capability Overview。Final CTA。解決方案 Solutions /solutions 按營運場景說明問題、路徑與平台能力。連鎖餐飲 /solutions/restaurant-chains。多門店營運 /solutions/multi-store-operations。配送營運 /solutions/delivery-operations。數字點餐 /solutions/digital-ordering。數據化營運 /solutions/data-driven-operations。平台能力 Platform /platform 展示訂單、餐單、門店、配送與數據能力邊界。平台總覽 /platform/overview。訂單管理 /platform/order-management。餐單與門店管理 /platform/menu-store-management。配送管理 /platform/delivery-management。自有點餐 /platform/first-party-ordering。數據智能 /platform/data-intelligence。整合能力 Integrations /integrations 讓 IT 和採購方確認外部系統、接口與資料流。外賣平台集成 /integrations/delivery-platforms。POS 集成 /integrations/pos。支付網關 /integrations/payment-gateways。CRM 與會員 /integrations/crm-loyalty。第三方物流 /integrations/third-party-logistics。請求集成 /integrations/request。客戶案例 Customers /customers 承接可信證據、行業案例與相似場景導流。案例總覽 /customers/case-studies。客戶故事模板 /customers/story-template。連鎖集團案例 /customers/restaurant-groups。配送營運案例 /customers/delivery-operations。資源與支援 Resources /resources 承接 FAQ、支援、指南與低承諾查詢。常見問題 /resources/faq。支援 /resources/support。指南 /resources/guides。新聞 /resources/press。關於餐道 About /about 建立公司可信、服務方式與安全能力入口。關於我們 /about/company。發展里程碑 /about/milestones。安全與服務能力 /about/security-service。招聘 /about/careers。預約產品演示 Book a Demo /book-a-demo 將需求分流到產品演示、銷售、合作或支援查詢。聯絡與預約 /contact。聯絡銷售 /contact/sales。合作伙伴諮詢 /contact/partners。支援諮詢 /contact/support。頁腳法務 Legal /privacy-policy 承接隱私、使用條款與資料處理補充。隱私政策 /privacy-policy。使用條款 /terms-of-use。Cookie 政策 /cookie-policy。資料處理附錄 /data-processing-addendum。",
+      "must_include": [
+        "首頁",
+        "解決方案",
+        "平台能力",
+        "整合能力",
+        "客戶案例",
+        "資源與支援",
+        "關於餐道",
+        "預約產品演示",
+        "隱私政策"
+      ]
+    }
+  ]
+}

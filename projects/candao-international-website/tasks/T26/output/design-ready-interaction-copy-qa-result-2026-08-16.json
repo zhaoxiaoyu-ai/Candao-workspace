@@ -1,0 +1,58 @@
+{
+  "suite": "t26-design-ready-interaction-copy-2026-08-16",
+  "total": 7,
+  "passed": 7,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "home-delivery-state",
+      "component_type": "capability_switch",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "solutions-finance-state",
+      "component_type": "scenario_switch",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "integrations-pos-state",
+      "component_type": "integration_switch",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "customers-jardine-state",
+      "component_type": "case_carousel",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "resources-technical-state",
+      "component_type": "support_stage_switch",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "about-products-state",
+      "component_type": "timeline_switch",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "mobile-nav-state",
+      "component_type": "mobile_navigation",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

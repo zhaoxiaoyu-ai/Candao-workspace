@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>平台 - 餐道國際</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&amp;family=Noto+Serif:wght@600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#ffffff",
+                        "status-success": "#00A884",
+                        "on-background": "#1a1c1e",
+                        "on-primary-fixed-variant": "#004299",
+                        "surface-container-highest": "#e2e2e5",
+                        "surface-container-high": "#e8e8ea",
+                        "inverse-surface": "#2f3133",
+                        "tertiary-fixed-dim": "#ffb950",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#002117",
+                        "secondary": "#006b53",
+                        "on-secondary-fixed-variant": "#00513e",
+                        "inverse-primary": "#afc6ff",
+                        "primary-container": "#2e70e0",
+                        "surface": "#f9f9fc",
+                        "tertiary": "#7f5300",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#0059c7",
+                        "on-tertiary-container": "#fffbff",
+                        "ink-text": "#1A1C1E",
+                        "on-surface": "#1a1c1e",
+                        "error-container": "#ffdad6",
+                        "background": "#f9f9fc",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#59dcb5",
+                        "on-primary-fixed": "#001944",
+                        "surface-bright": "#f9f9fc",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container-low": "#f3f3f6",
+                        "operational-blue": "#528DFF",
+                        "status-warning": "#FFAB00",
+                        "surface-dim": "#dadadc",
+                        "primary-fixed": "#d9e2ff",
+                        "on-tertiary-fixed-variant": "#624000",
+                        "surface-container": "#eeeef0",
+                        "surface-variant": "#e2e2e5",
+                        "outline": "#727785",
+                        "secondary-container": "#76f6cd",
+                        "outline-variant": "#c2c6d6",
+                        "secondary-fixed": "#79f9d0",
+                        "tertiary-container": "#9f6900",
+                        "on-surface-variant": "#424753",
+                        "tertiary-fixed": "#ffddb3",
+                        "border-subtle": "#E2E8F0",
+                        "inverse-on-surface": "#f0f0f3",
+                        "on-secondary-container": "#007057",
+                        "on-primary-container": "#fefcff",
+                        "status-error": "#E11D48",
+                        "primary-fixed-dim": "#afc6ff",
+                        "on-tertiary": "#ffffff",
+                        "cloud-surface": "#F8FAFC",
+                        "primary": "#0057c2",
+                        "on-error": "#ffffff"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "bento-gap": "16px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Work Sans"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-lg": ["Work Sans"],
+                        "title-md": ["Work Sans"],
+                        "display-lg": ["Noto Serif"],
+                        "headline-lg-mobile": ["Noto Serif"],
+                        "label-sm": ["IBM Plex Sans"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "title-md": ["20px", { lineHeight: "1.5", fontWeight: "600" }],
+                        "display-lg": ["48px", { lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "700" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "label-sm": ["13px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky border-b border-border-subtle shadow-sm bg-surface/90 backdrop-blur-md z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-[1280px] mx-auto h-20">
+<div class="font-headline-lg text-headline-lg font-bold text-operational-blue">
+                餐道
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-operational-blue transition-colors duration-200" href="#">首頁</a>
+<a class="text-on-surface-variant font-medium hover:text-operational-blue transition-colors duration-200" href="#">解決方案</a>
+<a class="text-primary font-bold border-b-2 border-primary opacity-80 transition-all duration-150 py-7" href="#">平台</a>
+<a class="text-on-surface-variant font-medium hover:text-operational-blue transition-colors duration-200" href="#">整合能力</a>
+<a class="text-on-surface-variant font-medium hover:text-operational-blue transition-colors duration-200" href="#">客戶案例</a>
+<a class="text-on-surface-variant font-medium hover:text-operational-blue transition-colors duration-200" href="#">資源</a>
+<a class="text-on-surface-variant font-medium hover:text-operational-blue transition-colors duration-200" href="#">關於餐道</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-on-surface-variant font-medium hover:text-operational-blue transition-colors duration-200">繁中 / EN</button>
+<button class="bg-operational-blue text-on-primary px-6 py-2.5 rounded-full font-label-sm text-label-sm hover:opacity-90 transition-opacity whitespace-nowrap">預約產品演示</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-20 md:py-32">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 space-y-8">
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">
+                        看 OMS、Menu Center、DMS / iDMS、CDBI 和 Connector 如何支撐每日營運
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        餐道把訂單、餐單、門店、配送、會員、數據、財務對賬與系統接入放在同一條營運鏈路中，讓不同角色按狀態和下一步操作處理問題。
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-operational-blue text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm hover:opacity-90 transition-opacity">預約產品演示</button>
+<button class="bg-surface-container text-on-surface px-8 py-4 rounded-full font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors border border-border-subtle">查看整合能力</button>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<!-- Abstract SaaS Stage Visual -->
+<div class="relative w-full aspect-square md:aspect-[4/3] bg-cloud-surface rounded-2xl border border-border-subtle overflow-hidden flex items-center justify-center p-8 shadow-sm">
+<!-- Connection Lines Background -->
+<svg class="absolute inset-0 w-full h-full text-border-subtle opacity-50" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M 0,30 L 100,30 M 0,60 L 100,60 M 30,0 L 30,100 M 70,0 L 70,100" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+<!-- Animated connection line -->
+<path class="animate-[dash_3s_linear_infinite]" d="M 20,40 C 40,40 40,70 60,70 L 80,70" fill="none" stroke="#528DFF" stroke-dasharray="4" stroke-width="1"></path>
+</svg>
+<div class="relative w-full max-w-md space-y-6 z-10">
+<!-- Panel A: OMS -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-subtle p-4 shadow-[0_4px_20px_rgba(0,0,0,0.05)] transform hover:-translate-y-1 transition-transform duration-300">
+<div class="flex justify-between items-center mb-3 pb-2 border-b border-border-subtle">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> OMS
+                                    </span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-status-warning/10 text-status-warning font-label-sm text-label-sm">待接單</span>
+<span class="px-3 py-1 rounded-full bg-operational-blue/10 text-operational-blue font-label-sm text-label-sm">製作中</span>
+</div>
+</div>
+<!-- Panel B: Menu Center -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-subtle p-4 shadow-[0_4px_20px_rgba(0,0,0,0.05)] ml-8 transform hover:-translate-y-1 transition-transform duration-300">
+<div class="flex justify-between items-center mb-3 pb-2 border-b border-border-subtle">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">menu_book</span> Menu Center
+                                    </span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-status-error/10 text-status-error font-label-sm text-label-sm">售罄</span>
+<span class="px-3 py-1 rounded-full bg-status-success/10 text-status-success font-label-sm text-label-sm">餐單同步</span>
+</div>
+</div>
+<!-- Panel C: DMS / iDMS -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-subtle p-4 shadow-[0_4px_20px_rgba(0,0,0,0.05)] ml-16 transform hover:-translate-y-1 transition-transform duration-300">
+<div class="flex justify-between items-center mb-3 pb-2 border-b border-border-subtle">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span> DMS / iDMS
+                                    </span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-operational-blue/10 text-operational-blue font-label-sm text-label-sm">配送中</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">轉第三方</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Demo Entry Section -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-20 border-t border-border-subtle">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 text-center">
+                按工作流查看不同模組的日常使用方式
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-bento-gap">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest border border-border-subtle rounded-xl p-6 cursor-pointer hover:border-operational-blue transition-colors duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-cloud-surface text-operational-blue flex items-center justify-center mb-6 group-hover:bg-operational-blue group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2">OMS</span>
+<h3 class="font-title-md text-title-md text-on-surface">訂單隊列與異常處理</h3>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest border border-border-subtle rounded-xl p-6 cursor-pointer hover:border-operational-blue transition-colors duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-cloud-surface text-operational-blue flex items-center justify-center mb-6 group-hover:bg-operational-blue group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2">Menu Center / Store</span>
+<h3 class="font-title-md text-title-md text-on-surface">餐單版本與門店狀態</h3>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest border border-border-subtle rounded-xl p-6 cursor-pointer hover:border-operational-blue transition-colors duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-cloud-surface text-operational-blue flex items-center justify-center mb-6 group-hover:bg-operational-blue group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2">DMS / iDMS</span>
+<h3 class="font-title-md text-title-md text-on-surface">派單、取餐與異常</h3>
+</div>
+<!-- Card 4 -->
+<div class="group bg-surface-container-lowest border border-border-subtle rounded-xl p-6 cursor-pointer hover:border-operational-blue transition-colors duration-300 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-cloud-surface text-operational-blue flex items-center justify-center mb-6 group-hover:bg-operational-blue group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2">CDBI / Finance Center</span>
+<h3 class="font-title-md text-title-md text-on-surface">渠道報表與對賬差異</h3>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-cloud-surface border-t border-border-subtle">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-[1280px] mx-auto gap-8">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface">
+                餐道
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">首頁</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">解決方案</a>
+<a class="text-primary font-body-md text-body-md" href="#">平台</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">整合能力</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">客戶案例</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">資源</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#">關於餐道</a>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">
+                © 餐道國際｜餐飲與零售 O2O 營運中樞
+            </div>
+</div>
+</footer>
+<style>
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -24;
+            }
+        }
+    </style>
+</body></html>

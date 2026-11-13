@@ -1,0 +1,14 @@
+{
+  "suite": "domain-copy-brand-display-failure-2026-08-15",
+  "items": [
+    {
+      "id": "zh-brand-display-candao",
+      "locale": "zh-Hant",
+      "component_type": "page_title",
+      "role": "决策者",
+      "page_task": "建立品牌认知",
+      "text": "Candao 連接多平台外賣訂單、門店接單與配送狀態。",
+      "must_include": ["餐道", "多平台", "門店", "配送"]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAPPO 微官网自然摄影方向评审</title>
+    <style>
+      :root {
+        --bg: #fff9f5;
+        --text: #211815;
+        --muted: #756b67;
+        --line: rgba(33, 24, 21, 0.12);
+        --primary: #ff6f91;
+        --card: rgba(255, 255, 255, 0.78);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 12% 78%, rgba(255, 143, 94, 0.12), transparent 34%),
+          radial-gradient(circle at 82% 18%, rgba(255, 111, 145, 0.14), transparent 30%),
+          var(--bg);
+        color: var(--text);
+        font-family: "OPPO Sans 4.0", "OPPO Sans", "PingFang SC", system-ui, sans-serif;
+        letter-spacing: 0;
+      }
+
+      main {
+        width: min(1120px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 32px 0 48px;
+      }
+
+      header {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(24px, 4vw, 38px);
+        line-height: 1.16;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .tag {
+        display: inline-flex;
+        width: fit-content;
+        border-radius: 999px;
+        background: rgba(255, 111, 145, 0.12);
+        color: var(--primary);
+        padding: 6px 10px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(300px, 430px) minmax(280px, 1fr);
+        gap: 24px;
+        align-items: start;
+      }
+
+      .phone {
+        overflow: hidden;
+        margin: 0;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 24px 80px rgba(92, 52, 44, 0.16);
+      }
+
+      .phone img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .panel {
+        display: grid;
+        gap: 16px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--card);
+        padding: 18px;
+        box-shadow: 0 18px 50px rgba(92, 52, 44, 0.08);
+        backdrop-filter: blur(18px);
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      code {
+        border-radius: 6px;
+        background: rgba(33, 24, 21, 0.06);
+        padding: 2px 5px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      @media (max-width: 840px) {
+        main {
+          width: min(430px, calc(100vw - 24px));
+          padding-top: 20px;
+        }
+
+        .layout {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="tag">Tappo Pulse / Natural Photo Direction</span>
+        <h1>TAPPO 微官网后续方向：清新自然、真实摄影感</h1>
+        <p>
+          这版以 Lovable 旧预览 <code>1178098f</code> 作为更接近目标的风格参考。上一批厚重、电影感、轻 3D 的 Image2 方向不再作为当前目标。
+        </p>
+      </header>
+
+      <section class="layout">
+        <figure class="phone">
+          <img
+            src="./microsite-natural-style-review/old-preview-1178098f-clean-crop-2026-07-07.png"
+            alt="Lovable 1178098f 旧版预览清新自然风格参考"
+          />
+        </figure>
+
+        <aside class="panel">
+          <section class="card">
+            <h2>保留的方向</h2>
+            <ul>
+              <li>浅色背景、暖白/轻粉调性，整体更清新自然。</li>
+              <li>真实食物摄影感，细节可信，不追求厚重大片感。</li>
+              <li>白色轻卡片、柔和阴影、清晰层级和足够留白。</li>
+              <li>首屏仍有品牌记忆点，但文案由 UI 组件承载。</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>需要避免</h2>
+            <ul>
+              <li>不要 CGI、3D 渲染、塑料光泽、过度锐化或过度景深。</li>
+              <li>不要深色电影光、烟雾感、强反光和过度戏剧化餐厅氛围。</li>
+              <li>不要把文字、评分、品牌名或假 logo 烧进图片。</li>
+              <li>入口图标不再优先使用重 3D 物件图。</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>范围仍不变</h2>
+            <ul>
+              <li>首页保留点餐/电子菜单入口和订座预约入口。</li>
+              <li><code>/menu</code> 只做轻量空状态，不做菜单内容页。</li>
+              <li><code>/booking</code> 保留预约表单、校验、成功弹窗和离开确认。</li>
+              <li>主题 token 继续支持主色/主色透明度、辅助深色/深色透明度。</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Figma 同步建议</h2>
+            <ul>
+              <li>优先把 Lovable 原始图片资产上传到 Figma，而不是整页截图。</li>
+              <li>整页截图只作为风格参考；UI 应在 Figma 中重建为可编辑结构。</li>
+              <li>可用 Figma MCP <code>upload_assets</code> 上传 PNG/JPG/WebP。</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

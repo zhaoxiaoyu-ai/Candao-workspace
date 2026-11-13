@@ -30,9 +30,10 @@ When finished, update:
 
 | Project | Workspace path | Source root |
 | --- | --- | --- |
+| 餐道国际官网重构 | `projects/candao-international-website/` | `projects/candao-international-website/source/` |
 | COMS Design System | `projects/coms/` | `projects/coms/source/` |
 | Design Agent | `projects/design-agent/` | `projects/design-agent/source/` |
-| Tappo Phone | `projects/tappo-phone/` | `projects/tappo-phone/source/` |
+| TAPPO product group: Tappo Station / Tappo Pulse / Tappo MOS / Tappo微官网 | `projects/tappo-phone/` | `projects/tappo-phone/source/` |
 | XD to Figma Converter | `projects/xd-to-figma-converter/` | `projects/xd-to-figma-converter/source/` |
 
 ## Isolation Rule

@@ -1,0 +1,72 @@
+{
+  "suite": "t28-stitch-ready-visible-copy-after-elements",
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t28-visible-index",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-visible-home",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-visible-solutions",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-visible-platform",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-visible-integrations",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-visible-customers",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-visible-resources",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-visible-about",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t28-visible-demo",
+      "component_type": "prototype_block",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

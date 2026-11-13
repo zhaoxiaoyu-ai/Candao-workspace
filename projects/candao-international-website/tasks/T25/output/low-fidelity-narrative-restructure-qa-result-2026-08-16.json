@@ -1,0 +1,93 @@
+{
+  "suite": "t25-low-fidelity-narrative-restructure-2026-08-16",
+  "total": 12,
+  "passed": 12,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "home-hero-restructured",
+      "component_type": "page_hero",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "home-complexity-map-restructured",
+      "component_type": "ecosystem_map",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "home-authority-snapshot",
+      "component_type": "metric_cards",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "home-operating-loop-specific",
+      "component_type": "workflow",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "home-capability-overview",
+      "component_type": "capability_overview",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "solutions-cta",
+      "component_type": "cta_group",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform-capability-map-interactive",
+      "component_type": "capability_map",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform-delivery-tab",
+      "component_type": "capability_tab",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "platform-video-entry",
+      "component_type": "video_entry",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "integrations-cta",
+      "component_type": "cta_group",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "about-company-rewritten",
+      "component_type": "company_profile",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "about-service-delivery",
+      "component_type": "service_system",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

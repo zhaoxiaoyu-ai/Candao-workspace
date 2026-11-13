@@ -1,0 +1,51 @@
+{
+  "suite": "T49 interactive workbench prototype domain-copy QA",
+  "total": 6,
+  "passed": 6,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "t49-hero-interactive-positioning",
+      "component_type": "hero",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t49-system-workbench",
+      "component_type": "product_workbench",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t49-scenario-states",
+      "component_type": "state_panel",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t49-case-resource-router",
+      "component_type": "tabs",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t49-authorized-metrics",
+      "component_type": "metrics_band",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "t49-demo-summary",
+      "component_type": "cta_summary",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

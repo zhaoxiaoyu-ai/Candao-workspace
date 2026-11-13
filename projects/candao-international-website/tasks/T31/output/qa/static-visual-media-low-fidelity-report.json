@@ -1,0 +1,102 @@
+{
+  "suite": "T31 visual media low-fidelity static QA",
+  "status": "pass",
+  "css_failures": [],
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "results": [
+    {
+      "page": "index.html",
+      "status": "pass",
+      "failures": [],
+      "visuals_checked": [
+        "stage-motion",
+        "page-preview"
+      ]
+    },
+    {
+      "page": "home.html",
+      "status": "pass",
+      "failures": [],
+      "visuals_checked": [
+        "stage-motion",
+        "product-shot-frame",
+        "photo-scene",
+        "motion-strip"
+      ]
+    },
+    {
+      "page": "solutions.html",
+      "status": "pass",
+      "failures": [],
+      "visuals_checked": [
+        "concept-illustration",
+        "motion-strip",
+        "flow-board"
+      ]
+    },
+    {
+      "page": "platform.html",
+      "status": "pass",
+      "failures": [],
+      "visuals_checked": [
+        "product-shot-frame",
+        "video-thumb",
+        "stage-motion"
+      ]
+    },
+    {
+      "page": "integrations.html",
+      "status": "pass",
+      "failures": [],
+      "visuals_checked": [
+        "concept-illustration",
+        "motion-strip",
+        "connector-flow"
+      ]
+    },
+    {
+      "page": "customers.html",
+      "status": "pass",
+      "failures": [],
+      "visuals_checked": [
+        "photo-scene",
+        "product-shot-frame",
+        "motion-strip",
+        "metric-chart"
+      ]
+    },
+    {
+      "page": "resources.html",
+      "status": "pass",
+      "failures": [],
+      "visuals_checked": [
+        "motion-strip",
+        "photo-scene",
+        "product-shot-frame",
+        "route-media-grid"
+      ]
+    },
+    {
+      "page": "about.html",
+      "status": "pass",
+      "failures": [],
+      "visuals_checked": [
+        "photo-scene",
+        "cert-tile",
+        "office-network"
+      ]
+    },
+    {
+      "page": "demo.html",
+      "status": "pass",
+      "failures": [],
+      "visuals_checked": [
+        "product-shot-frame",
+        "motion-strip",
+        "demo-summary-card"
+      ]
+    }
+  ]
+}

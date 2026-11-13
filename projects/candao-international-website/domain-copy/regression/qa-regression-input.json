@@ -1,0 +1,85 @@
+{
+  "suite": "domain-copy-regression-2026-08-15",
+  "items": [
+    {
+      "id": "metric-card-brands",
+      "component_type": "metric_card",
+      "role": "决策者",
+      "page_task": "证明规模与可信",
+      "text": "品牌数量：5000+。来源：PPT Slide 11。用于说明餐道已服务的餐飲與零售 O2O 品牌规模。",
+      "must_include": ["品牌数量", "5000+", "PPT Slide 11", "餐飲與零售 O2O"]
+    },
+    {
+      "id": "business-overview",
+      "component_type": "business_overview",
+      "role": "总部运营",
+      "page_task": "说明当前营运状态",
+      "text": "今日多平台外卖订单集中进入 OMS；总部可按渠道、门店、订单状态和异常类型查看待处理事项，并进入 CDBI 查看报表趋势。",
+      "must_include": ["多平台", "OMS", "渠道", "门店", "订单状态", "异常", "CDBI"]
+    },
+    {
+      "id": "order-list",
+      "component_type": "table",
+      "role": "门店经理",
+      "page_task": "处理多渠道订单",
+      "text": "表格字段：订单编号、渠道、门店、订单状态、配送状态、异常类型、更新时间、下一步操作。",
+      "must_include": ["订单编号", "渠道", "门店", "订单状态", "配送状态", "异常类型", "下一步操作"]
+    },
+    {
+      "id": "exception-alert",
+      "component_type": "alert",
+      "role": "配送主管",
+      "page_task": "处理异常",
+      "text": "门店 A 有 3 张外卖订单接单超时超过 5 分钟，可能影响出餐与配送。请通知门店接单或改由运营人员处理。",
+      "must_include": ["门店", "外卖订单", "接单超时", "5 分钟", "影响", "处理"]
+    },
+    {
+      "id": "demo-form-description",
+      "component_type": "form_help",
+      "role": "采购方",
+      "page_task": "分流 Demo",
+      "text": "请留下品牌、地区、门店规模、当前使用的外卖平台与 POS 系统，以及需要解决的问题。我们会根据场景安排 OMS、DMS、iDMS 或 CDBI 演示。",
+      "must_include": ["品牌", "地区", "门店规模", "外卖平台", "POS", "OMS", "DMS", "iDMS", "CDBI"]
+    },
+    {
+      "id": "operation-confirm",
+      "component_type": "confirm_dialog",
+      "role": "配送主管",
+      "page_task": "确认高影响操作",
+      "text": "确定要将这批配送中订单转派第三方配送？转派后，系统会更新配送状态并保留原骑手派单记录。",
+      "must_include": ["配送中订单", "转派第三方配送", "配送状态", "派单记录"]
+    },
+    {
+      "id": "empty-state",
+      "component_type": "empty_state",
+      "role": "门店经理",
+      "page_task": "解释没有数据",
+      "text": "目前没有待处理异常订单。若门店接单超时、退款未处理或配送状态中断，系统会在此显示。",
+      "must_include": ["异常订单", "接单超时", "退款未处理", "配送状态"]
+    },
+    {
+      "id": "dashboard-title",
+      "component_type": "chart_title",
+      "role": "管理层",
+      "page_task": "看经营趋势和异常",
+      "text": "各平台订单量与门店接单状态，按今日时段统计，用于查看高峰订单和异常分布。",
+      "must_include": ["平台订单量", "门店接单状态", "今日", "异常"]
+    },
+    {
+      "id": "consumer-progress",
+      "component_type": "progress_message",
+      "role": "顾客",
+      "page_task": "说明配送进度",
+      "text": "订单已接单，门店正在制作。骑手取餐后会进入配送中，如配送超时，系统会更新提醒。",
+      "must_include": ["已接单", "制作", "骑手取餐", "配送中", "配送超时"]
+    },
+    {
+      "id": "admin-backend",
+      "component_type": "admin_page",
+      "role": "IT",
+      "page_task": "配置系统和接入",
+      "text": "AMS / Connector 按系统类型配置 POS、KDS、CRM、ERP 与 API 数据流，并记录权限、字段和异常处理方式。",
+      "must_include": ["AMS / Connector", "系统类型", "POS", "KDS", "CRM", "ERP", "API", "权限", "异常处理"]
+    }
+  ]
+}

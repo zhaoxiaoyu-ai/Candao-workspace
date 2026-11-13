@@ -1,0 +1,51 @@
+{
+  "task_id": "T38",
+  "page": "Resources",
+  "locale": "zh-Hant",
+  "device_type": "DESKTOP",
+  "project_id": "10888304674441209287",
+  "design_system": "assets/a99f770bf474445d98b287cf983bc147",
+  "prompt_file": "tasks/T38/output/stitch-input/resources-hifi-generate-prompt-2026-08-20.md",
+  "generation": {
+    "tool": "generate_screen_from_text",
+    "model_id": "GEMINI_3_PRO",
+    "calls": 1,
+    "session_id": "15280406076998791054",
+    "returned_screen_id": null,
+    "output_components": []
+  },
+  "polling": {
+    "method": "list_screens",
+    "scheduled_poll_count": 10,
+    "interval_seconds": 30,
+    "new_resources_screen_found": false,
+    "post_resume_current_state_check": "2026-08-20 list_screens still only shows historical Resources screens; no T38 Resources screen was available to download or QA.",
+    "historical_resources_screens_observed": [
+      {
+        "screen_id": "d2b440264f1d435e99052f430177c868",
+        "title": "C v3 / 資源 - Candao International / Desktop TC / 模組化修正版",
+        "reason_not_used": "Historical C v3 output; not generated from the T38 prompt. Candao in an internal or canvas title is a fixable naming issue, not the primary blocker."
+      },
+      {
+        "screen_id": "068558a8cbbc4e85b368a7ae8d6f8225",
+        "title": "C v3 / 資源 - Candao International / Desktop TC",
+        "reason_not_used": "Historical C v3 output; not generated from the T38 prompt. Candao in an internal or canvas title is a fixable naming issue, not the primary blocker."
+      },
+      {
+        "screen_id": "efd66e8cb18442fb843910ab6ffb863f",
+        "title": "C v3 / 資源 - Candao International / Desktop TC / Fixed",
+        "reason_not_used": "Historical C v3 output; not generated from the T38 prompt. Candao in an internal or canvas title is a fixable naming issue, not the primary blocker."
+      }
+    ]
+  },
+  "formal_output": {
+    "html_generated": false,
+    "screenshot_generated": false,
+    "qa_run": false,
+    "metadata_updated": false,
+    "registered_in_design_handoff": false
+  },
+  "decision": "blocked",
+  "blocked_reason": "Stitch returned a generation session but did not write back a new Resources screen after the scheduled polling window. Without a new screen, there is no authoritative HTML or target image to download, QA, or register as formal high-fidelity output.",
+  "checked_at": "2026-08-20"
+}

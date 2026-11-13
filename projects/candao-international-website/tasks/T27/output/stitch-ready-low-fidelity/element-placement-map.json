@@ -1,0 +1,501 @@
+{
+  "version": "2026-08-19",
+  "package": "stitch-ready-low-fidelity",
+  "purpose": "Define visual element placement for Stitch high-fidelity generation without changing the low-fidelity business story.",
+  "locale": "zh-Hant",
+  "status": "ready_for_stitch_input",
+  "global_rules": {
+    "visible_brand_zh": "餐道",
+    "language": "Traditional Chinese",
+    "do_not_display_bilingual_content": true,
+    "language_switch": "繁中 / EN",
+    "protected_terms": [
+      "iDMS",
+      "SaaS",
+      "AMS / Connector",
+      "OMS",
+      "COMS",
+      "SOMS",
+      "CDBI",
+      "DMS",
+      "Menu Center",
+      "財務對賬",
+      "Data Asset"
+    ],
+    "real_asset_required": [
+      "product_screenshot",
+      "product_video",
+      "customer_logo",
+      "customer_photography",
+      "company_photography",
+      "certificate_image",
+      "customer_quote_image"
+    ],
+    "abstract_elements_allowed": [
+      "operational_topology",
+      "scenario_flow",
+      "connector_network",
+      "low_fidelity_product_stage",
+      "resource_router",
+      "form_summary",
+      "timeline",
+      "metric_layout",
+      "support_ticket_board"
+    ],
+    "forbidden_generation": [
+      "fake_product_ui",
+      "fake_dashboard_data",
+      "fake_customer_logo",
+      "unconfirmed_metric",
+      "unconfirmed_sla",
+      "unconfirmed_partner_status",
+      "generic_saas_card_wall",
+      "text_transform_for_case_sensitive_terms"
+    ]
+  },
+  "usage_order": [
+    "Open the page HTML first.",
+    "Read the matching page modules in this JSON.",
+    "Apply required elements without rewriting business meaning.",
+    "Use fallback when a real asset is missing.",
+    "Do not invent real-looking assets or unsupported facts."
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "title": "首頁",
+      "file": "home.html",
+      "story_role": "建立餐道认知，并把访客导向平台能力、客户案例和预约演示。",
+      "modules": [
+        {
+          "id": "home-header",
+          "section": "Header",
+          "required_elements": ["logo", "primary_navigation", "language_switch", "demo_cta"],
+          "placement": "顶部横向导航；Logo 左侧，导航居中，语言切换与预约演示按钮右侧。",
+          "asset_status": "logo_ready",
+          "fallback": "无",
+          "forbidden": ["use_non_zh_brand_display", "remove_language_switch"]
+        },
+        {
+          "id": "home-hero",
+          "section": "Hero",
+          "required_elements": ["headline_block", "dual_cta", "product_stage", "status_rows"],
+          "placement": "左侧文案与双 CTA；右侧产品舞台展示订单、门店、配送、对账状态。",
+          "asset_status": "product_screenshot_missing",
+          "fallback": "使用低保真状态面板，不出现虚构订单编号、客户名、金额或看似真实的后台数据。",
+          "forbidden": ["fake_product_ui", "generic_office_illustration", "unconfirmed_dashboard_data"]
+        },
+        {
+          "id": "home-hub",
+          "section": "營運中樞",
+          "required_elements": ["operational_topology", "central_platform_node", "business_object_nodes"],
+          "placement": "中心为餐道營運中樞；外围为外卖平台、自有点餐、POS / KDS、CRM / 会员、配送、支付 / ERP、财务数据。",
+          "asset_status": "abstract_allowed",
+          "fallback": "使用节点与连线表达资料回到营运链路。",
+          "forbidden": ["product_catalog", "decorative_network_without_business_objects"]
+        },
+        {
+          "id": "home-capability-explorer",
+          "section": "能力探索器",
+          "required_elements": ["five_item_rail", "detail_media", "two_business_points", "platform_cta"],
+          "placement": "左 rail 选择能力；右侧展示当前能力的媒体区、业务对象说明和 CTA。",
+          "asset_status": "product_screenshot_missing",
+          "fallback": "保留媒体区，用业务对象和状态说明代替真实截图。",
+          "forbidden": ["equal_feature_card_grid", "rewrite_capability_names"]
+        },
+        {
+          "id": "home-metrics",
+          "section": "服務規模",
+          "required_elements": ["metric_cards"],
+          "placement": "六个指标卡横向或两列布局，保留指标名和值。",
+          "asset_status": "source_backed_metrics",
+          "allowed_values": ["5000+", "500M+", "400+", "200K+", "4.5B+", "30% up"],
+          "fallback": "不适用。",
+          "forbidden": ["new_metric", "metric_rewrite", "sla_claim"]
+        },
+        {
+          "id": "home-case-preview",
+          "section": "客戶案例摘要",
+          "required_elements": ["featured_case_card", "named_customer_text", "case_cta"],
+          "placement": "左侧案例引导，右侧案例摘要卡；客户 Logo 缺失时只显示客户名称文字。",
+          "asset_status": "customer_logo_needs_cleanup",
+          "fallback": "使用 Pizza-Box、JIA Group 等客户名称文字，不生成 Logo。",
+          "forbidden": ["fake_customer_logo", "anonymous_only_case_template"]
+        },
+        {
+          "id": "home-final-cta",
+          "section": "CTA",
+          "required_elements": ["dark_conversion_band", "demo_cta", "platform_cta"],
+          "placement": "底部深色转化带，保留预约演示和查看平台能力两个方向。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["vague_cta_only"]
+        }
+      ]
+    },
+    {
+      "id": "solutions",
+      "title": "解決方案",
+      "file": "solutions.html",
+      "story_role": "让访客按餐饮 O2O 营运问题确认场景，而不是在本页阅读产品说明书。",
+      "modules": [
+        {
+          "id": "solutions-hero",
+          "section": "Hero",
+          "required_elements": ["scenario_map", "converging_flow", "dual_cta"],
+          "placement": "右侧用分散渠道汇聚到营运链路的流程图，左侧讲场景选择。",
+          "asset_status": "abstract_allowed",
+          "fallback": "使用流程图，不需要真实产品截图。",
+          "forbidden": ["product_grid_hero", "generic_value_statement"]
+        },
+        {
+          "id": "solutions-problems",
+          "section": "常見營運問題",
+          "required_elements": ["three_problem_cards", "business_object_icons"],
+          "placement": "三张卡分别对应多平台订单、门店与餐单、配送与对账。",
+          "asset_status": "ready",
+          "fallback": "使用简洁图标和业务对象标签。",
+          "forbidden": ["generic_benefit_cards", "remove_business_objects"]
+        },
+        {
+          "id": "solutions-scenario-explorer",
+          "section": "場景導覽",
+          "required_elements": ["six_item_rail", "scenario_detail_panel", "problem_capability_result_flow", "case_cta"],
+          "placement": "左侧六项场景 rail；右侧包含场景标题、说明、场景链路、承接产品、下一步。",
+          "asset_status": "scenario_visual_missing",
+          "fallback": "用三段式问题-能力-结果链路表达。",
+          "forbidden": ["product_manual_layout", "unconfirmed_outcome_metric"]
+        },
+        {
+          "id": "solutions-case-routing",
+          "section": "案例入口",
+          "required_elements": ["customer_case_cta", "scenario_to_case_hint"],
+          "placement": "当前场景可导向客户案例，不在 Solutions 展开完整案例。",
+          "asset_status": "ready",
+          "fallback": "使用按钮和简短说明。",
+          "forbidden": ["duplicate_full_customer_page", "fake_customer_logo"]
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "title": "平台",
+      "file": "platform.html",
+      "story_role": "说明餐道产品如何承接业务对象、状态、操作和下一步。",
+      "modules": [
+        {
+          "id": "platform-hero",
+          "section": "Hero",
+          "required_elements": ["product_stage", "status_rows", "dual_cta"],
+          "placement": "右侧状态面板展示 OMS 订单队列、Menu Center 售罄、DMS 派单。",
+          "asset_status": "product_screenshot_missing",
+          "fallback": "使用低保真状态面板，不重画真实产品 UI。",
+          "forbidden": ["fake_product_ui", "rewrite_product_names"]
+        },
+        {
+          "id": "platform-capability-map",
+          "section": "產品能力地圖",
+          "required_elements": ["six_item_rail", "product_media_slot", "business_object_list", "status_action_list", "product_mapping", "demo_cta"],
+          "placement": "左侧能力 rail；右侧产品画面、标题、说明、业务对象、状态 / 操作、对应产品和 CTA。",
+          "asset_status": "product_screenshot_missing",
+          "fallback": "保留产品画面区域与业务对象列表。",
+          "forbidden": ["remove_status_and_exception", "generic_feature_grid"]
+        },
+        {
+          "id": "platform-demo-entry",
+          "section": "產品演示入口",
+          "required_elements": ["video_or_screenshot_cards"],
+          "placement": "卡片或 Carousel 至少包含 OMS、Menu / Store、DMS / iDMS、CDBI / 財務對賬。",
+          "asset_status": "product_video_missing",
+          "fallback": "保留演示入口卡，不生成视频封面或假产品影片。",
+          "forbidden": ["fake_video_thumbnail", "drop_cdbi_finance"]
+        },
+        {
+          "id": "platform-final-cta",
+          "section": "CTA",
+          "required_elements": ["demo_cta", "integration_cta", "customer_cta"],
+          "placement": "底部三按钮分流到 Demo、Integrations、Customers。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["single_vague_cta"]
+        }
+      ]
+    },
+    {
+      "id": "integrations",
+      "title": "整合能力",
+      "file": "integrations.html",
+      "story_role": "让 IT 和运营团队验证接入对象、资料流和异常边界。",
+      "modules": [
+        {
+          "id": "integrations-hero",
+          "section": "Hero",
+          "required_elements": ["connector_network", "dual_cta"],
+          "placement": "右侧 Connector 网络图连接外卖平台、自建入口、POS / KDS、CRM、支付 / ERP、配送 API。",
+          "asset_status": "abstract_allowed",
+          "fallback": "使用系统节点拓扑图。",
+          "forbidden": ["all_systems_supported_claim", "unconfirmed_partner_status"]
+        },
+        {
+          "id": "integrations-switcher",
+          "section": "接入對象",
+          "required_elements": ["six_item_rail", "data_object_list", "suitable_context", "assessment_cta"],
+          "placement": "左侧系统类型 rail；右侧显示资料对象、适合情境和接入评估按钮。",
+          "asset_status": "ready",
+          "fallback": "使用文字和标签组。",
+          "forbidden": ["seamless_integration_claim", "invent_api_status"]
+        },
+        {
+          "id": "integrations-data-flow",
+          "section": "資料流向",
+          "required_elements": ["external_system_node", "connector_node", "destination_nodes"],
+          "placement": "以三段式表达外部系统 -> AMS / Connector -> OMS / Data Asset / 財務對賬 / DMS。",
+          "asset_status": "abstract_allowed",
+          "fallback": "使用低保真流向图。",
+          "forbidden": ["fake_latency", "fake_success_rate"]
+        }
+      ]
+    },
+    {
+      "id": "customers",
+      "title": "客戶案例",
+      "file": "customers.html",
+      "story_role": "用授权规模数据、实名客户和业态成果建立可信。",
+      "modules": [
+        {
+          "id": "customers-hero",
+          "section": "Hero",
+          "required_elements": ["case_story_intro"],
+          "placement": "首屏聚焦不同业态如何改善订单、配送与数据营运。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["generic_testimonial_wall"]
+        },
+        {
+          "id": "customers-metrics",
+          "section": "服務規模",
+          "required_elements": ["metric_cards"],
+          "placement": "六个授权指标卡，Customers 是主要证明场景。",
+          "asset_status": "source_backed_metrics",
+          "allowed_values": ["5000+", "500M+", "400+", "200K+", "4.5B+", "30% up"],
+          "fallback": "不适用。",
+          "forbidden": ["new_metric", "metric_rewrite"]
+        },
+        {
+          "id": "customers-named-cases",
+          "section": "實名案例",
+          "required_elements": ["customer_rail", "case_detail_card", "case_scope", "case_next_step"],
+          "placement": "左侧客户切换，右侧显示客户名称、合作范围、导入后变化和下一步。",
+          "asset_status": "customer_logo_needs_cleanup",
+          "fallback": "使用客户名称文字，不生成 Logo。",
+          "forbidden": ["fake_customer_logo", "replace_named_customer_with_generic_case"]
+        },
+        {
+          "id": "customers-industry-outcomes",
+          "section": "業態成果",
+          "required_elements": ["industry_result_cards", "authorized_metrics"],
+          "placement": "多业态卡片保留行业、产品关系和授权指标。",
+          "asset_status": "source_backed_metrics",
+          "fallback": "使用卡片和趋势数字。",
+          "forbidden": ["invent_new_case_metric", "remove_before_after_data"]
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": "資源",
+      "file": "resources.html",
+      "story_role": "按评估、导入、日常营运和技术查询降低疑问。",
+      "modules": [
+        {
+          "id": "resources-hero",
+          "section": "Hero",
+          "required_elements": ["resource_router", "stage_cards"],
+          "placement": "右侧资源路径卡显示评估中、导入中、日常营运。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["blog_homepage_layout"]
+        },
+        {
+          "id": "resources-stage-qa",
+          "section": "問題階段",
+          "required_elements": ["stage_rail", "qa_panel", "support_cta"],
+          "placement": "左 rail 切换阶段；右侧显示当前阶段的 Q&A 与支援或查詢 CTA。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["generic_faq_without_next_action"]
+        },
+        {
+          "id": "resources-access-checklist",
+          "section": "接入準備清單",
+          "required_elements": ["system_object_board"],
+          "placement": "用四列看板展示渠道与入口、门店系统、企业资料、AMS / Connector。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["all_systems_supported_claim"]
+        },
+        {
+          "id": "resources-faq",
+          "section": "營運 FAQ",
+          "required_elements": ["operation_question_cards"],
+          "placement": "以多平台订单、餐单同步、财务对账组织问题。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["generic_help_center_copy"]
+        },
+        {
+          "id": "resources-case-map",
+          "section": "案例資源",
+          "required_elements": ["industry_map"],
+          "placement": "用业态入口导向 Customers。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["fake_customer_icons"]
+        },
+        {
+          "id": "resources-support-board",
+          "section": "支援中心",
+          "required_elements": ["support_ticket_board"],
+          "placement": "支援查询板必须显示问题类型、相关系统、业务对象、可见异常。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["replace_exception_with_system_issue"]
+        },
+        {
+          "id": "resources-media-shelf",
+          "section": "媒體與公司資料",
+          "required_elements": ["media_shelf"],
+          "placement": "资料架显示公司资料、品牌资产、媒体联络。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["invent_news_title_or_date"]
+        },
+        {
+          "id": "resources-demo-routing",
+          "section": "產品演示分流",
+          "required_elements": ["routing_canvas", "demo_cta"],
+          "placement": "用业态、门店规模、现有系统、主要问题、演示模块组成路由画布。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["remove_routing_conditions"]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "title": "關於餐道",
+      "file": "about.html",
+      "story_role": "建立公司、产品演进、服务交付和长期合作可信。",
+      "modules": [
+        {
+          "id": "about-hero",
+          "section": "Hero",
+          "required_elements": ["company_network_map", "contact_cta"],
+          "placement": "右侧公司与服务网络图展示广州总部、香港、北京、上海、成都营运中心。",
+          "asset_status": "company_photography_missing",
+          "fallback": "使用网络图，不生成虚构办公室照片。",
+          "forbidden": ["fake_office_photo", "new_office_location"]
+        },
+        {
+          "id": "about-journey",
+          "section": "企業旅程",
+          "required_elements": ["timeline"],
+          "placement": "时间轴保留 2000、2003、2008、2014、2017、2020 及对应阶段。",
+          "asset_status": "source_backed",
+          "fallback": "无",
+          "forbidden": ["invent_new_year_event"]
+        },
+        {
+          "id": "about-service-switcher",
+          "section": "服務交付",
+          "required_elements": ["three_item_stage_switcher", "service_detail_list"],
+          "placement": "公司基础、产品演进、服务交付三项切换，右侧同步更新说明。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["brand_story_essay"]
+        },
+        {
+          "id": "about-product-capabilities",
+          "section": "產品與服務能力",
+          "required_elements": ["independent_capability_sections", "low_fidelity_ui_panels"],
+          "placement": "分别展示 OMS / COMS / SOMS、CDBI / 財務對賬、DMS / iDMS、AMS / Connector、Merchant Service / Helpdesk。",
+          "asset_status": "abstract_allowed",
+          "fallback": "使用低保真界面示意，不展示假产品数据。",
+          "forbidden": ["merge_all_products_into_single_generic_platform"]
+        },
+        {
+          "id": "about-service-lifecycle",
+          "section": "服務生命周期",
+          "required_elements": ["four_step_lifecycle"],
+          "placement": "导入、培训、营运支援、Helpdesk 四段流程。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["unconfirmed_response_time_claim"]
+        },
+        {
+          "id": "about-trust",
+          "section": "質量與可信",
+          "required_elements": ["certification_metric_band"],
+          "placement": "展示 ISO 27001、ISO 20000、500 Order/second、99.95% over。",
+          "asset_status": "source_backed_metrics",
+          "allowed_values": ["500 Order/second", "99.95%"],
+          "fallback": "没有证书图时使用文字指标带。",
+          "forbidden": ["99.99_percent_claim", "24_7_sla_claim"]
+        },
+        {
+          "id": "about-final-cta",
+          "section": "CTA",
+          "required_elements": ["demo_cta", "resources_cta"],
+          "placement": "底部导向预约产品演示和资源入口。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["generic_partnership_slogan"]
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "title": "預約產品演示",
+      "file": "demo.html",
+      "story_role": "把访客意图、品牌资料、现有系统和主要问题转成演示分流。",
+      "modules": [
+        {
+          "id": "demo-hero",
+          "section": "Hero",
+          "required_elements": ["demo_summary_card"],
+          "placement": "右侧演示需求摘要显示意图、推荐模块、提交后下一步。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["contact_us_only_copy"]
+        },
+        {
+          "id": "demo-intent",
+          "section": "聯絡意圖",
+          "required_elements": ["three_choice_cards"],
+          "placement": "产品演示、销售洽询、支援查询三张选择卡。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["single_undifferentiated_form_entry"]
+        },
+        {
+          "id": "demo-form",
+          "section": "品牌與系統現況",
+          "required_elements": ["field_grid", "submit_cta", "support_cta"],
+          "placement": "字段包含公司 / 品牌、地区、门店规模、角色、当前渠道、已使用系统、主要问题。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["remove_demo_routing_fields", "use_placeholder_as_final_copy"]
+        },
+        {
+          "id": "demo-module-summary",
+          "section": "演示模組摘要",
+          "required_elements": ["module_summary_panel"],
+          "placement": "摘要面板列出 OMS / COMS / SOMS、DMS / iDMS、CDBI / 財務對賬、AMS / Connector。",
+          "asset_status": "ready",
+          "fallback": "无",
+          "forbidden": ["rewrite_product_terms"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "suite": "t24-product-name-case-sensitive-positive-2026-08-15",
+  "total": 3,
+  "passed": 3,
+  "failed": 0,
+  "status": "pass",
+  "results": [
+    {
+      "id": "platform-idms-standard",
+      "component_type": "product_name",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "about-saas-standard",
+      "component_type": "service_name",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "id": "demo-routing-standard",
+      "component_type": "form_help",
+      "status": "pass",
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

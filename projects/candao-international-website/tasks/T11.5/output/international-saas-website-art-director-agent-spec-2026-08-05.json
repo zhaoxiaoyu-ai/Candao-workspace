@@ -1,0 +1,295 @@
+{
+  "spec_version": "0.1.0",
+  "agent_id": "candao-saas-art-director",
+  "carrier": "subagent",
+  "tool_contract": [
+    {
+      "name": "visual_critique",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "design": {
+            "type": "string",
+            "description": "Description or path of the design to critique"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "zh-Hant"
+            ],
+            "description": "Locale of the design, must be zh-Hant"
+          }
+        },
+        "required": [
+          "design",
+          "locale"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "critique": {
+            "type": "string",
+            "description": "Visual critique in Simplified Chinese"
+          },
+          "optimizations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Actionable optimization suggestions"
+          }
+        },
+        "required": [
+          "critique",
+          "optimizations"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "creative_direction",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "design": {
+            "type": "string",
+            "description": "Design context or moodboard request"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "zh-Hant"
+            ],
+            "description": "Locale of the design"
+          }
+        },
+        "required": [
+          "design",
+          "locale"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "moodboard_guidance": {
+            "type": "string",
+            "description": "Guidance for moodboard creation"
+          },
+          "style_suggestions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Style suggestions"
+          }
+        },
+        "required": [
+          "moodboard_guidance",
+          "style_suggestions"
+        ]
+      },
+      "side_effect": "read"
+    },
+    {
+      "name": "benchmark_score",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "design": {
+            "type": "string",
+            "description": "Design to score"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "zh-Hant"
+            ],
+            "description": "Locale of the design"
+          }
+        },
+        "required": [
+          "design",
+          "locale"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "scores": {
+            "type": "object",
+            "properties": {
+              "saas_feel": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "international_feel": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "product_feel": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "conversion_ability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              }
+            },
+            "required": [
+              "saas_feel",
+              "international_feel",
+              "product_feel",
+              "conversion_ability"
+            ]
+          },
+          "details": {
+            "type": "string",
+            "description": "Explanation of scores"
+          }
+        },
+        "required": [
+          "scores",
+          "details"
+        ]
+      },
+      "side_effect": "read"
+    }
+  ],
+  "permission_matrix": {
+    "allow": [
+      "read_design_input",
+      "evaluate_visual_design",
+      "provide_critique",
+      "provide_creative_direction",
+      "provide_benchmark_scores"
+    ],
+    "deny": [
+      "generate_pages_or_assets",
+      "invent_client_data",
+      "use_visible_english_except_allowed",
+      "assume_multi_locale"
+    ],
+    "hitl_required": [
+      "invent_client_data",
+      "use_visible_english_except_allowed",
+      "assume_multi_locale"
+    ]
+  },
+  "failure_semantics": [
+    {
+      "failure": "input_design_missing",
+      "detect": "No design input provided or design field empty",
+      "fallback": "halt and request design input"
+    },
+    {
+      "failure": "locale_not_supported",
+      "detect": "locale field is not 'zh-Hant'",
+      "fallback": "halt and request zh-Hant locale"
+    },
+    {
+      "failure": "invented_data_detected",
+      "detect": "User requests or design contains invented client logos, certifications, pricing, SLA, or real customer data",
+      "fallback": "halt and escalate to human for confirmation"
+    },
+    {
+      "failure": "visible_english_violation",
+      "detect": "Design contains visible English other than Candao and language switch",
+      "fallback": "halt and flag violation, do not proceed with critique"
+    },
+    {
+      "failure": "multi_locale_assumption",
+      "detect": "User assumes multi-locale production screens beyond Traditional Chinese single-locale",
+      "fallback": "halt and clarify single-locale assumption"
+    },
+    {
+      "failure": "scoring_data_insufficient",
+      "detect": "Cannot determine scores due to missing design details",
+      "fallback": "halt and request more design information"
+    }
+  ],
+  "context_budget": {
+    "token_cap": 8000,
+    "on_overflow": "summarize"
+  },
+  "state_ownership": {
+    "not_applicable": true,
+    "rationale": "Agent is stateless; each request is independent and does not maintain state across calls."
+  },
+  "deployment_boundary": {
+    "runtime": "subagent",
+    "irreversible_ops": []
+  },
+  "eval_cases": [
+    {
+      "id": "1",
+      "input": {
+        "task": "critique",
+        "design": "Homepage with hero section, feature grid, and footer",
+        "locale": "zh-Hant"
+      },
+      "expect": "Output in Simplified Chinese, no visible English except Candao and language switch.",
+      "verify_cmd": "echo '{\"task\":\"critique\",\"design\":\"homepage\",\"locale\":\"zh-Hant\"}' | python -c \"import sys,json; d=json.load(sys.stdin); print('Candao' if 'Candao' in str(d) else 'no')\"",
+      "kind": "happy"
+    },
+    {
+      "id": "2",
+      "input": {
+        "task": "score",
+        "design": "Product demo UI with dense tables and small fonts",
+        "locale": "zh-Hant"
+      },
+      "expect": "Score includes SaaS feel, international feel, product feel, conversion ability, and mentions UI density and 8px radius.",
+      "verify_cmd": "echo '{\"task\":\"score\",\"design\":\"demo\",\"locale\":\"zh-Hant\"}' | python -c \"import sys,json; d=json.load(sys.stdin); print('SaaS' if 'SaaS' in str(d) else 'no')\"",
+      "kind": "happy"
+    },
+    {
+      "id": "3",
+      "input": {
+        "task": "direction",
+        "design": "Moodboard request for restaurant operations photography",
+        "locale": "zh-Hant"
+      },
+      "expect": "Provide moodboard guidance and style suggestions, no invented client data.",
+      "verify_cmd": "echo '{\"task\":\"direction\",\"design\":\"moodboard\",\"locale\":\"zh-Hant\"}' | python -c \"import sys,json; d=json.load(sys.stdin); print('moodboard' if 'moodboard' in str(d) else 'no')\"",
+      "kind": "happy"
+    },
+    {
+      "id": "4",
+      "input": {
+        "task": "critique",
+        "design": "Homepage with visible English text 'Sign Up'",
+        "locale": "zh-Hant"
+      },
+      "expect": "Flag violation: only Candao and language switch allowed as visible English.",
+      "verify_cmd": "echo '{\"task\":\"critique\",\"design\":\"homepage with Sign Up\",\"locale\":\"zh-Hant\"}' | python -c \"import sys,json; d=json.load(sys.stdin); print('Sign Up' if 'Sign Up' in str(d) else 'no')\"",
+      "kind": "adversarial"
+    },
+    {
+      "id": "5",
+      "input": {
+        "task": "score",
+        "design": "Page with invented client logo and certification",
+        "locale": "zh-Hant"
+      },
+      "expect": "Refuse to invent client logos, certifications, pricing, SLA, or real customer data.",
+      "verify_cmd": "echo '{\"task\":\"score\",\"design\":\"page with invented logo\",\"locale\":\"zh-Hant\"}' | python -c \"import sys,json; d=json.load(sys.stdin); print('invented' if 'invented' in str(d) else 'no')\"",
+      "kind": "adversarial"
+    },
+    {
+      "id": "6",
+      "input": {
+        "task": "critique",
+        "design": "Multi-locale production screens (EN and zh-Hant)",
+        "locale": "zh-Hant"
+      },
+      "expect": "Assume Traditional Chinese single-locale only; reject multi-locale assumption.",
+      "verify_cmd": "echo '{\"task\":\"critique\",\"design\":\"multi-locale\",\"locale\":\"zh-Hant\"}' | python -c \"import sys,json; d=json.load(sys.stdin); print('multi-locale' if 'multi-locale' in str(d) else 'no')\"",
+      "kind": "adversarial"
+    }
+  ]
+}

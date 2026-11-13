@@ -2,8 +2,14 @@
 
 - Follow `E:\Projects\Candao-workspace\AGENTS.md`.
 - Treat `E:\Projects\Candao-workspace\projects\tappo-phone\source` as the source root.
-- Default all Tappo Phone project outputs to Simplified Chinese. Use English only when required for code, file paths, URLs, Figma nodes, tokens, CSS variables, commands, APIs, library/plugin/skill names, or source-preserved product copy.
-- 产出审核与可视化交付是长期硬性要求。所有 Tappo Phone 产出必须清晰可见、可直接打开、可顺利人工评审；不能只留下不可见的内部说明、零散提示词、裸路径或无入口文件。
+- Treat this folder as the TAPPO product-group record. The product names must follow the matching Figma project/file names.
+- Use this naming map: `Tappo App / Tappo app / Tappo Pad / Tappo pad / TAPPO POS / Tappo POS = Tappo Station`; `Tappo phone = Tappo Pulse`; `MOS = Tappo MOS`; `微官网 = Tappo微官网`.
+- `Tappo Phone` is legacy wording for `Tappo Pulse` and must not be used as the overall project name in new work.
+- When a Figma file is involved, route the work by the Figma project/file name first, not by a guessed endpoint label.
+- If an endpoint's official name is unclear, record it as `待确认` instead of inventing or merging names.
+- Keep `projects/tappo-phone/` as a legacy technical path unless the user explicitly approves a filesystem migration.
+- Default all TAPPO product-group outputs to Simplified Chinese. Use English only when required for code, file paths, URLs, Figma nodes, tokens, CSS variables, commands, APIs, library/plugin/skill names, or source-preserved product copy.
+- 产出审核与可视化交付是长期硬性要求。所有 TAPPO 相关产出必须清晰可见、可直接打开、可顺利人工评审；不能只留下不可见的内部说明、零散提示词、裸路径或无入口文件。
 - 每次产出必须明确写出：评审入口、评审对象、变更范围、通过标准、下一步动作。文档类产出必须有清晰标题、范围、决策、检查表和关联文件路径。
 - 视觉、UI、Figma、图标、插画、资产类产出必须提供可直接打开的可视化载体，例如截图、评审图、Figma 节点、本地预览 URL、`assets-review/` 索引、HTML 样张页面或图片预览页。
 - 视觉资产评审目录必须使用“当前内容”和“历史归档”分离机制：`assets-review/current-review.html` 是唯一稳定入口，`assets-review/current/` 只放当前可评审内容，旧版本和被替代版本必须移入 `assets-review/_archive/<date>-<reason>/`，不能长期平铺在顶层目录。
@@ -12,11 +18,11 @@
 - 每次在对话中交付视觉、UI、图标、插画或资产评审结果时，最终回复必须提供可点击的 Markdown 文件链接，优先指向 `assets-review/current-review.html`、`assets-review/current/index.html` 和 `assets-review/current/preview.html`；如需提供 PNG，必须同时提供 `preview.html` 作为可点击包装页，不能只给图片直链；同时提供可复制的相对路径代码块。
 - 如果产出暂时无法形成可视化评审物，必须在 `tasks/<task-id>/output/` 写明原因、当前可评审内容、缺失项和下一步补齐方式。
 - Build the Web layer as Vue 3 + TypeScript + Vite for Flutter WebView embedding.
-- Keep Tappo Phone independent from older H5/PWA code unless the user explicitly asks for migration.
+- Keep `Tappo Pulse` independent from older H5/PWA code unless the user explicitly asks for migration.
 - Use mock services until backend API contracts are provided, and mark mock-only behavior clearly.
-- Preserve the design direction from Tappo mobile Figma and blue-lake ordering references, but keep App, Pad, and Web endpoint rules separate.
-- Keep Tappo orange as the App's primary brand/action color. Light-blue reference images may guide UI tone, airiness, card softness, and intelligent visual cues, but must not turn Tappo Phone into a blue-first product.
-- Do not continue Tappo Phone visual work as page-by-page patching by default. For App-side visual refinement, first build and approve a project-level App Style Kit, then use it to shape pages.
+- Preserve the design direction from the matching Figma project and blue-lake ordering references, but keep Tappo Station, Tappo Pulse, Tappo MOS, and Tappo微官网 rules separate.
+- Keep Tappo orange as the primary brand/action color for mobile product surfaces. Light-blue reference images may guide UI tone, airiness, card softness, and intelligent visual cues, but must not turn Tappo Station or Tappo Pulse into blue-first products.
+- Do not continue Tappo Pulse visual work as page-by-page patching by default. For Pulse-side visual refinement, first build and approve a project-level Style Kit, then use it to shape pages.
 - App Style Kit order: style anchors -> color/type/spacing/elevation tokens -> icon and illustration rules -> reusable UI element specimens -> page application.
 - Apply intelligent visual intensity by page type: cover, role selection, owner/staff home, data analysis, app management, and settings may show stronger intelligent tone; POS ordering, checkout, payment, transaction/detail, and form-heavy operation pages must stay restrained and task-first.
 - Use a hybrid intelligent visual anchor. 小T is a flexible assistant expression, not a fixed mascot that must appear everywhere. Use 小T or assistant cues for cover/onboarding/home/help moments, and use an orange smart orb/system-core treatment for data, settings, system health, and AI insight surfaces.
@@ -27,9 +33,11 @@
 - App-side spacing tokens: module cards use `16px` radius; main visual aligns to `16px`; section gap is `16px`; card padding is `16-24px`; dense row padding is `12-16px`; icon/text gap is `8-12px`.
 - Use `tasks/T02/output/tappo-app-style-kit-v0.1-2026-06-08.md` as the current App Style Kit source before page redesign or asset generation. Do not generate the full icon/illustration library until the Style Kit is reviewed; first asset batch should be limited to assistant direction, orange smart orb/system core, 8-12 module icon tiles, and 3 micro illustrations.
 - Treat visual polish as a release requirement, not a nice-to-have. Screens must look like shippable mobile UI, with refined spacing, hierarchy, card depth, imagery, and icon treatment.
-- Use the latest Tappo App Figma nodes `nHamLH3qlZYFXVC0OVxNqc / 138:281` and `nHamLH3qlZYFXVC0OVxNqc / 538:3555` as page-specific App-side visual references unless the user provides newer approved nodes. Treat nodes `17:38` and `1:568` as approved App style anchors for the new style-system-first phase, not as product-content replacement sources. Treat Pad/settings node `anMsqgZYi8ZqmJXZah78KI / 287:32144` as endpoint-specific Pad/POS reference, not an App default.
+- Use the latest Tappo Station Figma nodes `nHamLH3qlZYFXVC0OVxNqc / 138:281` and `nHamLH3qlZYFXVC0OVxNqc / 538:3555` as page-specific Station visual references unless the user provides newer approved nodes. Treat nodes `17:38` and `1:568` as approved Station style anchors for the new style-system-first phase, not as product-content replacement sources. Treat Pad/settings node `anMsqgZYi8ZqmJXZah78KI / 287:32144` as Tappo Station Pad/POS reference, not a Tappo Pulse default.
 - Current App style keywords from user: light, clean, intelligent, operational, trustworthy. Translate these into tokens, assets, and components before applying them to pages.
 - Use generated raster assets from the built-in image generation path for brand illustrations and unified product-specific icon/graphic sets when generic icon libraries make the UI feel unfinished. Store project-bound generated assets inside `source/src/assets/` or `source/public/`; do not leave referenced assets only in tool output locations.
+- For payment-method brand logos in Tappo MOS or Tappo Station, use real sourced brand logo assets instead of hand-drawn approximations or letter placeholders. Keep logos on white or transparent-white containers, preserve official aspect ratios, and record the source plus Figma imageHash when uploaded. Only custom/unknown payment methods may use the system text-icon fallback.
+- Payment-method logos approved or uploaded for Tappo MOS should be reused for Tappo Station payment-method display when they represent the same brand; do not mix sources or redesign the same logo per endpoint unless the user explicitly requests a different asset set.
 - Preserve all content supplied by the prototype and user-provided documents. Content may be reorganized, carded, visualized as charts, or made interactive, but must not be deleted or materially weakened without explicit user confirmation.
 - If a prototype item appears redundant, wrong, or visually harmful, keep it visible by default and document the concern. Ask before removing or hiding it.
 - Typography must be revalidated on modern iPhone-sized viewports. Body and primary UI copy should generally be at least 14px; 12px is reserved for secondary metadata/tags, and 11px or below requires a deliberate exception.

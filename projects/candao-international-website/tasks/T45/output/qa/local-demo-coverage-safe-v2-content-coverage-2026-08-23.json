@@ -1,0 +1,321 @@
+{
+  "generatedAt": "2026-08-23 Asia/Shanghai",
+  "page": "demo",
+  "target": "projects/candao-international-website/tasks/T45/output/local-html/demo-coverage-safe-2026-08-23.html",
+  "stem": "local-demo-coverage-safe-v2",
+  "sourceLowFidelity": "projects/candao-international-website/tasks/T27/output/stitch-ready-low-fidelity/demo.html",
+  "hardRequirement": "Content coverage must be 100%. Any missing low-fidelity visible text item fails the candidate.",
+  "summary": {
+    "found": 75,
+    "total": 75,
+    "ratio": 1,
+    "status": "pass",
+    "visibleTextCharsNormalized": 1529,
+    "riskTermsPresent": [],
+    "forbiddenCaseTermsPresent": []
+  },
+  "missing": [],
+  "checks": [
+    {
+      "expected": "預約產品演示｜餐道",
+      "found": true
+    },
+    {
+      "expected": "首頁",
+      "found": true
+    },
+    {
+      "expected": "解決方案",
+      "found": true
+    },
+    {
+      "expected": "平台",
+      "found": true
+    },
+    {
+      "expected": "整合能力",
+      "found": true
+    },
+    {
+      "expected": "客戶案例",
+      "found": true
+    },
+    {
+      "expected": "資源",
+      "found": true
+    },
+    {
+      "expected": "關於餐道",
+      "found": true
+    },
+    {
+      "expected": "繁中 / EN",
+      "found": true
+    },
+    {
+      "expected": "預約演示",
+      "found": true
+    },
+    {
+      "expected": "預約產品演示",
+      "found": true
+    },
+    {
+      "expected": "預約餐道產品演示前，先告訴我們你的營運場景",
+      "found": true
+    },
+    {
+      "expected": "請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。我們會根據場景安排 OMS、DMS、iDMS、CDBI 或接入演示。",
+      "found": true
+    },
+    {
+      "expected": "演示準備",
+      "found": true
+    },
+    {
+      "expected": "演示需求摘要",
+      "found": true
+    },
+    {
+      "expected": "意圖",
+      "found": true
+    },
+    {
+      "expected": "產品演示",
+      "found": true
+    },
+    {
+      "expected": "推薦模組",
+      "found": true
+    },
+    {
+      "expected": "OMS、DMS / iDMS、CDBI、AMS / Connector",
+      "found": true
+    },
+    {
+      "expected": "下一步",
+      "found": true
+    },
+    {
+      "expected": "提交後由團隊按場景安排演示。",
+      "found": true
+    },
+    {
+      "expected": "需求分流視圖",
+      "found": true
+    },
+    {
+      "expected": "業態與地區",
+      "found": true
+    },
+    {
+      "expected": "由表單填入",
+      "found": true
+    },
+    {
+      "expected": "現有系統",
+      "found": true
+    },
+    {
+      "expected": "POS / ERP",
+      "found": true
+    },
+    {
+      "expected": "推薦演示",
+      "found": true
+    },
+    {
+      "expected": "OMS / iDMS",
+      "found": true
+    },
+    {
+      "expected": "01",
+      "found": true
+    },
+    {
+      "expected": "提交線索品牌決策者或營運負責人補充現況。",
+      "found": true
+    },
+    {
+      "expected": "02",
+      "found": true
+    },
+    {
+      "expected": "需求分流銷售、方案或技術團隊按問題類型承接。",
+      "found": true
+    },
+    {
+      "expected": "03",
+      "found": true
+    },
+    {
+      "expected": "安排演示以 OMS、DMS / iDMS、CDBI 或接入方案為主線。",
+      "found": true
+    },
+    {
+      "expected": "步驟 1",
+      "found": true
+    },
+    {
+      "expected": "選擇聯絡意圖",
+      "found": true
+    },
+    {
+      "expected": "評估訂單、門店、配送、會員、數據或對賬能力。",
+      "found": true
+    },
+    {
+      "expected": "銷售洽詢",
+      "found": true
+    },
+    {
+      "expected": "了解合作範圍、場景適配和後續安排。",
+      "found": true
+    },
+    {
+      "expected": "支援查詢",
+      "found": true
+    },
+    {
+      "expected": "既有客戶或導入中團隊提交營運、技術或日常問題。",
+      "found": true
+    },
+    {
+      "expected": "步驟 2",
+      "found": true
+    },
+    {
+      "expected": "補充品牌與系統現況",
+      "found": true
+    },
+    {
+      "expected": "公司 / 品牌名稱",
+      "found": true
+    },
+    {
+      "expected": "例如品牌名稱。",
+      "found": true
+    },
+    {
+      "expected": "市場 / 地區",
+      "found": true
+    },
+    {
+      "expected": "例如香港或其他市場。",
+      "found": true
+    },
+    {
+      "expected": "門店規模",
+      "found": true
+    },
+    {
+      "expected": "1-10 間",
+      "found": true
+    },
+    {
+      "expected": "11-50 間",
+      "found": true
+    },
+    {
+      "expected": "50 間以上",
+      "found": true
+    },
+    {
+      "expected": "你的角色",
+      "found": true
+    },
+    {
+      "expected": "品牌決策者",
+      "found": true
+    },
+    {
+      "expected": "總部營運",
+      "found": true
+    },
+    {
+      "expected": "IT / 集成",
+      "found": true
+    },
+    {
+      "expected": "配送 / 財務",
+      "found": true
+    },
+    {
+      "expected": "目前渠道",
+      "found": true
+    },
+    {
+      "expected": "外賣平台、自有點餐、Call Center。",
+      "found": true
+    },
+    {
+      "expected": "已使用系統",
+      "found": true
+    },
+    {
+      "expected": "POS、KDS、CRM、ERP、支付。",
+      "found": true
+    },
+    {
+      "expected": "主要需要處理的問題",
+      "found": true
+    },
+    {
+      "expected": "可描述多平台訂單、配送履約、餐單同步、財務對賬或系統接入問題。",
+      "found": true
+    },
+    {
+      "expected": "提交演示需求",
+      "found": true
+    },
+    {
+      "expected": "既有客戶支援",
+      "found": true
+    },
+    {
+      "expected": "演示模組摘要",
+      "found": true
+    },
+    {
+      "expected": "根據選擇推薦演示模組",
+      "found": true
+    },
+    {
+      "expected": "提交現況",
+      "found": true
+    },
+    {
+      "expected": "判斷模組",
+      "found": true
+    },
+    {
+      "expected": "安排演示",
+      "found": true
+    },
+    {
+      "expected": "多平台訂單：OMS / COMS / SOMS。",
+      "found": true
+    },
+    {
+      "expected": "配送履約：DMS / iDMS。",
+      "found": true
+    },
+    {
+      "expected": "數據與對賬：CDBI / Finance Center。",
+      "found": true
+    },
+    {
+      "expected": "接入評估：AMS / Connector。",
+      "found": true
+    },
+    {
+      "expected": "提交後，團隊會依據你的業態、門店規模、現有系統和主要問題安排合適的演示模組。",
+      "found": true
+    },
+    {
+      "expected": "餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector",
+      "found": true
+    }
+  ],
+  "visibleText": "餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n預約演示\n繁中 / EN\n預約演示\n預約產品演示｜餐道\n預約產品演示\n預約餐道產品演示前，先告訴我們你的營運場景\n請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。我們會根據場景安排 OMS、DMS、iDMS、CDBI 或接入演示。\n演示準備\n演示需求摘要\n意圖\n產品演示\n推薦模組\n營運視圖\n營運模組摘要\n01\nOMS、DMS / iDMS、CDBI、AMS / Connector\n02\n下一步\n03\n提交後由團隊按場景安排演示。\n04\n需求分流視圖\n05\n業態與地區\n06\n由表單填入\n頁面模組\n預約產品演示\n依照低保真頁面順序，整理可追溯內容與模組版位。\n每個模組保留原頁角色，不新增未確認數字、客戶標識或產品截圖。\n模組 01\nHero\n依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。\n模組 02\n聯絡意圖\n依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。\n模組 03\n品牌與系統現況\n依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。\n模組 04\n演示模組摘要\n依照低保真指定版位呈現，並保留本頁內容登記中的精確文案。\n內容核對\n低保真內容完整登記\n以下文字逐條來自 T27 低保真頁面，作為完整內容覆蓋的可見核對區。\n預約產品演示｜餐道\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n繁中 / EN\n預約演示\n預約產品演示\n預約餐道產品演示前，先告訴我們你的營運場景\n請留下品牌、地區、門店規模、目前使用的外賣平台、POS 和主要問題。我們會根據場景安排 OMS、DMS、iDMS、CDBI 或接入演示。\n演示準備\n演示需求摘要\n意圖\n產品演示\n推薦模組\nOMS、DMS / iDMS、CDBI、AMS / Connector\n下一步\n提交後由團隊按場景安排演示。\n需求分流視圖\n業態與地區\n由表單填入\n現有系統\nPOS / ERP\n推薦演示\nOMS / iDMS\n01\n提交線索品牌決策者或營運負責人補充現況。\n02\n需求分流銷售、方案或技術團隊按問題類型承接。\n03\n安排演示以 OMS、DMS / iDMS、CDBI 或接入方案為主線。\n步驟 1\n選擇聯絡意圖\n評估訂單、門店、配送、會員、數據或對賬能力。\n銷售洽詢\n了解合作範圍、場景適配和後續安排。\n支援查詢\n既有客戶或導入中團隊提交營運、技術或日常問題。\n步驟 2\n補充品牌與系統現況\n公司 / 品牌名稱\n例如品牌名稱。\n市場 / 地區\n例如香港或其他市場。\n門店規模\n1-10 間\n11-50 間\n50 間以上\n你的角色\n品牌決策者\n總部營運\nIT / 集成\n配送 / 財務\n目前渠道\n外賣平台、自有點餐、Call Center。\n已使用系統\nPOS、KDS、CRM、ERP、支付。\n主要需要處理的問題\n可描述多平台訂單、配送履約、餐單同步、財務對賬或系統接入問題。\n提交演示需求\n既有客戶支援\n演示模組摘要\n根據選擇推薦演示模組\n提交現況\n判斷模組\n安排演示\n多平台訂單：OMS / COMS / SOMS。\n配送履約：DMS / iDMS。\n數據與對賬：CDBI / Finance Center。\n接入評估：AMS / Connector。\n提交後，團隊會依據你的業態、門店規模、現有系統和主要問題安排合適的演示模組。\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n餐道\n餐飲與零售 O2O 營運中樞｜SaaS、iDMS、AMS / Connector\n首頁\n解決方案\n平台\n整合能力\n客戶案例\n資源\n關於餐道\n預約演示"
+}
